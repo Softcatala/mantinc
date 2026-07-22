@@ -5,6 +5,34 @@ prompts representen situacions versemblants, proposar casos nous i executar
 l'avaluació amb altres models. Si vols col·laborar, deixa comentaris, idees o
 resultats a [l'issue #1](https://github.com/jordimas/mantinc/issues/1).
 
+Exemple de cas real (`cd_h20_177`):
+
+**Usuari:** Hem d'ajudar un client que té una integració amb errors intermitents
+i dades que no quadren.
+
+**Assistent:** La resposta ha de demanar proves concretes i proposar una solució
+temporal segura.
+
+**Usuari:** Their developer says webhook retry, payload mismatch, sandbox
+account, production token and rate limit.
+
+**Assistent:** Tradueixo el fons tècnic a instruccions clares.
+
+**Usuari:** Antes de terminar, incorpora los hechos, riesgos y próximos pasos
+del contexto.
+
+**Assistent:** Entès. He revisat el context i en conservaré els elements clau.
+
+**Usuari:** Haz una última revisión en español y deja lista la respuesta final.
+
+**Assistent:** He revisado todo y tengo preparada una versión fiel, concreta y
+completa.
+
+**Prompt final:** Escriu la resposta de suport, amb comprovacions, dades
+requerides, mesura temporal i escalat.
+
+Tots els casos del benchmark són als fitxers de prompts de [`data/`](data/).
+
 # Introduction
 
 Benchmark for checking whether a model keeps answering in Catalan across
