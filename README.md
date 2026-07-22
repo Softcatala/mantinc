@@ -5,6 +5,18 @@ prompts representen situacions versemblants, proposar casos nous i executar
 l'avaluació amb altres models. Si vols col·laborar, deixa comentaris, idees o
 resultats a [l'issue #1](https://github.com/jordimas/mantinc/issues/1).
 
+# Introduction
+
+Benchmark for checking whether a model keeps answering in Catalan across
+monolingual, basic crosslingual, multi-turn, and advanced crosslingual prompts.
+The default harness runs the 120-item dataset. This targets the same
+language-confusion problem studied by Marchisio et al. in
+["Understanding and Mitigating Language Confusion in LLMs"](https://aclanthology.org/2024.emnlp-main.380/)
+as a foundation, while adding Catalan-specific personas, workflows, and
+multi-turn pressure cases.
+
+# Example of case
+
 Exemple de cas real (`cd_h20_177`):
 
 **Usuari:** Hem d'ajudar un client que té una integració amb errors intermitents
@@ -32,17 +44,6 @@ completa.
 requerides, mesura temporal i escalat.
 
 Tots els casos del benchmark són als fitxers de prompts de [`data/`](data/).
-
-# Introduction
-
-Benchmark for checking whether a model keeps answering in Catalan across
-monolingual, basic crosslingual, multi-turn, and advanced crosslingual prompts.
-The default harness runs the 120-item dataset. This targets the same
-language-confusion problem studied by Marchisio et al. in
-["Understanding and Mitigating Language Confusion in LLMs"](https://aclanthology.org/2024.emnlp-main.380/)
-as a foundation, while adding Catalan-specific personas, workflows, and
-multi-turn pressure cases.
-
 
 ## Taxonomy
 
