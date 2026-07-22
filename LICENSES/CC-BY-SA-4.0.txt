@@ -1,0 +1,13 @@
+Creative Commons Attribution-ShareAlike 4.0 International
+
+SPDX-License-Identifier: CC-BY-SA-4.0
+
+The benchmark datasets, prompts, fixtures, and source/evaluation data files in
+this repository are licensed under the Creative Commons Attribution-ShareAlike
+4.0 International license.
+
+Canonical license text:
+https://creativecommons.org/licenses/by-sa/4.0/legalcode
+
+Human-readable summary:
+https://creativecommons.org/licenses/by-sa/4.0/

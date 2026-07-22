@@ -1,0 +1,14 @@
+This repository uses different licenses for code and data.
+
+Code is licensed under the MIT License.
+
+This applies to source code, scripts, task definitions, tests, build files, and
+documentation needed to run or modify the software, unless a file says
+otherwise. See LICENSES/MIT.txt.
+
+Data is licensed under Creative Commons Attribution-ShareAlike 4.0
+International (CC BY-SA 4.0).
+
+This applies to benchmark datasets, prompts, fixtures, and source/evaluation
+data files, including files under data/, test_sets/, and tests/fixtures/,
+unless a file says otherwise. See LICENSES/CC-BY-SA-4.0.txt.

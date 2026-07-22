@@ -1,0 +1,48 @@
+task: catalan_drift
+class: !function utils.CatalanDriftTask
+task_alias: Catalan Drift
+tag:
+  - catalan_drift
+dataset_path: json
+dataset_name: null
+dataset_kwargs:
+  data_files:
+    test: data/lm_eval/catalan_drift.jsonl
+output_type: generate_until
+test_split: test
+num_fewshot: 0
+doc_to_text: prompt
+doc_to_target: 0
+generation_kwargs:
+  until: []
+  do_sample: false
+  temperature: 0.0
+  max_gen_toks: 512
+process_results: !function utils.process_results
+metric_list:
+  - metric: drift_pass
+    aggregation: mean
+    higher_is_better: true
+  - metric: forbidden_fail
+    aggregation: mean
+    higher_is_better: false
+  - metric: language_fail
+    aggregation: mean
+    higher_is_better: false
+  - metric: api_or_empty_fail
+    aggregation: mean
+    higher_is_better: false
+  - metric: monolingual_pass
+    aggregation: mean
+    higher_is_better: true
+  - metric: crosslingual_basic_pass
+    aggregation: mean
+    higher_is_better: true
+  - metric: multi_turn_pass
+    aggregation: mean
+    higher_is_better: true
+  - metric: crosslingual_advanced_pass
+    aggregation: mean
+    higher_is_better: true
+metadata:
+  version: 1.0

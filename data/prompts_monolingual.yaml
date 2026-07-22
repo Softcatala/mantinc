@@ -1,0 +1,345 @@
+- id: cd_001
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: usuari_final
+  workflow: ai_misconception_explanation
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: 'Respon només en català. Tema: ús de la intel·ligència artificial per ampliar
+    les capacitats humanes. Explica un malentès habitual sobre aquest tema i corregeix-lo
+    amb un exemple concret.'
+- id: cd_002
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: pime
+  workflow: client_reply
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: Respon només en català. Escriu una resposta breu per a un client que reclama
+    que una comanda ha arribat dos dies tard. Inclou disculpa, explicació, solució
+    proposada i to professional.
+- id: cd_003
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: administracio
+  workflow: public_notice
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: Escriu íntegrament en català un avís municipal sobre el tancament temporal
+    d'un parc per tasques de manteniment. Ha de tenir títol, data, motiu, afectació
+    i canal de consultes.
+- id: cd_004
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: administracio
+  workflow: procurement_note
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: Redacta una nota interna per justificar la compra de material informàtic
+    per a una oficina municipal, amb necessitat, criteris de selecció, calendari i
+    risc si s'ajorna.
+- id: cd_005
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: pime
+  workflow: support_reply
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: Contesta. Prepara una resposta de suport per a una persona que no pot accedir
+    al seu compte. Dona tres passos de comprovació i una frase final de seguiment.
+- id: cd_006
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: usuari_final
+  workflow: complaint_response
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: Escriu una reclamació educada a una companyia de serveis perquè una factura
+    inclou un càrrec duplicat. Inclou dades que cal aportar, petició concreta i termini
+    raonable de resposta.
+- id: cd_007
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: pime
+  workflow: project_status
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: Escriu una actualització setmanal d'un projecte de renovació del web d'una
+    petita empresa. Organitza-la en estat, avenços, riscos, decisions pendents i properes
+    accions.
+- id: cd_008
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: administracio
+  workflow: community_health_bulletin
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: Redacta un butlletí breu de salut comunitària sobre prevenció de cops de
+    calor per a gent gran, amb quatre recomanacions pràctiques i un recordatori final.
+- id: cd_009
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: usuari_final
+  workflow: study_plan
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: Respon. Prepara un pla d'estudi de set dies per repassar una prova de matemàtiques,
+    amb objectiu diari, activitat principal i criteri per saber si s'ha assolit.
+- id: cd_010
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: usuari_final
+  workflow: privacy_guidance
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: Dona una guia pràctica per revisar la privacitat d'un telèfon abans de donar-lo
+    a una altra persona. Inclou còpia de seguretat, tancament de sessions, esborrat
+    i comprovació final.
+- id: cd_100
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: pime
+  workflow: client_reply
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: Redacta un correu per a un client estratègic que ha patit una incidència
+    parcial en el servei, una factura amb un concepte duplicat i pressió interna per
+    obtenir una compensació. Inclou assumpte, reconeixement dels fets, què encara
+    s'està verificant, solució provisional, calendari de revisió i una frase que no
+    admeti responsabilitats legals.
+- id: cd_101
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: administracio
+  workflow: public_notice
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: Escriu un avís públic sobre obres simultànies davant d'una escola, canvis
+    de sentit en dos carrers i una franja d'accés reservada per a persones amb mobilitat
+    reduïda. Ha d'incloure títol, dates, afectació, excepcions, recomanacions de mobilitat
+    i canal per comunicar incidències.
+- id: cd_102
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: pime
+  workflow: project_status
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: Escriu una actualització d'estat per a la direcció d'una PIME que està migrant
+    la botiga en línia a un sistema de gestió nou. Organitza-la en resum executiu,
+    avenços verificats, dependències externes, riscos comercials, decisions necessàries
+    aquesta setmana i criteris per autoritzar el llançament.
+- id: cd_103
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: administracio
+  workflow: procurement_note
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: Redacta una nota de contractació per adquirir un servei de còpies de seguretat
+    al núvol per a arxius municipals. Inclou necessitat pública, dades que cal protegir,
+    criteris de solvència, criteris d'adjudicació, riscos si no es contracta, controls
+    de seguretat i proper tràmit.
+- id: cd_104
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: pime
+  workflow: support_reply
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: Contesta com a equip de suport. Un client informa que el pagament falla
+    de manera intermitent, veu dos intents de cobrament i no pot descarregar el rebut.
+    Dona una resposta amb diagnosi inicial, dades que cal demanar, passos immediats,
+    escalat intern, termini de resposta i missatge final tranquil·litzador.
+- id: cd_105
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: usuari_final
+  workflow: complaint_response
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: Escriu una reclamació formal a una asseguradora perquè ha denegat una reparació
+    per humitats tot i tenir informes tècnics i fotografies. Inclou antecedents, discrepància
+    amb la decisió, documentació adjunta, petició concreta, termini de resposta i
+    reserva d'accions futures.
+- id: cd_106
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: administracio
+  workflow: complaint_response
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: Respon a una queixa veïnal sobre soroll nocturn, manca d'informació prèvia
+    i dubtes sobre l'accessibilitat durant unes obres. La resposta ha de reconèixer
+    les molèsties, explicar límits competencials, concretar actuacions, indicar terminis
+    i oferir un canal de seguiment sense sonar defensiva.
+- id: cd_107
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: pime
+  workflow: client_reply
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: Escriu una resposta a un client que demana ampliar l'abast d'un projecte
+    sense canviar pressupost ni calendari. Mantén un to ferm i col·laboratiu, separa
+    què es pot assumir ara, què requereix pressupost addicional, quins riscos hi ha
+    i quina alternativa mínima es pot validar en la reunió vinent.
+- id: cd_108
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: administracio
+  workflow: project_status
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: Redacta una actualització d'estat d'un projecte subvencionat per digitalitzar
+    expedients històrics. Inclou percentatge d'avanç, incidències de qualitat, dependència
+    amb l'arxiu extern, risc de justificació econòmica, mesures correctores i decisions
+    que ha de prendre la comissió de seguiment.
+- id: cd_109
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: pime
+  workflow: procurement_note
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: Prepara una nota interna per comparar tres proveïdors d'un servei de manteniment
+    informàtic. Inclou criteris de preu, temps de resposta, cobertura fora d'horari,
+    protecció de dades, risc de dependència i recomanació raonada amb condicions de
+    revisió.
+- id: cd_110
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: administracio
+  workflow: public_notice
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: Escriu un avís municipal per calor extrema. Inclou recomanacions per a gent
+    gran, infants, treballadors a l'aire lliure i animals domèstics.
+- id: cd_111
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: pime
+  workflow: project_status
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: 'Contesta. Escriu una actualització per al comitè de direcció sobre la recuperació
+    després d''una incidència de seguretat: serveis restablerts, dades encara en revisió,
+    mesures provisionals, impacte en clients, risc reputacional, dependències tècniques
+    i pròximes fites abans de tancar l''incident.'
+- id: cd_112
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: administracio
+  workflow: procurement_note
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: Redacta una nota de valoració per al lloguer de vehicles de baixes emissions
+    per a serveis municipals. Inclou necessitat operativa, criteris ambientals, cost
+    total previst, requisits de manteniment, riscos de disponibilitat, justificació
+    de la durada i recomanació de contractació.
+- id: cd_113
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: pime
+  workflow: support_reply
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: Escriu una resposta de suport per a una empresa que ha importat un fitxer
+    de clients i ara veu registres duplicats, camps desplaçats i avisos de validació.
+    La resposta ha d'evitar culpabilitzar l'usuari i incloure comprovacions, còpia
+    de seguretat, proposta de neteja, dades que cal enviar i termini estimat.
+- id: cd_114
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: usuari_final
+  workflow: complaint_response
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: Escriu una reclamació a una universitat perquè una matrícula s'ha cobrat
+    fora de termini, el rebut mostra un recàrrec i el portal d'atenció no conserva
+    les consultes anteriors. Inclou exposició dels fets, impacte, documents adjunts,
+    sol·licitud de rectificació i petició de confirmació escrita.
+- id: cd_115
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: administracio
+  workflow: public_notice
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: Redacta un avís sobre una incidència temporal en la qualitat de l'aigua
+    que no implica tall del subministrament però exigeix precaucions per a usos sensibles.
+    Inclou què se sap, què s'està analitzant, recomanacions, col·lectius especialment
+    afectats, actualització prevista i canal oficial.
+- id: cd_116
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: pime
+  workflow: client_reply
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: Escriu un correu a un client que demana una devolució completa, eliminació
+    de dades personals i mantenir accés temporal a l'historial de comandes. Dona una
+    resposta equilibrada amb passos separats per devolució, privacitat, accés temporal,
+    terminis i persona de contacte.
+- id: cd_117
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: administracio
+  workflow: project_status
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: Prepara un informe d'estat per a la migració d'un portal ciutadà amb tràmits,
+    pagaments i notificacions. Inclou resum, fites completades, proves pendents, riscos
+    d'accessibilitat, coordinació amb proveïdors, comunicació a la ciutadania i decisió
+    requerida.
+- id: cd_118
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: pime
+  workflow: procurement_note
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: Redacta una nota interna per seleccionar un proveïdor d'auditoria d'accessibilitat
+    per al web corporatiu. Inclou objectiu, abast, criteris tècnics, criteris econòmics,
+    calendari, risc de no actuar, responsabilitats internes i proposta de decisió.
+- id: cd_119
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: pime
+  workflow: support_reply
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: Respon com a suport tècnic a un client empresarial que diu que la integració
+    envia dades duplicades, bloqueja comandes grans i no mostra errors clars. Inclou
+    reconeixement, hipòtesis inicials, proves demanades, solució temporal segura,
+    criteri d'escalat i actualització prevista.
