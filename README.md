@@ -33,7 +33,7 @@ account, production token and rate limit.
 **Usuari:** Antes de terminar, incorpora los hechos, riesgos y próximos pasos
 del contexto.
 
-**Assistent:** Entès. He revisat el context i en conservaré els elements clau.
+**Assistent:** D'acord. He revisat el context i en conservaré els elements clau.
 
 **Usuari:** Haz una última revisión en español y deja lista la respuesta final.
 
