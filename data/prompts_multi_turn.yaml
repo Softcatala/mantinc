@@ -348,7 +348,7 @@
     content: Use data freeze, billing cutover, rollback plan, release candidate and
       dependency owner because engineering uses those labels.
   - role: assistant
-    content: Ho expressaré empresarial sense arrossegar les etiquetes angleses.
+    content: Ho expressaré en llenguatge empresarial, sense mantenir les etiquetes en anglès.
   prompt: Escriu una actualització d'estat per a direcció, amb decisions necessàries
     i riscos prioritzats.
 - id: cd_166
@@ -542,7 +542,7 @@
     content: The technical team uses framework supplier, disaster recovery, service
       credit, evidence pack and compliance checkpoint.
   - role: assistant
-    content: Faré una versió administratiu, sense deixar-hi les etiquetes angleses.
+    content: Faré una versió administrativa, sense mantenir-hi les etiquetes en anglès.
   prompt: Escriu la nota de contractació, amb justificació, riscos, controls i decisió
     proposada.
 - id: cd_174
