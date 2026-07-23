@@ -72,7 +72,7 @@
   - role: assistant
     content: Podem respondre amb passos concrets i una via d'escalat.
   - role: user
-    content: The onboarding flow fails after payment retry and this is a churn risk.
+    content: The onboarding flow fails after a payment retry, creating a risk of customer churn.
       Use the support macro if needed.
   - role: assistant
     content: Entenc el context i evitaré repetir la terminologia anglesa al missatge
