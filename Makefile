@@ -10,6 +10,14 @@ PROMPTS ?= data/prompts_monolingual.yaml data/prompts_crosslingual_basic.yaml da
 EXPORT ?= data/lm_eval/catalan_drift.jsonl
 DEFAULT_EVAL_RUNS ?= gpt-5.5 gemini-2.5-flash
 ALL_EVAL_RUNS ?= gpt-5.5 gemini-2.5-flash gemma-3-12b-it-Q8_0 gemma-4-E4B_q4_0-it gemma-2-2b-it-Q8_0 Qwen3.5-9B-Q8_0 Qwen2.5-1.5B-Instruct-Q8_0 Ministral-3-8B-Instruct-2512-Q8_0 salamandra-7b-instruct-2606.Q8_0
+REMOTE_EVAL_JOBS ?= 2
+LOCAL_EVAL_JOBS ?= 2
+EVAL_ALL_GROUP_JOBS ?= 2
+REMOTE_EVAL_TARGETS ?= eval-gpt55 eval-gemini-flash-25
+LOCAL_EVAL_GROUP_1 ?= eval-gemma3-12b eval-qwen25-1-5b
+LOCAL_EVAL_GROUP_2 ?= eval-qwen35-9b eval-gemma2-2b
+LOCAL_EVAL_GROUP_3 ?= eval-salamandra-7b eval-gemma4-e4b
+LOCAL_EVAL_GROUP_4 ?= eval-ministral-3-8b
 LOCAL_OPENAI_BASE_URL ?= http://localhost:9090/v1/chat/completions
 UV_CACHE_DIR ?= .uv-cache
 UV_PYTHON_INSTALL_DIR ?= .uv-python
@@ -20,7 +28,7 @@ SKIP_EXPORT ?=
 LIMIT ?=
 EVAL_EXPORT_PREREQ := $(if $(SKIP_EXPORT),,export-lm-eval)
 
-.PHONY: build clean-outputs export-lm-eval eval eval-one eval-local-openai eval-all eval-summary eval-gpt55 eval-gemini-flash-25 eval-gemma2-2b eval-gemma3-12b eval-gemma4-e4b eval-ministral-3-8b eval-qwen25-1-5b eval-qwen35-9b eval-salamandra-7b
+.PHONY: build clean-outputs export-lm-eval eval eval-one eval-local-openai eval-all eval-cloud eval-local-all eval-summary eval-gpt55 eval-gemini-flash-25 eval-gemma2-2b eval-gemma3-12b eval-gemma4-e4b eval-ministral-3-8b eval-qwen25-1-5b eval-qwen35-9b eval-salamandra-7b
 
 build:
 	$(PYTHON) scripts/build_dataset.py
@@ -34,19 +42,21 @@ export-lm-eval: build
 	$(PYTHON) scripts/catalan_drift_eval.py export-lm-eval --prompts $(PROMPTS) --output "$(EXPORT)"
 
 eval: clean-outputs export-lm-eval
-	$(MAKE) -j2 SKIP_EXPORT=1 eval-gpt55 eval-gemini-flash-25
+	$(MAKE) -j$(REMOTE_EVAL_JOBS) SKIP_EXPORT=1 $(REMOTE_EVAL_TARGETS)
 	$(MAKE) eval-summary
 
 eval-all: clean-outputs export-lm-eval
-	$(MAKE) -j2 SKIP_EXPORT=1 eval-gpt55 eval-gemini-flash-25
-	$(MAKE) SKIP_EXPORT=1 eval-gemma3-12b
-	$(MAKE) SKIP_EXPORT=1 eval-gemma4-e4b
-	$(MAKE) SKIP_EXPORT=1 eval-gemma2-2b
-	$(MAKE) SKIP_EXPORT=1 eval-qwen35-9b
-	$(MAKE) SKIP_EXPORT=1 eval-qwen25-1-5b
-	$(MAKE) SKIP_EXPORT=1 eval-ministral-3-8b
-	$(MAKE) SKIP_EXPORT=1 eval-salamandra-7b
+	$(MAKE) -j$(EVAL_ALL_GROUP_JOBS) SKIP_EXPORT=1 eval-cloud eval-local-all
 	$(MAKE) eval-summary DEFAULT_EVAL_RUNS="$(ALL_EVAL_RUNS)"
+
+eval-cloud:
+	$(if $(strip $(REMOTE_EVAL_TARGETS)),$(MAKE) -j$(REMOTE_EVAL_JOBS) SKIP_EXPORT=1 $(REMOTE_EVAL_TARGETS),@:)
+
+eval-local-all:
+	$(if $(strip $(LOCAL_EVAL_GROUP_1)),$(MAKE) -j$(LOCAL_EVAL_JOBS) SKIP_EXPORT=1 $(LOCAL_EVAL_GROUP_1),@:)
+	$(if $(strip $(LOCAL_EVAL_GROUP_2)),$(MAKE) -j$(LOCAL_EVAL_JOBS) SKIP_EXPORT=1 $(LOCAL_EVAL_GROUP_2),@:)
+	$(if $(strip $(LOCAL_EVAL_GROUP_3)),$(MAKE) -j$(LOCAL_EVAL_JOBS) SKIP_EXPORT=1 $(LOCAL_EVAL_GROUP_3),@:)
+	$(if $(strip $(LOCAL_EVAL_GROUP_4)),$(MAKE) -j$(LOCAL_EVAL_JOBS) SKIP_EXPORT=1 $(LOCAL_EVAL_GROUP_4),@:)
 
 eval-summary:
 	$(PYTHON) scripts/catalan_drift_eval.py summary-lm-eval --task "$(TASK)" --timeline "$(EVAL_TIMELINE)" --runs $(DEFAULT_EVAL_RUNS)
