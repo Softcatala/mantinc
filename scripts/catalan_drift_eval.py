@@ -290,8 +290,8 @@ def _wall_seconds(timeline_path: Path, runs: list[str]) -> float | None:
 
 
 def summary_lm_eval(args: argparse.Namespace) -> None:
-    category_table = [["Task", "Model", "Pass", "Fail", "API empty", "Pass rate", "Fail rate", "Content pass", "Inference"]]
-    dataset_table = [["Dataset YAML", "Model", "Pass", "Fail", "API empty", "Pass rate", "Fail rate", "Content pass", "Inference"]]
+    category_table = [["Task", "Model", "Pass", "Fail", "API empty", "Non-empty", "Pass rate", "Lang pass", "Fail rate", "Inference"]]
+    dataset_table = [["Dataset YAML", "Model", "Pass", "Fail", "API empty", "Non-empty", "Pass rate", "Lang pass", "Fail rate", "Inference"]]
 
     def add_group_rows(table: list[list[str]], grouped: dict[str, list[dict[str, Any]]], run: str, inference: str) -> None:
         for group, rows in grouped.items():
@@ -299,17 +299,13 @@ def summary_lm_eval(args: argparse.Namespace) -> None:
             passed = sum(float(row.get("drift_pass", 0)) == 1.0 for row in rows)
             failed = total - passed
             api_empty = sum(float(row.get("api_or_empty_fail", 0)) == 1.0 for row in rows)
-            content_total = total - api_empty
-            content_passed = sum(
-                float(row.get("drift_pass", 0)) == 1.0
-                for row in rows
-                if not float(row.get("api_or_empty_fail", 0))
-            )
+            language_passed = sum(float(row.get("language_fail", 0)) == 0.0 for row in rows)
+            non_empty = total - api_empty
             table.append([
                 group, run, f"{passed}/{total}", f"{failed}/{total}",
-                f"{api_empty}/{total}", f"{passed / total:.1%}",
+                f"{api_empty}/{total}", f"{non_empty / total:.1%}",
+                f"{passed / total:.1%}", f"{language_passed / total:.1%}",
                 f"{failed / total:.1%}",
-                f"{content_passed / content_total:.1%}" if content_total else "-",
                 inference,
             ])
 

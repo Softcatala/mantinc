@@ -25,7 +25,11 @@
   workflow: public_project_status
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms: []
+  forbidden_terms:
+  - update
+  - blockers
+  - deadlines
+  - next
   conversation:
   - role: user
     content: Treballo en una administració local i hem d'actualitzar l'estat d'un
@@ -65,7 +69,11 @@
   workflow: support_reply
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms: []
+  forbidden_terms:
+  - onboarding
+  - payment
+  - customer
+  - support
   conversation:
   - role: user
     content: Tenim un usuari que no aconsegueix acabar l'alta al servei.
@@ -86,8 +94,8 @@
   source_lang: es-ca
   target_lang: ca
   forbidden_terms:
-  - pliego técnico
-  - oferta económica
+  - pliego
+  - económica
   - adjudicación
   - subsanación
   conversation:
@@ -109,7 +117,11 @@
   workflow: study_plan
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms: []
+  forbidden_terms:
+  - practice
+  - weak
+  - study
+  - review
   conversation:
   - role: user
     content: Necessito organitzar-me per estudiar una prova de llengua.
@@ -130,15 +142,18 @@
   workflow: privacy_guidance
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms: []
+  forbidden_terms:
+  - accounts
+  - microphone
+  - history
   conversation:
   - role: user
-    content: Vull revisar la privacitat abans de deixar el portàtil a una altra persona.
+    content: Vull revisar la privacitat abans de vendre un televisor connectat.
   - role: assistant
-    content: Podem revisar comptes, permisos, historial i arxius personals.
+    content: Podem revisar comptes, permisos, historial i dispositius vinculats.
   - role: user
-    content: Include tracker settings, data broker checks, opt-out steps, and shared
-      device cleanup.
+    content: Include smart TV apps, microphone settings, viewing history and linked
+      streaming accounts.
   - role: assistant
     content: Ho explicaré amb equivalents naturals.
   prompt: Dona una guia breu amb passos ordenats i advertiments pràctics.
@@ -150,10 +165,10 @@
   source_lang: es-ca
   target_lang: ca
   forbidden_terms:
-  - queja vecinal
-  - ruido nocturno
+  - queja
+  - ruido
   - inspección
-  - plazo legal
+  - plazo
   conversation:
   - role: user
     content: Treballo a l'ajuntament i hem de contestar una queixa del veïnat.
@@ -174,7 +189,11 @@
   workflow: tenant_request
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms: []
+  forbidden_terms:
+  - maintenance
+  - leaking
+  - temporary
+  - landlord
   conversation:
   - role: user
     content: Vull escriure al propietari perquè hi ha una avaria al pis.
@@ -194,10 +213,10 @@
   source_lang: es-ca
   target_lang: ca
   forbidden_terms:
-  - pedido urgente
-  - descuento adicional
-  - entrega garantizada
-  - cierre de mes
+  - pedido
+  - descuento
+  - garantizada
+  - cierre
   conversation:
   - role: user
     content: Som una empresa petita i hem de respondre una petició comercial complicada.
@@ -219,10 +238,10 @@
   source_lang: es-ca
   target_lang: ca
   forbidden_terms:
-  - bloqueo crítico
-  - penalización contractual
-  - garantía por escrito
-  - comité ejecutivo
+  - bloqueo
+  - penalización
+  - garantía
+  - ejecutivo
   conversation:
   - role: user
     content: Som una PIME i hem de respondre a un client gran per una incidència que
@@ -246,7 +265,12 @@
   workflow: public_notice
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms: []
+  forbidden_terms:
+  - rolling
+  - school
+  - mobility
+  - emergency
+  - live
   conversation:
   - role: user
     content: L'ajuntament ha de publicar un avís sobre obres que afecten una avinguda
@@ -266,21 +290,25 @@
   workflow: support_reply
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms: []
+  forbidden_terms:
+  - export
+  - comments
+  - board
+  - archive
+  - activity
   conversation:
   - role: user
-    content: 'Hem rebut un cas de suport delicat: un usuari no pot recuperar el compte
-      i sospita d''un accés indegut.'
+    content: 'Hem rebut un cas de suport delicat: un equip no pot exportar l''historial
+      complet d''un tauler de projecte.'
   - role: assistant
-    content: Cal respondre amb prudència, demanar verificacions i evitar revelar informació
-      sensible.
+    content: Cal respondre amb prudència, demanar verificacions i evitar perdre dades.
   - role: user
-    content: The ticket mentions account takeover, password reset loop, device fingerprint
-      mismatch, suspicious login and a missing recovery token.
+    content: The ticket mentions board export, missing comments, archived cards,
+      CSV limit and an incomplete activity log.
   - role: assistant
     content: Entenc que cal transformar els detalls tècnics sense repetir-los literalment.
   prompt: Escriu la resposta final, amb salutació, passos de verificació, protecció
-    del compte i termini d'escalat.
+    de dades i termini d'escalat.
 - id: cd_163
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -289,11 +317,11 @@
   source_lang: es-ca
   target_lang: ca
   forbidden_terms:
-  - adjudicación directa
-  - urgencia sobrevenida
-  - informe de necesidad
-  - trazabilidad del expediente
-  - fiscalización previa
+  - adjudicación
+  - urgencia
+  - necesidad
+  - trazabilidad
+  - fiscalización
   conversation:
   - role: user
     content: Hem de justificar una contractació ràpida per reparar un equipament municipal
@@ -314,21 +342,25 @@
   workflow: complaint_response
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms: []
+  forbidden_terms:
+  - wristband
+  - queue
+  - access
+  - map
   conversation:
   - role: user
-    content: Vull reclamar a una plataforma perquè m'ha cobrat dues vegades i no em
-      respon.
+    content: Vull reclamar a l'organització d'un festival perquè l'accés va ser
+      molt diferent del que s'havia anunciat.
   - role: assistant
-    content: Podem preparar una reclamació amb cronologia, imports i petició concreta.
+    content: Podem preparar una reclamació amb cronologia, impacte i petició concreta.
   - role: user
-    content: Their email mentions double charge, refund window, support transcript,
-      card issuer and billing dispute.
+    content: Their email mentions wristband pickup, entrance queue, access map, closed
+      stage and crowd information point.
   - role: assistant
     content: Faré servir aquesta informació sense mantenir les expressions angleses.
   - role: user
-    content: Escriu-la amb to ferm, però deixa clar que encara prefereixo una solució
-      amistosa.
+    content: Escriu-la amb to ferm, però deixa clar que encara prefereixo assistir
+      si respecten condicions equivalents.
   prompt: Escriu la propera resposta de l'assistent.
 - id: cd_165
   category: multi_turn
@@ -337,19 +369,24 @@
   workflow: project_status
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms: []
+  forbidden_terms:
+  - content
+  - localization
+  - review
+  - launch
+  - backlog
   conversation:
   - role: user
-    content: Necessito actualitzar direcció sobre una migració de facturació que entra
-      en fase crítica.
+    content: Necessito actualitzar direcció sobre la publicació d'un portal de formació
+      intern.
   - role: assistant
     content: Podem estructurar-ho per estat, riscos, decisions i properes accions.
   - role: user
-    content: Use data freeze, billing cutover, rollback plan, release candidate and
-      dependency owner because engineering uses those labels.
+    content: Use content backlog, localization review, trainer sign-off, launch window
+      and learner communications because the project team uses those labels.
   - role: assistant
     content: Ho expressaré en llenguatge empresarial, sense mantenir les etiquetes en anglès.
-  prompt: Escriu una actualització d'estat per a direcció, amb decisions necessàries
+  prompt: Escriu una actualització d'estat per a direcció en català, amb decisions necessàries
     i riscos prioritzats.
 - id: cd_166
   category: multi_turn
@@ -359,20 +396,19 @@
   source_lang: es-ca
   target_lang: ca
   forbidden_terms:
-  - queja reiterada
-  - falta de respuesta
-  - inspección pendiente
-  - plazo incumplido
-  - responsabilidad patrimonial
+  - padrón
+  - certificado
+  - domicilio
+  - registro
   conversation:
   - role: user
-    content: L'oficina municipal ha de contestar una persona que diu que no ha rebut
-      resposta sobre una incidència a la via pública.
+    content: L'oficina municipal ha de contestar una persona que no pot obtenir un
+      certificat d'empadronament.
   - role: assistant
     content: Cal reconèixer la situació, explicar l'estat i concretar el seguiment.
   - role: user
-    content: En el correo habla de queja reiterada, falta de respuesta, inspección
-      pendiente, plazo incumplido y responsabilidad patrimonial.
+    content: En el correo habla de padrón actualizado, certificado bloqueado, domicilio
+      pendiente de validar, registro presencial y cita próxima.
   - role: assistant
     content: Mantindré un to institucional i evitaré reproduir els termes castellans.
   - role: user
@@ -386,20 +422,19 @@
   source_lang: en-ca
   target_lang: ca
   forbidden_terms:
-  - scope creep
-  - success fee
-  - expedited delivery
-  - resource cap
-  - acceptance criteria
+  - data
+  - migration
+  - workshop
+  - acceptance
   conversation:
   - role: user
-    content: Hem de respondre una proposta comercial que barreja canvis d'abast, incentius
-      i calendari.
+    content: Hem de respondre una proposta comercial que barreja una prova pilot
+      amb migració de dades.
   - role: assistant
     content: Podem separar condicions acceptables, riscos i punts que necessiten validació.
   - role: user
-    content: The client keeps saying scope creep, success fee, expedited delivery,
-      resource cap and acceptance criteria.
+    content: The client keeps saying data migration, pilot workshop, sample users,
+      acceptance window and delayed purchase order.
   - role: assistant
     content: Convertiré aquests conceptes a una resposta comercial natural.
   prompt: Escriu la resposta com un correu breu, amb límits, alternativa i proper
@@ -412,20 +447,20 @@
   source_lang: es-ca
   target_lang: ca
   forbidden_terms:
-  - alerta sanitaria
-  - consumo restringido
-  - población vulnerable
-  - punto de reparto
-  - nuevo muestreo
+  - residuos
+  - huelga
+  - contenedores
+  - refuerzo
+  - limpieza
   conversation:
   - role: user
-    content: Cal publicar un avís sobre una incidència de qualitat de l'aigua en una
-      zona concreta.
+    content: Cal publicar un avís sobre una incidència temporal en la recollida de
+      residus.
   - role: assistant
     content: L'avís ha de ser clar, prudent i orientat a l'acció.
   - role: user
-    content: El borrador castellano incluye alerta sanitaria, consumo restringido,
-      población vulnerable, punto de reparto y nuevo muestreo.
+    content: El borrador castellano incluye huelga parcial, contenedores saturados,
+      refuerzo de limpieza, puntos provisionales y nueva revisión del servicio.
   - role: assistant
     content: Ho redactaré i distingiré fets confirmats de recomanacions.
   prompt: Escriu l'avís final, amb títol, afectació, recomanacions i propera actualització.
@@ -436,16 +471,21 @@
   workflow: procurement_note
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms: []
+  forbidden_terms:
+  - venue
+  - catering
+  - deposit
+  - cancellation
+  - capacity
   conversation:
   - role: user
-    content: Estem triant una eina nova per atendre clients i necessito una nota de
-      decisió.
+    content: Estem triant un espai per a una jornada amb clients i necessito una
+      nota de decisió.
   - role: assistant
-    content: Podem comparar criteris econòmics, tècnics, legals i operatius.
+    content: Podem comparar criteris econòmics, logístics, legals i operatius.
   - role: user
-    content: The offer mentions onboarding cost, exit clause, uptime guarantee, data
-      processor obligations and support tier limitations.
+    content: The offer mentions venue capacity, catering options, deposit deadline,
+      cancellation terms and accessibility constraints.
   - role: assistant
     content: Ho convertiré en una nota interna amb els riscos ben explicats.
   prompt: Escriu la nota de contractació amb recomanació condicionada i punts pendents
@@ -458,11 +498,11 @@
   source_lang: es-ca
   target_lang: ca
   forbidden_terms:
-  - error intermitente
-  - pedido bloqueado
-  - reintento manual
-  - registro duplicado
-  - equipo de guardia
+  - intermitente
+  - pedido
+  - reintento
+  - registro
+  - equipo
   conversation:
   - role: user
     content: Tenim un client amb una incidència tècnica urgent durant un període de
@@ -483,7 +523,12 @@
   workflow: project_status
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms: []
+  forbidden_terms:
+  - milestone
+  - procurement
+  - dashboard
+  - risk
+  - escalation
   conversation:
   - role: user
     content: Hem d'informar la comissió sobre l'estat d'un projecte finançat amb fons
@@ -506,11 +551,11 @@
   source_lang: es-ca
   target_lang: ca
   forbidden_terms:
-  - permanencia encubierta
-  - baja solicitada
-  - cobro indebido
-  - justificante adjunto
-  - reclamación de consumo
+  - permanencia
+  - baja
+  - cobro
+  - justificante
+  - reclamación
   conversation:
   - role: user
     content: Necessito reclamar a una empresa de telecomunicacions per un contracte
@@ -531,7 +576,12 @@
   workflow: procurement_note
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms: []
+  forbidden_terms:
+  - framework
+  - disaster
+  - service
+  - evidence
+  - compliance
   conversation:
   - role: user
     content: Hem de preparar una nota per renovar un servei essencial de recuperació
@@ -553,20 +603,19 @@
   source_lang: es-ca
   target_lang: ca
   forbidden_terms:
-  - proveedor alternativo
-  - coste adicional
-  - entrega garantizada
-  - aprobación pendiente
-  - margen comercial
+  - formación
+  - propone
+  - calendario
+  - contrato
+  - usuarios
   conversation:
   - role: user
-    content: Hem de contestar un client que vol accelerar una entrega però el proveïdor
-      principal no confirma terminis.
+    content: Hem de contestar un client que vol afegir formació extra abans de renovar.
   - role: assistant
     content: Podem oferir escenaris, costos i límits de compromís.
   - role: user
-    content: El equipo de ventas propone proveedor alternativo, coste adicional, entrega
-      garantizada, aprobación pendiente y margen comercial.
+    content: El equipo de ventas propone sesiones por idioma, calendario intensivo,
+      contrato puente, usuarios adicionales y validación del responsable de cuenta.
   - role: assistant
     content: Ho convertiré en una resposta comercial clara.
   - role: user
@@ -579,7 +628,12 @@
   workflow: public_notice
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms: []
+  forbidden_terms:
+  - outage
+  - walk-in
+  - queue
+  - confirmation
+  - restoration
   conversation:
   - role: user
     content: El servei de cita prèvia ha fallat i cal avisar la ciutadania avui.
@@ -600,11 +654,11 @@
   source_lang: es-ca
   target_lang: ca
   forbidden_terms:
-  - despliegue aplazado
-  - deuda técnica
-  - ventana de mantenimiento
-  - validación de negocio
-  - comité de riesgos
+  - despliegue
+  - deuda
+  - mantenimiento
+  - validación
+  - comité
   conversation:
   - role: user
     content: Necessito un estat de projecte per explicar per què no llançarem aquesta
@@ -626,7 +680,12 @@
   workflow: support_reply
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms: []
+  forbidden_terms:
+  - webhook
+  - payload
+  - sandbox
+  - production
+  - rate
   conversation:
   - role: user
     content: Hem d'ajudar un client que té una integració amb errors intermitents
@@ -639,7 +698,7 @@
       production token and rate limit.
   - role: assistant
     content: Tradueixo el fons tècnic a instruccions clares.
-  prompt: Escriu la resposta de suport, amb comprovacions, dades requerides, mesura
+  prompt: Escriu la resposta de suport en català, amb comprovacions, dades requerides, mesura
     temporal i escalat.
 - id: cd_178
   category: multi_turn
@@ -648,7 +707,12 @@
   workflow: complaint_response
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms: []
+  forbidden_terms:
+  - accessibility
+  - temporary
+  - contractor
+  - inspection
+  - apology
   conversation:
   - role: user
     content: Hem de contestar una queixa sobre accessibilitat en un edifici municipal.
@@ -669,11 +733,11 @@
   source_lang: es-ca
   target_lang: ca
   forbidden_terms:
-  - reparación pendiente
-  - visita cancelada
-  - cargo adicional
-  - parte técnico
-  - hoja de reclamaciones
+  - reparación
+  - cancelada
+  - cargo
+  - parte
+  - hoja
   conversation:
   - role: user
     content: Vull reclamar a un servei de reparacions perquè fa setmanes que arrossego

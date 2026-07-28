@@ -107,15 +107,15 @@ Results on the 120-item Catalan Drift dataset:
 
 | Model | Overall | Monolingual | Crosslingual basic | Multi-turn | Crosslingual advanced |
 |---|---:|---:|---:|---:|---:|
-| Qwen3.5-9B Q8 | **93.3%** | 100.0% | 100.0% | 96.7% | 76.7% |
-| Gemma 4 E4B Q4 | 85.0% | 100.0% | 86.7% | 90.0% | 63.3% |
-| Gemini 2.5 Flash | 83.3% | 100.0% | 100.0% | 93.3% | 40.0% |
-| Gemma 3 12B Q8 | 82.5% | 96.7% | 100.0% | 93.3% | 40.0% |
-| GPT-5.5 | 82.5% | 100.0% | 100.0% | 96.7% | 33.3% |
-| Salamandra 7B Q8 | 80.0% | 100.0% | 83.3% | 86.7% | 50.0% |
-| Ministral 3 8B Q8 | 75.8% | 93.3% | 83.3% | 86.7% | 40.0% |
-| Qwen2.5 1.5B Q8 | 50.8% | 76.7% | 26.7% | 56.7% | 43.3% |
-| Gemma 2 2B Q8 | 44.2% | 73.3% | 36.7% | 50.0% | 16.7% |
+| GPT-5.5 | **80.8%** | 100.0% | 100.0% | 86.7% | 36.7% |
+| Qwen3.5-9B Q8 | 78.3% | 100.0% | 86.7% | 70.0% | 56.7% |
+| Gemini 2.5 Flash | 77.5% | 100.0% | 96.7% | 80.0% | 33.3% |
+| Gemma 3 12B Q8 | 75.0% | 96.7% | 86.7% | 86.7% | 30.0% |
+| Salamandra 7B Q8 | 73.3% | 100.0% | 76.7% | 70.0% | 46.7% |
+| Gemma 4 E4B Q4 | 70.8% | 100.0% | 76.7% | 56.7% | 50.0% |
+| Ministral 3 8B Q8 | 65.8% | 100.0% | 70.0% | 53.3% | 40.0% |
+| Qwen2.5 1.5B Q8 | 44.2% | 73.3% | 20.0% | 40.0% | 43.3% |
+| Gemma 2 2B Q8 | 29.2% | 70.0% | 23.3% | 16.7% | 6.7% |
 
 At 95% confidence, the maximum margin of error is ±8.9 percentage points
 for overall scores (n=120) and ±17.9 percentage points for category scores

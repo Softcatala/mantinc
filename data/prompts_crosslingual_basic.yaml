@@ -6,18 +6,18 @@
   source_lang: es-ca
   target_lang: ca
   forbidden_terms:
-  - mucha gente
-  - sustituye
-  - capacidades humanas
-  - automatiza la creatividad
-  - supervisión humana
+  - objetivo
+  - criterio
+  - sesgos
+  - datos
+  - confianza
   prompt: 'Explica en català un malentès comú sobre el tema descrit i corregeix-lo
     amb un exemple concret.
 
 
-    Font (castellà): "Mucha gente cree que la IA sustituye por completo las capacidades
-    humanas y automatiza la creatividad, cuando en realidad se limita a ampliar tareas
-    concretas bajo supervisión humana."'
+    Font (castellà): "Mucha gente cree que una respuesta de IA siempre es objetiva
+    y neutral porque se basa en datos, pero puede reproducir sesgos si no se revisa
+    con criterio humano."'
 - id: cd_031
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -26,10 +26,10 @@
   source_lang: es-ca
   target_lang: ca
   forbidden_terms:
-  - factura pendiente
+  - pendiente
   - necesitamos
   - urgente
-  - presupuesto cerrado
+  - presupuesto
   - mañana
   prompt: 'Redacta en català una resposta professional al client. Ha de reconèixer
     la pressió, proposar una data de resposta i evitar copiar expressions del text
@@ -44,13 +44,18 @@
   workflow: public_notice
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms: []
+  forbidden_terms:
+  - elevator
+  - library
+  - access
+  - ground
   prompt: 'Escriu en català un avís públic amb títol i cos. Transforma la informació
     de la font en llenguatge administratiu clar, sense conservar les expressions en
     anglès.
 
-    Font (anglès): "There will be a water outage tomorrow morning on the affected
-    streets. The service desk will publish the expected restoration time."'
+    Font (anglès): "The library elevator will be unavailable tomorrow afternoon.
+    Staff will move reserved books to the ground floor and arrange assisted access
+    on request."'
 - id: cd_033
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -58,12 +63,16 @@
   workflow: support_reply
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms: []
+  forbidden_terms:
+  - upload
+  - attachment
+  - queue
+  - yesterday
   prompt: 'Contesta com a equip de suport. Resumeix el problema, dona passos concrets
     i tanca amb una proposta de seguiment.
 
-    Font (anglès): "The customer says the password reset did not work, the account
-    locked again, and the app only says to retry later. They opened a support ticket
+    Font (anglès): "The customer says a document upload stalls after the second attachment,
+    the file format warning is unclear, and the processing queue has not moved since
     yesterday."'
 - id: cd_034
   category: crosslingual_basic
@@ -73,10 +82,10 @@
   source_lang: es-ca
   target_lang: ca
   forbidden_terms:
-  - proveedor homologado
-  - plazo de entrega
-  - visto bueno
-  - mesa de contratación
+  - proveedor
+  - plazo
+  - visto
+  - contratación
   prompt: 'Escriu una nota de contractació breu. Inclou criteri de selecció, termini,
     validació necessària i proper pas, sense copiar termes castellans.
 
@@ -89,9 +98,13 @@
   workflow: study_plan
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms: []
-  prompt: 'Prepara un pla d''estudi de quatre dies a partir de la font. Ha de tenir
-    objectiu, tasca principal i comprovació per a cada dia.
+  forbidden_terms:
+  - mock
+  - weak
+  - timed
+  - review
+  prompt: 'Prepara un pla d''estudi en català d''una setmana a partir de la font. Ha de tenir
+    fites diàries i un control de progrés.
 
     Font (anglès): "Start with a mock exam, identify weak topics, do timed practice
     for two days, and keep the last evening for a final review."'
@@ -103,10 +116,10 @@
   source_lang: es-ca
   target_lang: ca
   forbidden_terms:
-  - riesgo comercial
-  - retraso acumulado
-  - reunión de seguimiento
-  prompt: 'Escriu una actualització de projecte per a direcció. Converteix la font
+  - riesgo
+  - retraso
+  - reunión
+  prompt: 'Escriu en català una actualització de projecte per a direcció. Converteix la font
     en estat, risc, decisió necessària i propera acció.
 
     Font (castellà): "El entregable principal está listo, pero hay un riesgo comercial
@@ -118,13 +131,17 @@
   workflow: citizen_response
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms: []
+  forbidden_terms:
+  - garden
+  - waiting
+  - plot
+  - email
   prompt: 'Redacta una resposta institucional a una consulta ciutadana. Inclou recepció
-    de la queixa, actuació prevista, termini i informació de seguiment.
+    de la consulta, actuació prevista, termini i informació de seguiment.
 
-    Font (anglès): "We received your noise complaint. An inspection visit is scheduled,
-    the legal deadline is ten working days, and the case reference will be sent by
-    email."'
+    Font (anglès): "We received your question about the community garden waiting
+    list. Plot assignments will be reviewed next week, missing documents can be sent
+    by email and applicants will receive an update."'
 - id: cd_038
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -133,15 +150,15 @@
   source_lang: es-ca
   target_lang: ca
   forbidden_terms:
-  - cargo duplicado
-  - devolución
-  - justificante
-  - incidencia abierta
+  - producto
+  - defectuoso
+  - reemplazo
+  - garantía
   prompt: 'Escriu una reclamació clara a partir de la font. Inclou què ha passat,
     què es demana, documents adjunts i termini de resposta.
 
-    Font (castellà): "La factura tiene un cargo duplicado, solicito la devolución,
-    adjunto el justificante y pido mantener la incidencia abierta."'
+    Font (castellà): "El producto llegó defectuoso, el reemplazo prometido no se
+    ha enviado, adjunto fotografías y pido una solución dentro de la garantía."'
 - id: cd_039
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -149,12 +166,16 @@
   workflow: privacy_guidance
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms: []
+  forbidden_terms:
+  - profile
+  - child
+  - ads
+  - followers
   prompt: 'Dona una guia pràctica de privacitat basada en la font. Organitza la resposta
     en passos breus i evita mantenir la terminologia anglesa.
 
-    Font (anglès): "Turn off location tracking, check whether a data broker has your
-    profile, submit the opt-out form, and clear browser history on shared devices."'
+    Font (anglès): "Before creating a child profile, review visibility settings,
+    ad personalization, follower approvals and photo tagging permissions."'
 - id: cd_130
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -163,11 +184,11 @@
   source_lang: es-ca
   target_lang: ca
   forbidden_terms:
-  - bloqueo de producción
-  - garantía extendida
-  - penalización automática
-  - respuesta vinculante
-  - antes del cierre
+  - bloqueo
+  - garantía
+  - penalización
+  - respuesta
+  - antes
   prompt: 'Redacta una resposta per a un client important. Ha de reconèixer la pressió,
     separar fets confirmats i punts pendents, proposar una mesura provisional i evitar
     compromisos legals o expressions del text original.
@@ -182,7 +203,12 @@
   workflow: public_notice
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms: []
+  forbidden_terms:
+  - wildfire
+  - school
+  - vulnerable
+  - indoor
+  - quality
   prompt: 'Escriu un avís públic amb títol, motiu, recomanacions per grups vulnerables,
     afectació a centres educatius, canals d''informació i propera actualització. No
     conservis expressions en anglès.
@@ -196,7 +222,12 @@
   workflow: support_reply
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms: []
+  forbidden_terms:
+  - single
+  - role
+  - invoice
+  - stale
+  - audit
   prompt: 'Contesta com a suport tècnic. Resumeix el problema, demana dades de verificació,
     proposa comprovacions ordenades, indica quan cal escalar i evita copiar la terminologia
     anglesa de la font.
@@ -211,11 +242,11 @@
   source_lang: es-ca
   target_lang: ca
   forbidden_terms:
-  - baja temeraria
-  - solvencia técnica
-  - subsanación documental
-  - mesa de contratación
-  - informe jurídico
+  - baja
+  - solvencia
+  - subsanación
+  - contratación
+  - jurídico
   prompt: 'Escriu una nota de contractació que expliqui la situació, identifiqui els
     riscos, proposi comprovacions i indiqui el proper tràmit. No copiïs termes castellans
     de la font.
@@ -230,7 +261,12 @@
   workflow: complaint_response
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms: []
+  forbidden_terms:
+  - denied
+  - connecting
+  - voucher
+  - written
+  - compensation
   prompt: 'Escriu una reclamació formal a una companyia aèria. Inclou fets, impacte,
     documentació adjunta, petició concreta i termini de resposta, sense conservar
     les expressions angleses de la font.
@@ -246,11 +282,11 @@
   source_lang: es-ca
   target_lang: ca
   forbidden_terms:
-  - integración contable
-  - entorno de pruebas
-  - proveedor externo
-  - desviación de alcance
-  - reunión de desbloqueo
+  - integración
+  - entorno
+  - proveedor
+  - desviación
+  - desbloqueo
   prompt: 'Escriu una actualització de projecte per a direcció amb resum, avenços,
     bloquejos, impacte en calendari, decisions necessàries i properes accions. Evita
     copiar expressions castellanes.
@@ -264,7 +300,12 @@
   workflow: complaint_response
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms: []
+  forbidden_terms:
+  - missed
+  - safety
+  - complaint
+  - response
+  - case
   prompt: 'Redacta una resposta institucional a una queixa ciutadana. Ha de reconèixer
     la recepció, explicar l''actuació prevista, aclarir terminis i indicar responsable
     de seguiment, sense mantenir expressions angleses.
@@ -278,13 +319,17 @@
   workflow: client_reply
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms: []
+  forbidden_terms:
+  - case
+  - press
+  - trial
+  - period
   prompt: 'Respon a un client que pressiona per canviar condicions comercials. La
-    resposta ha de ser breu però densa: límit del que es pot prometre, alternativa
+    resposta ha de ser breu però clara: límit del que es pot prometre, alternativa
     viable, dades pendents i següent punt de decisió. No copiïs el vocabulari anglès.
 
-    Font (anglès): "The client requests a rush order despite a locked forecast, asks
-    for shared margin, a delivery guarantee and an executive review today."'
+    Font (anglès): "The client wants to publish a case study, use our logo in a press
+    note, extend the trial period and skip the legal review this week."'
 - id: cd_138
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -293,16 +338,16 @@
   source_lang: es-ca
   target_lang: ca
   forbidden_terms:
-  - corte preventivo
-  - suministro alternativo
-  - personas dependientes
-  - aviso posterior
+  - pasarela
+  - peatones
+  - evento
+  - vallado
   prompt: 'Escriu un avís públic clar i operatiu. Inclou títol, motiu, horari, col·lectius
     prioritaris, alternativa disponible i propera comunicació. No reprodueixis expressions
     castellanes.
 
-    Font (castellà): "Habrá un corte preventivo en la zona afectada, se habilitará
-    suministro alternativo para personas dependientes y se emitirá un aviso posterior."'
+    Font (castellà): "La pasarela peatonal se cerrará por un evento deportivo, habrá
+    vallado provisional, itinerario alternativo señalizado y personal de apoyo."'
 - id: cd_139
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -310,13 +355,18 @@
   workflow: procurement_note
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms: []
+  forbidden_terms:
+  - uniforms
+  - sizes
+  - samples
+  - returns
+  - delivery
   prompt: 'Redacta una nota interna per decidir entre proveïdors. Inclou criteris
     tècnics, econòmics, legals i operatius, riscos de dependència i recomanació condicionada.
     Evita conservar termes anglesos.
 
-    Font (anglès): "The proposal has vendor lock-in risk, an unclear migration fee,
-    a limited support window, data residency questions and an automatic renewal clause."'
+    Font (anglès): "The proposal compares uniform suppliers, size availability, fabric
+    samples, return conditions, delivery batches and branding requirements."'
 - id: cd_140
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -325,10 +375,10 @@
   source_lang: es-ca
   target_lang: ca
   forbidden_terms:
-  - sesión caducada
-  - carrito duplicado
-  - pasarela de pago
-  - incidencia prioritaria
+  - sesión
+  - carrito
+  - pasarela
+  - incidencia
   prompt: 'Contesta com a suport de comerç electrònic. Dona una resposta amb diagnosi,
     passos per evitar pèrdua de dades, informació que cal enviar, criteri de prioritat
     i tancament empàtic. No copiïs termes castellans.
@@ -342,7 +392,12 @@
   workflow: project_status
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms: []
+  forbidden_terms:
+  - milestone
+  - accessibility
+  - vendor
+  - budget
+  - steering
   prompt: 'Escriu un informe d''estat per a un projecte públic. Organitza''l en avenços,
     desviacions, riscos, impacte pressupostari i decisions del grup de seguiment.
     No mantinguis expressions angleses.
@@ -358,11 +413,11 @@
   source_lang: es-ca
   target_lang: ca
   forbidden_terms:
-  - cláusula abusiva
-  - baja no tramitada
-  - recibo devuelto
-  - atención telefónica
-  - reclamación previa
+  - cláusula
+  - baja
+  - recibo
+  - atención
+  - reclamación
   prompt: 'Escriu una reclamació de consum amb exposició ordenada dels fets, drets
     invocats de manera prudent, documentació, petició de solució i termini raonable.
     No copiïs frases del castellà.
@@ -377,7 +432,12 @@
   workflow: procurement_note
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms: []
+  forbidden_terms:
+  - procurement
+  - framework
+  - conflict
+  - delivery
+  - audit
   prompt: 'Redacta una nota de contractació d''urgència amb justificació, límits,
     comprovacions prèvies, evidències que cal conservar i control posterior. Evita
     el lèxic anglès de la font.
@@ -392,9 +452,9 @@
   source_lang: es-ca
   target_lang: ca
   forbidden_terms:
-  - cambio de alcance
-  - aprobación verbal
-  - descuento excepcional
+  - alcance
+  - aprobación
+  - descuento
   prompt: 'Redacta una resposta comercial que ordeni una situació confusa, confirmi
     què es pot fer, què requereix validació escrita i com es tancarà el pressupost.
     No traslladis expressions castellanes.
@@ -408,13 +468,19 @@
   workflow: public_notice
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms: []
+  forbidden_terms:
+  - phone
+  - hotline
+  - voicemail
+  - callback
+  - branch
   prompt: 'Escriu un avís de servei d''atenció ciutadana amb causa, afectació, mesures
     provisionals, priorització, canals alternatius i propera actualització. No copiïs
     expressions de la font.
 
-    Font (anglès): "A service disruption created an appointment backlog. A temporary
-    counter will handle priority cases and updates will appear on the status page."'
+    Font (anglès): "A phone line failure affects the citizen hotline. Voicemail will
+    be reviewed twice a day, callback requests are prioritized and branch desks remain
+    open."'
 - id: cd_146
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -422,13 +488,17 @@
   workflow: project_status
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms: []
+  forbidden_terms:
+  - inventory
+  - barcode
+  - warehouse
+  - training
   prompt: 'Escriu una actualització de projecte per a direcció. Ha d''incloure estat
     resumit, tasques crítiques, riscos, proves pendents, decisió de llançament i pla
     de contingència. No mantinguis els termes anglesos.
 
-    Font (anglès): "Data cleanup is almost done, billing migration is delayed, regression
-    risk remains, launch readiness is uncertain and a go/no-go decision is due Friday."'
+    Font (anglès): "Inventory cleanup is almost done, barcode testing is delayed,
+    warehouse training is incomplete and the rollout decision is due Friday."'
 - id: cd_147
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -437,9 +507,9 @@
   source_lang: es-ca
   target_lang: ca
   forbidden_terms:
-  - permisos heredados
-  - usuario invitado
-  - trazas del sistema
+  - heredados
+  - usuario
+  - trazas
   prompt: 'Contesta com a suport. Explica el problema probable, dona passos de comprovació
     sense risc, demana informació tècnica mínima i fixa un compromís de seguiment.
     Evita copiar expressions castellanes.
@@ -454,11 +524,11 @@
   source_lang: es-ca
   target_lang: ca
   forbidden_terms:
-  - falta de limpieza
-  - contenedor desbordado
-  - ruta de recogida
-  - refuerzo temporal
-  - parte de incidencias
+  - limpieza
+  - contenedor
+  - recogida
+  - refuerzo
+  - parte
   prompt: 'Redacta una resposta municipal a una queixa de neteja viària. Inclou disculpa
     institucional, verificació prevista, mesura temporal, seguiment i canal per aportar
     noves dades. No conservis expressions castellanes.
@@ -472,7 +542,11 @@
   workflow: complaint_response
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms: []
+  forbidden_terms:
+  - warranty
+  - refurbished
+  - label
+  - purchase
   prompt: 'Escriu una reclamació a un fabricant. Inclou cronologia, problema tècnic,
     documentació disponible, solució demanada, alternativa acceptable i termini de
     resposta. No mantinguis les expressions angleses.
