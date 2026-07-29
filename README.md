@@ -8,8 +8,8 @@ resultats a [l'issue #1](https://github.com/jordimas/mantinc/issues/1).
 # Introduction
 
 Benchmark for checking whether a model keeps answering in Catalan across
-monolingual, basic crosslingual, multi-turn, and advanced crosslingual prompts.
-The default harness runs the 120-item dataset. This targets the same
+monolingual, basic crosslingual, multi-turn, advanced crosslingual, and RAG
+context prompts. The default harness runs the 180-item dataset. This targets the same
 language-confusion problem studied by Marchisio et al. in
 ["Understanding and Mitigating Language Confusion in LLMs"](https://aclanthology.org/2024.emnlp-main.380/)
 as a foundation, while adding Catalan-specific personas, workflows, and
@@ -55,8 +55,8 @@ Each sample should specify:
   `client_reply`, `community_health_bulletin`, `complaint_response`,
   `privacy_guidance`, `procurement_note`, `project_status`, `public_notice`,
   `public_project_status`, `study_plan`, `support_reply`, or `tenant_request`.
-- `category`: `monolingual`, `crosslingual_basic`, `multi_turn`, or
-  `crosslingual_advanced`.
+- `category`: `monolingual`, `crosslingual_basic`, `multi_turn`,
+  `crosslingual_advanced`, or `rag_context`.
   - `monolingual`: Catalan-only prompts and context.
   - `crosslingual_basic`: A Catalan task with Spanish or English source
     material.
@@ -64,12 +64,20 @@ Each sample should specify:
     language of the final request despite earlier crosslingual context.
   - `crosslingual_advanced`: Combined assistant priming/copying, momentum
     priming, and recency priming pressure cases.
+  - `rag_context`: Retrieved-context prompts with Catalan and/or Spanish source
+    snippets that must be answered in Catalan.
 - `source_lang`: `ca`, `es-ca`, or `en-ca`. 
 - `forbidden_terms`: source-language words or phrases that should not appear
   in the final answer.
 
-The dataset contains 30 items in each of its four categories (120 items total).
-It is built deterministically with `make build`.
+## Design Rules
+
+- When an example provides a template to use in another language, explicitly
+  include `català` in the instruction. This keeps the case fair and makes the
+  expected Catalan answer language unambiguous.
+
+The dataset contains 30 items in each non-RAG category plus 60 RAG-context items
+(180 items total). It is built deterministically with `make build`.
 
 
 ## Run
@@ -103,22 +111,23 @@ full repository license split.
 
 ## Completed evaluations
 
-Results on the 120-item Catalan Drift dataset:
+Results on the 180-item Catalan Drift dataset:
 
-| Model | Overall | Monolingual | Crosslingual basic | Multi-turn | Crosslingual advanced |
-|---|---:|---:|---:|---:|---:|
-| GPT-5.5 | **80.8%** | 100.0% | 100.0% | 86.7% | 36.7% |
-| Qwen3.5-9B Q8 | 78.3% | 100.0% | 86.7% | 70.0% | 56.7% |
-| Gemini 2.5 Flash | 77.5% | 100.0% | 96.7% | 80.0% | 33.3% |
-| Gemma 3 12B Q8 | 75.0% | 96.7% | 86.7% | 86.7% | 30.0% |
-| Salamandra 7B Q8 | 73.3% | 100.0% | 76.7% | 70.0% | 46.7% |
-| Gemma 4 E4B Q4 | 70.8% | 100.0% | 76.7% | 56.7% | 50.0% |
-| Ministral 3 8B Q8 | 65.8% | 100.0% | 70.0% | 53.3% | 40.0% |
-| Qwen2.5 1.5B Q8 | 44.2% | 73.3% | 20.0% | 40.0% | 43.3% |
-| Gemma 2 2B Q8 | 29.2% | 70.0% | 23.3% | 16.7% | 6.7% |
+| Model | Overall | Monolingual | Crosslingual basic | Multi-turn | Crosslingual advanced | RAG context |
+|---|---:|---:|---:|---:|---:|---:|
+| GPT-5.5 | **85.0%** | 100.0% | 100.0% | 83.3% | 33.3% | 96.7% |
+| Gemma 3 12B Q8 | 81.1% | 96.7% | 86.7% | 86.7% | 30.0% | 93.3% |
+| Salamandra 7B Q8 | 80.0% | 100.0% | 76.7% | 70.0% | 46.7% | 93.3% |
+| Qwen3.5-9B Q8 | 78.3% | 100.0% | 86.7% | 70.0% | 56.7% | 78.3% |
+| Gemini 2.5 Flash | 76.1% | 100.0% | 96.7% | 83.3% | 30.0% | 73.3% |
+| Gemma 4 E4B Q4 | 73.9% | 100.0% | 76.7% | 56.7% | 50.0% | 80.0% |
+| Ministral 3 8B Q8 | 73.9% | 100.0% | 70.0% | 53.3% | 40.0% | 90.0% |
+| Qwen2.5 1.5B Q8 | 44.4% | 73.3% | 20.0% | 46.7% | 40.0% | 43.3% |
+| Gemma 2 2B Q8 | 38.3% | 70.0% | 23.3% | 16.7% | 6.7% | 56.7% |
 
-At 95% confidence, the maximum margin of error is ±8.9 percentage points
-for overall scores (n=120) and ±17.9 percentage points for category scores
-(n=30), using the normal approximation for a binomial proportion.
+At 95% confidence, the maximum margin of error is ±7.3 percentage points
+for overall scores (n=180), ±17.9 percentage points for non-RAG category
+scores (n=30), and ±12.7 percentage points for RAG-context scores (n=60),
+using the normal approximation for a binomial proportion.
 
 All completed evaluations had zero API or empty-response failures.

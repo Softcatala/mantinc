@@ -44,5 +44,8 @@ metric_list:
   - metric: crosslingual_advanced_pass
     aggregation: mean
     higher_is_better: true
+  - metric: rag_context_pass
+    aggregation: mean
+    higher_is_better: true
 metadata:
   version: 1.0

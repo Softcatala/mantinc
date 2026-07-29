@@ -28,6 +28,7 @@ DEFAULT_PROMPTS = [
     "data/prompts_crosslingual_basic.yaml",
     "data/prompts_multi_turn.yaml",
     "data/prompts_crosslingual_advanced.yaml",
+    "data/prompts_rag_context.yaml",
 ]
 
 
@@ -94,6 +95,27 @@ def _messages(row: dict[str, Any]) -> list[dict[str, str]] | None:
     return messages
 
 
+def _rag_prompt(row: dict[str, Any]) -> str | None:
+    chunks = row.get("retrieved_context") or []
+    if not chunks:
+        return None
+
+    parts = ["Fragments recuperats:", ""]
+    for chunk in chunks:
+        text = str(chunk.get("text") or "").strip()
+        if not text:
+            continue
+        chunk_id = str(chunk.get("id") or "doc")
+        lang = str(chunk.get("lang") or "unknown")
+        parts.extend([f"[{chunk_id}] ({lang})", text, ""])
+
+    user_prompt = str(row.get("prompt") or "").strip()
+    if not user_prompt:
+        return None
+    parts.extend(["Tasca:", user_prompt])
+    return "\n".join(parts).strip()
+
+
 def _failure_details(sample: dict[str, Any], response: str) -> list[str]:
     doc = sample.get("doc", {})
     details = []
@@ -132,6 +154,10 @@ def _conversation_lines(doc: dict[str, Any]) -> list[str]:
 def export_lm_eval(args: argparse.Namespace) -> None:
     rows = _rows_with_dataset(args.prompts)
     for row in rows:
+        rag_prompt = _rag_prompt(row)
+        if rag_prompt:
+            row["user_prompt"] = row["prompt"]
+            row["prompt"] = rag_prompt
         messages = _messages(row)
         if messages:
             row["messages"] = messages

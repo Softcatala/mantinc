@@ -18,6 +18,14 @@ SOURCES = {
     "crosslingual_basic": ROOT / "data/prompts_crosslingual_basic.yaml",
     "multi_turn": ROOT / "data/prompts_multi_turn.yaml",
     "crosslingual_advanced": ROOT / "data/prompts_crosslingual_advanced.yaml",
+    "rag_context": ROOT / "data/prompts_rag_context.yaml",
+}
+EXPECTED_CATEGORY_COUNTS = {
+    "monolingual": 30,
+    "crosslingual_basic": 30,
+    "multi_turn": 30,
+    "crosslingual_advanced": 30,
+    "rag_context": 60,
 }
 
 
@@ -30,8 +38,11 @@ def build_rows() -> list[dict[str, Any]]:
     for category, source in SOURCES.items():
         category_rows = load_rows(source)
         expected_source = str(source.relative_to(ROOT))
-        if len(category_rows) != 30:
-            raise ValueError(f"{source} must contain 30 rows, found {len(category_rows)}")
+        expected_count = EXPECTED_CATEGORY_COUNTS[category]
+        if len(category_rows) != expected_count:
+            raise ValueError(
+                f"{source} must contain {expected_count} rows, found {len(category_rows)}"
+            )
         for row in category_rows:
             if row.get("category") != category:
                 raise ValueError(
@@ -48,9 +59,10 @@ def build_rows() -> list[dict[str, Any]]:
 
 
 def validate_rows(rows: list[dict[str, Any]]) -> None:
-    expected_categories = Counter({category: 30 for category in SOURCES})
+    expected_categories = Counter(EXPECTED_CATEGORY_COUNTS)
     categories = Counter(str(row.get("category")) for row in rows)
-    if len(rows) != 120 or categories != expected_categories:
+    expected_total = sum(EXPECTED_CATEGORY_COUNTS.values())
+    if len(rows) != expected_total or categories != expected_categories:
         raise ValueError(f"unexpected category counts: {dict(categories)}")
 
     ids = [str(row.get("id")) for row in rows]
