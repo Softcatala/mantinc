@@ -9,7 +9,7 @@ resultats a [l'issue #1](https://github.com/jordimas/mantinc/issues/1).
 
 Benchmark for checking whether a model keeps answering in Catalan across
 monolingual, basic crosslingual, multi-turn, advanced crosslingual, and RAG
-context prompts. The default harness runs the 180-item dataset. This targets the same
+context prompts. The default harness runs the 300-item dataset. This targets the same
 language-confusion problem studied by Marchisio et al. in
 ["Understanding and Mitigating Language Confusion in LLMs"](https://aclanthology.org/2024.emnlp-main.380/)
 as a foundation, while adding Catalan-specific personas, workflows, and
@@ -53,8 +53,10 @@ Each sample should specify:
 - `workflow`: one of the real task types used in the benchmark:
   `ai_misconception_explanation`, `citizen_response`, `client_delay_update`,
   `client_reply`, `community_health_bulletin`, `complaint_response`,
-  `privacy_guidance`, `procurement_note`, `project_status`, `public_notice`,
-  `public_project_status`, `study_plan`, `support_reply`, or `tenant_request`.
+  `internal_briefing`, `privacy_guidance`, `procurement_note`,
+  `project_status`, `public_info_summary`, `public_notice`,
+  `public_project_status`, `service_summary`, `study_plan`, `support_reply`,
+  or `tenant_request`.
 - `category`: `monolingual`, `crosslingual_basic`, `multi_turn`,
   `crosslingual_advanced`, or `rag_context`.
   - `monolingual`: Catalan-only prompts and context.
@@ -66,7 +68,12 @@ Each sample should specify:
     priming, and recency priming pressure cases.
   - `rag_context`: Retrieved-context prompts with Catalan and/or Spanish source
     snippets that must be answered in Catalan.
-- `source_lang`: `ca`, `es-ca`, or `en-ca`. 
+- `source_lang`: the source/context language pattern:
+  - `ca`: Catalan-only prompt and context.
+  - `es`: Spanish retrieved context answered in Catalan.
+  - `ca-es`: mixed Catalan and Spanish retrieved context answered in Catalan.
+  - `es-ca`: Spanish source material or prior-turn context answered in Catalan.
+  - `en-ca`: English source material or prior-turn context answered in Catalan.
 - `forbidden_terms`: source-language words or phrases that should not appear
   in the final answer.
 
@@ -76,8 +83,8 @@ Each sample should specify:
   include `català` in the instruction. This keeps the case fair and makes the
   expected Catalan answer language unambiguous.
 
-The dataset contains 30 items in each non-RAG category plus 60 RAG-context items
-(180 items total). It is built deterministically with `make build`.
+The dataset contains 60 items in each category (300 items total). It is built
+deterministically with `make build`.
 
 
 ## Run
@@ -111,23 +118,22 @@ full repository license split.
 
 ## Completed evaluations
 
-Results on the 180-item Catalan Drift dataset:
+Results on the 300-item Catalan Drift dataset:
 
 | Model | Overall | Monolingual | Crosslingual basic | Multi-turn | Crosslingual advanced | RAG context |
 |---|---:|---:|---:|---:|---:|---:|
-| GPT-5.5 | **85.0%** | 100.0% | 100.0% | 83.3% | 33.3% | 96.7% |
-| Gemma 3 12B Q8 | 81.1% | 96.7% | 86.7% | 86.7% | 30.0% | 93.3% |
-| Salamandra 7B Q8 | 80.0% | 100.0% | 76.7% | 70.0% | 46.7% | 93.3% |
-| Qwen3.5-9B Q8 | 78.3% | 100.0% | 86.7% | 70.0% | 56.7% | 78.3% |
-| Gemini 2.5 Flash | 76.1% | 100.0% | 96.7% | 83.3% | 30.0% | 73.3% |
-| Gemma 4 E4B Q4 | 73.9% | 100.0% | 76.7% | 56.7% | 50.0% | 80.0% |
-| Ministral 3 8B Q8 | 73.9% | 100.0% | 70.0% | 53.3% | 40.0% | 90.0% |
-| Qwen2.5 1.5B Q8 | 44.4% | 73.3% | 20.0% | 46.7% | 40.0% | 43.3% |
-| Gemma 2 2B Q8 | 38.3% | 70.0% | 23.3% | 16.7% | 6.7% | 56.7% |
+| GPT-5.5 | **81.3%** | 100.0% | 93.3% | 88.3% | 25.0% | 100.0% |
+| Gemma 3 12B Q8 | 75.7% | 98.3% | 81.7% | 83.3% | 25.0% | 90.0% |
+| Qwen3.5-9B Q8 | 73.0% | 100.0% | 73.3% | 73.3% | 38.3% | 80.0% |
+| Gemini 2.5 Flash | 72.7% | 100.0% | 85.0% | 78.3% | 28.3% | 71.7% |
+| Salamandra 7B Q8 | 72.3% | 100.0% | 71.7% | 65.0% | 31.7% | 93.3% |
+| Gemma 4 E4B Q4 | 66.3% | 96.7% | 63.3% | 60.0% | 35.0% | 76.7% |
+| Ministral 3 8B Q8 | 64.7% | 93.3% | 58.3% | 56.7% | 30.0% | 85.0% |
+| Qwen2.5 1.5B Q8 | 40.7% | 70.0% | 21.7% | 43.3% | 28.3% | 40.0% |
+| Gemma 2 2B Q8 | 34.0% | 66.7% | 18.3% | 23.3% | 5.0% | 56.7% |
 
-At 95% confidence, the maximum margin of error is ±7.3 percentage points
-for overall scores (n=180), ±17.9 percentage points for non-RAG category
-scores (n=30), and ±12.7 percentage points for RAG-context scores (n=60),
-using the normal approximation for a binomial proportion.
+At 95% confidence, the maximum margin of error is ±5.7 percentage points
+for overall scores (n=300) and ±12.7 percentage points for category scores
+(n=60), using the normal approximation for a binomial proportion.
 
 All completed evaluations had zero API or empty-response failures.

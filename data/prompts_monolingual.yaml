@@ -344,3 +344,364 @@
     envia dades duplicades, bloqueja comandes grans i no mostra errors clars. Inclou
     reconeixement, hipòtesis inicials, proves demanades, solució temporal segura,
     criteri d'escalat i actualització prevista.
+- id: cd_200
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: usuari_final
+  workflow: ai_misconception_explanation
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: >-
+    Respon només en català. Explica un malentès habitual sobre l'ús de sistemes
+    automàtics per assignar cites mèdiques i corregeix-lo amb un exemple concret
+    que mostri per què cal supervisió humana.
+- id: cd_201
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: pime
+  workflow: client_reply
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: >-
+    Escriu un correu a un client que ha rebut una sessió de formació amb menys
+    places disponibles de les contractades. Inclou reconeixement de la incidència,
+    explicació breu, proposta de recuperació, límit de responsabilitat i proper pas.
+- id: cd_202
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: administracio
+  workflow: public_notice
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: >-
+    Redacta un avís municipal sobre canvis temporals en l'atenció de serveis
+    socials per una reorganització d'agendes. Inclou títol, dates, persones
+    afectades, alternativa de contacte, casos urgents i propera actualització.
+- id: cd_203
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: administracio
+  workflow: procurement_note
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: >-
+    Redacta una nota de contractació per adquirir sensors acústics per controlar
+    nivells de soroll en equipaments municipals. Inclou necessitat, abast de les
+    dades, criteris tècnics, garanties de privacitat, riscos de no actuar i tràmit
+    següent.
+- id: cd_204
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: pime
+  workflow: support_reply
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: >-
+    Contesta com a suport tècnic a una empresa que veu imports incorrectes al portal
+    de subscripcions després de canviar la regió fiscal. Inclou reconeixement,
+    comprovacions, dades necessàries, mesura temporal i termini de seguiment.
+- id: cd_205
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: usuari_final
+  workflow: complaint_response
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: >-
+    Escriu una reclamació a un centre mèdic perquè una visita programada s'ha
+    reassignat dues vegades sense confirmar la nova hora. Inclou cronologia,
+    impacte, documentació disponible, petició concreta i termini raonable.
+- id: cd_206
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: pime
+  workflow: project_status
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: >-
+    Escriu una actualització d'estat per a la direcció d'una PIME que està
+    substituint el sistema de facturació recurrent. Organitza-la en resum, avenços,
+    incidències de conciliació, riscos comercials, decisions pendents i properes fites.
+- id: cd_207
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: administracio
+  workflow: community_health_bulletin
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: >-
+    Redacta un butlletí breu de salut comunitària sobre prevenció de caigudes a la
+    llar per a persones grans. Inclou quatre recomanacions pràctiques, un consell
+    per a familiars i un recordatori final de prudència.
+- id: cd_208
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: usuari_final
+  workflow: study_plan
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: >-
+    Prepara un pla d'estudi de deu dies per revisar una prova d'accés amb lectura,
+    expressió escrita i càlcul bàsic. Inclou objectius diaris, una revisió intermèdia
+    i criteris per decidir què reforçar.
+- id: cd_209
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: usuari_final
+  workflow: privacy_guidance
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: >-
+    Dona una guia pràctica per revisar la privacitat d'una tauleta familiar abans
+    de prestar-la durant unes vacances. Inclou comptes, permisos, historial, còpies
+    de seguretat i comprovació final.
+- id: cd_210
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: pime
+  workflow: client_reply
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: >-
+    Redacta una resposta per a un client que vol activar una promoció abans de tenir
+    validats els preus i les condicions legals. Mantén un to col·laboratiu, separa
+    què es pot avançar, què falta confirmar i quina alternativa segura es proposa.
+- id: cd_211
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: pime
+  workflow: client_reply
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: >-
+    Escriu un correu a un client que demana mantenir un servei antic mentre s'activa
+    el nou contracte. Inclou estat, condicions transitòries, riscos operatius,
+    termini de decisió i persona de contacte.
+- id: cd_212
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: pime
+  workflow: client_reply
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: >-
+    Escriu una resposta a un client que reclama perquè una sessió demostrativa no
+    incloïa totes les funcionalitats promeses. Inclou disculpa prudent, aclariment,
+    proposta de nova sessió, límits i tancament professional.
+- id: cd_213
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: administracio
+  workflow: public_notice
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: >-
+    Escriu un avís públic sobre el tancament parcial d'una piscina municipal per
+    substituir rajoles malmeses. Inclou dates, espais afectats, alternatives per a
+    cursets, criteris de prioritat i canal de consultes.
+- id: cd_214
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: administracio
+  workflow: public_notice
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: >-
+    Redacta un avís municipal sobre una incidència al sistema de venda d'entrades
+    d'un teatre públic. Inclou què passa, com es conservaran les reserves, alternativa
+    temporal, terminis i propera comunicació.
+- id: cd_215
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: administracio
+  workflow: public_notice
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: >-
+    Escriu un avís sobre canvis provisionals en una ruta de transport escolar per
+    obres en un pont. Inclou parades afectades, horaris, punt alternatiu, recomanacions
+    de seguretat i canal per comunicar incidències.
+- id: cd_216
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: administracio
+  workflow: procurement_note
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: >-
+    Prepara una nota interna per contractar la digitalització d'actes històriques
+    d'un arxiu local. Inclou objectiu, criteris de qualitat, tractament de documents
+    fràgils, calendari, riscos de conservació i validació necessària.
+- id: cd_217
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: administracio
+  workflow: procurement_note
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: >-
+    Redacta una nota de valoració per contractar subtitulació i transcripció dels
+    plens municipals. Inclou necessitat d'accessibilitat, abast, criteris de servei,
+    protecció de dades, cost estimat i recomanació condicionada.
+- id: cd_218
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: pime
+  workflow: procurement_note
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: >-
+    Redacta una nota interna per triar un proveïdor de formació per a l'equip
+    comercial. Inclou objectius, criteris de contingut, disponibilitat, cost,
+    indicadors d'impacte, riscos i recomanació.
+- id: cd_219
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: pime
+  workflow: procurement_note
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: >-
+    Prepara una nota per decidir si es canvia el proveïdor d'embalatges després de
+    diverses incidències de qualitat. Inclou criteris de comparació, impacte en
+    clients, riscos logístics, condicions de transició i decisió recomanada.
+- id: cd_220
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: pime
+  workflow: support_reply
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: >-
+    Escriu una resposta de suport per a una empresa que ha importat contactes al
+    CRM i detecta camps obligatoris buits, etiquetes duplicades i consentiments
+    pendents. Inclou comprovacions, còpia de seguretat, dades a enviar i termini.
+- id: cd_221
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: pime
+  workflow: support_reply
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: >-
+    Respon com a suport tècnic a un equip de camp que no pot desar signatures quan
+    treballa sense connexió. Dona passos de diagnosi, instruccions per no perdre
+    dades, informació que cal recollir i criteri d'escalat.
+- id: cd_222
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: pime
+  workflow: support_reply
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: >-
+    Escriu una resposta de suport per a un client que veu reserves duplicades després
+    de sincronitzar dos calendaris corporatius. Inclou reconeixement, comprovacions
+    segures, solució temporal, dades necessàries i propera actualització.
+- id: cd_223
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: administracio
+  workflow: complaint_response
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: >-
+    Redacta una resposta municipal a una queixa per cues llargues a l'oficina de
+    tributs durant el període de pagament voluntari. Inclou reconeixement, mesures
+    adoptades, alternatives, terminis i canal de seguiment.
+- id: cd_224
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: usuari_final
+  workflow: complaint_response
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: >-
+    Escriu una reclamació a una agència de viatges perquè ha canviat l'hotel reservat
+    sense acceptació prèvia. Inclou fets, diferències de servei, documents adjunts,
+    solució demanada i termini de resposta.
+- id: cd_225
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: usuari_final
+  workflow: complaint_response
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: >-
+    Redacta una reclamació a un fabricant perquè una garantia no reconeix una avaria
+    intermitent ja documentada pel servei tècnic. Inclou antecedents, proves, petició
+    principal, alternativa acceptable i reserva d'accions.
+- id: cd_226
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: administracio
+  workflow: project_status
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: >-
+    Prepara un informe d'estat sobre la publicació d'un portal municipal de dades
+    obertes. Inclou fites completades, conjunts pendents, riscos de qualitat,
+    validacions jurídiques, comunicació pública i decisió requerida.
+- id: cd_227
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: pime
+  workflow: project_status
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: >-
+    Escriu una actualització per a direcció sobre el desplegament d'un servei de
+    manteniment a domicili. Inclou estat operatiu, formació de tècnics, incidències
+    de planificació, impacte en clients, riscos i properes accions.
+- id: cd_228
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: administracio
+  workflow: project_status
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: >-
+    Redacta una actualització d'estat sobre la renovació del sistema de reserves
+    d'equipaments esportius municipals. Inclou avenços, proves amb entitats, riscos
+    d'accessibilitat, calendari, comunicació i decisió pendent.
+- id: cd_229
+  category: monolingual
+  source_dataset_yaml: data/prompts_monolingual.yaml
+  persona: pime
+  workflow: project_status
+  source_lang: ca
+  target_lang: ca
+  forbidden_terms: []
+  prompt: >-
+    Escriu una actualització executiva sobre la implantació d'un programa de fidelització
+    per a botigues físiques. Organitza-la en estat, dependències, riscos de dades,
+    proves pendents, decisió comercial i següents passos.

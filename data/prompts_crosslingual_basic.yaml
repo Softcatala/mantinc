@@ -206,7 +206,7 @@
   forbidden_terms:
   - wildfire
   - school
-  - vulnerable
+  - smoke
   - indoor
   - quality
   prompt: 'Escriu un avís públic amb títol, motiu, recomanacions per grups vulnerables,
@@ -321,7 +321,7 @@
   target_lang: ca
   forbidden_terms:
   - case
-  - press
+  - logo
   - trial
   - period
   prompt: 'Respon a un client que pressiona per canviar condicions comercials. La
@@ -554,3 +554,585 @@
     Font (anglès): "The customer asks for warranty replacement, refuses a refurbished
     device, needs a return label, can provide proof of purchase and makes an escalation
     request."'
+- id: cd_230
+  category: crosslingual_basic
+  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
+  persona: usuari_final
+  workflow: ai_misconception_explanation
+  source_lang: es-ca
+  target_lang: ca
+  forbidden_terms:
+  - seguro
+  - recomienda
+  - siempre
+  - síntomas
+  - urgencias
+  prompt: >-
+    Explica en català un malentès habitual sobre el tema descrit i corregeix-lo
+    amb un exemple concret, sense copiar expressions castellanes.
+
+    Font (castellà): "Mucha gente cree que un asistente automático recomienda
+    siempre el circuito médico más seguro si describe síntomas, pero no sustituye
+    la valoración de urgencias ni el criterio clínico."
+- id: cd_231
+  category: crosslingual_basic
+  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
+  persona: administracio
+  workflow: citizen_response
+  source_lang: en-ca
+  target_lang: ca
+  forbidden_terms:
+  - permit
+  - driveway
+  - inspection
+  - deadline
+  prompt: >-
+    Redacta en català una resposta institucional a una consulta ciutadana. Inclou
+    recepció, estat de revisió, documentació pendent, termini orientatiu i canal de
+    seguiment.
+
+    Font (anglès): "A resident asks about a driveway permit, a pending site
+    inspection, missing photographs and the deadline to submit the updated sketch."
+- id: cd_232
+  category: crosslingual_basic
+  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
+  persona: pime
+  workflow: client_reply
+  source_lang: es-ca
+  target_lang: ca
+  forbidden_terms:
+  - onboarding
+  - retraso
+  - datos
+  - descuento
+  prompt: >-
+    Escriu en català una resposta professional a un client. Ha de reconèixer el
+    retard, separar dades pendents i compensació possible, proposar calendari i
+    evitar copiar expressions del text original.
+
+    Font (castellà): "El cliente dice que el onboarding se retrasa porque faltan
+    datos de facturación, exige corregir la factura inicial y pide descuento por la
+    espera."
+- id: cd_233
+  category: crosslingual_basic
+  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
+  persona: pime
+  workflow: client_reply
+  source_lang: en-ca
+  target_lang: ca
+  forbidden_terms:
+  - renewal
+  - seats
+  - procurement
+  - quote
+  - deadline
+  prompt: >-
+    Redacta en català un correu breu per a un client. Inclou situació, límit del
+    que es pot confirmar, informació pendent, alternativa viable i proper pas.
+
+    Font (anglès): "The renewal has more seats than expected, procurement needs a
+    corrected quote, the approval deadline is close and the client asks us to hold
+    the current price."
+- id: cd_234
+  category: crosslingual_basic
+  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
+  persona: pime
+  workflow: client_reply
+  source_lang: es-ca
+  target_lang: ca
+  forbidden_terms:
+  - campaña
+  - materiales
+  - lanzamiento
+  - aprobación
+  prompt: >-
+    Escriu en català una resposta a un client que pressiona per llançar una acció
+    comercial. Mantén un to col·laboratiu, indica què es pot avançar, què falta
+    validar i quin calendari és prudent.
+
+    Font (castellà): "La campaña necesita materiales adaptados, el lanzamiento está
+    anunciado, el equipo legal no ha dado aprobación y el cliente pide publicar hoy."
+- id: cd_235
+  category: crosslingual_basic
+  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
+  persona: pime
+  workflow: client_reply
+  source_lang: en-ca
+  target_lang: ca
+  forbidden_terms:
+  - shipment
+  - pallet
+  - replacement
+  - chargeback
+  - warehouse
+  prompt: >-
+    Escriu en català una resposta equilibrada a un client B2B. Inclou disculpa
+    prudent, verificació, solució provisional, límits sobre compensacions i següent
+    actualització.
+
+    Font (anglès): "The shipment arrived with one damaged pallet, the buyer asks
+    for urgent replacement stock, threatens a chargeback and says the warehouse
+    cannot wait."
+- id: cd_236
+  category: crosslingual_basic
+  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
+  persona: usuari_final
+  workflow: complaint_response
+  source_lang: en-ca
+  target_lang: ca
+  forbidden_terms:
+  - clinic
+  - appointment
+  - reminder
+  - specialist
+  - refund
+  prompt: >-
+    Escriu en català una reclamació formal. Inclou cronologia, impacte, documents
+    adjunts, petició concreta i termini de resposta, sense conservar expressions
+    angleses.
+
+    Font (anglès): "The clinic moved the appointment without a reminder, the
+    specialist was unavailable, the patient paid for private transport and asks for
+    a refund or a priority slot."
+- id: cd_237
+  category: crosslingual_basic
+  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
+  persona: administracio
+  workflow: complaint_response
+  source_lang: es-ca
+  target_lang: ca
+  forbidden_terms:
+  - tasa
+  - recibo
+  - bonificación
+  - registro
+  - respuesta
+  prompt: >-
+    Redacta en català una resposta municipal a una queixa tributària. Ha de reconèixer
+    la recepció, explicar comprovacions, indicar documentació útil, termini i canal
+    de seguiment.
+
+    Font (castellà): "La persona reclama una tasa duplicada, dice que el recibo no
+    refleja la bonificación, aporta registro de entrada y pide respuesta escrita."
+- id: cd_238
+  category: crosslingual_basic
+  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
+  persona: usuari_final
+  workflow: complaint_response
+  source_lang: es-ca
+  target_lang: ca
+  forbidden_terms:
+  - equipaje
+  - reclamación
+  - indemnización
+  - gastos
+  prompt: >-
+    Escriu en català una reclamació a una companyia de transport. Inclou fets,
+    conseqüències, proves disponibles, solució demanada i petició de confirmació.
+
+    Font (castellà): "El equipaje no llegó tras una escala, el mostrador no abrió
+    reclamación completa, hay gastos de primera necesidad y se solicita indemnización."
+- id: cd_239
+  category: crosslingual_basic
+  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
+  persona: administracio
+  workflow: complaint_response
+  source_lang: en-ca
+  target_lang: ca
+  forbidden_terms:
+  - playground
+  - fence
+  - hazard
+  - report
+  - inspection
+  prompt: >-
+    Redacta en català una resposta institucional a una queixa veïnal. Inclou
+    reconeixement, actuació immediata, verificació prevista, terminis i canal per
+    aportar més informació.
+
+    Font (anglès): "A parent reports a playground fence gap, calls it a hazard,
+    says the first report was unanswered and asks for an inspection before the
+    weekend."
+- id: cd_240
+  category: crosslingual_basic
+  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
+  persona: usuari_final
+  workflow: complaint_response
+  source_lang: en-ca
+  target_lang: ca
+  forbidden_terms:
+  - deposit
+  - checkout
+  - cleaning
+  - photos
+  - landlord
+  prompt: >-
+    Escriu en català una reclamació a la propietat d'un habitatge. Inclou antecedents,
+    discrepància, proves disponibles, petició d'import i termini de resposta.
+
+    Font (anglès): "The landlord kept part of the deposit after checkout, claims
+    extra cleaning, ignores the photos sent on move-out day and has not provided an
+    itemized statement."
+- id: cd_241
+  category: crosslingual_basic
+  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
+  persona: usuari_final
+  workflow: complaint_response
+  source_lang: es-ca
+  target_lang: ca
+  forbidden_terms:
+  - anulada
+  - plaza
+  - justificante
+  - secretaría
+  - recurso
+  prompt: >-
+    Escriu en català una reclamació educativa clara i respectuosa. Inclou exposició
+    dels fets, impacte, documents adjunts, petició principal i alternativa acceptable.
+
+    Font (castellà): "La matrícula aparece anulada, la plaza se ofreció a otra persona,
+    el justificante de pago se envió a secretaría y la familia valora presentar recurso."
+- id: cd_242
+  category: crosslingual_basic
+  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
+  persona: usuari_final
+  workflow: privacy_guidance
+  source_lang: en-ca
+  target_lang: ca
+  forbidden_terms:
+  - shared
+  - location
+  - backups
+  - passwords
+  - family
+  prompt: >-
+    Dona en català una guia de privacitat amb passos ordenats i advertiments
+    pràctics. No mantinguis la terminologia anglesa de la font.
+
+    Font (anglès): "Before leaving a shared family tablet at a holiday apartment,
+    review location sharing, cloud backups, saved passwords, photo sync and app
+    purchases."
+- id: cd_243
+  category: crosslingual_basic
+  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
+  persona: administracio
+  workflow: procurement_note
+  source_lang: es-ca
+  target_lang: ca
+  forbidden_terms:
+  - montaje
+  - aforo
+  - seguro
+  - contratación
+  prompt: >-
+    Escriu en català una nota de contractació breu. Inclou necessitat, criteris
+    tècnics, riscos, comprovacions documentals i proper tràmit, sense copiar termes
+    castellans.
+
+    Font (castellà): "Para la feria local falta contratar una carpa accesible, el
+    montaje debe respetar aforo, se exige seguro y la mesa de contratación pide
+    informe técnico."
+- id: cd_244
+  category: crosslingual_basic
+  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
+  persona: administracio
+  workflow: procurement_note
+  source_lang: en-ca
+  target_lang: ca
+  forbidden_terms:
+  - captioning
+  - council
+  - minutes
+  - accessibility
+  - vendor
+  prompt: >-
+    Redacta en català una nota de contractació. Inclou objectiu, abast, criteris de
+    qualitat, riscos d'accessibilitat, dades a protegir i recomanació condicionada.
+
+    Font (anglès): "The city needs live captioning for council sessions, searchable
+    minutes, accessibility checks and a vendor able to handle urgent schedule
+    changes."
+- id: cd_245
+  category: crosslingual_basic
+  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
+  persona: pime
+  workflow: procurement_note
+  source_lang: es-ca
+  target_lang: ca
+  forbidden_terms:
+  - embalaje
+  - proveedor
+  - roturas
+  - penalización
+  - almacén
+  prompt: >-
+    Escriu en català una nota interna per comparar proveïdors. Inclou criteris de
+    qualitat, cost, continuïtat, riscos logístics, condicions de transició i decisió
+    recomanada.
+
+    Font (castellà): "El embalaje actual genera roturas, el proveedor rechaza
+    penalización, el almacén pide cajas reforzadas y compras necesita una decisión
+    esta semana."
+- id: cd_246
+  category: crosslingual_basic
+  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
+  persona: pime
+  workflow: procurement_note
+  source_lang: en-ca
+  target_lang: ca
+  forbidden_terms:
+  - courier
+  - pickup
+  - insurance
+  - fragile
+  - tracking
+  prompt: >-
+    Redacta en català una nota de decisió sobre un servei logístic. Inclou criteris
+    operatius, cobertura, cost, riscos, prova pilot i recomanació.
+
+    Font (anglès): "The courier offer includes scheduled pickup, insurance for
+    fragile items, partial tracking, weekend limits and a surcharge for rural
+    deliveries."
+- id: cd_247
+  category: crosslingual_basic
+  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
+  persona: pime
+  workflow: project_status
+  source_lang: en-ca
+  target_lang: ca
+  forbidden_terms:
+  - dashboard
+  - metrics
+  - churn
+  - rollout
+  prompt: >-
+    Escriu en català una actualització de projecte per a direcció. Organitza-la en
+    estat, avenços, riscos, decisions necessàries i properes accions, sense mantenir
+    termes anglesos.
+
+    Font (anglès): "The dashboard shows incomplete metrics, churn analysis misses
+    one cohort, rollout is paused and the sales team needs a decision before Monday."
+- id: cd_248
+  category: crosslingual_basic
+  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
+  persona: administracio
+  workflow: project_status
+  source_lang: es-ca
+  target_lang: ca
+  forbidden_terms:
+  - subvención
+  - hitos
+  - justificantes
+  - auditoría
+  - calendario
+  prompt: >-
+    Redacta en català una actualització d'estat per a una comissió de seguiment.
+    Inclou resum, fites, documentació pendent, riscos, mesures correctores i decisió
+    requerida.
+
+    Font (castellà): "La subvención exige hitos trimestrales, faltan justificantes
+    de gasto, auditoría pide evidencias adicionales y el calendario se ha estrechado."
+- id: cd_249
+  category: crosslingual_basic
+  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
+  persona: administracio
+  workflow: project_status
+  source_lang: en-ca
+  target_lang: ca
+  forbidden_terms:
+  - login
+  - accessibility
+  - testing
+  - launch
+  prompt: >-
+    Escriu en català una actualització breu de projecte públic. Inclou estat, proves
+    pendents, riscos per a usuaris, comunicació prevista i decisió de llançament.
+
+    Font (anglès): "The service portal login is ready, accessibility testing found
+    two issues, launch communications are drafted and support staff need training."
+- id: cd_250
+  category: crosslingual_basic
+  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
+  persona: pime
+  workflow: project_status
+  source_lang: es-ca
+  target_lang: ca
+  forbidden_terms:
+  - inventario
+  - serie
+  - etiquetas
+  - tienda
+  - migración
+  prompt: >-
+    Escriu en català una actualització executiva de projecte. Inclou estat, incidències
+    de dades, riscos comercials, tasques crítiques i propera decisió.
+
+    Font (castellà): "El inventario físico no cuadra con números de serie, faltan
+    etiquetas en tienda y la migración del catálogo puede afectar la apertura."
+- id: cd_251
+  category: crosslingual_basic
+  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
+  persona: administracio
+  workflow: public_notice
+  source_lang: en-ca
+  target_lang: ca
+  forbidden_terms:
+  - library
+  - roof
+  - leak
+  - study
+  - computers
+  prompt: >-
+    Escriu en català un avís públic amb títol, afectació, alternatives, recomanacions
+    i propera actualització. No conservis expressions angleses.
+
+    Font (anglès): "A library roof leak closes the study room, public computers
+    move to the first floor and staff will protect reserved books."
+- id: cd_252
+  category: crosslingual_basic
+  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
+  persona: administracio
+  workflow: public_notice
+  source_lang: es-ca
+  target_lang: ca
+  forbidden_terms:
+  - mercado
+  - parada
+  - suministro
+  - ubicación
+  prompt: >-
+    Redacta en català un avís municipal clar i operatiu. Inclou motiu, espais
+    afectats, ubicació alternativa, horaris, recomanacions i canal de consulta.
+
+    Font (castellà): "El mercado semanal cambia varias paradas por un fallo de
+    suministro eléctrico, se instalará un generador y habrá nueva ubicación temporal."
+- id: cd_253
+  category: crosslingual_basic
+  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
+  persona: administracio
+  workflow: public_notice
+  source_lang: en-ca
+  target_lang: ca
+  forbidden_terms:
+  - road
+  - shuttle
+  - bridge
+  - detour
+  prompt: >-
+    Escriu en català un avís públic sobre mobilitat. Inclou títol, dates, afectació,
+    alternativa, col·lectius prioritaris i propera comunicació.
+
+    Font (anglès): "A road repair near the old bridge requires a shuttle stop
+    relocation, residents need a signed detour and school transport will be assisted."
+- id: cd_254
+  category: crosslingual_basic
+  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
+  persona: administracio
+  workflow: public_notice
+  source_lang: es-ca
+  target_lang: ca
+  forbidden_terms:
+  - incendio
+  - humo
+  - polideportivo
+  - ventilación
+  - reapertura
+  prompt: >-
+    Escriu en català un avís públic de protecció civil. Inclou què se sap, afectació,
+    recomanacions, equipaments afectats, pròxima revisió i canal oficial.
+
+    Font (castellà): "Un incendio próximo genera humo, el polideportivo cerrará por
+    revisión de ventilación y la reapertura dependerá de la medición ambiental."
+- id: cd_255
+  category: crosslingual_basic
+  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
+  persona: usuari_final
+  workflow: study_plan
+  source_lang: en-ca
+  target_lang: ca
+  forbidden_terms:
+  - mock
+  - essay
+  - grammar
+  - speaking
+  - checklist
+  prompt: >-
+    Prepara en català un pla d'estudi de sis dies a partir de la font. Ha de tenir
+    objectius diaris, pràctica activa, revisió final i criteris de progrés.
+
+    Font (anglès): "Start with a mock test, revise essay structure, drill grammar
+    gaps, practise speaking aloud and finish with a checklist."
+- id: cd_256
+  category: crosslingual_basic
+  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
+  persona: pime
+  workflow: support_reply
+  source_lang: en-ca
+  target_lang: ca
+  forbidden_terms:
+  - token
+  - webhook
+  - retry
+  - staging
+  - payload
+  prompt: >-
+    Contesta en català com a suport tècnic. Resumeix el problema, demana verificacions,
+    proposa una mesura temporal segura, indica escalat i evita copiar termes anglesos.
+
+    Font (anglès): "The token refresh fails after webhook retry, staging works,
+    production payloads are rejected and the developer asks for logs."
+- id: cd_257
+  category: crosslingual_basic
+  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
+  persona: pime
+  workflow: support_reply
+  source_lang: es-ca
+  target_lang: ca
+  forbidden_terms:
+  - sincronización
+  - albarán
+  - pedido
+  - usuario
+  prompt: >-
+    Escriu en català una resposta de suport. Inclou reconeixement, hipòtesis inicials,
+    comprovacions ordenades, dades que cal enviar i termini de seguiment.
+
+    Font (castellà): "La sincronización crea albarán sin pedido asociado, solo pasa
+    con un usuario concreto y podrían faltar permisos en la delegación."
+- id: cd_258
+  category: crosslingual_basic
+  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
+  persona: pime
+  workflow: support_reply
+  source_lang: en-ca
+  target_lang: ca
+  forbidden_terms:
+  - scanner
+  - label
+  - offline
+  - batch
+  - device
+  prompt: >-
+    Escriu en català una resposta de suport per a un equip logístic. Dona passos
+    de diagnosi, instruccions per evitar pèrdua de dades, informació a recollir i
+    compromís d'actualització.
+
+    Font (anglès): "The handheld scanner prints the wrong label after offline mode,
+    batch upload duplicates entries and one device has not received the update."
+- id: cd_259
+  category: crosslingual_basic
+  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
+  persona: pime
+  workflow: support_reply
+  source_lang: es-ca
+  target_lang: ca
+  forbidden_terms:
+  - calendario
+  - bloqueo
+  - confirmación
+  prompt: >-
+    Contesta en català com a suport. Resumeix la incidència, dona comprovacions
+    segures, proposa solució temporal, demana dades mínimes i fixa el proper contacte.
+
+    Font (castellà): "La reserva aparece en calendario, pero la sala queda bloqueada
+    dos veces, la confirmación llega tarde y recepción no puede liberar el hueco."

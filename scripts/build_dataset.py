@@ -21,10 +21,10 @@ SOURCES = {
     "rag_context": ROOT / "data/prompts_rag_context.yaml",
 }
 EXPECTED_CATEGORY_COUNTS = {
-    "monolingual": 30,
-    "crosslingual_basic": 30,
-    "multi_turn": 30,
-    "crosslingual_advanced": 30,
+    "monolingual": 60,
+    "crosslingual_basic": 60,
+    "multi_turn": 60,
+    "crosslingual_advanced": 60,
     "rag_context": 60,
 }
 

@@ -238,10 +238,12 @@
   source_lang: es-ca
   target_lang: ca
   forbidden_terms:
-  - bloqueo
-  - penalización
-  - garantía
-  - ejecutivo
+  - incidencias
+  - lotes
+  - validación
+  - dirección
+  - seguimiento
+  - reunión
   conversation:
   - role: user
     content: Som una PIME i hem de respondre a un client gran per una incidència que
@@ -250,8 +252,8 @@
     content: Podem separar els fets confirmats, la mesura provisional i el calendari
       de revisió.
   - role: user
-    content: El cliente dice que es un bloqueo crítico, amenaza con penalización contractual
-      y pide garantía por escrito para su comité ejecutivo.
+    content: El cliente habla de incidencias repetidas en varios lotes, validación
+      pendiente de calidad, reunión con dirección y acta de seguimiento.
   - role: assistant
     content: Ho tractaré amb prudència comercial i sense copiar la formulació del
       client.
@@ -752,3 +754,930 @@
   - role: user
     content: Fes-la contundent i demana una solució abans de cinc dies hàbils.
   prompt: Escriu la reclamació.
+- id: cd_260
+  category: multi_turn
+  source_dataset_yaml: data/prompts_multi_turn.yaml
+  persona: pime
+  workflow: client_delay_update
+  source_lang: es-ca
+  target_lang: ca
+  forbidden_terms:
+  - entrega
+  - almacén
+  - penalización
+  conversation:
+  - role: user
+    content: >-
+      Som una PIME i hem d'explicar un retard en l'activació d'un servei recurrent.
+  - role: assistant
+    content: >-
+      Podem separar la causa, la nova previsió i una mesura de seguiment.
+  - role: user
+    content: >-
+      El cliente habla de entrega incompleta, almacén bloqueado, posible penalización
+      y factura retenida.
+  - role: assistant
+    content: >-
+      Ho convertiré en una resposta professional sense copiar la formulació castellana.
+  - role: user
+    content: >-
+      Fes-ho ferm, amb calendari i sense acceptar compensacions automàtiques.
+  prompt: Escriu en català un correu breu amb assumpte, situació, nova previsió i proper pas.
+- id: cd_261
+  category: multi_turn
+  source_dataset_yaml: data/prompts_multi_turn.yaml
+  persona: pime
+  workflow: client_reply
+  source_lang: en-ca
+  target_lang: ca
+  forbidden_terms:
+  - pilot
+  - credits
+  - dashboard
+  - invoice
+  - approval
+  conversation:
+  - role: user
+    content: >-
+      Hem de respondre a un client que vol ampliar una prova comercial sense tancar
+      encara la compra.
+  - role: assistant
+    content: >-
+      Podem marcar límits, demanar validació i deixar una alternativa viable.
+  - role: user
+    content: >-
+      Their team mentions pilot credits, dashboard access, invoice split, finance
+      approval and a customer workshop next week.
+  - role: assistant
+    content: >-
+      Reformularé aquests punts sense mantenir les etiquetes angleses.
+  - role: user
+    content: >-
+      Dona'm una resposta breu que no bloquegi la negociació.
+  prompt: Escriu en català la resposta com un correu amb límits, alternativa i proper pas.
+- id: cd_262
+  category: multi_turn
+  source_dataset_yaml: data/prompts_multi_turn.yaml
+  persona: pime
+  workflow: client_reply
+  source_lang: es-ca
+  target_lang: ca
+  forbidden_terms:
+  - patrocinio
+  - invitaciones
+  - ponente
+  conversation:
+  - role: user
+    content: >-
+      Una empresa client vol canviar les condicions d'un acte conjunt a última hora.
+  - role: assistant
+    content: >-
+      Caldrà ser col·laboratius però prudents amb permisos i calendari.
+  - role: user
+    content: >-
+      En castellano han escrito patrocinio ampliado, invitaciones adicionales,
+      ponente por confirmar, agenda pública y uso de logos.
+  - role: assistant
+    content: >-
+      Ho passaré a llenguatge comercial clar i sense copiar expressions.
+  - role: user
+    content: >-
+      Respon amb una alternativa segura per avui.
+  prompt: Escriu en català un correu breu amb situació, condicions, alternativa i decisió pendent.
+- id: cd_263
+  category: multi_turn
+  source_dataset_yaml: data/prompts_multi_turn.yaml
+  persona: pime
+  workflow: client_reply
+  source_lang: en-ca
+  target_lang: ca
+  forbidden_terms:
+  - testimonial
+  - media
+  - clause
+  - billing
+  - review
+  conversation:
+  - role: user
+    content: >-
+      Hem rebut una proposta comercial que barreja visibilitat pública i revisió
+      contractual.
+  - role: assistant
+    content: >-
+      Podem separar què es pot acceptar ara i què necessita revisió.
+  - role: user
+    content: >-
+      The client mentions customer testimonial, media quote, contract clause, billing
+      review and approval from their communications team.
+  - role: assistant
+    content: >-
+      Mantindré el fons de la petició sense conservar la terminologia anglesa.
+  - role: user
+    content: >-
+      Fes una resposta cordial, però que no autoritzi cap ús públic abans de revisar-ho.
+  prompt: Escriu en català la resposta com un correu amb límits, alternativa i proper pas.
+- id: cd_264
+  category: multi_turn
+  source_dataset_yaml: data/prompts_multi_turn.yaml
+  persona: pime
+  workflow: client_reply
+  source_lang: es-ca
+  target_lang: ca
+  forbidden_terms:
+  - abono
+  - servicio
+  - contrato
+  - correo
+  conversation:
+  - role: user
+    content: >-
+      Un client demana tancar un servei abans del final del període contractat.
+  - role: assistant
+    content: >-
+      Podem explicar opcions, efectes econòmics i tràmits pendents.
+  - role: user
+    content: >-
+      Su correo habla de factura final, abono parcial, servicio activo, contrato
+      vigente y confirmación inmediata.
+  - role: assistant
+    content: >-
+      Ho redactaré amb cautela comercial i sense copiar el castellà.
+  - role: user
+    content: >-
+      Deixa oberta una sortida pactada.
+  prompt: Escriu en català un correu breu amb estat, opcions, condicions i proper pas.
+- id: cd_265
+  category: multi_turn
+  source_dataset_yaml: data/prompts_multi_turn.yaml
+  persona: administracio
+  workflow: complaint_response
+  source_lang: en-ca
+  target_lang: ca
+  forbidden_terms:
+  - court
+  - lighting
+  - booking
+  - refund
+  - report
+  conversation:
+  - role: user
+    content: >-
+      L'ajuntament ha de contestar una queixa sobre una pista esportiva municipal.
+  - role: assistant
+    content: >-
+      Cal reconèixer la preocupació, explicar actuacions i donar seguiment.
+  - role: user
+    content: >-
+      The complaint mentions court lighting failure, cancelled booking, refund
+      request, an incident report and no update from staff.
+  - role: assistant
+    content: >-
+      Ho convertiré en una resposta institucional clara.
+  - role: user
+    content: >-
+      Fes-ho proper, però sense prometre una reparació abans de verificar-ho.
+  prompt: Escriu en català la resposta municipal amb recepció, actuacions, terminis i canal de seguiment.
+- id: cd_266
+  category: multi_turn
+  source_dataset_yaml: data/prompts_multi_turn.yaml
+  persona: usuari_final
+  workflow: complaint_response
+  source_lang: es-ca
+  target_lang: ca
+  forbidden_terms:
+  - asiento
+  - transbordo
+  - accesibilidad
+  - justificante
+  conversation:
+  - role: user
+    content: >-
+      Vull reclamar a una companyia de transport per una incidència amb una plaça
+      adaptada.
+  - role: assistant
+    content: >-
+      Podem preparar una reclamació amb cronologia, proves i petició concreta.
+  - role: user
+    content: >-
+      En los mensajes aparecen asiento adaptado no disponible, transbordo improvisado,
+      accesibilidad insuficiente, reserva confirmada y justificante de asistencia.
+  - role: assistant
+    content: >-
+      Ho redactaré sense mantenir les expressions castellanes.
+  - role: user
+    content: >-
+      Demana una resposta escrita i conserva un to ferm.
+  prompt: Escriu en català la reclamació amb fets, impacte, documents, petició i termini.
+- id: cd_267
+  category: multi_turn
+  source_dataset_yaml: data/prompts_multi_turn.yaml
+  persona: administracio
+  workflow: complaint_response
+  source_lang: en-ca
+  target_lang: ca
+  forbidden_terms:
+  - tax
+  - receipt
+  - discount
+  - deadline
+  - appeal
+  conversation:
+  - role: user
+    content: >-
+      L'oficina municipal ha de contestar una queixa sobre un rebut local.
+  - role: assistant
+    content: >-
+      La resposta ha de ser clara sobre comprovacions, terminis i canals.
+  - role: user
+    content: >-
+      The resident mentions a tax receipt, missing discount, payment deadline and
+      possible appeal if there is no correction.
+  - role: assistant
+    content: >-
+      Convertiré aquests punts a llenguatge administratiu en català.
+  - role: user
+    content: >-
+      No prometis el resultat abans de revisar l'expedient.
+  prompt: Escriu en català la resposta municipal amb reconeixement, comprovacions, terminis i seguiment.
+- id: cd_268
+  category: multi_turn
+  source_dataset_yaml: data/prompts_multi_turn.yaml
+  persona: usuari_final
+  workflow: complaint_response
+  source_lang: es-ca
+  target_lang: ca
+  forbidden_terms:
+  - garantía
+  - reparación
+  - presupuesto
+  - respuesta
+  conversation:
+  - role: user
+    content: >-
+      Necessito reclamar per una reparació que no ha resolt el problema.
+  - role: assistant
+    content: >-
+      Podem exposar fets, proves i una petició de solució clara.
+  - role: user
+    content: >-
+      El taller habla de garantía limitada, reparación provisional, presupuesto nuevo
+      y respuesta pendiente del fabricante.
+  - role: assistant
+    content: >-
+      Ho transformaré en una reclamació ordenada.
+  - role: user
+    content: >-
+      Demana que no em cobrin una segona diagnosi.
+  prompt: Escriu en català la reclamació amb cronologia, discrepància, proves, petició i termini.
+- id: cd_269
+  category: multi_turn
+  source_dataset_yaml: data/prompts_multi_turn.yaml
+  persona: administracio
+  workflow: complaint_response
+  source_lang: en-ca
+  target_lang: ca
+  forbidden_terms:
+  - noise
+  - venue
+  - permit
+  - patrol
+  - response
+  conversation:
+  - role: user
+    content: >-
+      Hem de contestar una queixa veïnal sobre un acte a la via pública.
+  - role: assistant
+    content: >-
+      Podem reconèixer les molèsties i explicar actuacions sense sonar defensius.
+  - role: user
+    content: >-
+      The complaint cites late noise, venue permit doubts, patrol request and a
+      written response deadline.
+  - role: assistant
+    content: >-
+      Ho redactaré amb to institucional i sense copiar l'anglès.
+  - role: user
+    content: >-
+      Inclou un canal per aportar més informació.
+  prompt: Escriu en català la resposta municipal amb recepció, actuacions, límits i seguiment.
+- id: cd_270
+  category: multi_turn
+  source_dataset_yaml: data/prompts_multi_turn.yaml
+  persona: usuari_final
+  workflow: complaint_response
+  source_lang: es-ca
+  target_lang: ca
+  forbidden_terms:
+  - certificado
+  - prácticas
+  - expediente
+  - convalidación
+  conversation:
+  - role: user
+    content: >-
+      Vull escriure una reclamació perquè un centre formatiu no em lliura la
+      documentació final.
+  - role: assistant
+    content: >-
+      Podem fer-la clara, amb dates, documents i petició concreta.
+  - role: user
+    content: >-
+      En secretaría dicen certificado pendiente, prácticas registradas tarde, tutor
+      sin validar, expediente incompleto y convalidación bloqueada.
+  - role: assistant
+    content: >-
+      Ho passaré a català amb un to ferm i respectuós.
+  - role: user
+    content: >-
+      Vull demanar revisió urgent sense amenaçar.
+  prompt: Escriu en català la reclamació amb fets, impacte, documents i solució demanada.
+- id: cd_271
+  category: multi_turn
+  source_dataset_yaml: data/prompts_multi_turn.yaml
+  persona: usuari_final
+  workflow: privacy_guidance
+  source_lang: en-ca
+  target_lang: ca
+  forbidden_terms:
+  - wearable
+  - health
+  - contacts
+  - bluetooth
+  - profile
+  conversation:
+  - role: user
+    content: >-
+      Abans de vendre un rellotge intel·ligent, vull revisar que no deixi dades
+      personals.
+  - role: assistant
+    content: >-
+      Podem revisar comptes, permisos, historial i còpies.
+  - role: user
+    content: >-
+      Include wearable health history, emergency contacts, bluetooth pairing,
+      payment shortcuts and profile settings.
+  - role: assistant
+    content: >-
+      Ho explicaré amb passos pràctics i equivalents naturals.
+  - role: user
+    content: >-
+      Fes-ho breu i ordenat.
+  prompt: Dona en català una guia de privacitat amb passos, advertiments i comprovació final.
+- id: cd_272
+  category: multi_turn
+  source_dataset_yaml: data/prompts_multi_turn.yaml
+  persona: administracio
+  workflow: procurement_note
+  source_lang: es-ca
+  target_lang: ca
+  forbidden_terms:
+  - mediación
+  - idiomas
+  - colectivo
+  - disponibilidad
+  - presupuesto
+  conversation:
+  - role: user
+    content: >-
+      Hem de justificar una contractació de suport lingüístic per a una sessió
+      informativa municipal.
+  - role: assistant
+    content: >-
+      La nota ha de parlar de necessitat, seguretat, criteris i tràmit.
+  - role: user
+    content: >-
+      El borrador habla de mediación comunitaria, varios idiomas, colectivo vulnerable,
+      disponibilidad urgente y presupuesto limitado.
+  - role: assistant
+    content: >-
+      Ho convertiré a llenguatge administratiu català.
+  - role: user
+    content: >-
+      Deixa clar què s'ha de verificar abans d'adjudicar.
+  prompt: Escriu en català la nota de contractació amb necessitat, riscos, controls i proper tràmit.
+- id: cd_273
+  category: multi_turn
+  source_dataset_yaml: data/prompts_multi_turn.yaml
+  persona: administracio
+  workflow: procurement_note
+  source_lang: en-ca
+  target_lang: ca
+  forbidden_terms:
+  - signage
+  - maps
+  - entrances
+  - printing
+  - deadline
+  conversation:
+  - role: user
+    content: >-
+      L'ajuntament vol millorar l'orientació de visitants en un edifici municipal.
+  - role: assistant
+    content: >-
+      Podem preparar una nota amb objectiu, abast, criteris i riscos.
+  - role: user
+    content: >-
+      The service request mentions temporary signage, floor maps, accessible
+      entrances, printing proofs and an opening deadline.
+  - role: assistant
+    content: >-
+      Ho expressaré en català sense copiar les etiquetes angleses.
+  - role: user
+    content: >-
+      Afegeix una recomanació condicionada.
+  prompt: Escriu en català la nota de contractació amb objectiu, criteris, riscos i decisió.
+- id: cd_274
+  category: multi_turn
+  source_dataset_yaml: data/prompts_multi_turn.yaml
+  persona: administracio
+  workflow: procurement_note
+  source_lang: es-ca
+  target_lang: ca
+  forbidden_terms:
+  - refugio
+  - climatización
+  - homologación
+  - plazo
+  - presupuesto
+  conversation:
+  - role: user
+    content: >-
+      Hem de preparar una nota per adequar un espai municipal com a refugi climàtic.
+  - role: assistant
+    content: >-
+      Caldrà justificar necessitat, condicions tècniques i calendari.
+  - role: user
+    content: >-
+      En castellano aparece refugio climático, climatización portátil, homologación,
+      plazo de instalación y presupuesto disponible.
+  - role: assistant
+    content: >-
+      Ho redactaré amb cautela i vocabulari administratiu.
+  - role: user
+    content: >-
+      Inclou riscos si s'endarrereix.
+  prompt: Escriu en català la nota de contractació amb necessitat, criteris, riscos i proper pas.
+- id: cd_275
+  category: multi_turn
+  source_dataset_yaml: data/prompts_multi_turn.yaml
+  persona: pime
+  workflow: procurement_note
+  source_lang: en-ca
+  target_lang: ca
+  forbidden_terms:
+  - headset
+  - warranty
+  - noise
+  - trial
+  conversation:
+  - role: user
+    content: >-
+      Estem decidint si comprem equipament nou per a l'equip d'atenció telefònica.
+  - role: assistant
+    content: >-
+      Podem comparar cobertura, cost, risc i transició.
+  - role: user
+    content: >-
+      The offer includes headset replacement, extended warranty, noise reduction,
+      extra units for agents and a paid trial period.
+  - role: assistant
+    content: >-
+      Ho convertiré en una nota interna clara.
+  - role: user
+    content: >-
+      Recomana només si podem fer una prova controlada.
+  prompt: Escriu en català la nota de decisió amb criteris, riscos, prova pilot i recomanació.
+- id: cd_276
+  category: multi_turn
+  source_dataset_yaml: data/prompts_multi_turn.yaml
+  persona: pime
+  workflow: project_status
+  source_lang: en-ca
+  target_lang: ca
+  forbidden_terms:
+  - survey
+  - onboarding
+  - activation
+  - playbook
+  - accounts
+  conversation:
+  - role: user
+    content: >-
+      Necessito informar direcció sobre un projecte per millorar l'alta de nous
+      clients.
+  - role: assistant
+    content: >-
+      Podem fer una actualització amb estat, riscos i decisió pendent.
+  - role: user
+    content: >-
+      Use customer survey, onboarding blockers, activation rate, account playbook
+      and success-team handoff because those are the team's labels.
+  - role: assistant
+    content: >-
+      Ho expressaré en català i sense mantenir les etiquetes angleses.
+  - role: user
+    content: >-
+      Dona'm tres riscos i la decisió que cal prendre.
+  prompt: Escriu en català una actualització d'estat per a direcció amb riscos prioritzats.
+- id: cd_277
+  category: multi_turn
+  source_dataset_yaml: data/prompts_multi_turn.yaml
+  persona: pime
+  workflow: project_status
+  source_lang: es-ca
+  target_lang: ca
+  forbidden_terms:
+  - recibos
+  - tarifas
+  - conciliación
+  - clientes
+  - prueba
+  conversation:
+  - role: user
+    content: >-
+      Hem d'explicar l'estat d'un canvi de sistema de quotes recurrents.
+  - role: assistant
+    content: >-
+      Podem separar estat real, riscos i mesures de contingència.
+  - role: user
+    content: >-
+      El equipo habla de recibos duplicados, tarifas antiguas, conciliación bancaria,
+      clientes piloto y prueba de cierre mensual.
+  - role: assistant
+    content: >-
+      Ho reformularé per a direcció.
+  - role: user
+    content: >-
+      No amaguis els riscos comercials.
+  prompt: Escriu en català una actualització executiva amb estat, riscos, decisions i accions.
+- id: cd_278
+  category: multi_turn
+  source_dataset_yaml: data/prompts_multi_turn.yaml
+  persona: administracio
+  workflow: project_status
+  source_lang: en-ca
+  target_lang: ca
+  forbidden_terms:
+  - kiosk
+  - permits
+  - scanner
+  - queue
+  - training
+  conversation:
+  - role: user
+    content: >-
+      L'ajuntament ha d'actualitzar l'estat d'un sistema presencial per gestionar
+      permisos.
+  - role: assistant
+    content: >-
+      Podem resumir avenços, proves pendents, riscos i comunicació.
+  - role: user
+    content: >-
+      The project note says permit kiosk, document scanner, queue display, staff
+      training and pilot counter are not fully aligned.
+  - role: assistant
+    content: >-
+      Ho passaré a llenguatge administratiu clar.
+  - role: user
+    content: >-
+      Inclou la decisió que ha de prendre la comissió.
+  prompt: Escriu en català una actualització d'estat amb fites, riscos, comunicació i decisió requerida.
+- id: cd_279
+  category: multi_turn
+  source_dataset_yaml: data/prompts_multi_turn.yaml
+  persona: administracio
+  workflow: public_notice
+  source_lang: es-ca
+  target_lang: ca
+  forbidden_terms:
+  - comedor
+  - cocina
+  - alergias
+  - familias
+  conversation:
+  - role: user
+    content: >-
+      Cal publicar un avís sobre un canvi temporal en el servei de menjador escolar.
+  - role: assistant
+    content: >-
+      L'avís ha de ser clar, operatiu i útil per a paradistes i veïnat.
+  - role: user
+    content: >-
+      El borrador castellano menciona comedor escolar, cocina cerrada, menú frío,
+      alergias revisadas y aviso a familias.
+  - role: assistant
+    content: >-
+      Ho redactaré en català sense conservar aquests termes.
+  - role: user
+    content: >-
+      Inclou horaris i canal de consulta.
+  prompt: Escriu en català l'avís amb títol, afectació, alternativa, recomanacions i actualització.
+- id: cd_280
+  category: multi_turn
+  source_dataset_yaml: data/prompts_multi_turn.yaml
+  persona: administracio
+  workflow: public_notice
+  source_lang: en-ca
+  target_lang: ca
+  forbidden_terms:
+  - museum
+  - audio
+  - tickets
+  - exhibition
+  - desk
+  conversation:
+  - role: user
+    content: >-
+      Un museu municipal necessita un avís per una incidència de servei.
+  - role: assistant
+    content: >-
+      Podem explicar zones afectades, alternatives i propera revisió.
+  - role: user
+    content: >-
+      The operations note says museum audio guides are unavailable, online tickets
+      still work, one exhibition desk moves and staff will assist visitors.
+  - role: assistant
+    content: >-
+      Ho convertiré en un avís entenedor per al públic.
+  - role: user
+    content: >-
+      Mantén un to tranquil i concret.
+  prompt: Escriu en català l'avís amb títol, afectació, serveis disponibles i propera actualització.
+- id: cd_281
+  category: multi_turn
+  source_dataset_yaml: data/prompts_multi_turn.yaml
+  persona: administracio
+  workflow: public_notice
+  source_lang: es-ca
+  target_lang: ca
+  forbidden_terms:
+  - playa
+  - bandera
+  - baño
+  - socorristas
+  - calidad
+  conversation:
+  - role: user
+    content: >-
+      Protecció civil ha de publicar un avís preventiu sobre l'estat d'una zona de
+      bany.
+  - role: assistant
+    content: >-
+      Cal distingir fets confirmats, recomanacions i pròxima revisió.
+  - role: user
+    content: >-
+      La nota dice playa con bandera amarilla, baño desaconsejado en una franja,
+      socorristas reforzados y control de calidad pendiente.
+  - role: assistant
+    content: >-
+      Ho redactaré en català i amb prudència.
+  - role: user
+    content: >-
+      Afegeix recomanacions per a persones sensibles.
+  prompt: Escriu en català l'avís públic amb afectació, recomanacions i canal oficial.
+- id: cd_282
+  category: multi_turn
+  source_dataset_yaml: data/prompts_multi_turn.yaml
+  persona: administracio
+  workflow: public_notice
+  source_lang: en-ca
+  target_lang: ca
+  forbidden_terms:
+  - bins
+  - collection
+  - crews
+  - schedule
+  - notice
+  conversation:
+  - role: user
+    content: >-
+      L'ajuntament ha d'informar d'un canvi temporal en la recollida de residus.
+  - role: assistant
+    content: >-
+      Podem fer un avís amb dates, recorreguts alternatius i suport.
+  - role: user
+    content: >-
+      Include relocated bins, night collection, cleaning crews, revised schedule
+      and a notice for affected streets.
+  - role: assistant
+    content: >-
+      Convertiré aquests conceptes a llenguatge administratiu natural.
+  - role: user
+    content: >-
+      No ho facis massa tècnic.
+  prompt: Escriu en català l'avís amb títol, dates, afectació, alternativa i recomanacions.
+- id: cd_283
+  category: multi_turn
+  source_dataset_yaml: data/prompts_multi_turn.yaml
+  persona: administracio
+  workflow: public_project_status
+  source_lang: es-ca
+  target_lang: ca
+  forbidden_terms:
+  - participación
+  - encuesta
+  - talleres
+  - calendario
+  - barrio
+  conversation:
+  - role: user
+    content: >-
+      Treballo en un ajuntament i hem d'actualitzar l'estat d'un procés participatiu.
+  - role: assistant
+    content: >-
+      Podem resumir participació, calendari, riscos i properes sessions.
+  - role: user
+    content: >-
+      El equipo habla de participación baja, encuesta abierta, talleres de barrio,
+      calendario ajustado y retorno público.
+  - role: assistant
+    content: >-
+      Ho redactaré com una actualització pública en català.
+  - role: user
+    content: >-
+      Fes-la breu i útil per a càrrecs electes.
+  prompt: Escriu en català una actualització de l'estat amb avenços, riscos i properes actuacions.
+- id: cd_284
+  category: multi_turn
+  source_dataset_yaml: data/prompts_multi_turn.yaml
+  persona: usuari_final
+  workflow: study_plan
+  source_lang: en-ca
+  target_lang: ca
+  forbidden_terms:
+  - lab
+  - formulas
+  - diagrams
+  - flashcards
+  - timer
+  conversation:
+  - role: user
+    content: >-
+      Necessito organitzar una setmana d'estudi per a una prova de ciències.
+  - role: assistant
+    content: >-
+      Podem repartir comprensió, expressió escrita, pràctica oral i revisió.
+  - role: user
+    content: >-
+      I already reviewed lab safety, formulas, labelled diagrams, flashcards and
+      timed practice questions.
+  - role: assistant
+    content: >-
+      Ho faré servir per construir un pla concret.
+  - role: user
+    content: >-
+      Dona'm sis dies i una revisió final.
+  prompt: Escriu en català un pla d'estudi estructurat amb objectius, tasques i criteris de progrés.
+- id: cd_285
+  category: multi_turn
+  source_dataset_yaml: data/prompts_multi_turn.yaml
+  persona: pime
+  workflow: support_reply
+  source_lang: en-ca
+  target_lang: ca
+  forbidden_terms:
+  - domain
+  - alignment
+  - bounce
+  - campaign
+  conversation:
+  - role: user
+    content: >-
+      Un client tècnic diu que els correus transaccionals arriben de manera irregular.
+  - role: assistant
+    content: >-
+      La resposta ha de demanar proves concretes i proposar passos sense risc.
+  - role: user
+    content: >-
+      Their developer mentions domain authentication, DKIM record, SPF alignment,
+      bounce rate and a paused campaign.
+  - role: assistant
+    content: >-
+      Ho explicaré amb termes clars i sense repetir l'anglès.
+  - role: user
+    content: >-
+      Dona també un criteri d'escalat.
+  prompt: Escriu en català la resposta de suport amb comprovacions, dades requerides, mesura temporal i escalat.
+- id: cd_286
+  category: multi_turn
+  source_dataset_yaml: data/prompts_multi_turn.yaml
+  persona: pime
+  workflow: support_reply
+  source_lang: es-ca
+  target_lang: ca
+  forbidden_terms:
+  - ticket
+  - rechazada
+  - certificado
+  - sesión
+  conversation:
+  - role: user
+    content: >-
+      Hem rebut una incidència d'un client que no pot descarregar documents signats.
+  - role: assistant
+    content: >-
+      Podem demanar dades, proposar comprovacions i evitar accions que empitjorin
+      el cas.
+  - role: user
+    content: >-
+      El ticket dice PDF en blanco, firma rechazada, certificado válido, navegador
+      actualizado y sesión que caduca.
+  - role: assistant
+    content: >-
+      Ho transformaré en una resposta de suport en català.
+  - role: user
+    content: >-
+      Fixa un compromís de seguiment.
+  prompt: Escriu en català la resposta de suport amb salutació, diagnosi inicial, passos i termini.
+- id: cd_287
+  category: multi_turn
+  source_dataset_yaml: data/prompts_multi_turn.yaml
+  persona: pime
+  workflow: support_reply
+  source_lang: en-ca
+  target_lang: ca
+  forbidden_terms:
+  - tablet
+  - route
+  - signature
+  - sync
+  - driver
+  conversation:
+  - role: user
+    content: >-
+      Un equip de repartiment no pot tancar serveis de camp al final de la ruta.
+  - role: assistant
+    content: >-
+      Cal protegir les dades i separar diagnosi de solució temporal.
+  - role: user
+    content: >-
+      The field note says tablet route list, missing signature, delayed sync, driver
+      notes and one unsent form.
+  - role: assistant
+    content: >-
+      Ho explicaré sense copiar els termes anglesos.
+  - role: user
+    content: >-
+      Inclou una instrucció per no tornar a pujar el mateix lot.
+  prompt: Escriu en català la resposta de suport amb comprovacions, protecció de dades i proper contacte.
+- id: cd_288
+  category: multi_turn
+  source_dataset_yaml: data/prompts_multi_turn.yaml
+  persona: pime
+  workflow: support_reply
+  source_lang: es-ca
+  target_lang: ca
+  forbidden_terms:
+  - bono
+  - recarga
+  - caducidad
+  conversation:
+  - role: user
+    content: >-
+      Un client diu que el saldo d'un abonament no s'actualitza després d'una compra.
+  - role: assistant
+    content: >-
+      Podem respondre amb verificacions, solució temporal i seguiment.
+  - role: user
+    content: >-
+      En su correo aparecen bono activo, saldo incorrecto, recarga cobrada,
+      caducidad visible y app móvil desactualizada.
+  - role: assistant
+    content: >-
+      Ho redactaré amb un to tranquil i operatiu.
+  - role: user
+    content: >-
+      Demana les dades mínimes per revisar-ho.
+  prompt: Escriu en català la resposta de suport amb passos, solució temporal, dades requerides i termini.
+- id: cd_289
+  category: multi_turn
+  source_dataset_yaml: data/prompts_multi_turn.yaml
+  persona: usuari_final
+  workflow: tenant_request
+  source_lang: en-ca
+  target_lang: ca
+  forbidden_terms:
+  - heating
+  - meter
+  - roommate
+  - bill
+  - agency
+  conversation:
+  - role: user
+    content: >-
+      Vull escriure a l'agència del pis perquè no queda clar com es reparteixen
+      unes despeses compartides.
+  - role: assistant
+    content: >-
+      Podem fer una petició formal amb imports, proves i termini.
+  - role: user
+    content: >-
+      Their message says heating meter reading, roommate contribution, shared bill,
+      agency approval and no monthly breakdown.
+  - role: assistant
+    content: >-
+      Faré una versió clara sense mantenir les expressions angleses.
+  - role: user
+    content: >-
+      Demana resposta escrita i conserva un to correcte.
+  prompt: Escriu en català el missatge amb assumpte, cos, petició concreta i termini.
