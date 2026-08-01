@@ -8,16 +8,17 @@ OUT_DIR ?= outputs/lm_eval/$(RUN_NAME)
 EVAL_TIMELINE ?= outputs/eval_timeline.tsv
 PROMPTS ?= data/prompts_monolingual.yaml data/prompts_crosslingual_basic.yaml data/prompts_multi_turn.yaml data/prompts_crosslingual_advanced.yaml data/prompts_rag_context.yaml
 EXPORT ?= data/lm_eval/catalan_drift.jsonl
-DEFAULT_EVAL_RUNS ?= gpt-5.5 gemini-2.5-flash
-ALL_EVAL_RUNS ?= gpt-5.5 gemini-2.5-flash gemma-3-12b-it-Q8_0 gemma-4-E4B_q4_0-it gemma-2-2b-it-Q8_0 Qwen3.5-9B-Q8_0 Qwen2.5-1.5B-Instruct-Q8_0 Ministral-3-8B-Instruct-2512-Q8_0 salamandra-7b-instruct-2606.Q8_0
+DEFAULT_EVAL_RUNS ?= gpt-5.6 gemini-3.6-flash
+ALL_EVAL_RUNS ?= gpt-5.6 gemini-3.6-flash gemma-3-12b-it-Q8_0 gemma-4-E4B_q4_0-it Qwen3.5-9B-Q8_0 Qwen2.5-1.5B-Instruct-Q8_0 Mistral-Small-3.1-24B-Instruct-2503-Q8_0 salamandra-7b-instruct-2606.Q8_0 EuroLLM-9B-Instruct-Q8_0
 REMOTE_EVAL_JOBS ?= 2
 LOCAL_EVAL_JOBS ?= 2
 EVAL_ALL_GROUP_JOBS ?= 2
-REMOTE_EVAL_TARGETS ?= eval-gpt55 eval-gemini-flash-25
+REMOTE_EVAL_TARGETS ?= eval-gpt56 eval-gemini-flash-36
 LOCAL_EVAL_GROUP_1 ?= eval-gemma3-12b eval-qwen25-1-5b
-LOCAL_EVAL_GROUP_2 ?= eval-qwen35-9b eval-gemma2-2b
+LOCAL_EVAL_GROUP_2 ?= eval-qwen35-9b
 LOCAL_EVAL_GROUP_3 ?= eval-salamandra-7b eval-gemma4-e4b
-LOCAL_EVAL_GROUP_4 ?= eval-ministral-3-8b
+LOCAL_EVAL_GROUP_4 ?= eval-mistral-small-3-1-24b
+LOCAL_EVAL_GROUP_5 ?= eval-eurollm-9b
 LOCAL_OPENAI_BASE_URL ?= http://localhost:9090/v1/chat/completions
 UV_CACHE_DIR ?= .uv-cache
 UV_PYTHON_INSTALL_DIR ?= .uv-python
@@ -28,7 +29,7 @@ SKIP_EXPORT ?=
 LIMIT ?=
 EVAL_EXPORT_PREREQ := $(if $(SKIP_EXPORT),,export-lm-eval)
 
-.PHONY: build clean-outputs export-lm-eval eval eval-one eval-local-openai eval-all eval-cloud eval-local-all eval-summary eval-gpt55 eval-gemini-flash-25 eval-gemma2-2b eval-gemma3-12b eval-gemma4-e4b eval-ministral-3-8b eval-qwen25-1-5b eval-qwen35-9b eval-salamandra-7b
+.PHONY: build clean-outputs export-lm-eval eval eval-one eval-local-openai eval-all eval-cloud eval-local-all eval-summary eval-gpt56 eval-gemini-flash-36 eval-eurollm-9b eval-gemma3-12b eval-gemma4-e4b eval-mistral-small-3-1-24b eval-qwen25-1-5b eval-qwen35-9b eval-salamandra-7b
 
 build:
 	$(PYTHON) scripts/build_dataset.py
@@ -57,6 +58,7 @@ eval-local-all:
 	$(if $(strip $(LOCAL_EVAL_GROUP_2)),$(MAKE) -j$(LOCAL_EVAL_JOBS) SKIP_EXPORT=1 $(LOCAL_EVAL_GROUP_2),@:)
 	$(if $(strip $(LOCAL_EVAL_GROUP_3)),$(MAKE) -j$(LOCAL_EVAL_JOBS) SKIP_EXPORT=1 $(LOCAL_EVAL_GROUP_3),@:)
 	$(if $(strip $(LOCAL_EVAL_GROUP_4)),$(MAKE) -j$(LOCAL_EVAL_JOBS) SKIP_EXPORT=1 $(LOCAL_EVAL_GROUP_4),@:)
+	$(if $(strip $(LOCAL_EVAL_GROUP_5)),$(MAKE) -j$(LOCAL_EVAL_JOBS) SKIP_EXPORT=1 $(LOCAL_EVAL_GROUP_5),@:)
 
 eval-summary:
 	$(PYTHON) scripts/catalan_drift_eval.py summary-lm-eval --task "$(TASK)" --timeline "$(EVAL_TIMELINE)" --runs $(DEFAULT_EVAL_RUNS)
@@ -80,26 +82,26 @@ eval-local-openai: $(EVAL_EXPORT_PREREQ)
 	@test -n "$(DISPLAY_MODEL)" || (echo "Set DISPLAY_MODEL, for example: make eval-local-openai DISPLAY_MODEL=gemma-3-12b-it-Q8_0" && exit 2)
 	OPENAI_API_KEY=local $(MAKE) eval-one LM_EVAL_MODEL=local-chat-completions MODEL_ARGS="model=$(DISPLAY_MODEL),base_url=$(LOCAL_OPENAI_BASE_URL),tokenized_requests=False" DISPLAY_MODEL="$(DISPLAY_MODEL)" RUN_NAME="$(DISPLAY_MODEL)" GEN_KWARGS='$(GEN_KWARGS)'
 
-eval-gpt55: $(EVAL_EXPORT_PREREQ)
-	$(MAKE) eval-one LM_EVAL_MODEL=openai-chat-completions MODEL_ARGS="model=gpt-5.5" DISPLAY_MODEL=gpt-5.5 RUN_NAME=gpt-5.5 GEN_KWARGS='{"reasoning_effort":"none","temperature":0}'
+eval-gpt56: $(EVAL_EXPORT_PREREQ)
+	$(MAKE) eval-one LM_EVAL_MODEL=openai-chat-completions MODEL_ARGS="model=gpt-5.6,num_concurrent=4" DISPLAY_MODEL=gpt-5.6 RUN_NAME=gpt-5.6 GEN_KWARGS='{"reasoning_effort":"none"}'
 
-eval-gemini-flash-25: $(EVAL_EXPORT_PREREQ)
-	$(MAKE) eval-one LM_EVAL_MODEL=litellm MODEL_ARGS="model=gemini/gemini-2.5-flash" DISPLAY_MODEL=gemini-2.5-flash RUN_NAME=gemini-2.5-flash GEN_KWARGS='{"reasoning_effort":"none","temperature":0}'
+eval-gemini-flash-36: $(EVAL_EXPORT_PREREQ)
+	$(MAKE) eval-one LM_EVAL_MODEL=litellm MODEL_ARGS="model=gemini/gemini-3.6-flash,num_concurrent=4" DISPLAY_MODEL=gemini-3.6-flash RUN_NAME=gemini-3.6-flash GEN_KWARGS='{"reasoning_effort":"none","temperature":0}'
 
 eval-gemma3-12b:
 	$(MAKE) eval-local-openai DISPLAY_MODEL=gemma-3-12b-it-Q8_0
 
+eval-eurollm-9b:
+	$(MAKE) eval-local-openai DISPLAY_MODEL=EuroLLM-9B-Instruct-Q8_0
+
 eval-gemma4-e4b:
 	$(MAKE) eval-local-openai DISPLAY_MODEL=gemma-4-E4B_q4_0-it GEN_KWARGS='{"chat_template_kwargs":{"enable_thinking":false}}'
-
-eval-gemma2-2b:
-	$(MAKE) eval-local-openai DISPLAY_MODEL=gemma-2-2b-it-Q8_0
 
 eval-qwen25-1-5b:
 	$(MAKE) eval-local-openai DISPLAY_MODEL=Qwen2.5-1.5B-Instruct-Q8_0
 
-eval-ministral-3-8b:
-	$(MAKE) eval-local-openai DISPLAY_MODEL=Ministral-3-8B-Instruct-2512-Q8_0
+eval-mistral-small-3-1-24b:
+	$(MAKE) eval-local-openai DISPLAY_MODEL=Mistral-Small-3.1-24B-Instruct-2503-Q8_0
 
 eval-salamandra-7b:
 	$(MAKE) eval-local-openai DISPLAY_MODEL=salamandra-7b-instruct-2606.Q8_0
