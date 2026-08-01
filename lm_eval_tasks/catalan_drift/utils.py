@@ -1,13 +1,25 @@
+import os
 import re
+import shutil
+import subprocess
 from collections.abc import Iterable
 from functools import partial
+from pathlib import Path
 
-from langdetect import DetectorFactory, LangDetectException, detect_langs
 from lm_eval.api.task import ConfigurableTask
 
-DetectorFactory.seed = 0
-
 CATALAN_FORBIDDEN_TERMS = ("asunto", "subject", "aquí tienes")
+LANGUAGE_FAIL_NON_CA_RATIO = 0.15
+LANGUAGE_MIN_CONFIDENCE = 0.71
+LANGUAGE_MIN_ALPHA_TOKENS = 5
+LANGUAGE_WINDOW_TOKENS = 40
+DEFAULT_LANGUAGE_ID_MODEL = "models/lid.176.ftz"
+DEFAULT_FASTTEXT_BINARY = "models/fasttext"
+
+_ALPHA_TOKEN_RE = re.compile(r"[^\W\d_]+(?:[.'’·-][^\W\d_]+)*", re.UNICODE)
+_CODE_FENCE_RE = re.compile(r"```.*?```", re.S)
+_SENTENCE_BOUNDARY_RE = re.compile(r"(?<=[.!?])\s+")
+_URL_RE = re.compile(r"https?://\S+|www\.\S+", re.I)
 
 
 def term_pattern(term: object) -> re.Pattern[str] | None:
@@ -81,16 +93,77 @@ class CatalanDriftTask(ConfigurableTask):
         return "\n".join(f"{msg['role']}: {msg['content']}" for msg in messages)
 
 
+def _alpha_tokens(text: str) -> list[str]:
+    return _ALPHA_TOKEN_RE.findall(_URL_RE.sub(" ", text))
+
+
+def _language_segments(text: str) -> Iterable[tuple[str, int]]:
+    text = _CODE_FENCE_RE.sub("\n\n", text)
+    for block in re.split(r"\n\s*\n+", text):
+        block = block.strip()
+        if not block:
+            continue
+        lines = [line.strip() for line in block.splitlines() if line.strip()]
+        units = lines if len(lines) > 1 else _SENTENCE_BOUNDARY_RE.split(block)
+        for unit in units:
+            tokens = _alpha_tokens(unit)
+            if len(tokens) < LANGUAGE_MIN_ALPHA_TOKENS:
+                continue
+            if len(tokens) <= LANGUAGE_WINDOW_TOKENS:
+                yield _URL_RE.sub(" ", unit), len(tokens)
+                continue
+            for start in range(0, len(tokens), LANGUAGE_WINDOW_TOKENS):
+                window = tokens[start : start + LANGUAGE_WINDOW_TOKENS]
+                if len(window) >= LANGUAGE_MIN_ALPHA_TOKENS:
+                    yield " ".join(window), len(window)
+
+
+def _fasttext_binary() -> str:
+    binary = os.environ.get("LANGUAGE_ID_FASTTEXT_BIN")
+    if binary:
+        return binary
+    if Path(DEFAULT_FASTTEXT_BINARY).exists():
+        return DEFAULT_FASTTEXT_BINARY
+    return shutil.which("fasttext") or "fasttext"
+
+
+def _predict_fasttext(text: str) -> tuple[str, float]:
+    model = os.environ.get("LANGUAGE_ID_MODEL", DEFAULT_LANGUAGE_ID_MODEL)
+    result = subprocess.run(
+        [_fasttext_binary(), "predict-prob", model, "-", "1"],
+        input=text.replace("\n", " ") + "\n",
+        text=True,
+        capture_output=True,
+        check=True,
+    )
+    parts = result.stdout.strip().split()
+    if len(parts) < 2:
+        raise RuntimeError("fastText did not return a prediction")
+    lang = parts[0].removeprefix("__label__").casefold().replace("-", "_").split("_", 1)[0]
+    return lang, float(parts[1])
+
+
 def _language_errors(doc, response):
     if doc.get("target_lang") != "ca" or not response.strip():
         return []
 
+    total_tokens = 0
+    non_catalan_tokens = 0
     try:
-        prediction = detect_langs(response)[0]
-    except (LangDetectException, IndexError):
-        return []
-    if prediction.lang != "ca" and prediction.prob >= 0.75:
-        return [f"document: {prediction.lang} ({prediction.prob:.2f})"]
+        for segment, tokens in _language_segments(response):
+            total_tokens += tokens
+            lang, confidence = _predict_fasttext(segment)
+            if confidence >= LANGUAGE_MIN_CONFIDENCE and lang != "ca":
+                non_catalan_tokens += tokens
+    except Exception as exc:
+        return [f"detector: {exc}"]
+
+    if total_tokens == 0:
+        return ["detector: no detectable language tokens"]
+
+    ratio = non_catalan_tokens / total_tokens
+    if ratio >= LANGUAGE_FAIL_NON_CA_RATIO:
+        return [f"non_catalan_token_ratio={ratio:.3f}"]
     return []
 
 

@@ -94,6 +94,21 @@ in `lm_eval_tasks/catalan_drift/`, and the exported prompt set is read from
 `data/lm_eval/catalan_drift.jsonl`. Run `make export-lm-eval` before the command
 below to build and export the dataset from a clean checkout.
 
+Language scoring uses the fastText command-line tool with the `lid.176` model.
+This is intentionally not declared as a Python dependency: the available Python
+packages are bindings, while this task shells out to the `fasttext` executable
+with `predict-prob`. Install the OS package when available, put a built
+`fasttext` executable on `PATH`, place it at `models/fasttext`, or set
+`LANGUAGE_ID_FASTTEXT_BIN`.
+
+```bash
+sudo apt install fasttext
+make language-id-model
+```
+
+`make language-id-model` downloads the default model to `models/lid.176.ftz`.
+Set `LANGUAGE_ID_MODEL` to use another model path.
+
 Simple example:
 
 ```bash

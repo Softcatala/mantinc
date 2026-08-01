@@ -25,14 +25,26 @@ UV_PYTHON_INSTALL_DIR ?= .uv-python
 UV_RUN ?= UV_CACHE_DIR=$(UV_CACHE_DIR) UV_PYTHON_INSTALL_DIR=$(UV_PYTHON_INSTALL_DIR) uv run
 PYTHON ?= $(UV_RUN) python
 LM_EVAL ?= $(UV_RUN) lm_eval
+LANGUAGE_ID_MODEL ?= models/lid.176.ftz
+LANGUAGE_ID_MODEL_URL ?= https://dl.fbaipublicfiles.com/fasttext/supervised-models/lid.176.ftz
 SKIP_EXPORT ?=
 LIMIT ?=
 EVAL_EXPORT_PREREQ := $(if $(SKIP_EXPORT),,export-lm-eval)
 
-.PHONY: build clean-outputs export-lm-eval eval eval-one eval-local-openai eval-all eval-cloud eval-local-all eval-summary eval-gpt56 eval-gemini-flash-36 eval-eurollm-9b eval-gemma3-12b eval-gemma4-e4b eval-mistral-small-3-1-24b eval-qwen25-1-5b eval-qwen35-9b eval-salamandra-7b
+.PHONY: build clean-outputs language-id-model export-lm-eval eval eval-one eval-local-openai eval-all eval-cloud eval-local-all eval-summary eval-gpt56 eval-gemini-flash-36 eval-eurollm-9b eval-gemma3-12b eval-gemma4-e4b eval-mistral-small-3-1-24b eval-qwen25-1-5b eval-qwen35-9b eval-salamandra-7b
 
 build:
 	$(PYTHON) scripts/build_dataset.py
+
+language-id-model:
+	@if [ -f "$(LANGUAGE_ID_MODEL)" ]; then \
+		echo "Language ID model already exists: $(LANGUAGE_ID_MODEL)"; \
+	else \
+		mkdir -p "$$(dirname "$(LANGUAGE_ID_MODEL)")"; \
+		curl -L "$(LANGUAGE_ID_MODEL_URL)" -o "$(LANGUAGE_ID_MODEL).tmp"; \
+		mv "$(LANGUAGE_ID_MODEL).tmp" "$(LANGUAGE_ID_MODEL)"; \
+		echo "Downloaded language ID model: $(LANGUAGE_ID_MODEL)"; \
+	fi
 
 clean-outputs:
 	@echo "Clearing outputs/"
