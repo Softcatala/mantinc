@@ -79,19 +79,11 @@ def _first_text(value: Any) -> str:
 def _messages(row: dict[str, Any]) -> list[dict[str, str]] | None:
     if not row.get("conversation"):
         return None
-    messages = [{"role": "system", "content": str(row["prompt"]).strip()}] + [
+    messages = [
         {"role": str(turn["role"]), "content": str(turn["content"]).strip()}
         for turn in row["conversation"]
     ]
-    normalized = [messages[0]]
-    for message in messages[1:]:
-        if normalized[-1]["role"] == message["role"]:
-            normalized[-1]["content"] += "\n\n" + message["content"]
-        else:
-            normalized.append(message)
-    messages = normalized
-    if messages[-1]["role"] == "assistant":
-        messages.append({"role": "user", "content": str(row["prompt"]).strip()})
+    messages.append({"role": "user", "content": str(row["prompt"]).strip()})
     return messages
 
 

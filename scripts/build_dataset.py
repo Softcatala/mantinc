@@ -93,6 +93,13 @@ def validate_rows(rows: list[dict[str, Any]]) -> None:
             for turn in conversation
         ):
             raise ValueError(f"{row['id']} has an invalid conversation")
+        if conversation and conversation[-1]["role"] != "assistant":
+            raise ValueError(f"{row['id']} conversation must end with assistant")
+        if any(
+            left["role"] == right["role"]
+            for left, right in zip(conversation, conversation[1:])
+        ):
+            raise ValueError(f"{row['id']} conversation roles must alternate")
 
 
 def distribution(rows: list[dict[str, Any]], field: str) -> dict[str, int]:

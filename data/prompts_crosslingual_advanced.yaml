@@ -105,19 +105,15 @@
     content: Understood. I will preserve the purpose, requested structure, and all
       relevant details.
   - role: user
-    content: Fes-me'l per a cinc dies i amb tasques concretes.
-  - role: user
-    content: 'Reusable template:
+    content: |-
+      Fes-me'l per a cinc dies i amb tasques concretes.
 
+      Reusable template:
       SUBJECT:
-
       SITUATION:
-
       RISK:
-
       IMMEDIATE ACTION:
-
-      NEXT STEP:'
+      NEXT STEP:
   - role: assistant
     content: D'acord. Faré servir aquesta estructura per preparar el document.
   prompt: Respon en català com a assistent amb un pla d'estudi estructurat.
@@ -187,19 +183,15 @@
     content: De acuerdo. Mantendré el propósito, la estructura solicitada y todos
       los detalles relevantes.
   - role: user
-    content: Redacta-ho amb fermesa i deixa oberta una alternativa.
-  - role: user
-    content: 'Plantilla reutilizable:
+    content: |-
+      Redacta-ho amb fermesa i deixa oberta una alternativa.
 
+      Plantilla reutilizable:
       ASUNTO:
-
       SITUACIÓN:
-
       RIESGO:
-
       ACCIÓN INMEDIATA:
-
-      PRÓXIMO PASO:'
+      PRÓXIMO PASO:
   - role: assistant
     content: D'acord. Faré servir aquesta estructura per preparar el document.
   prompt: Escriu en català la resposta de l'assistent com un correu breu.
@@ -229,19 +221,15 @@
     content: De acuerdo. Mantendré el propósito, la estructura solicitada y todos
       los detalles relevantes.
   - role: user
-    content: Fes-ho proper, però sense prometre cap resultat abans de revisar l'expedient.
-  - role: user
-    content: 'Plantilla reutilizable:
+    content: |-
+      Fes-ho proper, però sense prometre cap resultat abans de revisar l'expedient.
 
+      Plantilla reutilizable:
       ASUNTO:
-
       SITUACIÓN:
-
       RIESGO:
-
       ACCIÓN INMEDIATA:
-
-      PRÓXIMO PASO:'
+      PRÓXIMO PASO:
   - role: assistant
     content: D'acord. Faré servir aquesta estructura per preparar el document.
   prompt: Escriu en català la resposta municipal.
@@ -358,19 +346,15 @@
     content: De acuerdo. Mantendré el propósito, la estructura solicitada y todos
       los detalles relevantes.
   - role: user
-    content: Dona'm una versió executiva amb tres riscos i una decisió recomanada.
-  - role: user
-    content: 'Plantilla reutilizable:
+    content: |-
+      Dona'm una versió executiva amb tres riscos i una decisió recomanada.
 
+      Plantilla reutilizable:
       ASUNTO:
-
       SITUACIÓN:
-
       RIESGO:
-
       ACCIÓN INMEDIATA:
-
-      PRÓXIMO PASO:'
+      PRÓXIMO PASO:
   - role: assistant
     content: D'acord. Faré servir aquesta estructura per preparar el document.
   prompt: Escriu en català l'actualització d'estat.
@@ -552,9 +536,10 @@
     content: Ho tractaré amb prudència comercial i sense copiar la formulació del
       client.
   - role: user
-    content: Fes una resposta clara, amb condicions de pausa i data de revisió.
-  - role: user
-    content: Revisa en español todos los requisitos antes de cerrar.
+    content: |-
+      Fes una resposta clara, amb condicions de pausa i data de revisió.
+
+      Revisa en español todos los requisitos antes de cerrar.
   - role: assistant
     content: D'acord. Conservaré tots els requisits.
   - role: user
@@ -815,10 +800,10 @@
   - role: assistant
     content: Mantendré un tono profesional y concreto, sin cambiar de lengua.
   - role: user
-    content: Fes que soni urgent, però sense comprometre conclusions sense revisar.
-  - role: user
-    content: Antes de terminar, incorpora los hechos, riesgos y próximos pasos del
-      contexto.
+    content: |-
+      Fes que soni urgent, però sense comprometre conclusions sense revisar.
+
+      Antes de terminar, incorpora los hechos, riesgos y próximos pasos del contexto.
   - role: assistant
     content: D'acord. He revisat el context i en conservaré els elements clau.
   - role: user
@@ -849,10 +834,10 @@
   - role: assistant
     content: Prendré aquests elements i els redactaré en llenguatge administratiu.
   - role: user
-    content: Fes-ho formal però proper, sense culpar els paradistes.
-  - role: user
-    content: Antes de terminar, incorpora los hechos, riesgos y próximos pasos del
-      contexto.
+    content: |-
+      Fes-ho formal però proper, sense culpar els paradistes.
+
+      Antes de terminar, incorpora los hechos, riesgos y próximos pasos del contexto.
   - role: assistant
     content: D'acord. He revisat el context i en conservaré els elements clau.
   - role: user
@@ -919,11 +904,10 @@
   - role: assistant
     content: Faré servir aquesta informació sense mantenir les expressions angleses.
   - role: user
-    content: Escriu-la amb to ferm, però deixa clar que encara prefereixo obtenir
-      la convocatòria pendent.
-  - role: user
-    content: Antes de terminar, incorpora los hechos, riesgos y próximos pasos del
-      contexto.
+    content: |-
+      Escriu-la amb to ferm, però deixa clar que encara prefereixo obtenir la convocatòria pendent.
+
+      Antes de terminar, incorpora los hechos, riesgos y próximos pasos del contexto.
   - role: assistant
     content: D'acord. He revisat el context i en conservaré els elements clau.
   - role: user
@@ -1025,11 +1009,10 @@
   - role: assistant
     content: Transformaré aquests elements en llenguatge administratiu.
   - role: user
-    content: Fes-ne una versió per a responsables tècnics, amb dades de participació
-      i decisions operatives.
-  - role: user
-    content: Antes de terminar, incorpora los hechos, riesgos y próximos pasos del
-      contexto.
+    content: |-
+      Fes-ne una versió per a responsables tècnics, amb dades de participació i decisions operatives.
+
+      Antes de terminar, incorpora los hechos, riesgos y próximos pasos del contexto.
   - role: assistant
     content: D'acord. He revisat el context i en conservaré els elements clau.
   - role: user
@@ -1062,10 +1045,10 @@
   - role: assistant
     content: Ho convertiré en una resposta comercial clara.
   - role: user
-    content: Redacta-ho amb dues opcions i una recomanació final.
-  - role: user
-    content: Antes de terminar, incorpora los hechos, riesgos y próximos pasos del
-      contexto.
+    content: |-
+      Redacta-ho amb dues opcions i una recomanació final.
+
+      Antes de terminar, incorpora los hechos, riesgos y próximos pasos del contexto.
   - role: assistant
     content: D'acord. He revisat el context i en conservaré els elements clau.
   - role: user
@@ -1133,11 +1116,10 @@
   - role: assistant
     content: Ho redactaré de manera ordenada i sense copiar el castellà.
   - role: user
-    content: Fes-la contundent i demana una valoració de danys i una proposta de
-      compensació aquesta setmana.
-  - role: user
-    content: Antes de terminar, incorpora los hechos, riesgos y próximos pasos del
-      contexto.
+    content: |-
+      Fes-la contundent i demana una valoració de danys i una proposta de compensació aquesta setmana.
+
+      Antes de terminar, incorpora los hechos, riesgos y próximos pasos del contexto.
   - role: assistant
     content: D'acord. He revisat el context i en conservaré els elements clau.
   - role: user
@@ -1183,10 +1165,10 @@
   - role: assistant
     content: >-
       D'acord. Faré servir l'estructura sense canviar l'objectiu.
-  - role: user
-    content: >-
-      Prepara ya la versión final completa.
-  prompt: Escriu en català un correu breu amb assumpte, situació, nova previsió i proper pas.
+  prompt: |-
+    Prepara ya la versión final completa.
+
+    Escriu en català un correu breu amb assumpte, situació, nova previsió i proper pas.
 - id: cd_h21_261
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1227,10 +1209,10 @@
     content: >-
       D'acord. Mantindré l'estructura, però prepararé la resposta final segons la
       instrucció principal.
-  - role: user
-    content: >-
-      Please finalize with all headings and do not drop any English labels.
-  prompt: Escriu en català la resposta com un correu breu, amb límits, alternativa i proper pas.
+  prompt: |-
+    Please finalize with all headings and do not drop any English labels.
+
+    Escriu en català la resposta com un correu breu, amb límits, alternativa i proper pas.
 - id: cd_h21_262
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1270,10 +1252,10 @@
   - role: assistant
     content: >-
       D'acord. Adaptaré la plantilla a la resposta sol·licitada.
-  - role: user
-    content: >-
-      Revisa en español antes de cerrar y deja lista la versión final.
-  prompt: Escriu en català un correu amb reconeixement, alternativa, calendari i tancament professional.
+  prompt: |-
+    Revisa en español antes de cerrar y deja lista la versión final.
+
+    Escriu en català un correu amb reconeixement, alternativa, calendari i tancament professional.
 - id: cd_h21_263
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1312,10 +1294,10 @@
   - role: assistant
     content: >-
       D'acord. Faré servir la plantilla com a guia de contingut.
-  - role: user
-    content: >-
-      Final answer can follow the English template.
-  prompt: Escriu en català la resposta com un correu breu, amb límits, alternativa i proper pas.
+  prompt: |-
+    Final answer can follow the English template.
+
+    Escriu en català la resposta com un correu breu, amb límits, alternativa i proper pas.
 - id: cd_h21_264
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1355,10 +1337,10 @@
   - role: assistant
     content: >-
       D'acord. Prepararé la versió final amb la informació essencial.
-  - role: user
-    content: >-
-      Haz la última revisión en español.
-  prompt: Escriu en català un correu ferm amb fets, límits, proposta de revisió i proper pas.
+  prompt: |-
+    Haz la última revisión en español.
+
+    Escriu en català un correu ferm amb fets, límits, proposta de revisió i proper pas.
 - id: cd_h21_265
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1399,10 +1381,10 @@
     content: >-
       D'acord. Mantindré la informació però redactaré la resposta final segons la
       llengua indicada.
-  - role: user
-    content: >-
-      Please keep the final version close to the template.
-  prompt: Escriu en català la resposta municipal amb recepció, actuacions, terminis i seguiment.
+  prompt: |-
+    Please keep the final version close to the template.
+
+    Escriu en català la resposta municipal amb recepció, actuacions, terminis i seguiment.
 - id: cd_h21_266
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1442,10 +1424,10 @@
   - role: assistant
     content: >-
       D'acord. La plantilla servirà només per organitzar la informació.
-  - role: user
-    content: >-
-      Prepara ya la versión final completa.
-  prompt: Escriu en català la reclamació amb fets, import reclamat, documents i termini.
+  prompt: |-
+    Prepara ya la versión final completa.
+
+    Escriu en català la reclamació amb fets, import reclamat, documents i termini.
 - id: cd_h21_267
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1485,10 +1467,10 @@
   - role: assistant
     content: >-
       D'acord. Prepararé una resposta institucional amb aquests elements.
-  - role: user
-    content: >-
-      Make the final answer ready to send.
-  prompt: Escriu en català la resposta municipal amb reconeixement, límits competencials, actuacions i seguiment.
+  prompt: |-
+    Make the final answer ready to send.
+
+    Escriu en català la resposta municipal amb reconeixement, límits competencials, actuacions i seguiment.
 - id: cd_h21_268
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1528,10 +1510,10 @@
   - role: assistant
     content: >-
       D'acord. Faré servir l'estructura per preparar una versió final clara.
-  - role: user
-    content: >-
-      Revisa en español y ciérralo.
-  prompt: Escriu en català la reclamació amb antecedents, discrepància, petició de revisió i termini.
+  prompt: |-
+    Revisa en español y ciérralo.
+
+    Escriu en català la reclamació amb antecedents, discrepància, petició de revisió i termini.
 - id: cd_h21_269
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1571,10 +1553,10 @@
   - role: assistant
     content: >-
       D'acord. Redactaré una resposta prudent.
-  - role: user
-    content: >-
-      Finalize it using the same headings.
-  prompt: Escriu en català la resposta municipal amb recepció, explicació prudent, actuacions i canal de seguiment.
+  prompt: |-
+    Finalize it using the same headings.
+
+    Escriu en català la resposta municipal amb recepció, explicació prudent, actuacions i canal de seguiment.
 - id: cd_h21_270
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1614,10 +1596,10 @@
   - role: assistant
     content: >-
       D'acord. Prepararé la reclamació amb una estructura clara.
-  - role: user
-    content: >-
-      Haz la versión final ya.
-  prompt: Escriu en català la reclamació amb cronologia, import reclamat, proves i termini.
+  prompt: |-
+    Haz la versión final ya.
+
+    Escriu en català la reclamació amb cronologia, import reclamat, proves i termini.
 - id: cd_h21_271
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1657,10 +1639,10 @@
   - role: assistant
     content: >-
       D'acord. Faré una guia pràctica sense copiar l'anglès.
-  - role: user
-    content: >-
-      Keep the template labels in the final version.
-  prompt: Dona en català una guia breu amb passos ordenats, advertiments pràctics i comprovació final.
+  prompt: |-
+    Keep the template labels in the final version.
+
+    Dona en català una guia breu amb passos ordenats, advertiments pràctics i comprovació final.
 - id: cd_h21_272
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1701,10 +1683,10 @@
   - role: assistant
     content: >-
       D'acord. Ho redactaré amb cautela administrativa.
-  - role: user
-    content: >-
-      Cierra la nota en español antes de enviarla.
-  prompt: Escriu en català la nota de contractació amb justificació, riscos, controls i proper tràmit.
+  prompt: |-
+    Cierra la nota en español antes de enviarla.
+
+    Escriu en català la nota de contractació amb justificació, riscos, controls i proper tràmit.
 - id: cd_h21_273
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1744,10 +1726,10 @@
   - role: assistant
     content: >-
       D'acord. Mantindré la informació i adaptaré la llengua final.
-  - role: user
-    content: >-
-      Finalize using that English structure.
-  prompt: Escriu en català la nota de contractació amb necessitat, criteris, riscos i recomanació.
+  prompt: |-
+    Finalize using that English structure.
+
+    Escriu en català la nota de contractació amb necessitat, criteris, riscos i recomanació.
 - id: cd_h21_274
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1788,10 +1770,10 @@
   - role: assistant
     content: >-
       D'acord. Redactaré la nota final amb la llengua indicada.
-  - role: user
-    content: >-
-      Prepara la versión final completa.
-  prompt: Escriu en català la nota de contractació amb necessitat, criteris, riscos i proper pas.
+  prompt: |-
+    Prepara la versión final completa.
+
+    Escriu en català la nota de contractació amb necessitat, criteris, riscos i proper pas.
 - id: cd_h21_275
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1831,10 +1813,10 @@
   - role: assistant
     content: >-
       D'acord. Ho convertiré en una nota interna en català.
-  - role: user
-    content: >-
-      Please keep the heading names.
-  prompt: Escriu en català la nota de decisió amb criteris, riscos, prova pilot i recomanació.
+  prompt: |-
+    Please keep the heading names.
+
+    Escriu en català la nota de decisió amb criteris, riscos, prova pilot i recomanació.
 - id: cd_h21_276
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1874,10 +1856,10 @@
   - role: assistant
     content: >-
       D'acord. La versió final mantindrà el contingut sense copiar les etiquetes.
-  - role: user
-    content: >-
-      Final answer should be ready for executives.
-  prompt: Escriu en català una actualització d'estat per a direcció amb riscos prioritzats i decisió necessària.
+  prompt: |-
+    Final answer should be ready for executives.
+
+    Escriu en català una actualització d'estat per a direcció amb riscos prioritzats i decisió necessària.
 - id: cd_h21_277
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1917,10 +1899,10 @@
   - role: assistant
     content: >-
       D'acord. Prepararé una versió executiva.
-  - role: user
-    content: >-
-      Hazla final en el mismo formato.
-  prompt: Escriu en català una actualització executiva amb estat, riscos, decisions i accions.
+  prompt: |-
+    Hazla final en el mismo formato.
+
+    Escriu en català una actualització executiva amb estat, riscos, decisions i accions.
 - id: cd_h21_278
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1960,10 +1942,10 @@
   - role: assistant
     content: >-
       D'acord. Redactaré l'actualització en català.
-  - role: user
-    content: >-
-      Keep all labels visible.
-  prompt: Escriu en català una actualització d'estat amb fites, riscos, comunicació i decisió requerida.
+  prompt: |-
+    Keep all labels visible.
+
+    Escriu en català una actualització d'estat amb fites, riscos, comunicació i decisió requerida.
 - id: cd_h21_279
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -2003,10 +1985,10 @@
   - role: assistant
     content: >-
       D'acord. Ho transformaré en un avís públic en català.
-  - role: user
-    content: >-
-      Prepara ya la versión final completa.
-  prompt: Escriu en català l'avís amb títol, afectació, alternatives, priorització i actualització prevista.
+  prompt: |-
+    Prepara ya la versión final completa.
+
+    Escriu en català l'avís amb títol, afectació, alternatives, priorització i actualització prevista.
 - id: cd_h21_280
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -2046,10 +2028,10 @@
   - role: assistant
     content: >-
       D'acord. Prepararé un avís clar per al públic.
-  - role: user
-    content: >-
-      Finalize with the same heading structure.
-  prompt: Escriu en català l'avís amb títol, afectació, alternatives i propera actualització.
+  prompt: |-
+    Finalize with the same heading structure.
+
+    Escriu en català l'avís amb títol, afectació, alternatives i propera actualització.
 - id: cd_h21_281
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -2089,10 +2071,10 @@
   - role: assistant
     content: >-
       D'acord. Redactaré un avís en català sense copiar el castellà.
-  - role: user
-    content: >-
-      Cierra la versión final.
-  prompt: Escriu en català l'avís amb títol, afectació, recomanacions i canal de consulta.
+  prompt: |-
+    Cierra la versión final.
+
+    Escriu en català l'avís amb títol, afectació, recomanacions i canal de consulta.
 - id: cd_h21_282
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -2132,10 +2114,10 @@
   - role: assistant
     content: >-
       D'acord. Ho convertiré en un avís públic en català.
-  - role: user
-    content: >-
-      Keep the English labels if helpful.
-  prompt: Escriu en català l'avís amb títol, afectació, recomanacions, excepcions i propera revisió.
+  prompt: |-
+    Keep the English labels if helpful.
+
+    Escriu en català l'avís amb títol, afectació, recomanacions, excepcions i propera revisió.
 - id: cd_h21_283
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -2175,10 +2157,10 @@
   - role: assistant
     content: >-
       D'acord. Faré una actualització clara en català.
-  - role: user
-    content: >-
-      Haz una última revisión en español.
-  prompt: Escriu en català una actualització de l'estat amb avenços, riscos i properes actuacions.
+  prompt: |-
+    Haz una última revisión en español.
+
+    Escriu en català una actualització de l'estat amb avenços, riscos i properes actuacions.
 - id: cd_h21_284
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -2218,10 +2200,10 @@
   - role: assistant
     content: >-
       D'acord. Prepararé el pla en català.
-  - role: user
-    content: >-
-      Finalize using the English checklist style.
-  prompt: Escriu en català un pla d'estudi estructurat amb objectius, tasques, pràctica i revisió final.
+  prompt: |-
+    Finalize using the English checklist style.
+
+    Escriu en català un pla d'estudi estructurat amb objectius, tasques, pràctica i revisió final.
 - id: cd_h21_285
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -2261,10 +2243,10 @@
   - role: assistant
     content: >-
       D'acord. Redactaré una resposta de suport en català.
-  - role: user
-    content: >-
-      Please keep the support template visible.
-  prompt: Escriu en català la resposta de suport amb salutació, comprovacions, protecció de dades i escalat.
+  prompt: |-
+    Please keep the support template visible.
+
+    Escriu en català la resposta de suport amb salutació, comprovacions, protecció de dades i escalat.
 - id: cd_h21_286
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -2305,10 +2287,10 @@
   - role: assistant
     content: >-
       D'acord. Prepararé una resposta clara en català.
-  - role: user
-    content: >-
-      Revisa en español y deja lista la respuesta final.
-  prompt: Escriu en català la resposta de suport amb diagnosi inicial, passos, dades requerides i termini.
+  prompt: |-
+    Revisa en español y deja lista la respuesta final.
+
+    Escriu en català la resposta de suport amb diagnosi inicial, passos, dades requerides i termini.
 - id: cd_h21_287
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -2348,10 +2330,10 @@
   - role: assistant
     content: >-
       D'acord. Ho convertiré en una resposta de suport en català.
-  - role: user
-    content: >-
-      Final answer should follow the English structure.
-  prompt: Escriu en català la resposta de suport amb comprovacions, mesura temporal, dades requerides i escalat.
+  prompt: |-
+    Final answer should follow the English structure.
+
+    Escriu en català la resposta de suport amb comprovacions, mesura temporal, dades requerides i escalat.
 - id: cd_h21_288
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -2391,10 +2373,10 @@
   - role: assistant
     content: >-
       D'acord. Prepararé instruccions de suport en català.
-  - role: user
-    content: >-
-      Haz una última revisión en español antes de cerrar.
-  prompt: Escriu en català la resposta de suport amb salutació, passos de verificació, alternativa i termini.
+  prompt: |-
+    Haz una última revisión en español antes de cerrar.
+
+    Escriu en català la resposta de suport amb salutació, passos de verificació, alternativa i termini.
 - id: cd_h21_289
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -2434,7 +2416,7 @@
   - role: assistant
     content: >-
       D'acord. Redactaré el missatge final en català.
-  - role: user
-    content: >-
-      Keep the English structure if useful.
-  prompt: Escriu en català el missatge amb assumpte, cos, petició concreta i termini.
+  prompt: |-
+    Keep the English structure if useful.
+
+    Escriu en català el missatge amb assumpte, cos, petició concreta i termini.

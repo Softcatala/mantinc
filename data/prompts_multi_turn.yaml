@@ -15,9 +15,10 @@
     content: El cliente es de Zaragoza y está presionando por el presupuesto.
   - role: assistant
     content: Mantendré un tono profesional y concreto, sin cambiar de lengua.
-  - role: user
-    content: Fes que soni urgent, però sense tocar el marge.
-  prompt: Escriu una resposta de l'assistent com un correu breu amb assumpte i cos.
+  prompt: |-
+    Fes que soni urgent, però sense tocar el marge.
+
+    Escriu una resposta de l'assistent com un correu breu amb assumpte i cos.
 - id: cd_061
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -132,9 +133,10 @@
       study sprint with a review checklist.
   - role: assistant
     content: Faré servir aquesta informació per construir un pla breu.
-  - role: user
-    content: Fes-me'l per a cinc dies i amb tasques concretes.
-  prompt: Respon com a assistent amb un pla d'estudi estructurat.
+  prompt: |-
+    Fes-me'l per a cinc dies i amb tasques concretes.
+
+    Respon com a assistent amb un pla d'estudi estructurat.
 - id: cd_066
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -179,9 +181,10 @@
       por el plazo legal.
   - role: assistant
     content: Prendré aquests elements i els redactaré en llenguatge administratiu.
-  - role: user
-    content: Fes-ho formal però proper, sense sonar defensiu.
-  prompt: Escriu la propera resposta de l'assistent.
+  prompt: |-
+    Fes-ho formal però proper, sense sonar defensiu.
+
+    Escriu la propera resposta de l'assistent.
 - id: cd_068
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -227,9 +230,10 @@
       antes del cierre de mes.
   - role: assistant
     content: Ho tindré en compte sense prometre més del que podem complir.
-  - role: user
-    content: Redacta-ho amb fermesa i deixa oberta una alternativa.
-  prompt: Escriu la resposta de l'assistent com un correu breu.
+  prompt: |-
+    Redacta-ho amb fermesa i deixa oberta una alternativa.
+
+    Escriu la resposta de l'assistent com un correu breu.
 - id: cd_160
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -257,9 +261,10 @@
   - role: assistant
     content: Ho tractaré amb prudència comercial i sense copiar la formulació del
       client.
-  - role: user
-    content: Fes una resposta breu, ferma i amb una proposta de reunió avui mateix.
-  prompt: Escriu la propera resposta de l'assistent com un correu amb assumpte i cos.
+  prompt: |-
+    Fes una resposta breu, ferma i amb una proposta de reunió avui mateix.
+
+    Escriu la propera resposta de l'assistent com un correu amb assumpte i cos.
 - id: cd_161
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -360,10 +365,10 @@
       stage and crowd information point.
   - role: assistant
     content: Faré servir aquesta informació sense mantenir les expressions angleses.
-  - role: user
-    content: Escriu-la amb to ferm, però deixa clar que encara prefereixo assistir
-      si respecten condicions equivalents.
-  prompt: Escriu la propera resposta de l'assistent.
+  prompt: |-
+    Escriu-la amb to ferm, però deixa clar que encara prefereixo assistir si respecten condicions equivalents.
+
+    Escriu la propera resposta de l'assistent.
 - id: cd_165
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -413,9 +418,10 @@
       pendiente de validar, registro presencial y cita próxima.
   - role: assistant
     content: Mantindré un to institucional i evitaré reproduir els termes castellans.
-  - role: user
-    content: Fes-ho proper, però sense prometre cap resultat abans de revisar l'expedient.
-  prompt: Escriu la resposta municipal.
+  prompt: |-
+    Fes-ho proper, però sense prometre cap resultat abans de revisar l'expedient.
+
+    Escriu la resposta municipal.
 - id: cd_167
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -542,9 +548,10 @@
       dashboard, risk register and escalation path.
   - role: assistant
     content: Transformaré aquests elements en llenguatge administratiu.
-  - role: user
-    content: Fes-ne una versió per a càrrecs electes, amb síntesi i decisions concretes.
-  prompt: Escriu l'actualització d'estat.
+  prompt: |-
+    Fes-ne una versió per a càrrecs electes, amb síntesi i decisions concretes.
+
+    Escriu l'actualització d'estat.
 - id: cd_172
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -620,9 +627,10 @@
       contrato puente, usuarios adicionales y validación del responsable de cuenta.
   - role: assistant
     content: Ho convertiré en una resposta comercial clara.
-  - role: user
-    content: Redacta-ho amb dues opcions i una recomanació final.
-  prompt: Escriu el correu de resposta.
+  prompt: |-
+    Redacta-ho amb dues opcions i una recomanació final.
+
+    Escriu el correu de resposta.
 - id: cd_175
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -672,9 +680,10 @@
       de mantenimiento, validación de negocio y comité de riesgos.
   - role: assistant
     content: Ho reformularé per a direcció.
-  - role: user
-    content: Dona'm una versió executiva amb tres riscos i una decisió recomanada.
-  prompt: Escriu l'actualització d'estat.
+  prompt: |-
+    Dona'm una versió executiva amb tres riscos i una decisió recomanada.
+
+    Escriu l'actualització d'estat.
 - id: cd_177
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -751,9 +760,10 @@
       cargo adicional, parte técnico y hoja de reclamaciones.
   - role: assistant
     content: Ho redactaré de manera ordenada i sense copiar el castellà.
-  - role: user
-    content: Fes-la contundent i demana una solució abans de cinc dies hàbils.
-  prompt: Escriu la reclamació.
+  prompt: |-
+    Fes-la contundent i demana una solució abans de cinc dies hàbils.
+
+    Escriu la reclamació.
 - id: cd_260
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -779,10 +789,10 @@
   - role: assistant
     content: >-
       Ho convertiré en una resposta professional sense copiar la formulació castellana.
-  - role: user
-    content: >-
-      Fes-ho ferm, amb calendari i sense acceptar compensacions automàtiques.
-  prompt: Escriu en català un correu breu amb assumpte, situació, nova previsió i proper pas.
+  prompt: |-
+    Fes-ho ferm, amb calendari i sense acceptar compensacions automàtiques.
+
+    Escriu en català un correu breu amb assumpte, situació, nova previsió i proper pas.
 - id: cd_261
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -811,10 +821,10 @@
   - role: assistant
     content: >-
       Reformularé aquests punts sense mantenir les etiquetes angleses.
-  - role: user
-    content: >-
-      Dona'm una resposta breu que no bloquegi la negociació.
-  prompt: Escriu en català la resposta com un correu amb límits, alternativa i proper pas.
+  prompt: |-
+    Dona'm una resposta breu que no bloquegi la negociació.
+
+    Escriu en català la resposta com un correu amb límits, alternativa i proper pas.
 - id: cd_262
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -840,10 +850,10 @@
   - role: assistant
     content: >-
       Ho passaré a llenguatge comercial clar i sense copiar expressions.
-  - role: user
-    content: >-
-      Respon amb una alternativa segura per avui.
-  prompt: Escriu en català un correu breu amb situació, condicions, alternativa i decisió pendent.
+  prompt: |-
+    Respon amb una alternativa segura per avui.
+
+    Escriu en català un correu breu amb situació, condicions, alternativa i decisió pendent.
 - id: cd_263
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -872,10 +882,10 @@
   - role: assistant
     content: >-
       Mantindré el fons de la petició sense conservar la terminologia anglesa.
-  - role: user
-    content: >-
-      Fes una resposta cordial, però que no autoritzi cap ús públic abans de revisar-ho.
-  prompt: Escriu en català la resposta com un correu amb límits, alternativa i proper pas.
+  prompt: |-
+    Fes una resposta cordial, però que no autoritzi cap ús públic abans de revisar-ho.
+
+    Escriu en català la resposta com un correu amb límits, alternativa i proper pas.
 - id: cd_264
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -902,10 +912,10 @@
   - role: assistant
     content: >-
       Ho redactaré amb cautela comercial i sense copiar el castellà.
-  - role: user
-    content: >-
-      Deixa oberta una sortida pactada.
-  prompt: Escriu en català un correu breu amb estat, opcions, condicions i proper pas.
+  prompt: |-
+    Deixa oberta una sortida pactada.
+
+    Escriu en català un correu breu amb estat, opcions, condicions i proper pas.
 - id: cd_265
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -933,10 +943,10 @@
   - role: assistant
     content: >-
       Ho convertiré en una resposta institucional clara.
-  - role: user
-    content: >-
-      Fes-ho proper, però sense prometre una reparació abans de verificar-ho.
-  prompt: Escriu en català la resposta municipal amb recepció, actuacions, terminis i canal de seguiment.
+  prompt: |-
+    Fes-ho proper, però sense prometre una reparació abans de verificar-ho.
+
+    Escriu en català la resposta municipal amb recepció, actuacions, terminis i canal de seguiment.
 - id: cd_266
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -964,10 +974,10 @@
   - role: assistant
     content: >-
       Ho redactaré sense mantenir les expressions castellanes.
-  - role: user
-    content: >-
-      Demana una resposta escrita i conserva un to ferm.
-  prompt: Escriu en català la reclamació amb fets, impacte, documents, petició i termini.
+  prompt: |-
+    Demana una resposta escrita i conserva un to ferm.
+
+    Escriu en català la reclamació amb fets, impacte, documents, petició i termini.
 - id: cd_267
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -995,10 +1005,10 @@
   - role: assistant
     content: >-
       Convertiré aquests punts a llenguatge administratiu en català.
-  - role: user
-    content: >-
-      No prometis el resultat abans de revisar l'expedient.
-  prompt: Escriu en català la resposta municipal amb reconeixement, comprovacions, terminis i seguiment.
+  prompt: |-
+    No prometis el resultat abans de revisar l'expedient.
+
+    Escriu en català la resposta municipal amb reconeixement, comprovacions, terminis i seguiment.
 - id: cd_268
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -1025,10 +1035,10 @@
   - role: assistant
     content: >-
       Ho transformaré en una reclamació ordenada.
-  - role: user
-    content: >-
-      Demana que no em cobrin una segona diagnosi.
-  prompt: Escriu en català la reclamació amb cronologia, discrepància, proves, petició i termini.
+  prompt: |-
+    Demana que no em cobrin una segona diagnosi.
+
+    Escriu en català la reclamació amb cronologia, discrepància, proves, petició i termini.
 - id: cd_269
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -1056,10 +1066,10 @@
   - role: assistant
     content: >-
       Ho redactaré amb to institucional i sense copiar l'anglès.
-  - role: user
-    content: >-
-      Inclou un canal per aportar més informació.
-  prompt: Escriu en català la resposta municipal amb recepció, actuacions, límits i seguiment.
+  prompt: |-
+    Inclou un canal per aportar més informació.
+
+    Escriu en català la resposta municipal amb recepció, actuacions, límits i seguiment.
 - id: cd_270
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -1087,10 +1097,10 @@
   - role: assistant
     content: >-
       Ho passaré a català amb un to ferm i respectuós.
-  - role: user
-    content: >-
-      Vull demanar revisió urgent sense amenaçar.
-  prompt: Escriu en català la reclamació amb fets, impacte, documents i solució demanada.
+  prompt: |-
+    Vull demanar revisió urgent sense amenaçar.
+
+    Escriu en català la reclamació amb fets, impacte, documents i solució demanada.
 - id: cd_271
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -1119,10 +1129,10 @@
   - role: assistant
     content: >-
       Ho explicaré amb passos pràctics i equivalents naturals.
-  - role: user
-    content: >-
-      Fes-ho breu i ordenat.
-  prompt: Dona en català una guia de privacitat amb passos, advertiments i comprovació final.
+  prompt: |-
+    Fes-ho breu i ordenat.
+
+    Dona en català una guia de privacitat amb passos, advertiments i comprovació final.
 - id: cd_272
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -1151,10 +1161,10 @@
   - role: assistant
     content: >-
       Ho convertiré a llenguatge administratiu català.
-  - role: user
-    content: >-
-      Deixa clar què s'ha de verificar abans d'adjudicar.
-  prompt: Escriu en català la nota de contractació amb necessitat, riscos, controls i proper tràmit.
+  prompt: |-
+    Deixa clar què s'ha de verificar abans d'adjudicar.
+
+    Escriu en català la nota de contractació amb necessitat, riscos, controls i proper tràmit.
 - id: cd_273
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -1182,10 +1192,10 @@
   - role: assistant
     content: >-
       Ho expressaré en català sense copiar les etiquetes angleses.
-  - role: user
-    content: >-
-      Afegeix una recomanació condicionada.
-  prompt: Escriu en català la nota de contractació amb objectiu, criteris, riscos i decisió.
+  prompt: |-
+    Afegeix una recomanació condicionada.
+
+    Escriu en català la nota de contractació amb objectiu, criteris, riscos i decisió.
 - id: cd_274
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -1213,10 +1223,10 @@
   - role: assistant
     content: >-
       Ho redactaré amb cautela i vocabulari administratiu.
-  - role: user
-    content: >-
-      Inclou riscos si s'endarrereix.
-  prompt: Escriu en català la nota de contractació amb necessitat, criteris, riscos i proper pas.
+  prompt: |-
+    Inclou riscos si s'endarrereix.
+
+    Escriu en català la nota de contractació amb necessitat, criteris, riscos i proper pas.
 - id: cd_275
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -1243,10 +1253,10 @@
   - role: assistant
     content: >-
       Ho convertiré en una nota interna clara.
-  - role: user
-    content: >-
-      Recomana només si podem fer una prova controlada.
-  prompt: Escriu en català la nota de decisió amb criteris, riscos, prova pilot i recomanació.
+  prompt: |-
+    Recomana només si podem fer una prova controlada.
+
+    Escriu en català la nota de decisió amb criteris, riscos, prova pilot i recomanació.
 - id: cd_276
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -1275,10 +1285,10 @@
   - role: assistant
     content: >-
       Ho expressaré en català i sense mantenir les etiquetes angleses.
-  - role: user
-    content: >-
-      Dona'm tres riscos i la decisió que cal prendre.
-  prompt: Escriu en català una actualització d'estat per a direcció amb riscos prioritzats.
+  prompt: |-
+    Dona'm tres riscos i la decisió que cal prendre.
+
+    Escriu en català una actualització d'estat per a direcció amb riscos prioritzats.
 - id: cd_277
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -1306,10 +1316,10 @@
   - role: assistant
     content: >-
       Ho reformularé per a direcció.
-  - role: user
-    content: >-
-      No amaguis els riscos comercials.
-  prompt: Escriu en català una actualització executiva amb estat, riscos, decisions i accions.
+  prompt: |-
+    No amaguis els riscos comercials.
+
+    Escriu en català una actualització executiva amb estat, riscos, decisions i accions.
 - id: cd_278
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -1338,10 +1348,10 @@
   - role: assistant
     content: >-
       Ho passaré a llenguatge administratiu clar.
-  - role: user
-    content: >-
-      Inclou la decisió que ha de prendre la comissió.
-  prompt: Escriu en català una actualització d'estat amb fites, riscos, comunicació i decisió requerida.
+  prompt: |-
+    Inclou la decisió que ha de prendre la comissió.
+
+    Escriu en català una actualització d'estat amb fites, riscos, comunicació i decisió requerida.
 - id: cd_279
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -1368,10 +1378,10 @@
   - role: assistant
     content: >-
       Ho redactaré en català sense conservar aquests termes.
-  - role: user
-    content: >-
-      Inclou horaris i canal de consulta.
-  prompt: Escriu en català l'avís amb títol, afectació, alternativa, recomanacions i actualització.
+  prompt: |-
+    Inclou horaris i canal de consulta.
+
+    Escriu en català l'avís amb títol, afectació, alternativa, recomanacions i actualització.
 - id: cd_280
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -1399,10 +1409,10 @@
   - role: assistant
     content: >-
       Ho convertiré en un avís entenedor per al públic.
-  - role: user
-    content: >-
-      Mantén un to tranquil i concret.
-  prompt: Escriu en català l'avís amb títol, afectació, serveis disponibles i propera actualització.
+  prompt: |-
+    Mantén un to tranquil i concret.
+
+    Escriu en català l'avís amb títol, afectació, serveis disponibles i propera actualització.
 - id: cd_281
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -1431,10 +1441,10 @@
   - role: assistant
     content: >-
       Ho redactaré en català i amb prudència.
-  - role: user
-    content: >-
-      Afegeix recomanacions per a persones sensibles.
-  prompt: Escriu en català l'avís públic amb afectació, recomanacions i canal oficial.
+  prompt: |-
+    Afegeix recomanacions per a persones sensibles.
+
+    Escriu en català l'avís públic amb afectació, recomanacions i canal oficial.
 - id: cd_282
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -1462,10 +1472,10 @@
   - role: assistant
     content: >-
       Convertiré aquests conceptes a llenguatge administratiu natural.
-  - role: user
-    content: >-
-      No ho facis massa tècnic.
-  prompt: Escriu en català l'avís amb títol, dates, afectació, alternativa i recomanacions.
+  prompt: |-
+    No ho facis massa tècnic.
+
+    Escriu en català l'avís amb títol, dates, afectació, alternativa i recomanacions.
 - id: cd_283
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -1493,10 +1503,10 @@
   - role: assistant
     content: >-
       Ho redactaré com una actualització pública en català.
-  - role: user
-    content: >-
-      Fes-la breu i útil per a càrrecs electes.
-  prompt: Escriu en català una actualització de l'estat amb avenços, riscos i properes actuacions.
+  prompt: |-
+    Fes-la breu i útil per a càrrecs electes.
+
+    Escriu en català una actualització de l'estat amb avenços, riscos i properes actuacions.
 - id: cd_284
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -1524,10 +1534,10 @@
   - role: assistant
     content: >-
       Ho faré servir per construir un pla concret.
-  - role: user
-    content: >-
-      Dona'm sis dies i una revisió final.
-  prompt: Escriu en català un pla d'estudi estructurat amb objectius, tasques i criteris de progrés.
+  prompt: |-
+    Dona'm sis dies i una revisió final.
+
+    Escriu en català un pla d'estudi estructurat amb objectius, tasques i criteris de progrés.
 - id: cd_285
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -1554,10 +1564,10 @@
   - role: assistant
     content: >-
       Ho explicaré amb termes clars i sense repetir l'anglès.
-  - role: user
-    content: >-
-      Dona també un criteri d'escalat.
-  prompt: Escriu en català la resposta de suport amb comprovacions, dades requerides, mesura temporal i escalat.
+  prompt: |-
+    Dona també un criteri d'escalat.
+
+    Escriu en català la resposta de suport amb comprovacions, dades requerides, mesura temporal i escalat.
 - id: cd_286
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -1585,10 +1595,10 @@
   - role: assistant
     content: >-
       Ho transformaré en una resposta de suport en català.
-  - role: user
-    content: >-
-      Fixa un compromís de seguiment.
-  prompt: Escriu en català la resposta de suport amb salutació, diagnosi inicial, passos i termini.
+  prompt: |-
+    Fixa un compromís de seguiment.
+
+    Escriu en català la resposta de suport amb salutació, diagnosi inicial, passos i termini.
 - id: cd_287
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -1616,10 +1626,10 @@
   - role: assistant
     content: >-
       Ho explicaré sense copiar els termes anglesos.
-  - role: user
-    content: >-
-      Inclou una instrucció per no tornar a pujar el mateix lot.
-  prompt: Escriu en català la resposta de suport amb comprovacions, protecció de dades i proper contacte.
+  prompt: |-
+    Inclou una instrucció per no tornar a pujar el mateix lot.
+
+    Escriu en català la resposta de suport amb comprovacions, protecció de dades i proper contacte.
 - id: cd_288
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -1645,10 +1655,10 @@
   - role: assistant
     content: >-
       Ho redactaré amb un to tranquil i operatiu.
-  - role: user
-    content: >-
-      Demana les dades mínimes per revisar-ho.
-  prompt: Escriu en català la resposta de suport amb passos, solució temporal, dades requerides i termini.
+  prompt: |-
+    Demana les dades mínimes per revisar-ho.
+
+    Escriu en català la resposta de suport amb passos, solució temporal, dades requerides i termini.
 - id: cd_289
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -1677,7 +1687,7 @@
   - role: assistant
     content: >-
       Faré una versió clara sense mantenir les expressions angleses.
-  - role: user
-    content: >-
-      Demana resposta escrita i conserva un to correcte.
-  prompt: Escriu en català el missatge amb assumpte, cos, petició concreta i termini.
+  prompt: |-
+    Demana resposta escrita i conserva un to correcte.
+
+    Escriu en català el missatge amb assumpte, cos, petició concreta i termini.
