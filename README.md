@@ -78,16 +78,21 @@ Each sample should specify:
 
 ## Benchmark Design
 
+- The dataset is category-balanced: each category contains 60 items, so category
+  scores remain directly comparable.
+- Conversation cases do not use system prompts. The final user prompt is appended
+  after the prior turns, so the benchmark tests whether the model follows the
+  latest task while resisting cross-language priming.
 - When an example provides a template to use in another language, explicitly
   include `català` in the instruction. This keeps the case fair and makes the
   expected Catalan answer language unambiguous.
 - RAG documents come from CC BY 4.0 Diputació de Barcelona Open Data records,
   currently the paired `parcsequipaments_ca` and `parcsequipaments_es` datasets.
   Only safe descriptive fragments are kept; contact, location, schedule, and
-  personal-data fields are filtered out.
+  personal data fields are filtered out.
 
-The dataset contains 60 items in each category (300 items total). It is built
-deterministically with `make build`.
+The dataset contains 300 items total. It is built deterministically with
+`make build`.
 
 
 ## Run
