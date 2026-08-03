@@ -15,6 +15,18 @@ language-confusion problem studied by Marchisio et al. in
 as a foundation, while adding Catalan-specific personas, workflows, and
 multi-turn pressure cases.
 
+## Scope
+
+**What this benchmark measures:** whether the model's final answer is in
+Catalan and free of source-language leakage (Spanish or English loanwords from
+the prompt or prior turns). Scoring combines a fastText language check with a
+forbidden-term lexical check.
+
+**What this benchmark does not measure:** task completion, factual accuracy,
+tone, formatting, or overall answer quality. A model that refuses, goes
+off-topic, or produces a poor answer *in fluent Catalan* will still pass. A
+high score means "keeps the language," not "is a good Catalan assistant."
+
 # Example of case
 
 Exemple de cas real (`cd_h20_177`):
@@ -159,5 +171,10 @@ Results on the 300-item Catalan Drift dataset:
 At 95% confidence, the maximum margin of error is ±5.7 percentage points
 for overall scores (n=300) and ±12.7 percentage points for category scores
 (n=60), using the normal approximation for a binomial proportion.
+
+**How to compare models:** Rank models by the **Overall** column. Per-category
+scores (n=60, ±12.7 pp at 95%) are useful for spotting *where* a model
+struggles, not for ranking models against each other — most per-category gaps
+in this table are within the margin of error.
 
 All completed evaluations had zero API or empty-response failures.
