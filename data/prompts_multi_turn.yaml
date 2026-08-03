@@ -430,7 +430,6 @@
   source_lang: en-ca
   target_lang: ca
   forbidden_terms:
-  - data
   - migration
   - workshop
   - acceptance
@@ -772,7 +771,6 @@
   source_lang: es-ca
   target_lang: ca
   forbidden_terms:
-  - entrega
   - almacén
   - penalización
   conversation:

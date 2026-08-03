@@ -138,6 +138,30 @@ class ForbiddenHitsTest(unittest.TestCase):
         self.assertEqual(result["language_fail"], 0.0)
         self.assertEqual(result["drift_pass"], 1.0)
 
+    def test_short_labeled_catalan_template_does_not_fail(self) -> None:
+        lines = [
+            "ASSUMPTE: Retard del lliurament",
+            "SITUACIÓ: Estoc insuficient",
+            "RISC: Penalització contractual",
+            "ACCIÓ: Comanda urgent",
+            "SEGÜENT PAS: Trucada dilluns",
+        ]
+
+        for separator in ("\n", "\n\n"):
+            with self.subTest(separator=repr(separator)):
+                with mock.patch(
+                    "lm_eval_tasks.catalan_drift.utils._predict_fasttext",
+                    return_value=("ca", 0.99),
+                ) as predict:
+                    result = process_results(
+                        {"target_lang": "ca", "category": "test"},
+                        [separator.join(lines)],
+                    )
+
+                self.assertEqual(result["language_fail"], 0.0)
+                self.assertEqual(result["drift_pass"], 1.0)
+                predict.assert_called_once()
+
     def test_detector_exception_is_not_silent_pass(self) -> None:
         with mock.patch(
             "lm_eval_tasks.catalan_drift.utils._predict_fasttext",

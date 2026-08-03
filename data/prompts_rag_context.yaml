@@ -979,7 +979,6 @@
   forbidden_terms:
   - mundo
   - bosque
-  - nombre
   - equipamiento
   - equipamientos
   prompt: 'Fes un resum sobre Museu del Bosc i la Pagesia de Vallgorguina (equipament municipal):
@@ -1033,7 +1032,6 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Centre de Documentació del Parc Natural del Montseny, secció Humanitats
   forbidden_terms:
-  - nombre
   - equipamiento
   - recepción
   - bosque
@@ -1193,7 +1191,6 @@
       exterior del museo se especializa en los animales de tiro: usos, materiales y partes
       del carro.'
   forbidden_terms:
-  - nombre
   - equipamiento
   - equipamientos
   - educación
@@ -1802,7 +1799,6 @@
   - yacimiento
   - puede
   - información
-  - nombre
   prompt: 'Fes un resum sobre Fortificació ibèrica de Montgròs: què és, serveis/espais i detalls.
     Només fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_034
@@ -2668,7 +2664,6 @@
     text: 'Nombre del equipamiento: Astrosabadell. Categorías documentales: certificacio_cets,
       museos_y_equipamientos_culturales, certificació CETS, Museos y equipamientos culturales.'
   forbidden_terms:
-  - nombre
   - equipamiento
   - equipamientos
   prompt: 'Fes una nota interna sobre Astrosabadell: què és, serveis/espais i detalls. Només
@@ -2775,7 +2770,6 @@
       Montnegre-Corredor, Equipamientos de educación ambiental e investigación, Museos y equipamientos
       culturales, Museos.'
   forbidden_terms:
-  - nombre
   - equipamiento
   - equipamientos
   - educación
@@ -2948,7 +2942,6 @@
   - exposición
   - fortificación
   - yacimiento
-  - nombre
   - equipamiento
   prompt: 'Fes una nota interna sobre Centre d''Informació el Brull: què és, serveis/espais
     i detalls. Només fragments; sense contacte, ubicació, horaris ni dades noves.'
@@ -3007,7 +3000,6 @@
   - centro
   - documentación
   - reportaje
-  - nombre
   - equipamiento
   prompt: 'Fes un text públic sobre Centre de Documentació del Parc Natural del Montseny.
     Secció Ciències Naturals: què és, serveis/espais i detalls. Només fragments; sense contacte,
@@ -3061,7 +3053,6 @@
   forbidden_terms:
   - diversidad
   - duración
-  - nombre
   - equipamiento
   - estaciones
   prompt: 'Fes una nota sobre Audiovisual: Les quatre estacions al Montseny: què és, serveis/espais
@@ -3174,7 +3165,6 @@
   - atención
   - información
   - publicaciones
-  - nombre
   prompt: 'Fes un resum sobre Punt d''Informació d''Aiguafreda: què és, serveis/espais i detalls.
     Només fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_059
@@ -3224,7 +3214,6 @@
       documentales: montseny, audiovisuales, Montseny, Audiovisuales.'
   forbidden_terms:
   - narración
-  - nombre
   - equipamiento
   prompt: 'Fes una nota interna sobre Llegendes del Montseny: què és, serveis/espais i detalls.
     Només fragments; sense contacte, ubicació, horaris ni dades noves.'

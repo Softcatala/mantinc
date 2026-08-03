@@ -118,6 +118,7 @@ uv run lm_eval \
   --model openai-chat-completions \
   --model_args model=gpt-5.6 \
   --apply_chat_template \
+  --gen_kwargs '{"reasoning_effort":"none","temperature":0}' \
   --log_samples \
   --output_path outputs/lm_eval/sample
 ```
@@ -137,14 +138,15 @@ Results on the 300-item Catalan Drift dataset:
 
 | Model | Overall | Monolingual | Crosslingual basic | Multi-turn | Crosslingual advanced | RAG context |
 |---|---:|---:|---:|---:|---:|---:|
-| GPT-5.6 | **83.0%** | 100.0% | 98.3% | 83.3% | 33.3% | 100.0% |
-| Gemini 3.6 Flash | 75.7% | 100.0% | 85.0% | 76.7% | 35.0% | 81.7% |
-| Gemma 3 12B Q8 | 75.7% | 98.3% | 81.7% | 83.3% | 25.0% | 90.0% |
-| Qwen3.5-9B Q8 | 73.0% | 100.0% | 73.3% | 73.3% | 38.3% | 80.0% |
-| Salamandra 7B Q8 | 72.3% | 100.0% | 71.7% | 65.0% | 31.7% | 93.3% |
-| Mistral Small 3.1 24B Q8 | 68.0% | 95.0% | 78.3% | 65.0% | 28.3% | 73.3% |
-| Gemma 4 E4B Q4 | 66.3% | 96.7% | 63.3% | 60.0% | 35.0% | 76.7% |
-| Qwen2.5 1.5B Q8 | 40.7% | 70.0% | 21.7% | 43.3% | 28.3% | 40.0% |
+| GPT-5.6 | **85.0%** | 100.0% | 100.0% | 88.3% | 36.7% | 100.0% |
+| EuroLLM 9B Q8 | 77.0% | 100.0% | 73.3% | 71.7% | 48.3% | 91.7% |
+| Gemini 3.6 Flash | 75.0% | 100.0% | 85.0% | 78.3% | 26.7% | 85.0% |
+| Salamandra 7B Q8 | 74.3% | 100.0% | 75.0% | 65.0% | 40.0% | 91.7% |
+| Gemma 3 12B Q8 | 74.0% | 98.3% | 80.0% | 76.7% | 23.3% | 91.7% |
+| Qwen3.5-9B Q8 | 73.7% | 100.0% | 68.3% | 68.3% | 50.0% | 81.7% |
+| Mistral Small 3.1 24B Q8 | 69.7% | 95.0% | 78.3% | 66.7% | 35.0% | 73.3% |
+| Gemma 4 E4B Q4 | 62.3% | 98.3% | 61.7% | 51.7% | 25.0% | 75.0% |
+| Qwen2.5 1.5B Q8 | 40.3% | 68.3% | 25.0% | 43.3% | 21.7% | 43.3% |
 
 At 95% confidence, the maximum margin of error is ±5.7 percentage points
 for overall scores (n=300) and ±12.7 percentage points for category scores

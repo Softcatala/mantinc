@@ -1223,7 +1223,6 @@
   forbidden_terms:
   - webinar
   - ponente
-  - patrocinador
   - reembolso
   - asunto
   - acción
@@ -1482,7 +1481,6 @@
   - examen
   - convocatoria
   - revisión
-  - tribunal
   - asunto
   - riesgo
   conversation:
@@ -2299,7 +2297,6 @@
   source_lang: en-ca
   target_lang: ca
   forbidden_terms:
-  - terminal
   - settlement
   - receipt
   - offline
@@ -2343,7 +2340,6 @@
   target_lang: ca
   forbidden_terms:
   - certificado
-  - firma
   - navegador
   - caché
   - asunto

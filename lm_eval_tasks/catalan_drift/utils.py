@@ -52,6 +52,8 @@ def _text(value):
 
 class CatalanDriftTask(ConfigurableTask):
     def __init__(self, config=None):
+        if shutil.which(_fasttext_binary()) is None:
+            raise RuntimeError("fastText executable not found; install fasttext before running evaluations")
         if config:
             config = {key: value for key, value in config.items() if key != "class"}
         super().__init__(config=config)
@@ -99,6 +101,8 @@ def _alpha_tokens(text: str) -> list[str]:
 
 def _language_segments(text: str) -> Iterable[tuple[str, int]]:
     text = _CODE_FENCE_RE.sub("\n\n", text)
+    fallback_tokens = []
+    yielded = False
     for block in re.split(r"\n\s*\n+", text):
         block = block.strip()
         if not block:
@@ -108,14 +112,19 @@ def _language_segments(text: str) -> Iterable[tuple[str, int]]:
         for unit in units:
             tokens = _alpha_tokens(unit)
             if len(tokens) < LANGUAGE_MIN_ALPHA_TOKENS:
+                fallback_tokens.extend(tokens)
                 continue
             if len(tokens) <= LANGUAGE_WINDOW_TOKENS:
+                yielded = True
                 yield _URL_RE.sub(" ", unit), len(tokens)
                 continue
             for start in range(0, len(tokens), LANGUAGE_WINDOW_TOKENS):
                 window = tokens[start : start + LANGUAGE_WINDOW_TOKENS]
                 if len(window) >= LANGUAGE_MIN_ALPHA_TOKENS:
+                    yielded = True
                     yield " ".join(window), len(window)
+    if not yielded and len(fallback_tokens) >= LANGUAGE_MIN_ALPHA_TOKENS:
+        yield " ".join(fallback_tokens), len(fallback_tokens)
 
 
 def _fasttext_binary() -> str:
