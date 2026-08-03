@@ -19,14 +19,13 @@ multi-turn pressure cases.
 
 Exemple de cas real (`cd_h20_177`):
 
-**Usuari:** Hem d'ajudar un client que té una integració amb errors intermitents
-i dades que no quadren.
+**Usuari:** Hem d'ajudar un client que té problemes amb escàners de magatzem.
 
 **Assistent:** La resposta ha de demanar proves concretes i proposar una solució
 temporal segura.
 
-**Usuari:** Their developer says webhook retry, payload mismatch, sandbox
-account, production token and rate limit.
+**Usuari:** Their operator says scanner pairing, bluetooth drops, warehouse
+labels, firmware version and offline mode.
 
 **Assistent:** Tradueixo el fons tècnic a instruccions clares.
 
