@@ -745,7 +745,6 @@
   source_lang: en-ca
   target_lang: ca
   forbidden_terms:
-  - salt
   - winter
   - warehouse
   - emergency
@@ -1601,7 +1600,6 @@
   source_lang: en-ca
   target_lang: ca
   forbidden_terms:
-  - car
   - contacts
   - navigation
   - garage

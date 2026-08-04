@@ -377,7 +377,6 @@
   source_lang: en-ca
   target_lang: ca
   forbidden_terms:
-  - content
   - localization
   - review
   - launch
@@ -859,7 +858,6 @@
   source_lang: en-ca
   target_lang: ca
   forbidden_terms:
-  - testimonial
   - media
   - clause
   - billing
