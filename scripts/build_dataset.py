@@ -85,8 +85,8 @@ def validate_rows(rows: list[dict[str, Any]]) -> None:
             raise ValueError(f"{row.get('id')} is missing fields: {sorted(missing)}")
         if row["target_lang"] != "ca":
             raise ValueError(f"{row['id']} must target Catalan")
-        if "labels" in row or "version" in row:
-            raise ValueError(f"{row['id']} contains internal or versioned metadata")
+        if "labels" in row or "version" in row or "forbidden_terms" in row:
+            raise ValueError(f"{row['id']} contains unsupported metadata fields")
         conversation = row.get("conversation") or []
         if any(
             turn.get("role") not in {"user", "assistant"} or not turn.get("content")

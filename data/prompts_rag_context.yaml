@@ -46,12 +46,6 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: 'La primera planta se centra en el bosque y la naturaleza: aprovechamiento y oficios
       (carboneo, peladores, leñador), vegetación, fauna y usos actuales (excursionismo).'
-  forbidden_terms:
-  - bosque
-  - campo
-  - mismos
-  - colección
-  - mundo
   prompt: 'Fes una nota sobre Museu del Bosc i la Pagesia de Vallgorguina (equipament municipal):
     què és, serveis/espais i detalls. Només fragments; sense contacte, ubicació, horaris ni
     dades noves.'
@@ -101,12 +95,6 @@
       el Bosque de Ribera y el Castell de Montsoriu: la vida en una castell gòtic. Dispone
       de un recortable para montar una reproducción del Castillo de Montsoriu. Le animamos
       a descargarlo.'
-  forbidden_terms:
-  - bosque
-  - montaje
-  - mundo
-  - sensaciones
-  - centro
   prompt: 'Fes una fitxa sobre Museu Etnològic del Montseny. La Gabella: què és, serveis/espais
     i detalls. Només fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_003
@@ -153,12 +141,6 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Rutas guiadas para el público en general ('La ruta dels bandolers', Itinerari per
       la serra de l'Obac')
-  forbidden_terms:
-  - dispone
-  - cuaderno
-  - hasta
-  - también
-  - actividades
   prompt: 'Fes un resum sobre La Casa Nova de l''Obac: què és, serveis/espais i detalls. Només
     fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_004
@@ -209,12 +191,6 @@
       sant_llorencobac, elemento_de_patrimonio_historicocultural, Sant Llorenç-Obac, Elemento
       de patrimonio histórico-cultural, Información personalizada, Museos y equipamientos
       culturales.'
-  forbidden_terms:
-  - congregación
-  - hasta
-  - mediados
-  - siglo
-  - posteriormente
   prompt: 'Fes una nota interna sobre Monestir de Sant Llorenç del Munt: què és, serveis/espais
     i detalls. Només fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_005
@@ -260,12 +236,6 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Exposición fotográfica sobre la floración del Parque Natural de Sant Llorenç del
       Munt y l'Obac
-  forbidden_terms:
-  - participación
-  - formación
-  - actividades
-  - exposición
-  - floración
   prompt: 'Fes un text públic sobre Escola de Natura i Formació la Muntada: què és, serveis/espais
     i detalls. Només fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_006
@@ -317,12 +287,6 @@
       la naturaleza y la agricultura. La voluntad es conservar y mostrar el rico patrimonio
       de la forma de vida de los antepasados ​​de Vallgorguina, el corazón del Parque de El
       Montnegre i el Corredor.
-  forbidden_terms:
-  - colección
-  - mundo
-  - bosque
-  - campo
-  - aprovechamiento
   prompt: 'Fes una nota sobre Museu del Bosc i la Pagesia de Vallgorguina (equipament municipal):
     què és, serveis/espais i detalls. Només fragments; sense contacte, ubicació, horaris ni
     dades noves.'
@@ -375,12 +339,6 @@
       Montseny, Montseny - Museo Etnológico del Montseny. La Gabella - Recepción, Montseny
       - Museo Etnológico del Montseny. La Gabella - Sala act. forestales, Montseny - Museo
       Etnológico del Montseny. La Gabella - Sala tornería.'
-  forbidden_terms:
-  - centro
-  - interpretación
-  - agua
-  - castañeda
-  - bosque
   prompt: 'Fes una fitxa sobre Museu Etnològic del Montseny. La Gabella: què és, serveis/espais
     i detalls. Només fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_008
@@ -427,12 +385,6 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Ruta teatralizada inclusiva 'Emboscada, un viatge pels cinc sentits', pensada exclusivamente
       para personas con discapacidades
-  forbidden_terms:
-  - hasta
-  - también
-  - dispone
-  - actividades
-  - refuerzo
   prompt: 'Fes un resum sobre La Casa Nova de l''Obac: què és, serveis/espais i detalls. Només
     fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_009
@@ -477,12 +429,6 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Espacio disponible para sesiones de prácticas de campo para universidades
-  forbidden_terms:
-  - actividades
-  - exposición
-  - floración
-  - campo
-  - universidades
   prompt: 'Fes una nota interna sobre Escola de Natura i Formació la Muntada: què és, serveis/espais
     i detalls. Només fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_010
@@ -536,12 +482,6 @@
       municipal). Categorías documentales: montnegrecorredor, equipamientos_de_educacion_ambiental_e_investigacion,
       Montnegre-Corredor, Equipamientos de educación ambiental e investigación, Museos y equipamientos
       culturales, Museos.'
-  forbidden_terms:
-  - campo
-  - bosque
-  - aprovechamiento
-  - carboneo
-  - leñador
   prompt: 'Fes un text públic sobre Museu del Bosc i la Pagesia de Vallgorguina (equipament
     municipal): què és, serveis/espais i detalls. Només fragments; sense contacte, ubicació,
     horaris ni dades noves.'
@@ -594,12 +534,6 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Mural del bosque, espectacular montaje escenográfico que adentra al visitante en
       un mundo de sonidos y sensaciones que forman parte del patrimonio inmaterial del Montseny.
-  forbidden_terms:
-  - castañeda
-  - bosque
-  - dispone
-  - reproducción
-  - castillo
   prompt: 'Fes una nota sobre Museu Etnològic del Montseny. La Gabella: què és, serveis/espais
     i detalls. Només fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_012
@@ -646,12 +580,6 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: 'Exposicion: ''Sant Llorenç del Munt: un paisatge mediterrani '' - que dispone de
       un cuaderno pedagógico específico.'
-  forbidden_terms:
-  - actividades
-  - refuerzo
-  - exclusivamente
-  - discapacidades
-  - dispone
   prompt: 'Fes una fitxa sobre La Casa Nova de l''Obac: què és, serveis/espais i detalls.
     Només fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_013
@@ -697,12 +625,6 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Escuela de naturaleza y lugar de participación juvenil y de formación para el respeto
       y uso del medio ambiente.
-  forbidden_terms:
-  - actividades
-  - exposición
-  - floración
-  - campo
-  - universidades
   prompt: 'Fes un resum sobre Escola de Natura i Formació la Muntada: què és, serveis/espais
     i detalls. Només fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_014
@@ -755,12 +677,6 @@
     text: El museo pone énfasis en la memoria colectiva del municipio, mostrando su pasado
       rural a partir de las herramientas utilizadas en los trabajos a bosque y en el campo
       y el testimonio de los mismos protagonistas a través de fotos y audiovisuales.
-  forbidden_terms:
-  - bosque
-  - aprovechamiento
-  - carboneo
-  - leñador
-  - vegetación
   prompt: 'Fes una nota interna sobre Museu del Bosc i la Pagesia de Vallgorguina (equipament
     municipal): què és, serveis/espais i detalls. Només fragments; sense contacte, ubicació,
     horaris ni dades noves.'
@@ -814,12 +730,6 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: La Farga del Roquer - Centro de interpretación de la riera de Arbúcies y audiovisual
       'La memoria del agua'
-  forbidden_terms:
-  - castañeda
-  - bosque
-  - dispone
-  - reproducción
-  - castillo
   prompt: 'Fes un text públic sobre Museu Etnològic del Montseny. La Gabella: què és, serveis/espais
     i detalls. Només fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_016
@@ -867,12 +777,6 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Autoguías de braille del itinerario hasta la fuente de la Portella, también dispone
       de fichas táctiles y sonoras de animales
-  forbidden_terms:
-  - exclusivamente
-  - discapacidades
-  - dispone
-  - cuaderno
-  - hasta
   prompt: 'Fes una nota sobre La Casa Nova de l''Obac: què és, serveis/espais i detalls. Només
     fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_017
@@ -918,12 +822,6 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Actividades y talleres relacionados con el medio ambiente y las energías renovables
-  forbidden_terms:
-  - exposición
-  - floración
-  - campo
-  - universidades
-  - participación
   prompt: 'Fes una fitxa sobre Escola de Natura i Formació la Muntada: què és, serveis/espais
     i detalls. Només fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_018
@@ -976,11 +874,6 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: La colección del museo se reparte en dos plantas que dan valor al mundo del bosque,
       la naturaleza y la agricultura.
-  forbidden_terms:
-  - mundo
-  - bosque
-  - equipamiento
-  - equipamientos
   prompt: 'Fes un resum sobre Museu del Bosc i la Pagesia de Vallgorguina (equipament municipal):
     què és, serveis/espais i detalls. Només fragments; sense contacte, ubicació, horaris ni
     dades noves.'
@@ -1031,11 +924,6 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Centre de Documentació del Parc Natural del Montseny, secció Humanitats
-  forbidden_terms:
-  - equipamiento
-  - recepción
-  - bosque
-  - montaje
   prompt: 'Fes una nota interna sobre Museu Etnològic del Montseny. La Gabella: què és, serveis/espais
     i detalls. Només fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_020
@@ -1082,12 +970,6 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Actividades de refuerzo para créditos comunes, variables y de síntesis
-  forbidden_terms:
-  - exclusivamente
-  - discapacidades
-  - dispone
-  - cuaderno
-  - hasta
   prompt: 'Fes un text públic sobre La Casa Nova de l''Obac: què és, serveis/espais i detalls.
     Només fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_021
@@ -1132,12 +1014,6 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Actividades de fin de semana para las AMPA. Taller de cocina solar y excursiones
-  forbidden_terms:
-  - campo
-  - universidades
-  - participación
-  - formación
-  - actividades
   prompt: 'Fes una nota sobre Escola de Natura i Formació la Muntada: què és, serveis/espais
     i detalls. Només fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_022
@@ -1190,11 +1066,6 @@
       las herramientas utilizadas y los avances técnicos, los cereales y la vid. El patio
       exterior del museo se especializa en los animales de tiro: usos, materiales y partes
       del carro.'
-  forbidden_terms:
-  - equipamiento
-  - equipamientos
-  - educación
-  - investigación
   prompt: 'Fes una fitxa sobre Museu del Bosc i la Pagesia de Vallgorguina (equipament municipal):
     què és, serveis/espais i detalls. Només fragments; sense contacte, ubicació, horaris ni
     dades noves.'
@@ -1246,12 +1117,6 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: 'La primera planta se centra en el bosque y la naturaleza: aprovechamiento y oficios
       (carboneo, peladores, leñador), vegetación, fauna y usos actuales (excursionismo).'
-  forbidden_terms:
-  - bosque
-  - campo
-  - mismos
-  - colección
-  - mundo
   prompt: 'Fes un resum sobre Museu del Bosc i la Pagesia de Vallgorguina (equipament municipal):
     què és, serveis/espais i detalls. Només fragments; sense contacte, ubicació, horaris ni
     dades noves.'
@@ -1301,12 +1166,6 @@
       el Bosque de Ribera y el Castell de Montsoriu: la vida en una castell gòtic. Dispone
       de un recortable para montar una reproducción del Castillo de Montsoriu. Le animamos
       a descargarlo.'
-  forbidden_terms:
-  - bosque
-  - montaje
-  - mundo
-  - sensaciones
-  - centro
   prompt: 'Fes una nota interna sobre Museu Etnològic del Montseny. La Gabella: què és, serveis/espais
     i detalls. Només fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_025
@@ -1353,12 +1212,6 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Rutas guiadas para el público en general ('La ruta dels bandolers', Itinerari per
       la serra de l'Obac')
-  forbidden_terms:
-  - dispone
-  - cuaderno
-  - hasta
-  - también
-  - actividades
   prompt: 'Fes un text públic sobre La Casa Nova de l''Obac: què és, serveis/espais i detalls.
     Només fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_026
@@ -1409,12 +1262,6 @@
       sant_llorencobac, elemento_de_patrimonio_historicocultural, Sant Llorenç-Obac, Elemento
       de patrimonio histórico-cultural, Información personalizada, Museos y equipamientos
       culturales.'
-  forbidden_terms:
-  - congregación
-  - hasta
-  - mediados
-  - siglo
-  - posteriormente
   prompt: 'Fes una nota sobre Monestir de Sant Llorenç del Munt: què és, serveis/espais i
     detalls. Només fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_027
@@ -1460,12 +1307,6 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Exposición fotográfica sobre la floración del Parque Natural de Sant Llorenç del
       Munt y l'Obac
-  forbidden_terms:
-  - participación
-  - formación
-  - actividades
-  - exposición
-  - floración
   prompt: 'Fes una fitxa sobre Escola de Natura i Formació la Muntada: què és, serveis/espais
     i detalls. Només fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_028
@@ -1517,12 +1358,6 @@
       la naturaleza y la agricultura. La voluntad es conservar y mostrar el rico patrimonio
       de la forma de vida de los antepasados ​​de Vallgorguina, el corazón del Parque de El
       Montnegre i el Corredor.
-  forbidden_terms:
-  - colección
-  - mundo
-  - bosque
-  - campo
-  - aprovechamiento
   prompt: 'Fes un resum sobre Museu del Bosc i la Pagesia de Vallgorguina (equipament municipal):
     què és, serveis/espais i detalls. Només fragments; sense contacte, ubicació, horaris ni
     dades noves.'
@@ -1575,12 +1410,6 @@
       Montseny, Montseny - Museo Etnológico del Montseny. La Gabella - Recepción, Montseny
       - Museo Etnológico del Montseny. La Gabella - Sala act. forestales, Montseny - Museo
       Etnológico del Montseny. La Gabella - Sala tornería.'
-  forbidden_terms:
-  - centro
-  - interpretación
-  - agua
-  - castañeda
-  - bosque
   prompt: 'Fes una nota interna sobre Museu Etnològic del Montseny. La Gabella: què és, serveis/espais
     i detalls. Només fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_030
@@ -1627,12 +1456,6 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Ruta teatralizada inclusiva 'Emboscada, un viatge pels cinc sentits', pensada exclusivamente
       para personas con discapacidades
-  forbidden_terms:
-  - hasta
-  - también
-  - dispone
-  - actividades
-  - refuerzo
   prompt: 'Fes un text públic sobre La Casa Nova de l''Obac: què és, serveis/espais i detalls.
     Només fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_031
@@ -1682,12 +1505,6 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: 'Nombre del equipamiento: Museo de Rocafort. Categorías documentales: sant_llorencobac,
       museos_y_equipamientos_culturales, Sant Llorenç-Obac, Museos y equipamientos culturales.'
-  forbidden_terms:
-  - piezas
-  - pueblo
-  - campesino
-  - años
-  - colecciones
   prompt: 'Fes una nota sobre Museu de Rocafort: què és, serveis/espais i detalls. Només fragments;
     sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_032
@@ -1739,12 +1556,6 @@
       las herramientas utilizadas y los avances técnicos, los cereales y la vid. El patio
       exterior del museo se especializa en los animales de tiro: usos, materiales y partes
       del carro.'
-  forbidden_terms:
-  - bosque
-  - campo
-  - mismos
-  - colección
-  - mundo
   prompt: 'Fes una fitxa sobre Museu del Bosc i la Pagesia de Vallgorguina (equipament municipal):
     què és, serveis/espais i detalls. Només fragments; sense contacte, ubicació, horaris ni
     dades noves.'
@@ -1795,10 +1606,6 @@
       montseny, montseny__fortificacion_iberica_del_turo_de_montgros__punto_elevado, Montseny,
       Montseny - Fortificación Ibérica del Turó de Montgros - Punto elevado, Montseny - Fortificación
       Ibérica del Turó de Montgros - Pie ruina, Museo / Interpretación del patrimonio.'
-  forbidden_terms:
-  - yacimiento
-  - puede
-  - información
   prompt: 'Fes un resum sobre Fortificació ibèrica de Montgròs: què és, serveis/espais i detalls.
     Només fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_034
@@ -1845,12 +1652,6 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Centre de Documentació del Parc Natural del Montseny, secció Humanitats
-  forbidden_terms:
-  - bosque
-  - montaje
-  - mundo
-  - sensaciones
-  - centro
   prompt: 'Fes una nota interna sobre Museu Etnològic del Montseny. La Gabella: què és, serveis/espais
     i detalls. Només fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_035
@@ -1900,12 +1701,6 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Masia Mariona. Un ejemplo de arquitectura Novecentista en el Montseny [texto en
       catalán] [pdf]
-  forbidden_terms:
-  - donde
-  - también
-  - equipamiento
-  - años
-  - actualmente
   prompt: 'Fes un text públic sobre Oficina del Parc Natural del Montseny. Masia Mariona:
     què és, serveis/espais i detalls. Només fragments; sense contacte, ubicació, horaris ni
     dades noves.'
@@ -1960,12 +1755,6 @@
       documentales: montesquiu, montesquiu__centre_recursos__interior_del_castillo, Montesquiu,
       Montesquiu - Centre Recursos - Interior del castillo, Montesquiu - Centro Recursos -
       Salas nobles del castillo, Montesquiu - Centro Recursos - Sala de actos.'
-  forbidden_terms:
-  - castillo
-  - dispone
-  - equipamiento
-  - organización
-  - actividades
   prompt: 'Fes una nota sobre Centre de Recursos del Castell de Montesquiu: què és, serveis/espais
     i detalls. Només fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_037
@@ -2022,12 +1811,6 @@
     text: Anna Dot y Blai Marginedas, con la complicidad del Consorcio del Valle del Ges,
       Orís y Bisaura y del Parque del Castillo de Montesquiu, son los encargados de desarrollar
       este programa curatorial.
-  forbidden_terms:
-  - desde
-  - todos
-  - interpretación
-  - paralelamente
-  - exposición
   prompt: 'Fes una fitxa sobre Cabanya del Castell: què és, serveis/espais i detalls. Només
     fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_038
@@ -2072,12 +1855,6 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Para atención entre semana se puede dirigir al Ayuntamiento del mismo municipio.
-  forbidden_terms:
-  - desde
-  - equipamiento
-  - puede
-  - señalizados
-  - exposición
   prompt: 'Fes un resum sobre Centre d''Informació de Tavèrnoles: què és, serveis/espais i
     detalls. Només fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_039
@@ -2124,12 +1901,6 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Actividades de refuerzo para créditos comunes, variables y de síntesis
-  forbidden_terms:
-  - dispone
-  - cuaderno
-  - hasta
-  - también
-  - actividades
   prompt: 'Fes una nota interna sobre La Casa Nova de l''Obac: què és, serveis/espais i detalls.
     Només fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_040
@@ -2178,12 +1949,6 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Sant Llorenç del Munt, declarado BCIN, ha sido objeto de diferentes campañas de
       excavaciones arqueológicas y consolidaciones.
-  forbidden_terms:
-  - congregación
-  - hasta
-  - mediados
-  - siglo
-  - posteriormente
   prompt: 'Fes un text públic sobre Monestir de Sant Llorenç del Munt: què és, serveis/espais
     i detalls. Només fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_041
@@ -2229,10 +1994,6 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Actividades de fin de semana para las AMPA. Taller de cocina solar y excursiones
-  forbidden_terms:
-  - participación
-  - formación
-  - actividades
   prompt: 'Fes una nota sobre Escola de Natura i Formació la Muntada: què és, serveis/espais
     i detalls. Només fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_042
@@ -2282,12 +2043,6 @@
     text: 'Nombre del equipamiento: Centro de Información de Sant Cebrià de Vallalta. Categorías
       documentales: montnegrecorredor, desfibrilador, Montnegre-Corredor, Desfibrilador, Elemento
       de patrimonio histórico-cultural, Elemento de patrimonio natural.'
-  forbidden_terms:
-  - centro
-  - información
-  - dispone
-  - documentación
-  - publicaciones
   prompt: 'Fes una fitxa sobre Centre d''Informació de Sant Cebrià de Vallalta: què és, serveis/espais
     i detalls. Només fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_043
@@ -2334,12 +2089,6 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: El Museo también acoje el Centro de Documentación del Parque Natural del Montnegre
       i el Corredor. Mataró
-  forbidden_terms:
-  - exposición
-  - colecciones
-  - señorial
-  - siglo
-  - también
   prompt: 'Fes un resum sobre Museu de Mataró (equipament municipal): què és, serveis/espais
     i detalls. Només fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_044
@@ -2388,12 +2137,6 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: 'Para más información se puede consultar: Observatorio Astronómico de Tiana'
-  forbidden_terms:
-  - información
-  - posibilidad
-  - viaje
-  - paisajes
-  - actividad
   prompt: 'Fes una nota interna sobre Punt d''Informació a l''Observatori Astronòmic de Tiana:
     què és, serveis/espais i detalls. Només fragments; sense contacte, ubicació, horaris ni
     dades noves.'
@@ -2443,12 +2186,6 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Su base de datos bibliográficos se puede consultar por Internet [catàleg col·lectiu]
-  forbidden_terms:
-  - actualmente
-  - además
-  - actividades
-  - investigación
-  - campañas
   prompt: 'Fes un text públic sobre Centre de Documentació del Parc del Garraf. Gavà: què
     és, serveis/espais i detalls. Només fragments; sense contacte, ubicació, horaris ni dades
     noves.'
@@ -2502,12 +2239,6 @@
     text: 'Nombre del equipamiento: Espai museístic del jaciment arqueològic del poblat ibèric
       de les Maleses. Categorías documentales: marina, museos_y_equipamientos_culturales,
       Marina, Museos y equipamientos culturales.'
-  forbidden_terms:
-  - pequeño
-  - investigación
-  - hasta
-  - consolidación
-  - equipamiento
   prompt: 'Fes una nota sobre Espai museístic del jaciment arqueològic del poblat ibèric de
     les Maleses: què és, serveis/espais i detalls. Només fragments; sense contacte, ubicació,
     horaris ni dades noves.'
@@ -2555,9 +2286,6 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: GR 2 La Joquera-Aiguafreda. De Sant Julià de Vilatorta al santuari de Puig l’Agulla.
-  forbidden_terms:
-  - además
-  - señalizados
   prompt: 'Fes una fitxa sobre Punt d''Informació de Sant Julià de Vilatorta. Biblioteca Anton
     Carrera: què és, serveis/espais i detalls. Només fragments; sense contacte, ubicació,
     horaris ni dades noves.'
@@ -2607,12 +2335,6 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: GR-2 La Jonquera – Aiguafreda. Tram de Vilanova de Sau a Sant Llorenç del Munt.
-  forbidden_terms:
-  - pueblo
-  - información
-  - donde
-  - puede
-  - recomendaciones
   prompt: 'Fes un resum sobre Punt d''Informació de Vilanova de Sau: què és, serveis/espais
     i detalls. Només fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_049
@@ -2663,9 +2385,6 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: 'Nombre del equipamiento: Astrosabadell. Categorías documentales: certificacio_cets,
       museos_y_equipamientos_culturales, certificació CETS, Museos y equipamientos culturales.'
-  forbidden_terms:
-  - equipamiento
-  - equipamientos
   prompt: 'Fes una nota interna sobre Astrosabadell: què és, serveis/espais i detalls. Només
     fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_050
@@ -2713,12 +2432,6 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: La gestión de este equipamiento es posible gracias al convenio de colaboración entre
       la Diputación de Barcelona y el Ayuntamiento de Sant Vicenç de Castellet.
-  forbidden_terms:
-  - información
-  - puede
-  - publicaciones
-  - equipamiento
-  - colaboración
   prompt: 'Fes un text públic sobre Punt d''Informació de Sant Vicenç de Castellet: què és,
     serveis/espais i detalls. Només fragments; sense contacte, ubicació, horaris ni dades
     noves.'
@@ -2769,11 +2482,6 @@
       Categorías documentales: montnegrecorredor, equipamientos_de_educacion_ambiental_e_investigacion,
       Montnegre-Corredor, Equipamientos de educación ambiental e investigación, Museos y equipamientos
       culturales, Museos.'
-  forbidden_terms:
-  - equipamiento
-  - equipamientos
-  - educación
-  - investigación
   prompt: 'Fes una nota sobre Museu de la Pagesia de Fogars de la Selva (equipament municipal):
     què és, serveis/espais i detalls. Només fragments; sense contacte, ubicació, horaris ni
     dades noves.'
@@ -2824,12 +2532,6 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: También hay barro proveniente del castillo de Rocafort. La mayor parte de piezas
       han sido donadas desinteresadamente por los propios vecinos del pueblo.
-  forbidden_terms:
-  - piezas
-  - pueblo
-  - campesino
-  - años
-  - colecciones
   prompt: 'Fes una fitxa sobre Museu de Rocafort: què és, serveis/espais i detalls. Només
     fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_053
@@ -2884,12 +2586,6 @@
     text: 'Nombre del equipamiento: Punto de información en el Centro de Visitantes de la
       Garriga. Categorías documentales: montseny, venta_de_publicaciones, Montseny, Venta
       de publicaciones, Exposición permanente, Información personalizada.'
-  forbidden_terms:
-  - equipamiento
-  - ayuntamiento
-  - diputación
-  - información
-  - donde
   prompt: 'Fes un resum sobre Punt d''informació al Centre de Visitants de la Garriga: què
     és, serveis/espais i detalls. Només fragments; sense contacte, ubicació, horaris ni dades
     noves.'
@@ -2938,11 +2634,6 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: 'Nombre del equipamiento: Centro de Información el Brull. Categorías documentales:
       montseny, Montseny.'
-  forbidden_terms:
-  - exposición
-  - fortificación
-  - yacimiento
-  - equipamiento
   prompt: 'Fes una nota interna sobre Centre d''Informació el Brull: què és, serveis/espais
     i detalls. Només fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_055
@@ -2996,11 +2687,6 @@
     text: 'Nombre del equipamiento: Centro de Documentación del Parque Natural de El Montseny.
       Sección Ciencias Naturales. Categorías documentales: montseny, centro_de_documentacion,
       Montseny, Centro de documentación, Información personalizada, Centros de documentación.'
-  forbidden_terms:
-  - centro
-  - documentación
-  - reportaje
-  - equipamiento
   prompt: 'Fes un text públic sobre Centre de Documentació del Parc Natural del Montseny.
     Secció Ciències Naturals: què és, serveis/espais i detalls. Només fragments; sense contacte,
     ubicació, horaris ni dades noves.'
@@ -3050,11 +2736,6 @@
     text: 'Nombre del equipamiento: Audiovisual: Les quatre estacions al Montseny (Las cuatro
       estaciones en el Montseny). Categorías documentales: montseny, audiovisuales, Montseny,
       Audiovisuales.'
-  forbidden_terms:
-  - diversidad
-  - duración
-  - equipamiento
-  - estaciones
   prompt: 'Fes una nota sobre Audiovisual: Les quatre estacions al Montseny: què és, serveis/espais
     i detalls. Només fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_057
@@ -3104,12 +2785,6 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: La colección del museo se reparte en dos plantas que dan valor al mundo del bosque,
       la naturaleza y la agricultura.
-  forbidden_terms:
-  - bosque
-  - campo
-  - mismos
-  - colección
-  - mundo
   prompt: 'Fes una fitxa sobre Museu del Bosc i la Pagesia de Vallgorguina (equipament municipal):
     què és, serveis/espais i detalls. Només fragments; sense contacte, ubicació, horaris ni
     dades noves.'
@@ -3160,11 +2835,6 @@
     text: 'Nombre del equipamiento: Punto de Información de Aiguafreda. Categorías documentales:
       montseny, venta_de_publicaciones, Montseny, Venta de publicaciones, Información personalizada,
       Itinerario autoguiado.'
-  forbidden_terms:
-  - centro
-  - atención
-  - información
-  - publicaciones
   prompt: 'Fes un resum sobre Punt d''Informació d''Aiguafreda: què és, serveis/espais i detalls.
     Només fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_059
@@ -3212,9 +2882,6 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: 'Nombre del equipamiento: Llegendes del Montseny (Leyendas del Montseny). Categorías
       documentales: montseny, audiovisuales, Montseny, Audiovisuales.'
-  forbidden_terms:
-  - narración
-  - equipamiento
   prompt: 'Fes una nota interna sobre Llegendes del Montseny: què és, serveis/espais i detalls.
     Només fragments; sense contacte, ubicació, horaris ni dades noves.'
 - id: cd_rag_060
@@ -3262,10 +2929,5 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: El Montgròs, el Brull. Una fortificación ibérica en el Montseny. Guía del conjunto
       arqueológico [PDF, texto en catalán]
-  forbidden_terms:
-  - yacimiento
-  - puede
-  - información
-  - fortificación
   prompt: 'Fes un text públic sobre Fortificació ibèrica de Montgròs: què és, serveis/espais
     i detalls. Només fragments; sense contacte, ubicació, horaris ni dades noves.'

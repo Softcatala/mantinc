@@ -34,6 +34,9 @@ class DatasetTest(unittest.TestCase):
     def test_rows_do_not_contain_labels(self) -> None:
         self.assertTrue(all("labels" not in row for row in self.rows))
 
+    def test_rows_do_not_contain_forbidden_terms(self) -> None:
+        self.assertTrue(all("forbidden_terms" not in row for row in self.rows))
+
     def test_advanced_distribution_preserves_coverage(self) -> None:
         advanced = [row for row in self.rows if row["category"] == "crosslingual_advanced"]
         languages = Counter(row["source_lang"] for row in advanced)

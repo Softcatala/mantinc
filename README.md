@@ -18,9 +18,8 @@ multi-turn pressure cases.
 ## Scope
 
 **What this benchmark measures:** whether the model's final answer is in
-Catalan and free of source-language leakage (Spanish or English loanwords from
-the prompt or prior turns). Scoring combines a fastText language check with a
-forbidden-term lexical check.
+Catalan despite source-language pressure from prompts, prior turns, or retrieved
+context. Scoring uses a fastText language check over response segments.
 
 **What this benchmark does not measure:** task completion, factual accuracy,
 tone, formatting, or overall answer quality. A model that refuses, goes
@@ -85,8 +84,6 @@ Each sample should specify:
   - `ca-es`: mixed Catalan and Spanish retrieved context answered in Catalan.
   - `es-ca`: Spanish source material or prior-turn context answered in Catalan.
   - `en-ca`: English source material or prior-turn context answered in Catalan.
-- `forbidden_terms`: source-language words or phrases that should not appear
-  in the final answer.
 
 ## Benchmark Design
 

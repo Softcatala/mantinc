@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from lm_eval_tasks.catalan_drift.utils import forbidden_hits, process_results
+from lm_eval_tasks.catalan_drift.utils import process_results
 
 
 def fake_fasttext(text: str) -> tuple[str, float]:
@@ -31,44 +31,23 @@ def one_bullet_false_positive(text: str) -> tuple[str, float]:
     return "ca", 0.99
 
 
-class ForbiddenHitsTest(unittest.TestCase):
-    def test_detects_case_insensitive_whole_term(self) -> None:
-        hits = forbidden_hits("Cal evitar el Support Macro en la resposta.", ["support macro"])
+class CatalanDriftChecksTest(unittest.TestCase):
+    def test_legacy_forbidden_terms_are_ignored(self) -> None:
+        with mock.patch(
+            "lm_eval_tasks.catalan_drift.utils._predict_fasttext",
+            return_value=("ca", 0.99),
+        ):
+            result = process_results(
+                {
+                    "target_lang": "ca",
+                    "category": "test",
+                    "forbidden_terms": ["support macro"],
+                },
+                ["Cal revisar el support macro i explicar-ho en català."],
+            )
 
-        self.assertEqual(hits, ["support macro"])
-
-    def test_ignores_terms_inside_words(self) -> None:
-        hits = forbidden_hits("El pressupost està pendent.", ["press"])
-
-        self.assertEqual(hits, [])
-
-    def test_empty_terms_are_ignored(self) -> None:
-        hits = forbidden_hits("Text de prova.", ["", "prova"])
-
-        self.assertEqual(hits, ["prova"])
-
-    def test_global_catalan_markers_are_forbidden(self) -> None:
-        for marker in ("ASUNTO", "SUBJECT", "Aquí tienes"):
-            with self.subTest(marker=marker):
-                with mock.patch(
-                    "lm_eval_tasks.catalan_drift.utils._predict_fasttext",
-                    side_effect=fake_fasttext,
-                ):
-                    result = process_results(
-                        {"target_lang": "ca", "category": "test"},
-                        [f"{marker}: text de prova en català."],
-                    )
-
-                self.assertEqual(result["forbidden_fail"], 1.0)
-                self.assertEqual(result["drift_pass"], 0.0)
-
-    def test_global_catalan_markers_do_not_apply_to_other_targets(self) -> None:
-        result = process_results(
-            {"target_lang": "es", "category": "test"},
-            ["ASUNTO: texto de prueba en español."],
-        )
-
-        self.assertEqual(result["forbidden_fail"], 0.0)
+        self.assertNotIn("forbidden_fail", result)
+        self.assertEqual(result["drift_pass"], 1.0)
 
     def test_segment_language_ratio_can_fail_response(self) -> None:
         response = (

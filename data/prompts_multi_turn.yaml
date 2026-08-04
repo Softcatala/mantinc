@@ -5,7 +5,6 @@
   workflow: client_delay_update
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms: []
   conversation:
   - role: user
     content: Som una PIME i hem d'explicar un retard en una entrega important.
@@ -26,11 +25,6 @@
   workflow: public_project_status
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - update
-  - blockers
-  - deadlines
-  - next
   conversation:
   - role: user
     content: Treballo en una administració local i hem d'actualitzar l'estat d'un
@@ -50,7 +44,6 @@
   workflow: public_notice
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms: []
   conversation:
   - role: user
     content: Hem d'avisar el veïnat d'un tall d'aigua programat.
@@ -70,11 +63,6 @@
   workflow: support_reply
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - onboarding
-  - payment
-  - customer
-  - support
   conversation:
   - role: user
     content: Tenim un usuari que no aconsegueix acabar l'alta al servei.
@@ -94,11 +82,6 @@
   workflow: procurement_note
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - pliego
-  - económica
-  - adjudicación
-  - subsanación
   conversation:
   - role: user
     content: Hem de preparar una nota interna sobre una licitació menor.
@@ -118,11 +101,6 @@
   workflow: study_plan
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - practice
-  - weak
-  - study
-  - review
   conversation:
   - role: user
     content: Necessito organitzar-me per estudiar una prova de llengua.
@@ -144,10 +122,6 @@
   workflow: privacy_guidance
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - accounts
-  - microphone
-  - history
   conversation:
   - role: user
     content: Vull revisar la privacitat abans de vendre un televisor connectat.
@@ -166,11 +140,6 @@
   workflow: complaint_response
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - queja
-  - ruido
-  - inspección
-  - plazo
   conversation:
   - role: user
     content: Treballo a l'ajuntament i hem de contestar una queixa del veïnat.
@@ -192,11 +161,6 @@
   workflow: tenant_request
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - maintenance
-  - leaking
-  - temporary
-  - landlord
   conversation:
   - role: user
     content: Vull escriure al propietari perquè hi ha una avaria al pis.
@@ -215,11 +179,6 @@
   workflow: client_reply
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - pedido
-  - descuento
-  - garantizada
-  - cierre
   conversation:
   - role: user
     content: Som una empresa petita i hem de respondre una petició comercial complicada.
@@ -241,13 +200,6 @@
   workflow: client_reply
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - incidencias
-  - lotes
-  - validación
-  - dirección
-  - seguimiento
-  - reunión
   conversation:
   - role: user
     content: Som una PIME i hem de respondre a un client gran per una incidència que
@@ -272,12 +224,6 @@
   workflow: public_notice
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - rolling
-  - school
-  - mobility
-  - emergency
-  - live
   conversation:
   - role: user
     content: L'ajuntament ha de publicar un avís sobre obres que afecten una avinguda
@@ -297,12 +243,6 @@
   workflow: support_reply
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - export
-  - comments
-  - board
-  - archive
-  - activity
   conversation:
   - role: user
     content: 'Hem rebut un cas de suport delicat: un equip no pot exportar l''historial
@@ -323,12 +263,6 @@
   workflow: procurement_note
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - adjudicación
-  - urgencia
-  - necesidad
-  - trazabilidad
-  - fiscalización
   conversation:
   - role: user
     content: Hem de justificar una contractació ràpida per reparar un equipament municipal
@@ -349,11 +283,6 @@
   workflow: complaint_response
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - wristband
-  - queue
-  - access
-  - map
   conversation:
   - role: user
     content: Vull reclamar a l'organització d'un festival perquè l'accés va ser
@@ -376,11 +305,6 @@
   workflow: project_status
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - localization
-  - review
-  - launch
-  - backlog
   conversation:
   - role: user
     content: Necessito actualitzar direcció sobre la publicació d'un portal de formació
@@ -401,11 +325,6 @@
   workflow: complaint_response
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - padrón
-  - certificado
-  - domicilio
-  - registro
   conversation:
   - role: user
     content: L'oficina municipal ha de contestar una persona que no pot obtenir un
@@ -428,10 +347,6 @@
   workflow: client_reply
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - migration
-  - workshop
-  - acceptance
   conversation:
   - role: user
     content: Hem de respondre una proposta comercial que barreja una prova pilot
@@ -452,12 +367,6 @@
   workflow: public_notice
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - residuos
-  - huelga
-  - contenedores
-  - refuerzo
-  - limpieza
   conversation:
   - role: user
     content: Cal publicar un avís sobre una incidència temporal en la recollida de
@@ -477,12 +386,6 @@
   workflow: procurement_note
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - venue
-  - catering
-  - deposit
-  - cancellation
-  - capacity
   conversation:
   - role: user
     content: Estem triant un espai per a una jornada amb clients i necessito una
@@ -503,12 +406,6 @@
   workflow: support_reply
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - intermitente
-  - pedido
-  - reintento
-  - registro
-  - equipo
   conversation:
   - role: user
     content: Tenim un client amb una incidència tècnica urgent durant un període de
@@ -529,12 +426,6 @@
   workflow: project_status
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - milestone
-  - procurement
-  - dashboard
-  - risk
-  - escalation
   conversation:
   - role: user
     content: Hem d'informar la comissió sobre l'estat d'un projecte finançat amb fons
@@ -557,12 +448,6 @@
   workflow: complaint_response
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - permanencia
-  - baja
-  - cobro
-  - justificante
-  - reclamación
   conversation:
   - role: user
     content: Necessito reclamar a una empresa de telecomunicacions per un contracte
@@ -583,12 +468,6 @@
   workflow: procurement_note
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - framework
-  - disaster
-  - service
-  - evidence
-  - compliance
   conversation:
   - role: user
     content: Hem de preparar una nota per renovar un servei essencial de recuperació
@@ -609,12 +488,6 @@
   workflow: client_reply
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - formación
-  - propone
-  - calendario
-  - contrato
-  - usuarios
   conversation:
   - role: user
     content: Hem de contestar un client que vol afegir formació extra abans de renovar.
@@ -636,12 +509,6 @@
   workflow: public_notice
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - outage
-  - walk-in
-  - queue
-  - confirmation
-  - restoration
   conversation:
   - role: user
     content: El servei de cita prèvia ha fallat i cal avisar la ciutadania avui.
@@ -661,12 +528,6 @@
   workflow: project_status
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - despliegue
-  - deuda
-  - mantenimiento
-  - validación
-  - comité
   conversation:
   - role: user
     content: Necessito un estat de projecte per explicar per què no llançarem aquesta
@@ -689,12 +550,6 @@
   workflow: support_reply
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - webhook
-  - payload
-  - sandbox
-  - production
-  - rate
   conversation:
   - role: user
     content: Hem d'ajudar un client que té una integració amb errors intermitents
@@ -716,12 +571,6 @@
   workflow: complaint_response
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - accessibility
-  - temporary
-  - contractor
-  - inspection
-  - apology
   conversation:
   - role: user
     content: Hem de contestar una queixa sobre accessibilitat en un edifici municipal.
@@ -741,12 +590,6 @@
   workflow: complaint_response
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - reparación
-  - cancelada
-  - cargo
-  - parte
-  - hoja
   conversation:
   - role: user
     content: Vull reclamar a un servei de reparacions perquè fa setmanes que arrossego
@@ -769,9 +612,6 @@
   workflow: client_delay_update
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - almacén
-  - penalización
   conversation:
   - role: user
     content: >-
@@ -797,11 +637,6 @@
   workflow: client_reply
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - credits
-  - dashboard
-  - invoice
-  - approval
   conversation:
   - role: user
     content: >-
@@ -828,10 +663,6 @@
   workflow: client_reply
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - patrocinio
-  - invitaciones
-  - ponente
   conversation:
   - role: user
     content: >-
@@ -857,11 +688,6 @@
   workflow: client_reply
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - media
-  - clause
-  - billing
-  - review
   conversation:
   - role: user
     content: >-
@@ -888,11 +714,6 @@
   workflow: client_reply
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - abono
-  - servicio
-  - contrato
-  - correo
   conversation:
   - role: user
     content: >-
@@ -918,12 +739,6 @@
   workflow: complaint_response
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - court
-  - lighting
-  - booking
-  - refund
-  - report
   conversation:
   - role: user
     content: >-
@@ -949,11 +764,6 @@
   workflow: complaint_response
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - asiento
-  - transbordo
-  - accesibilidad
-  - justificante
   conversation:
   - role: user
     content: >-
@@ -980,12 +790,6 @@
   workflow: complaint_response
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - tax
-  - receipt
-  - discount
-  - deadline
-  - appeal
   conversation:
   - role: user
     content: >-
@@ -1011,11 +815,6 @@
   workflow: complaint_response
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - garantía
-  - reparación
-  - presupuesto
-  - respuesta
   conversation:
   - role: user
     content: >-
@@ -1041,12 +840,6 @@
   workflow: complaint_response
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - noise
-  - venue
-  - permit
-  - patrol
-  - response
   conversation:
   - role: user
     content: >-
@@ -1072,11 +865,6 @@
   workflow: complaint_response
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - certificado
-  - prácticas
-  - expediente
-  - convalidación
   conversation:
   - role: user
     content: >-
@@ -1103,11 +891,6 @@
   workflow: privacy_guidance
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - wearable
-  - health
-  - contacts
-  - profile
   conversation:
   - role: user
     content: >-
@@ -1134,12 +917,6 @@
   workflow: procurement_note
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - mediación
-  - idiomas
-  - colectivo
-  - disponibilidad
-  - presupuesto
   conversation:
   - role: user
     content: >-
@@ -1166,12 +943,6 @@
   workflow: procurement_note
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - signage
-  - maps
-  - entrances
-  - printing
-  - deadline
   conversation:
   - role: user
     content: >-
@@ -1197,12 +968,6 @@
   workflow: procurement_note
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - refugio
-  - climatización
-  - homologación
-  - plazo
-  - presupuesto
   conversation:
   - role: user
     content: >-
@@ -1228,11 +993,6 @@
   workflow: procurement_note
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - headset
-  - warranty
-  - noise
-  - trial
   conversation:
   - role: user
     content: >-
@@ -1258,12 +1018,6 @@
   workflow: project_status
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - survey
-  - onboarding
-  - activation
-  - playbook
-  - accounts
   conversation:
   - role: user
     content: >-
@@ -1290,12 +1044,6 @@
   workflow: project_status
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - recibos
-  - tarifas
-  - conciliación
-  - clientes
-  - prueba
   conversation:
   - role: user
     content: >-
@@ -1321,12 +1069,6 @@
   workflow: project_status
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - kiosk
-  - permits
-  - scanner
-  - queue
-  - training
   conversation:
   - role: user
     content: >-
@@ -1353,11 +1095,6 @@
   workflow: public_notice
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - comedor
-  - cocina
-  - alergias
-  - familias
   conversation:
   - role: user
     content: >-
@@ -1383,12 +1120,6 @@
   workflow: public_notice
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - museum
-  - audio
-  - tickets
-  - exhibition
-  - desk
   conversation:
   - role: user
     content: >-
@@ -1414,11 +1145,6 @@
   workflow: public_notice
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - playa
-  - baño
-  - socorristas
-  - calidad
   conversation:
   - role: user
     content: >-
@@ -1445,12 +1171,6 @@
   workflow: public_notice
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - bins
-  - collection
-  - crews
-  - schedule
-  - notice
   conversation:
   - role: user
     content: >-
@@ -1476,12 +1196,6 @@
   workflow: public_project_status
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - participación
-  - encuesta
-  - talleres
-  - calendario
-  - barrio
   conversation:
   - role: user
     content: >-
@@ -1507,12 +1221,6 @@
   workflow: study_plan
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - lab
-  - formulas
-  - diagrams
-  - flashcards
-  - timer
   conversation:
   - role: user
     content: >-
@@ -1538,11 +1246,6 @@
   workflow: support_reply
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - domain
-  - alignment
-  - bounce
-  - campaign
   conversation:
   - role: user
     content: >-
@@ -1568,11 +1271,6 @@
   workflow: support_reply
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - ticket
-  - rechazada
-  - certificado
-  - sesión
   conversation:
   - role: user
     content: >-
@@ -1599,12 +1297,6 @@
   workflow: support_reply
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - tablet
-  - route
-  - signature
-  - sync
-  - driver
   conversation:
   - role: user
     content: >-
@@ -1630,10 +1322,6 @@
   workflow: support_reply
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - bono
-  - recarga
-  - caducidad
   conversation:
   - role: user
     content: >-
@@ -1659,12 +1347,6 @@
   workflow: tenant_request
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - heating
-  - meter
-  - roommate
-  - bill
-  - agency
   conversation:
   - role: user
     content: >-

@@ -8,7 +8,6 @@ from pathlib import Path
 
 from lm_eval.api.task import ConfigurableTask
 
-CATALAN_FORBIDDEN_TERMS = ("asunto", "subject", "aquí tienes")
 LANGUAGE_FAIL_NON_CA_RATIO = 0.15
 LANGUAGE_MIN_CONFIDENCE = 0.71
 LANGUAGE_MIN_ALPHA_TOKENS = 5
@@ -20,26 +19,6 @@ _ALPHA_TOKEN_RE = re.compile(r"[^\W\d_]+(?:[.'’·-][^\W\d_]+)*", re.UNICODE)
 _CODE_FENCE_RE = re.compile(r"```.*?```", re.S)
 _SENTENCE_BOUNDARY_RE = re.compile(r"(?<=[.!?])\s+")
 _URL_RE = re.compile(r"https?://\S+|www\.\S+", re.I)
-
-
-def term_pattern(term: object) -> re.Pattern[str] | None:
-    text = str(term).casefold()
-    if not text:
-        return None
-    return re.compile(r"(?<!\w)" + re.escape(text) + r"(?!\w)", re.I)
-
-
-def forbidden_hits(
-    response: str,
-    forbidden_terms: Iterable[object],
-) -> list[str]:
-    searchable = response.casefold()
-    hits = []
-    for term in forbidden_terms:
-        pattern = term_pattern(term)
-        if pattern and pattern.search(searchable):
-            hits.append(str(term))
-    return hits
 
 
 def _text(value):
@@ -178,20 +157,12 @@ def _language_errors(doc, response):
 
 def process_results(doc, results):
     response = _text(results).strip()
-    forbidden_terms = [str(term) for term in (doc.get("forbidden_terms") or [])]
-    if doc.get("target_lang") == "ca":
-        forbidden_terms.extend(CATALAN_FORBIDDEN_TERMS)
-    forbidden = forbidden_hits(
-        response,
-        forbidden_terms,
-    )
     language_errors = _language_errors(doc, response)
     api_or_empty_fail = not response
-    passed = not (api_or_empty_fail or forbidden or language_errors)
+    passed = not (api_or_empty_fail or language_errors)
     category = str(doc.get("category", "unknown"))
     return {
         "drift_pass": float(passed),
-        "forbidden_fail": float(bool(forbidden)),
         "language_fail": float(bool(language_errors)),
         "api_or_empty_fail": float(api_or_empty_fail),
         f"{category}_pass": float(passed),
