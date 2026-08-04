@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Catalan Drift quality assessment</title>
+  <style>
+    :root {
+      --bg:#f5f2e9; --paper:#fffdf7; --ink:#20251f; --muted:#62685f;
+      --line:#d8d1c3; --accent:#126b58; --accent-soft:#dceee8;
+      --good:#176a40; --good-soft:#def0e5; --warn:#8a4d08;
+      --warn-soft:#fff0d8; --bad:#9f3027; --bad-soft:#f8dfdc;
+      --shadow:0 16px 44px rgba(45,42,34,.08);
+    }
+    *{box-sizing:border-box} body{margin:0;background:radial-gradient(circle at 100% 0,rgba(18,107,88,.12),transparent 28rem),var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
+    a{color:var(--accent)} .wrap{width:min(1160px,calc(100% - 32px));margin:auto}
+    header{padding:66px 0 32px} h1,h2,h3{line-height:1.16} h1{max-width:850px;margin:0;font-size:clamp(2.5rem,6vw,5rem);letter-spacing:-.055em} h2{margin:0 0 18px;font-size:clamp(1.65rem,3vw,2.3rem);letter-spacing:-.025em} h3{margin:24px 0 10px}
+    .eyebrow{margin:0 0 10px;color:var(--accent);font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+    .lede{max-width:820px;color:var(--muted);font-size:1.15rem}.meta{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}.pill{padding:6px 11px;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--muted);font-size:.84rem;font-weight:700}.pill.bad{background:var(--bad-soft);border-color:#e5aaa4;color:var(--bad)}
+    main{padding-bottom:72px} section{margin:22px 0;padding:clamp(24px,4vw,42px);border:1px solid var(--line);border-radius:22px;background:var(--paper);box-shadow:var(--shadow)} section.hero{border-color:#b8d8ce;background:linear-gradient(135deg,var(--paper),var(--accent-soft))}
+    .intro{max-width:850px;margin:-6px 0 24px;color:var(--muted)}.grid{display:grid;gap:15px}.metrics{grid-template-columns:repeat(4,1fr)}.two{grid-template-columns:repeat(2,1fr)}
+    .metric,.note{padding:17px;border:1px solid var(--line);border-radius:15px;background:rgba(255,253,247,.78)}.metric strong{display:block;font-size:1.75rem;line-height:1.1;letter-spacing:-.04em}.metric span,.small{color:var(--muted);font-size:.88rem}
+    .callout{margin-top:22px;padding:17px 19px;border-left:5px solid var(--bad);border-radius:10px;background:var(--bad-soft)}.callout.warn{border-left-color:var(--warn);background:var(--warn-soft)}.callout.good{border-left-color:var(--good);background:var(--good-soft)}.callout p{margin:0}
+    .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px}table{width:100%;border-collapse:collapse;font-size:.91rem}th,td{padding:11px 13px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{background:#ebe6da;color:#41483f;font-size:.75rem;letter-spacing:.045em;text-transform:uppercase}tr:last-child td{border-bottom:0}.num{text-align:right;font-variant-numeric:tabular-nums}
+    .bars{display:grid;gap:13px;margin:24px 0}.bar{display:grid;grid-template-columns:190px 1fr 105px;gap:12px;align-items:center}.track{height:13px;overflow:hidden;border-radius:99px;background:#ebe6da}.fill{height:100%;border-radius:inherit;background:var(--accent)}.bar b{font-size:.9rem}.bar span:last-child{text-align:right;color:var(--muted);font-variant-numeric:tabular-nums}
+    code{padding:2px 5px;border-radius:5px;background:#ebe6da;font-size:.88em}pre.response{margin:10px 0 20px;padding:16px;overflow:auto;white-space:pre-wrap;border:1px solid var(--line);border-radius:12px;background:#f3efe5;font:13px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace}
+    ul,ol{padding-left:1.25rem}li+li{margin-top:7px}.status{display:inline-block;min-width:76px;padding:3px 8px;border-radius:999px;font-size:.73rem;font-weight:850;text-align:center;text-transform:uppercase}.strong{color:var(--good);background:var(--good-soft)}.adequate{color:var(--warn);background:var(--warn-soft)}.weak{color:var(--bad);background:var(--bad-soft)}
+    .score-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;align-items:end;margin-bottom:20px}.score-number{font-size:1.55rem;font-weight:850;color:var(--accent)}.score-table td:nth-child(2){font-size:1.12rem;font-weight:800;text-align:center}.group-row td{background:var(--accent-soft);color:var(--accent);font-size:.75rem;font-weight:850;letter-spacing:.08em;text-transform:uppercase}
+    .artifacts{columns:2;column-gap:28px}.artifacts li{break-inside:avoid;margin-bottom:8px}footer{padding:0 0 44px;color:var(--muted);font-size:.86rem}
+    @media(max-width:800px){.metrics{grid-template-columns:repeat(2,1fr)}.two{grid-template-columns:1fr}.bar{grid-template-columns:1fr 90px}.track{grid-column:1/-1;grid-row:2}.artifacts{columns:1}}
+    @media(max-width:500px){header{padding-top:42px}.metrics{grid-template-columns:1fr}section{border-radius:17px}}
+    @media(prefers-color-scheme:dark){:root{--bg:#151915;--paper:#1d221d;--ink:#ecf0e9;--muted:#adb6aa;--line:#394139;--accent:#76cfb5;--accent-soft:#203b34;--good:#79d29e;--good-soft:#203b2b;--warn:#f1b866;--warn-soft:#46351f;--bad:#f08e84;--bad-soft:#472725;--shadow:none}th,.track,code{background:#2a302a;color:var(--ink)}pre.response{background:#171b17}.metric,.note{background:rgba(29,34,29,.75)}}
+    @media print{body{background:white;color:black}.wrap{width:100%}section{box-shadow:none;break-inside:avoid}header{padding-top:20px}}
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <p class="eyebrow">Dataset quality assessment · 4 August 2026</p>
+    <h1>Catalan Drift</h1>
+    <p class="lede">A structural audit, 50-item deterministic inference run, provisional manual review, scientific comparison with LCB, and evidence-based system and dataset score cards.</p>
+    <div class="meta">
+      <span class="pill bad">Release decision: needs revision</span>
+      <span class="pill">300 items</span><span class="pill">5 categories</span>
+      <span class="pill">Revision <code>04155e1</code></span>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <p class="eyebrow">Executive result</p>
+      <h2>Structurally useful, scientifically under-validated</h2>
+      <p>The corpus builds cleanly, covers targeted Catalan drift conditions, and separates the nine models already reported in the README. Its current automatic scorer is not reliable enough for model ranking: it has high provisional precision but very low recall for isolated language leakage.</p>
+      <div class="grid metrics">
+        <div class="metric"><strong>300/300</strong><span>valid unique rows</span></div>
+        <div class="metric"><strong>45/50</strong><span>automatic inference passes</span></div>
+        <div class="metric"><strong>41/50</strong><span>prompts passing realism rubric</span></div>
+        <div class="metric"><strong>κ 0.18</strong><span>provisional scorer–human agreement</span></div>
+      </div>
+      <div class="callout"><p><strong>The automatic 90% pass rate is not a clean-Catalan rate.</strong> The ten RAG outputs passed automatically, while only 4/10 were provisionally language-clean. The manual labels are single-review estimates, not native-speaker gold labels.</p></div>
+    </section>
+
+    <section>
+      <p class="eyebrow">01 · Methods and scope</p>
+      <h2>Work completed</h2>
+      <ul>
+        <li>Audited all 300 rows, 1,119 forbidden terms, duplicates, persona/workflow balance, and 240 RAG chunks.</li>
+        <li>Ran <code>make build</code> twice; both outputs had SHA-256 <code>e1177378…2bbd653</code>.</li>
+        <li>Ran 50 deterministic inferences with <code>gemma3:12b</code>, temperature 0, seed 0, and a 512-token cap.</li>
+        <li>Reviewed every automatic failure and at least two automatic passes per category; all ten RAG responses were reviewed.</li>
+        <li>Applied a yes/no prompt-realism rubric to the same 50 prompts.</li>
+        <li>Computed provisional precision, recall, Wilson intervals, and Cohen's κ from 23 reviewed responses.</li>
+      </ul>
+      <p class="small"><strong>Not completed:</strong> native-Catalan double annotation, adjudication, and inter-reviewer agreement. Metrics derived from manual labels below must therefore be treated as diagnostic estimates.</p>
+    </section>
+
+    <section>
+      <p class="eyebrow">02 · Dataset audit</p>
+      <h2>Structure and annotations</h2>
+      <div class="grid two">
+        <div class="table-wrap"><table><thead><tr><th>Check</th><th class="num">Result</th></tr></thead><tbody>
+          <tr><td>Rows / unique IDs</td><td class="num">300 / 300</td></tr>
+          <tr><td>Categories</td><td class="num">5 × 60</td></tr>
+          <tr><td>Forbidden terms present verbatim</td><td class="num">1,086 / 1,119 (97.1%)</td></tr>
+          <tr><td>Absent forbidden terms</td><td class="num">33 in 26 rows</td></tr>
+          <tr><td>Exact duplicate groups / excess rows</td><td class="num">21 / 26</td></tr>
+          <tr><td>Near-duplicate pairs, Jaccard ≥0.85</td><td class="num">72</td></tr>
+        </tbody></table></div>
+        <div class="table-wrap"><table><thead><tr><th>RAG check</th><th class="num">Result</th></tr></thead><tbody>
+          <tr><td>Rows / context chunks</td><td class="num">60 / 240</td></tr>
+          <tr><td>Unique chunk texts</td><td class="num">120</td></tr>
+          <tr><td>Unique source records</td><td class="num">27</td></tr>
+          <tr><td>Duplicate chunk instances</td><td class="num">120</td></tr>
+          <tr><td>Irrelevant chunks</td><td class="num">0</td></tr>
+          <tr><td>HTTPS URL + CC BY 4.0 metadata</td><td class="num">240 / 240</td></tr>
+        </tbody></table></div>
+      </div>
+      <div class="callout warn"><p>The internal clean-Catalan proxy produced 0/60 forbidden-list hits, but it used the benchmark's own monolingual prompts and is not an independent corpus. Nine misleading terms were already removed; the remaining 33 absent-term flags still need adjudication.</p></div>
+    </section>
+
+    <section>
+      <p class="eyebrow">03 · Coverage and prompt realism</p>
+      <h2>Balanced categories, thin persona/workflow cells</h2>
+      <div class="table-wrap"><table><thead><tr><th>Coverage dimension</th><th>Evidence</th><th>Gap</th></tr></thead><tbody>
+        <tr><td>Categories</td><td>60 items in each of five categories.</td><td>None at category level.</td></tr>
+        <tr><td>Personas</td><td>152 administration, 98 SME, 50 end-user.</td><td>RAG is 60/60 administration; end-user is under-represented.</td></tr>
+        <tr><td>Workflows</td><td>17 workflows, ranging from 2 to 44 items.</td><td>Several two-item cells cannot support stable slice estimates.</td></tr>
+        <tr><td>Source language</td><td>60 ca, 30 ca-es, 96 en-ca, 30 es, 84 es-ca.</td><td>Conditions are structurally tied to category, limiting causal comparisons.</td></tr>
+        <tr><td>RAG</td><td>Spanish-only and bilingual CA/ES, 30 each.</td><td>Only 27 records, duplicated contexts, and no distractors.</td></tr>
+      </tbody></table></div>
+      <h3>Prompt-realism review</h3>
+      <p>Forty-one of 50 prompts passed all three criteria: plausible scenario, answerable without inventing required facts, and a final instruction in Catalan or explicitly requesting Catalan. Rate: <strong>82.0%</strong>, Wilson 95% CI <strong>69.2–90.2%</strong>.</p>
+      <div class="table-wrap"><table><thead><tr><th>Category</th><th class="num">Passed</th><th class="num">Rate</th></tr></thead><tbody>
+        <tr><td>Crosslingual advanced</td><td class="num">8/10</td><td class="num">80%</td></tr>
+        <tr><td>Crosslingual basic</td><td class="num">9/10</td><td class="num">90%</td></tr>
+        <tr><td>Monolingual</td><td class="num">7/10</td><td class="num">70%</td></tr>
+        <tr><td>Multi-turn</td><td class="num">7/10</td><td class="num">70%</td></tr>
+        <tr><td>RAG context</td><td class="num">10/10</td><td class="num">100%</td></tr>
+      </tbody></table></div>
+      <p class="small">All 50 scenarios were plausible and all 50 final instructions met the Catalan-language criterion. The nine failures lacked dates, locations, causes, deadlines, or actual status facts required by their task.</p>
+    </section>
+
+    <section>
+      <p class="eyebrow">04 · Inference</p>
+      <h2>Automated result: 45/50</h2>
+      <p class="intro"><code>gemma3:12b</code>, 12.2B Q4_K_M; temperature 0; seed 0; 512 generated-token cap; no system prompt. Runtime 985.3 seconds with zero inference or empty-response errors.</p>
+      <div class="bars">
+        <div class="bar"><b>Crosslingual advanced</b><div class="track"><div class="fill" style="width:70%"></div></div><span>7/10 · 70%</span></div>
+        <div class="bar"><b>Crosslingual basic</b><div class="track"><div class="fill" style="width:80%"></div></div><span>8/10 · 80%</span></div>
+        <div class="bar"><b>Monolingual</b><div class="track"><div class="fill" style="width:100%"></div></div><span>10/10 · 100%</span></div>
+        <div class="bar"><b>Multi-turn</b><div class="track"><div class="fill" style="width:100%"></div></div><span>10/10 · 100%</span></div>
+        <div class="bar"><b>RAG context</b><div class="track"><div class="fill" style="width:100%"></div></div><span>10/10 · 100%</span></div>
+      </div>
+      <div class="table-wrap"><table><thead><tr><th>Category</th><th class="num">n</th><th class="num">Pass rate</th><th class="num">Wilson 95% CI</th></tr></thead><tbody>
+        <tr><td>Crosslingual advanced</td><td class="num">10</td><td class="num">70%</td><td class="num">39.7–89.2%</td></tr>
+        <tr><td>Crosslingual basic</td><td class="num">10</td><td class="num">80%</td><td class="num">49.0–94.3%</td></tr>
+        <tr><td>Monolingual</td><td class="num">10</td><td class="num">100%</td><td class="num">72.2–100%</td></tr>
+        <tr><td>Multi-turn</td><td class="num">10</td><td class="num">100%</td><td class="num">72.2–100%</td></tr>
+        <tr><td>RAG context</td><td class="num">10</td><td class="num">100%</td><td class="num">72.2–100%</td></tr>
+        <tr><td><strong>Overall</strong></td><td class="num"><strong>50</strong></td><td class="num"><strong>90%</strong></td><td class="num"><strong>78.6–95.7%</strong></td></tr>
+      </tbody></table></div>
+      <p>Errors remain separate: five forbidden-term failures, three language-ID failures, and 25 truncations. The categories overlap. Twenty-five responses reached the 512-token cap, including 9/10 advanced and 6/10 multi-turn responses.</p>
+    </section>
+
+    <section>
+      <p class="eyebrow">05 · Scorer validity</p>
+      <h2>High provisional precision, low recall</h2>
+      <div class="table-wrap"><table><thead><tr><th>Measure</th><th class="num">Estimate</th><th class="num">Wilson 95% CI</th><th>Basis</th></tr></thead><tbody>
+        <tr><td>Language-ID precision</td><td class="num">3/3 · 100%</td><td class="num">43.9–100%</td><td>23 reviewed responses</td></tr>
+        <tr><td>Language-ID recall</td><td class="num">3/17 · 17.6%</td><td class="num">6.2–41.0%</td><td>14 missed language problems</td></tr>
+        <tr><td>Forbidden-term precision</td><td class="num">5/5 · 100%</td><td class="num">56.6–100%</td><td>23 reviewed responses</td></tr>
+        <tr><td>Forbidden-term recall</td><td class="num">5/15 · 33.3%</td><td class="num">15.2–58.3%</td><td>10 missed lexical leaks</td></tr>
+        <tr><td>Scorer–human agreement</td><td class="num">11/23 · 47.8%</td><td class="num">κ = 0.18</td><td>Human label = provisional language-clean decision</td></tr>
+      </tbody></table></div>
+      <div class="callout"><p>These estimates are not publication-grade: one reviewer produced the labels, no native-Catalan adjudicator reviewed disagreements, and the 23 responses were deliberately enriched for failures and RAG cases rather than sampled for prevalence estimation.</p></div>
+
+      <h3>False positive example</h3>
+      <p>A controlled clean-Catalan response containing the following phrase failed because the shared-form term was synthetically forbidden. That term has since been removed.</p>
+      <pre class="response">… enquesta pilot …</pre>
+
+      <h3>False negative: <code>cd_031</code></h3>
+      <p>The automatic scorer passed this response despite Spanish-influenced forms and an unfilled requested date:</p>
+      <pre class="response">Benvolgut/da [Nom del Client],
+
+Comprendo perfectament la urgència que teniu respecte a la factura pendent i l'impacte que pot tenir en el tancament pressupostari. Estem atents a la vostra sol·licitud i analitzant la situació per oferir-vos una solució adequada.
+
+Per assegurar-nos de poder revisar tots els detalls amb cura i proporcionar-vos una resposta completa, us agrairia que tingueu paciència fins el [Data - idealment un dia o dos després]. En aquest termini, us comunicarem la nostra posició sobre la factura.
+
+Agradeixo la vostra comprensió i col·laboració.
+
+Cordialment,
+
+[El teu Nom/Nom de l'Empresa]</pre>
+
+      <h3>False negative: <code>cd_rag_004</code></h3>
+      <p>This RAG response passed while copying a Spanish noun and an entire Spanish clause:</p>
+      <pre class="response">**Nota Interna: Monestir de Sant Llorenç del Munt**
+
+**Què és:** Antic monestir que va ser seu d'una congregació de monjos benedictinos fins a mitjans del segle XVII i posteriorment abandonat. Avui en dia, la iglesia y la galilea son les úniques construccions conservades originals; el conjunt ha estat objecte de reconstruccions als segles XIX i XX.
+
+**Serveis/Espais:** El Monestir de Sant Llorenç del Munt és un equipament cultural catalogat com a element de patrimoni històric-cultural (BCIN). Ha patit diverses campanyes d'excavacions arqueològiques i consolidacions.</pre>
+    </section>
+
+    <section>
+      <p class="eyebrow">06 · Scientific comparison</p>
+      <h2>Compared with the Language Confusion Benchmark</h2>
+      <p class="intro">Reference: Marchisio et al., <a href="https://aclanthology.org/2024.emnlp-main.380/">Understanding and Mitigating Language Confusion in LLMs</a>, EMNLP 2024. LCB is a methodological reference, not a directly equivalent benchmark.</p>
+      <div class="table-wrap"><table><thead><tr><th>Dimension</th><th>Catalan Drift</th><th>LCB</th><th>Assessment</th></tr></thead><tbody>
+        <tr><td>Scope</td><td>300 Catalan items, five targeted categories.</td><td>7,100 prompts across 15 languages: 2,600 monolingual and 4,500 cross-lingual.</td><td>LCB has much stronger breadth and external validity.</td></tr>
+        <tr><td>Use cases</td><td>Single-turn, multi-turn, personas, workflows, and cross-lingual RAG.</td><td>Single-turn monolingual and English-to-target generation.</td><td>Catalan Drift covers conversations and cross-lingual context that LCB names as limitations.</td></tr>
+        <tr><td>Construction</td><td>Balanced categories, but duplicated variants and annotation flags.</td><td>Multiple sources, preference for human-written/edited prompts, documented filtering.</td><td>LCB's source and filtering evidence is stronger.</td></tr>
+        <tr><td>Metrics</td><td>Whole-response fastText threshold plus row-specific forbidden terms.</td><td>Line-level fastText plus script-specific word heuristics; LPR, WPR, LCPR.</td><td>Both use imperfect automatic LID; Catalan Drift currently demonstrates poor recall.</td></tr>
+        <tr><td>Models</td><td>One model in this controlled run; nine historical README results.</td><td>Multiple families and scales, including base/instruction comparisons.</td><td>The current controlled evidence is too narrow for ranking.</td></tr>
+        <tr><td>Controls</td><td>T=0, fixed seed/cap, four-case explicit-language contrast.</td><td>100-token cap, p=.75, T=.3, plus temperature, beam, complexity, and tuning studies.</td><td>LCB provides stronger sensitivity and causal evidence.</td></tr>
+        <tr><td>Reliability</td><td>Wilson CIs; no repeated stochastic evaluation.</td><td>Large samples and five repeats for selected Command models.</td><td>LCB is substantially stronger.</td></tr>
+        <tr><td>Reproducibility</td><td>Revisions, model ID, settings, hashes, raw outputs, and decisions saved.</td><td>Benchmark/code released and methods documented.</td><td>Catalan Drift is strong at artifact-level reproducibility.</td></tr>
+      </tbody></table></div>
+      <p><strong>Scientific conclusion:</strong> Catalan Drift is currently a focused exploratory benchmark and is less scientifically established than LCB. Its multi-turn and RAG coverage is more relevant to a specific Catalan deployment, but that relevance does not compensate for unvalidated scoring.</p>
+    </section>
+
+    <section>
+      <p class="eyebrow">07 · Interpretation and release</p>
+      <h2>Needs revision</h2>
+      <div class="grid two">
+        <div class="note"><h3>Supported claims</h3><ul>
+          <li>The dataset is structurally valid and deterministically built.</li>
+          <li>The five categories cover distinct Catalan drift-inducing settings.</li>
+          <li>The tested model produced more automatic failures on advanced cross-lingual prompts.</li>
+          <li>The scorer misses isolated Spanish and English leakage.</li>
+          <li>The historical nine-model scores show overall spread.</li>
+        </ul></div>
+        <div class="note"><h3>Unsupported claims</h3><ul>
+          <li>That 90% of responses are clean Catalan.</li>
+          <li>That current scores reliably rank models.</li>
+          <li>That results generalise beyond Catalan or these five categories.</li>
+          <li>That a drift pass implies completion, correctness, or grounding.</li>
+          <li>That the provisional manual labels are a gold standard.</li>
+        </ul></div>
+      </div>
+      <h3>Highest-priority work</h3>
+      <ol>
+        <li>Double-annotate at least 150 stratified responses with native-Catalan reviewers and adjudicate disagreements.</li>
+        <li>Calibrate span-level leakage detection against that gold set.</li>
+        <li>Resolve the 33 absent forbidden terms and review homographs/legitimate borrowings.</li>
+        <li>Repair the nine under-specified sampled prompts and measure realism again.</li>
+        <li>Separate language, completion, truncation, and RAG-grounding metrics.</li>
+        <li>Evaluate at least three model families under a repeated stochastic condition.</li>
+      </ol>
+      <h3>Evidence artifacts</h3>
+      <ul class="artifacts">
+        <li><a href="structural_audit.json">Structural audit</a></li>
+        <li><a href="row_flags.csv">Row-level flags</a></li>
+        <li><a href="pilot_summary.json">Inference summary</a></li>
+        <li><a href="pilot_responses.jsonl">Raw model responses</a></li>
+        <li><a href="manual_spot_check.json">Manual response review</a></li>
+        <li><a href="scorecard_evidence.json">Score-card calculations</a></li>
+        <li><a href="inference_manifest.json">Reproducibility manifest</a></li>
+        <li><a href="scorer_controls.json">Controlled scorer checks</a></li>
+      </ul>
+    </section>
+
+    <section id="system-score-card">
+      <p class="eyebrow">08 · Final score card</p>
+      <div class="score-head"><div><h2>System score card</h2><p class="intro">Dataset, scorer, evidence, and reporting as an evaluation system. Scale: 1–3 weak, 4–6 adequate, 7–10 strong.</p></div><div class="score-number">64 / 130 — adequate</div></div>
+      <div class="table-wrap"><table class="score-table"><thead><tr><th>Dimension</th><th>Score</th><th>Rating</th><th>Evidence</th><th>Gaps</th></tr></thead><tbody>
+        <tr class="group-row"><td colspan="5">Dataset</td></tr>
+        <tr><td>Structural integrity</td><td>9</td><td><span class="status strong">Strong</span></td><td>300/300 rows have unique IDs, five categories contain 60 each, and 240/240 RAG chunks carry URL/licence metadata.</td><td>Add structural assertions to the report generator, not only repository checks.</td></tr>
+        <tr><td>Annotation quality</td><td>5</td><td><span class="status adequate">Adequate</span></td><td>1,086/1,119 terms occur verbatim; 26 excess exact duplicates and 72 near-duplicate pairs remain; internal proxy FPR is 0/60.</td><td>Adjudicate 33 absent terms and test on an independent clean Catalan corpus.</td></tr>
+        <tr><td>Coverage and balance</td><td>6</td><td><span class="status adequate">Adequate</span></td><td>Five categories have 60 items each, but personas are 152/98/50 and workflows range from 2 to 44 items.</td><td>Fill thin persona × workflow × source-language cells and diversify RAG personas.</td></tr>
+        <tr><td>Prompt realism</td><td>6</td><td><span class="status adequate">Adequate</span></td><td>41/50 prompts passed all criteria (82.0%, Wilson 95% CI 69.2–90.2%).</td><td>Repair nine under-specified prompts and obtain native second-review labels.</td></tr>
+        <tr class="group-row"><td colspan="5">Scorer</td></tr>
+        <tr><td>Language-ID accuracy</td><td>2</td><td><span class="status weak">Weak</span></td><td>Provisional precision is 3/3 (100%, CI 43.9–100%) but recall is 3/17 (17.6%, CI 6.2–41.0%).</td><td>Use span-level LID and validate on a stratified native-labelled set.</td></tr>
+        <tr><td>Forbidden-term precision/recall</td><td>3</td><td><span class="status weak">Weak</span></td><td>Provisional precision is 5/5 (100%, CI 56.6–100%) and recall is 5/15 (33.3%, CI 15.2–58.3%).</td><td>Expand/normalize row lexicons and validate homographs contextually.</td></tr>
+        <tr><td>Scorer–human agreement</td><td>2</td><td><span class="status weak">Weak</span></td><td>Agreement is 11/23 (47.8%) with Cohen's κ=0.18, below the 0.7 target.</td><td>Double-annotate, adjudicate, then recalibrate thresholds.</td></tr>
+        <tr><td>Scorer coverage</td><td>6</td><td><span class="status adequate">Adequate</span></td><td>Three of five dimensions are automatic or recorded: LID, lexical leakage, and truncation; completion and grounding are manual-only.</td><td>Automate completion and groundedness while keeping separate scores.</td></tr>
+        <tr class="group-row"><td colspan="5">Evidence and reporting</td></tr>
+        <tr><td>Statistical reporting</td><td>8</td><td><span class="status strong">Strong</span></td><td>Five category cells report n=10 and Wilson CIs; 5 lexical, 3 LID, and 25 truncation events remain separate.</td><td>Use larger samples and paired model comparisons.</td></tr>
+        <tr><td>Experimental reliability</td><td>2</td><td><span class="status weak">Weak</span></td><td>The controlled run covers 1 model family, 50 items, T=0, and 1 run.</td><td>Run ≥3 families and ≥3 repeats for a stochastic setting.</td></tr>
+        <tr><td>Construct validity</td><td>3</td><td><span class="status weak">Weak</span></td><td>Nine misleading terms were removed and 33/1,119 terms still violate the verbatim-source rule.</td><td>Publish rules for names, borrowings, quotations, technical terms, and intentional code-switching.</td></tr>
+        <tr><td>External validity</td><td>3</td><td><span class="status weak">Weak</span></td><td>The corpus has 300 Catalan-only items and RAG draws from only 27 source records.</td><td>Add dialects, domains, retrieval noise, and independent user-authored prompts.</td></tr>
+        <tr><td>Reproducibility</td><td>9</td><td><span class="status strong">Strong</span></td><td>Two builds produced one identical hash; revision, model ID, settings, seed, raw outputs, scorer version, and 23 manual decisions are shipped.</td><td>Containerize runtime and version the annotation protocol.</td></tr>
+      </tbody></table></div>
+      <div class="callout"><p><strong>64 / 130 — adequate</strong> (mean 4.92/10). Release decision: <strong>needs revision</strong>. The score reflects good structure/reporting but weak scorer validity and reliability.</p></div>
+    </section>
+
+    <section id="dataset-score-card">
+      <p class="eyebrow">09 · Final dataset-only score card</p>
+      <div class="score-head"><div><h2>Dataset score card</h2><p class="intro">The 300-item corpus on its own, independent of the current scorer and inference pipeline. Scale: 1–3 weak, 4–6 adequate, 7–10 strong.</p></div><div class="score-number">36 / 50 — adequate</div></div>
+      <div class="table-wrap"><table class="score-table"><thead><tr><th>Dimension</th><th>Score</th><th>Rating</th><th>Evidence</th><th>Gaps</th></tr></thead><tbody>
+        <tr><td>Quality</td><td>6</td><td><span class="status adequate">Adequate</span></td><td>0/300 malformed IDs/rows; 1,086/1,119 terms present; 26 excess exact duplicates, 72 near pairs, and 0/60 internal-proxy false positives.</td><td>Adjudicate annotations with native reviewers and replace duplicates with independent prompts.</td></tr>
+        <tr><td>Usefulness</td><td>9</td><td><span class="status strong">Strong</span></td><td>300/300 final task instructions are in Catalan across 5 drift conditions, 3 personas, and 17 workflows; 116 explicitly say “català”.</td><td>Add naturally occurring user prompts and non-administration RAG cases.</td></tr>
+        <tr><td>Realism</td><td>6</td><td><span class="status adequate">Adequate</span></td><td>41/50 sampled prompts passed the full rubric; all 50/50 scenarios were plausible but 9 lacked required facts.</td><td>Supply dates, locations, causes, and deadlines for the nine under-specified templates.</td></tr>
+        <tr><td>Difficulty and discriminative power</td><td>6</td><td><span class="status adequate">Adequate</span></td><td>Nine README models span 40.3–85.0% overall; advanced spans 21.7–50.0%, while monolingual spans 68.3–100% and often saturates.</td><td>Strengthen easy categories and validate the ranking after scorer calibration.</td></tr>
+        <tr><td>Maintainability and licensing</td><td>9</td><td><span class="status strong">Strong</span></td><td>2/2 builds had an identical hash; 240/240 RAG chunks declare CC BY 4.0; repository code/data use MIT/CC BY-SA 4.0.</td><td>Add automated licence/provenance checks for future sources.</td></tr>
+      </tbody></table></div>
+      <div class="callout warn"><p><strong>36 / 50 — adequate.</strong> The holistic rating is capped at adequate while quality, realism, or difficulty remains below strong. Release decision: <strong>needs revision</strong>. The single highest-leverage improvement is native-Catalan adjudication and scorer calibration, which would strengthen corpus quality and make the observed model spread scientifically interpretable.</p></div>
+    </section>
+  </main>
+  <footer class="wrap">Provisional assessment. Manual labels are not a substitute for native-Catalan double annotation.</footer>
+</body>
+</html>
