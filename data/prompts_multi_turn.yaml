@@ -799,7 +799,6 @@
   source_lang: en-ca
   target_lang: ca
   forbidden_terms:
-  - pilot
   - credits
   - dashboard
   - invoice
@@ -1110,7 +1109,6 @@
   - wearable
   - health
   - contacts
-  - bluetooth
   - profile
   conversation:
   - role: user
@@ -1420,7 +1418,6 @@
   target_lang: ca
   forbidden_terms:
   - playa
-  - bandera
   - baño
   - socorristas
   - calidad

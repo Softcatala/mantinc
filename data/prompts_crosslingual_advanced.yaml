@@ -407,7 +407,6 @@
   source_lang: en-ca
   target_lang: ca
   forbidden_terms:
-  - pilot
   - survey
   - moderation
   - venues
@@ -677,7 +676,6 @@
   - imágenes
   - stock
   - categorías
-  - plantilla
   conversation:
   - role: user
     content: Tenim un client amb una incidència tècnica després d'importar un catàleg
@@ -1065,7 +1063,6 @@
   target_lang: ca
   forbidden_terms:
   - scanner
-  - bluetooth
   - warehouse
   - firmware
   - labels
@@ -1305,7 +1302,6 @@
   source_lang: es-ca
   target_lang: ca
   forbidden_terms:
-  - SLA
   - auditoría
   - disponibilidad
   - penalización
@@ -1478,7 +1474,6 @@
   source_lang: es-ca
   target_lang: ca
   forbidden_terms:
-  - examen
   - convocatoria
   - revisión
   - asunto
@@ -2256,7 +2251,6 @@
   - tickets
   - duplicados
   - agente
-  - saturada
   - asunto
   - próximo
   conversation:

@@ -321,7 +321,6 @@
   target_lang: ca
   forbidden_terms:
   - case
-  - logo
   - trial
   - period
   prompt: 'Respon a un client que pressiona per canviar condicions comercials. La
@@ -997,7 +996,6 @@
   target_lang: ca
   forbidden_terms:
   - mercado
-  - parada
   - suministro
   - ubicación
   prompt: >-
