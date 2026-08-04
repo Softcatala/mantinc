@@ -49,6 +49,7 @@ def _rows_with_dataset(paths: list[str]) -> list[dict[str, Any]]:
     for path in paths:
         for source_row in _rows(Path(path)):
             row = dict(source_row)
+            row.pop("forbidden_terms", None)
             row["dataset_yaml"] = path
             rows.append(row)
     return rows
