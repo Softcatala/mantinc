@@ -23,20 +23,23 @@
   source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: administracio
   workflow: public_project_status
-  source_lang: en-ca
+  source_lang: es-ca
   target_lang: ca
   conversation:
-  - role: user
-    content: Treballo en una administració local i hem d'actualitzar l'estat d'un
-      projecte digital.
-  - role: assistant
-    content: Podem fer una actualització clara amb estat, riscos i properes actuacions.
-  - role: user
-    content: We need to update stakeholders with blockers, deadlines and next steps.
-  - role: assistant
-    content: Ho convertiré en llenguatge administratiu, amb responsabilitats i terminis
-      clars.
-  prompt: Escriu una actualització de l'estat de forma breu.
+  - content: Treballo en una administració local i hem d'actualitzar l'estat d'un projecte digital.
+    role: user
+  - content: Podem fer una actualització clara amb estat, riscos i properes actuacions.
+    role: assistant
+  - content: Tenemos que informar a las partes interesadas de bloqueos, plazos y próximos pasos.
+    role: user
+  - content: De acuerdo. Haré la revisión final en español antes de cerrar.
+    role: assistant
+  prompt: |-
+    Revisa en español y ciérralo.
+
+    Versió catalana final: bloqueig, responsable, termini i revisió del projecte digital.
+
+    Escriu exclusivament en català la resposta final.
 - id: cd_062
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -45,17 +48,20 @@
   source_lang: es-ca
   target_lang: ca
   conversation:
-  - role: user
-    content: Hem d'avisar el veïnat d'un tall d'aigua programat.
-  - role: assistant
-    content: Podem fer un avís clar amb data, horari, zona afectada i canal de consultes.
-  - role: user
-    content: El aviso anterior estaba en castellano y muchos vecinos lo tienen guardado
-      como referencia.
-  - role: assistant
-    content: Usaré la información relevante y mantendré un formato administrativo
-      claro.
-  prompt: Escriu la resposta en català com un avís breu amb títol i cos.
+  - content: Hem d'avisar el veïnat d'un tall d'aigua programat.
+    role: user
+  - content: Podem fer un avís clar amb data, horari, zona afectada i canal de consultes.
+    role: assistant
+  - content: El aviso anterior estaba en castellano y muchos vecinos lo tienen guardado como referencia.
+    role: user
+  - content: De acuerdo. Haré la revisión final en español antes de cerrar.
+    role: assistant
+  prompt: |-
+    Revisa en español y ciérralo.
+
+    Avís català final: tall d'aigua, franja, zona i canal de consulta.
+
+    Escriu exclusivament en català la resposta final.
 - id: cd_063
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -64,17 +70,20 @@
   source_lang: en-ca
   target_lang: ca
   conversation:
-  - role: user
-    content: Tenim un usuari que no aconsegueix acabar l'alta al servei.
-  - role: assistant
-    content: Podem respondre amb passos concrets i una via d'escalat.
-  - role: user
-    content: The onboarding flow fails after a payment retry, creating a risk of customer churn.
-      Use the support macro if needed.
-  - role: assistant
-    content: Entenc el context i evitaré repetir la terminologia anglesa al missatge
-      final.
-  prompt: Escriu la propera resposta de suport, amb salutació, tres passos i tancament.
+  - content: Tenim un usuari que no aconsegueix acabar l'alta al servei.
+    role: user
+  - content: Podem respondre amb passos concrets i una via d'escalat.
+    role: assistant
+  - content: The onboarding flow fails after a payment retry, creating a risk of customer churn. Use the support macro if needed.
+    role: user
+  - content: Understood. I will do the final review in English before closing.
+    role: assistant
+  prompt: |-
+    Review it in English and close it.
+
+    Resposta catalana final: alta fallida, tres comprovacions i escalat.
+
+    Escriu exclusivament en català la resposta final.
 - id: cd_064
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -83,17 +92,20 @@
   source_lang: es-ca
   target_lang: ca
   conversation:
-  - role: user
-    content: Hem de preparar una nota interna sobre una licitació menor.
-  - role: assistant
-    content: Podem resumir l'estat, la documentació pendent i la decisió necessària.
-  - role: user
-    content: El pliego técnico está completo, pero falta revisar la oferta económica
-      antes de la adjudicación y quizá pedir subsanación.
-  - role: assistant
-    content: Ho convertiré en una nota clara per a l'equip tècnic.
-  prompt: Escriu la resposta final només en català, amb apartats d'estat, risc i proper
-    pas.
+  - content: Hem de preparar una nota interna sobre una licitació menor.
+    role: user
+  - content: Podem resumir l'estat, la documentació pendent i la decisió necessària.
+    role: assistant
+  - content: El pliego técnico está completo, pero falta revisar la oferta económica antes de la adjudicación y quizá pedir subsanación.
+    role: user
+  - content: De acuerdo. Haré la revisión final en español antes de cerrar.
+    role: assistant
+  prompt: |-
+    Revisa en español y ciérralo.
+
+    Nota catalana final: revisió econòmica, risc d'adjudicació i possible esmena.
+
+    Escriu exclusivament en català la resposta final.
 - id: cd_065
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -159,19 +171,23 @@
   source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: usuari_final
   workflow: tenant_request
-  source_lang: en-ca
+  source_lang: es-ca
   target_lang: ca
   conversation:
-  - role: user
-    content: Vull escriure al propietari perquè hi ha una avaria al pis.
-  - role: assistant
-    content: Podem fer una petició clara amb descripció, urgència i disponibilitat.
-  - role: user
-    content: The maintenance request is about a leaking ceiling. There is a temporary
-      fix, but the landlord should send someone.
-  - role: assistant
-    content: Faré una versió formal i concreta.
-  prompt: Escriu el missatge només en català, amb assumpte i cos.
+  - content: Vull escriure al propietari perquè hi ha una avaria al pis.
+    role: user
+  - content: Podem fer una petició clara amb descripció, urgència i disponibilitat.
+    role: assistant
+  - content: La solicitud de mantenimiento es por una gotera en el techo. Hay una solución provisional, pero el propietario debería enviar a un técnico.
+    role: user
+  - content: De acuerdo. Haré la revisión final en español antes de cerrar.
+    role: assistant
+  prompt: |-
+    Revisa en español y ciérralo.
+
+    Correu català final: gotera, mesura provisional, visita tècnica i disponibilitat.
+
+    Escriu exclusivament en català la resposta final.
 - id: cd_069
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -225,17 +241,20 @@
   source_lang: en-ca
   target_lang: ca
   conversation:
-  - role: user
-    content: L'ajuntament ha de publicar un avís sobre obres que afecten una avinguda
-      i dues línies d'autobús.
-  - role: assistant
-    content: Podem fer un avís amb dates, afectacions, alternatives i canals de consulta.
-  - role: user
-    content: Include rolling closure, school pickup window, mobility hub, emergency
-      lane and live map, but don't make it sound too technical.
-  - role: assistant
-    content: Convertiré aquests conceptes a llenguatge administratiu clar i útil.
-  prompt: Escriu l'avís final amb títol, cos, afectacions i recomanacions.
+  - content: L'ajuntament ha de publicar un avís sobre obres que afecten una avinguda i dues línies d'autobús.
+    role: user
+  - content: Podem fer un avís amb dates, afectacions, alternatives i canals de consulta.
+    role: assistant
+  - content: Include rolling closure, school pickup window, mobility hub, emergency lane and live map, but don't make it sound too technical.
+    role: user
+  - content: Understood. I will do the final review in English before closing.
+    role: assistant
+  prompt: |-
+    Review it in English and close it.
+
+    Avís català final: obres, tall progressiu, recollida escolar i alternatives de mobilitat.
+
+    Escriu exclusivament en català la resposta final.
 - id: cd_162
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -244,18 +263,20 @@
   source_lang: en-ca
   target_lang: ca
   conversation:
-  - role: user
-    content: 'Hem rebut un cas de suport delicat: un equip no pot exportar l''historial
-      complet d''un tauler de projecte.'
-  - role: assistant
-    content: Cal respondre amb prudència, demanar verificacions i evitar perdre dades.
-  - role: user
-    content: The ticket mentions board export, missing comments, archived cards,
-      CSV limit and an incomplete activity log.
-  - role: assistant
-    content: Entenc que cal transformar els detalls tècnics sense repetir-los literalment.
-  prompt: Escriu la resposta final, amb salutació, passos de verificació, protecció
-    de dades i termini d'escalat.
+  - content: 'Hem rebut un cas de suport delicat: un equip no pot exportar l''historial complet d''un tauler de projecte.'
+    role: user
+  - content: Cal respondre amb prudència, demanar verificacions i evitar perdre dades.
+    role: assistant
+  - content: The ticket mentions board export, missing comments, archived cards, CSV limit and an incomplete activity log.
+    role: user
+  - content: Understood. I will do the final review in English before closing.
+    role: assistant
+  prompt: |-
+    Review it in English and close it.
+
+    Suport català final: exportació, còpia segura, evidències i hora d'escalat.
+
+    Escriu exclusivament en català la resposta final.
 - id: cd_163
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -264,18 +285,20 @@
   source_lang: es-ca
   target_lang: ca
   conversation:
-  - role: user
-    content: Hem de justificar una contractació ràpida per reparar un equipament municipal
-      essencial.
-  - role: assistant
-    content: La nota ha d'explicar necessitat, urgència, límits i controls.
-  - role: user
-    content: 'En castellano nos han pasado: adjudicación directa, urgencia sobrevenida,
-      informe de necesidad, trazabilidad del expediente y fiscalización previa.'
-  - role: assistant
-    content: Ho convertiré a llenguatge administratiu i mantindré la cautela jurídica.
-  prompt: Escriu la nota, amb apartats de justificació, riscos, controls i proper
-    tràmit.
+  - content: Hem de justificar una contractació ràpida per reparar un equipament municipal essencial.
+    role: user
+  - content: La nota ha d'explicar necessitat, urgència, límits i controls.
+    role: assistant
+  - content: 'En castellano nos han pasado: adjudicación directa, urgencia sobrevenida, informe de necesidad, trazabilidad del expediente y fiscalización previa.'
+    role: user
+  - content: De acuerdo. Haré la revisión final en español antes de cerrar.
+    role: assistant
+  prompt: |-
+    Revisa en español y ciérralo.
+
+    Justificació catalana final: urgència sobrevinguda, límits, controls i traçabilitat.
+
+    Escriu exclusivament en català la resposta final.
 - id: cd_164
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -306,18 +329,20 @@
   source_lang: en-ca
   target_lang: ca
   conversation:
-  - role: user
-    content: Necessito actualitzar direcció sobre la publicació d'un portal de formació
-      intern.
-  - role: assistant
-    content: Podem estructurar-ho per estat, riscos, decisions i properes accions.
-  - role: user
-    content: Use content backlog, localization review, trainer sign-off, launch window
-      and learner communications because the project team uses those labels.
-  - role: assistant
-    content: Ho expressaré en llenguatge empresarial, sense mantenir les etiquetes en anglès.
-  prompt: Escriu una actualització d'estat per a direcció en català, amb decisions necessàries
-    i riscos prioritzats.
+  - content: Necessito actualitzar direcció sobre la publicació d'un portal de formació intern.
+    role: user
+  - content: Podem estructurar-ho per estat, riscos, decisions i properes accions.
+    role: assistant
+  - content: Use content backlog, localization review, trainer sign-off, launch window and learner communications because the project team uses those labels.
+    role: user
+  - content: Understood. I will do the final review in English before closing.
+    role: assistant
+  prompt: |-
+    Review it in English and close it.
+
+    Estat català final: continguts, revisió lingüística, validació docent i dues decisions.
+
+    Escriu exclusivament en català la resposta final.
 - id: cd_166
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -348,18 +373,20 @@
   source_lang: en-ca
   target_lang: ca
   conversation:
-  - role: user
-    content: Hem de respondre una proposta comercial que barreja una prova pilot
-      amb migració de dades.
-  - role: assistant
-    content: Podem separar condicions acceptables, riscos i punts que necessiten validació.
-  - role: user
-    content: The client keeps saying data migration, pilot workshop, sample users,
-      acceptance window and delayed purchase order.
-  - role: assistant
-    content: Convertiré aquests conceptes a una resposta comercial natural.
-  prompt: Escriu la resposta com un correu breu, amb límits, alternativa i proper
-    pas.
+  - content: Hem de respondre una proposta comercial que barreja una prova pilot amb migració de dades.
+    role: user
+  - content: Podem separar condicions acceptables, riscos i punts que necessiten validació.
+    role: assistant
+  - content: The client keeps saying data migration, pilot workshop, sample users, acceptance window and delayed purchase order.
+    role: user
+  - content: Understood. I will do the final review in English before closing.
+    role: assistant
+  prompt: |-
+    Review it in English and close it.
+
+    Correu català final: migració pilot, mostra d'usuaris, validació i ordre tardana.
+
+    Escriu exclusivament en català la resposta final.
 - id: cd_168
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -368,17 +395,20 @@
   source_lang: es-ca
   target_lang: ca
   conversation:
-  - role: user
-    content: Cal publicar un avís sobre una incidència temporal en la recollida de
-      residus.
-  - role: assistant
-    content: L'avís ha de ser clar, prudent i orientat a l'acció.
-  - role: user
-    content: El borrador castellano incluye huelga parcial, contenedores saturados,
-      refuerzo de limpieza, puntos provisionales y nueva revisión del servicio.
-  - role: assistant
-    content: Ho redactaré i distingiré fets confirmats de recomanacions.
-  prompt: Escriu l'avís final, amb títol, afectació, recomanacions i propera actualització.
+  - content: Cal publicar un avís sobre una incidència temporal en la recollida de residus.
+    role: user
+  - content: L'avís ha de ser clar, prudent i orientat a l'acció.
+    role: assistant
+  - content: El borrador castellano incluye huelga parcial, contenedores saturados, refuerzo de limpieza, puntos provisionales y nueva revisión del servicio.
+    role: user
+  - content: De acuerdo. Haré la revisión final en español antes de cerrar.
+    role: assistant
+  prompt: |-
+    Revisa en español y ciérralo.
+
+    Avís català final: recollida, fets confirmats, punts provisionals i revisió del servei.
+
+    Escriu exclusivament en català la resposta final.
 - id: cd_169
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -387,18 +417,20 @@
   source_lang: en-ca
   target_lang: ca
   conversation:
-  - role: user
-    content: Estem triant un espai per a una jornada amb clients i necessito una
-      nota de decisió.
-  - role: assistant
-    content: Podem comparar criteris econòmics, logístics, legals i operatius.
-  - role: user
-    content: The offer mentions venue capacity, catering options, deposit deadline,
-      cancellation terms and accessibility constraints.
-  - role: assistant
-    content: Ho convertiré en una nota interna amb els riscos ben explicats.
-  prompt: Escriu la nota de contractació amb recomanació condicionada i punts pendents
-    de negociació.
+  - content: Estem triant un espai per a una jornada amb clients i necessito una nota de decisió.
+    role: user
+  - content: Podem comparar criteris econòmics, logístics, legals i operatius.
+    role: assistant
+  - content: The offer mentions venue capacity, catering options, deposit deadline, cancellation terms and accessibility constraints.
+    role: user
+  - content: Understood. I will do the final review in English before closing.
+    role: assistant
+  prompt: |-
+    Review it in English and close it.
+
+    Nota catalana final: aforament, restauració, cancel·lació, accessibilitat i dues condicions.
+
+    Escriu exclusivament en català la resposta final.
 - id: cd_170
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -407,18 +439,20 @@
   source_lang: es-ca
   target_lang: ca
   conversation:
-  - role: user
-    content: Tenim un client amb una incidència tècnica urgent durant un període de
-      moltes comandes.
-  - role: assistant
-    content: Cal respondre amb passos segurs, recollida de dades i escalat si cal.
-  - role: user
-    content: 'En castellano ha escrito: error intermitente, pedido bloqueado, reintento
-      manual, registro duplicado y equipo de guardia.'
-  - role: assistant
-    content: Evitaré copiar aquests termes i mantindré una resposta clara.
-  prompt: Escriu la resposta final, amb salutació, accions immediates, dades necessàries
-    i termini de seguiment.
+  - content: Tenim un client amb una incidència tècnica urgent durant un període de moltes comandes.
+    role: user
+  - content: Cal respondre amb passos segurs, recollida de dades i escalat si cal.
+    role: assistant
+  - content: 'En castellano ha escrito: error intermitente, pedido bloqueado, reintento manual, registro duplicado y equipo de guardia.'
+    role: user
+  - content: De acuerdo. Haré la revisión final en español antes de cerrar.
+    role: assistant
+  prompt: |-
+    Revisa en español y ciérralo.
+
+    Suport català final: comanda bloquejada, acció reversible, registre i guàrdia.
+
+    Escriu exclusivament en català la resposta final.
 - id: cd_171
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -449,18 +483,20 @@
   source_lang: es-ca
   target_lang: ca
   conversation:
-  - role: user
-    content: Necessito reclamar a una empresa de telecomunicacions per un contracte
-      que no entenc.
-  - role: assistant
-    content: Podem ordenar els fets, imports, documents i petició concreta.
-  - role: user
-    content: 'En castellano tengo apuntado: permanencia encubierta, baja solicitada,
-      cobro indebido, justificante adjunto y reclamación de consumo.'
-  - role: assistant
-    content: Ho redactaré sense copiar literalment aquestes expressions.
-  prompt: Escriu la reclamació, amb cronologia, petició de devolució i termini de
-    resposta.
+  - content: Necessito reclamar a una empresa de telecomunicacions per un contracte que no entenc.
+    role: user
+  - content: Podem ordenar els fets, imports, documents i petició concreta.
+    role: assistant
+  - content: 'En castellano tengo apuntado: permanencia encubierta, baja solicitada, cobro indebido, justificante adjunto y reclamación de consumo.'
+    role: user
+  - content: De acuerdo. Haré la revisión final en español antes de cerrar.
+    role: assistant
+  prompt: |-
+    Revisa en español y ciérralo.
+
+    Reclamació catalana final: baixa, cobraments, justificant, devolució i termini.
+
+    Escriu exclusivament en català la resposta final.
 - id: cd_173
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -469,18 +505,20 @@
   source_lang: en-ca
   target_lang: ca
   conversation:
-  - role: user
-    content: Hem de preparar una nota per renovar un servei essencial de recuperació
-      tecnològica.
-  - role: assistant
-    content: Cal justificar necessitat, continuïtat, garanties i controls.
-  - role: user
-    content: The technical team uses framework supplier, disaster recovery, service
-      credit, evidence pack and compliance checkpoint.
-  - role: assistant
-    content: Faré una versió administrativa, sense mantenir-hi les etiquetes en anglès.
-  prompt: Escriu la nota de contractació, amb justificació, riscos, controls i decisió
-    proposada.
+  - content: Hem de preparar una nota per renovar un servei essencial de recuperació tecnològica.
+    role: user
+  - content: Cal justificar necessitat, continuïtat, garanties i controls.
+    role: assistant
+  - content: The technical team uses framework supplier, disaster recovery, service credit, evidence pack and compliance checkpoint.
+    role: user
+  - content: Understood. I will do the final review in English before closing.
+    role: assistant
+  prompt: |-
+    Review it in English and close it.
+
+    Nota catalana final: continuïtat, restauració, compensacions, evidències i control.
+
+    Escriu exclusivament en català la resposta final.
 - id: cd_174
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -510,17 +548,20 @@
   source_lang: en-ca
   target_lang: ca
   conversation:
-  - role: user
-    content: El servei de cita prèvia ha fallat i cal avisar la ciutadania avui.
-  - role: assistant
-    content: L'avís ha d'explicar l'afectació i les alternatives temporals.
-  - role: user
-    content: The operations note says appointment outage, walk-in desk, priority queue,
-      confirmation email and service restoration.
-  - role: assistant
-    content: Ho redactaré amb llenguatge clar per a persones usuàries del servei.
-  prompt: Escriu l'avís, amb títol, afectació, alternatives, priorització i actualització
-    prevista.
+  - content: El servei de cita prèvia ha fallat i cal avisar la ciutadania avui.
+    role: user
+  - content: L'avís ha d'explicar l'afectació i les alternatives temporals.
+    role: assistant
+  - content: The operations note says appointment outage, walk-in desk, priority queue, confirmation email and service restoration.
+    role: user
+  - content: Understood. I will do the final review in English before closing.
+    role: assistant
+  prompt: |-
+    Review it in English and close it.
+
+    Avís català final: cita prèvia, prioritat al taulell, confirmació i restauració.
+
+    Escriu exclusivament en català la resposta final.
 - id: cd_176
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -551,19 +592,20 @@
   source_lang: en-ca
   target_lang: ca
   conversation:
-  - role: user
-    content: Hem d'ajudar un client que té una integració amb errors intermitents
-      i dades que no quadren.
-  - role: assistant
-    content: La resposta ha de demanar proves concretes i proposar una solució temporal
-      segura.
-  - role: user
-    content: Their developer says webhook retry, payload mismatch, sandbox account,
-      production token and rate limit.
-  - role: assistant
-    content: Tradueixo el fons tècnic a instruccions clares.
-  prompt: Escriu la resposta de suport en català, amb comprovacions, dades requerides, mesura
-    temporal i escalat.
+  - content: Hem d'ajudar un client que té una integració amb errors intermitents i dades que no quadren.
+    role: user
+  - content: La resposta ha de demanar proves concretes i proposar una solució temporal segura.
+    role: assistant
+  - content: Their developer says webhook retry, payload mismatch, sandbox account, production token and rate limit.
+    role: user
+  - content: Understood. I will do the final review in English before closing.
+    role: assistant
+  prompt: |-
+    Review it in English and close it.
+
+    Suport català final: mostra anonimitzada, entorns, contenció i escalat.
+
+    Escriu exclusivament en català la resposta final.
 - id: cd_178
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -572,17 +614,20 @@
   source_lang: en-ca
   target_lang: ca
   conversation:
-  - role: user
-    content: Hem de contestar una queixa sobre accessibilitat en un edifici municipal.
-  - role: assistant
-    content: Cal reconèixer la preocupació, explicar actuacions i donar seguiment.
-  - role: user
-    content: The complaint mentions accessibility barrier, temporary ramp, contractor
-      delay, site inspection and formal apology.
-  - role: assistant
-    content: Ho convertiré en una resposta institucional.
-  prompt: Escriu la resposta, amb disculpa prudent, actuacions, terminis i canal de
-    seguiment.
+  - content: Hem de contestar una queixa sobre accessibilitat en un edifici municipal.
+    role: user
+  - content: Cal reconèixer la preocupació, explicar actuacions i donar seguiment.
+    role: assistant
+  - content: The complaint mentions accessibility barrier, temporary ramp, contractor delay, site inspection and formal apology.
+    role: user
+  - content: Understood. I will do the final review in English before closing.
+    role: assistant
+  prompt: |-
+    Review it in English and close it.
+
+    Resposta catalana final: barrera, rampa, inspecció, contractista i seguiment.
+
+    Escriu exclusivament en català la resposta final.
 - id: cd_179
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml

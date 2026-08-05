@@ -30,15 +30,15 @@
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: administracio
   workflow: public_notice
-  source_lang: en-ca
+  source_lang: es-ca
   target_lang: ca
   prompt: 'Escriu en català un avís públic amb títol i cos. Transforma la informació
     de la font en llenguatge administratiu clar, sense conservar les expressions en
-    anglès.
+    castellà.
 
-    Font (anglès): "The library elevator will be unavailable tomorrow afternoon.
-    Staff will move reserved books to the ground floor and arrange assisted access
-    on request."'
+    Font (castellà): "El ascensor de la biblioteca no estará disponible mañana por
+    la tarde. El personal trasladará los libros reservados a la planta baja y organizará
+    acceso asistido cuando se solicite."'
 - id: cd_033
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -69,13 +69,14 @@
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: usuari_final
   workflow: study_plan
-  source_lang: en-ca
+  source_lang: es-ca
   target_lang: ca
   prompt: 'Prepara un pla d''estudi en català d''una setmana a partir de la font. Ha de tenir
     fites diàries i un control de progrés.
 
-    Font (anglès): "Start with a mock exam, identify weak topics, do timed practice
-    for two days, and keep the last evening for a final review."'
+    Font (castellà): "Empieza con un examen de prueba, identifica los temas más flojos,
+    practica con tiempo limitado durante dos días y reserva la última tarde para el
+    repaso final."'
 - id: cd_036
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
