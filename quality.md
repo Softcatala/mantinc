@@ -53,7 +53,7 @@ Any evaluation against local models must be run against `localhost:9090` (the lo
 ```bash
 .venv/bin/python -m unittest discover -s tests -v
 .venv/bin/python scripts/assess_dataset_quality.py
-.venv/bin/python scripts/run_inference_pilot.py --model gemma3:12b --per-category 10
+.venv/bin/python scripts/run_inference_pilot.py --endpoint http://localhost:9090 --model gemma3:12b --per-category 10
 ```
 
 ## Deliverable

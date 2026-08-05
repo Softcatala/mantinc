@@ -94,7 +94,7 @@ def render_html(rows_by_id, neighbors_by_id, top, min_score) -> str:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--top", type=int, default=3, help="Neighbors per row (default 3)")
-    parser.add_argument("--min-score", type=float, default=0.5, help="Skip neighbors below this score (default 0.5)")
+    parser.add_argument("--min-score", type=float, default=0.8, help="Skip neighbors below this score (default 0.8)")
     parser.add_argument(
         "--html",
         type=Path,
