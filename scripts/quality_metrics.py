@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 import html
 import sys
+from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -93,7 +94,7 @@ def render_html(rows_by_id, neighbors_by_id, top, min_score) -> str:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--top", type=int, default=3, help="Neighbors per row (default 3)")
-    parser.add_argument("--min-score", type=float, default=0.0, help="Skip neighbors below this score")
+    parser.add_argument("--min-score", type=float, default=0.5, help="Skip neighbors below this score (default 0.5)")
     parser.add_argument(
         "--html",
         type=Path,
@@ -133,6 +134,19 @@ def main() -> None:
         encoding="utf-8",
     )
     print(f"# HTML: {args.html}")
+
+    with_duplicates = sum(1 for neighbors in neighbors_by_id.values() if neighbors)
+    pct = (with_duplicates / n * 100) if n else 0.0
+    print(f"# entries: {n}")
+    print(f"# entries with duplication: {with_duplicates}")
+    print(f"# duplication rate: {pct:.1f}%")
+
+    for label, field in (("personas", "persona"), ("source languages", "source_lang")):
+        counts = Counter(str(row.get(field) or "unknown") for row in rows)
+        print(f"# {label}:")
+        for value, count in sorted(counts.items(), key=lambda kv: (-kv[1], kv[0])):
+            share = (count / n * 100) if n else 0.0
+            print(f"#   {value}: {count} ({share:.1f}%)")
 
 
 if __name__ == "__main__":
