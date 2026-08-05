@@ -157,8 +157,6 @@ Latest completed results on the 300-item Catalan Drift dataset:
 |---|---:|---:|---:|---:|---:|---:|
 | Gemini 3.6 Flash | **95.7%** | 100.0% | 98.3% | 98.3% | 91.7% | 90.0% |
 | GPT-5.6 | 93.7% | 100.0% | 100.0% | 95.0% | 73.3% | 100.0% |
-| Gemma 3 12B Q8 | 75.7% | 98.3% | 78.3% | 80.0% | 28.3% | 93.3% |
-| Qwen2.5 1.5B Q8 | 42.7% | 73.3% | 23.3% | 53.3% | 20.0% | 43.3% |
 
 At 95% confidence, the maximum margin of error is ±5.7 percentage points
 for overall scores (n=300) and ±12.7 percentage points for category scores
@@ -169,5 +167,5 @@ scores (n=60, ±12.7 pp at 95%) are useful for spotting *where* a model
 struggles, not for ranking models against each other — most per-category gaps
 in this table are within the margin of error.
 
-Only models with completed result files are shown. All listed evaluations had
-zero API or empty-response failures.
+Only models with completed results from the current cloud run are shown. All
+listed evaluations had zero API or empty-response failures.
