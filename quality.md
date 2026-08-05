@@ -48,6 +48,8 @@ Rate construct validity, measurement validity, internal validity, external valid
 
 ## Commands
 
+Any evaluation against local models must be run against `localhost:9090` (the local inference endpoint). Do not run local-model evals against any other host or port.
+
 ```bash
 .venv/bin/python -m unittest discover -s tests -v
 .venv/bin/python scripts/assess_dataset_quality.py
