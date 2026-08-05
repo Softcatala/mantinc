@@ -99,14 +99,14 @@ eval-summary:
 eval-one:
 	@test -n "$(MODEL_ARGS)" || (echo "Set MODEL_ARGS, for example: make eval MODEL_ARGS=pretrained=Qwen/Qwen3.5-9B-Q8_0-llama" && exit 2)
 	@mkdir -p "$$(dirname "$(EVAL_TIMELINE)")"
-	@start=$$(date +%s); start_iso=$$(date -Is); \
+	@start=$$(date +%s); start_iso=$$(date '+%Y-%m-%dT%H:%M:%S%z'); \
 	printf '[%s] eval start: %s\n' "$(DISPLAY_MODEL)" "$$start_iso"; \
 	printf '%s\t%s\t%s\t%s\t%s\n' "$(RUN_NAME)" "$(DISPLAY_MODEL)" start "$$start_iso" "" >> "$(EVAL_TIMELINE)"; \
 	$(LM_EVAL) --include_path lm_eval_tasks --tasks "$(TASK)" --model "$(LM_EVAL_MODEL)" --model_args "$(MODEL_ARGS)" --apply_chat_template --log_samples --output_path "$(OUT_DIR)" $(if $(LIMIT),--limit "$(LIMIT)",) $(if $(GEN_KWARGS),--gen_kwargs '$(GEN_KWARGS)',); status=$$?; \
 	if [ $$status -eq 0 ]; then \
 		$(PYTHON) scripts/catalan_drift_eval.py score-lm-eval --prompts $(PROMPTS) --samples "$$(find "$(OUT_DIR)" -name "samples_$(TASK)*.jsonl" | sort | tail -n 1)" --model "$(DISPLAY_MODEL)" --responses-output "outputs/$(RUN_NAME).$(TASK).responses.jsonl" --report "outputs/$(RUN_NAME).$(TASK).custom_report.json" --failures-file "outputs/failures_$(RUN_NAME).txt" --passes-file "outputs/pass_$(RUN_NAME).txt" --prompt-result-file "outputs/$(RUN_NAME).$(TASK).prompt_result.txt"; status=$$?; \
 	fi; \
-	end=$$(date +%s); end_iso=$$(date -Is); elapsed=$$((end - start)); \
+	end=$$(date +%s); end_iso=$$(date '+%Y-%m-%dT%H:%M:%S%z'); elapsed=$$((end - start)); \
 	if [ $$status -eq 0 ]; then event=end; printf '[%s] eval end: %s (duration %ss)\n' "$(DISPLAY_MODEL)" "$$end_iso" "$$elapsed"; else event=failed; printf '[%s] eval failed: %s (duration %ss, status %s)\n' "$(DISPLAY_MODEL)" "$$end_iso" "$$elapsed" "$$status"; fi; \
 	printf '%s\t%s\t%s\t%s\t%s\n' "$(RUN_NAME)" "$(DISPLAY_MODEL)" "$$event" "$$end_iso" "$$elapsed" >> "$(EVAL_TIMELINE)"; \
 	exit $$status
