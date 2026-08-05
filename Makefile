@@ -6,6 +6,8 @@ GEN_KWARGS ?= {"temperature":0}
 DISPLAY_MODEL ?= $(MODEL_ARGS)
 OUT_DIR ?= outputs/lm_eval/$(RUN_NAME)
 EVAL_TIMELINE ?= outputs/eval_timeline.tsv
+LINE_DETECTION_INPUT ?= outputs/quality_assessment/pilot_responses.jsonl
+LINE_DETECTION_REPORT ?= differences.html
 PROMPTS ?= data/prompts_monolingual.yaml data/prompts_crosslingual_basic.yaml data/prompts_multi_turn.yaml data/prompts_crosslingual_advanced.yaml data/prompts_rag_context.yaml
 EXPORT ?= data/lm_eval/catalan_drift.jsonl
 DEFAULT_EVAL_RUNS ?= gpt-5.6 gemini-3.6-flash
@@ -42,7 +44,7 @@ SKIP_EXPORT ?=
 LIMIT ?=
 EVAL_EXPORT_PREREQ := $(if $(SKIP_EXPORT),,export-lm-eval)
 
-.PHONY: build clean-outputs language-id-model export-lm-eval eval eval-one eval-local-openai eval-all eval-cloud eval-local-all eval-summary
+.PHONY: build clean-outputs language-id-model export-lm-eval eval eval-one eval-local-openai eval-all eval-cloud eval-local-all eval-summary compare-line-detection
 .PHONY: $(REMOTE_EVAL_TARGETS) $(LOCAL_EVAL_TARGETS)
 
 build:
@@ -50,6 +52,9 @@ build:
 
 language-id-model: $(LANGUAGE_ID_MODEL)
 	@echo "Language ID model ready: $(LANGUAGE_ID_MODEL)"
+
+compare-line-detection: language-id-model
+	$(PYTHON) scripts/compare_line_detection.py --input "$(LINE_DETECTION_INPUT)" --output "$(LINE_DETECTION_REPORT)"
 
 $(LANGUAGE_ID_MODEL):
 	@mkdir -p "$$(dirname "$@")"

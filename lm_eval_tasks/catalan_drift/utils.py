@@ -1,6 +1,7 @@
 import os
 import re
 import shutil
+import string
 import subprocess
 from collections.abc import Iterable
 from functools import partial
@@ -12,6 +13,8 @@ LANGUAGE_FAIL_NON_CA_RATIO = 0.15
 LANGUAGE_MIN_CONFIDENCE = 0.71
 LANGUAGE_MIN_ALPHA_TOKENS = 5
 LANGUAGE_WINDOW_TOKENS = 40
+LCB_LINE_MIN_TOKENS = 5
+LCB_LINE_MIN_CONFIDENCE = 0.3
 DEFAULT_LANGUAGE_ID_MODEL = "models/lid.176.ftz"
 DEFAULT_FASTTEXT_BINARY = "models/fasttext"
 
@@ -129,6 +132,68 @@ def _predict_fasttext(text: str) -> tuple[str, float]:
         raise RuntimeError("fastText did not return a prediction")
     lang = parts[0].removeprefix("__label__").casefold().replace("-", "_").split("_", 1)[0]
     return lang, float(parts[1])
+
+
+def _lcb_normalize(text: str) -> str:
+    """Reproduce the normalization in the official LCB metric script."""
+    text = text.split("\nQ:", 1)[0].strip()
+    text = text.translate(str.maketrans("", "", string.punctuation))
+    return text.replace("—", " ").replace("،", "")
+
+
+def lcb_line_language_result(doc, response: str) -> dict[str, object]:
+    """Apply Marchisio et al.'s released line-level detector logic.
+
+    LCB normalizes punctuation, splits on newlines, skips lines with fewer
+    than five whitespace-delimited tokens, and fails if any eligible line's
+    top fastText label differs from the target. Predictions at confidence
+    <= 0.3 become ``unknown`` and therefore fail.
+
+    Responses without eligible lines are excluded from LCB's LPR denominator,
+    represented here by ``passed=None``.
+    """
+    target_lang = str(doc.get("target_lang") or "").casefold()
+    if not target_lang:
+        raise ValueError("LCB line detection requires doc['target_lang']")
+
+    lines = []
+    for line_number, line in enumerate(_lcb_normalize(response).split("\n"), 1):
+        tokens = line.split()
+        if len(tokens) < LCB_LINE_MIN_TOKENS:
+            continue
+        lang, confidence = _predict_fasttext(line)
+        predicted_lang = lang if confidence > LCB_LINE_MIN_CONFIDENCE else "unknown"
+        lines.append(
+            {
+                "line_number": line_number,
+                "text": line,
+                "tokens": len(tokens),
+                "predicted_lang": predicted_lang,
+                "raw_predicted_lang": lang,
+                "confidence": confidence,
+                "error": predicted_lang != target_lang,
+            }
+        )
+
+    if not lines:
+        return {
+            "eligible": False,
+            "passed": None,
+            "line_accuracy": None,
+            "eligible_lines": 0,
+            "error_lines": 0,
+            "lines": [],
+        }
+
+    error_lines = sum(bool(line["error"]) for line in lines)
+    return {
+        "eligible": True,
+        "passed": error_lines == 0,
+        "line_accuracy": 1 - error_lines / len(lines),
+        "eligible_lines": len(lines),
+        "error_lines": error_lines,
+        "lines": lines,
+    }
 
 
 def _language_errors(doc, response):
