@@ -156,6 +156,7 @@ Latest completed results on the 300-item Catalan Drift dataset:
 | Model | Overall | Monolingual | Crosslingual basic | Multi-turn | Crosslingual advanced | RAG context |
 |---|---:|---:|---:|---:|---:|---:|
 | GPT-5.6 | **97.0%** | 100.0% | 100.0% | 98.3% | 86.7% | 100.0% |
+| Gemma 3 12B Q8 | 96.0% | 100.0% | 98.3% | 100.0% | 81.7% | 100.0% |
 | Gemini 3.6 Flash | 94.0% | 100.0% | 100.0% | 95.0% | 90.0% | 85.0% |
 
 At 95% confidence, the maximum margin of error is ±5.7 percentage points
@@ -167,5 +168,5 @@ scores (n=60, ±12.7 pp at 95%) are useful for spotting *where* a model
 struggles, not for ranking models against each other — most per-category gaps
 in this table are within the margin of error.
 
-Only models with completed results from the current cloud run are shown. All
+Only models with completed results from the current run are shown. All
 listed evaluations had zero API or empty-response failures.
