@@ -155,7 +155,8 @@ Latest completed results on the 300-item Catalan Drift dataset:
 
 | Model | Overall | Monolingual | Crosslingual basic | Multi-turn | Crosslingual advanced | RAG context |
 |---|---:|---:|---:|---:|---:|---:|
-| GPT-5.6 | **97.0%** | 100.0% | 100.0% | 98.3% | 86.7% | 100.0% |
+| Gemma 4 E4B Q4 K M | **97.7%** | 98.3% | 100.0% | 100.0% | 95.0% | 95.0% |
+| GPT-5.6 | 97.0% | 100.0% | 100.0% | 98.3% | 86.7% | 100.0% |
 | Gemma 3 12B Q8 | 96.0% | 100.0% | 98.3% | 100.0% | 81.7% | 100.0% |
 | Gemini 3.6 Flash | 94.0% | 100.0% | 100.0% | 95.0% | 90.0% | 85.0% |
 | EuroLLM 9B Instruct Q8 | 92.3% | 100.0% | 86.7% | 95.0% | 81.7% | 98.3% |
