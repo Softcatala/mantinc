@@ -158,6 +158,7 @@ Latest completed results on the 300-item Catalan Drift dataset:
 | GPT-5.6 | **97.0%** | 100.0% | 100.0% | 98.3% | 86.7% | 100.0% |
 | Gemma 3 12B Q8 | 96.0% | 100.0% | 98.3% | 100.0% | 81.7% | 100.0% |
 | Gemini 3.6 Flash | 94.0% | 100.0% | 100.0% | 95.0% | 90.0% | 85.0% |
+| EuroLLM 9B Instruct Q8 | 92.3% | 100.0% | 86.7% | 95.0% | 81.7% | 98.3% |
 
 At 95% confidence, the maximum margin of error is ±5.7 percentage points
 for overall scores (n=300) and ±12.7 percentage points for category scores
