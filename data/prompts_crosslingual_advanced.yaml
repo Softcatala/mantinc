@@ -59,7 +59,7 @@
 
       PRÓXIMO PASO:'
   - role: assistant
-    content: De acuerdo. Haré la revisión final en español antes de cerrar.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: |-
     Redacta en català la decisió interna sobre la renovació de l'eina. Ha de tractar el venciment, l'inventari d'usuaris, la compatibilitat amb l'arxiu electrònic i la pròrroga condicionada.
 - id: cd_h9_065
@@ -132,7 +132,7 @@
     content: |-
       BORRADOR PARA REVISIÓN
       ASUNTO Y OBJETIVO
-      Hem d'avisar el veïnat d'una actuació de poda en un carrer estret. El aviso anterior hablaba de acera ocupada, desvío peatonal, señalización provisional y retirada temporal de bicicletas. Revisa en español todos los requisitos antes de cerrar. Comprueba también los riesgos, acciones y seguimiento. Prepara ya la versión final completa.
+      Hem d'avisar el veïnat d'una actuació de poda en un carrer estret. El aviso anterior hablaba de acera ocupada, desvío peatonal, señalización provisional y retirada temporal de bicicletas. Revisa todos los requisitos antes de cerrar. Comprueba también los riesgos, acciones y seguimiento. Prepara ya la versión final completa.
       ACTUACIÓN RECOMENDADA Y PRÓXIMO PASO
   prompt: Dona una guia breu en català amb passos ordenats i consells pràctics.
 - id: cd_h9_069
@@ -168,7 +168,7 @@
     content: |-
       BORRADOR PARA REVISIÓN
       ASUNTO Y OBJETIVO
-      Hem d'avisar el veïnat d'una actuació de poda en un carrer estret. El aviso anterior hablaba de acera ocupada, desvío peatonal, señalización provisional y retirada temporal de bicicletas. Revisa en español todos los requisitos antes de cerrar. Comprueba también los riesgos, acciones y seguimiento. Prepara ya la versión final completa.
+      Hem d'avisar el veïnat d'una actuació de poda en un carrer estret. El aviso anterior hablaba de acera ocupada, desvío peatonal, señalización provisional y retirada temporal de bicicletas. Revisa todos los requisitos antes de cerrar. Comprueba también los riesgos, acciones y seguimiento. Prepara ya la versión final completa.
       ACTUACIÓN RECOMENDADA Y PRÓXIMO PASO
   prompt: Escriu en català la resposta de l'assistent com un correu breu.
 - id: cd_h9_166
@@ -306,7 +306,7 @@
     content: |-
       BORRADOR PARA REVISIÓN
       ASUNTO Y OBJETIVO
-      Hem d'avisar el veïnat d'una actuació de poda en un carrer estret. El aviso anterior hablaba de acera ocupada, desvío peatonal, señalización provisional y retirada temporal de bicicletas. Revisa en español todos los requisitos antes de cerrar. Comprueba también los riesgos, acciones y seguimiento. Prepara ya la versión final completa.
+      Hem d'avisar el veïnat d'una actuació de poda en un carrer estret. El aviso anterior hablaba de acera ocupada, desvío peatonal, señalización provisional y retirada temporal de bicicletas. Revisa todos los requisitos antes de cerrar. Comprueba también los riesgos, acciones y seguimiento. Prepara ya la versión final completa.
       ACTUACIÓN RECOMENDADA Y PRÓXIMO PASO
   prompt: Escriu en català l'actualització d'estat.
 - id: cd_h9_178
@@ -358,7 +358,7 @@
   - role: assistant
     content: Ho convertiré en llenguatge administratiu, amb responsabilitats i terminis clars.
   - role: user
-    content: Revisa en español todos los requisitos antes de cerrar.
+    content: Revisa todos los requisitos antes de cerrar.
   - role: assistant
     content: D'acord. Conservaré tots els requisits.
   - role: user
@@ -368,7 +368,7 @@
   - role: user
     content: Prepara ya la versión final completa.
   - role: assistant
-    content: De acuerdo. Haré la revisión final en español antes de cerrar.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: |-
     Fes en català una actualització d'estat sobre l'enquesta pilot, la moderació, l'espai disponible, la sessió prevista i el risc que cal assumir de manera responsable.
 - id: cd_h19_062
@@ -388,7 +388,7 @@
   - role: assistant
     content: Usaré la información relevante y mantendré un formato administrativo claro.
   - role: user
-    content: Revisa en español todos los requisitos antes de cerrar.
+    content: Revisa todos los requisitos antes de cerrar.
   - role: assistant
     content: D'acord. Conservaré tots els requisits.
   - role: user
@@ -398,7 +398,7 @@
   - role: user
     content: Prepara ya la versión final completa.
   - role: assistant
-    content: De acuerdo. Haré la revisión final en español antes de cerrar.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: |-
     Escriu en català l'avís veïnal sobre la poda, l'ocupació de la vorera, el desviament de pas, la retirada temporal de bicicletes i el canal d'incidències.
 - id: cd_h19_068
@@ -418,7 +418,7 @@
   - role: assistant
     content: Faré una versió formal i concreta.
   - role: user
-    content: Revisa en español todos los requisitos antes de cerrar.
+    content: Revisa todos los requisitos antes de cerrar.
   - role: assistant
     content: D'acord. Conservaré tots els requisits.
   - role: user
@@ -428,7 +428,7 @@
   - role: user
     content: Prepara ya la versión final completa.
   - role: assistant
-    content: De acuerdo. Haré la revisión final en español antes de cerrar.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: |-
     Escriu en català el correu a la propietat sobre la fiança, les fotografies de l'estat del pis, les lectures de subministraments, la neteja i el reintegrament.
 - id: cd_h19_160
@@ -455,7 +455,7 @@
     content: |-
       Fes una resposta clara, amb condicions de pausa i data de revisió.
 
-      Revisa en español todos los requisitos antes de cerrar.
+      Revisa todos los requisitos antes de cerrar.
   - role: assistant
     content: |-
       I am reviewing the English source details and will keep the working draft in English. The ticket mentions domain migration, email bounces, whitelist request, spam filtering and a missing delivery report.
@@ -472,7 +472,7 @@
       ASUNTO Y OBJETIVO
       Treballo a l'ajuntament i hem de contestar una queixa sobre mobilitat al mercat setmanal. La queja habla de carril bici ocupado, vallas mal colocadas, acceso difícil para carritos y falta de señalización. Fes-ho formal però proper, sense culpar els paradistes.
 
-      Antes de terminar, incorpora los hechos, riesgos y próximos pasos del contexto. Haz una última revisión en español y deja lista la respuesta final.
+      Antes de terminar, incorpora los hechos, riesgos y próximos pasos del contexto. Haz una última revisión y deja lista la respuesta final.
       ACTUACIÓN RECOMENDADA Y PRÓXIMO PASO
   prompt: Escriu la propera resposta de l'assistent com un correu amb assumpte i cos.
 - id: cd_h19_162
@@ -492,7 +492,7 @@
   - role: assistant
     content: Entenc que cal transformar els detalls tècnics sense repetir-los literalment.
   - role: user
-    content: Revisa en español todos los requisitos antes de cerrar.
+    content: Revisa todos los requisitos antes de cerrar.
   - role: assistant
     content: D'acord. Conservaré tots els requisits.
   - role: user
@@ -502,7 +502,7 @@
   - role: user
     content: Prepara ya la versión final completa.
   - role: assistant
-    content: De acuerdo. Haré la revisión final en español antes de cerrar.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: |-
     Prepara en català una resposta de suport sobre el canvi de domini, els rebots de correu, el correu brossa, l'informe necessari i el criteri d'escalat.
 - id: cd_h19_163
@@ -522,7 +522,7 @@
   - role: assistant
     content: Ho convertiré a llenguatge administratiu i mantindré la cautela jurídica.
   - role: user
-    content: Revisa en español todos los requisitos antes de cerrar.
+    content: Revisa todos los requisitos antes de cerrar.
   - role: assistant
     content: D'acord. Conservaré tots els requisits.
   - role: user
@@ -532,7 +532,7 @@
   - role: user
     content: Prepara ya la versión final completa.
   - role: assistant
-    content: De acuerdo. Haré la revisión final en español antes de cerrar.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: |-
     Redacta en català una nota interna sobre la interpretació, les hores de servei, el pressupost, la sala disponible i l'assistència prevista.
 - id: cd_h19_169
@@ -552,7 +552,7 @@
   - role: assistant
     content: Ho convertiré en una nota interna amb els riscos ben explicats.
   - role: user
-    content: Revisa en español todos los requisitos antes de cerrar.
+    content: Revisa stodos los requisitos antes de cerrar.
   - role: assistant
     content: D'acord. Conservaré tots els requisits.
   - role: user
@@ -562,7 +562,7 @@
   - role: user
     content: Prepara ya la versión final completa.
   - role: assistant
-    content: De acuerdo. Haré la revisión final en español antes de cerrar.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: |-
     Elabora en català una comparativa de compra que valori els materials, el termini de lliurament, el muntatge, la garantia i les verificacions necessàries.
 - id: cd_h19_170
@@ -582,7 +582,7 @@
   - role: assistant
     content: Evitaré copiar aquests termes i mantindré una resposta clara.
   - role: user
-    content: Revisa en español todos los requisitos antes de cerrar.
+    content: Revisa todos los requisitos antes de cerrar.
   - role: assistant
     content: D'acord. Conservaré tots els requisits.
   - role: user
@@ -592,7 +592,7 @@
   - role: user
     content: Prepara ya la versión final completa.
   - role: assistant
-    content: De acuerdo. Haré la revisión final en español antes de cerrar.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: |-
     Prepara en català una resposta de suport sobre el catàleg, la plantilla importada, la mostra, l'estoc, les imatges i el possible escalat.
 - id: cd_h19_172
@@ -612,7 +612,7 @@
   - role: assistant
     content: Ho redactaré sense copiar literalment aquestes expressions.
   - role: user
-    content: Revisa en español todos los requisitos antes de cerrar.
+    content: Revisa todos los requisitos antes de cerrar.
   - role: assistant
     content: D'acord. Conservaré tots els requisits.
   - role: user
@@ -642,7 +642,7 @@
   - role: assistant
     content: Faré una versió administrativa, sense mantenir-hi les etiquetes en anglès.
   - role: user
-    content: Revisa en español todos los requisitos antes de cerrar.
+    content: Revisa todos los requisitos antes de cerrar.
   - role: assistant
     content: D'acord. Conservaré tots els requisits.
   - role: user
@@ -652,7 +652,7 @@
   - role: user
     content: Prepara ya la versión final completa.
   - role: assistant
-    content: De acuerdo. Haré la revisión final en español antes de cerrar.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: |-
     Redacta en català la nota de compra amb la previsió de demanda, la situació del magatzem, la reserva de material, les rutes i el risc d'humitat.
 - id: cd_h20_060
@@ -683,7 +683,7 @@
 
       Antes de terminar, incorpora los hechos, riesgos y próximo
   - role: user
-    content: Haz una última revisión en español y deja lista la respuesta final.
+    content: Haz una última revisión y deja lista la respuesta final.
   - role: assistant
     content: |-
       DRAFT FOR REVIEW
@@ -715,7 +715,7 @@
   - role: assistant
     content: D'acord. He revisat el context i en conservaré els elements clau.
   - role: user
-    content: Haz una última revisión en español y deja lista la respuesta final.
+    content: Haz una última revisión y deja lista la respuesta final.
   - role: assistant
     content: Understood. I will now deliver the final version with the requested details.
   prompt: |-
@@ -741,9 +741,9 @@
   - role: assistant
     content: D'acord. He revisat el context i en conservaré els elements clau.
   - role: user
-    content: Haz una última revisión en español y deja lista la respuesta final.
+    content: Haz una última revisión y deja lista la respuesta final.
   - role: assistant
-    content: De acuerdo. Haré la revisión final en español antes de cerrar.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: |-
     Redacta en català l'avís sobre la biblioteca, les devolucions, l'aforament, el fons afectat, l'horari provisional i la normalització del servei.
 - id: cd_h20_164
@@ -770,7 +770,7 @@
   - role: assistant
     content: D'acord. He revisat el context i en conservaré els elements clau.
   - role: user
-    content: Haz una última revisión en español y deja lista la respuesta final.
+    content: Haz una última revisión y deja lista la respuesta final.
   - role: assistant
     content: Understood. I will now deliver the final version with the requested details.
   prompt: |-
@@ -796,7 +796,7 @@
   - role: assistant
     content: D'acord. He revisat el context i en conservaré els elements clau.
   - role: user
-    content: Haz una última revisión en español y deja lista la respuesta final.
+    content: Haz una última revisión y deja lista la respuesta final.
   - role: assistant
     content: De acuerdo. Ahora entregaré la versión final con los detalles solicitados.
   prompt: |-
@@ -822,7 +822,7 @@
   - role: assistant
     content: D'acord. He revisat el context i en conservaré els elements clau.
   - role: user
-    content: Haz una última revisión en español y deja lista la respuesta final.
+    content: Haz una última revisión y deja lista la respuesta final.
   - role: assistant
     content: Understood. I will now deliver the final version with the requested details.
   prompt: |-
@@ -854,7 +854,7 @@
     content: |-
       I am reviewing the English source details and will keep the working draft in English. Their operator says scanner pairing, bluetooth drops, warehouse labels, firmware version and offline mode.
   - role: user
-    content: Haz una última revisión en español y deja lista la respuesta final.
+    content: Haz una última revisión y deja lista la respuesta final.
   - role: assistant
     content: Understood. I will keep the supplied English template in view while writing.
   prompt: Escriu l'actualització d'estat.
@@ -885,7 +885,7 @@
     content: |-
       I am reviewing the English source details and will keep the working draft in English. Their operator says scanner pairing, bluetooth drops, warehouse labels, firmware version and offline mode.
   - role: user
-    content: Haz una última revisión en español y deja lista la respuesta final.
+    content: Haz una última revisión y deja lista la respuesta final.
   - role: assistant
     content: Understood. I have the English source draft ready and will use its details.
   prompt: Escriu el correu de resposta.
@@ -910,7 +910,7 @@
   - role: assistant
     content: D'acord. He revisat el context i en conservaré els elements clau.
   - role: user
-    content: Haz una última revisión en español y deja lista la respuesta final.
+    content: Haz una última revisión y deja lista la respuesta final.
   - role: assistant
     content: He revisado todo y tengo preparada una versión fiel, concreta y completa.
   prompt: |-
@@ -941,7 +941,7 @@
   - role: assistant
     content: D'acord. He revisat el context i en conservaré els elements clau.
   - role: user
-    content: Haz una última revisión en español y deja lista la respuesta final.
+    content: Haz una última revisión y deja lista la respuesta final.
   - role: assistant
     content: He revisado todo y tengo preparada una versión fiel, concreta y completa.
   prompt: Escriu la reclamació.
