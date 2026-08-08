@@ -124,21 +124,17 @@ def main() -> None:
     rows_by_id = dict(zip(ids, rows, strict=True))
 
     n = len(rows)
-    neighbor_scores: dict[str, list[tuple[float, str]]] = {row_id: [] for row_id in ids}
+    neighbors_by_id: dict[str, list[tuple[float, str]]] = {row_id: [] for row_id in ids}
     for i in range(n):
         for j in range(i + 1, n):
             score = jaccard(tokens[i], tokens[j])
-            neighbor_scores[ids[i]].append((score, ids[j]))
-            neighbor_scores[ids[j]].append((score, ids[i]))
+            if score >= args.min_score:
+                neighbors_by_id[ids[i]].append((score, ids[j]))
+                neighbors_by_id[ids[j]].append((score, ids[i]))
 
-    neighbors_by_id: dict[str, list[tuple[float, str]]] = {}
-    for row_id in ids:
-        neighbors = sorted(
-            neighbor_scores[row_id],
-            key=lambda item: (-item[0], item[1]),
-        )[: args.top]
-        neighbors = [(s, nid) for s, nid in neighbors if s >= args.min_score]
-        neighbors_by_id[row_id] = neighbors
+    for row_id, neighbors in neighbors_by_id.items():
+        neighbors.sort(key=lambda item: (-item[0], item[1]))
+        del neighbors[args.top:]
         formatted = "  ".join(f"{nid}={s:.3f}" for s, nid in neighbors)
         if formatted:
             print(f"{row_id}  {formatted}")
