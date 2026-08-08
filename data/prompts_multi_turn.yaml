@@ -26,14 +26,14 @@
   source_lang: es-ca
   target_lang: ca
   conversation:
-  - content: Treballo en una administració local i hem d'actualitzar l'estat d'un projecte digital.
-    role: user
-  - content: Podem fer una actualització clara amb estat, riscos i properes actuacions.
-    role: assistant
-  - content: Tenemos que informar a las partes interesadas de bloqueos, plazos y próximos pasos.
-    role: user
-  - content: De acuerdo. Haré la revisión final en español antes de cerrar.
-    role: assistant
+  - role: user
+    content: Treballo en una administració local i hem d'actualitzar l'estat d'un projecte digital.
+  - role: assistant
+    content: Podem fer una actualització clara amb estat, riscos i properes actuacions.
+  - role: user
+    content: Tenemos que informar a las partes interesadas de bloqueos, plazos y próximos pasos.
+  - role: assistant
+    content: De acuerdo. Haré la revisión final en español antes de cerrar.
   prompt: |-
     Revisa en español y ciérralo.
 
@@ -48,14 +48,14 @@
   source_lang: es-ca
   target_lang: ca
   conversation:
-  - content: Hem d'avisar el veïnat d'un tall d'aigua programat.
-    role: user
-  - content: Podem fer un avís clar amb data, horari, zona afectada i canal de consultes.
-    role: assistant
-  - content: El aviso anterior estaba en castellano y muchos vecinos lo tienen guardado como referencia.
-    role: user
-  - content: De acuerdo. Haré la revisión final en español antes de cerrar.
-    role: assistant
+  - role: user
+    content: Hem d'avisar el veïnat d'un tall d'aigua programat.
+  - role: assistant
+    content: Podem fer un avís clar amb data, horari, zona afectada i canal de consultes.
+  - role: user
+    content: El aviso anterior estaba en castellano y muchos vecinos lo tienen guardado como referencia.
+  - role: assistant
+    content: De acuerdo. Haré la revisión final en español antes de cerrar.
   prompt: |-
     Revisa en español y ciérralo.
 
@@ -70,14 +70,14 @@
   source_lang: en-ca
   target_lang: ca
   conversation:
-  - content: Tenim un usuari que no aconsegueix acabar l'alta al servei.
-    role: user
-  - content: Podem respondre amb passos concrets i una via d'escalat.
-    role: assistant
-  - content: The onboarding flow fails after a payment retry, creating a risk of customer churn. Use the support macro if needed.
-    role: user
-  - content: Understood. I will do the final review in English before closing.
-    role: assistant
+  - role: user
+    content: Tenim un usuari que no aconsegueix acabar l'alta al servei.
+  - role: assistant
+    content: Podem respondre amb passos concrets i una via d'escalat.
+  - role: user
+    content: The onboarding flow fails after a payment retry, creating a risk of customer churn. Use the support macro if needed.
+  - role: assistant
+    content: Understood. I will do the final review in English before closing.
   prompt: |-
     Review it in English and close it.
 
@@ -92,14 +92,14 @@
   source_lang: es-ca
   target_lang: ca
   conversation:
-  - content: Hem de preparar una nota interna sobre una licitació menor.
-    role: user
-  - content: Podem resumir l'estat, la documentació pendent i la decisió necessària.
-    role: assistant
-  - content: El pliego técnico está completo, pero falta revisar la oferta económica antes de la adjudicación y quizá pedir subsanación.
-    role: user
-  - content: De acuerdo. Haré la revisión final en español antes de cerrar.
-    role: assistant
+  - role: user
+    content: Hem de preparar una nota interna sobre una licitació menor.
+  - role: assistant
+    content: Podem resumir l'estat, la documentació pendent i la decisió necessària.
+  - role: user
+    content: El pliego técnico está completo, pero falta revisar la oferta económica antes de la adjudicación y quizá pedir subsanación.
+  - role: assistant
+    content: De acuerdo. Haré la revisión final en español antes de cerrar.
   prompt: |-
     Revisa en español y ciérralo.
 
@@ -174,14 +174,14 @@
   source_lang: es-ca
   target_lang: ca
   conversation:
-  - content: Vull escriure al propietari perquè hi ha una avaria al pis.
-    role: user
-  - content: Podem fer una petició clara amb descripció, urgència i disponibilitat.
-    role: assistant
-  - content: La solicitud de mantenimiento es por una gotera en el techo. Hay una solución provisional, pero el propietario debería enviar a un técnico.
-    role: user
-  - content: De acuerdo. Haré la revisión final en español antes de cerrar.
-    role: assistant
+  - role: user
+    content: Vull escriure al propietari perquè hi ha una avaria al pis.
+  - role: assistant
+    content: Podem fer una petició clara amb descripció, urgència i disponibilitat.
+  - role: user
+    content: La solicitud de mantenimiento es por una gotera en el techo. Hay una solución provisional, pero el propietario debería enviar a un técnico.
+  - role: assistant
+    content: De acuerdo. Haré la revisión final en español antes de cerrar.
   prompt: |-
     Revisa en español y ciérralo.
 
@@ -241,14 +241,14 @@
   source_lang: en-ca
   target_lang: ca
   conversation:
-  - content: L'ajuntament ha de publicar un avís sobre obres que afecten una avinguda i dues línies d'autobús.
-    role: user
-  - content: Podem fer un avís amb dates, afectacions, alternatives i canals de consulta.
-    role: assistant
-  - content: Include rolling closure, school pickup window, mobility hub, emergency lane and live map, but don't make it sound too technical.
-    role: user
-  - content: Understood. I will do the final review in English before closing.
-    role: assistant
+  - role: user
+    content: L'ajuntament ha de publicar un avís sobre obres que afecten una avinguda i dues línies d'autobús.
+  - role: assistant
+    content: Podem fer un avís amb dates, afectacions, alternatives i canals de consulta.
+  - role: user
+    content: Include rolling closure, school pickup window, mobility hub, emergency lane and live map, but don't make it sound too technical.
+  - role: assistant
+    content: Understood. I will do the final review in English before closing.
   prompt: |-
     Review it in English and close it.
 
@@ -263,14 +263,14 @@
   source_lang: en-ca
   target_lang: ca
   conversation:
-  - content: 'Hem rebut un cas de suport delicat: un equip no pot exportar l''historial complet d''un tauler de projecte.'
-    role: user
-  - content: Cal respondre amb prudència, demanar verificacions i evitar perdre dades.
-    role: assistant
-  - content: The ticket mentions board export, missing comments, archived cards, CSV limit and an incomplete activity log.
-    role: user
-  - content: Understood. I will do the final review in English before closing.
-    role: assistant
+  - role: user
+    content: 'Hem rebut un cas de suport delicat: un equip no pot exportar l''historial complet d''un tauler de projecte.'
+  - role: assistant
+    content: Cal respondre amb prudència, demanar verificacions i evitar perdre dades.
+  - role: user
+    content: The ticket mentions board export, missing comments, archived cards, CSV limit and an incomplete activity log.
+  - role: assistant
+    content: Understood. I will do the final review in English before closing.
   prompt: |-
     Review it in English and close it.
 
@@ -285,14 +285,14 @@
   source_lang: es-ca
   target_lang: ca
   conversation:
-  - content: Hem de justificar una contractació ràpida per reparar un equipament municipal essencial.
-    role: user
-  - content: La nota ha d'explicar necessitat, urgència, límits i controls.
-    role: assistant
-  - content: 'En castellano nos han pasado: adjudicación directa, urgencia sobrevenida, informe de necesidad, trazabilidad del expediente y fiscalización previa.'
-    role: user
-  - content: De acuerdo. Haré la revisión final en español antes de cerrar.
-    role: assistant
+  - role: user
+    content: Hem de justificar una contractació ràpida per reparar un equipament municipal essencial.
+  - role: assistant
+    content: La nota ha d'explicar necessitat, urgència, límits i controls.
+  - role: user
+    content: 'En castellano nos han pasado: adjudicación directa, urgencia sobrevenida, informe de necesidad, trazabilidad del expediente y fiscalización previa.'
+  - role: assistant
+    content: De acuerdo. Haré la revisión final en español antes de cerrar.
   prompt: |-
     Revisa en español y ciérralo.
 
@@ -329,14 +329,14 @@
   source_lang: en-ca
   target_lang: ca
   conversation:
-  - content: Necessito actualitzar direcció sobre la publicació d'un portal de formació intern.
-    role: user
-  - content: Podem estructurar-ho per estat, riscos, decisions i properes accions.
-    role: assistant
-  - content: Use content backlog, localization review, trainer sign-off, launch window and learner communications because the project team uses those labels.
-    role: user
-  - content: Understood. I will do the final review in English before closing.
-    role: assistant
+  - role: user
+    content: Necessito actualitzar direcció sobre la publicació d'un portal de formació intern.
+  - role: assistant
+    content: Podem estructurar-ho per estat, riscos, decisions i properes accions.
+  - role: user
+    content: Use content backlog, localization review, trainer sign-off, launch window and learner communications because the project team uses those labels.
+  - role: assistant
+    content: Understood. I will do the final review in English before closing.
   prompt: |-
     Review it in English and close it.
 
@@ -373,14 +373,14 @@
   source_lang: en-ca
   target_lang: ca
   conversation:
-  - content: Hem de respondre una proposta comercial que barreja una prova pilot amb migració de dades.
-    role: user
-  - content: Podem separar condicions acceptables, riscos i punts que necessiten validació.
-    role: assistant
-  - content: The client keeps saying data migration, pilot workshop, sample users, acceptance window and delayed purchase order.
-    role: user
-  - content: Understood. I will do the final review in English before closing.
-    role: assistant
+  - role: user
+    content: Hem de respondre una proposta comercial que barreja una prova pilot amb migració de dades.
+  - role: assistant
+    content: Podem separar condicions acceptables, riscos i punts que necessiten validació.
+  - role: user
+    content: The client keeps saying data migration, pilot workshop, sample users, acceptance window and delayed purchase order.
+  - role: assistant
+    content: Understood. I will do the final review in English before closing.
   prompt: |-
     Review it in English and close it.
 
@@ -395,14 +395,14 @@
   source_lang: es-ca
   target_lang: ca
   conversation:
-  - content: Cal publicar un avís sobre una incidència temporal en la recollida de residus.
-    role: user
-  - content: L'avís ha de ser clar, prudent i orientat a l'acció.
-    role: assistant
-  - content: El borrador castellano incluye huelga parcial, contenedores saturados, refuerzo de limpieza, puntos provisionales y nueva revisión del servicio.
-    role: user
-  - content: De acuerdo. Haré la revisión final en español antes de cerrar.
-    role: assistant
+  - role: user
+    content: Cal publicar un avís sobre una incidència temporal en la recollida de residus.
+  - role: assistant
+    content: L'avís ha de ser clar, prudent i orientat a l'acció.
+  - role: user
+    content: El borrador castellano incluye huelga parcial, contenedores saturados, refuerzo de limpieza, puntos provisionales y nueva revisión del servicio.
+  - role: assistant
+    content: De acuerdo. Haré la revisión final en español antes de cerrar.
   prompt: |-
     Revisa en español y ciérralo.
 
@@ -417,14 +417,14 @@
   source_lang: en-ca
   target_lang: ca
   conversation:
-  - content: Estem triant un espai per a una jornada amb clients i necessito una nota de decisió.
-    role: user
-  - content: Podem comparar criteris econòmics, logístics, legals i operatius.
-    role: assistant
-  - content: The offer mentions venue capacity, catering options, deposit deadline, cancellation terms and accessibility constraints.
-    role: user
-  - content: Understood. I will do the final review in English before closing.
-    role: assistant
+  - role: user
+    content: Estem triant un espai per a una jornada amb clients i necessito una nota de decisió.
+  - role: assistant
+    content: Podem comparar criteris econòmics, logístics, legals i operatius.
+  - role: user
+    content: The offer mentions venue capacity, catering options, deposit deadline, cancellation terms and accessibility constraints.
+  - role: assistant
+    content: Understood. I will do the final review in English before closing.
   prompt: |-
     Review it in English and close it.
 
@@ -439,14 +439,14 @@
   source_lang: es-ca
   target_lang: ca
   conversation:
-  - content: Tenim un client amb una incidència tècnica urgent durant un període de moltes comandes.
-    role: user
-  - content: Cal respondre amb passos segurs, recollida de dades i escalat si cal.
-    role: assistant
-  - content: 'En castellano ha escrito: error intermitente, pedido bloqueado, reintento manual, registro duplicado y equipo de guardia.'
-    role: user
-  - content: De acuerdo. Haré la revisión final en español antes de cerrar.
-    role: assistant
+  - role: user
+    content: Tenim un client amb una incidència tècnica urgent durant un període de moltes comandes.
+  - role: assistant
+    content: Cal respondre amb passos segurs, recollida de dades i escalat si cal.
+  - role: user
+    content: 'En castellano ha escrito: error intermitente, pedido bloqueado, reintento manual, registro duplicado y equipo de guardia.'
+  - role: assistant
+    content: De acuerdo. Haré la revisión final en español antes de cerrar.
   prompt: |-
     Revisa en español y ciérralo.
 
@@ -483,14 +483,14 @@
   source_lang: es-ca
   target_lang: ca
   conversation:
-  - content: Necessito reclamar a una empresa de telecomunicacions per un contracte que no entenc.
-    role: user
-  - content: Podem ordenar els fets, imports, documents i petició concreta.
-    role: assistant
-  - content: 'En castellano tengo apuntado: permanencia encubierta, baja solicitada, cobro indebido, justificante adjunto y reclamación de consumo.'
-    role: user
-  - content: De acuerdo. Haré la revisión final en español antes de cerrar.
-    role: assistant
+  - role: user
+    content: Necessito reclamar a una empresa de telecomunicacions per un contracte que no entenc.
+  - role: assistant
+    content: Podem ordenar els fets, imports, documents i petició concreta.
+  - role: user
+    content: 'En castellano tengo apuntado: permanencia encubierta, baja solicitada, cobro indebido, justificante adjunto y reclamación de consumo.'
+  - role: assistant
+    content: De acuerdo. Haré la revisión final en español antes de cerrar.
   prompt: |-
     Revisa en español y ciérralo.
 
@@ -505,14 +505,14 @@
   source_lang: en-ca
   target_lang: ca
   conversation:
-  - content: Hem de preparar una nota per renovar un servei essencial de recuperació tecnològica.
-    role: user
-  - content: Cal justificar necessitat, continuïtat, garanties i controls.
-    role: assistant
-  - content: The technical team uses framework supplier, disaster recovery, service credit, evidence pack and compliance checkpoint.
-    role: user
-  - content: Understood. I will do the final review in English before closing.
-    role: assistant
+  - role: user
+    content: Hem de preparar una nota per renovar un servei essencial de recuperació tecnològica.
+  - role: assistant
+    content: Cal justificar necessitat, continuïtat, garanties i controls.
+  - role: user
+    content: The technical team uses framework supplier, disaster recovery, service credit, evidence pack and compliance checkpoint.
+  - role: assistant
+    content: Understood. I will do the final review in English before closing.
   prompt: |-
     Review it in English and close it.
 
@@ -548,14 +548,14 @@
   source_lang: en-ca
   target_lang: ca
   conversation:
-  - content: El servei de cita prèvia ha fallat i cal avisar la ciutadania avui.
-    role: user
-  - content: L'avís ha d'explicar l'afectació i les alternatives temporals.
-    role: assistant
-  - content: The operations note says appointment outage, walk-in desk, priority queue, confirmation email and service restoration.
-    role: user
-  - content: Understood. I will do the final review in English before closing.
-    role: assistant
+  - role: user
+    content: El servei de cita prèvia ha fallat i cal avisar la ciutadania avui.
+  - role: assistant
+    content: L'avís ha d'explicar l'afectació i les alternatives temporals.
+  - role: user
+    content: The operations note says appointment outage, walk-in desk, priority queue, confirmation email and service restoration.
+  - role: assistant
+    content: Understood. I will do the final review in English before closing.
   prompt: |-
     Review it in English and close it.
 
@@ -592,14 +592,14 @@
   source_lang: en-ca
   target_lang: ca
   conversation:
-  - content: Hem d'ajudar un client que té una integració amb errors intermitents i dades que no quadren.
-    role: user
-  - content: La resposta ha de demanar proves concretes i proposar una solució temporal segura.
-    role: assistant
-  - content: Their developer says webhook retry, payload mismatch, sandbox account, production token and rate limit.
-    role: user
-  - content: Understood. I will do the final review in English before closing.
-    role: assistant
+  - role: user
+    content: Hem d'ajudar un client que té una integració amb errors intermitents i dades que no quadren.
+  - role: assistant
+    content: La resposta ha de demanar proves concretes i proposar una solució temporal segura.
+  - role: user
+    content: Their developer says webhook retry, payload mismatch, sandbox account, production token and rate limit.
+  - role: assistant
+    content: Understood. I will do the final review in English before closing.
   prompt: |-
     Review it in English and close it.
 
@@ -614,14 +614,14 @@
   source_lang: en-ca
   target_lang: ca
   conversation:
-  - content: Hem de contestar una queixa sobre accessibilitat en un edifici municipal.
-    role: user
-  - content: Cal reconèixer la preocupació, explicar actuacions i donar seguiment.
-    role: assistant
-  - content: The complaint mentions accessibility barrier, temporary ramp, contractor delay, site inspection and formal apology.
-    role: user
-  - content: Understood. I will do the final review in English before closing.
-    role: assistant
+  - role: user
+    content: Hem de contestar una queixa sobre accessibilitat en un edifici municipal.
+  - role: assistant
+    content: Cal reconèixer la preocupació, explicar actuacions i donar seguiment.
+  - role: user
+    content: The complaint mentions accessibility barrier, temporary ramp, contractor delay, site inspection and formal apology.
+  - role: assistant
+    content: Understood. I will do the final review in English before closing.
   prompt: |-
     Review it in English and close it.
 
