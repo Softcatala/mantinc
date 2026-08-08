@@ -41,9 +41,7 @@ def jaccard(left: set[str], right: set[str]) -> float:
 
 def render_html(rows_by_id, neighbors_by_id, top, min_score) -> str:
     cases_with_duplicates = {
-        row_id: neighbors
-        for row_id, neighbors in neighbors_by_id.items()
-        if neighbors
+        row_id: neighbors for row_id, neighbors in neighbors_by_id.items() if neighbors
     }
     parts = [
         "<!DOCTYPE html>",
@@ -64,7 +62,6 @@ def render_html(rows_by_id, neighbors_by_id, top, min_score) -> str:
         ".neighbor .id{font-weight:600;color:#274b72;}",
         ".neighbor .score{color:#444;}",
         ".neighbor .snippet{white-space:pre-wrap;}",
-        ".no-neighbors{font-size:12px;color:#888;font-style:italic;}",
         "</style></head><body>",
         "<header>",
         f"<h1>Duplicate cases &mdash; top {top} neighbors (Jaccard &ge; {min_score:.2f} on normalized prompt tokens)</h1>",
@@ -124,20 +121,20 @@ def main() -> None:
     rows = build_rows()
     ids = [str(row["id"]) for row in rows]
     tokens = [token_set(str(row.get("prompt") or "")) for row in rows]
-    rows_by_id = {ids[i]: rows[i] for i in range(len(rows))}
+    rows_by_id = dict(zip(ids, rows, strict=True))
 
     n = len(rows)
-    similarity = [[0.0] * n for _ in range(n)]
+    neighbor_scores: dict[str, list[tuple[float, str]]] = {row_id: [] for row_id in ids}
     for i in range(n):
         for j in range(i + 1, n):
             score = jaccard(tokens[i], tokens[j])
-            similarity[i][j] = score
-            similarity[j][i] = score
+            neighbor_scores[ids[i]].append((score, ids[j]))
+            neighbor_scores[ids[j]].append((score, ids[i]))
 
     neighbors_by_id: dict[str, list[tuple[float, str]]] = {}
-    for i, row_id in enumerate(ids):
+    for row_id in ids:
         neighbors = sorted(
-            ((similarity[i][j], ids[j]) for j in range(n) if j != i),
+            neighbor_scores[row_id],
             key=lambda item: (-item[0], item[1]),
         )[: args.top]
         neighbors = [(s, nid) for s, nid in neighbors if s >= args.min_score]
@@ -151,20 +148,25 @@ def main() -> None:
         render_html(rows_by_id, neighbors_by_id, args.top, args.min_score),
         encoding="utf-8",
     )
-    print(f"# HTML: {args.html}")
+    print(f"HTML: {args.html}")
 
     with_duplicates = sum(1 for neighbors in neighbors_by_id.values() if neighbors)
     pct = (with_duplicates / n * 100) if n else 0.0
-    print(f"# entries: {n}")
-    print(f"# entries with duplication: {with_duplicates}")
-    print(f"# duplication rate: {pct:.1f}%")
+    prompts_with_catala = sum(
+        1 for row in rows if "català" in str(row.get("prompt") or "").casefold()
+    )
+    catala_pct = (prompts_with_catala / n * 100) if n else 0.0
+    print(f"entries: {n}")
+    print(f"entries with duplication: {with_duplicates}")
+    print(f"duplication rate: {pct:.1f}%")
+    print(f'prompts mentioning "català": {prompts_with_catala} ({catala_pct:.1f}%)')
 
     for label, field in (("personas", "persona"), ("source languages", "source_lang")):
         counts = Counter(str(row.get(field) or "unknown") for row in rows)
-        print(f"# {label}:")
+        print(f"{label}:")
         for value, count in sorted(counts.items(), key=lambda kv: (-kv[1], kv[0])):
             share = (count / n * 100) if n else 0.0
-            print(f"#   {value}: {count} ({share:.1f}%)")
+            print(f"  {value}: {count} ({share:.1f}%)")
 
 
 if __name__ == "__main__":
