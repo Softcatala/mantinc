@@ -103,6 +103,14 @@ Each sample should specify:
 The dataset contains 300 items total. It is built deterministically with
 `make build`.
 
+## Evaluation Results
+
+| Model | Overall | Monolingual | Crosslingual basic | Multi-turn | Crosslingual advanced | RAG context |
+|---|---:|---:|---:|---:|---:|---:|
+| gemini-3.6-flash | **95.7%** | **100.0%** | **98.3%** | **96.7%** | **95.0%** | **88.3%** |
+
+Scores are pass rates on the 300-item benchmark (60 items per category).
+
 
 ## Run
 
