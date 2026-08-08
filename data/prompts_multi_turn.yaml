@@ -36,13 +36,8 @@
       pasos.
   - role: assistant
     content: De acuerdo. Haré la revisión final en español antes de cerrar.
-  prompt: 'Revisa en español y ciérralo.
-
-
-    Versió catalana final: bloqueig, responsable, termini i revisió del projecte digital.
-
-
-    Escriu exclusivament en català la resposta final.'
+  prompt: Prepara una actualització del projecte digital per a les parts interessades,
+    amb el bloqueig principal, la persona responsable, el termini i la revisió prevista.
 - id: cd_062
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -60,13 +55,8 @@
       referencia.
   - role: assistant
     content: De acuerdo. Haré la revisión final en español antes de cerrar.
-  prompt: 'Revisa en español y ciérralo.
-
-
-    Avís català final: tall d''aigua, franja, zona i canal de consulta.
-
-
-    Escriu exclusivament en català la resposta final.'
+  prompt: Redacta l'avís veïnal sobre el tall d'aigua, amb la franja horària, la zona
+    afectada i el canal de consulta.
 - id: cd_063
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -84,13 +74,8 @@
       churn. Use the support macro if needed.
   - role: assistant
     content: Understood. I will do the final review in English before closing.
-  prompt: 'Review it in English and close it.
-
-
-    Resposta catalana final: alta fallida, tres comprovacions i escalat.
-
-
-    Escriu exclusivament en català la resposta final.'
+  prompt: Escriu una resposta de suport sobre l'alta fallida, amb tres comprovacions
+    concretes i una via d'escalat.
 - id: cd_064
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -108,13 +93,8 @@
       de la adjudicación y quizá pedir subsanación.
   - role: assistant
     content: De acuerdo. Haré la revisión final en español antes de cerrar.
-  prompt: 'Revisa en español y ciérralo.
-
-
-    Nota catalana final: revisió econòmica, risc d''adjudicació i possible esmena.
-
-
-    Escriu exclusivament en català la resposta final.'
+  prompt: Redacta una nota interna sobre la revisió econòmica pendent, el risc per a
+    l'adjudicació i la possible esmena.
 - id: cd_065
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -192,13 +172,8 @@
       provisional, pero el propietario debería enviar a un técnico.
   - role: assistant
     content: De acuerdo. Haré la revisión final en español antes de cerrar.
-  prompt: 'Revisa en español y ciérralo.
-
-
-    Correu català final: gotera, mesura provisional, visita tècnica i disponibilitat.
-
-
-    Escriu exclusivament en català la resposta final.'
+  prompt: Escriu un correu a la propietat sobre la gotera, la mesura provisional, la
+    necessitat d'una visita tècnica i la disponibilitat per coordinar-la.
 - id: cd_069
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -260,13 +235,8 @@
       live map, but don't make it sound too technical.
   - role: assistant
     content: Understood. I will do the final review in English before closing.
-  prompt: 'Review it in English and close it.
-
-
-    Avís català final: obres, tall progressiu, recollida escolar i alternatives de mobilitat.
-
-
-    Escriu exclusivament en català la resposta final.'
+  prompt: Redacta l'avís municipal sobre les obres, el tall progressiu, la recollida
+    escolar i les alternatives de mobilitat.
 - id: cd_162
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -285,13 +255,8 @@
       and an incomplete activity log.
   - role: assistant
     content: Understood. I will do the final review in English before closing.
-  prompt: 'Review it in English and close it.
-
-
-    Suport català final: exportació, còpia segura, evidències i hora d''escalat.
-
-
-    Escriu exclusivament en català la resposta final.'
+  prompt: Prepara una resposta de suport sobre l'exportació del tauler, amb còpia segura,
+    evidències necessàries i hora límit per escalar el cas.
 - id: cd_163
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -310,13 +275,8 @@
       de necesidad, trazabilidad del expediente y fiscalización previa.'
   - role: assistant
     content: De acuerdo. Haré la revisión final en español antes de cerrar.
-  prompt: 'Revisa en español y ciérralo.
-
-
-    Justificació catalana final: urgència sobrevinguda, límits, controls i traçabilitat.
-
-
-    Escriu exclusivament en català la resposta final.'
+  prompt: Escriu la justificació de contractació ràpida amb urgència sobrevinguda,
+    límits de l'actuació, controls i traçabilitat de l'expedient.
 - id: cd_164
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -357,13 +317,8 @@
       learner communications because the project team uses those labels.
   - role: assistant
     content: Understood. I will do the final review in English before closing.
-  prompt: 'Review it in English and close it.
-
-
-    Estat català final: continguts, revisió lingüística, validació docent i dues decisions.
-
-
-    Escriu exclusivament en català la resposta final.'
+  prompt: Prepara l'actualització per a direcció sobre els continguts, la revisió
+    lingüística, la validació docent i dues decisions pendents.
 - id: cd_166
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -404,13 +359,8 @@
       window and delayed purchase order.
   - role: assistant
     content: Understood. I will do the final review in English before closing.
-  prompt: 'Review it in English and close it.
-
-
-    Correu català final: migració pilot, mostra d''usuaris, validació i ordre tardana.
-
-
-    Escriu exclusivament en català la resposta final.'
+  prompt: Escriu el correu al client sobre la migració pilot, la mostra d'usuaris,
+    la validació necessària i l'ordre de compra tardana.
 - id: cd_168
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -428,13 +378,8 @@
       de limpieza, puntos provisionales y nueva revisión del servicio.
   - role: assistant
     content: De acuerdo. Haré la revisión final en español antes de cerrar.
-  prompt: 'Revisa en español y ciérralo.
-
-
-    Avís català final: recollida, fets confirmats, punts provisionals i revisió del servei.
-
-
-    Escriu exclusivament en català la resposta final.'
+  prompt: Redacta l'avís sobre la recollida de residus, amb els fets confirmats, els
+    punts provisionals i la revisió prevista del servei.
 - id: cd_169
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -452,13 +397,8 @@
       terms and accessibility constraints.
   - role: assistant
     content: Understood. I will do the final review in English before closing.
-  prompt: 'Review it in English and close it.
-
-
-    Nota catalana final: aforament, restauració, cancel·lació, accessibilitat i dues condicions.
-
-
-    Escriu exclusivament en català la resposta final.'
+  prompt: Redacta la nota de decisió sobre l'espai de la jornada, amb aforament,
+    restauració, cancel·lació, accessibilitat i dues condicions recomanades.
 - id: cd_170
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -477,13 +417,8 @@
       registro duplicado y equipo de guardia.'
   - role: assistant
     content: De acuerdo. Haré la revisión final en español antes de cerrar.
-  prompt: 'Revisa en español y ciérralo.
-
-
-    Suport català final: comanda bloquejada, acció reversible, registre i guàrdia.
-
-
-    Escriu exclusivament en català la resposta final.'
+  prompt: Prepara una resposta de suport sobre la comanda bloquejada, amb una acció
+    reversible, registre de la incidència i contacte de guàrdia.
 - id: cd_171
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -523,13 +458,8 @@
       indebido, justificante adjunto y reclamación de consumo.'
   - role: assistant
     content: De acuerdo. Haré la revisión final en español antes de cerrar.
-  prompt: 'Revisa en español y ciérralo.
-
-
-    Reclamació catalana final: baixa, cobraments, justificant, devolució i termini.
-
-
-    Escriu exclusivament en català la resposta final.'
+  prompt: Escriu la reclamació sobre la baixa del servei, els cobraments, el justificant
+    adjunt, la devolució demanada i el termini de resposta.
 - id: cd_173
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -547,13 +477,8 @@
       evidence pack and compliance checkpoint.
   - role: assistant
     content: Understood. I will do the final review in English before closing.
-  prompt: 'Review it in English and close it.
-
-
-    Nota catalana final: continuïtat, restauració, compensacions, evidències i control.
-
-
-    Escriu exclusivament en català la resposta final.'
+  prompt: Redacta la nota de renovació del servei, amb continuïtat, restauració,
+    compensacions, evidències i control de compliment.
 - id: cd_174
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -592,13 +517,8 @@
       email and service restoration.
   - role: assistant
     content: Understood. I will do the final review in English before closing.
-  prompt: 'Review it in English and close it.
-
-
-    Avís català final: cita prèvia, prioritat al taulell, confirmació i restauració.
-
-
-    Escriu exclusivament en català la resposta final.'
+  prompt: Redacta l'avís sobre la incidència de cita prèvia, amb prioritat al taulell,
+    confirmació de les cites i previsió de restauració del servei.
 - id: cd_176
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -638,13 +558,8 @@
       token and rate limit.
   - role: assistant
     content: Understood. I will do the final review in English before closing.
-  prompt: 'Review it in English and close it.
-
-
-    Suport català final: mostra anonimitzada, entorns, contenció i escalat.
-
-
-    Escriu exclusivament en català la resposta final.'
+  prompt: Prepara una resposta de suport sobre la integració, demanant una mostra
+    anonimitzada, diferenciant entorns, proposant contenció i indicant l'escalat.
 - id: cd_178
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
@@ -662,13 +577,8 @@
       site inspection and formal apology.
   - role: assistant
     content: Understood. I will do the final review in English before closing.
-  prompt: 'Review it in English and close it.
-
-
-    Resposta catalana final: barrera, rampa, inspecció, contractista i seguiment.
-
-
-    Escriu exclusivament en català la resposta final.'
+  prompt: Escriu la resposta municipal sobre la barrera d'accessibilitat, la rampa
+    temporal, la inspecció, el contractista i el seguiment previst.
 - id: cd_179
   category: multi_turn
   source_dataset_yaml: data/prompts_multi_turn.yaml
