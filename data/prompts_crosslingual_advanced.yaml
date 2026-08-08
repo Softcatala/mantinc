@@ -533,7 +533,7 @@
     role: assistant
   - content: Prepara ya la versión final completa.
     role: user
-  - content: Understood. I will do the final review in English before closing.
+  - content: De acuerdo. Haré la revisión final en español antes de cerrar.
     role: assistant
   prompt: |-
     Review it in English and close it.
@@ -601,7 +601,7 @@
     role: assistant
   - content: Prepara ya la versión final completa.
     role: user
-  - content: Understood. I will do the final review in English before closing.
+  - content: De acuerdo. Haré la revisión final en español antes de cerrar.
     role: assistant
   prompt: |-
     Review it in English and close it.
@@ -703,7 +703,7 @@
     role: assistant
   - content: Prepara ya la versión final completa.
     role: user
-  - content: Understood. I will do the final review in English before closing.
+  - content: De acuerdo. Haré la revisión final en español antes de cerrar.
     role: assistant
   prompt: |-
     Review it in English and close it.
@@ -802,7 +802,7 @@
     role: assistant
   - content: Haz una última revisión en español y deja lista la respuesta final.
     role: user
-  - content: Understood. I will do the final review in English before closing.
+  - content: De acuerdo. Haré la revisión final en español antes de cerrar.
     role: assistant
   prompt: |-
     Review it in English and close it.
