@@ -35,7 +35,7 @@
     content: Tenemos que informar a las partes interesadas de bloqueos, plazos y próximos
       pasos.
   - role: assistant
-    content: De acuerdo. Haré la revisión final en español antes de cerrar.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Prepara una actualització del projecte digital per a les parts interessades,
     amb el bloqueig principal, la persona responsable, el termini i la revisió prevista.
 - id: cd_062
@@ -54,7 +54,7 @@
     content: El aviso anterior estaba en castellano y muchos vecinos lo tienen guardado como
       referencia.
   - role: assistant
-    content: De acuerdo. Haré la revisión final en español antes de cerrar.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Redacta l'avís veïnal sobre el tall d'aigua, amb la franja horària, la zona
     afectada i el canal de consulta.
 - id: cd_063
@@ -92,7 +92,7 @@
     content: El pliego técnico está completo, pero falta revisar la oferta económica antes
       de la adjudicación y quizá pedir subsanación.
   - role: assistant
-    content: De acuerdo. Haré la revisión final en español antes de cerrar.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Redacta una nota interna sobre la revisió econòmica pendent, el risc per a
     l'adjudicació i la possible esmena.
 - id: cd_065
@@ -171,7 +171,7 @@
     content: La solicitud de mantenimiento es por una gotera en el techo. Hay una solución
       provisional, pero el propietario debería enviar a un técnico.
   - role: assistant
-    content: De acuerdo. Haré la revisión final en español antes de cerrar.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Escriu un correu a la propietat sobre la gotera, la mesura provisional, la
     necessitat d'una visita tècnica i la disponibilitat per coordinar-la.
 - id: cd_069
@@ -274,7 +274,7 @@
     content: 'En castellano nos han pasado: adjudicación directa, urgencia sobrevenida, informe
       de necesidad, trazabilidad del expediente y fiscalización previa.'
   - role: assistant
-    content: De acuerdo. Haré la revisión final en español antes de cerrar.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Escriu la justificació de contractació ràpida amb urgència sobrevinguda,
     límits de l'actuació, controls i traçabilitat de l'expedient.
 - id: cd_164
@@ -377,7 +377,7 @@
     content: El borrador castellano incluye huelga parcial, contenedores saturados, refuerzo
       de limpieza, puntos provisionales y nueva revisión del servicio.
   - role: assistant
-    content: De acuerdo. Haré la revisión final en español antes de cerrar.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Redacta l'avís sobre la recollida de residus, amb els fets confirmats, els
     punts provisionals i la revisió prevista del servei.
 - id: cd_169
@@ -416,7 +416,7 @@
     content: 'En castellano ha escrito: error intermitente, pedido bloqueado, reintento manual,
       registro duplicado y equipo de guardia.'
   - role: assistant
-    content: De acuerdo. Haré la revisión final en español antes de cerrar.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Prepara una resposta de suport sobre la comanda bloquejada, amb una acció
     reversible, registre de la incidència i contacte de guàrdia.
 - id: cd_171
@@ -457,7 +457,7 @@
     content: 'En castellano tengo apuntado: permanencia encubierta, baja solicitada, cobro
       indebido, justificante adjunto y reclamación de consumo.'
   - role: assistant
-    content: De acuerdo. Haré la revisión final en español antes de cerrar.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Escriu la reclamació sobre la baixa del servei, els cobraments, el justificant
     adjunt, la devolució demanada i el termini de resposta.
 - id: cd_173
