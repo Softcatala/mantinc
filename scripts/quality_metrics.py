@@ -9,7 +9,9 @@ from __future__ import annotations
 
 import argparse
 import html
+import re
 import sys
+import unicodedata
 from collections import Counter
 from pathlib import Path
 
@@ -18,7 +20,23 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.build_dataset import build_rows
-from scripts.identify_duplicates import jaccard, normalize_text, token_set
+
+
+TOKEN_RE = re.compile(r"[a-z0-9]+")
+
+
+def token_set(text: str) -> set[str]:
+    normalized = unicodedata.normalize("NFKD", text.casefold())
+    return set(
+        TOKEN_RE.findall(
+            "".join(char for char in normalized if unicodedata.category(char) != "Mn")
+        )
+    )
+
+
+def jaccard(left: set[str], right: set[str]) -> float:
+    union = left | right
+    return len(left & right) / len(union) if union else 1.0
 
 
 def render_html(rows_by_id, neighbors_by_id, top, min_score) -> str:
@@ -105,7 +123,7 @@ def main() -> None:
 
     rows = build_rows()
     ids = [str(row["id"]) for row in rows]
-    tokens = [token_set(normalize_text(str(row.get("prompt") or ""))) for row in rows]
+    tokens = [token_set(str(row.get("prompt") or "")) for row in rows]
     rows_by_id = {ids[i]: rows[i] for i in range(len(rows))}
 
     n = len(rows)
