@@ -29,11 +29,7 @@
   - content: Understood. I will do the final review in English before closing.
     role: assistant
   prompt: |-
-    Review it in English and close it.
-
-    Suport català final: calendari, canvi de fus, comprovació mòbil i escalat.
-
-    Escriu exclusivament en català la resposta final.
+    Prepara una resposta de suport en català per a l'usuari del calendari. Inclou el canvi de fus horari, la comprovació al mòbil i una via d'escalat clara.
 - id: cd_h9_064
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -65,11 +61,7 @@
   - content: De acuerdo. Haré la revisión final en español antes de cerrar.
     role: assistant
   prompt: |-
-    Revisa en español y ciérralo.
-
-    Decisió catalana final: venciment, inventari, compatibilitat i pròrroga condicionada.
-
-    Escriu exclusivament en català la resposta final.
+    Redacta en català la decisió interna sobre la renovació de l'eina. Ha de tractar el venciment, l'inventari d'usuaris, la compatibilitat amb l'arxiu electrònic i la pròrroga condicionada.
 - id: cd_h9_065
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -247,11 +239,7 @@
   - content: Understood. I will do the final review in English before closing.
     role: assistant
   prompt: |-
-    Review it in English and close it.
-
-    Correu català final: marca, exclusivitat, garantia, penalització i alternativa de factura.
-
-    Escriu exclusivament en català la resposta final.
+    Escriu en català un correu professional al client sobre la referència de marca, l'exclusivitat, la garantia de servei, la penalització i l'alternativa de factura consolidada.
 - id: cd_h9_175
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -283,11 +271,7 @@
   - content: Understood. I will do the final review in English before closing.
     role: assistant
   prompt: |-
-    Review it in English and close it.
-
-    Avís català final: ventilació, zona tancada, classes alternatives i revisió de seguretat.
-
-    Escriu exclusivament en català la resposta final.
+    Redacta en català l'avís municipal sobre la ventilació, la zona tancada, les classes alternatives i la revisió de seguretat. Fes-lo clar per a les persones usuàries.
 - id: cd_h9_176
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -356,11 +340,7 @@
   - content: D'acord. Faré servir aquesta estructura per preparar el document.
     role: assistant
   prompt: |-
-    Review it in English and close it.
-
-    Resposta catalana final: enllumenat, patrulla, reparació i retorn a les famílies.
-
-    Escriu exclusivament en català la resposta final.
+    Prepara en català una resposta per a les famílies sobre l'enllumenat, la patrulla, la reparació prevista i el seguiment posterior.
 - id: cd_h19_061
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -390,11 +370,7 @@
   - content: De acuerdo. Haré la revisión final en español antes de cerrar.
     role: assistant
   prompt: |-
-    Revisa en español y ciérralo.
-
-    Estat català final: enquesta pilot, moderació, espai, sessió i risc responsable.
-
-    Escriu exclusivament en català la resposta final.
+    Fes en català una actualització d'estat sobre l'enquesta pilot, la moderació, l'espai disponible, la sessió prevista i el risc que cal assumir de manera responsable.
 - id: cd_h19_062
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -424,11 +400,7 @@
   - content: De acuerdo. Haré la revisión final en español antes de cerrar.
     role: assistant
   prompt: |-
-    Revisa en español y ciérralo.
-
-    Avís català final: poda, vorera, desviament, bicicletes i incidències.
-
-    Escriu exclusivament en català la resposta final.
+    Escriu en català l'avís veïnal sobre la poda, l'ocupació de la vorera, el desviament de pas, la retirada temporal de bicicletes i el canal d'incidències.
 - id: cd_h19_068
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -458,11 +430,7 @@
   - content: De acuerdo. Haré la revisión final en español antes de cerrar.
     role: assistant
   prompt: |-
-    Review it in English and close it.
-
-    Correu català final: fiança, fotografies, lectures, neteja i reintegrament.
-
-    Escriu exclusivament en català la resposta final.
+    Escriu en català el correu a la propietat sobre la fiança, les fotografies de l'estat del pis, les lectures de subministraments, la neteja i el reintegrament.
 - id: cd_h19_160
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -536,11 +504,7 @@
   - content: De acuerdo. Haré la revisión final en español antes de cerrar.
     role: assistant
   prompt: |-
-    Review it in English and close it.
-
-    Suport català final: canvi de domini, rebots, correu brossa, informe i escalat.
-
-    Escriu exclusivament en català la resposta final.
+    Prepara en català una resposta de suport sobre el canvi de domini, els rebots de correu, el correu brossa, l'informe necessari i el criteri d'escalat.
 - id: cd_h19_163
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -570,11 +534,7 @@
   - content: De acuerdo. Haré la revisión final en español antes de cerrar.
     role: assistant
   prompt: |-
-    Revisa en español y ciérralo.
-
-    Nota catalana final: interpretació, hores, pressupost, sala i assistència prevista.
-
-    Escriu exclusivament en català la resposta final.
+    Redacta en català una nota interna sobre la interpretació, les hores de servei, el pressupost, la sala disponible i l'assistència prevista.
 - id: cd_h19_169
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -604,11 +564,7 @@
   - content: De acuerdo. Haré la revisión final en español antes de cerrar.
     role: assistant
   prompt: |-
-    Review it in English and close it.
-
-    Comparativa catalana final: materials, lliurament, muntatge, garantia i verificacions.
-
-    Escriu exclusivament en català la resposta final.
+    Elabora en català una comparativa de compra que valori els materials, el termini de lliurament, el muntatge, la garantia i les verificacions necessàries.
 - id: cd_h19_170
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -638,11 +594,7 @@
   - content: De acuerdo. Haré la revisión final en español antes de cerrar.
     role: assistant
   prompt: |-
-    Revisa en español y ciérralo.
-
-    Suport català final: catàleg, plantilla, mostra, estoc, imatges i escalat.
-
-    Escriu exclusivament en català la resposta final.
+    Prepara en català una resposta de suport sobre el catàleg, la plantilla importada, la mostra, l'estoc, les imatges i el possible escalat.
 - id: cd_h19_172
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -672,11 +624,7 @@
   - content: Understood. I will now deliver the final version with the requested details.
     role: assistant
   prompt: |-
-    Revisa en español y ciérralo.
-
-    Reclamació catalana final: reserva, hotel, trasllat, suplement, annexos i compensació.
-
-    Escriu exclusivament en català la resposta final.
+    Escriu en català una reclamació sobre la reserva, l'hotel assignat, el trasllat, el suplement cobrat, els annexos aportats i la compensació demanada.
 - id: cd_h19_173
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -706,11 +654,7 @@
   - content: De acuerdo. Haré la revisión final en español antes de cerrar.
     role: assistant
   prompt: |-
-    Review it in English and close it.
-
-    Compra catalana final: previsió, magatzem, reserva, rutes i humitat.
-
-    Escriu exclusivament en català la resposta final.
+    Redacta en català la nota de compra amb la previsió de demanda, la situació del magatzem, la reserva de material, les rutes i el risc d'humitat.
 - id: cd_h20_060
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -775,11 +719,7 @@
   - content: Understood. I will now deliver the final version with the requested details.
     role: assistant
   prompt: |-
-    Revisa en español y ciérralo.
-
-    Resposta municipal catalana final: mobilitat, tanques, senyals, responsabilitats i retorn.
-
-    Escriu exclusivament en català la resposta final.
+    Prepara en català una resposta municipal sobre la mobilitat afectada, les tanques, els senyals, les responsabilitats i el retorn previst a la normalitat.
 - id: cd_h20_161
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -805,11 +745,7 @@
   - content: De acuerdo. Haré la revisión final en español antes de cerrar.
     role: assistant
   prompt: |-
-    Review it in English and close it.
-
-    Avís català final: biblioteca, devolucions, aforament, fons, horari i normalització.
-
-    Escriu exclusivament en català la resposta final.
+    Redacta en català l'avís sobre la biblioteca, les devolucions, l'aforament, el fons afectat, l'horari provisional i la normalització del servei.
 - id: cd_h20_164
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -838,11 +774,7 @@
   - content: Understood. I will now deliver the final version with the requested details.
     role: assistant
   prompt: |-
-    Revisa en español y ciérralo.
-
-    Reclamació catalana final: portal, venciment, val, revisió i nova convocatòria.
-
-    Escriu exclusivament en català la resposta final.
+    Escriu en català la reclamació sobre el portal, el venciment del termini, el val rebut, la revisió demanada i la necessitat d'una nova convocatòria.
 - id: cd_h20_165
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -868,11 +800,7 @@
   - content: De acuerdo. Ahora entregaré la versión final con los detalles solicitados.
     role: assistant
   prompt: |-
-    Review it in English and close it.
-
-    Estat català final: auditoria, evidències, correccions, visita i renovació.
-
-    Escriu exclusivament en català la resposta final.
+    Prepara en català una actualització d'estat sobre l'auditoria, les evidències recollides, les correccions pendents, la visita i la renovació.
 - id: cd_h20_168
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -898,11 +826,7 @@
   - content: Understood. I will now deliver the final version with the requested details.
     role: assistant
   prompt: |-
-    Revisa en español y ciérralo.
-
-    Avís català final: vacunació, cites, centre alternatiu, transport, suport i revisió.
-
-    Escriu exclusivament en català la resposta final.
+    Redacta en català l'avís sobre el canvi temporal de vacunació, les cites, el centre alternatiu, el transport, el suport disponible i la propera revisió.
 - id: cd_h20_171
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -990,11 +914,7 @@
   - content: He revisado todo y tengo preparada una versión fiel, concreta y completa.
     role: assistant
   prompt: |-
-    Review it in English and close it.
-
-    Suport català final: escàners, vinculació, versió, prova, etiquetes i escalat.
-
-    Escriu exclusivament en català la resposta final.
+    Prepara en català una resposta de suport sobre els escàners, la vinculació dels dispositius, la versió instal·lada, la prova recomanada, les etiquetes i l'escalat.
 - id: cd_h20_179
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1058,9 +978,7 @@
     content: >-
       D'acord. Faré servir l'estructura sense canviar l'objectiu.
   prompt: |-
-    Prepara ya la versión final completa.
-
-    Escriu en català un correu breu amb assumpte, situació, nova previsió i proper pas.
+    Escriu en català un correu breu al client amb assumpte, situació, nova previsió i proper pas. Mantén un to clar i útil.
 - id: cd_h21_261
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1095,9 +1013,7 @@
       D'acord. Mantindré l'estructura, però prepararé la resposta final segons la
       instrucció principal.
   prompt: |-
-    Please finalize with all headings and do not drop any English labels.
-
-    Escriu en català la resposta com un correu breu, amb límits, alternativa i proper pas.
+    Redacta en català un correu breu que respongui a la petició del client. Inclou els límits de la prova, una alternativa viable i el proper pas.
 - id: cd_h21_262
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1131,9 +1047,7 @@
     content: >-
       D'acord. Adaptaré la plantilla a la resposta sol·licitada.
   prompt: |-
-    Revisa en español antes de cerrar y deja lista la versión final.
-
-    Escriu en català un correu amb reconeixement, alternativa, calendari i tancament professional.
+    Escriu en català un correu professional que reconegui el canvi d'activitat, ofereixi una alternativa, expliqui el calendari i tanqui amb cura.
 - id: cd_h21_263
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1167,9 +1081,7 @@
     content: >-
       D'acord. Faré servir la plantilla com a guia de contingut.
   prompt: |-
-    Final answer can follow the English template.
-
-    Escriu en català la resposta com un correu breu, amb límits, alternativa i proper pas.
+    Prepara en català una resposta breu al client sobre la prova pilot i el canvi de plataforma. Marca els límits, proposa una alternativa i indica el proper pas.
 - id: cd_h21_264
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1203,9 +1115,7 @@
     content: >-
       D'acord. Prepararé la versió final amb la informació essencial.
   prompt: |-
-    Haz la última revisión en español.
-
-    Escriu en català un correu ferm amb fets, límits, proposta de revisió i proper pas.
+    Redacta en català un correu ferm sobre els indicadors de servei, amb fets verificats, límits contractuals, proposta de revisió i proper pas.
 - id: cd_h21_265
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1240,9 +1150,7 @@
       D'acord. Mantindré la informació però redactaré la resposta final segons la
       llengua indicada.
   prompt: |-
-    Please keep the final version close to the template.
-
-    Escriu en català la resposta municipal amb recepció, actuacions, terminis i seguiment.
+    Escriu en català la resposta municipal sobre l'accessibilitat del jardí, amb recepció de la queixa, actuacions previstes, terminis i seguiment.
 - id: cd_h21_266
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1276,9 +1184,7 @@
     content: >-
       D'acord. La plantilla servirà només per organitzar la informació.
   prompt: |-
-    Prepara ya la versión final completa.
-
-    Escriu en català la reclamació amb fets, import reclamat, documents i termini.
+    Prepara en català la reclamació al gimnàs amb els fets, l'import reclamat, els documents aportats i un termini de resposta.
 - id: cd_h21_267
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1312,9 +1218,7 @@
     content: >-
       D'acord. Prepararé una resposta institucional amb aquests elements.
   prompt: |-
-    Make the final answer ready to send.
-
-    Escriu en català la resposta municipal amb reconeixement, límits competencials, actuacions i seguiment.
+    Redacta en català la resposta municipal sobre les molèsties de l'obra, amb reconeixement, límits competencials, actuacions i seguiment.
 - id: cd_h21_268
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1348,9 +1252,7 @@
     content: >-
       D'acord. Faré servir l'estructura per preparar una versió final clara.
   prompt: |-
-    Revisa en español y ciérralo.
-
-    Escriu en català la reclamació amb antecedents, discrepància, petició de revisió i termini.
+    Escriu en català una reclamació formal amb antecedents, discrepància, petició de revisió i termini de resposta.
 - id: cd_h21_269
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1384,9 +1286,7 @@
     content: >-
       D'acord. Redactaré una resposta prudent.
   prompt: |-
-    Finalize it using the same headings.
-
-    Escriu en català la resposta municipal amb recepció, explicació prudent, actuacions i canal de seguiment.
+    Prepara en català la resposta municipal sobre el manteniment del cementiri, amb recepció de la queixa, explicació prudent, actuacions i canal de seguiment.
 - id: cd_h21_270
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1421,9 +1321,7 @@
     content: >-
       D'acord. Prepararé la reclamació amb una estructura clara.
   prompt: |-
-    Haz la versión final ya.
-
-    Escriu en català la reclamació amb cronologia, import reclamat, proves i termini.
+    Redacta en català una reclamació amb cronologia dels fets, import reclamat, proves disponibles i termini de resposta.
 - id: cd_h21_271
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1457,9 +1355,7 @@
     content: >-
       D'acord. Faré una guia pràctica sense copiar l'anglès.
   prompt: |-
-    Keep the template labels in the final version.
-
-    Dona en català una guia breu amb passos ordenats, advertiments pràctics i comprovació final.
+    Dona en català una guia breu per revisar la privacitat del sistema del cotxe, amb passos ordenats, advertiments pràctics i comprovació final.
 - id: cd_h21_272
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1494,9 +1390,7 @@
     content: >-
       D'acord. Ho redactaré amb cautela administrativa.
   prompt: |-
-    Cierra la nota en español antes de enviarla.
-
-    Escriu en català la nota de contractació amb justificació, riscos, controls i proper tràmit.
+    Redacta en català la nota de contractació del servei d'accessibilitat, amb justificació, riscos, controls i proper tràmit.
 - id: cd_h21_273
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1530,9 +1424,7 @@
     content: >-
       D'acord. Mantindré la informació i adaptaré la llengua final.
   prompt: |-
-    Finalize using that English structure.
-
-    Escriu en català la nota de contractació amb necessitat, criteris, riscos i recomanació.
+    Escriu en català la nota de contractació del sistema d'ajuda auditiva, amb necessitat, criteris de selecció, riscos i recomanació.
 - id: cd_h21_274
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1567,9 +1459,7 @@
     content: >-
       D'acord. Redactaré la nota final amb la llengua indicada.
   prompt: |-
-    Prepara la versión final completa.
-
-    Escriu en català la nota de contractació amb necessitat, criteris, riscos i proper pas.
+    Prepara en català la nota de contractació per a la protecció solar temporal, amb necessitat, criteris tècnics, riscos i proper pas.
 - id: cd_h21_275
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1603,9 +1493,7 @@
     content: >-
       D'acord. Ho convertiré en una nota interna en català.
   prompt: |-
-    Please keep the heading names.
-
-    Escriu en català la nota de decisió amb criteris, riscos, prova pilot i recomanació.
+    Redacta en català la nota de decisió sobre els proveïdors de nòmines, amb criteris, riscos, prova pilot i recomanació.
 - id: cd_h21_276
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1639,9 +1527,7 @@
     content: >-
       D'acord. La versió final mantindrà el contingut sense copiar les etiquetes.
   prompt: |-
-    Final answer should be ready for executives.
-
-    Escriu en català una actualització d'estat per a direcció amb riscos prioritzats i decisió necessària.
+    Escriu en català una actualització d'estat per a direcció sobre la formació de clients, amb riscos prioritzats i decisió necessària.
 - id: cd_h21_277
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1675,9 +1561,7 @@
     content: >-
       D'acord. Prepararé una versió executiva.
   prompt: |-
-    Hazla final en el mismo formato.
-
-    Escriu en català una actualització executiva amb estat, riscos, decisions i accions.
+    Prepara en català una actualització executiva sobre el canvi del sistema de cobrament, amb estat, riscos, decisions i accions.
 - id: cd_h21_278
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1712,9 +1596,7 @@
     content: >-
       D'acord. Redactaré l'actualització en català.
   prompt: |-
-    Keep all labels visible.
-
-    Escriu en català una actualització d'estat amb fites, riscos, comunicació i decisió requerida.
+    Redacta en català una actualització d'estat del projecte de menjadors escolars, amb fites, riscos, comunicació i decisió requerida.
 - id: cd_h21_279
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1748,9 +1630,7 @@
     content: >-
       D'acord. Ho transformaré en un avís públic en català.
   prompt: |-
-    Prepara ya la versión final completa.
-
-    Escriu en català l'avís amb títol, afectació, alternatives, priorització i actualització prevista.
+    Escriu en català l'avís sobre el canvi d'atenció presencial, amb títol, afectació, alternatives, priorització i actualització prevista.
 - id: cd_h21_280
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1784,9 +1664,7 @@
     content: >-
       D'acord. Prepararé un avís clar per al públic.
   prompt: |-
-    Finalize with the same heading structure.
-
-    Escriu en català l'avís amb títol, afectació, alternatives i propera actualització.
+    Redacta en català l'avís del centre cultural, amb títol, espais afectats, alternatives i propera actualització.
 - id: cd_h21_281
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1820,9 +1698,7 @@
     content: >-
       D'acord. Redactaré un avís en català sense copiar el castellà.
   prompt: |-
-    Cierra la versión final.
-
-    Escriu en català l'avís amb títol, afectació, recomanacions i canal de consulta.
+    Prepara en català l'avís sobre els canvis d'accés a l'equipament, amb títol, afectació, recomanacions i canal de consulta.
 - id: cd_h21_282
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1856,9 +1732,7 @@
     content: >-
       D'acord. Ho convertiré en un avís públic en català.
   prompt: |-
-    Keep the English labels if helpful.
-
-    Escriu en català l'avís amb títol, afectació, recomanacions, excepcions i propera revisió.
+    Escriu en català l'avís sobre la restricció temporal d'aigua, amb títol, afectació, recomanacions, excepcions i propera revisió.
 - id: cd_h21_283
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1892,9 +1766,7 @@
     content: >-
       D'acord. Faré una actualització clara en català.
   prompt: |-
-    Haz una última revisión en español.
-
-    Escriu en català una actualització de l'estat amb avenços, riscos i properes actuacions.
+    Redacta en català una actualització de l'estat del projecte de mobilitat, amb avenços, riscos i properes actuacions.
 - id: cd_h21_284
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1928,9 +1800,7 @@
     content: >-
       D'acord. Prepararé el pla en català.
   prompt: |-
-    Finalize using the English checklist style.
-
-    Escriu en català un pla d'estudi estructurat amb objectius, tasques, pràctica i revisió final.
+    Prepara en català un pla d'estudi per a l'examen pràctic de conducció, amb objectius, tasques, pràctica i revisió final.
 - id: cd_h21_285
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1964,9 +1834,7 @@
     content: >-
       D'acord. Redactaré una resposta de suport en català.
   prompt: |-
-    Please keep the support template visible.
-
-    Escriu en català la resposta de suport amb salutació, comprovacions, protecció de dades i escalat.
+    Escriu en català la resposta de suport sobre la incidència de nòmina, amb salutació, comprovacions, protecció de dades i escalat.
 - id: cd_h21_286
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -2001,9 +1869,7 @@
     content: >-
       D'acord. Prepararé una resposta clara en català.
   prompt: |-
-    Revisa en español y deja lista la respuesta final.
-
-    Escriu en català la resposta de suport amb diagnosi inicial, passos, dades requerides i termini.
+    Redacta en català la resposta de suport sobre els casos duplicats, amb diagnosi inicial, passos de comprovació, dades requerides i termini.
 - id: cd_h21_287
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -2037,9 +1903,7 @@
     content: >-
       D'acord. Ho convertiré en una resposta de suport en català.
   prompt: |-
-    Final answer should follow the English structure.
-
-    Escriu en català la resposta de suport amb comprovacions, mesura temporal, dades requerides i escalat.
+    Prepara en català la resposta de suport sobre el quadre de cobraments, amb comprovacions, mesura temporal, dades requerides i escalat.
 - id: cd_h21_288
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -2073,9 +1937,7 @@
     content: >-
       D'acord. Prepararé instruccions de suport en català.
   prompt: |-
-    Haz una última revisión en español antes de cerrar.
-
-    Escriu en català la resposta de suport amb salutació, passos de verificació, alternativa i termini.
+    Escriu en català la resposta de suport sobre la signatura de documents, amb salutació, passos de verificació, alternativa i termini.
 - id: cd_h21_289
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -2109,6 +1971,4 @@
     content: >-
       D'acord. Redactaré el missatge final en català.
   prompt: |-
-    Keep the English structure if useful.
-
-    Escriu en català el missatge amb assumpte, cos, petició concreta i termini.
+    Redacta en català el missatge a la propietat sobre les despeses compartides, amb assumpte, cos, petició concreta i termini.
