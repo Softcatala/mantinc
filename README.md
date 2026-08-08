@@ -147,30 +147,3 @@ Code is licensed under the MIT License. Benchmark datasets, prompts, fixtures,
 and source/evaluation data files are licensed under Creative Commons
 Attribution-ShareAlike 4.0 International (CC BY-SA 4.0). See `LICENSE` for the
 full repository license split.
-
-
-## Completed evaluations
-
-Latest completed results on the 300-item Catalan Drift dataset:
-
-| Model | Overall | Monolingual | Crosslingual basic | Multi-turn | Crosslingual advanced | RAG context |
-|---|---:|---:|---:|---:|---:|---:|
-| Qwen 3.5 9B Q8 | **99.3%** | 100.0% | 100.0% | 100.0% | 100.0% | 96.7% |
-| Gemma 4 E4B Q4 K M | 97.7% | 98.3% | 100.0% | 100.0% | 95.0% | 95.0% |
-| GPT-5.6 | 97.0% | 100.0% | 100.0% | 98.3% | 86.7% | 100.0% |
-| Gemma 3 12B Q8 | 96.0% | 100.0% | 98.3% | 100.0% | 81.7% | 100.0% |
-| Gemini 3.6 Flash | 94.0% | 100.0% | 100.0% | 95.0% | 90.0% | 85.0% |
-| EuroLLM 9B Instruct Q8 | 92.3% | 100.0% | 86.7% | 95.0% | 81.7% | 98.3% |
-| Salamandra 7B Instruct Q8 | 92.3% | 100.0% | 93.3% | 93.3% | 78.3% | 96.7% |
-
-At 95% confidence, the maximum margin of error is ±5.7 percentage points
-for overall scores (n=300) and ±12.7 percentage points for category scores
-(n=60), using the normal approximation for a binomial proportion.
-
-**How to compare models:** Rank models by the **Overall** column. Per-category
-scores (n=60, ±12.7 pp at 95%) are useful for spotting *where* a model
-struggles, not for ranking models against each other — most per-category gaps
-in this table are within the margin of error.
-
-Only models with completed results from the current run are shown. All
-listed evaluations had zero API or empty-response failures.
