@@ -107,7 +107,8 @@ The dataset contains 300 items total. It is built deterministically with
 
 | Model | Overall | Monolingual | Crosslingual basic | Multi-turn | Crosslingual advanced | RAG context |
 |---|---:|---:|---:|---:|---:|---:|
-| gemini-3.6-flash | **95.7%** | **100.0%** | **98.3%** | **96.7%** | **95.0%** | **88.3%** |
+| gpt-5.6 | **97.0%** | **100.0%** | **100.0%** | **100.0%** | 85.0% | **100.0%** |
+| gemini-3.6-flash | 95.7% | **100.0%** | 98.3% | 96.7% | **95.0%** | 88.3% |
 
 Scores are pass rates on the 300-item benchmark (60 items per category).
 
