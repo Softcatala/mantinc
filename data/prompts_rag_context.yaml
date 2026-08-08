@@ -9,7 +9,6 @@
   retrieved_context:
   - id: doc1
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -19,7 +18,6 @@
       y el testimonio de los mismos protagonistas a través de fotos y audiovisuales.
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -28,7 +26,6 @@
       la naturaleza y la agricultura.
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -39,7 +36,6 @@
       del carro.'
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -63,7 +59,6 @@
   retrieved_context:
   - id: doc1
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -72,7 +67,6 @@
       un mundo de sonidos y sensaciones que forman parte del patrimonio inmaterial del Montseny.
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -81,7 +75,6 @@
       'La memoria del agua'
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -89,7 +82,6 @@
     text: Centre de Documentació del Parc Natural del Montseny, secció Humanitats
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -115,7 +107,6 @@
   retrieved_context:
   - id: doc1
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -124,7 +115,6 @@
       un cuaderno pedagógico específico.'
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -133,7 +123,6 @@
       de fichas táctiles y sonoras de animales
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -141,7 +130,6 @@
     text: Actividades de refuerzo para créditos comunes, variables y de síntesis
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -165,7 +153,6 @@
   retrieved_context:
   - id: doc1
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs310353
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -174,7 +161,6 @@
       del siglo XVII, posteriormente fue abandonado.
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs310353
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -184,7 +170,6 @@
       de los siglos XIX y XX.
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs310353
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -193,7 +178,6 @@
       excavaciones arqueológicas y consolidaciones.
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs310353
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -219,7 +203,6 @@
   retrieved_context:
   - id: doc1
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -228,7 +211,6 @@
       y uso del medio ambiente.
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -236,7 +218,6 @@
     text: Actividades y talleres relacionados con el medio ambiente y las energías renovables
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -244,7 +225,6 @@
     text: Actividades de fin de semana para las AMPA. Taller de cocina solar y excursiones
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -268,7 +248,6 @@
   retrieved_context:
   - id: doc1
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -277,7 +256,6 @@
       la naturaleza y la agricultura.
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -288,7 +266,6 @@
       del carro.'
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -297,7 +274,6 @@
       (carboneo, peladores, leñador), vegetación, fauna y usos actuales (excursionismo).'
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -323,7 +299,6 @@
   retrieved_context:
   - id: doc1
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -332,7 +307,6 @@
       'La memoria del agua'
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -340,7 +314,6 @@
     text: Centre de Documentació del Parc Natural del Montseny, secció Humanitats
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -351,7 +324,6 @@
       a descargarlo.'
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -378,7 +350,6 @@
   retrieved_context:
   - id: doc1
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -387,7 +358,6 @@
       de fichas táctiles y sonoras de animales
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -395,7 +365,6 @@
     text: Actividades de refuerzo para créditos comunes, variables y de síntesis
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -404,7 +373,6 @@
       la serra de l'Obac')
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -428,7 +396,6 @@
   retrieved_context:
   - id: doc1
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -436,7 +403,6 @@
     text: Actividades y talleres relacionados con el medio ambiente y las energías renovables
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -444,7 +410,6 @@
     text: Actividades de fin de semana para las AMPA. Taller de cocina solar y excursiones
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -453,7 +418,6 @@
       Munt y l'Obac
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -476,7 +440,6 @@
   retrieved_context:
   - id: doc1
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -487,7 +450,6 @@
       del carro.'
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -496,7 +458,6 @@
       (carboneo, peladores, leñador), vegetación, fauna y usos actuales (excursionismo).'
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -507,7 +468,6 @@
       Montnegre i el Corredor.
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -533,7 +493,6 @@
   retrieved_context:
   - id: doc1
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -541,7 +500,6 @@
     text: Centre de Documentació del Parc Natural del Montseny, secció Humanitats
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -552,7 +510,6 @@
       a descargarlo.'
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -564,7 +521,6 @@
       Etnológico del Montseny. La Gabella - Sala tornería.'
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -588,7 +544,6 @@
   retrieved_context:
   - id: doc1
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -596,7 +551,6 @@
     text: Actividades de refuerzo para créditos comunes, variables y de síntesis
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -605,7 +559,6 @@
       la serra de l'Obac')
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -614,7 +567,6 @@
       para personas con discapacidades
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -638,7 +590,6 @@
   retrieved_context:
   - id: doc1
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -646,7 +597,6 @@
     text: Actividades de fin de semana para las AMPA. Taller de cocina solar y excursiones
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -655,7 +605,6 @@
       Munt y l'Obac
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -663,7 +612,6 @@
     text: Espacio disponible para sesiones de prácticas de campo para universidades
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -687,7 +635,6 @@
   retrieved_context:
   - id: doc1
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -696,7 +643,6 @@
       (carboneo, peladores, leñador), vegetación, fauna y usos actuales (excursionismo).'
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -707,7 +653,6 @@
       Montnegre i el Corredor.
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -718,7 +663,6 @@
       culturales, Museos.'
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -743,7 +687,6 @@
   retrieved_context:
   - id: doc1
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -754,7 +697,6 @@
       a descargarlo.'
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -766,7 +708,6 @@
       Etnológico del Montseny. La Gabella - Sala tornería.'
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -775,7 +716,6 @@
       un mundo de sonidos y sensaciones que forman parte del patrimonio inmaterial del Montseny.
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -799,7 +739,6 @@
   retrieved_context:
   - id: doc1
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -808,7 +747,6 @@
       la serra de l'Obac')
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -817,7 +755,6 @@
       para personas con discapacidades
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -826,7 +763,6 @@
       un cuaderno pedagógico específico.'
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -850,7 +786,6 @@
   retrieved_context:
   - id: doc1
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -859,7 +794,6 @@
       Munt y l'Obac
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -867,7 +801,6 @@
     text: Espacio disponible para sesiones de prácticas de campo para universidades
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -876,7 +809,6 @@
       y uso del medio ambiente.
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -899,7 +831,6 @@
   retrieved_context:
   - id: doc1
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -910,7 +841,6 @@
       Montnegre i el Corredor.
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -921,7 +851,6 @@
       culturales, Museos.'
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -931,7 +860,6 @@
       y el testimonio de los mismos protagonistas a través de fotos y audiovisuales.
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -955,7 +883,6 @@
   retrieved_context:
   - id: doc1
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -967,7 +894,6 @@
       Etnológico del Montseny. La Gabella - Sala tornería.'
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -976,7 +902,6 @@
       un mundo de sonidos y sensaciones que forman parte del patrimonio inmaterial del Montseny.
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -985,7 +910,6 @@
       'La memoria del agua'
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1008,7 +932,6 @@
   retrieved_context:
   - id: doc1
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1017,7 +940,6 @@
       para personas con discapacidades
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1026,7 +948,6 @@
       un cuaderno pedagógico específico.'
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1035,7 +956,6 @@
       de fichas táctiles y sonoras de animales
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1058,7 +978,6 @@
   retrieved_context:
   - id: doc1
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1066,7 +985,6 @@
     text: Espacio disponible para sesiones de prácticas de campo para universidades
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1075,7 +993,6 @@
       y uso del medio ambiente.
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1083,7 +1000,6 @@
     text: Actividades y talleres relacionados con el medio ambiente y las energías renovables
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1106,7 +1022,6 @@
   retrieved_context:
   - id: doc1
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1117,7 +1032,6 @@
       culturales, Museos.'
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1127,7 +1041,6 @@
       y el testimonio de los mismos protagonistas a través de fotos y audiovisuales.
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1136,7 +1049,6 @@
       la naturaleza y la agricultura.
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1162,7 +1074,6 @@
   retrieved_context:
   - id: doc1
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1172,7 +1083,6 @@
       y el testimonio de los mismos protagonistas a través de fotos y audiovisuales.
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1181,7 +1091,6 @@
       la naturaleza y la agricultura.
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1192,7 +1101,6 @@
       del carro.'
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1216,7 +1124,6 @@
   retrieved_context:
   - id: doc1
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1225,7 +1132,6 @@
       un mundo de sonidos y sensaciones que forman parte del patrimonio inmaterial del Montseny.
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1234,7 +1140,6 @@
       'La memoria del agua'
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1242,7 +1147,6 @@
     text: Centre de Documentació del Parc Natural del Montseny, secció Humanitats
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1268,7 +1172,6 @@
   retrieved_context:
   - id: doc1
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1277,7 +1180,6 @@
       un cuaderno pedagógico específico.'
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1286,7 +1188,6 @@
       de fichas táctiles y sonoras de animales
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1294,7 +1195,6 @@
     text: Actividades de refuerzo para créditos comunes, variables y de síntesis
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1318,7 +1218,6 @@
   retrieved_context:
   - id: doc1
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs310353
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1327,7 +1226,6 @@
       del siglo XVII, posteriormente fue abandonado.
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs310353
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1337,7 +1235,6 @@
       de los siglos XIX y XX.
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs310353
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1346,7 +1243,6 @@
       excavaciones arqueológicas y consolidaciones.
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs310353
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1372,7 +1268,6 @@
   retrieved_context:
   - id: doc1
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1381,7 +1276,6 @@
       y uso del medio ambiente.
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1389,7 +1283,6 @@
     text: Actividades y talleres relacionados con el medio ambiente y las energías renovables
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1397,7 +1290,6 @@
     text: Actividades de fin de semana para las AMPA. Taller de cocina solar y excursiones
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1421,7 +1313,6 @@
   retrieved_context:
   - id: doc1
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1430,7 +1321,6 @@
       la naturaleza y la agricultura.
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1441,7 +1331,6 @@
       del carro.'
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1450,7 +1339,6 @@
       (carboneo, peladores, leñador), vegetación, fauna y usos actuales (excursionismo).'
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1476,7 +1364,6 @@
   retrieved_context:
   - id: doc1
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1485,7 +1372,6 @@
       'La memoria del agua'
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1493,7 +1379,6 @@
     text: Centre de Documentació del Parc Natural del Montseny, secció Humanitats
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1504,7 +1389,6 @@
       a descargarlo.'
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1531,7 +1415,6 @@
   retrieved_context:
   - id: doc1
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1540,7 +1423,6 @@
       de fichas táctiles y sonoras de animales
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1548,7 +1430,6 @@
     text: Actividades de refuerzo para créditos comunes, variables y de síntesis
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1557,7 +1438,6 @@
       la serra de l'Obac')
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1581,7 +1461,6 @@
   retrieved_context:
   - id: doc1
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs22559905
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -1591,7 +1470,6 @@
       de la casa i instruments musicals.
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs22559905
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1601,7 +1479,6 @@
       de labranza, ajuar de la casa e instrumentos musicales.
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs22559905
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1610,7 +1487,6 @@
       han sido donadas desinteresadamente por los propios vecinos del pueblo.
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs22559905
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1634,7 +1510,6 @@
   retrieved_context:
   - id: doc1
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -1644,7 +1519,6 @@
       dels mateixos protagonistes a través de fotos i audiovisuals.
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1654,7 +1528,6 @@
       y el testimonio de los mismos protagonistas a través de fotos y audiovisuales.
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1663,7 +1536,6 @@
       la naturaleza y la agricultura.
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1689,7 +1561,6 @@
   retrieved_context:
   - id: doc1
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs308381
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -1698,7 +1569,6 @@
       la podeu consultar al següent enllaç.
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308381
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1707,7 +1577,6 @@
       se puede consultar en el siguiente enlace.
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308381
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1716,7 +1585,6 @@
       arqueológico [PDF, texto en catalán]
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308381
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1742,7 +1610,6 @@
   retrieved_context:
   - id: doc1
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -1751,7 +1618,6 @@
       món de sons i sensacions que formen part del patrimoni immaterial del Montseny.
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1760,7 +1626,6 @@
       un mundo de sonidos y sensaciones que forman parte del patrimonio inmaterial del Montseny.
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1769,7 +1634,6 @@
       'La memoria del agua'
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1792,7 +1656,6 @@
   retrieved_context:
   - id: doc1
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs308680
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -1801,7 +1664,6 @@
       audiovisual, connectat com a sala d'actes.
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308680
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1810,7 +1672,6 @@
       equipamiento audiovisual, conectado como sala de actos.
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308680
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1821,7 +1682,6 @@
       en la Estación Biológica del Montseny equipamiento de recerca y divulgación.
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308680
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1842,7 +1702,6 @@
   retrieved_context:
   - id: doc1
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs308846
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -1852,7 +1711,6 @@
       necessitats i valors d’un espai natural protegit.
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308846
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1862,7 +1720,6 @@
       compatibles con las necesidades y valores de un espacio natural protegido.
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308846
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1873,7 +1730,6 @@
       simultánea, megafonía y todos los aparatos audiovisuales necesarios.
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308846
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1895,7 +1751,6 @@
   retrieved_context:
   - id: doc1
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs308921
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -1907,7 +1762,6 @@
       per a escoles i instituts i per al públic general.
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308921
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1919,7 +1773,6 @@
       e institutos y público general.
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308921
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1930,7 +1783,6 @@
       el planeta.
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308921
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1951,7 +1803,6 @@
   retrieved_context:
   - id: doc1
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs309278
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -1959,7 +1810,6 @@
     text: 'Des d’aquest equipament podeu començar els següents itineraris senyalitzats:'
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs309278
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1967,7 +1817,6 @@
     text: 'Desde este equipamiento puede empezar los siguientes itinerarios señalizados:'
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs309278
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1976,7 +1825,6 @@
       y la exposición permanente ' Savassona, a gran escala '.
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs309278
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -1999,7 +1847,6 @@
   retrieved_context:
   - id: doc1
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -2008,7 +1855,6 @@
       quadern pedagògic específic'
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2017,7 +1863,6 @@
       un cuaderno pedagógico específico.'
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2026,7 +1871,6 @@
       de fichas táctiles y sonoras de animales
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2049,7 +1893,6 @@
   retrieved_context:
   - id: doc1
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs310353
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -2058,7 +1901,6 @@
       XVII, posteriorment fou abandonat.
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs310353
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2067,7 +1909,6 @@
       del siglo XVII, posteriormente fue abandonado.
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs310353
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2077,7 +1918,6 @@
       de los siglos XIX y XX.
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs310353
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2101,7 +1941,6 @@
   retrieved_context:
   - id: doc1
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -2110,7 +1949,6 @@
       sostenible del medi ambient.
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2119,7 +1957,6 @@
       y uso del medio ambiente.
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2127,7 +1964,6 @@
     text: Actividades y talleres relacionados con el medio ambiente y las energías renovables
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2150,7 +1986,6 @@
   retrieved_context:
   - id: doc1
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs311281
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -2159,7 +1994,6 @@
       a Can Ferran, Tres termes i Plana Can Xiques (Can Palau).
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs311281
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2168,7 +2002,6 @@
       con paradas en Can Ferran, Tres termes y Plana Can Xiques (Can Palau).
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs311281
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2178,7 +2011,6 @@
       de un ordenador para consultas y un panel informativo sobre el parque.'
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs311281
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2199,7 +2031,6 @@
   retrieved_context:
   - id: doc1
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs311395
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -2207,7 +2038,6 @@
     text: El Museu de Mataró està gestionat pel Patronat Municipal de Cultura de Mataró.
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs311395
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2215,7 +2045,6 @@
     text: El Museo de Mataró esta gestionado por el Patronato Municipal de Cultura de Mataró.
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs311395
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2225,7 +2054,6 @@
       restos de una Vila Romana señorial construida al dinal del siglo I a.c.
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs311395
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2245,7 +2073,6 @@
   retrieved_context:
   - id: doc1
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs312015
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -2254,7 +2081,6 @@
       l'audiovisual del Parc de la Serralada de Marina.
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs312015
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2263,7 +2089,6 @@
       audiovisual del Parque de la Serralada de Marina.
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs312015
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2274,7 +2099,6 @@
       del tiempo, y conocerá la gestión que se hace como espacio natural protegido.
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs312015
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2294,7 +2118,6 @@
   retrieved_context:
   - id: doc1
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs313004
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -2303,7 +2126,6 @@
       fotografies, gravats, documents sonors i dibuixos sobre aspectes naturalístics i historicoculturals.
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs313004
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2312,7 +2134,6 @@
       fotografías, grabados, documentos sonoros y dibujos sobre aspectos naturales e histórico-culturales.
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs313004
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2323,7 +2144,6 @@
       de la comarca y ofrece diversos programas de educación ambiental para escuelas y adultos.
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs313004
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2343,7 +2163,6 @@
   retrieved_context:
   - id: doc1
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs428414831
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -2354,7 +2173,6 @@
       entitats locals, administracions i la voluntat política.
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs428414831
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2365,7 +2183,6 @@
       las entidades locales, administraciones y la voluntad política.
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs428414831
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2374,7 +2191,6 @@
       ganadera y comerciaban con fenicios griegos y cartagineses.
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs428414831
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2396,7 +2212,6 @@
   retrieved_context:
   - id: doc1
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs445461314
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -2405,7 +2220,6 @@
       dels següents itineraris senyalitzats:'
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs445461314
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2414,7 +2228,6 @@
       inicio de los siguientes itinerarios señalizados:'
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs445461314
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2423,7 +2236,6 @@
       del Munt
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs445461314
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2443,7 +2255,6 @@
   retrieved_context:
   - id: doc1
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs445461857
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -2453,7 +2264,6 @@
       Natural de les Guilleries-Savassona.
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs445461857
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2463,7 +2273,6 @@
       el Espacio Natural de las Guilleries-Savassona.
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs445461857
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2472,7 +2281,6 @@
       itinerarios señalizados:'
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs445461857
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2495,7 +2303,6 @@
   retrieved_context:
   - id: doc1
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs447850971
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -2505,7 +2312,6 @@
       com a activitat amateur, divulgar aquesta ciència i realitzar una tasca didàctica.'
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs447850971
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2515,7 +2321,6 @@
       com a activitat amateur, divulgar aquesta ciència i realitzar una tasca didàctica.'
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs447850971
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2525,7 +2330,6 @@
       a diferents nivells en funció del grau de coneixement.
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs447850971
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2549,7 +2353,6 @@
   retrieved_context:
   - id: doc1
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs5241044
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -2557,7 +2360,6 @@
     text: El punt d'informació dona a conèixer els atractius de la zona oest del Parc Natural.
   - id: doc2
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs5241044
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2566,7 +2368,6 @@
       Natural.
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs5241044
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2576,7 +2377,6 @@
       del sector de Vallhonesta, con vistas excepcionales del Pirineo.
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs5241044
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2597,7 +2397,6 @@
   retrieved_context:
   - id: doc1
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs19064516
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -2605,7 +2404,6 @@
     text: Visita 'auto-guiada' seguint un itinerari numerat (català, castellà i anglès)
   - id: doc2
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs19064516
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -2616,7 +2414,6 @@
       Museus.'
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs19064516
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2624,7 +2421,6 @@
     text: Visita auto-guiada 'siguiendo un itinerario numerado (catalán, castellano e inglés)
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs19064516
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2650,7 +2446,6 @@
   retrieved_context:
   - id: doc1
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs22559905
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -2660,7 +2455,6 @@
       de la casa i instruments musicals.
   - id: doc2
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs22559905
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -2669,7 +2463,6 @@
       estat donades desinteressadament pels mateixos veïns del poble.
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs22559905
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2679,7 +2472,6 @@
       de labranza, ajuar de la casa e instrumentos musicales.
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs22559905
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2703,7 +2495,6 @@
   retrieved_context:
   - id: doc1
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs30596022
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -2714,7 +2505,6 @@
       l'evolució del poble de la Garriga des de l'època romana fins a l'actualitat.
   - id: doc2
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs30596022
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -2724,7 +2514,6 @@
       Montseny, Venda de publicacions, Exposició permanent.'
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs30596022
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2736,7 +2525,6 @@
       la actualidad.
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs30596022
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2758,7 +2546,6 @@
   retrieved_context:
   - id: doc1
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs306593
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -2767,7 +2554,6 @@
       al jaciment'
   - id: doc2
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs306593
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -2776,7 +2562,6 @@
       Montseny.'
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs306593
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2785,7 +2570,6 @@
       la visita al yacimiento'
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs306593
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2805,7 +2589,6 @@
   retrieved_context:
   - id: doc1
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs306602
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -2817,7 +2600,6 @@
       revistes, fotografies i dibuixos referits als aspectes naturalístics del massís.
   - id: doc2
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs306602
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -2828,7 +2610,6 @@
       programes d'educació ambiental per a escoles i adults.
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs306602
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2837,7 +2618,6 @@
       Vallès Oriental TV 12/01/2012]'
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs306602
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2859,7 +2639,6 @@
   retrieved_context:
   - id: doc1
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs306611
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -2868,7 +2647,6 @@
       Durada: 30 min.'
   - id: doc2
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs306611
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -2877,7 +2655,6 @@
       documentals: audiovisuals, montseny, Audiovisuals, Montseny.'
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs306611
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2886,7 +2663,6 @@
       Duración: 30 min.'
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs306611
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2907,7 +2683,6 @@
   retrieved_context:
   - id: doc1
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -2917,7 +2692,6 @@
       dels mateixos protagonistes a través de fotos i audiovisuals.
   - id: doc2
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -2926,7 +2700,6 @@
       bosc, la natura i la pagesia
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2936,7 +2709,6 @@
       y el testimonio de los mismos protagonistas a través de fotos y audiovisuales.
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2960,7 +2732,6 @@
   retrieved_context:
   - id: doc1
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs307434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -2969,7 +2740,6 @@
       de publicacions relacionades amb el massís.
   - id: doc2
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs307434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -2979,7 +2749,6 @@
       de publicacions, Informació personalitzada.'
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs307434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -2988,7 +2757,6 @@
       natural y venta de publicaciones relacionadas con el macizo.
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs307434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -3013,7 +2781,6 @@
   retrieved_context:
   - id: doc1
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs308244
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -3022,7 +2789,6 @@
       a través de la narració dels principals mites i llegendes del massís.
   - id: doc2
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs308244
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -3031,7 +2797,6 @@
       montseny, Audiovisuals, Montseny.'
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308244
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -3040,7 +2805,6 @@
       y leyendas del macizo.
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308244
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -3064,7 +2828,6 @@
   retrieved_context:
   - id: doc1
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs308381
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -3073,7 +2836,6 @@
       la podeu consultar al següent enllaç.
   - id: doc2
     lang: ca
-    relevance: relevant
     source_dataset: parcsequipaments_ca
     record_id: parcs308381
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
@@ -3082,7 +2844,6 @@
       [PDF]
   - id: doc3
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308381
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
@@ -3091,7 +2852,6 @@
       se puede consultar en el siguiente enlace.
   - id: doc4
     lang: es
-    relevance: relevant
     source_dataset: parcsequipaments_es
     record_id: parcs308381
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
