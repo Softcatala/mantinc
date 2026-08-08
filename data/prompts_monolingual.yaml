@@ -5,7 +5,7 @@
   workflow: ai_misconception_explanation
   source_lang: ca
   target_lang: ca
-  prompt: 'Respon només en català. Tema: ús de la intel·ligència artificial per ampliar
+  prompt: 'Tema: ús de la intel·ligència artificial per ampliar
     les capacitats humanes. Explica un malentès habitual sobre aquest tema i corregeix-lo
     amb un exemple concret.'
 - id: cd_002
@@ -15,7 +15,7 @@
   workflow: client_reply
   source_lang: ca
   target_lang: ca
-  prompt: Respon només en català. Escriu una resposta breu per a un client que reclama
+  prompt: Escriu una resposta breu per a un client que reclama
     que una comanda ha arribat dos dies tard. Inclou disculpa, explicació, solució
     proposada i to professional.
 - id: cd_003
@@ -25,7 +25,7 @@
   workflow: public_notice
   source_lang: ca
   target_lang: ca
-  prompt: Escriu íntegrament en català un avís municipal sobre el tancament temporal
+  prompt: Escriu un avís municipal sobre el tancament temporal
     d'un parc per tasques de manteniment. Ha de tenir títol, data, motiu, afectació
     i canal per fer arribar les consultes.
 - id: cd_004
@@ -322,7 +322,7 @@
   source_lang: ca
   target_lang: ca
   prompt: >-
-    Respon només en català. Explica un malentès habitual sobre l'ús de sistemes
+    Explica un malentès habitual sobre l'ús de sistemes
     automàtics per assignar cites mèdiques i corregeix-lo amb un exemple concret
     que mostri per què cal supervisió humana.
 - id: cd_201

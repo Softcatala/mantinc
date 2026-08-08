@@ -5,7 +5,7 @@
   workflow: ai_misconception_explanation
   source_lang: es-ca
   target_lang: ca
-  prompt: 'Explica en català un malentès comú sobre el tema descrit i corregeix-lo
+  prompt: 'Explica un malentès comú sobre el tema descrit i corregeix-lo
     amb un exemple concret.
 
 
@@ -19,7 +19,7 @@
   workflow: client_reply
   source_lang: es-ca
   target_lang: ca
-  prompt: 'Redacta en català una resposta professional al client. Ha de reconèixer
+  prompt: 'Redacta una resposta professional al client. Ha de reconèixer
     la pressió, proposar una data de resposta i evitar copiar expressions del text
     original.
 
@@ -32,7 +32,7 @@
   workflow: public_notice
   source_lang: es-ca
   target_lang: ca
-  prompt: 'Escriu en català un avís públic amb títol i cos. Transforma la informació
+  prompt: 'Escriu un avís públic amb títol i cos. Transforma la informació
     de la font en llenguatge administratiu clar, sense conservar les expressions en
     castellà.
 
@@ -71,7 +71,7 @@
   workflow: study_plan
   source_lang: es-ca
   target_lang: ca
-  prompt: 'Prepara un pla d''estudi en català d''una setmana a partir de la font. Ha de tenir
+  prompt: 'Prepara un pla d''estudi d''una setmana a partir de la font. Ha de tenir
     fites diàries i un control de progrés.
 
     Font (castellà): "Empieza con un examen de prueba, identifica los temas más flojos,
@@ -84,7 +84,7 @@
   workflow: project_status
   source_lang: es-ca
   target_lang: ca
-  prompt: 'Escriu en català una actualització de projecte per a direcció. Converteix la font
+  prompt: 'Escriu una actualització de projecte per a direcció. Converteix la font
     en estat, risc, decisió necessària i propera acció.
 
     Font (castellà): "El entregable principal está listo, pero hay un riesgo comercial
@@ -401,7 +401,7 @@
   source_lang: es-ca
   target_lang: ca
   prompt: >-
-    Explica en català un malentès habitual sobre el tema descrit i corregeix-lo
+    Explica un malentès habitual sobre el tema descrit i corregeix-lo
     amb un exemple concret, sense copiar expressions castellanes.
 
     Font (castellà): "Mucha gente cree que un asistente automático recomienda
@@ -415,7 +415,7 @@
   source_lang: en-ca
   target_lang: ca
   prompt: >-
-    Redacta en català una resposta institucional a una consulta ciutadana. Inclou
+    Redacta una resposta institucional a una consulta ciutadana. Inclou
     recepció, estat de revisió, documentació pendent, termini orientatiu i canal de
     seguiment.
 
@@ -429,7 +429,7 @@
   source_lang: es-ca
   target_lang: ca
   prompt: >-
-    Escriu en català una resposta professional a un client. Ha de reconèixer el
+    Escriu una resposta professional a un client. Ha de reconèixer el
     retard, separar dades pendents i compensació possible, proposar calendari i
     evitar copiar expressions del text original.
 
@@ -444,7 +444,7 @@
   source_lang: en-ca
   target_lang: ca
   prompt: >-
-    Redacta en català un correu breu per a un client. Inclou situació, límit del
+    Redacta un correu breu per a un client. Inclou situació, límit del
     que es pot confirmar, informació pendent, alternativa viable i proper pas.
 
     Font (anglès): "The renewal has more seats than expected, procurement needs a
@@ -458,7 +458,7 @@
   source_lang: es-ca
   target_lang: ca
   prompt: >-
-    Escriu en català una resposta a un client que pressiona per llançar una acció
+    Escriu una resposta a un client que pressiona per llançar una acció
     comercial. Mantén un to col·laboratiu, indica què es pot avançar, què falta
     validar i quin calendari és prudent.
 
@@ -472,7 +472,7 @@
   source_lang: en-ca
   target_lang: ca
   prompt: >-
-    Escriu en català una resposta equilibrada a un client B2B. Inclou disculpa
+    Escriu una resposta equilibrada a un client B2B. Inclou disculpa
     prudent, verificació, solució provisional, límits sobre compensacions i següent
     actualització.
 
@@ -487,7 +487,7 @@
   source_lang: en-ca
   target_lang: ca
   prompt: >-
-    Escriu en català una reclamació formal. Inclou cronologia, impacte, documents
+    Escriu una reclamació formal. Inclou cronologia, impacte, documents
     adjunts, petició concreta i termini de resposta, sense conservar expressions
     angleses.
 
@@ -502,7 +502,7 @@
   source_lang: es-ca
   target_lang: ca
   prompt: >-
-    Redacta en català una resposta municipal a una queixa tributària. Ha de reconèixer
+    Redacta una resposta municipal a una queixa tributària. Ha de reconèixer
     la recepció, explicar comprovacions, indicar documentació útil, termini i canal
     de seguiment.
 
@@ -516,7 +516,7 @@
   source_lang: es-ca
   target_lang: ca
   prompt: >-
-    Escriu en català una reclamació a una companyia de transport. Inclou fets,
+    Escriu una reclamació a una companyia de transport. Inclou fets,
     conseqüències, proves disponibles, solució demanada i petició de confirmació.
 
     Font (castellà): "El equipaje no llegó tras una escala, el mostrador no abrió
@@ -529,7 +529,7 @@
   source_lang: en-ca
   target_lang: ca
   prompt: >-
-    Redacta en català una resposta institucional a una queixa veïnal. Inclou
+    Redacta una resposta institucional a una queixa veïnal. Inclou
     reconeixement, actuació immediata, verificació prevista, terminis i canal per
     aportar més informació.
 
@@ -544,7 +544,7 @@
   source_lang: en-ca
   target_lang: ca
   prompt: >-
-    Escriu en català una reclamació a la propietat d'un habitatge. Inclou antecedents,
+    Escriu una reclamació a la propietat d'un habitatge. Inclou antecedents,
     discrepància, proves disponibles, petició d'import i termini de resposta.
 
     Font (anglès): "The landlord kept part of the deposit after checkout, claims
@@ -558,7 +558,7 @@
   source_lang: es-ca
   target_lang: ca
   prompt: >-
-    Escriu en català una reclamació educativa clara i respectuosa. Inclou exposició
+    Escriu una reclamació educativa clara i respectuosa. Inclou exposició
     dels fets, impacte, documents adjunts, petició principal i alternativa acceptable.
 
     Font (castellà): "La matrícula aparece anulada, la plaza se ofreció a otra persona,
@@ -571,7 +571,7 @@
   source_lang: en-ca
   target_lang: ca
   prompt: >-
-    Dona en català una guia de privacitat amb passos ordenats i advertiments
+    Dona una guia de privacitat amb passos ordenats i advertiments
     pràctics. No mantinguis la terminologia anglesa de la font.
 
     Font (anglès): "Before leaving a shared family tablet at a holiday apartment,
@@ -585,7 +585,7 @@
   source_lang: es-ca
   target_lang: ca
   prompt: >-
-    Escriu en català una nota de contractació breu. Inclou necessitat, criteris
+    Escriu una nota de contractació breu. Inclou necessitat, criteris
     tècnics, riscos, comprovacions documentals i proper tràmit, sense copiar termes
     castellans.
 
@@ -600,7 +600,7 @@
   source_lang: en-ca
   target_lang: ca
   prompt: >-
-    Redacta en català una nota de contractació. Inclou objectiu, abast, criteris de
+    Redacta una nota de contractació. Inclou objectiu, abast, criteris de
     qualitat, riscos d'accessibilitat, dades a protegir i recomanació condicionada.
 
     Font (anglès): "The city needs live captioning for council sessions, searchable
@@ -614,7 +614,7 @@
   source_lang: es-ca
   target_lang: ca
   prompt: >-
-    Escriu en català una nota interna per comparar proveïdors. Inclou criteris de
+    Escriu una nota interna per comparar proveïdors. Inclou criteris de
     qualitat, cost, continuïtat, riscos logístics, condicions de transició i decisió
     recomanada.
 
@@ -629,7 +629,7 @@
   source_lang: en-ca
   target_lang: ca
   prompt: >-
-    Redacta en català una nota de decisió sobre un servei logístic. Inclou criteris
+    Redacta una nota de decisió sobre un servei logístic. Inclou criteris
     operatius, cobertura, cost, riscos, prova pilot i recomanació.
 
     Font (anglès): "The courier offer includes scheduled pickup, insurance for
@@ -643,7 +643,7 @@
   source_lang: en-ca
   target_lang: ca
   prompt: >-
-    Escriu en català una actualització de projecte per a direcció. Organitza-la en
+    Escriu una actualització de projecte per a direcció. Organitza-la en
     estat, avenços, riscos, decisions necessàries i properes accions, sense mantenir
     termes anglesos.
 
@@ -657,7 +657,7 @@
   source_lang: es-ca
   target_lang: ca
   prompt: >-
-    Redacta en català una actualització d'estat per a una comissió de seguiment.
+    Redacta una actualització d'estat per a una comissió de seguiment.
     Inclou resum, fites, documentació pendent, riscos, mesures correctores i decisió
     requerida.
 
@@ -671,7 +671,7 @@
   source_lang: en-ca
   target_lang: ca
   prompt: >-
-    Escriu en català una actualització breu de projecte públic. Inclou estat, proves
+    Escriu una actualització breu de projecte públic. Inclou estat, proves
     pendents, riscos per a usuaris, comunicació prevista i decisió de llançament.
 
     Font (anglès): "The service portal login is ready, accessibility testing found
@@ -684,7 +684,7 @@
   source_lang: es-ca
   target_lang: ca
   prompt: >-
-    Escriu en català una actualització executiva de projecte. Inclou estat, incidències
+    Escriu una actualització executiva de projecte. Inclou estat, incidències
     de dades, riscos comercials, tasques crítiques i propera decisió.
 
     Font (castellà): "El inventario físico no cuadra con números de serie, faltan
@@ -697,7 +697,7 @@
   source_lang: en-ca
   target_lang: ca
   prompt: >-
-    Escriu en català un avís públic amb títol, afectació, alternatives, recomanacions
+    Escriu un avís públic amb títol, afectació, alternatives, recomanacions
     i propera actualització. No conservis expressions angleses.
 
     Font (anglès): "A library roof leak closes the study room, public computers
@@ -710,7 +710,7 @@
   source_lang: es-ca
   target_lang: ca
   prompt: >-
-    Redacta en català un avís municipal clar i operatiu. Inclou motiu, espais
+    Redacta un avís municipal clar i operatiu. Inclou motiu, espais
     afectats, ubicació alternativa, horaris, recomanacions i canal de consulta.
 
     Font (castellà): "El mercado semanal cambia varias paradas por un fallo de
@@ -723,7 +723,7 @@
   source_lang: en-ca
   target_lang: ca
   prompt: >-
-    Escriu en català un avís públic sobre mobilitat. Inclou títol, dates, afectació,
+    Escriu un avís públic sobre mobilitat. Inclou títol, dates, afectació,
     alternativa, col·lectius prioritaris i propera comunicació.
 
     Font (anglès): "A road repair near the old bridge requires a shuttle stop
@@ -736,7 +736,7 @@
   source_lang: es-ca
   target_lang: ca
   prompt: >-
-    Escriu en català un avís públic de protecció civil. Inclou què se sap, afectació,
+    Escriu un avís públic de protecció civil. Inclou què se sap, afectació,
     recomanacions, equipaments afectats, pròxima revisió i canal oficial.
 
     Font (castellà): "Un incendio próximo genera humo, el polideportivo cerrará por
@@ -749,7 +749,7 @@
   source_lang: en-ca
   target_lang: ca
   prompt: >-
-    Prepara en català un pla d'estudi de sis dies a partir de la font. Ha de tenir
+    Prepara un pla d'estudi de sis dies a partir de la font. Ha de tenir
     objectius diaris, pràctica activa, revisió final i criteris de progrés.
 
     Font (anglès): "Start with a mock test, revise essay structure, drill grammar
@@ -762,7 +762,7 @@
   source_lang: en-ca
   target_lang: ca
   prompt: >-
-    Contesta en català com a suport tècnic. Resumeix el problema, demana verificacions,
+    Contesta com a suport tècnic. Resumeix el problema, demana verificacions,
     proposa una mesura temporal segura, indica escalat i evita copiar termes anglesos.
 
     Font (anglès): "The token refresh fails after webhook retry, staging works,
@@ -775,7 +775,7 @@
   source_lang: es-ca
   target_lang: ca
   prompt: >-
-    Escriu en català una resposta de suport. Inclou reconeixement, hipòtesis inicials,
+    Escriu una resposta de suport. Inclou reconeixement, hipòtesis inicials,
     comprovacions ordenades, dades que cal enviar i termini de seguiment.
 
     Font (castellà): "La sincronización crea albarán sin pedido asociado, solo pasa
@@ -788,7 +788,7 @@
   source_lang: en-ca
   target_lang: ca
   prompt: >-
-    Escriu en català una resposta de suport per a un equip logístic. Dona passos
+    Escriu una resposta de suport per a un equip logístic. Dona passos
     de diagnosi, instruccions per evitar pèrdua de dades, informació a recollir i
     compromís d'actualització.
 
@@ -802,7 +802,7 @@
   source_lang: es-ca
   target_lang: ca
   prompt: >-
-    Contesta en català com a suport. Resumeix la incidència, dona comprovacions
+    Contesta com a suport. Resumeix la incidència, dona comprovacions
     segures, proposa solució temporal, demana dades mínimes i fixa el proper contacte.
 
     Font (castellà): "La reserva aparece en calendario, pero la sala queda bloqueada
