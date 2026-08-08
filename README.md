@@ -155,6 +155,7 @@ Results on the 300-item Catalan Drift dataset:
 | Model | Overall | Monolingual | Crosslingual basic | Multi-turn | Crosslingual advanced | RAG context |
 |---|---:|---:|---:|---:|---:|---:|
 | GPT-5.6 | **97.0%** | 100.0% | 100.0% | 100.0% | 85.0% | 100.0% |
+| Gemma 3 12B Q8 | 96.3% | 100.0% | 96.7% | 98.3% | 88.3% | 98.3% |
 | Gemini 3.6 Flash | 95.7% | 100.0% | 98.3% | 96.7% | 95.0% | 88.3% |
 
 At 95% confidence, the maximum margin of error is ±5.7 percentage points
