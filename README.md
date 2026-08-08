@@ -99,9 +99,7 @@ Each sample should specify:
     models an ordinary Catalan conversation.
   - `crosslingual_basic`, `multi_turn`, and `crosslingual_advanced` include an
     explicit Catalan instruction only when the case contains non-Catalan text and
-    the final user prompt is shorter than 10 words. In multi-line final prompts,
-    the first non-empty line is treated as that last user prompt; later lines are
-    considered formatting or content constraints.
+    the full final user prompt is shorter than 10 words.
 - RAG documents come from CC BY 4.0 Diputació de Barcelona Open Data records,
   currently the paired `parcsequipaments_ca` and `parcsequipaments_es` datasets.
   Only safe descriptive fragments are kept; contact, location, schedule, and

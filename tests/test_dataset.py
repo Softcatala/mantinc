@@ -18,17 +18,14 @@ WORD_RE = re.compile(r"[\wÀ-ÿ']+")
 
 
 def mentions_catalan_instruction(row: dict) -> bool:
-    texts = [str(row.get("prompt") or "")]
-    texts.extend(str(turn.get("content") or "") for turn in row.get("conversation") or [])
-    return any(CATALAN_INSTRUCTION_RE.search(text) for text in texts)
+    return bool(CATALAN_INSTRUCTION_RE.search(str(row.get("prompt") or "")))
 
 
 def final_prompt_word_count(row: dict) -> int:
     prompt = str(row.get("prompt") or "")
-    first_line = next((line.strip() for line in prompt.splitlines() if line.strip()), "")
-    first_line = re.sub(r"\ben català\b", "", first_line, flags=re.I)
-    first_line = re.sub(r"\b(?:català|catalana|catalans|catalanes)\b", "", first_line, flags=re.I)
-    return len(WORD_RE.findall(first_line))
+    prompt = re.sub(r"\ben català\b", "", prompt, flags=re.I)
+    prompt = re.sub(r"\b(?:català|catalana|catalans|catalanes)\b", "", prompt, flags=re.I)
+    return len(WORD_RE.findall(prompt))
 
 
 class DatasetTest(unittest.TestCase):
