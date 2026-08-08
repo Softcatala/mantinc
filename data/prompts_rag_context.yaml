@@ -42,12 +42,14 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: 'La primera planta se centra en el bosque y la naturaleza: aprovechamiento y oficios
       (carboneo, peladores, leñador), vegetación, fauna y usos actuales (excursionismo).'
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
 
-    Una família pregunta què trobarà a cada planta del Museu del Bosc i si s'hi expliquen oficis rurals.
 
-    Escriu exclusivament en català la resposta final.
+    Una família pregunta què trobarà a cada planta del Museu del Bosc i si s''hi expliquen
+    oficis rurals.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_002
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -90,12 +92,13 @@
       el Bosque de Ribera y el Castell de Montsoriu: la vida en una castell gòtic. Dispone
       de un recortable para montar una reproducción del Castillo de Montsoriu. Le animamos
       a descargarlo.'
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
+
 
     Fitxa catalana final de la Gabella: mural, Farga, documentació i castell; cap dada pràctica.
 
-    Escriu exclusivament en català la resposta final.
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_003
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -136,12 +139,14 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Rutas guiadas para el público en general ('La ruta dels bandolers', Itinerari per
       la serra de l'Obac')
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
 
-    Una visitant amb baixa visió demana quins recursos i activitats de la Casa Nova de l'Obac li poden ser útils.
 
-    Escriu exclusivament en català la resposta final.
+    Una visitant amb baixa visió demana quins recursos i activitats de la Casa Nova de l''Obac
+    li poden ser útils.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_004
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -186,12 +191,14 @@
       sant_llorencobac, elemento_de_patrimonio_historicocultural, Sant Llorenç-Obac, Elemento
       de patrimonio histórico-cultural, Información personalizada, Museos y equipamientos
       culturales.'
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
 
-    Prepara una nota interna catalana per valorar el Monestir de Sant Llorenç del Munt com a element patrimonial.
 
-    Escriu exclusivament en català la resposta final.
+    Prepara una nota interna catalana per valorar el Monestir de Sant Llorenç del Munt com
+    a element patrimonial.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_005
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -231,12 +238,13 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Exposición fotográfica sobre la floración del Parque Natural de Sant Llorenç del
       Munt y l'Obac
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
 
-    Anuncia en català l'oferta ambiental de la Muntada per a joves i famílies.
 
-    Escriu exclusivament en català la resposta final.
+    Anuncia en català l''oferta ambiental de la Muntada per a joves i famílies.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_006
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -282,12 +290,13 @@
       la naturaleza y la agricultura. La voluntad es conservar y mostrar el rico patrimonio
       de la forma de vida de los antepasados ​​de Vallgorguina, el corazón del Parque de El
       Montnegre i el Corredor.
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
+
 
     Un docent vol saber com el Museu del Bosc connecta agricultura, natura i memòria local.
 
-    Escriu exclusivament en català la resposta final.
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_007
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -333,12 +342,13 @@
       Montseny, Montseny - Museo Etnológico del Montseny. La Gabella - Recepción, Montseny
       - Museo Etnológico del Montseny. La Gabella - Sala act. forestales, Montseny - Museo
       Etnológico del Montseny. La Gabella - Sala tornería.'
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
+
 
     Crea en català una presentació breu de la Gabella per a un operador turístic.
 
-    Escriu exclusivament en català la resposta final.
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_008
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -379,12 +389,13 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Ruta teatralizada inclusiva 'Emboscada, un viatge pels cinc sentits', pensada exclusivamente
       para personas con discapacidades
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
 
-    Respon en català a una persona que compara opcions inclusives a la Casa Nova de l'Obac.
 
-    Escriu exclusivament en català la resposta final.
+    Respon en català a una persona que compara opcions inclusives a la Casa Nova de l''Obac.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_009
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -423,12 +434,13 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Espacio disponible para sesiones de prácticas de campo para universidades
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
 
-    Una empresa d'educació ambiental estudia col·laborar amb la Muntada.
 
-    Escriu exclusivament en català la resposta final.
+    Una empresa d''educació ambiental estudia col·laborar amb la Muntada.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_010
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -476,12 +488,13 @@
       municipal). Categorías documentales: montnegrecorredor, equipamientos_de_educacion_ambiental_e_investigacion,
       Montnegre-Corredor, Equipamientos de educación ambiental e investigación, Museos y equipamientos
       culturales, Museos.'
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
+
 
     Publica una peça catalana per despertar interès pel Museu del Bosc.
 
-    Escriu exclusivament en català la resposta final.
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_011
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -527,12 +540,13 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Mural del bosque, espectacular montaje escenográfico que adentra al visitante en
       un mundo de sonidos y sensaciones que forman parte del patrimonio inmaterial del Montseny.
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
 
-    Una ciutadana pregunta què diferencia la Gabella d'un museu convencional.
 
-    Escriu exclusivament en català la resposta final.
+    Una ciutadana pregunta què diferencia la Gabella d''un museu convencional.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_012
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -573,12 +587,13 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: 'Exposicion: ''Sant Llorenç del Munt: un paisatge mediterrani '' - que dispone de
       un cuaderno pedagógico específico.'
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
 
-    Una família valora una sortida a la Casa Nova de l'Obac.
 
-    Escriu exclusivament en català la resposta final.
+    Una família valora una sortida a la Casa Nova de l''Obac.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_013
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -618,12 +633,13 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Escuela de naturaleza y lugar de participación juvenil y de formación para el respeto
       y uso del medio ambiente.
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
+
 
     Redacta en català una descripció de serveis de la Muntada per a una entitat educativa.
 
-    Escriu exclusivament en català la resposta final.
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_014
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -670,12 +686,14 @@
     text: El museo pone énfasis en la memoria colectiva del municipio, mostrando su pasado
       rural a partir de las herramientas utilizadas en los trabajos a bosque y en el campo
       y el testimonio de los mismos protagonistas a través de fotos y audiovisuales.
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
 
-    Prepara una nota catalana per decidir si el Museu del Bosc encaixa en un programa de memòria oral.
 
-    Escriu exclusivament en català la resposta final.
+    Prepara una nota catalana per decidir si el Museu del Bosc encaixa en un programa de memòria
+    oral.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_015
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -722,12 +740,13 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: La Farga del Roquer - Centro de interpretación de la riera de Arbúcies y audiovisual
       'La memoria del agua'
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
 
-    Escriu un text català d'agenda cultural sobre la Gabella.
 
-    Escriu exclusivament en català la resposta final.
+    Escriu un text català d''agenda cultural sobre la Gabella.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_016
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -769,12 +788,13 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Autoguías de braille del itinerario hasta la fuente de la Portella, también dispone
       de fichas táctiles y sonoras de animales
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
 
-    Una persona pregunta si la Casa Nova de l'Obac ofereix una experiència accessible i guiada.
 
-    Escriu exclusivament en català la resposta final.
+    Una persona pregunta si la Casa Nova de l''Obac ofereix una experiència accessible i guiada.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_017
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -814,12 +834,13 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Actividades y talleres relacionados con el medio ambiente y las energías renovables
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
+
 
     Una consultora prepara un dossier de la Muntada per a grups universitaris.
 
-    Escriu exclusivament en català la resposta final.
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_018
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -866,12 +887,13 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: La colección del museo se reparte en dos plantas que dan valor al mundo del bosque,
       la naturaleza y la agricultura.
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
 
-    Un visitant demana una orientació ràpida del Museu del Bosc abans d'escollir la visita.
 
-    Escriu exclusivament en català la resposta final.
+    Un visitant demana una orientació ràpida del Museu del Bosc abans d''escollir la visita.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_019
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -915,12 +937,13 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Centre de Documentació del Parc Natural del Montseny, secció Humanitats
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
+
 
     Una empresa de rutes patrimonials estudia incorporar la Gabella.
 
-    Escriu exclusivament en català la resposta final.
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_020
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -961,12 +984,13 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Actividades de refuerzo para créditos comunes, variables y de síntesis
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
 
-    Anuncia en català els recursos inclusius i pedagògics citats per a la Casa Nova de l'Obac.
 
-    Escriu exclusivament en català la resposta final.
+    Anuncia en català els recursos inclusius i pedagògics citats per a la Casa Nova de l''Obac.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_021
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1005,12 +1029,14 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Actividades de fin de semana para las AMPA. Taller de cocina solar y excursiones
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
 
-    Una associació de famílies i estudiants pregunta quines activitats ambientals ofereix la Muntada.
 
-    Escriu exclusivament en català la resposta final.
+    Una associació de famílies i estudiants pregunta quines activitats ambientals ofereix
+    la Muntada.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_022
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1057,12 +1083,14 @@
       las herramientas utilizadas y los avances técnicos, los cereales y la vid. El patio
       exterior del museo se especializa en los animales de tiro: usos, materiales y partes
       del carro.'
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
 
-    Redacta per al web municipal una síntesi catalana del Museu del Bosc: propòsit de memòria, col·lecció, planta agrícola i espai exterior.
 
-    Escriu exclusivament en català la resposta final.
+    Redacta per al web municipal una síntesi catalana del Museu del Bosc: propòsit de memòria,
+    col·lecció, planta agrícola i espai exterior.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_023
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1107,12 +1135,13 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: 'La primera planta se centra en el bosque y la naturaleza: aprovechamiento y oficios
       (carboneo, peladores, leñador), vegetación, fauna y usos actuales (excursionismo).'
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
+
 
     Una família vol comparar la part agrícola i la forestal del Museu del Bosc.
 
-    Escriu exclusivament en català la resposta final.
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_024
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1155,12 +1184,13 @@
       el Bosque de Ribera y el Castell de Montsoriu: la vida en una castell gòtic. Dispone
       de un recortable para montar una reproducción del Castillo de Montsoriu. Le animamos
       a descargarlo.'
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
+
 
     Nota interna catalana: quatre relats de la Gabella i un risc per relat.
 
-    Escriu exclusivament en català la resposta final.
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_025
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1201,12 +1231,13 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Rutas guiadas para el público en general ('La ruta dels bandolers', Itinerari per
       la serra de l'Obac')
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
 
-    Publica en català una breu crida a descobrir la Casa Nova de l'Obac.
 
-    Escriu exclusivament en català la resposta final.
+    Publica en català una breu crida a descobrir la Casa Nova de l''Obac.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_026
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1251,12 +1282,14 @@
       sant_llorencobac, elemento_de_patrimonio_historicocultural, Sant Llorenç-Obac, Elemento
       de patrimonio histórico-cultural, Información personalizada, Museos y equipamientos
       culturales.'
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
 
-    Un excursionista pregunta què queda de l'antic Monestir de Sant Llorenç i per què té valor patrimonial.
 
-    Escriu exclusivament en català la resposta final.
+    Un excursionista pregunta què queda de l''antic Monestir de Sant Llorenç i per què té
+    valor patrimonial.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_027
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1296,12 +1329,13 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Exposición fotográfica sobre la floración del Parque Natural de Sant Llorenç del
       Munt y l'Obac
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
+
 
     Fitxa catalana de la Muntada: jovent, renovables, famílies i exposició; només evidències.
 
-    Escriu exclusivament en català la resposta final.
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_028
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1347,12 +1381,13 @@
       la naturaleza y la agricultura. La voluntad es conservar y mostrar el rico patrimonio
       de la forma de vida de los antepasados ​​de Vallgorguina, el corazón del Parque de El
       Montnegre i el Corredor.
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
+
 
     Una entitat vol descriure els serveis interpretatius del Museu del Bosc.
 
-    Escriu exclusivament en català la resposta final.
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_029
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1398,12 +1433,14 @@
       Montseny, Montseny - Museo Etnológico del Montseny. La Gabella - Recepción, Montseny
       - Museo Etnológico del Montseny. La Gabella - Sala act. forestales, Montseny - Museo
       Etnológico del Montseny. La Gabella - Sala tornería.'
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
 
-    Dissenya en català una nota interna per a una ruta cultural que connecti els recursos de la Gabella.
 
-    Escriu exclusivament en català la resposta final.
+    Dissenya en català una nota interna per a una ruta cultural que connecti els recursos
+    de la Gabella.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_030
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1444,12 +1481,13 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Ruta teatralizada inclusiva 'Emboscada, un viatge pels cinc sentits', pensada exclusivamente
       para personas con discapacidades
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
 
-    Redacta en català un avís informatiu sobre les opcions de la Casa Nova de l'Obac.
 
-    Escriu exclusivament en català la resposta final.
+    Redacta en català un avís informatiu sobre les opcions de la Casa Nova de l''Obac.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_031
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1493,12 +1531,13 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: 'Nombre del equipamiento: Museo de Rocafort. Categorías documentales: sant_llorencobac,
       museos_y_equipamientos_culturales, Sant Llorenç-Obac, Museos y equipamientos culturales.'
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
 
-    Una veïna pregunta d'on provenen les peces del Museu de Rocafort i què expliquen.
 
-    Escriu exclusivament en català la resposta final.
+    Una veïna pregunta d''on provenen les peces del Museu de Rocafort i què expliquen.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_032
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1544,12 +1583,13 @@
       las herramientas utilizadas y los avances técnicos, los cereales y la vid. El patio
       exterior del museo se especializa en los animales de tiro: usos, materiales y partes
       del carro.'
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
+
 
     Crea una síntesi institucional en català del Museu del Bosc.
 
-    Escriu exclusivament en català la resposta final.
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_033
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1593,12 +1633,13 @@
       montseny, montseny__fortificacion_iberica_del_turo_de_montgros__punto_elevado, Montseny,
       Montseny - Fortificación Ibérica del Turó de Montgros - Punto elevado, Montseny - Fortificación
       Ibérica del Turó de Montgros - Pie ruina, Museo / Interpretación del patrimonio.'
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
+
 
     Una persona vol visitar la fortificació de Montgròs pel seu compte.
 
-    Escriu exclusivament en català la resposta final.
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_034
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1639,12 +1680,13 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Centre de Documentació del Parc Natural del Montseny, secció Humanitats
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
+
 
     Itinerari català de la Gabella: bosc, aigua, documentació i castell; diferencia espais.
 
-    Escriu exclusivament en català la resposta final.
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_035
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1690,7 +1732,10 @@
       catalán] [pdf]
   prompt: 'Fes un text públic sobre Oficina del Parc Natural del Montseny. Masia Mariona:
     què és, serveis/espais i detalls. Només fragments; sense contacte, ubicació, horaris ni
-    dades noves.'
+    dades noves.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_036
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1739,7 +1784,10 @@
       Montesquiu - Centre Recursos - Interior del castillo, Montesquiu - Centro Recursos -
       Salas nobles del castillo, Montesquiu - Centro Recursos - Sala de actos.'
   prompt: 'Fes una nota sobre Centre de Recursos del Castell de Montesquiu: què és, serveis/espais
-    i detalls. Només fragments; sense contacte, ubicació, horaris ni dades noves.'
+    i detalls. Només fragments; sense contacte, ubicació, horaris ni dades noves.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_037
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1791,7 +1839,10 @@
       Orís y Bisaura y del Parque del Castillo de Montesquiu, son los encargados de desarrollar
       este programa curatorial.
   prompt: 'Fes una fitxa sobre Cabanya del Castell: què és, serveis/espais i detalls. Només
-    fragments; sense contacte, ubicació, horaris ni dades noves.'
+    fragments; sense contacte, ubicació, horaris ni dades noves.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_038
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1830,12 +1881,13 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Para atención entre semana se puede dirigir al Ayuntamiento del mismo municipio.
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
 
-    Una excursionista pregunta què pot fer des del Centre d'Informació de Tavèrnoles.
 
-    Escriu exclusivament en català la resposta final.
+    Una excursionista pregunta què pot fer des del Centre d''Informació de Tavèrnoles.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_039
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1876,12 +1928,14 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Actividades de refuerzo para créditos comunes, variables y de síntesis
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
 
-    Avalua en català, per a ús intern, els recursos educatius i accessibles de la Casa Nova de l'Obac.
 
-    Escriu exclusivament en català la resposta final.
+    Avalua en català, per a ús intern, els recursos educatius i accessibles de la Casa Nova
+    de l''Obac.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_040
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1924,12 +1978,13 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Sant Llorenç del Munt, declarado BCIN, ha sido objeto de diferentes campañas de
       excavaciones arqueológicas y consolidaciones.
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
+
 
     Nota patrimonial catalana: etapa benedictina, restes originals, reconstruccions i BCIN.
 
-    Escriu exclusivament en català la resposta final.
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_041
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1969,12 +2024,13 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Actividades de fin de semana para las AMPA. Taller de cocina solar y excursiones
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
+
 
     Una mare pregunta si la Muntada té propostes ambientals per a famílies i joves.
 
-    Escriu exclusivament en català la resposta final.
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_042
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -2019,7 +2075,10 @@
       documentales: montnegrecorredor, desfibrilador, Montnegre-Corredor, Desfibrilador, Elemento
       de patrimonio histórico-cultural, Elemento de patrimonio natural.'
   prompt: 'Fes una fitxa sobre Centre d''Informació de Sant Cebrià de Vallalta: què és, serveis/espais
-    i detalls. Només fragments; sense contacte, ubicació, horaris ni dades noves.'
+    i detalls. Només fragments; sense contacte, ubicació, horaris ni dades noves.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_043
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -2061,7 +2120,10 @@
     text: El Museo también acoje el Centro de Documentación del Parque Natural del Montnegre
       i el Corredor. Mataró
   prompt: 'Fes un resum sobre Museu de Mataró (equipament municipal): què és, serveis/espais
-    i detalls. Només fragments; sense contacte, ubicació, horaris ni dades noves.'
+    i detalls. Només fragments; sense contacte, ubicació, horaris ni dades noves.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_044
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -2106,7 +2168,10 @@
     text: 'Para más información se puede consultar: Observatorio Astronómico de Tiana'
   prompt: 'Fes una nota interna sobre Punt d''Informació a l''Observatori Astronòmic de Tiana:
     què és, serveis/espais i detalls. Només fragments; sense contacte, ubicació, horaris ni
-    dades noves.'
+    dades noves.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_045
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -2151,7 +2216,10 @@
     text: Su base de datos bibliográficos se puede consultar por Internet [catàleg col·lectiu]
   prompt: 'Fes un text públic sobre Centre de Documentació del Parc del Garraf. Gavà: què
     és, serveis/espais i detalls. Només fragments; sense contacte, ubicació, horaris ni dades
-    noves.'
+    noves.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_046
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -2200,7 +2268,10 @@
       Marina, Museos y equipamientos culturales.'
   prompt: 'Fes una nota sobre Espai museístic del jaciment arqueològic del poblat ibèric de
     les Maleses: què és, serveis/espais i detalls. Només fragments; sense contacte, ubicació,
-    horaris ni dades noves.'
+    horaris ni dades noves.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_047
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -2243,7 +2314,10 @@
     text: GR 2 La Joquera-Aiguafreda. De Sant Julià de Vilatorta al santuari de Puig l’Agulla.
   prompt: 'Fes una fitxa sobre Punt d''Informació de Sant Julià de Vilatorta. Biblioteca Anton
     Carrera: què és, serveis/espais i detalls. Només fragments; sense contacte, ubicació,
-    horaris ni dades noves.'
+    horaris ni dades noves.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_048
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -2286,12 +2360,14 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: GR-2 La Jonquera – Aiguafreda. Tram de Vilanova de Sau a Sant Llorenç del Munt.
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
 
-    Una senderista demana què ofereix el Punt d'Informació de Vilanova de Sau i quines rutes hi comencen.
 
-    Escriu exclusivament en català la resposta final.
+    Una senderista demana què ofereix el Punt d''Informació de Vilanova de Sau i quines rutes
+    hi comencen.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_049
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -2336,12 +2412,13 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: 'Nombre del equipamiento: Astrosabadell. Categorías documentales: certificacio_cets,
       museos_y_equipamientos_culturales, certificació CETS, Museos y equipamientos culturales.'
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
 
-    Una empresa d'esdeveniments científics valora col·laborar amb Astrosabadell.
 
-    Escriu exclusivament en català la resposta final.
+    Una empresa d''esdeveniments científics valora col·laborar amb Astrosabadell.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_050
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -2385,7 +2462,10 @@
       la Diputación de Barcelona y el Ayuntamiento de Sant Vicenç de Castellet.
   prompt: 'Fes un text públic sobre Punt d''Informació de Sant Vicenç de Castellet: què és,
     serveis/espais i detalls. Només fragments; sense contacte, ubicació, horaris ni dades
-    noves.'
+    noves.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_051
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -2429,12 +2509,14 @@
       Categorías documentales: montnegrecorredor, equipamientos_de_educacion_ambiental_e_investigacion,
       Montnegre-Corredor, Equipamientos de educación ambiental e investigación, Museos y equipamientos
       culturales, Museos.'
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
 
-    Una visitant pregunta si pot recórrer autònomament el Museu de la Pagesia i en quines llengües trobarà l'itinerari.
 
-    Escriu exclusivament en català la resposta final.
+    Una visitant pregunta si pot recórrer autònomament el Museu de la Pagesia i en quines
+    llengües trobarà l''itinerari.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_052
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -2478,12 +2560,13 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: También hay barro proveniente del castillo de Rocafort. La mayor parte de piezas
       han sido donadas desinteresadamente por los propios vecinos del pueblo.
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
+
 
     Explica en català a una estudiant què permet reconstruir la col·lecció del Museu de Rocafort.
 
-    Escriu exclusivament en català la resposta final.
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_053
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -2534,7 +2617,10 @@
       de publicaciones, Exposición permanente, Información personalizada.'
   prompt: 'Fes un resum sobre Punt d''informació al Centre de Visitants de la Garriga: què
     és, serveis/espais i detalls. Només fragments; sense contacte, ubicació, horaris ni dades
-    noves.'
+    noves.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_054
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -2577,7 +2663,10 @@
     text: 'Nombre del equipamiento: Centro de Información el Brull. Categorías documentales:
       montseny, Montseny.'
   prompt: 'Fes una nota interna sobre Centre d''Informació el Brull: què és, serveis/espais
-    i detalls. Només fragments; sense contacte, ubicació, horaris ni dades noves.'
+    i detalls. Només fragments; sense contacte, ubicació, horaris ni dades noves.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_055
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -2627,7 +2716,10 @@
       Montseny, Centro de documentación, Información personalizada, Centros de documentación.'
   prompt: 'Fes un text públic sobre Centre de Documentació del Parc Natural del Montseny.
     Secció Ciències Naturals: què és, serveis/espais i detalls. Només fragments; sense contacte,
-    ubicació, horaris ni dades noves.'
+    ubicació, horaris ni dades noves.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_056
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -2671,7 +2763,10 @@
       estaciones en el Montseny). Categorías documentales: montseny, audiovisuales, Montseny,
       Audiovisuales.'
   prompt: 'Fes una nota sobre Audiovisual: Les quatre estacions al Montseny: què és, serveis/espais
-    i detalls. Només fragments; sense contacte, ubicació, horaris ni dades noves.'
+    i detalls. Només fragments; sense contacte, ubicació, horaris ni dades noves.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_057
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -2715,12 +2810,14 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: La colección del museo se reparte en dos plantas que dan valor al mundo del bosque,
       la naturaleza y la agricultura.
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
 
-    Una empresa turística necessita dos textos catalans del Museu del Bosc: una entradeta sobre memòria col·lectiva i un resum de la distribució en plantes.
 
-    Escriu exclusivament en català la resposta final.
+    Una empresa turística necessita dos textos catalans del Museu del Bosc: una entradeta
+    sobre memòria col·lectiva i un resum de la distribució en plantes.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_058
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -2764,12 +2861,13 @@
     text: 'Nombre del equipamiento: Punto de Información de Aiguafreda. Categorías documentales:
       montseny, venta_de_publicaciones, Montseny, Venta de publicaciones, Información personalizada,
       Itinerario autoguiado.'
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
 
-    Una excursionista vol saber per a què serveix el Punt d'Informació d'Aiguafreda.
 
-    Escriu exclusivament en català la resposta final.
+    Una excursionista vol saber per a què serveix el Punt d''Informació d''Aiguafreda.
+
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_059
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -2811,12 +2909,13 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: 'Nombre del equipamiento: Llegendes del Montseny (Leyendas del Montseny). Categorías
       documentales: montseny, audiovisuales, Montseny, Audiovisuales.'
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
+
 
     Una productora cultural estudia reutilitzar el relat audiovisual de Llegendes del Montseny.
 
-    Escriu exclusivament en català la resposta final.
+
+    Escriu exclusivament en català la resposta final.'
 - id: cd_rag_060
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -2858,9 +2957,10 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: El Montgròs, el Brull. Una fortificación ibérica en el Montseny. Guía del conjunto
       arqueológico [PDF, texto en catalán]
-  prompt: |-
-    Revisa en español y ciérralo.
+  prompt: 'Revisa en español y ciérralo.
+
 
     Emet en català un avís sobre la visita a la fortificació de Montgròs.
 
-    Escriu exclusivament en català la resposta final.
+
+    Escriu exclusivament en català la resposta final.'

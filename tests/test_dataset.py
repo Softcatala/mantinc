@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import sys
 import unittest
+import re
 from collections import Counter
 from pathlib import Path
 
@@ -10,6 +11,24 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.build_dataset import build_rows
+
+
+CATALAN_INSTRUCTION_RE = re.compile(r"\b(?:català|catalana|catalans|catalanes)\b", re.I)
+WORD_RE = re.compile(r"[\wÀ-ÿ']+")
+
+
+def mentions_catalan_instruction(row: dict) -> bool:
+    texts = [str(row.get("prompt") or "")]
+    texts.extend(str(turn.get("content") or "") for turn in row.get("conversation") or [])
+    return any(CATALAN_INSTRUCTION_RE.search(text) for text in texts)
+
+
+def final_prompt_word_count(row: dict) -> int:
+    prompt = str(row.get("prompt") or "")
+    first_line = next((line.strip() for line in prompt.splitlines() if line.strip()), "")
+    first_line = re.sub(r"\ben català\b", "", first_line, flags=re.I)
+    first_line = re.sub(r"\b(?:català|catalana|catalans|catalanes)\b", "", first_line, flags=re.I)
+    return len(WORD_RE.findall(first_line))
 
 
 class DatasetTest(unittest.TestCase):
@@ -46,6 +65,19 @@ class DatasetTest(unittest.TestCase):
                 for chunk in row.get("retrieved_context", [])
             )
         )
+
+    def test_catalan_instruction_policy(self) -> None:
+        for row in self.rows:
+            with self.subTest(row=row["id"]):
+                category = row["category"]
+                has_instruction = mentions_catalan_instruction(row)
+                if category == "rag_context":
+                    self.assertTrue(has_instruction)
+                elif category == "monolingual":
+                    self.assertFalse(has_instruction)
+                else:
+                    expected = row["source_lang"] != "ca" and final_prompt_word_count(row) < 10
+                    self.assertEqual(has_instruction, expected)
 
     def test_advanced_distribution_preserves_coverage(self) -> None:
         advanced = [row for row in self.rows if row["category"] == "crosslingual_advanced"]

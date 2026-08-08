@@ -92,9 +92,16 @@ Each sample should specify:
 - Conversation cases do not use system prompts. The final user prompt is appended
   after the prior turns, so the benchmark tests whether the model follows the
   latest task while resisting cross-language priming.
-- When an example provides a template to use in another language, explicitly
-  include `català` in the instruction. This keeps the case fair and makes the
-  expected Catalan answer language unambiguous.
+- Explicit Catalan language instructions follow the app policy being tested:
+  - `rag_context` always includes a final Catalan instruction, because the app
+    prompt supplies that guardrail around retrieved context.
+  - `monolingual` never includes an explicit Catalan instruction, because it
+    models an ordinary Catalan conversation.
+  - `crosslingual_basic`, `multi_turn`, and `crosslingual_advanced` include an
+    explicit Catalan instruction only when the case contains non-Catalan text and
+    the final user prompt is shorter than 10 words. In multi-line final prompts,
+    the first non-empty line is treated as that last user prompt; later lines are
+    considered formatting or content constraints.
 - RAG documents come from CC BY 4.0 Diputació de Barcelona Open Data records,
   currently the paired `parcsequipaments_ca` and `parcsequipaments_es` datasets.
   Only safe descriptive fragments are kept; contact, location, schedule, and
