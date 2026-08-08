@@ -103,16 +103,6 @@ Each sample should specify:
 The dataset contains 300 items total. It is built deterministically with
 `make build`.
 
-## Evaluation Results
-
-| Model | Overall | Monolingual | Crosslingual basic | Multi-turn | Crosslingual advanced | RAG context |
-|---|---:|---:|---:|---:|---:|---:|
-| gpt-5.6 | **97.0%** | **100.0%** | **100.0%** | **100.0%** | 85.0% | **100.0%** |
-| gemini-3.6-flash | 95.7% | **100.0%** | 98.3% | 96.7% | **95.0%** | 88.3% |
-
-Scores are pass rates on the 300-item benchmark (60 items per category).
-
-
 ## Run
 
 This benchmark is designed to run as an `lm-eval` task. The task definition is
@@ -156,3 +146,24 @@ Code is licensed under the MIT License. Benchmark datasets, prompts, fixtures,
 and source/evaluation data files are licensed under Creative Commons
 Attribution-ShareAlike 4.0 International (CC BY-SA 4.0). See `LICENSE` for the
 full repository license split.
+
+
+## Completed evaluations
+
+Results on the 300-item Catalan Drift dataset:
+
+| Model | Overall | Monolingual | Crosslingual basic | Multi-turn | Crosslingual advanced | RAG context |
+|---|---:|---:|---:|---:|---:|---:|
+| GPT-5.6 | **97.0%** | 100.0% | 100.0% | 100.0% | 85.0% | 100.0% |
+| Gemini 3.6 Flash | 95.7% | 100.0% | 98.3% | 96.7% | 95.0% | 88.3% |
+
+At 95% confidence, the maximum margin of error is ±5.7 percentage points
+for overall scores (n=300) and ±12.7 percentage points for category scores
+(n=60), using the normal approximation for a binomial proportion.
+
+**How to compare models:** Rank models by the **Overall** column. Per-category
+scores (n=60, ±12.7 pp at 95%) are useful for spotting *where* a model
+struggles, not for ranking models against each other — most per-category gaps
+in this table are within the margin of error.
+
+All completed evaluations had zero API or empty-response failures.
