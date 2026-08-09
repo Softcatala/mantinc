@@ -23,9 +23,6 @@ metric_list:
   - metric: drift_pass
     aggregation: mean
     higher_is_better: true
-  - metric: forbidden_fail
-    aggregation: mean
-    higher_is_better: false
   - metric: language_fail
     aggregation: mean
     higher_is_better: false

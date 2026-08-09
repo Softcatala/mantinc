@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from lm_eval_tasks.catalan_drift.utils import forbidden_hits, process_results
+from lm_eval_tasks.catalan_drift.utils import lcb_line_language_result, process_results
 
 
 def fake_fasttext(text: str) -> tuple[str, float]:
@@ -31,44 +31,23 @@ def one_bullet_false_positive(text: str) -> tuple[str, float]:
     return "ca", 0.99
 
 
-class ForbiddenHitsTest(unittest.TestCase):
-    def test_detects_case_insensitive_whole_term(self) -> None:
-        hits = forbidden_hits("Cal evitar el Support Macro en la resposta.", ["support macro"])
+class CatalanDriftChecksTest(unittest.TestCase):
+    def test_legacy_forbidden_terms_are_ignored(self) -> None:
+        with mock.patch(
+            "lm_eval_tasks.catalan_drift.utils._predict_fasttext",
+            return_value=("ca", 0.99),
+        ):
+            result = process_results(
+                {
+                    "target_lang": "ca",
+                    "category": "test",
+                    "forbidden_terms": ["support macro"],
+                },
+                ["Cal revisar el support macro i explicar-ho en català."],
+            )
 
-        self.assertEqual(hits, ["support macro"])
-
-    def test_ignores_terms_inside_words(self) -> None:
-        hits = forbidden_hits("El pressupost està pendent.", ["press"])
-
-        self.assertEqual(hits, [])
-
-    def test_empty_terms_are_ignored(self) -> None:
-        hits = forbidden_hits("Text de prova.", ["", "prova"])
-
-        self.assertEqual(hits, ["prova"])
-
-    def test_global_catalan_markers_are_forbidden(self) -> None:
-        for marker in ("ASUNTO", "SUBJECT", "Aquí tienes"):
-            with self.subTest(marker=marker):
-                with mock.patch(
-                    "lm_eval_tasks.catalan_drift.utils._predict_fasttext",
-                    side_effect=fake_fasttext,
-                ):
-                    result = process_results(
-                        {"target_lang": "ca", "category": "test"},
-                        [f"{marker}: text de prova en català."],
-                    )
-
-                self.assertEqual(result["forbidden_fail"], 1.0)
-                self.assertEqual(result["drift_pass"], 0.0)
-
-    def test_global_catalan_markers_do_not_apply_to_other_targets(self) -> None:
-        result = process_results(
-            {"target_lang": "es", "category": "test"},
-            ["ASUNTO: texto de prueba en español."],
-        )
-
-        self.assertEqual(result["forbidden_fail"], 0.0)
+        self.assertNotIn("forbidden_fail", result)
+        self.assertEqual(result["drift_pass"], 1.0)
 
     def test_segment_language_ratio_can_fail_response(self) -> None:
         response = (
@@ -174,6 +153,79 @@ class ForbiddenHitsTest(unittest.TestCase):
 
         self.assertEqual(result["language_fail"], 1.0)
         self.assertEqual(result["drift_pass"], 0.0)
+
+
+class LcbLineLanguageTest(unittest.TestCase):
+    def test_any_incorrect_eligible_line_fails_response(self) -> None:
+        response = (
+            "Aquesta resposta catalana conté prou paraules per classificar-la.\n"
+            "Esta línea está escrita completamente en español ahora."
+        )
+
+        with mock.patch(
+            "lm_eval_tasks.catalan_drift.utils._predict_fasttext",
+            side_effect=[("ca", 0.99), ("es", 0.98)],
+        ):
+            result = lcb_line_language_result({"target_lang": "ca"}, response)
+
+        self.assertTrue(result["eligible"])
+        self.assertFalse(result["passed"])
+        self.assertEqual(result["eligible_lines"], 2)
+        self.assertEqual(result["error_lines"], 1)
+        self.assertEqual(result["line_accuracy"], 0.5)
+
+    def test_short_lines_are_excluded_like_official_lcb(self) -> None:
+        response = "Hola amigo.\nAquesta resposta catalana té més de cinc paraules."
+
+        with mock.patch(
+            "lm_eval_tasks.catalan_drift.utils._predict_fasttext",
+            return_value=("ca", 0.99),
+        ) as predict:
+            result = lcb_line_language_result({"target_lang": "ca"}, response)
+
+        self.assertTrue(result["passed"])
+        self.assertEqual(result["eligible_lines"], 1)
+        predict.assert_called_once_with("Aquesta resposta catalana té més de cinc paraules")
+
+    def test_low_confidence_prediction_becomes_unknown(self) -> None:
+        with mock.patch(
+            "lm_eval_tasks.catalan_drift.utils._predict_fasttext",
+            return_value=("ca", 0.3),
+        ):
+            result = lcb_line_language_result(
+                {"target_lang": "ca"},
+                "Aquesta línia catalana conté exactament prou paraules.",
+            )
+
+        self.assertFalse(result["passed"])
+        self.assertEqual(result["lines"][0]["predicted_lang"], "unknown")
+
+    def test_response_without_eligible_lines_is_skipped(self) -> None:
+        with mock.patch(
+            "lm_eval_tasks.catalan_drift.utils._predict_fasttext",
+        ) as predict:
+            result = lcb_line_language_result({"target_lang": "ca"}, "Massa curt.")
+
+        self.assertFalse(result["eligible"])
+        self.assertIsNone(result["passed"])
+        self.assertIsNone(result["line_accuracy"])
+        predict.assert_not_called()
+
+    def test_q_suffix_is_removed_before_line_detection(self) -> None:
+        response = (
+            "Aquesta és una resposta catalana completa i adequada.\n"
+            "Q: This continuation must not be evaluated by LCB."
+        )
+
+        with mock.patch(
+            "lm_eval_tasks.catalan_drift.utils._predict_fasttext",
+            return_value=("ca", 0.99),
+        ) as predict:
+            result = lcb_line_language_result({"target_lang": "ca"}, response)
+
+        self.assertTrue(result["passed"])
+        self.assertEqual(result["eligible_lines"], 1)
+        predict.assert_called_once()
 
 
 if __name__ == "__main__":

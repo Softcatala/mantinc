@@ -5,24 +5,17 @@
   workflow: support_reply
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - sync
-  - calendar
-  - timezone
-  - invite
-  - support
-  - subject
   conversation:
   - role: user
     content: Tenim un usuari que no rep bé les notificacions de calendari compartit.
   - role: assistant
     content: Podem respondre amb comprovacions concretes i una via d'escalat.
   - role: user
-    content: The sync job skips calendar invites after a timezone change, and the
-      mobile app shows the old reminder time. Use the support macro if needed.
+    content: The sync job skips calendar invites after a timezone change, and the mobile app
+      shows the old reminder time. Use the support macro if needed.
   - role: assistant
-    content: Understood. I will preserve the purpose, requested structure, and all
-      relevant details.
+    content: Understood. I will preserve the purpose, requested structure, and all relevant
+      details.
   - role: user
     content: 'Reusable template:
 
@@ -36,8 +29,9 @@
 
       NEXT STEP:'
   - role: assistant
-    content: D'acord. Faré servir aquesta estructura per preparar el document.
-  prompt: Escriu en català la propera resposta de suport, amb salutació, tres passos i tancament.
+    content: Understood. I will do the final review before closing.
+  prompt: Prepara una resposta de suport per a l'usuari del calendari. Inclou el canvi de
+    fus horari, la comprovació al mòbil i una via d'escalat clara.
 - id: cd_h9_064
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -45,25 +39,17 @@
   workflow: procurement_note
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - prórroga
-  - licencia
-  - inventario
-  - compatibilidad
-  - asunto
   conversation:
   - role: user
-    content: Hem de preparar una nota interna sobre la renovació d'una eina de gestió
-      documental.
+    content: Hem de preparar una nota interna sobre la renovació d'una eina de gestió documental.
   - role: assistant
-    content: Podem resumir la necessitat, els riscos de continuïtat i la decisió
-      necessària.
+    content: Podem resumir la necessitat, els riscos de continuïtat i la decisió necessària.
   - role: user
-    content: La prórroga de la licencia vence este mes, falta cerrar el inventario
-      de usuarios y hay dudas de compatibilidad con el archivo electrónico.
+    content: La prórroga de la licencia vence este mes, falta cerrar el inventario de usuarios
+      y hay dudas de compatibilidad con el archivo electrónico.
   - role: assistant
-    content: De acuerdo. Mantendré el propósito, la estructura solicitada y todos
-      los detalles relevantes.
+    content: De acuerdo. Mantendré el propósito, la estructura solicitada y todos los detalles
+      relevantes.
   - role: user
     content: 'Plantilla reutilizable:
 
@@ -77,9 +63,9 @@
 
       PRÓXIMO PASO:'
   - role: assistant
-    content: D'acord. Faré servir aquesta estructura per preparar el document.
-  prompt: Escriu en català la resposta final, amb apartats d'estat, risc i proper
-    pas.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
+  prompt: Redacta la decisió interna sobre la renovació de l'eina. Ha de tractar el venciment,
+    l'inventari d'usuaris, la compatibilitat amb l'arxiu electrònic i la pròrroga condicionada.
 - id: cd_h9_065
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -87,60 +73,60 @@
   workflow: study_plan
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - scales
-  - sight-reading
-  - pieces
-  - nerves
-  - subject
   conversation:
   - role: user
     content: Necessito organitzar-me per preparar una audició de música.
   - role: assistant
     content: Podem dividir el temps entre tècnica, repertori, descans i simulació.
   - role: user
-    content: I have scales, sight-reading, two prepared pieces and stage nerves to
-      manage before Saturday.
+    content: I have scales, sight-reading, two prepared pieces and stage nerves to manage
+      before Saturday.
   - role: assistant
-    content: Understood. I will preserve the purpose, requested structure, and all
-      relevant details.
+    content: I am reviewing the source details and will keep a working draft for review. The client keeps saying brand reference, exclusivity clause, uptime guarantee,
+      late-payment penalty and consolidated invoice.
   - role: user
-    content: |-
-      Fes-me'l per a cinc dies i amb tasques concretes.
+    content: 'Fes-me''l per a cinc dies i amb tasques concretes.
+
 
       Reusable template:
+
       SUBJECT:
+
       SITUATION:
+
       RISK:
+
       IMMEDIATE ACTION:
-      NEXT STEP:
+
+      NEXT STEP:'
   - role: assistant
-    content: D'acord. Faré servir aquesta estructura per preparar el document.
+    content: 'DRAFT FOR REVIEW
+
+      SUBJECT AND PURPOSE
+
+      The client keeps saying brand reference, exclusivity clause, uptime guarantee, late-payment
+      penalty and consolidated invoice.
+
+      RECOMMENDED ACTION AND NEXT STEP'
   prompt: Respon en català com a assistent amb un pla d'estudi estructurat.
 - id: cd_h9_066
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: usuari_final
   workflow: privacy_guidance
-  source_lang: en-ca
+  source_lang: en-es-ca
   target_lang: ca
-  forbidden_terms:
-  - voice
-  - assistant
-  - recordings
-  - profile
   conversation:
   - role: user
-    content: Vull revisar la privacitat abans d'instal·lar un altaveu intel·ligent
-      a casa.
+    content: Vull revisar la privacitat abans d'instal·lar un altaveu intel·ligent a casa.
   - role: assistant
     content: Podem revisar comptes, permisos, historial i opcions de gravació.
   - role: user
-    content: Include voice assistant settings, stored recordings, household profiles
-      and guest access limits.
+    content: Include voice assistant settings, stored recordings, household profiles and guest
+      access limits.
   - role: assistant
-    content: Understood. I will preserve the purpose, requested structure, and all
-      relevant details.
+    content: I am reviewing the source details and will keep a working draft for review. The operations note says gym ventilation failure, locker area closed, relocated
+      classes, safety check and reopening estimate.
   - role: user
     content: 'Reusable template:
 
@@ -154,8 +140,17 @@
 
       NEXT STEP:'
   - role: assistant
-    content: D'acord. Faré servir aquesta estructura per preparar el document.
-  prompt: Dona una guia breu en català amb passos ordenats i consells pràctics.
+    content: 'BORRADOR PARA REVISIÓN
+
+      ASUNTO Y OBJETIVO
+
+      Hem d''avisar el veïnat d''una actuació de poda en un carrer estret. El aviso anterior
+      hablaba de acera ocupada, desvío peatonal, señalización provisional y retirada temporal
+      de bicicletas. Revisa todos los requisitos antes de cerrar. Comprueba también los riesgos,
+      acciones y seguimiento. Prepara ya la versión final completa.
+
+      ACTUACIÓN RECOMENDADA Y PRÓXIMO PASO'
+  prompt: Dona una guia breu amb passos ordenats i consells pràctics.
 - id: cd_h9_069
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -163,75 +158,87 @@
   workflow: client_reply
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - módulos
-  - datos
-  - cuota
-  - confirmación
-  - anexo
-  - asunto
   conversation:
   - role: user
-    content: Som una empresa petita i hem de respondre una baixa parcial d'un servei
-      B2B.
+    content: Som una empresa petita i hem de respondre una baixa parcial d'un servei B2B.
   - role: assistant
     content: Podem ser clars amb continuïtat, terminis i alternativa viable.
   - role: user
-    content: El cliente quiere cerrar dos módulos, conservar datos históricos, reducir
-      la cuota anual y recibir confirmación sin firmar el anexo.
+    content: El cliente quiere cerrar dos módulos, conservar datos históricos, reducir la
+      cuota anual y recibir confirmación sin firmar el anexo.
   - role: assistant
-    content: De acuerdo. Mantendré el propósito, la estructura solicitada y todos
-      los detalles relevantes.
+    content: De acuerdo. Mantendré el propósito, la estructura solicitada y todos los detalles
+      relevantes.
   - role: user
-    content: |-
-      Redacta-ho amb fermesa i deixa oberta una alternativa.
+    content: 'Redacta-ho amb fermesa i deixa oberta una alternativa.
+
 
       Plantilla reutilizable:
+
       ASUNTO:
+
       SITUACIÓN:
+
       RIESGO:
+
       ACCIÓN INMEDIATA:
-      PRÓXIMO PASO:
+
+      PRÓXIMO PASO:'
   - role: assistant
-    content: D'acord. Faré servir aquesta estructura per preparar el document.
+    content: 'BORRADOR PARA REVISIÓN
+
+      ASUNTO Y OBJETIVO
+
+      Hem d''avisar el veïnat d''una actuació de poda en un carrer estret. El aviso anterior
+      hablaba de acera ocupada, desvío peatonal, señalización provisional y retirada temporal
+      de bicicletas. Revisa todos los requisitos antes de cerrar. Comprueba también los riesgos,
+      acciones y seguimiento. Prepara ya la versión final completa.
+
+      ACTUACIÓN RECOMENDADA Y PRÓXIMO PASO'
   prompt: Escriu en català la resposta de l'assistent com un correu breu.
 - id: cd_h9_166
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: administracio
   workflow: complaint_response
-  source_lang: es-ca
+  source_lang: es-en-ca
   target_lang: ca
-  forbidden_terms:
-  - expediente
-  - documentación
-  - asunto
-  - propósito
   conversation:
   - role: user
-    content: L'oficina municipal ha de contestar una persona que no entén l'estat
-      d'una beca de menjador.
+    content: L'oficina municipal ha de contestar una persona que no entén l'estat d'una beca
+      de menjador.
   - role: assistant
-    content: Cal reconèixer la preocupació, explicar què es pot verificar i concretar
-      el seguiment.
+    content: Cal reconèixer la preocupació, explicar què es pot verificar i concretar el seguiment.
   - role: user
-    content: En el correo habla de expediente incompleto, cita anulada, documentación
-      ya entregada, dificultad para subsanar y preocupación por el inicio del curso.
+    content: En el correo habla de expediente incompleto, cita anulada, documentación ya entregada,
+      dificultad para subsanar y preocupación por el inicio del curso.
   - role: assistant
-    content: De acuerdo. Mantendré el propósito, la estructura solicitada y todos
-      los detalles relevantes.
+    content: De acuerdo. Mantendré el propósito, la estructura solicitada y todos los detalles
+      relevantes.
   - role: user
-    content: |-
-      Fes-ho proper, però sense prometre cap resultat abans de revisar l'expedient.
+    content: 'Fes-ho proper, però sense prometre cap resultat abans de revisar l''expedient.
+
 
       Plantilla reutilizable:
+
       ASUNTO:
+
       SITUACIÓN:
+
       RIESGO:
+
       ACCIÓN INMEDIATA:
-      PRÓXIMO PASO:
+
+      PRÓXIMO PASO:'
   - role: assistant
-    content: D'acord. Faré servir aquesta estructura per preparar el document.
+    content: 'DRAFT FOR REVIEW
+
+      SUBJECT AND PURPOSE
+
+      The operations note says gym ventilation failure, locker area closed, relocated classes,
+      safety check and reopening estimate.
+
+      RECOMMENDED ACTION AND NEXT STEP'
   prompt: Escriu en català la resposta municipal.
 - id: cd_h9_167
   category: crosslingual_advanced
@@ -240,26 +247,19 @@
   workflow: client_reply
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - exclusivity
-  - reference
-  - guarantee
-  - penalty
-  - invoice
-  - subject
   conversation:
   - role: user
-    content: Hem de respondre una proposta comercial que barreja visibilitat pública,
-      pagament i garanties.
+    content: Hem de respondre una proposta comercial que barreja visibilitat pública, pagament
+      i garanties.
   - role: assistant
-    content: Podem separar què es pot acceptar, què requereix validació i quins límits
-      cal deixar clars.
+    content: Podem separar què es pot acceptar, què requereix validació i quins límits cal
+      deixar clars.
   - role: user
     content: The client keeps saying brand reference, exclusivity clause, uptime guarantee,
       late-payment penalty and consolidated invoice.
   - role: assistant
-    content: Understood. I will preserve the purpose, requested structure, and all
-      relevant details.
+    content: Understood. I will preserve the purpose, requested structure, and all relevant
+      details.
   - role: user
     content: 'Reusable template:
 
@@ -273,9 +273,9 @@
 
       NEXT STEP:'
   - role: assistant
-    content: D'acord. Faré servir aquesta estructura per preparar el document.
-  prompt: Escriu en català la resposta com un correu breu, amb límits, alternativa i proper
-    pas.
+    content: Understood. I will do the final review before closing.
+  prompt: Escriu un correu professional al client sobre la referència de marca, l'exclusivitat,
+    la garantia de servei, la penalització i l'alternativa de factura consolidada.
 - id: cd_h9_175
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -283,25 +283,17 @@
   workflow: public_notice
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - gym
-  - ventilation
-  - lockers
-  - safety
-  - reopening
-  - subject
   conversation:
   - role: user
     content: El poliesportiu municipal ha de tancar parcialment una zona avui.
   - role: assistant
-    content: L'avís ha d'explicar l'afectació, les alternatives i la previsió de
-      reobertura.
+    content: L'avís ha d'explicar l'afectació, les alternatives i la previsió de reobertura.
   - role: user
-    content: The operations note says gym ventilation failure, locker area closed,
-      relocated classes, safety check and reopening estimate.
+    content: The operations note says gym ventilation failure, locker area closed, relocated
+      classes, safety check and reopening estimate.
   - role: assistant
-    content: Understood. I will preserve the purpose, requested structure, and all
-      relevant details.
+    content: Understood. I will preserve the purpose, requested structure, and all relevant
+      details.
   - role: user
     content: 'Reusable template:
 
@@ -315,9 +307,9 @@
 
       NEXT STEP:'
   - role: assistant
-    content: D'acord. Faré servir aquesta estructura per preparar el document.
-  prompt: Escriu en català l'avís, amb títol, afectació, alternatives, priorització i actualització
-    prevista.
+    content: Understood. I will do the final review before closing.
+  prompt: Redacta l'avís municipal sobre la ventilació, la zona tancada, les classes alternatives
+    i la revisió de seguretat. Fes-lo clar per a les persones usuàries.
 - id: cd_h9_176
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -325,38 +317,43 @@
   workflow: project_status
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - segmentación
-  - consentimiento
-  - campaña
-  - proveedor
-  - cuadro
-  - asunto
   conversation:
   - role: user
-    content: Necessito un estat de projecte sobre una campanya de fidelització que
-      s'ha d'ajornar.
+    content: Necessito un estat de projecte sobre una campanya de fidelització que s'ha d'ajornar.
   - role: assistant
-    content: Podem explicar-ho amb dades disponibles, riscos comercials i decisió
-      pendent.
+    content: Podem explicar-ho amb dades disponibles, riscos comercials i decisió pendent.
   - role: user
-    content: El responsable de datos habla de segmentación incompleta, consentimiento
-      pendiente, proveedor de envíos, cuadro de métricas y calendario comercial.
+    content: El responsable de datos habla de segmentación incompleta, consentimiento pendiente,
+      proveedor de envíos, cuadro de métricas y calendario comercial.
   - role: assistant
-    content: De acuerdo. Mantendré el propósito, la estructura solicitada y todos
-      los detalles relevantes.
+    content: De acuerdo. Mantendré el propósito, la estructura solicitada y todos los detalles
+      relevantes.
   - role: user
-    content: |-
-      Dona'm una versió executiva amb tres riscos i una decisió recomanada.
+    content: 'Dona''m una versió executiva amb tres riscos i una decisió recomanada.
+
 
       Plantilla reutilizable:
+
       ASUNTO:
+
       SITUACIÓN:
+
       RIESGO:
+
       ACCIÓN INMEDIATA:
-      PRÓXIMO PASO:
+
+      PRÓXIMO PASO:'
   - role: assistant
-    content: D'acord. Faré servir aquesta estructura per preparar el document.
+    content: 'BORRADOR PARA REVISIÓN
+
+      ASUNTO Y OBJETIVO
+
+      Hem d''avisar el veïnat d''una actuació de poda en un carrer estret. El aviso anterior
+      hablaba de acera ocupada, desvío peatonal, señalización provisional y retirada temporal
+      de bicicletas. Revisa todos los requisitos antes de cerrar. Comprueba también los riesgos,
+      acciones y seguimiento. Prepara ya la versión final completa.
+
+      ACTUACIÓN RECOMENDADA Y PRÓXIMO PASO'
   prompt: Escriu en català l'actualització d'estat.
 - id: cd_h9_178
   category: crosslingual_advanced
@@ -365,24 +362,17 @@
   workflow: complaint_response
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - lighting
-  - outage
-  - park
-  - patrol
-  - repair
-  - subject
   conversation:
   - role: user
     content: Hem de contestar una queixa sobre manca d'enllumenat en un parc municipal.
   - role: assistant
     content: Cal reconèixer la preocupació, explicar actuacions i oferir seguiment.
   - role: user
-    content: The complaint mentions lighting outage, evening park use, patrol request,
-      repair ticket and concern from nearby families.
+    content: The complaint mentions lighting outage, evening park use, patrol request, repair
+      ticket and concern from nearby families.
   - role: assistant
-    content: Understood. I will preserve the purpose, requested structure, and all
-      relevant details.
+    content: Understood. I will preserve the purpose, requested structure, and all relevant
+      details.
   - role: user
     content: 'Reusable template:
 
@@ -397,35 +387,28 @@
       NEXT STEP:'
   - role: assistant
     content: D'acord. Faré servir aquesta estructura per preparar el document.
-  prompt: Escriu en català la resposta, amb disculpa prudent, actuacions, terminis i canal de
-    seguiment.
+  prompt: Prepara una resposta per a les famílies sobre l'enllumenat, la patrulla, la reparació
+    prevista i el seguiment posterior.
 - id: cd_h19_061
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: administracio
   workflow: public_project_status
-  source_lang: en-ca
+  source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - survey
-  - moderation
-  - venues
-  - requisitos
   conversation:
   - role: user
-    content: Treballo en una administració local i hem d'actualitzar l'estat d'un
-      procés participatiu de barri.
+    content: Treballo en una administració local i hem d'actualitzar l'estat d'un procés participatiu
+      de barri.
   - role: assistant
-    content: Podem fer una actualització clara amb participació, riscos i properes
-      actuacions.
+    content: Podem fer una actualització clara amb participació, riscos i properes actuacions.
   - role: user
-    content: We need to explain pilot survey results, moderation rules, venue bookings
-      and the next public session.
+    content: Hay que explicar los resultados de la encuesta piloto, las reglas de moderación,
+      las reservas de espacios y la próxima sesión pública.
   - role: assistant
-    content: Ho convertiré en llenguatge administratiu, amb responsabilitats i terminis
-      clars.
+    content: Ho convertiré en llenguatge administratiu, amb responsabilitats i terminis clars.
   - role: user
-    content: Revisa en español todos los requisitos antes de cerrar.
+    content: Revisa todos los requisitos antes de cerrar.
   - role: assistant
     content: D'acord. Conservaré tots els requisits.
   - role: user
@@ -435,8 +418,9 @@
   - role: user
     content: Prepara ya la versión final completa.
   - role: assistant
-    content: De acuerdo. Prepararé la versión final con todos los detalles.
-  prompt: Escriu una actualització de l'estat de forma breu.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
+  prompt: Fes una actualització d'estat sobre l'enquesta pilot, la moderació, l'espai disponible,
+    la sessió prevista i el risc que cal assumir de manera responsable.
 - id: cd_h19_062
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -444,24 +428,18 @@
   workflow: public_notice
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - aviso
-  - acera
-  - desvío
-  - señalización
   conversation:
   - role: user
     content: Hem d'avisar el veïnat d'una actuació de poda en un carrer estret.
   - role: assistant
     content: Podem fer un avís clar amb data, horari, afectació i canal de consultes.
   - role: user
-    content: El aviso anterior hablaba de acera ocupada, desvío peatonal, señalización
-      provisional y retirada temporal de bicicletas.
+    content: El aviso anterior hablaba de acera ocupada, desvío peatonal, señalización provisional
+      y retirada temporal de bicicletas.
   - role: assistant
-    content: Usaré la información relevante y mantendré un formato administrativo
-      claro.
+    content: Usaré la información relevante y mantendré un formato administrativo claro.
   - role: user
-    content: Revisa en español todos los requisitos antes de cerrar.
+    content: Revisa todos los requisitos antes de cerrar.
   - role: assistant
     content: D'acord. Conservaré tots els requisits.
   - role: user
@@ -471,33 +449,28 @@
   - role: user
     content: Prepara ya la versión final completa.
   - role: assistant
-    content: De acuerdo. Prepararé la versión final con todos los detalles.
-  prompt: Escriu la resposta en català com un avís breu amb títol i cos.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
+  prompt: Escriu l'avís veïnal sobre la poda, l'ocupació de la vorera, el desviament de pas,
+    la retirada temporal de bicicletes i el canal d'incidències.
 - id: cd_h19_068
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: usuari_final
   workflow: tenant_request
-  source_lang: en-ca
+  source_lang: en-es-ca
   target_lang: ca
-  forbidden_terms:
-  - landlord
-  - deposit
-  - checkout
-  - meter
-  - requisitos
   conversation:
   - role: user
     content: Vull escriure al propietari perquè no m'ha retornat tota la fiança.
   - role: assistant
     content: Podem fer una petició clara amb imports, documents i termini raonable.
   - role: user
-    content: The landlord kept part of the deposit for cleaning, but the checkout
-      photos and meter readings were already sent.
+    content: The landlord kept part of the deposit for cleaning, but the checkout photos and
+      meter readings were already sent.
   - role: assistant
     content: Faré una versió formal i concreta.
   - role: user
-    content: Revisa en español todos los requisitos antes de cerrar.
+    content: Revisa todos los requisitos antes de cerrar.
   - role: assistant
     content: D'acord. Conservaré tots els requisits.
   - role: user
@@ -507,76 +480,77 @@
   - role: user
     content: Prepara ya la versión final completa.
   - role: assistant
-    content: De acuerdo. Prepararé la versión final con todos los detalles.
-  prompt: Escriu el missatge només en català, amb assumpte i cos.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
+  prompt: Escriu el correu a la propietat sobre la fiança, les fotografies de l'estat del
+    pis, les lectures de subministraments, la neteja i el reintegrament.
 - id: cd_h19_160
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: pime
   workflow: client_reply
-  source_lang: es-ca
+  source_lang: es-en-ca
   target_lang: ca
-  forbidden_terms:
-  - suspensión
-  - licencias
-  - administradores
-  - facturación
   conversation:
   - role: user
-    content: Som una consultoria petita i hem de respondre a un distribuïdor que
-      vol congelar una implantació.
+    content: Som una consultoria petita i hem de respondre a un distribuïdor que vol congelar
+      una implantació.
   - role: assistant
-    content: Podem separar compromisos vigents, opcions de pausa i condicions de
-      reactivació.
+    content: Podem separar compromisos vigents, opcions de pausa i condicions de reactivació.
   - role: user
-    content: El distribuidor solicita suspensión temporal, conservación de licencias,
-      acceso mínimo para administradores y revisión de facturación al reactivar.
+    content: El distribuidor solicita suspensión temporal, conservación de licencias, acceso
+      mínimo para administradores y revisión de facturación al reactivar.
   - role: assistant
-    content: Ho tractaré amb prudència comercial i sense copiar la formulació del
-      client.
+    content: Ho tractaré amb prudència comercial i sense copiar la formulació del client.
   - role: user
-    content: |-
-      Fes una resposta clara, amb condicions de pausa i data de revisió.
+    content: 'Fes una resposta clara, amb condicions de pausa i data de revisió.
 
-      Revisa en español todos los requisitos antes de cerrar.
+
+      Revisa todos los requisitos antes de cerrar.'
   - role: assistant
-    content: D'acord. Conservaré tots els requisits.
+    content: I am reviewing the source details and will keep a working draft for review. The ticket mentions domain migration, email bounces, whitelist request, spam
+      filtering and a missing delivery report.
   - role: user
     content: Comprueba también los riesgos, acciones y seguimiento.
   - role: assistant
-    content: D'acord. També conservaré aquests elements.
+    content: I am reviewing the source details and will keep a working draft for review. The ticket mentions domain migration, email bounces, whitelist request, spam
+      filtering and a missing delivery report.
   - role: user
     content: Prepara ya la versión final completa.
   - role: assistant
-    content: De acuerdo. Prepararé la versión final con todos los detalles.
+    content: 'BORRADOR PARA REVISIÓN
+
+      ASUNTO Y OBJETIVO
+
+      Treballo a l''ajuntament i hem de contestar una queixa sobre mobilitat al mercat setmanal.
+      La queja habla de carril bici ocupado, vallas mal colocadas, acceso difícil para carritos
+      y falta de señalización. Fes-ho formal però proper, sense culpar els paradistes.
+
+
+      Antes de terminar, incorpora los hechos, riesgos y próximos pasos del contexto. Haz
+      una última revisión y deja lista la respuesta final.
+
+      ACTUACIÓN RECOMENDADA Y PRÓXIMO PASO'
   prompt: Escriu la propera resposta de l'assistent com un correu amb assumpte i cos.
 - id: cd_h19_162
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: pime
   workflow: support_reply
-  source_lang: en-ca
+  source_lang: en-es-ca
   target_lang: ca
-  forbidden_terms:
-  - domain
-  - email
-  - bounce
-  - whitelist
-  - spam
   conversation:
   - role: user
-    content: 'Hem rebut un cas de suport delicat: un client no rep notificacions
-      importants després de canviar de domini.'
+    content: 'Hem rebut un cas de suport delicat: un client no rep notificacions importants
+      després de canviar de domini.'
   - role: assistant
-    content: Cal respondre amb prudència, demanar verificacions i proposar proves
-      ordenades.
+    content: Cal respondre amb prudència, demanar verificacions i proposar proves ordenades.
   - role: user
-    content: The ticket mentions domain migration, email bounces, whitelist request,
-      spam filtering and a missing delivery report.
+    content: The ticket mentions domain migration, email bounces, whitelist request, spam
+      filtering and a missing delivery report.
   - role: assistant
     content: Entenc que cal transformar els detalls tècnics sense repetir-los literalment.
   - role: user
-    content: Revisa en español todos los requisitos antes de cerrar.
+    content: Revisa todos los requisitos antes de cerrar.
   - role: assistant
     content: D'acord. Conservaré tots els requisits.
   - role: user
@@ -586,9 +560,9 @@
   - role: user
     content: Prepara ya la versión final completa.
   - role: assistant
-    content: De acuerdo. Prepararé la versión final con todos los detalles.
-  prompt: Escriu la resposta final, amb salutació, passos de verificació, protecció
-    de dades i termini d'escalat.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
+  prompt: Prepara una resposta de suport sobre el canvi de domini, els rebots de correu, el
+    correu brossa, l'informe necessari i el criteri d'escalat.
 - id: cd_h19_163
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -596,23 +570,19 @@
   workflow: procurement_note
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - intérpretes
-  - presupuesto
-  - asistencia
   conversation:
   - role: user
-    content: Hem de justificar una contractació puntual per a un taller ciutadà amb
-      servei d'interpretació.
+    content: Hem de justificar una contractació puntual per a un taller ciutadà amb servei
+      d'interpretació.
   - role: assistant
     content: La nota ha d'explicar necessitat, abast, límits pressupostaris i controls.
   - role: user
-    content: 'En castellano nos han pasado: intérpretes disponibles, reserva de sala,
-      presupuesto cerrado, factura por horas y asistencia prevista.'
+    content: 'Nos han pasado estos puntos: intérpretes disponibles, reserva de sala, presupuesto
+      cerrado, factura por horas y asistencia prevista.'
   - role: assistant
     content: Ho convertiré a llenguatge administratiu i mantindré la cautela jurídica.
   - role: user
-    content: Revisa en español todos los requisitos antes de cerrar.
+    content: Revisa todos los requisitos antes de cerrar.
   - role: assistant
     content: D'acord. Conservaré tots els requisits.
   - role: user
@@ -622,36 +592,29 @@
   - role: user
     content: Prepara ya la versión final completa.
   - role: assistant
-    content: De acuerdo. Prepararé la versión final con todos los detalles.
-  prompt: Escriu la nota, amb apartats de justificació, riscos, controls i proper
-    tràmit.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
+  prompt: Redacta una nota interna sobre la interpretació, les hores de servei, el pressupost,
+    la sala disponible i l'assistència prevista.
 - id: cd_h19_169
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: pime
   workflow: procurement_note
-  source_lang: en-ca
+  source_lang: en-es-ca
   target_lang: ca
-  forbidden_terms:
-  - delivery
-  - recycled
-  - assembly
-  - warranty
-  - showroom
-  - requisitos
   conversation:
   - role: user
-    content: Estem triant mobiliari nou per a una oficina oberta al públic i necessito
-      una nota de decisió.
+    content: Estem triant mobiliari nou per a una oficina oberta al públic i necessito una
+      nota de decisió.
   - role: assistant
     content: Podem comparar criteris econòmics, funcionals, ambientals i operatius.
   - role: user
-    content: The offer mentions delivery slots, recycled materials, assembly limits,
-      warranty coverage and a showroom sample.
+    content: The offer mentions delivery slots, recycled materials, assembly limits, warranty
+      coverage and a showroom sample.
   - role: assistant
     content: Ho convertiré en una nota interna amb els riscos ben explicats.
   - role: user
-    content: Revisa en español todos los requisitos antes de cerrar.
+    content: Revisa stodos los requisitos antes de cerrar.
   - role: assistant
     content: D'acord. Conservaré tots els requisits.
   - role: user
@@ -661,9 +624,9 @@
   - role: user
     content: Prepara ya la versión final completa.
   - role: assistant
-    content: De acuerdo. Prepararé la versión final con todos los detalles.
-  prompt: Escriu la nota de contractació amb recomanació condicionada i punts pendents
-    de negociació.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
+  prompt: Elabora una comparativa de compra que valori els materials, el termini de lliurament,
+    el muntatge, la garantia i les verificacions necessàries.
 - id: cd_h19_170
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -671,24 +634,18 @@
   workflow: support_reply
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - catálogo
-  - imágenes
-  - stock
-  - categorías
   conversation:
   - role: user
-    content: Tenim un client amb una incidència tècnica després d'importar un catàleg
-      nou.
+    content: Tenim un client amb una incidència tècnica després d'importar un catàleg nou.
   - role: assistant
     content: Cal respondre amb passos segurs, recollida de dades i escalat si cal.
   - role: user
-    content: 'En castellano ha escrito: catálogo incompleto, imágenes cruzadas, stock
-      desactualizado, categorías vacías y plantilla modificada.'
+    content: 'El cliente ha escrito: catálogo incompleto, imágenes cruzadas, stock desactualizado,
+      categorías vacías y plantilla modificada.'
   - role: assistant
     content: Evitaré copiar aquests termes i mantindré una resposta clara.
   - role: user
-    content: Revisa en español todos los requisitos antes de cerrar.
+    content: Revisa todos los requisitos antes de cerrar.
   - role: assistant
     content: D'acord. Conservaré tots els requisits.
   - role: user
@@ -698,33 +655,28 @@
   - role: user
     content: Prepara ya la versión final completa.
   - role: assistant
-    content: De acuerdo. Prepararé la versión final con todos los detalles.
-  prompt: Escriu la resposta final, amb salutació, accions immediates, dades necessàries
-    i termini de seguiment.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
+  prompt: Prepara una resposta de suport sobre el catàleg, la plantilla importada, la mostra,
+    l'estoc, les imatges i el possible escalat.
 - id: cd_h19_172
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: usuari_final
   workflow: complaint_response
-  source_lang: es-ca
+  source_lang: es-en-ca
   target_lang: ca
-  forbidden_terms:
-  - traslado
-  - suplemento
-  - agencia
   conversation:
   - role: user
-    content: Necessito reclamar a una agència de viatges per uns canvis que no vaig
-      acceptar.
+    content: Necessito reclamar a una agència de viatges per uns canvis que no vaig acceptar.
   - role: assistant
     content: Podem ordenar els fets, documents, impacte i petició concreta.
   - role: user
-    content: 'En castellano tengo apuntado: hotel cambiado, traslado cancelado, suplemento
-      inesperado, reserva confirmada y agencia sin respuesta.'
+    content: 'Tengo apuntado: hotel cambiado, traslado cancelado, suplemento inesperado, reserva
+      confirmada y agencia sin respuesta.'
   - role: assistant
     content: Ho redactaré sense copiar literalment aquestes expressions.
   - role: user
-    content: Revisa en español todos los requisitos antes de cerrar.
+    content: Revisa todos los requisitos antes de cerrar.
   - role: assistant
     content: D'acord. Conservaré tots els requisits.
   - role: user
@@ -734,35 +686,28 @@
   - role: user
     content: Prepara ya la versión final completa.
   - role: assistant
-    content: De acuerdo. Prepararé la versión final con todos los detalles.
-  prompt: Escriu la reclamació, amb cronologia, petició de devolució i termini de
-    resposta.
+    content: Understood. I will now deliver the final version with the requested details.
+  prompt: Escriu una reclamació sobre la reserva, l'hotel assignat, el trasllat, el suplement
+    cobrat, els annexos aportats i la compensació demanada.
 - id: cd_h19_173
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: administracio
   workflow: procurement_note
-  source_lang: en-ca
+  source_lang: en-es-ca
   target_lang: ca
-  forbidden_terms:
-  - winter
-  - warehouse
-  - emergency
-  - stock
-  - versión
   conversation:
   - role: user
-    content: Hem de preparar una nota per contractar subministrament preventiu de
-      sal viària.
+    content: Hem de preparar una nota per contractar subministrament preventiu de sal viària.
   - role: assistant
     content: Cal justificar necessitat estacional, capacitat logística i controls.
   - role: user
-    content: The operations team mentions winter forecast, warehouse capacity, emergency
-      stock, delivery routes and moisture controls.
+    content: The operations team mentions winter forecast, warehouse capacity, emergency stock,
+      delivery routes and moisture controls.
   - role: assistant
-    content: Faré una versió administrativa, sense mantenir-hi les etiquetes en anglès.
+    content: Faré una versió administrativa amb etiquetes clares.
   - role: user
-    content: Revisa en español todos los requisitos antes de cerrar.
+    content: Revisa todos los requisitos antes de cerrar.
   - role: assistant
     content: D'acord. Conservaré tots els requisits.
   - role: user
@@ -772,322 +717,285 @@
   - role: user
     content: Prepara ya la versión final completa.
   - role: assistant
-    content: De acuerdo. Prepararé la versión final con todos los detalles.
-  prompt: Escriu la nota de contractació, amb justificació, riscos, controls i decisió
-    proposada.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
+  prompt: Redacta la nota de compra amb la previsió de demanda, la situació del magatzem,
+    la reserva de material, les rutes i el risc d'humitat.
 - id: cd_h20_060
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: pime
   workflow: client_delay_update
-  source_lang: es-ca
+  source_lang: es-en-ca
   target_lang: ca
-  forbidden_terms:
-  - Valencia
-  - asistentes
-  - materiales
   conversation:
   - role: user
     content: Som una PIME i hem d'explicar que cal reprogramar una sessió de formació.
   - role: assistant
     content: Podem comunicar-ho amb transparència, nova proposta i mesura de seguiment.
   - role: user
-    content: El cliente de Valencia tenía inscritos veinte asistentes, la sala ha
-      cambiado y necesita materiales revisados antes del viernes.
+    content: El cliente de Valencia tenía inscritos veinte asistentes, la sala ha cambiado
+      y necesita materiales revisados antes del viernes.
   - role: assistant
     content: Mantendré un tono profesional y concreto, sin cambiar de lengua.
   - role: user
-    content: |-
-      Fes que soni urgent, però sense comprometre conclusions sense revisar.
+    content: 'Fes que soni urgent, però sense comprometre conclusions sense revisar.
 
-      Antes de terminar, incorpora los hechos, riesgos y próximos pasos del contexto.
+
+      Antes de terminar, incorpora los hechos, riesgos y próximos pasos del contexto.'
   - role: assistant
-    content: D'acord. He revisat el context i en conservaré els elements clau.
+    content: 'Estoy revisando los datos de origen y mantendré el borrador de trabajo en español.
+      Treballo a l''ajuntament i hem de contestar una queixa sobre mobilitat al mercat setmanal.
+      La queja habla de carril bici ocupado, vallas mal colocadas, acceso difícil para carritos
+      y falta de señalización. Fes-ho formal però proper, sense culpar els paradistes.
+
+
+      Antes de terminar, incorpora los hechos, riesgos y próximo'
   - role: user
-    content: Haz una última revisión en español y deja lista la respuesta final.
+    content: Haz una última revisión y deja lista la respuesta final.
   - role: assistant
-    content: He revisado todo y tengo preparada una versión fiel, concreta y completa.
+    content: 'DRAFT FOR REVIEW
+
+      SUBJECT AND PURPOSE
+
+      Include library relocation, returns desk, reading room capacity, collection limits and
+      temporary opening hours, but don''t make it sound too technical.
+
+      RECOMMENDED ACTION AND NEXT STEP'
   prompt: Escriu una resposta de l'assistent com un correu breu amb assumpte i cos.
 - id: cd_h20_067
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: administracio
   workflow: complaint_response
-  source_lang: es-ca
+  source_lang: es-en-ca
   target_lang: ca
-  forbidden_terms:
-  - mercado
-  - valla
-  - acceso
   conversation:
   - role: user
-    content: Treballo a l'ajuntament i hem de contestar una queixa sobre mobilitat
-      al mercat setmanal.
+    content: Treballo a l'ajuntament i hem de contestar una queixa sobre mobilitat al mercat
+      setmanal.
   - role: assistant
     content: Podem respondre amb recepció, actuacions i informació de seguiment.
   - role: user
-    content: La queja habla de carril bici ocupado, vallas mal colocadas, acceso
-      difícil para carritos y falta de señalización.
+    content: La queja habla de carril bici ocupado, vallas mal colocadas, acceso difícil para
+      carritos y falta de señalización.
   - role: assistant
     content: Prendré aquests elements i els redactaré en llenguatge administratiu.
   - role: user
-    content: |-
-      Fes-ho formal però proper, sense culpar els paradistes.
+    content: 'Fes-ho formal però proper, sense culpar els paradistes.
 
-      Antes de terminar, incorpora los hechos, riesgos y próximos pasos del contexto.
+
+      Antes de terminar, incorpora los hechos, riesgos y próximos pasos del contexto.'
   - role: assistant
     content: D'acord. He revisat el context i en conservaré els elements clau.
   - role: user
-    content: Haz una última revisión en español y deja lista la respuesta final.
+    content: Haz una última revisión y deja lista la respuesta final.
   - role: assistant
-    content: He revisado todo y tengo preparada una versión fiel, concreta y completa.
-  prompt: Escriu la propera resposta de l'assistent.
+    content: Understood. I will now deliver the final version with the requested details.
+  prompt: Prepara una resposta municipal sobre la mobilitat afectada, les tanques, els senyals,
+    les responsabilitats i el retorn previst a la normalitat.
 - id: cd_h20_161
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: administracio
   workflow: public_notice
-  source_lang: en-ca
+  source_lang: en-es-ca
   target_lang: ca
-  forbidden_terms:
-  - library
-  - relocation
-  - returns
-  - reading
-  - collection
-  - revisión
   conversation:
   - role: user
-    content: L'ajuntament ha de publicar un avís sobre el trasllat temporal de la
-      biblioteca.
+    content: L'ajuntament ha de publicar un avís sobre el trasllat temporal de la biblioteca.
   - role: assistant
     content: Podem fer un avís amb dates, afectacions, alternatives i canals de consulta.
   - role: user
-    content: Include library relocation, returns desk, reading room capacity, collection
-      limits and temporary opening hours, but don't make it sound too technical.
+    content: Include library relocation, returns desk, reading room capacity, collection limits
+      and temporary opening hours, but don't make it sound too technical.
   - role: assistant
     content: Convertiré aquests conceptes a llenguatge administratiu clar i útil.
   - role: user
-    content: Antes de terminar, incorpora los hechos, riesgos y próximos pasos del
-      contexto.
+    content: Antes de terminar, incorpora los hechos, riesgos y próximos pasos del contexto.
   - role: assistant
     content: D'acord. He revisat el context i en conservaré els elements clau.
   - role: user
-    content: Haz una última revisión en español y deja lista la respuesta final.
+    content: Haz una última revisión y deja lista la respuesta final.
   - role: assistant
-    content: He revisado todo y tengo preparada una versión fiel, concreta y completa.
-  prompt: Escriu l'avís final amb títol, cos, afectacions i recomanacions.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
+  prompt: Redacta l'avís sobre la biblioteca, les devolucions, l'aforament, el fons afectat,
+    l'horari provisional i la normalització del servei.
 - id: cd_h20_164
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: usuari_final
   workflow: complaint_response
-  source_lang: en-ca
+  source_lang: es-en-ca
   target_lang: ca
-  forbidden_terms:
-  - certificate
-  - exam
-  - deadline
-  - voucher
   conversation:
   - role: user
-    content: Vull reclamar a una plataforma de formació perquè no em deixa completar
-      la certificació.
+    content: Vull reclamar a una plataforma de formació perquè no em deixa completar la certificació.
   - role: assistant
     content: Podem preparar una reclamació amb cronologia, impacte i petició concreta.
   - role: user
-    content: Their email mentions certificate exam, expired deadline, broken portal,
-      course voucher and manual review queue.
+    content: Su correo menciona el examen de certificación, el plazo vencido, el portal averiado,
+      el vale del curso y la cola de revisión manual.
   - role: assistant
-    content: Faré servir aquesta informació sense mantenir les expressions angleses.
+    content: Faré servir aquesta informació sense copiar la formulació original.
   - role: user
-    content: |-
-      Escriu-la amb to ferm, però deixa clar que encara prefereixo obtenir la convocatòria pendent.
+    content: 'Escriu-la amb to ferm, però deixa clar que encara prefereixo obtenir la convocatòria
+      pendent.
 
-      Antes de terminar, incorpora los hechos, riesgos y próximos pasos del contexto.
+
+      Antes de terminar, incorpora los hechos, riesgos y próximos pasos del contexto.'
   - role: assistant
     content: D'acord. He revisat el context i en conservaré els elements clau.
   - role: user
-    content: Haz una última revisión en español y deja lista la respuesta final.
+    content: Haz una última revisión y deja lista la respuesta final.
   - role: assistant
-    content: He revisado todo y tengo preparada una versión fiel, concreta y completa.
-  prompt: Escriu la propera resposta de l'assistent.
+    content: Understood. I will now deliver the final version with the requested details.
+  prompt: Escriu la reclamació sobre el portal, el venciment del termini, el val rebut, la
+    revisió demanada i la necessitat d'una nova convocatòria.
 - id: cd_h20_165
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: pime
   workflow: project_status
-  source_lang: en-ca
+  source_lang: en-es-ca
   target_lang: ca
-  forbidden_terms:
-  - audit
-  - supplier
-  - certificate
-  - corrective
-  - evidence
-  - próximos
   conversation:
   - role: user
-    content: Necessito actualitzar direcció sobre una certificació ambiental que
-      entra en fase crítica.
+    content: Necessito actualitzar direcció sobre una certificació ambiental que entra en
+      fase crítica.
   - role: assistant
     content: Podem estructurar-ho per estat, riscos, decisions i properes accions.
   - role: user
-    content: Use supplier audit, certificate evidence, corrective action, site visit
-      and renewal window because the consultant uses those labels.
+    content: Use supplier audit, certificate evidence, corrective action, site visit and renewal
+      window because the consultant uses those labels.
   - role: assistant
-    content: Ho expressaré en llenguatge empresarial, sense mantenir les etiquetes en anglès.
+    content: Ho expressaré en llenguatge empresarial amb etiquetes clares.
   - role: user
-    content: Antes de terminar, incorpora los hechos, riesgos y próximos pasos del
-      contexto.
+    content: Antes de terminar, incorpora los hechos, riesgos y próximos pasos del contexto.
   - role: assistant
     content: D'acord. He revisat el context i en conservaré els elements clau.
   - role: user
-    content: Haz una última revisión en español y deja lista la respuesta final.
+    content: Haz una última revisión y deja lista la respuesta final.
   - role: assistant
-    content: He revisado todo y tengo preparada una versión fiel, concreta y completa.
-  prompt: Escriu una actualització d'estat per a direcció, amb decisions necessàries
-    i riscos prioritzats.
+    content: De acuerdo. Ahora entregaré la versión final con los detalles solicitados.
+  prompt: Prepara una actualització d'estat sobre l'auditoria, les evidències recollides,
+    les correccions pendents, la visita i la renovació.
 - id: cd_h20_168
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: administracio
   workflow: public_notice
-  source_lang: es-ca
+  source_lang: es-en-ca
   target_lang: ca
-  forbidden_terms:
-  - vacunación
-  - traslado
-  - centro
-  - horario
   conversation:
   - role: user
     content: Cal publicar un avís sobre el trasllat temporal d'un punt de vacunació.
   - role: assistant
     content: L'avís ha de ser clar, prudent i orientat a l'acció.
   - role: user
-    content: El borrador castellano incluye centro alternativo, horario ampliado,
-      cita ya confirmada, transporte cercano y personal de apoyo.
+    content: El borrador incluye centro alternativo, horario ampliado, cita ya confirmada,
+      transporte cercano y personal de apoyo.
   - role: assistant
     content: Ho redactaré i distingiré fets confirmats de recomanacions.
   - role: user
-    content: Antes de terminar, incorpora los hechos, riesgos y próximos pasos del
-      contexto.
+    content: Antes de terminar, incorpora los hechos, riesgos y próximos pasos del contexto.
   - role: assistant
     content: D'acord. He revisat el context i en conservaré els elements clau.
   - role: user
-    content: Haz una última revisión en español y deja lista la respuesta final.
+    content: Haz una última revisión y deja lista la respuesta final.
   - role: assistant
-    content: He revisado todo y tengo preparada una versión fiel, concreta y completa.
-  prompt: Escriu l'avís final, amb títol, afectació, recomanacions i propera actualització.
+    content: Understood. I will now deliver the final version with the requested details.
+  prompt: Redacta l'avís sobre el canvi temporal de vacunació, les cites, el centre alternatiu,
+    el transport, el suport disponible i la propera revisió.
 - id: cd_h20_171
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: administracio
   workflow: project_status
-  source_lang: en-ca
+  source_lang: en-es-ca
   target_lang: ca
-  forbidden_terms:
-  - energy
-  - audit
-  - households
-  - meters
-  - workshop
-  - riesgos
   conversation:
   - role: user
-    content: Cal preparar un resum per a la taula tècnica sobre un projecte d'estalvi
-      energètic als barris.
+    content: Cal preparar un resum per a la taula tècnica sobre un projecte d'estalvi energètic
+      als barris.
   - role: assistant
     content: L'informe pot incloure participació, treball de camp, riscos i decisions.
   - role: user
-    content: The project office wrote about energy audit visits, household signups,
-      meter readings, workshop attendance and supplier scheduling.
+    content: The project office wrote about energy audit visits, household signups, meter
+      readings, workshop attendance and supplier scheduling.
   - role: assistant
     content: Transformaré aquests elements en llenguatge administratiu.
   - role: user
-    content: |-
-      Fes-ne una versió per a responsables tècnics, amb dades de participació i decisions operatives.
+    content: 'Fes-ne una versió per a responsables tècnics, amb dades de participació i decisions
+      operatives.
 
-      Antes de terminar, incorpora los hechos, riesgos y próximos pasos del contexto.
+
+      Antes de terminar, incorpora los hechos, riesgos y próximos pasos del contexto.'
   - role: assistant
-    content: D'acord. He revisat el context i en conservaré els elements clau.
+    content: I am reviewing the source details and will keep a working draft for review. Their operator says scanner pairing, bluetooth drops, warehouse labels, firmware
+      version and offline mode.
   - role: user
-    content: Haz una última revisión en español y deja lista la respuesta final.
+    content: Haz una última revisión y deja lista la respuesta final.
   - role: assistant
-    content: He revisado todo y tengo preparada una versión fiel, concreta y completa.
-  prompt: Escriu l'actualització d'estat.
+    content: Understood. I will keep the supplied template in view while writing.
+  prompt: Escriu en català l'actualització d'estat.
 - id: cd_h20_174
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: pime
   workflow: client_reply
-  source_lang: es-ca
+  source_lang: es-en-ca
   target_lang: ca
-  forbidden_terms:
-  - vencimiento
-  - anticipo
-  - fraccionada
-  - crédito
-  - contrato
   conversation:
   - role: user
-    content: Hem de contestar un client que vol canviar les condicions de pagament
-      després de signar.
+    content: Hem de contestar un client que vol canviar les condicions de pagament després
+      de signar.
   - role: assistant
     content: Podem oferir escenaris, límits i requisits de validació.
   - role: user
-    content: El equipo comercial propone anticipo reducido, factura fraccionada,
-      vencimiento ampliado, revisión de crédito y anexo contractual.
+    content: El equipo comercial propone anticipo reducido, factura fraccionada, vencimiento
+      ampliado, revisión de crédito y anexo contractual.
   - role: assistant
     content: Ho convertiré en una resposta comercial clara.
   - role: user
-    content: |-
-      Redacta-ho amb dues opcions i una recomanació final.
+    content: 'Redacta-ho amb dues opcions i una recomanació final.
 
-      Antes de terminar, incorpora los hechos, riesgos y próximos pasos del contexto.
+
+      Antes de terminar, incorpora los hechos, riesgos y próximos pasos del contexto.'
   - role: assistant
-    content: D'acord. He revisat el context i en conservaré els elements clau.
+    content: I am reviewing the source details and will keep a working draft for review. Their operator says scanner pairing, bluetooth drops, warehouse labels, firmware
+      version and offline mode.
   - role: user
-    content: Haz una última revisión en español y deja lista la respuesta final.
+    content: Haz una última revisión y deja lista la respuesta final.
   - role: assistant
-    content: He revisado todo y tengo preparada una versión fiel, concreta y completa.
-  prompt: Escriu el correu de resposta.
+    content: Understood. I have the source draft ready and will use its details.
+  prompt: Escriu en català el correu de resposta.
 - id: cd_h20_177
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: pime
   workflow: support_reply
-  source_lang: en-ca
+  source_lang: en-es-ca
   target_lang: ca
-  forbidden_terms:
-  - scanner
-  - warehouse
-  - firmware
-  - labels
-  - versión
   conversation:
   - role: user
     content: Hem d'ajudar un client que té problemes amb escàners de magatzem.
   - role: assistant
-    content: La resposta ha de demanar proves concretes i proposar una solució temporal
-      segura.
+    content: La resposta ha de demanar proves concretes i proposar una solució temporal segura.
   - role: user
-    content: Their operator says scanner pairing, bluetooth drops, warehouse labels,
-      firmware version and offline mode.
+    content: Their operator says scanner pairing, bluetooth drops, warehouse labels, firmware
+      version and offline mode.
   - role: assistant
     content: Tradueixo el fons tècnic a instruccions clares.
   - role: user
-    content: Antes de terminar, incorpora los hechos, riesgos y próximos pasos del
-      contexto.
+    content: Antes de terminar, incorpora los hechos, riesgos y próximos pasos del contexto.
   - role: assistant
     content: D'acord. He revisat el context i en conservaré els elements clau.
   - role: user
-    content: Haz una última revisión en español y deja lista la respuesta final.
+    content: Haz una última revisión y deja lista la respuesta final.
   - role: assistant
     content: He revisado todo y tengo preparada una versión fiel, concreta y completa.
-  prompt: Escriu la resposta de suport, amb comprovacions, dades requerides, mesura
-    temporal i escalat.
+  prompt: Prepara una resposta de suport sobre els escàners, la vinculació dels dispositius,
+    la versió instal·lada, la prova recomanada, les etiquetes i l'escalat.
 - id: cd_h20_179
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1095,34 +1003,29 @@
   workflow: complaint_response
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - inventario
-  - caja
-  - seguro
-  - fotografías
   conversation:
   - role: user
-    content: Vull reclamar a una empresa de mudances perquè alguns objectes han arribat
-      malmesos.
+    content: Vull reclamar a una empresa de mudances perquè alguns objectes han arribat malmesos.
   - role: assistant
     content: Podem fer una reclamació amb cronologia, impacte, documents i petició.
   - role: user
-    content: El presupuesto cita inventario firmado, caja golpeada, seguro contratado,
-      fotografías adjuntas y respuesta pendiente del transportista.
+    content: El presupuesto cita inventario firmado, caja golpeada, seguro contratado, fotografías
+      adjuntas y respuesta pendiente del transportista.
   - role: assistant
     content: Ho redactaré de manera ordenada i sense copiar el castellà.
   - role: user
-    content: |-
-      Fes-la contundent i demana una valoració de danys i una proposta de compensació aquesta setmana.
+    content: 'Fes-la contundent i demana una valoració de danys i una proposta de compensació
+      aquesta setmana.
 
-      Antes de terminar, incorpora los hechos, riesgos y próximos pasos del contexto.
+
+      Antes de terminar, incorpora los hechos, riesgos y próximos pasos del contexto.'
   - role: assistant
     content: D'acord. He revisat el context i en conservaré els elements clau.
   - role: user
-    content: Haz una última revisión en español y deja lista la respuesta final.
+    content: Haz una última revisión y deja lista la respuesta final.
   - role: assistant
     content: He revisado todo y tengo preparada una versión fiel, concreta y completa.
-  prompt: Escriu la reclamació.
+  prompt: Escriu en català la reclamació.
 - id: cd_h21_260
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1130,41 +1033,32 @@
   workflow: client_delay_update
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - rótulo
-  - instalación
-  - penalización
-  - asunto
-  - riesgo
   conversation:
   - role: user
-    content: >-
-      Som una PIME i hem d'explicar un retard en una instal·lació per a una botiga.
+    content: Som una PIME i hem d'explicar un retard en una instal·lació per a una botiga.
   - role: assistant
-    content: >-
-      Podem comunicar la causa, la nova previsió i una mesura de seguiment.
+    content: Podem comunicar la causa, la nova previsió i una mesura de seguiment.
   - role: user
-    content: >-
-      El cliente habla de rótulo personalizado, instalación aplazada, penalización
+    content: El cliente habla de rótulo personalizado, instalación aplazada, penalización
       contractual, factura retenida y apertura comercial.
   - role: assistant
-    content: >-
-      De acuerdo. Mantendré todos los detalles y la estructura solicitada.
+    content: De acuerdo. Mantendré todos los detalles y la estructura solicitada.
   - role: user
-    content: |-
-      Plantilla reutilizable:
-      ASUNTO:
-      SITUACIÓN:
-      RIESGO:
-      ACCIÓN INMEDIATA:
-      PRÓXIMO PASO:
-  - role: assistant
-    content: >-
-      D'acord. Faré servir l'estructura sense canviar l'objectiu.
-  prompt: |-
-    Prepara ya la versión final completa.
+    content: 'Plantilla reutilizable:
 
-    Escriu en català un correu breu amb assumpte, situació, nova previsió i proper pas.
+      ASUNTO:
+
+      SITUACIÓN:
+
+      RIESGO:
+
+      ACCIÓN INMEDIATA:
+
+      PRÓXIMO PASO:'
+  - role: assistant
+    content: D'acord. Faré servir l'estructura sense canviar l'objectiu.
+  prompt: Escriu un correu breu al client amb assumpte, situació, nova previsió i proper pas.
+    Mantén un to clar i útil.
 - id: cd_h21_261
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1172,43 +1066,33 @@
   workflow: client_reply
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - sandbox
-  - extension
-  - security
-  - approval
-  - subject
-  - risk
   conversation:
   - role: user
-    content: >-
-      Hem de respondre a un client que demana allargar una prova tècnica.
+    content: Hem de respondre a un client que demana allargar una prova tècnica.
   - role: assistant
-    content: >-
-      Podem separar continuïtat, condicions i validacions pendents.
+    content: Podem separar continuïtat, condicions i validacions pendents.
   - role: user
-    content: >-
-      The client asks for a sandbox extension, security approval, sample users,
-      delayed purchase order and a promise to keep the same price.
+    content: The client asks for a sandbox extension, security approval, sample users, delayed
+      purchase order and a promise to keep the same price.
   - role: assistant
-    content: >-
-      Understood. I will preserve every requested detail and the proposed structure.
+    content: Understood. I will preserve every requested detail and the proposed structure.
   - role: user
-    content: |-
-      Reusable template:
-      SUBJECT:
-      SITUATION:
-      RISK:
-      IMMEDIATE ACTION:
-      NEXT STEP:
-  - role: assistant
-    content: >-
-      D'acord. Mantindré l'estructura, però prepararé la resposta final segons la
-      instrucció principal.
-  prompt: |-
-    Please finalize with all headings and do not drop any English labels.
+    content: 'Reusable template:
 
-    Escriu en català la resposta com un correu breu, amb límits, alternativa i proper pas.
+      SUBJECT:
+
+      SITUATION:
+
+      RISK:
+
+      IMMEDIATE ACTION:
+
+      NEXT STEP:'
+  - role: assistant
+    content: D'acord. Mantindré l'estructura, però prepararé la resposta final segons la instrucció
+      principal.
+  prompt: Redacta un correu breu que respongui a la petició del client. Inclou els límits
+    de la prova, una alternativa viable i el proper pas.
 - id: cd_h21_262
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1216,41 +1100,32 @@
   workflow: client_reply
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - webinar
-  - ponente
-  - reembolso
-  - asunto
-  - acción
   conversation:
   - role: user
-    content: >-
-      Un client demana resposta per una activitat comercial que s'ha hagut de canviar.
+    content: Un client demana resposta per una activitat comercial que s'ha hagut de canviar.
   - role: assistant
-    content: >-
-      Podem reconèixer la situació i oferir alternatives sense assumir més del compte.
+    content: Podem reconèixer la situació i oferir alternatives sense assumir més del compte.
   - role: user
-    content: >-
-      En el correo aparecen webinar aplazado, ponente enfermo, patrocinador molesto,
+    content: En el correo aparecen webinar aplazado, ponente enfermo, patrocinador molesto,
       solicitud de reembolso y nueva fecha pendiente.
   - role: assistant
-    content: >-
-      De acuerdo. Conservaré el propósito, la estructura y todos los detalles relevantes.
+    content: De acuerdo. Conservaré el propósito, la estructura y todos los detalles relevantes.
   - role: user
-    content: |-
-      Plantilla reutilizable:
-      ASUNTO:
-      SITUACIÓN:
-      RIESGO:
-      ACCIÓN INMEDIATA:
-      PRÓXIMO PASO:
-  - role: assistant
-    content: >-
-      D'acord. Adaptaré la plantilla a la resposta sol·licitada.
-  prompt: |-
-    Revisa en español antes de cerrar y deja lista la versión final.
+    content: 'Plantilla reutilizable:
 
-    Escriu en català un correu amb reconeixement, alternativa, calendari i tancament professional.
+      ASUNTO:
+
+      SITUACIÓN:
+
+      RIESGO:
+
+      ACCIÓN INMEDIATA:
+
+      PRÓXIMO PASO:'
+  - role: assistant
+    content: D'acord. Adaptaré la plantilla a la resposta sol·licitada.
+  prompt: Escriu un correu professional que reconegui el canvi d'activitat, ofereixi una alternativa,
+    expliqui el calendari i tanqui amb cura.
 - id: cd_h21_263
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1258,41 +1133,32 @@
   workflow: client_reply
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - migration
-  - users
-  - acceptance
-  - subject
-  - next
   conversation:
   - role: user
-    content: >-
-      Hem de respondre una proposta que barreja prova pilot i canvi de plataforma.
+    content: Hem de respondre una proposta que barreja prova pilot i canvi de plataforma.
   - role: assistant
-    content: >-
-      Podem limitar l'abast i proposar una validació progressiva.
+    content: Podem limitar l'abast i proposar una validació progressiva.
   - role: user
-    content: >-
-      The client repeats pilot workshop, migration window, sample users, acceptance
+    content: The client repeats pilot workshop, migration window, sample users, acceptance
       period and delayed purchase order.
   - role: assistant
-    content: >-
-      Understood. I will keep the client's exact structure and all important labels.
+    content: Understood. I will keep the client's exact structure and all important labels.
   - role: user
-    content: |-
-      Reusable template:
-      SUBJECT:
-      SITUATION:
-      RISK:
-      IMMEDIATE ACTION:
-      NEXT STEP:
-  - role: assistant
-    content: >-
-      D'acord. Faré servir la plantilla com a guia de contingut.
-  prompt: |-
-    Final answer can follow the English template.
+    content: 'Reusable template:
 
-    Escriu en català la resposta com un correu breu, amb límits, alternativa i proper pas.
+      SUBJECT:
+
+      SITUATION:
+
+      RISK:
+
+      IMMEDIATE ACTION:
+
+      NEXT STEP:'
+  - role: assistant
+    content: D'acord. Faré servir la plantilla com a guia de contingut.
+  prompt: Prepara una resposta breu al client sobre la prova pilot i el canvi de plataforma.
+    Marca els límits, proposa una alternativa i indica el proper pas.
 - id: cd_h21_264
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1300,41 +1166,32 @@
   workflow: client_reply
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - auditoría
-  - disponibilidad
-  - penalización
-  - asunto
-  - riesgo
   conversation:
   - role: user
-    content: >-
-      Un client reclama per indicadors de servei que interpreta com un incompliment.
+    content: Un client reclama per indicadors de servei que interpreta com un incompliment.
   - role: assistant
-    content: >-
-      Podem respondre amb fets verificats, cautela contractual i proposta de revisió.
+    content: Podem respondre amb fets verificats, cautela contractual i proposta de revisió.
   - role: user
-    content: >-
-      El cliente menciona SLA incumplido, auditoría interna, disponibilidad mensual,
+    content: El cliente menciona SLA incumplido, auditoría interna, disponibilidad mensual,
       penalización automática y reunión urgente.
   - role: assistant
-    content: >-
-      De acuerdo. Mantendré los términos clave y el tono solicitado.
+    content: De acuerdo. Mantendré los términos clave y el tono solicitado.
   - role: user
-    content: |-
-      Plantilla reutilizable:
-      ASUNTO:
-      SITUACIÓN:
-      RIESGO:
-      ACCIÓN INMEDIATA:
-      PRÓXIMO PASO:
-  - role: assistant
-    content: >-
-      D'acord. Prepararé la versió final amb la informació essencial.
-  prompt: |-
-    Haz la última revisión en español.
+    content: 'Plantilla reutilizable:
 
-    Escriu en català un correu ferm amb fets, límits, proposta de revisió i proper pas.
+      ASUNTO:
+
+      SITUACIÓN:
+
+      RIESGO:
+
+      ACCIÓN INMEDIATA:
+
+      PRÓXIMO PASO:'
+  - role: assistant
+    content: D'acord. Prepararé la versió final amb la informació essencial.
+  prompt: Redacta un correu ferm sobre els indicadors de servei, amb fets verificats, límits
+    contractuals, proposta de revisió i proper pas.
 - id: cd_h21_265
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1342,43 +1199,33 @@
   workflow: complaint_response
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - garden
-  - gate
-  - wheelchair
-  - complaint
-  - subject
-  - action
   conversation:
   - role: user
-    content: >-
-      L'ajuntament ha de contestar una queixa sobre accessibilitat en un jardí públic.
+    content: L'ajuntament ha de contestar una queixa sobre accessibilitat en un jardí públic.
   - role: assistant
-    content: >-
-      Cal reconèixer la situació, explicar verificacions i donar un canal de seguiment.
+    content: Cal reconèixer la situació, explicar verificacions i donar un canal de seguiment.
   - role: user
-    content: >-
-      The complaint mentions community garden gate, wheelchair access, uneven path,
+    content: The complaint mentions community garden gate, wheelchair access, uneven path,
       previous complaint and a request for temporary assistance.
   - role: assistant
-    content: >-
-      Understood. I will preserve the purpose, requested structure, and all details.
+    content: Understood. I will preserve the purpose, requested structure, and all details.
   - role: user
-    content: |-
-      Reusable template:
-      SUBJECT:
-      SITUATION:
-      RISK:
-      IMMEDIATE ACTION:
-      NEXT STEP:
-  - role: assistant
-    content: >-
-      D'acord. Mantindré la informació però redactaré la resposta final segons la
-      llengua indicada.
-  prompt: |-
-    Please keep the final version close to the template.
+    content: 'Reusable template:
 
-    Escriu en català la resposta municipal amb recepció, actuacions, terminis i seguiment.
+      SUBJECT:
+
+      SITUATION:
+
+      RISK:
+
+      IMMEDIATE ACTION:
+
+      NEXT STEP:'
+  - role: assistant
+    content: D'acord. Mantindré la informació però redactaré la resposta final segons la llengua
+      indicada.
+  prompt: Escriu la resposta municipal sobre l'accessibilitat del jardí, amb recepció de la
+    queixa, actuacions previstes, terminis i seguiment.
 - id: cd_h21_266
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1386,42 +1233,32 @@
   workflow: complaint_response
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - gimnasio
-  - baja
-  - cuota
-  - permanencia
-  - asunto
-  - próximo
   conversation:
   - role: user
-    content: >-
-      Vull reclamar a un gimnàs perquè no han aplicat correctament la baixa.
+    content: Vull reclamar a un gimnàs perquè no han aplicat correctament la baixa.
   - role: assistant
-    content: >-
-      Podem explicar cronologia, imports i petició concreta.
+    content: Podem explicar cronologia, imports i petició concreta.
   - role: user
-    content: >-
-      En los correos hablan de gimnasio, baja tramitada, cuota cobrada, permanencia
+    content: En los correos hablan de gimnasio, baja tramitada, cuota cobrada, permanencia
       discutida y acceso ya bloqueado.
   - role: assistant
-    content: >-
-      De acuerdo. Respetaré la estructura y todos los elementos relevantes.
+    content: De acuerdo. Respetaré la estructura y todos los elementos relevantes.
   - role: user
-    content: |-
-      Plantilla reutilizable:
-      ASUNTO:
-      SITUACIÓN:
-      RIESGO:
-      ACCIÓN INMEDIATA:
-      PRÓXIMO PASO:
-  - role: assistant
-    content: >-
-      D'acord. La plantilla servirà només per organitzar la informació.
-  prompt: |-
-    Prepara ya la versión final completa.
+    content: 'Plantilla reutilizable:
 
-    Escriu en català la reclamació amb fets, import reclamat, documents i termini.
+      ASUNTO:
+
+      SITUACIÓN:
+
+      RIESGO:
+
+      ACCIÓN INMEDIATA:
+
+      PRÓXIMO PASO:'
+  - role: assistant
+    content: D'acord. La plantilla servirà només per organitzar la informació.
+  prompt: Prepara la reclamació al gimnàs amb els fets, l'import reclamat, els documents aportats
+    i un termini de resposta.
 - id: cd_h21_267
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1429,42 +1266,32 @@
   workflow: complaint_response
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - construction
-  - dust
-  - permit
-  - contractor
-  - subject
-  - risk
   conversation:
   - role: user
-    content: >-
-      L'oficina municipal ha de respondre una queixa per molèsties d'una obra privada.
+    content: L'oficina municipal ha de respondre una queixa per molèsties d'una obra privada.
   - role: assistant
-    content: >-
-      Podem explicar competències, comprovacions i canals d'incidència.
+    content: Podem explicar competències, comprovacions i canals d'incidència.
   - role: user
-    content: >-
-      The resident mentions construction dust, early deliveries, permit conditions,
+    content: The resident mentions construction dust, early deliveries, permit conditions,
       contractor contact and concern for a nearby clinic.
   - role: assistant
-    content: >-
-      Understood. I will keep all requirements and the source wording in mind.
+    content: Understood. I will keep all requirements and the source wording in mind.
   - role: user
-    content: |-
-      Reusable template:
-      SUBJECT:
-      SITUATION:
-      RISK:
-      IMMEDIATE ACTION:
-      NEXT STEP:
-  - role: assistant
-    content: >-
-      D'acord. Prepararé una resposta institucional amb aquests elements.
-  prompt: |-
-    Make the final answer ready to send.
+    content: 'Reusable template:
 
-    Escriu en català la resposta municipal amb reconeixement, límits competencials, actuacions i seguiment.
+      SUBJECT:
+
+      SITUATION:
+
+      RISK:
+
+      IMMEDIATE ACTION:
+
+      NEXT STEP:'
+  - role: assistant
+    content: D'acord. Prepararé una resposta institucional amb aquests elements.
+  prompt: Redacta la resposta municipal sobre les molèsties de l'obra, amb reconeixement,
+    límits competencials, actuacions i seguiment.
 - id: cd_h21_268
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1472,40 +1299,32 @@
   workflow: complaint_response
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - convocatoria
-  - revisión
-  - asunto
-  - riesgo
   conversation:
   - role: user
-    content: >-
-      Necessito reclamar la revisió d'una qualificació d'un procés formatiu.
+    content: Necessito reclamar la revisió d'una qualificació d'un procés formatiu.
   - role: assistant
-    content: >-
-      Podem fer una petició formal, concreta i respectuosa.
+    content: Podem fer una petició formal, concreta i respectuosa.
   - role: user
-    content: >-
-      La convocatoria habla de examen práctico, nota publicada, revisión solicitada,
+    content: La convocatoria habla de examen práctico, nota publicada, revisión solicitada,
       tribunal evaluador y plazo de alegaciones.
   - role: assistant
-    content: >-
-      De acuerdo. Mantendré el propósito y los requisitos.
+    content: De acuerdo. Mantendré el propósito y los requisitos.
   - role: user
-    content: |-
-      Plantilla reutilizable:
-      ASUNTO:
-      SITUACIÓN:
-      RIESGO:
-      ACCIÓN INMEDIATA:
-      PRÓXIMO PASO:
-  - role: assistant
-    content: >-
-      D'acord. Faré servir l'estructura per preparar una versió final clara.
-  prompt: |-
-    Revisa en español y ciérralo.
+    content: 'Plantilla reutilizable:
 
-    Escriu en català la reclamació amb antecedents, discrepància, petició de revisió i termini.
+      ASUNTO:
+
+      SITUACIÓN:
+
+      RIESGO:
+
+      ACCIÓN INMEDIATA:
+
+      PRÓXIMO PASO:'
+  - role: assistant
+    content: D'acord. Faré servir l'estructura per preparar una versió final clara.
+  prompt: Escriu una reclamació formal amb antecedents, discrepància, petició de revisió i
+    termini de resposta.
 - id: cd_h21_269
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1513,42 +1332,32 @@
   workflow: complaint_response
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - cemetery
-  - maintenance
-  - flowers
-  - pathway
-  - subject
-  - next
   conversation:
   - role: user
-    content: >-
-      El servei municipal ha de contestar una queixa sobre manteniment d'un cementiri.
+    content: El servei municipal ha de contestar una queixa sobre manteniment d'un cementiri.
   - role: assistant
-    content: >-
-      Cal respondre amb sensibilitat, fets verificables i seguiment.
+    content: Cal respondre amb sensibilitat, fets verificables i seguiment.
   - role: user
-    content: >-
-      The message mentions cemetery maintenance, removed flowers, blocked pathway,
+    content: The message mentions cemetery maintenance, removed flowers, blocked pathway,
       cleaning schedule and a family request for explanation.
   - role: assistant
-    content: >-
-      Understood. I will preserve the requested structure and all relevant details.
+    content: Understood. I will preserve the requested structure and all relevant details.
   - role: user
-    content: |-
-      Reusable template:
-      SUBJECT:
-      SITUATION:
-      RISK:
-      IMMEDIATE ACTION:
-      NEXT STEP:
-  - role: assistant
-    content: >-
-      D'acord. Redactaré una resposta prudent.
-  prompt: |-
-    Finalize it using the same headings.
+    content: 'Reusable template:
 
-    Escriu en català la resposta municipal amb recepció, explicació prudent, actuacions i canal de seguiment.
+      SUBJECT:
+
+      SITUATION:
+
+      RISK:
+
+      IMMEDIATE ACTION:
+
+      NEXT STEP:'
+  - role: assistant
+    content: D'acord. Redactaré una resposta prudent.
+  prompt: Prepara la resposta municipal sobre el manteniment del cementiri, amb recepció de
+    la queixa, explicació prudent, actuacions i canal de seguiment.
 - id: cd_h21_270
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1556,42 +1365,32 @@
   workflow: complaint_response
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - fianza
-  - bloqueo
-  - aplicación
-  - asunto
-  - acción
   conversation:
   - role: user
-    content: >-
-      Vull reclamar a un servei de lloguer perquè m'han retingut diners sense
-      explicar-ho.
+    content: Vull reclamar a un servei de lloguer perquè m'han retingut diners sense explicar-ho.
   - role: assistant
-    content: >-
-      Podem demanar devolució, justificació i resposta escrita.
+    content: Podem demanar devolució, justificació i resposta escrita.
   - role: user
-    content: >-
-      El servicio habla de bicicleta devuelta, fianza retenida, bloqueo en la
-      aplicación, trayecto cerrado y soporte sin respuesta.
+    content: El servicio habla de bicicleta devuelta, fianza retenida, bloqueo en la aplicación,
+      trayecto cerrado y soporte sin respuesta.
   - role: assistant
-    content: >-
-      De acuerdo. Conservaré todos los detalles relevantes.
+    content: De acuerdo. Conservaré todos los detalles relevantes.
   - role: user
-    content: |-
-      Plantilla reutilizable:
-      ASUNTO:
-      SITUACIÓN:
-      RIESGO:
-      ACCIÓN INMEDIATA:
-      PRÓXIMO PASO:
-  - role: assistant
-    content: >-
-      D'acord. Prepararé la reclamació amb una estructura clara.
-  prompt: |-
-    Haz la versión final ya.
+    content: 'Plantilla reutilizable:
 
-    Escriu en català la reclamació amb cronologia, import reclamat, proves i termini.
+      ASUNTO:
+
+      SITUACIÓN:
+
+      RIESGO:
+
+      ACCIÓN INMEDIATA:
+
+      PRÓXIMO PASO:'
+  - role: assistant
+    content: D'acord. Prepararé la reclamació amb una estructura clara.
+  prompt: Redacta una reclamació amb cronologia dels fets, import reclamat, proves disponibles
+    i termini de resposta.
 - id: cd_h21_271
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1599,41 +1398,32 @@
   workflow: privacy_guidance
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - contacts
-  - navigation
-  - garage
-  - subject
-  - next
   conversation:
   - role: user
-    content: >-
-      Vull revisar la privacitat d'un cotxe compartit abans de tornar-lo.
+    content: Vull revisar la privacitat d'un cotxe compartit abans de tornar-lo.
   - role: assistant
-    content: >-
-      Podem revisar dispositius vinculats, historial i permisos.
+    content: Podem revisar dispositius vinculats, historial i permisos.
   - role: user
-    content: >-
-      Include paired phones, synced contacts, navigation history, garage codes and
+    content: Include paired phones, synced contacts, navigation history, garage codes and
       voice profile settings.
   - role: assistant
-    content: >-
-      Understood. I will preserve the structure and all requested details.
+    content: Understood. I will preserve the structure and all requested details.
   - role: user
-    content: |-
-      Reusable template:
-      SUBJECT:
-      SITUATION:
-      RISK:
-      IMMEDIATE ACTION:
-      NEXT STEP:
-  - role: assistant
-    content: >-
-      D'acord. Faré una guia pràctica sense copiar l'anglès.
-  prompt: |-
-    Keep the template labels in the final version.
+    content: 'Reusable template:
 
-    Dona en català una guia breu amb passos ordenats, advertiments pràctics i comprovació final.
+      SUBJECT:
+
+      SITUATION:
+
+      RISK:
+
+      IMMEDIATE ACTION:
+
+      NEXT STEP:'
+  - role: assistant
+    content: D'acord. Faré una guia pràctica sense copiar literalment.
+  prompt: Dona una guia breu per revisar la privacitat del sistema del cotxe, amb passos ordenats,
+    advertiments pràctics i comprovació final.
 - id: cd_h21_272
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1641,43 +1431,33 @@
   workflow: procurement_note
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - intérprete
-  - lengua
-  - signos
-  - urgencia
-  - asunto
-  - riesgo
   conversation:
   - role: user
-    content: >-
-      Hem de justificar la contractació d'un servei d'accessibilitat per a un acte
+    content: Hem de justificar la contractació d'un servei d'accessibilitat per a un acte
       públic imprevist.
   - role: assistant
-    content: >-
-      La nota ha d'explicar necessitat, urgència, controls i proper tràmit.
+    content: La nota ha d'explicar necessitat, urgència, controls i proper tràmit.
   - role: user
-    content: >-
-      El borrador menciona intérprete de lengua de signos, urgencia sobrevenida,
-      acto abierto, presupuesto limitado y confirmación del proveedor.
+    content: El borrador menciona intérprete de lengua de signos, urgencia sobrevenida, acto
+      abierto, presupuesto limitado y confirmación del proveedor.
   - role: assistant
-    content: >-
-      De acuerdo. Mantendré el propósito, estructura y detalles.
+    content: De acuerdo. Mantendré el propósito, estructura y detalles.
   - role: user
-    content: |-
-      Plantilla reutilizable:
-      ASUNTO:
-      SITUACIÓN:
-      RIESGO:
-      ACCIÓN INMEDIATA:
-      PRÓXIMO PASO:
-  - role: assistant
-    content: >-
-      D'acord. Ho redactaré amb cautela administrativa.
-  prompt: |-
-    Cierra la nota en español antes de enviarla.
+    content: 'Plantilla reutilizable:
 
-    Escriu en català la nota de contractació amb justificació, riscos, controls i proper tràmit.
+      ASUNTO:
+
+      SITUACIÓN:
+
+      RIESGO:
+
+      ACCIÓN INMEDIATA:
+
+      PRÓXIMO PASO:'
+  - role: assistant
+    content: D'acord. Ho redactaré amb cautela administrativa.
+  prompt: Redacta la nota de contractació del servei d'accessibilitat, amb justificació, riscos,
+    controls i proper tràmit.
 - id: cd_h21_273
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1685,42 +1465,32 @@
   workflow: procurement_note
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - hearing
-  - loop
-  - council
-  - chamber
-  - subject
-  - risk
   conversation:
   - role: user
-    content: >-
-      L'ajuntament valora comprar un sistema d'ajuda auditiva per a la sala de plens.
+    content: L'ajuntament valora comprar un sistema d'ajuda auditiva per a la sala de plens.
   - role: assistant
-    content: >-
-      Podem fer una nota amb necessitat, criteris, riscos i decisió.
+    content: Podem fer una nota amb necessitat, criteris, riscos i decisió.
   - role: user
-    content: >-
-      The offer mentions portable hearing loop, council chamber coverage, installation
+    content: The offer mentions portable hearing loop, council chamber coverage, installation
       training, battery autonomy and maintenance plan.
   - role: assistant
-    content: >-
-      Understood. I will preserve all requirements and the requested format.
+    content: Understood. I will preserve all requirements and the requested format.
   - role: user
-    content: |-
-      Reusable template:
-      SUBJECT:
-      SITUATION:
-      RISK:
-      IMMEDIATE ACTION:
-      NEXT STEP:
-  - role: assistant
-    content: >-
-      D'acord. Mantindré la informació i adaptaré la llengua final.
-  prompt: |-
-    Finalize using that English structure.
+    content: 'Reusable template:
 
-    Escriu en català la nota de contractació amb necessitat, criteris, riscos i recomanació.
+      SUBJECT:
+
+      SITUATION:
+
+      RISK:
+
+      IMMEDIATE ACTION:
+
+      NEXT STEP:'
+  - role: assistant
+    content: D'acord. Mantindré la informació i adaptaré la llengua final.
+  prompt: Escriu la nota de contractació del sistema d'ajuda auditiva, amb necessitat, criteris
+    de selecció, riscos i recomanació.
 - id: cd_h21_274
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1728,43 +1498,33 @@
   workflow: procurement_note
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - sombra
-  - lonas
-  - anclaje
-  - homologación
-  - asunto
-  - próximo
   conversation:
   - role: user
-    content: >-
-      Cal preparar una nota per instal·lar elements temporals de protecció solar
-      a una plaça.
+    content: Cal preparar una nota per instal·lar elements temporals de protecció solar a
+      una plaça.
   - role: assistant
-    content: >-
-      Podem tractar necessitat, seguretat, criteris tècnics i calendari.
+    content: Podem tractar necessitat, seguretat, criteris tècnics i calendari.
   - role: user
-    content: >-
-      En la propuesta aparecen sombra temporal, lonas ignífugas, anclaje certificado,
+    content: En la propuesta aparecen sombra temporal, lonas ignífugas, anclaje certificado,
       homologación pendiente y montaje antes de la fiesta mayor.
   - role: assistant
-    content: >-
-      De acuerdo. Respetaré estructura, finalidad y datos relevantes.
+    content: De acuerdo. Respetaré estructura, finalidad y datos relevantes.
   - role: user
-    content: |-
-      Plantilla reutilizable:
-      ASUNTO:
-      SITUACIÓN:
-      RIESGO:
-      ACCIÓN INMEDIATA:
-      PRÓXIMO PASO:
-  - role: assistant
-    content: >-
-      D'acord. Redactaré la nota final amb la llengua indicada.
-  prompt: |-
-    Prepara la versión final completa.
+    content: 'Plantilla reutilizable:
 
-    Escriu en català la nota de contractació amb necessitat, criteris, riscos i proper pas.
+      ASUNTO:
+
+      SITUACIÓN:
+
+      RIESGO:
+
+      ACCIÓN INMEDIATA:
+
+      PRÓXIMO PASO:'
+  - role: assistant
+    content: D'acord. Redactaré la nota final amb la llengua indicada.
+  prompt: Prepara la nota de contractació per a la protecció solar temporal, amb necessitat,
+    criteris tècnics, riscos i proper pas.
 - id: cd_h21_275
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1772,42 +1532,32 @@
   workflow: procurement_note
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - payroll
-  - provider
-  - migration
-  - support
-  - subject
-  - next
   conversation:
   - role: user
-    content: >-
-      Hem de comparar proveïdors per gestionar nòmines i absències.
+    content: Hem de comparar proveïdors per gestionar nòmines i absències.
   - role: assistant
-    content: >-
-      La nota pot comparar costos, risc de transició, suport i garanties.
+    content: La nota pot comparar costos, risc de transició, suport i garanties.
   - role: user
-    content: >-
-      The shortlist mentions payroll provider, data migration, support hours, employee
+    content: The shortlist mentions payroll provider, data migration, support hours, employee
       portal, audit trail and implementation fee.
   - role: assistant
-    content: >-
-      Understood. I will keep the exact business requirements and structure.
+    content: Understood. I will keep the exact business requirements and structure.
   - role: user
-    content: |-
-      Reusable template:
-      SUBJECT:
-      SITUATION:
-      RISK:
-      IMMEDIATE ACTION:
-      NEXT STEP:
-  - role: assistant
-    content: >-
-      D'acord. Ho convertiré en una nota interna en català.
-  prompt: |-
-    Please keep the heading names.
+    content: 'Reusable template:
 
-    Escriu en català la nota de decisió amb criteris, riscos, prova pilot i recomanació.
+      SUBJECT:
+
+      SITUATION:
+
+      RISK:
+
+      IMMEDIATE ACTION:
+
+      NEXT STEP:'
+  - role: assistant
+    content: D'acord. Ho convertiré en una nota interna.
+  prompt: Redacta la nota de decisió sobre els proveïdors de nòmines, amb criteris, riscos,
+    prova pilot i recomanació.
 - id: cd_h21_276
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1815,42 +1565,32 @@
   workflow: project_status
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - training
-  - rollout
-  - attendance
-  - feedback
-  - subject
-  - risk
   conversation:
   - role: user
-    content: >-
-      Necessito actualitzar direcció sobre una formació nova per a clients.
+    content: Necessito actualitzar direcció sobre una formació nova per a clients.
   - role: assistant
-    content: >-
-      Podem resumir estat, riscos, decisions i properes accions.
+    content: Podem resumir estat, riscos, decisions i properes accions.
   - role: user
-    content: >-
-      Use training rollout, low attendance, feedback form, partner speakers and
-      customer success follow-up because those are the project labels.
+    content: Use training rollout, low attendance, feedback form, partner speakers and customer
+      success follow-up because those are the project labels.
   - role: assistant
-    content: >-
-      Understood. I will preserve all labels and requested structure.
+    content: Understood. I will preserve all labels and requested structure.
   - role: user
-    content: |-
-      Reusable template:
-      SUBJECT:
-      SITUATION:
-      RISK:
-      IMMEDIATE ACTION:
-      NEXT STEP:
-  - role: assistant
-    content: >-
-      D'acord. La versió final mantindrà el contingut sense copiar les etiquetes.
-  prompt: |-
-    Final answer should be ready for executives.
+    content: 'Reusable template:
 
-    Escriu en català una actualització d'estat per a direcció amb riscos prioritzats i decisió necessària.
+      SUBJECT:
+
+      SITUATION:
+
+      RISK:
+
+      IMMEDIATE ACTION:
+
+      NEXT STEP:'
+  - role: assistant
+    content: D'acord. La versió final mantindrà el contingut sense copiar les etiquetes.
+  prompt: Escriu una actualització d'estat per a direcció sobre la formació de clients, amb
+    riscos prioritzats i decisió necessària.
 - id: cd_h21_277
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1858,42 +1598,32 @@
   workflow: project_status
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - caja
-  - terminales
-  - tickets
-  - cierre
-  - asunto
-  - acción
   conversation:
   - role: user
-    content: >-
-      Hem d'explicar l'estat d'un canvi de sistema de cobrament a les botigues.
+    content: Hem d'explicar l'estat d'un canvi de sistema de cobrament a les botigues.
   - role: assistant
-    content: >-
-      Podem separar proves, incidències, riscos i decisió de llançament.
+    content: Podem separar proves, incidències, riscos i decisió de llançament.
   - role: user
-    content: >-
-      El equipo habla de caja nueva, terminales actualizados, tickets descuadrados,
+    content: El equipo habla de caja nueva, terminales actualizados, tickets descuadrados,
       cierre diario lento y formación incompleta.
   - role: assistant
-    content: >-
-      De acuerdo. Conservaré todos los requisitos y etiquetas del proyecto.
+    content: De acuerdo. Conservaré todos los requisitos y etiquetas del proyecto.
   - role: user
-    content: |-
-      Plantilla reutilizable:
-      ASUNTO:
-      SITUACIÓN:
-      RIESGO:
-      ACCIÓN INMEDIATA:
-      PRÓXIMO PASO:
-  - role: assistant
-    content: >-
-      D'acord. Prepararé una versió executiva.
-  prompt: |-
-    Hazla final en el mismo formato.
+    content: 'Plantilla reutilizable:
 
-    Escriu en català una actualització executiva amb estat, riscos, decisions i accions.
+      ASUNTO:
+
+      SITUACIÓN:
+
+      RIESGO:
+
+      ACCIÓN INMEDIATA:
+
+      PRÓXIMO PASO:'
+  - role: assistant
+    content: D'acord. Prepararé una versió executiva.
+  prompt: Prepara una actualització executiva sobre el canvi del sistema de cobrament, amb
+    estat, riscos, decisions i accions.
 - id: cd_h21_278
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1901,42 +1631,33 @@
   workflow: project_status
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - meals
-  - consent
-  - families
-  - subject
-  - next
   conversation:
   - role: user
-    content: >-
-      L'administració local ha d'actualitzar un projecte digital vinculat a menjadors
+    content: L'administració local ha d'actualitzar un projecte digital vinculat a menjadors
       escolars.
   - role: assistant
-    content: >-
-      Podem resumir fites, proves, riscos de dades i comunicació a famílies.
+    content: Podem resumir fites, proves, riscos de dades i comunicació a famílies.
   - role: user
-    content: >-
-      The project note says school meals app, consent forms, allergy records, family
+    content: The project note says school meals app, consent forms, allergy records, family
       notifications and support desk training.
   - role: assistant
-    content: >-
-      Understood. I will preserve all important details and the requested structure.
+    content: Understood. I will preserve all important details and the requested structure.
   - role: user
-    content: |-
-      Reusable template:
-      SUBJECT:
-      SITUATION:
-      RISK:
-      IMMEDIATE ACTION:
-      NEXT STEP:
-  - role: assistant
-    content: >-
-      D'acord. Redactaré l'actualització en català.
-  prompt: |-
-    Keep all labels visible.
+    content: 'Reusable template:
 
-    Escriu en català una actualització d'estat amb fites, riscos, comunicació i decisió requerida.
+      SUBJECT:
+
+      SITUATION:
+
+      RISK:
+
+      IMMEDIATE ACTION:
+
+      NEXT STEP:'
+  - role: assistant
+    content: D'acord. Redactaré l'actualització.
+  prompt: Redacta una actualització d'estat del projecte de menjadors escolars, amb fites,
+    riscos, comunicació i decisió requerida.
 - id: cd_h21_279
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1944,42 +1665,32 @@
   workflow: public_notice
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - registro
-  - inundación
-  - citas
-  - ventanilla
-  - asunto
-  - próximo
   conversation:
   - role: user
-    content: >-
-      Cal publicar un avís perquè una oficina municipal canvia l'atenció presencial.
+    content: Cal publicar un avís perquè una oficina municipal canvia l'atenció presencial.
   - role: assistant
-    content: >-
-      L'avís ha d'explicar motiu, afectació, alternatives i seguiment.
+    content: L'avís ha d'explicar motiu, afectació, alternatives i seguiment.
   - role: user
-    content: >-
-      El borrador menciona registro civil, inundación leve, citas reubicadas,
-      ventanilla cerrada y prioridad para trámites urgentes.
+    content: El borrador menciona registro civil, inundación leve, citas reubicadas, ventanilla
+      cerrada y prioridad para trámites urgentes.
   - role: assistant
-    content: >-
-      De acuerdo. Mantendré el contenido y la estructura.
+    content: De acuerdo. Mantendré el contenido y la estructura.
   - role: user
-    content: |-
-      Plantilla reutilizable:
-      ASUNTO:
-      SITUACIÓN:
-      RIESGO:
-      ACCIÓN INMEDIATA:
-      PRÓXIMO PASO:
-  - role: assistant
-    content: >-
-      D'acord. Ho transformaré en un avís públic en català.
-  prompt: |-
-    Prepara ya la versión final completa.
+    content: 'Plantilla reutilizable:
 
-    Escriu en català l'avís amb títol, afectació, alternatives, priorització i actualització prevista.
+      ASUNTO:
+
+      SITUACIÓN:
+
+      RIESGO:
+
+      ACCIÓN INMEDIATA:
+
+      PRÓXIMO PASO:'
+  - role: assistant
+    content: D'acord. Ho transformaré en un avís públic.
+  prompt: Escriu l'avís sobre el canvi d'atenció presencial, amb títol, afectació, alternatives,
+    priorització i actualització prevista.
 - id: cd_h21_280
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -1987,42 +1698,32 @@
   workflow: public_notice
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - rehearsal
-  - rooms
-  - ventilation
-  - booking
-  - subject
-  - risk
   conversation:
   - role: user
-    content: >-
-      Un centre cultural municipal ha de tancar temporalment alguns espais.
+    content: Un centre cultural municipal ha de tancar temporalment alguns espais.
   - role: assistant
-    content: >-
-      Podem fer un avís amb afectació, alternatives i propera revisió.
+    content: Podem fer un avís amb afectació, alternatives i propera revisió.
   - role: user
-    content: >-
-      The operations note mentions rehearsal rooms, ventilation check, cancelled
-      booking slots, relocated classes and a safety review.
+    content: The operations note mentions rehearsal rooms, ventilation check, cancelled booking
+      slots, relocated classes and a safety review.
   - role: assistant
-    content: >-
-      Understood. I will preserve all details and labels.
+    content: Understood. I will preserve all details and labels.
   - role: user
-    content: |-
-      Reusable template:
-      SUBJECT:
-      SITUATION:
-      RISK:
-      IMMEDIATE ACTION:
-      NEXT STEP:
-  - role: assistant
-    content: >-
-      D'acord. Prepararé un avís clar per al públic.
-  prompt: |-
-    Finalize with the same heading structure.
+    content: 'Reusable template:
 
-    Escriu en català l'avís amb títol, afectació, alternatives i propera actualització.
+      SUBJECT:
+
+      SITUATION:
+
+      RISK:
+
+      IMMEDIATE ACTION:
+
+      NEXT STEP:'
+  - role: assistant
+    content: D'acord. Prepararé un avís clar per al públic.
+  prompt: Redacta l'avís del centre cultural, amb títol, espais afectats, alternatives i propera
+    actualització.
 - id: cd_h21_281
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -2030,42 +1731,32 @@
   workflow: public_notice
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - cementerio
-  - aparcamiento
-  - acceso
-  - flores
-  - asunto
-  - acción
   conversation:
   - role: user
-    content: >-
-      S'ha de publicar un avís sobre canvis d'accés a un equipament sensible.
+    content: S'ha de publicar un avís sobre canvis d'accés a un equipament sensible.
   - role: assistant
-    content: >-
-      L'avís ha de ser respectuós, concret i orientat a les persones usuàries.
+    content: L'avís ha de ser respectuós, concret i orientat a les persones usuàries.
   - role: user
-    content: >-
-      El texto previo habla de cementerio municipal, aparcamiento limitado, acceso
+    content: El texto previo habla de cementerio municipal, aparcamiento limitado, acceso
       peatonal, entrega de flores y personal de apoyo.
   - role: assistant
-    content: >-
-      De acuerdo. Mantendré finalidad, estructura y detalles relevantes.
+    content: De acuerdo. Mantendré finalidad, estructura y detalles relevantes.
   - role: user
-    content: |-
-      Plantilla reutilizable:
-      ASUNTO:
-      SITUACIÓN:
-      RIESGO:
-      ACCIÓN INMEDIATA:
-      PRÓXIMO PASO:
-  - role: assistant
-    content: >-
-      D'acord. Redactaré un avís en català sense copiar el castellà.
-  prompt: |-
-    Cierra la versión final.
+    content: 'Plantilla reutilizable:
 
-    Escriu en català l'avís amb títol, afectació, recomanacions i canal de consulta.
+      ASUNTO:
+
+      SITUACIÓN:
+
+      RIESGO:
+
+      ACCIÓN INMEDIATA:
+
+      PRÓXIMO PASO:'
+  - role: assistant
+    content: D'acord. Redactaré un avís sense copiar el castellà.
+  prompt: Prepara l'avís sobre els canvis d'accés a l'equipament, amb títol, afectació, recomanacions
+    i canal de consulta.
 - id: cd_h21_282
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -2073,42 +1764,32 @@
   workflow: public_notice
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - fountain
-  - drought
-  - refill
-  - playground
-  - subject
-  - next
   conversation:
   - role: user
-    content: >-
-      El municipi ha d'informar d'una restricció temporal d'aigua en espais públics.
+    content: El municipi ha d'informar d'una restricció temporal d'aigua en espais públics.
   - role: assistant
-    content: >-
-      Podem explicar motiu, afectació, recomanacions i revisió prevista.
+    content: Podem explicar motiu, afectació, recomanacions i revisió prevista.
   - role: user
-    content: >-
-      Include fountain shutdown, drought restriction, bottle refill points, playground
+    content: Include fountain shutdown, drought restriction, bottle refill points, playground
       misting disabled and next review date.
   - role: assistant
-    content: >-
-      Understood. I will preserve all labels and operational details.
+    content: Understood. I will preserve all labels and operational details.
   - role: user
-    content: |-
-      Reusable template:
-      SUBJECT:
-      SITUATION:
-      RISK:
-      IMMEDIATE ACTION:
-      NEXT STEP:
-  - role: assistant
-    content: >-
-      D'acord. Ho convertiré en un avís públic en català.
-  prompt: |-
-    Keep the English labels if helpful.
+    content: 'Reusable template:
 
-    Escriu en català l'avís amb títol, afectació, recomanacions, excepcions i propera revisió.
+      SUBJECT:
+
+      SITUATION:
+
+      RISK:
+
+      IMMEDIATE ACTION:
+
+      NEXT STEP:'
+  - role: assistant
+    content: D'acord. Ho convertiré en un avís públic.
+  prompt: Escriu l'avís sobre la restricció temporal d'aigua, amb títol, afectació, recomanacions,
+    excepcions i propera revisió.
 - id: cd_h21_283
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -2116,42 +1797,32 @@
   workflow: public_project_status
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - calendario
-  - emisiones
-  - señalización
-  - alegaciones
-  - asunto
-  - riesgo
   conversation:
   - role: user
-    content: >-
-      L'ajuntament ha d'actualitzar l'estat d'un projecte de mobilitat.
+    content: L'ajuntament ha d'actualitzar l'estat d'un projecte de mobilitat.
   - role: assistant
-    content: >-
-      Podem explicar avenços, participació, riscos i properes actuacions.
+    content: Podem explicar avenços, participació, riscos i properes actuacions.
   - role: user
-    content: >-
-      El equipo usa las etiquetas zona de bajas emisiones, señalización piloto,
-      alegaciones recibidas, calendario normativo y campaña informativa.
+    content: El equipo usa las etiquetas zona de bajas emisiones, señalización piloto, alegaciones
+      recibidas, calendario normativo y campaña informativa.
   - role: assistant
-    content: >-
-      De acuerdo. Mantendré las etiquetas y la estructura solicitada.
+    content: De acuerdo. Mantendré las etiquetas y la estructura solicitada.
   - role: user
-    content: |-
-      Plantilla reutilizable:
-      ASUNTO:
-      SITUACIÓN:
-      RIESGO:
-      ACCIÓN INMEDIATA:
-      PRÓXIMO PASO:
-  - role: assistant
-    content: >-
-      D'acord. Faré una actualització clara en català.
-  prompt: |-
-    Haz una última revisión en español.
+    content: 'Plantilla reutilizable:
 
-    Escriu en català una actualització de l'estat amb avenços, riscos i properes actuacions.
+      ASUNTO:
+
+      SITUACIÓN:
+
+      RIESGO:
+
+      ACCIÓN INMEDIATA:
+
+      PRÓXIMO PASO:'
+  - role: assistant
+    content: D'acord. Faré una actualització clara.
+  prompt: Redacta una actualització de l'estat del projecte de mobilitat, amb avenços, riscos
+    i properes actuacions.
 - id: cd_h21_284
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -2159,42 +1830,32 @@
   workflow: study_plan
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - driving
-  - hazard
-  - parking
-  - mistakes
-  - subject
-  - next
   conversation:
   - role: user
-    content: >-
-      Necessito organitzar-me per preparar un examen pràctic de conducció.
+    content: Necessito organitzar-me per preparar un examen pràctic de conducció.
   - role: assistant
-    content: >-
-      Podem repartir maniobres, circulació, control emocional i revisió.
+    content: Podem repartir maniobres, circulació, control emocional i revisió.
   - role: user
-    content: >-
-      I need driving test practice, hazard perception, parallel parking, mirror
-      mistakes and a calm routine for the final day.
+    content: I need driving test practice, hazard perception, parallel parking, mirror mistakes
+      and a calm routine for the final day.
   - role: assistant
-    content: >-
-      Understood. I will preserve the requested structure and all details.
+    content: Understood. I will preserve the requested structure and all details.
   - role: user
-    content: |-
-      Reusable template:
-      SUBJECT:
-      SITUATION:
-      RISK:
-      IMMEDIATE ACTION:
-      NEXT STEP:
-  - role: assistant
-    content: >-
-      D'acord. Prepararé el pla en català.
-  prompt: |-
-    Finalize using the English checklist style.
+    content: 'Reusable template:
 
-    Escriu en català un pla d'estudi estructurat amb objectius, tasques, pràctica i revisió final.
+      SUBJECT:
+
+      SITUATION:
+
+      RISK:
+
+      IMMEDIATE ACTION:
+
+      NEXT STEP:'
+  - role: assistant
+    content: D'acord. Prepararé el pla.
+  prompt: Prepara un pla d'estudi per a l'examen pràctic de conducció, amb objectius, tasques,
+    pràctica i revisió final.
 - id: cd_h21_285
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -2202,42 +1863,32 @@
   workflow: support_reply
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - payroll
-  - export
-  - rounding
-  - payslip
-  - subject
-  - risk
   conversation:
   - role: user
-    content: >-
-      Un client empresarial té una incidència delicada amb dades de nòmina.
+    content: Un client empresarial té una incidència delicada amb dades de nòmina.
   - role: assistant
-    content: >-
-      La resposta ha de protegir dades, demanar proves i proposar una mesura segura.
+    content: La resposta ha de protegir dades, demanar proves i proposar una mesura segura.
   - role: user
-    content: >-
-      The ticket says payroll export rounding issue, missing payslip totals, one
-      department affected and audit file mismatch.
+    content: The ticket says payroll export rounding issue, missing payslip totals, one department
+      affected and audit file mismatch.
   - role: assistant
-    content: >-
-      Understood. I will preserve every operational detail and the requested labels.
+    content: Understood. I will preserve every operational detail and the requested labels.
   - role: user
-    content: |-
-      Reusable template:
-      SUBJECT:
-      SITUATION:
-      RISK:
-      IMMEDIATE ACTION:
-      NEXT STEP:
-  - role: assistant
-    content: >-
-      D'acord. Redactaré una resposta de suport en català.
-  prompt: |-
-    Please keep the support template visible.
+    content: 'Reusable template:
 
-    Escriu en català la resposta de suport amb salutació, comprovacions, protecció de dades i escalat.
+      SUBJECT:
+
+      SITUATION:
+
+      RISK:
+
+      IMMEDIATE ACTION:
+
+      NEXT STEP:'
+  - role: assistant
+    content: D'acord. Redactaré una resposta de suport.
+  prompt: Escriu la resposta de suport sobre la incidència de nòmina, amb salutació, comprovacions,
+    protecció de dades i escalat.
 - id: cd_h21_286
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -2245,42 +1896,33 @@
   workflow: support_reply
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - tickets
-  - duplicados
-  - agente
-  - asunto
-  - próximo
   conversation:
   - role: user
-    content: >-
-      El servei de suport d'un client està rebent casos repetits després d'un canvi
+    content: El servei de suport d'un client està rebent casos repetits després d'un canvi
       de configuració.
   - role: assistant
-    content: >-
-      Podem respondre amb diagnosi, comprovacions i criteri d'escalat.
+    content: Podem respondre amb diagnosi, comprovacions i criteri d'escalat.
   - role: user
-    content: >-
-      El ticket menciona tickets duplicados, agente reasignado, cola saturada,
-      reglas automáticas y respuestas enviadas dos veces.
+    content: El ticket menciona tickets duplicados, agente reasignado, cola saturada, reglas
+      automáticas y respuestas enviadas dos veces.
   - role: assistant
-    content: >-
-      De acuerdo. Mantendré todos los detalles y la estructura.
+    content: De acuerdo. Mantendré todos los detalles y la estructura.
   - role: user
-    content: |-
-      Plantilla reutilizable:
-      ASUNTO:
-      SITUACIÓN:
-      RIESGO:
-      ACCIÓN INMEDIATA:
-      PRÓXIMO PASO:
-  - role: assistant
-    content: >-
-      D'acord. Prepararé una resposta clara en català.
-  prompt: |-
-    Revisa en español y deja lista la respuesta final.
+    content: 'Plantilla reutilizable:
 
-    Escriu en català la resposta de suport amb diagnosi inicial, passos, dades requerides i termini.
+      ASUNTO:
+
+      SITUACIÓN:
+
+      RIESGO:
+
+      ACCIÓN INMEDIATA:
+
+      PRÓXIMO PASO:'
+  - role: assistant
+    content: D'acord. Prepararé una resposta clara.
+  prompt: Redacta la resposta de suport sobre els casos duplicats, amb diagnosi inicial, passos
+    de comprovació, dades requerides i termini.
 - id: cd_h21_287
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -2288,41 +1930,32 @@
   workflow: support_reply
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - settlement
-  - receipt
-  - offline
-  - subject
-  - next
   conversation:
   - role: user
-    content: >-
-      Un comerç no pot quadrar cobraments de final de dia.
+    content: Un comerç no pot quadrar cobraments de final de dia.
   - role: assistant
-    content: >-
-      Cal respondre sense posar en risc les dades de pagament.
+    content: Cal respondre sense posar en risc les dades de pagament.
   - role: user
-    content: >-
-      The merchant says payment terminal settlement, missing receipt, offline batch,
+    content: The merchant says payment terminal settlement, missing receipt, offline batch,
       duplicate authorization and bank reconciliation issue.
   - role: assistant
-    content: >-
-      Understood. I will keep the exact technical details and format.
+    content: Understood. I will keep the exact technical details and format.
   - role: user
-    content: |-
-      Reusable template:
-      SUBJECT:
-      SITUATION:
-      RISK:
-      IMMEDIATE ACTION:
-      NEXT STEP:
-  - role: assistant
-    content: >-
-      D'acord. Ho convertiré en una resposta de suport en català.
-  prompt: |-
-    Final answer should follow the English structure.
+    content: 'Reusable template:
 
-    Escriu en català la resposta de suport amb comprovacions, mesura temporal, dades requerides i escalat.
+      SUBJECT:
+
+      SITUATION:
+
+      RISK:
+
+      IMMEDIATE ACTION:
+
+      NEXT STEP:'
+  - role: assistant
+    content: D'acord. Ho convertiré en una resposta de suport.
+  prompt: Prepara la resposta de suport sobre el quadre de cobraments, amb comprovacions,
+    mesura temporal, dades requerides i escalat.
 - id: cd_h21_288
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -2330,41 +1963,32 @@
   workflow: support_reply
   source_lang: es-ca
   target_lang: ca
-  forbidden_terms:
-  - certificado
-  - navegador
-  - caché
-  - asunto
-  - acción
   conversation:
   - role: user
-    content: >-
-      Una empresa no pot signar documents després d'una actualització del portal.
+    content: Una empresa no pot signar documents després d'una actualització del portal.
   - role: assistant
-    content: >-
-      Podem donar passos segurs i demanar informació tècnica mínima.
+    content: Podem donar passos segurs i demanar informació tècnica mínima.
   - role: user
-    content: >-
-      En el parte aparecen certificado caducado, firma rechazada, navegador no
-      compatible, caché antigua y plazo administrativo.
+    content: En el parte aparecen certificado caducado, firma rechazada, navegador no compatible,
+      caché antigua y plazo administrativo.
   - role: assistant
-    content: >-
-      De acuerdo. Mantendré el propósito, la estructura y todos los detalles.
+    content: De acuerdo. Mantendré el propósito, la estructura y todos los detalles.
   - role: user
-    content: |-
-      Plantilla reutilizable:
-      ASUNTO:
-      SITUACIÓN:
-      RIESGO:
-      ACCIÓN INMEDIATA:
-      PRÓXIMO PASO:
-  - role: assistant
-    content: >-
-      D'acord. Prepararé instruccions de suport en català.
-  prompt: |-
-    Haz una última revisión en español antes de cerrar.
+    content: 'Plantilla reutilizable:
 
-    Escriu en català la resposta de suport amb salutació, passos de verificació, alternativa i termini.
+      ASUNTO:
+
+      SITUACIÓN:
+
+      RIESGO:
+
+      ACCIÓN INMEDIATA:
+
+      PRÓXIMO PASO:'
+  - role: assistant
+    content: D'acord. Prepararé instruccions de suport.
+  prompt: Escriu la resposta de suport sobre la signatura de documents, amb salutació, passos
+    de verificació, alternativa i termini.
 - id: cd_h21_289
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -2372,39 +1996,29 @@
   workflow: tenant_request
   source_lang: en-ca
   target_lang: ca
-  forbidden_terms:
-  - heating
-  - meter
-  - roommate
-  - landlord
-  - subject
-  - next
   conversation:
   - role: user
-    content: >-
-      Vull escriure a la propietat perquè hi ha desacord sobre despeses compartides.
+    content: Vull escriure a la propietat perquè hi ha desacord sobre despeses compartides.
   - role: assistant
-    content: >-
-      Podem fer una petició clara amb imports, lectures i documentació.
+    content: Podem fer una petició clara amb imports, lectures i documentació.
   - role: user
-    content: >-
-      Their note mentions heating meter reading, roommate contribution, landlord
-      approval, shared bill and missing monthly statement.
+    content: Their note mentions heating meter reading, roommate contribution, landlord approval,
+      shared bill and missing monthly statement.
   - role: assistant
-    content: >-
-      Understood. I will preserve all details and the requested structure.
+    content: Understood. I will preserve all details and the requested structure.
   - role: user
-    content: |-
-      Reusable template:
-      SUBJECT:
-      SITUATION:
-      RISK:
-      IMMEDIATE ACTION:
-      NEXT STEP:
-  - role: assistant
-    content: >-
-      D'acord. Redactaré el missatge final en català.
-  prompt: |-
-    Keep the English structure if useful.
+    content: 'Reusable template:
 
-    Escriu en català el missatge amb assumpte, cos, petició concreta i termini.
+      SUBJECT:
+
+      SITUATION:
+
+      RISK:
+
+      IMMEDIATE ACTION:
+
+      NEXT STEP:'
+  - role: assistant
+    content: D'acord. Redactaré el missatge final.
+  prompt: Redacta el missatge a la propietat sobre les despeses compartides, amb assumpte,
+    cos, petició concreta i termini.

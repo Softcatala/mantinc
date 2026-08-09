@@ -1,6 +1,7 @@
 import os
 import re
 import shutil
+import string
 import subprocess
 from collections.abc import Iterable
 from functools import partial
@@ -8,11 +9,12 @@ from pathlib import Path
 
 from lm_eval.api.task import ConfigurableTask
 
-CATALAN_FORBIDDEN_TERMS = ("asunto", "subject", "aquí tienes")
 LANGUAGE_FAIL_NON_CA_RATIO = 0.15
 LANGUAGE_MIN_CONFIDENCE = 0.71
 LANGUAGE_MIN_ALPHA_TOKENS = 5
 LANGUAGE_WINDOW_TOKENS = 40
+LCB_LINE_MIN_TOKENS = 5
+LCB_LINE_MIN_CONFIDENCE = 0.3
 DEFAULT_LANGUAGE_ID_MODEL = "models/lid.176.ftz"
 DEFAULT_FASTTEXT_BINARY = "models/fasttext"
 
@@ -20,26 +22,6 @@ _ALPHA_TOKEN_RE = re.compile(r"[^\W\d_]+(?:[.'’·-][^\W\d_]+)*", re.UNICODE)
 _CODE_FENCE_RE = re.compile(r"```.*?```", re.S)
 _SENTENCE_BOUNDARY_RE = re.compile(r"(?<=[.!?])\s+")
 _URL_RE = re.compile(r"https?://\S+|www\.\S+", re.I)
-
-
-def term_pattern(term: object) -> re.Pattern[str] | None:
-    text = str(term).casefold()
-    if not text:
-        return None
-    return re.compile(r"(?<!\w)" + re.escape(text) + r"(?!\w)", re.I)
-
-
-def forbidden_hits(
-    response: str,
-    forbidden_terms: Iterable[object],
-) -> list[str]:
-    searchable = response.casefold()
-    hits = []
-    for term in forbidden_terms:
-        pattern = term_pattern(term)
-        if pattern and pattern.search(searchable):
-            hits.append(str(term))
-    return hits
 
 
 def _text(value):
@@ -152,6 +134,68 @@ def _predict_fasttext(text: str) -> tuple[str, float]:
     return lang, float(parts[1])
 
 
+def _lcb_normalize(text: str) -> str:
+    """Reproduce the normalization in the official LCB metric script."""
+    text = text.split("\nQ:", 1)[0].strip()
+    text = text.translate(str.maketrans("", "", string.punctuation))
+    return text.replace("—", " ").replace("،", "")
+
+
+def lcb_line_language_result(doc, response: str) -> dict[str, object]:
+    """Apply Marchisio et al.'s released line-level detector logic.
+
+    LCB normalizes punctuation, splits on newlines, skips lines with fewer
+    than five whitespace-delimited tokens, and fails if any eligible line's
+    top fastText label differs from the target. Predictions at confidence
+    <= 0.3 become ``unknown`` and therefore fail.
+
+    Responses without eligible lines are excluded from LCB's LPR denominator,
+    represented here by ``passed=None``.
+    """
+    target_lang = str(doc.get("target_lang") or "").casefold()
+    if not target_lang:
+        raise ValueError("LCB line detection requires doc['target_lang']")
+
+    lines = []
+    for line_number, line in enumerate(_lcb_normalize(response).split("\n"), 1):
+        tokens = line.split()
+        if len(tokens) < LCB_LINE_MIN_TOKENS:
+            continue
+        lang, confidence = _predict_fasttext(line)
+        predicted_lang = lang if confidence > LCB_LINE_MIN_CONFIDENCE else "unknown"
+        lines.append(
+            {
+                "line_number": line_number,
+                "text": line,
+                "tokens": len(tokens),
+                "predicted_lang": predicted_lang,
+                "raw_predicted_lang": lang,
+                "confidence": confidence,
+                "error": predicted_lang != target_lang,
+            }
+        )
+
+    if not lines:
+        return {
+            "eligible": False,
+            "passed": None,
+            "line_accuracy": None,
+            "eligible_lines": 0,
+            "error_lines": 0,
+            "lines": [],
+        }
+
+    error_lines = sum(bool(line["error"]) for line in lines)
+    return {
+        "eligible": True,
+        "passed": error_lines == 0,
+        "line_accuracy": 1 - error_lines / len(lines),
+        "eligible_lines": len(lines),
+        "error_lines": error_lines,
+        "lines": lines,
+    }
+
+
 def _language_errors(doc, response):
     if doc.get("target_lang") != "ca" or not response.strip():
         return []
@@ -178,20 +222,12 @@ def _language_errors(doc, response):
 
 def process_results(doc, results):
     response = _text(results).strip()
-    forbidden_terms = [str(term) for term in (doc.get("forbidden_terms") or [])]
-    if doc.get("target_lang") == "ca":
-        forbidden_terms.extend(CATALAN_FORBIDDEN_TERMS)
-    forbidden = forbidden_hits(
-        response,
-        forbidden_terms,
-    )
     language_errors = _language_errors(doc, response)
     api_or_empty_fail = not response
-    passed = not (api_or_empty_fail or forbidden or language_errors)
+    passed = not (api_or_empty_fail or language_errors)
     category = str(doc.get("category", "unknown"))
     return {
         "drift_pass": float(passed),
-        "forbidden_fail": float(bool(forbidden)),
         "language_fail": float(bool(language_errors)),
         "api_or_empty_fail": float(api_or_empty_fail),
         f"{category}_pass": float(passed),

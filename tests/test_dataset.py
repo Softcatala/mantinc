@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import sys
 import unittest
+import re
 from collections import Counter
 from pathlib import Path
 
@@ -10,6 +11,21 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.build_dataset import build_rows
+
+
+CATALAN_INSTRUCTION_RE = re.compile(r"\b(?:català|catalana|catalans|catalanes)\b", re.I)
+WORD_RE = re.compile(r"[\wÀ-ÿ']+")
+
+
+def mentions_catalan_instruction(row: dict) -> bool:
+    return bool(CATALAN_INSTRUCTION_RE.search(str(row.get("prompt") or "")))
+
+
+def final_prompt_word_count(row: dict) -> int:
+    prompt = str(row.get("prompt") or "")
+    prompt = re.sub(r"\ben català\b", "", prompt, flags=re.I)
+    prompt = re.sub(r"\b(?:català|catalana|catalans|catalanes)\b", "", prompt, flags=re.I)
+    return len(WORD_RE.findall(prompt))
 
 
 class DatasetTest(unittest.TestCase):
@@ -33,6 +49,32 @@ class DatasetTest(unittest.TestCase):
 
     def test_rows_do_not_contain_labels(self) -> None:
         self.assertTrue(all("labels" not in row for row in self.rows))
+
+    def test_rows_do_not_contain_forbidden_terms(self) -> None:
+        self.assertTrue(all("forbidden_terms" not in row for row in self.rows))
+
+    def test_rag_chunks_do_not_contain_relevance(self) -> None:
+        rag_rows = [row for row in self.rows if row["category"] == "rag_context"]
+        self.assertTrue(
+            all(
+                "relevance" not in chunk
+                for row in rag_rows
+                for chunk in row.get("retrieved_context", [])
+            )
+        )
+
+    def test_catalan_instruction_policy(self) -> None:
+        for row in self.rows:
+            with self.subTest(row=row["id"]):
+                category = row["category"]
+                has_instruction = mentions_catalan_instruction(row)
+                if category == "rag_context":
+                    self.assertTrue(has_instruction)
+                elif category == "monolingual":
+                    self.assertFalse(has_instruction)
+                else:
+                    expected = row["source_lang"] != "ca" and final_prompt_word_count(row) < 10
+                    self.assertEqual(has_instruction, expected)
 
     def test_advanced_distribution_preserves_coverage(self) -> None:
         advanced = [row for row in self.rows if row["category"] == "crosslingual_advanced"]

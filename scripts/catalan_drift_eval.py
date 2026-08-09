@@ -17,8 +17,6 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from lm_eval_tasks.catalan_drift.utils import (
-    CATALAN_FORBIDDEN_TERMS,
-    forbidden_hits,
     process_results,
 )
 
@@ -51,6 +49,7 @@ def _rows_with_dataset(paths: list[str]) -> list[dict[str, Any]]:
     for path in paths:
         for source_row in _rows(Path(path)):
             row = dict(source_row)
+            row.pop("forbidden_terms", None)
             row["dataset_yaml"] = path
             rows.append(row)
     return rows
@@ -108,21 +107,10 @@ def _rag_prompt(row: dict[str, Any]) -> str | None:
     return "\n".join(parts).strip()
 
 
-def _failure_details(sample: dict[str, Any], response: str) -> list[str]:
-    doc = sample.get("doc", {})
+def _failure_details(sample: dict[str, Any]) -> list[str]:
     details = []
     if float(sample.get("api_or_empty_fail", 0)):
         details.append("api_or_empty_fail: empty response")
-
-    if float(sample.get("forbidden_fail", 0)):
-        forbidden_terms = [str(term) for term in (doc.get("forbidden_terms") or [])]
-        if doc.get("target_lang") == "ca":
-            forbidden_terms.extend(CATALAN_FORBIDDEN_TERMS)
-        hits = forbidden_hits(
-            response,
-            forbidden_terms,
-        )
-        details.append("forbidden_fail: " + (", ".join(hits) if hits else "detected"))
 
     if float(sample.get("language_fail", 0)):
         details.append("language_fail: non-Catalan response detected")
@@ -231,7 +219,7 @@ def score_lm_eval(args: argparse.Namespace) -> None:
         "",
     ]
     for index, (sample, response_row) in enumerate(failures, 1):
-        details = _failure_details(sample, str(response_row.get("response", "")))
+        details = _failure_details(sample)
         parts += [
             "=" * 80,
             f"FAIL {index}/{len(failures)}",

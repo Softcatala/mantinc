@@ -18,9 +18,8 @@ multi-turn pressure cases.
 ## Scope
 
 **What this benchmark measures:** whether the model's final answer is in
-Catalan and free of source-language leakage (Spanish or English loanwords from
-the prompt or prior turns). Scoring combines a fastText language check with a
-forbidden-term lexical check.
+Catalan despite source-language pressure from prompts, prior turns, or retrieved
+context. Scoring uses a fastText language check over response segments.
 
 **What this benchmark does not measure:** task completion, factual accuracy,
 tone, formatting, or overall answer quality. A model that refuses, goes
@@ -85,8 +84,6 @@ Each sample should specify:
   - `ca-es`: mixed Catalan and Spanish retrieved context answered in Catalan.
   - `es-ca`: Spanish source material or prior-turn context answered in Catalan.
   - `en-ca`: English source material or prior-turn context answered in Catalan.
-- `forbidden_terms`: source-language words or phrases that should not appear
-  in the final answer.
 
 ## Benchmark Design
 
@@ -95,9 +92,14 @@ Each sample should specify:
 - Conversation cases do not use system prompts. The final user prompt is appended
   after the prior turns, so the benchmark tests whether the model follows the
   latest task while resisting cross-language priming.
-- When an example provides a template to use in another language, explicitly
-  include `català` in the instruction. This keeps the case fair and makes the
-  expected Catalan answer language unambiguous.
+- Explicit Catalan language instructions follow the app policy being tested:
+  - `rag_context` always includes a final Catalan instruction, because the app
+    prompt supplies that guardrail around retrieved context.
+  - `monolingual` never includes an explicit Catalan instruction, because it
+    models an ordinary Catalan conversation.
+  - `crosslingual_basic`, `multi_turn`, and `crosslingual_advanced` include an
+    explicit Catalan instruction only when the case contains non-Catalan text and
+    the full final user prompt is shorter than 10 words.
 - RAG documents come from CC BY 4.0 Diputació de Barcelona Open Data records,
   currently the paired `parcsequipaments_ca` and `parcsequipaments_es` datasets.
   Only safe descriptive fragments are kept; contact, location, schedule, and
@@ -105,7 +107,6 @@ Each sample should specify:
 
 The dataset contains 300 items total. It is built deterministically with
 `make build`.
-
 
 ## Run
 
@@ -158,8 +159,9 @@ Results on the 300-item Catalan Drift dataset:
 
 | Model | Overall | Monolingual | Crosslingual basic | Multi-turn | Crosslingual advanced | RAG context |
 |---|---:|---:|---:|---:|---:|---:|
-| Gemini 3.6 Flash | **95.3%** | 100.0% | 100.0% | 98.3% | 85.0% | 93.3% |
-| GPT-5.6 | 94.0% | 100.0% | 100.0% | 96.7% | 75.0% | 98.3% |
+| Gemini 3.6 Flash | **99.3%** | 100.0% | 100.0% | 98.3% | 98.3% | 100.0% |
+| Gemma 3 12B Q8 | 97.0% | 100.0% | 96.7% | 95.0% | 93.3% | 100.0% |
+| GPT-5.6 | 95.7% | 100.0% | 100.0% | 96.7% | 81.7% | 100.0% |
 
 At 95% confidence, the maximum margin of error is ±5.7 percentage points
 for overall scores (n=300) and ±12.7 percentage points for category scores
