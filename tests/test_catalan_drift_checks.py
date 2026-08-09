@@ -21,7 +21,7 @@ def fake_fasttext(text: str) -> tuple[str, float]:
 
 def medium_confidence_false_positive(text: str) -> tuple[str, float]:
     if "especialista no estava disponible" in text.casefold():
-        return "es", 0.708
+        return "es", 0.648
     return "ca", 0.99
 
 

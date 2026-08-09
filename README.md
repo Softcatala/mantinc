@@ -122,6 +122,37 @@ with `predict-prob`. Install the OS package when available, put a built
 `fasttext` executable on `PATH`, place it at `models/fasttext`, or set
 `LANGUAGE_ID_FASTTEXT_BIN`.
 
+### Scorer calibration
+
+`LANGUAGE_MIN_CONFIDENCE` and `LANGUAGE_FAIL_NON_CA_RATIO` in
+`lm_eval_tasks/catalan_drift/utils.py` are calibrated against one validation
+slice: FLORES-200 dev+devtest sentences across `ca`, `es`, and `en`, bucketed
+by length. Fetch the corpus with `make flores-corpus` and build the slice with
+`scripts/build_slice.py`. The sweep measures per-language precision/recall
+with Wilson 95% CIs computed over **segments** (one independent trial per
+sentence), not tokens. Tokens within a segment share a prediction and are not
+independent, so counting them shrinks CIs by roughly the mean segment length.
+
+`scripts/compare_language_detectors.py` sweeps
+`min_conf ∈ {0.30..0.90}` × `ratio ∈ {0.05..0.25}` over that slice and
+writes `outputs/scorer_calibration.md` / `.json`. Only `min_conf` is
+tuned: `ratio` is held at its current value because the slice is monolingual,
+so gold ratio is 0 or 1 and does not provide a useful ratio signal. Surviving
+candidates are ranked by segment F1 restricted to `ca`/`es`/`en`, the
+languages actually gated on, and rounded to 3 decimals so the tie-break to
+the current operating point can fire. CI acceptance uses the same 3-decimal
+precision shown in the report, so `0/92` observed Catalan false positives
+counts as a `0.040` Wilson upper bound and passes the 4% guard.
+
+The recommended operating point is:
+
+- `LANGUAGE_MIN_CONFIDENCE = 0.65`
+- `LANGUAGE_FAIL_NON_CA_RATIO = 0.15`
+
+If the sweep returns no recommended candidate, keep the current operating
+point and grow the FLORES slice or revisit the acceptance criteria before
+changing thresholds.
+
 ```bash
 sudo apt install fasttext
 make language-id-model

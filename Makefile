@@ -38,11 +38,15 @@ PYTHON ?= $(UV_RUN) python
 LM_EVAL ?= $(UV_RUN) lm_eval
 LANGUAGE_ID_MODEL ?= models/lid.176.ftz
 LANGUAGE_ID_MODEL_URL ?= https://dl.fbaipublicfiles.com/fasttext/supervised-models/lid.176.ftz
+FLORES_DIR ?= data/flores200
+FLORES_ARCHIVE ?= $(FLORES_DIR)/flores200_dataset.tar.gz
+FLORES_URL ?= https://dl.fbaipublicfiles.com/nllb/flores200_dataset.tar.gz
+FLORES_LANGS ?= cat_Latn spa_Latn eng_Latn
 SKIP_EXPORT ?=
 LIMIT ?=
 EVAL_EXPORT_PREREQ := $(if $(SKIP_EXPORT),,export-lm-eval)
 
-.PHONY: build clean-outputs language-id-model export-lm-eval eval eval-one eval-local-openai eval-all eval-cloud eval-local-all eval-summary
+.PHONY: build clean-outputs language-id-model flores-corpus export-lm-eval eval eval-one eval-local-openai eval-all eval-cloud eval-local-all eval-summary
 .PHONY: $(REMOTE_EVAL_TARGETS) $(LOCAL_EVAL_TARGETS)
 
 build:
@@ -54,6 +58,19 @@ language-id-model: $(LANGUAGE_ID_MODEL)
 $(LANGUAGE_ID_MODEL):
 	@mkdir -p "$$(dirname "$@")"
 	curl -L "$(LANGUAGE_ID_MODEL_URL)" -o "$@.tmp"
+	mv "$@.tmp" "$@"
+
+flores-corpus: $(FLORES_DIR)/devtest/cat_Latn.devtest
+	@echo "FLORES-200 corpus ready under $(FLORES_DIR)"
+
+$(FLORES_DIR)/devtest/cat_Latn.devtest: $(FLORES_ARCHIVE)
+	@mkdir -p "$(FLORES_DIR)"
+	tar xzf "$(FLORES_ARCHIVE)" -C "$(FLORES_DIR)" --transform='s|^\./flores200_dataset/||' \
+		$(foreach lang,$(FLORES_LANGS),./flores200_dataset/dev/$(lang).dev ./flores200_dataset/devtest/$(lang).devtest)
+
+$(FLORES_ARCHIVE):
+	@mkdir -p "$(FLORES_DIR)"
+	curl -L "$(FLORES_URL)" -o "$@.tmp"
 	mv "$@.tmp" "$@"
 
 clean-outputs:
@@ -99,7 +116,7 @@ eval-one:
 	printf '%s\t%s\t%s\t%s\t%s\n' "$(RUN_NAME)" "$(DISPLAY_MODEL)" start "$$start_iso" "" >> "$(EVAL_TIMELINE)"; \
 	$(LM_EVAL) --include_path lm_eval_tasks --tasks "$(TASK)" --model "$(LM_EVAL_MODEL)" --model_args "$(MODEL_ARGS)" --apply_chat_template --log_samples --output_path "$(OUT_DIR)" $(if $(LIMIT),--limit "$(LIMIT)",) $(if $(GEN_KWARGS),--gen_kwargs '$(GEN_KWARGS)',); status=$$?; \
 	if [ $$status -eq 0 ]; then \
-		$(PYTHON) scripts/catalan_drift_eval.py score-lm-eval --prompts $(PROMPTS) --samples "$$(find "$(OUT_DIR)" -name "samples_$(TASK)*.jsonl" | sort | tail -n 1)" --model "$(DISPLAY_MODEL)" --responses-output "outputs/$(RUN_NAME).$(TASK).responses.jsonl" --report "outputs/$(RUN_NAME).$(TASK).custom_report.json" --failures-file "outputs/failures_$(RUN_NAME).txt" --passes-file "outputs/pass_$(RUN_NAME).txt" --prompt-result-file "outputs/$(RUN_NAME).$(TASK).prompt_result.txt"; status=$$?; \
+		$(PYTHON) scripts/catalan_drift_eval.py score-lm-eval --samples "$$(find "$(OUT_DIR)" -name "samples_$(TASK)*.jsonl" | sort | tail -n 1)" --model "$(DISPLAY_MODEL)" --responses-output "outputs/$(RUN_NAME).$(TASK).responses.jsonl" --report "outputs/$(RUN_NAME).$(TASK).custom_report.json" --failures-file "outputs/failures_$(RUN_NAME).txt" --passes-file "outputs/pass_$(RUN_NAME).txt"; status=$$?; \
 	fi; \
 	end=$$(date +%s); end_iso=$$(date '+%Y-%m-%dT%H:%M:%S%z'); elapsed=$$((end - start)); \
 	if [ $$status -eq 0 ]; then event=end; printf '[%s] eval end: %s (duration %ss)\n' "$(DISPLAY_MODEL)" "$$end_iso" "$$elapsed"; else event=failed; printf '[%s] eval failed: %s (duration %ss, status %s)\n' "$(DISPLAY_MODEL)" "$$end_iso" "$$elapsed" "$$status"; fi; \

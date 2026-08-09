@@ -17,7 +17,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from lm_eval_tasks.catalan_drift.utils import (
-    process_results,
+    first_text,
 )
 
 
@@ -53,26 +53,6 @@ def _rows_with_dataset(paths: list[str]) -> list[dict[str, Any]]:
             row["dataset_yaml"] = path
             rows.append(row)
     return rows
-
-
-def _add_prompts_arg(parser: argparse.ArgumentParser) -> None:
-    parser.add_argument("--prompts", nargs="+", default=DEFAULT_PROMPTS)
-
-
-def _first_text(value: Any) -> str:
-    if isinstance(value, str):
-        return value
-    if isinstance(value, dict):
-        for key in ("response", "text", "content", "output"):
-            text = _first_text(value.get(key))
-            if text:
-                return text
-    if isinstance(value, (list, tuple)):
-        for item in value:
-            text = _first_text(item)
-            if text:
-                return text
-    return ""
 
 
 def _messages(row: dict[str, Any]) -> list[dict[str, str]] | None:
@@ -131,6 +111,45 @@ def _conversation_lines(doc: dict[str, Any]) -> list[str]:
     return []
 
 
+def _sample_report_text(
+    title: str,
+    label: str,
+    entries: list[tuple[dict[str, Any], dict[str, Any]]],
+    args: argparse.Namespace,
+    summary_lines: list[str],
+) -> str:
+    parts = [
+        f"# {title}: {args.model}",
+        f"source: {' '.join(args.samples)}",
+        *summary_lines,
+        "",
+    ]
+    for index, (sample, response_row) in enumerate(entries, 1):
+        if label == "FAIL":
+            detail_heading = "REASONS:"
+            detail_lines = [f"- {detail}" for detail in _failure_details(sample)]
+        else:
+            detail_heading = "RESULT:"
+            detail_lines = ["- drift_pass=1"]
+        parts += [
+            "=" * 80,
+            f"{label} {index}/{len(entries)}",
+            f"ID: {response_row['id']}",
+            f"CATEGORY: {response_row.get('category')}",
+            detail_heading,
+            *detail_lines,
+            "",
+            *_conversation_lines(sample.get("doc", {})),
+            "PROMPT:",
+            str(response_row.get("prompt", "")),
+            "",
+            "OUTPUT:",
+            str(response_row.get("response", "")),
+            "",
+        ]
+    return "\n".join(parts).rstrip() + "\n"
+
+
 def export_lm_eval(args: argparse.Namespace) -> None:
     rows = _rows_with_dataset(args.prompts)
     for row in rows:
@@ -160,7 +179,7 @@ def score_lm_eval(args: argparse.Namespace) -> None:
 
     for sample in samples:
         doc = sample.get("doc", {})
-        response = _first_text(sample.get("filtered_resps") or sample.get("resps"))
+        response = first_text(sample.get("filtered_resps") or sample.get("resps"))
         response_row = {
             "id": doc.get("id", sample.get("doc_id")),
             "category": doc.get("category"),
@@ -210,58 +229,30 @@ def score_lm_eval(args: argparse.Namespace) -> None:
         encoding="utf-8",
     )
 
-    parts = [
-        f"# Failures: {args.model}",
-        f"source: {' '.join(args.samples)}",
-        f"n_failures: {len(failures)}/{len(samples)}",
-        f"n_api_or_empty_failures: {len(api_or_empty_failures)}/{len(samples)}",
-        f"n_content_failures: {len(content_failures)}/{len(content_samples)}",
-        "",
-    ]
-    for index, (sample, response_row) in enumerate(failures, 1):
-        details = _failure_details(sample)
-        parts += [
-            "=" * 80,
-            f"FAIL {index}/{len(failures)}",
-            f"ID: {response_row['id']}",
-            f"CATEGORY: {response_row.get('category')}",
-            "REASONS:",
-            *[f"- {detail}" for detail in details],
-            "",
-            *_conversation_lines(sample.get("doc", {})),
-            "PROMPT:",
-            str(response_row.get("prompt", "")),
-            "",
-            "OUTPUT:",
-            str(response_row.get("response", "")),
-            "",
-        ]
-    Path(args.failures_file).write_text("\n".join(parts).rstrip() + "\n", encoding="utf-8")
-
-    pass_parts = [
-        f"# Passes: {args.model}",
-        f"source: {' '.join(args.samples)}",
-        f"n_passes: {len(passes)}/{len(samples)}",
-        "",
-    ]
-    for index, (sample, response_row) in enumerate(passes, 1):
-        pass_parts += [
-            "=" * 80,
-            f"PASS {index}/{len(passes)}",
-            f"ID: {response_row['id']}",
-            f"CATEGORY: {response_row.get('category')}",
-            "RESULT:",
-            "- drift_pass=1",
-            "",
-            *_conversation_lines(sample.get("doc", {})),
-            "PROMPT:",
-            str(response_row.get("prompt", "")),
-            "",
-            "OUTPUT:",
-            str(response_row.get("response", "")),
-            "",
-        ]
-    Path(args.passes_file).write_text("\n".join(pass_parts).rstrip() + "\n", encoding="utf-8")
+    Path(args.failures_file).write_text(
+        _sample_report_text(
+            "Failures",
+            "FAIL",
+            failures,
+            args,
+            [
+                f"n_failures: {len(failures)}/{len(samples)}",
+                f"n_api_or_empty_failures: {len(api_or_empty_failures)}/{len(samples)}",
+                f"n_content_failures: {len(content_failures)}/{len(content_samples)}",
+            ],
+        ),
+        encoding="utf-8",
+    )
+    Path(args.passes_file).write_text(
+        _sample_report_text(
+            "Passes",
+            "PASS",
+            passes,
+            args,
+            [f"n_passes: {len(passes)}/{len(samples)}"],
+        ),
+        encoding="utf-8",
+    )
 
 
 def _duration(seconds: float | None, missing: str = "-") -> str:
@@ -355,20 +346,18 @@ def main() -> None:
     subparsers = parser.add_subparsers(dest="command", required=True)
 
     export_parser = subparsers.add_parser("export-lm-eval")
-    _add_prompts_arg(export_parser)
+    export_parser.add_argument("--prompts", nargs="+", default=DEFAULT_PROMPTS)
     export_parser.add_argument("--output", default="data/lm_eval/catalan_drift.jsonl")
     export_parser.set_defaults(func=export_lm_eval)
 
     score_parser = subparsers.add_parser("score-lm-eval")
     score_parser.add_argument("--samples", nargs="+", required=True)
-    _add_prompts_arg(score_parser)
     score_parser.add_argument("--model", default="lm-eval")
     score_parser.add_argument("--provider", default="lm-eval")
     score_parser.add_argument("--responses-output", default="outputs/lm-eval.responses.jsonl")
     score_parser.add_argument("--report", default="outputs/lm-eval.report.json")
     score_parser.add_argument("--failures-file", default="outputs/failures_lm-eval.txt")
     score_parser.add_argument("--passes-file", default="outputs/pass_lm-eval.txt")
-    score_parser.add_argument("--prompt-result-file", default=None)
     score_parser.set_defaults(func=score_lm_eval)
 
     summary_parser = subparsers.add_parser("summary-lm-eval")

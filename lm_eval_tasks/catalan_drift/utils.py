@@ -10,7 +10,7 @@ from pathlib import Path
 from lm_eval.api.task import ConfigurableTask
 
 LANGUAGE_FAIL_NON_CA_RATIO = 0.15
-LANGUAGE_MIN_CONFIDENCE = 0.71
+LANGUAGE_MIN_CONFIDENCE = 0.65
 LANGUAGE_MIN_ALPHA_TOKENS = 5
 LANGUAGE_WINDOW_TOKENS = 40
 LCB_LINE_MIN_TOKENS = 5
@@ -24,11 +24,19 @@ _SENTENCE_BOUNDARY_RE = re.compile(r"(?<=[.!?])\s+")
 _URL_RE = re.compile(r"https?://\S+|www\.\S+", re.I)
 
 
-def _text(value):
+def first_text(value):
     if isinstance(value, str):
         return value
+    if isinstance(value, dict):
+        for key in ("response", "text", "content", "output"):
+            text = first_text(value.get(key))
+            if text:
+                return text
     if isinstance(value, (list, tuple)):
-        return next((_text(item) for item in value if _text(item)), "")
+        for item in value:
+            text = first_text(item)
+            if text:
+                return text
     return ""
 
 
@@ -221,7 +229,7 @@ def _language_errors(doc, response):
 
 
 def process_results(doc, results):
-    response = _text(results).strip()
+    response = first_text(results).strip()
     language_errors = _language_errors(doc, response)
     api_or_empty_fail = not response
     passed = not (api_or_empty_fail or language_errors)

@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from scripts.build_dataset import build_rows
+from scripts.build_dataset import EXPECTED_CATEGORY_COUNTS, build_rows
 
 
 CATALAN_INSTRUCTION_RE = re.compile(r"\b(?:català|catalana|catalans|catalanes)\b", re.I)
@@ -36,15 +36,7 @@ class DatasetTest(unittest.TestCase):
     def test_expected_category_counts(self) -> None:
         self.assertEqual(
             Counter(row["category"] for row in self.rows),
-            Counter(
-                {
-                    "monolingual": 60,
-                    "crosslingual_basic": 60,
-                    "multi_turn": 60,
-                    "crosslingual_advanced": 60,
-                    "rag_context": 60,
-                }
-            ),
+            Counter(EXPECTED_CATEGORY_COUNTS),
         )
 
     def test_rows_do_not_contain_labels(self) -> None:
