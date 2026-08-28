@@ -17,6 +17,8 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from lm_eval_tasks.catalan_drift.utils import (
+    _language_token_counts,
+    catalan_token_ratio,
     first_text,
 )
 
@@ -176,20 +178,29 @@ def score_lm_eval(args: argparse.Namespace) -> None:
     responses = []
     failures = []
     passes = []
+    token_ratios = []
+    categories: dict[str, dict[str, int]] = {}
 
     for sample in samples:
         doc = sample.get("doc", {})
         response = first_text(sample.get("filtered_resps") or sample.get("resps"))
+        category = str(doc.get("category") or "unknown")
+        passed = float(sample.get("drift_pass", 0)) == 1.0
+        categories.setdefault(category, {"pass": 0, "total": 0})
+        categories[category]["pass"] += int(passed)
+        categories[category]["total"] += 1
+        total_tokens, non_catalan_tokens, _ = _language_token_counts(doc, response.strip())
+        token_ratios.append((total_tokens - non_catalan_tokens, total_tokens))
         response_row = {
             "id": doc.get("id", sample.get("doc_id")),
-            "category": doc.get("category"),
+            "category": category,
             "model": args.model,
             "provider": args.provider,
             "prompt": doc.get("prompt", ""),
             "response": response,
         }
         responses.append(response_row)
-        if float(sample.get("drift_pass", 0)) == 0.0:
+        if not passed:
             failures.append((sample, response_row))
         else:
             passes.append((sample, response_row))
@@ -251,6 +262,40 @@ def score_lm_eval(args: argparse.Namespace) -> None:
             args,
             [f"n_passes: {len(passes)}/{len(samples)}"],
         ),
+        encoding="utf-8",
+    )
+    eval_path = Path("evals") / f"{args.model}.json"
+    eval_path.parent.mkdir(parents=True, exist_ok=True)
+    n_catalan_tokens = sum(item[0] for item in token_ratios)
+    n_detected_language_tokens = sum(item[1] for item in token_ratios)
+    eval_path.write_text(
+        json.dumps(
+            {
+                "model": args.model,
+                "created_at": datetime.now().astimezone().isoformat(timespec="seconds"),
+                "n": len(samples),
+                "n_passes": len(passes),
+                "n_failures": len(failures),
+                "n_api_or_empty_failures": len(api_or_empty_failures),
+                "n_language_failures": sum(1 for sample, _ in failures if float(sample.get("language_fail", 0))),
+                "n_catalan_tokens": n_catalan_tokens,
+                "n_detected_language_tokens": n_detected_language_tokens,
+                "pass_rate": report["pass_rate"],
+                "catalan_token_ratio": round(catalan_token_ratio(token_ratios), 4),
+                "categories": {
+                    category: {
+                        "pass_rate": round(counts["pass"] / counts["total"], 4),
+                        **counts,
+                    }
+                    for category, counts in sorted(categories.items())
+                },
+                "inference_seconds": _inference_seconds(Path(args.samples[-1]), "catalan_drift"),
+            },
+            ensure_ascii=False,
+            indent=2,
+            sort_keys=True,
+        )
+        + "\n",
         encoding="utf-8",
     )
 
