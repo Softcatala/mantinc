@@ -1,0 +1,41 @@
+{
+  "catalan_token_ratio": 0.9611,
+  "categories": {
+    "crosslingual_advanced": {
+      "pass": 19,
+      "pass_rate": 0.3167,
+      "total": 60
+    },
+    "crosslingual_basic": {
+      "pass": 49,
+      "pass_rate": 0.8167,
+      "total": 60
+    },
+    "monolingual": {
+      "pass": 60,
+      "pass_rate": 1.0,
+      "total": 60
+    },
+    "multi_turn": {
+      "pass": 45,
+      "pass_rate": 0.75,
+      "total": 60
+    },
+    "rag_context": {
+      "pass": 49,
+      "pass_rate": 0.8167,
+      "total": 60
+    }
+  },
+  "created_at": "2026-08-28T21:24:07+02:00",
+  "inference_seconds": 324.9370624400035,
+  "model": "gemini-3.6-flash",
+  "n": 300,
+  "n_api_or_empty_failures": 0,
+  "n_catalan_tokens": 55801,
+  "n_detected_language_tokens": 58057,
+  "n_failures": 78,
+  "n_language_failures": 14,
+  "n_passes": 222,
+  "pass_rate": 0.74
+}
