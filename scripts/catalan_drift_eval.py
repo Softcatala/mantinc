@@ -17,9 +17,9 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from lm_eval_tasks.catalan_drift.utils import (
-    _language_token_counts,
     catalan_token_ratio,
     first_text,
+    process_results,
 )
 
 
@@ -51,7 +51,6 @@ def _rows_with_dataset(paths: list[str]) -> list[dict[str, Any]]:
     for path in paths:
         for source_row in _rows(Path(path)):
             row = dict(source_row)
-            row.pop("forbidden_terms", None)
             row["dataset_yaml"] = path
             rows.append(row)
     return rows
@@ -184,13 +183,13 @@ def score_lm_eval(args: argparse.Namespace) -> None:
     for sample in samples:
         doc = sample.get("doc", {})
         response = first_text(sample.get("filtered_resps") or sample.get("resps"))
+        sample = {**sample, **process_results(doc, [response])}
         category = str(doc.get("category") or "unknown")
         passed = float(sample.get("drift_pass", 0)) == 1.0
         categories.setdefault(category, {"pass": 0, "total": 0})
         categories[category]["pass"] += int(passed)
         categories[category]["total"] += 1
-        total_tokens, non_catalan_tokens, _ = _language_token_counts(doc, response.strip())
-        token_ratios.append((total_tokens - non_catalan_tokens, total_tokens))
+        token_ratios.append(sample["catalan_token_ratio"])
         response_row = {
             "id": doc.get("id", sample.get("doc_id")),
             "category": category,

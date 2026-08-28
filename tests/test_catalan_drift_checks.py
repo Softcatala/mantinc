@@ -36,23 +36,6 @@ def one_bullet_false_positive(text: str) -> tuple[str, float]:
 
 
 class CatalanDriftChecksTest(unittest.TestCase):
-    def test_legacy_forbidden_terms_are_ignored(self) -> None:
-        with mock.patch(
-            "lm_eval_tasks.catalan_drift.utils._predict_fasttext",
-            return_value=("ca", 0.99),
-        ):
-            result = process_results(
-                {
-                    "target_lang": "ca",
-                    "category": "test",
-                    "forbidden_terms": ["support macro"],
-                },
-                ["Cal revisar el support macro i explicar-ho en català."],
-            )
-
-        self.assertNotIn("forbidden_fail", result)
-        self.assertEqual(result["drift_pass"], 1.0)
-
     def test_segment_language_ratio_can_fail_response(self) -> None:
         response = (
             "Aquest text català manté una resposta completa amb informació clara "
