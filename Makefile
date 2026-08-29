@@ -4,22 +4,19 @@ LM_EVAL_MODEL ?= hf
 MODEL_ARGS ?=
 GEN_KWARGS ?= {"temperature":0}
 DISPLAY_MODEL ?= $(MODEL_ARGS)
-LOCAL_MODEL_ID ?= $(DISPLAY_MODEL)
-MODEL_SLUG ?= $(shell printf '%s' '$(RUN_NAME)' | tr '[:upper:]' '[:lower:]')
-MODEL_OUT_DIR ?= outputs/$(MODEL_SLUG)
+MODEL_OUT_DIR ?= outputs/$(shell printf '%s' '$(RUN_NAME)' | tr '[:upper:]' '[:lower:]')
 OUT_DIR ?= $(MODEL_OUT_DIR)/lm_eval
 EVAL_TIMELINE ?= outputs/eval_timeline.tsv
 PROMPTS ?= data/prompts_monolingual.yaml data/prompts_crosslingual_basic.yaml data/prompts_multi_turn.yaml data/prompts_crosslingual_advanced.yaml data/prompts_rag_context.yaml
 EXPORT ?= data/lm_eval/catalan_drift.jsonl
-EVAL_RUNS ?= gpt-5.6 gemini-3.6-flash Qwen3-14B-Q4_K_M gemma-4-12b-it-Q4_K_M
-REMOTE_EVAL_JOBS ?= 2
-REMOTE_EVAL_TARGETS ?= eval-gpt56 eval-gemini-flash-36
-LOCAL_EVAL_TARGETS ?= eval-qwen3-14b eval-gemma4-12b
+EVAL_RUNS ?= gpt-5.6 gemini-3.7-flash gemma-4-12b-it-Q4_K_M salamandra-7b-instruct-2606.Q4_K_M
+CLOUD_EVAL_TARGETS ?= eval-gpt56 eval-gemini-flash-37
+LOCAL_EVAL_TARGETS ?= eval-gemma4-12b eval-salamandra7b
 LOCAL_OPENAI_BASE_URL ?= http://localhost:9090/v1/chat/completions
 LOCAL_NUM_CONCURRENT ?= 4
-NO_REASONING_GEN_KWARGS ?= {"temperature":0,"reasoning_effort":"none"}
+GPT_GEN_KWARGS ?= {"temperature":0,"reasoning_effort":"none"}
+GEMINI_GEN_KWARGS ?= {"temperature":1,"reasoning_effort":"low"}
 GEMMA_NO_THINKING_GEN_KWARGS ?= {"temperature":0,"chat_template_kwargs":{"enable_thinking":false}}
-QWEN_NO_THINKING_GEN_KWARGS ?= {"temperature":0,"chat_template_kwargs":{"enable_thinking":false},"thinking_budget_tokens":0,"reasoning_control":true}
 UV_CACHE_DIR ?= .uv-cache
 UV_PYTHON_INSTALL_DIR ?= .uv-python
 UV_RUN ?= UV_CACHE_DIR=$(UV_CACHE_DIR) UV_PYTHON_INSTALL_DIR=$(UV_PYTHON_INSTALL_DIR) uv run
@@ -35,8 +32,8 @@ SKIP_EXPORT ?=
 LIMIT ?=
 EVAL_EXPORT_PREREQ := $(if $(SKIP_EXPORT),,export-lm-eval)
 
-.PHONY: build clean-outputs language-id-model flores-corpus export-lm-eval eval eval-one eval-local-openai eval-all eval-cloud eval-local-all eval-summary
-.PHONY: $(REMOTE_EVAL_TARGETS) $(LOCAL_EVAL_TARGETS)
+.PHONY: build clean-outputs language-id-model flores-corpus export-lm-eval eval eval-one eval-local-openai eval-summary
+.PHONY: $(CLOUD_EVAL_TARGETS) $(LOCAL_EVAL_TARGETS)
 
 build:
 	$(PYTHON) scripts/build_dataset.py
@@ -71,50 +68,40 @@ export-lm-eval: build
 	$(PYTHON) scripts/catalan_drift_eval.py export-lm-eval --prompts $(PROMPTS) --output "$(EXPORT)"
 
 eval: clean-outputs export-lm-eval
-	$(MAKE) -j$(REMOTE_EVAL_JOBS) SKIP_EXPORT=1 $(REMOTE_EVAL_TARGETS)
+	$(MAKE) -j2 SKIP_EXPORT=1 $(CLOUD_EVAL_TARGETS) & \
+	$(MAKE) SKIP_EXPORT=1 $(LOCAL_EVAL_TARGETS) & \
+	wait
 	$(MAKE) eval-summary
-
-eval-all: clean-outputs export-lm-eval
-	$(MAKE) SKIP_EXPORT=1 eval-cloud
-	$(MAKE) SKIP_EXPORT=1 eval-local-all
-	$(MAKE) eval-summary
-
-eval-cloud:
-	$(if $(strip $(REMOTE_EVAL_TARGETS)),$(MAKE) -j$(REMOTE_EVAL_JOBS) SKIP_EXPORT=1 $(REMOTE_EVAL_TARGETS),@:)
-
-eval-local-all:
-	$(MAKE) SKIP_EXPORT=1 $(LOCAL_EVAL_TARGETS)
 
 eval-summary:
 	$(PYTHON) scripts/catalan_drift_eval.py summary-lm-eval --task "$(TASK)" --timeline "$(EVAL_TIMELINE)" --runs $(EVAL_RUNS)
 
 eval-one:
-	@test -n "$(MODEL_ARGS)" || (echo "Set MODEL_ARGS, for example: make eval MODEL_ARGS=pretrained=Qwen/Qwen3.5-9B-Q8_0-llama" && exit 2)
+	@test -n "$(MODEL_ARGS)" || (echo "Set MODEL_ARGS" && exit 2)
 	@mkdir -p "$$(dirname "$(EVAL_TIMELINE)")"
-	@start=$$(date +%s); start_iso=$$(date '+%Y-%m-%dT%H:%M:%S%z'); \
+	@start=$$(date +%s); \
+	start_iso=$$(date '+%Y-%m-%dT%H:%M:%S%z'); \
 	printf '[%s] eval start: %s\n' "$(DISPLAY_MODEL)" "$$start_iso"; \
 	printf '%s\t%s\t%s\t%s\t%s\n' "$(RUN_NAME)" "$(DISPLAY_MODEL)" start "$$start_iso" "" >> "$(EVAL_TIMELINE)"; \
-	$(LM_EVAL) --include_path lm_eval_tasks --tasks "$(TASK)" --model "$(LM_EVAL_MODEL)" --model_args "$(MODEL_ARGS)" --apply_chat_template --log_samples --output_path "$(OUT_DIR)" $(if $(LIMIT),--limit "$(LIMIT)",) $(if $(GEN_KWARGS),--gen_kwargs '$(GEN_KWARGS)',); status=$$?; \
-	if [ $$status -eq 0 ]; then \
-		$(PYTHON) scripts/catalan_drift_eval.py score-lm-eval --samples "$$(find "$(OUT_DIR)" -name "samples_$(TASK)*.jsonl" | sort | tail -n 1)" --model "$(DISPLAY_MODEL)" --responses-output "$(MODEL_OUT_DIR)/responses.jsonl" --report "$(MODEL_OUT_DIR)/custom_report.json" --failures-file "$(MODEL_OUT_DIR)/failures.txt" --passes-file "$(MODEL_OUT_DIR)/pass.txt"; status=$$?; \
-	fi; \
-	end=$$(date +%s); end_iso=$$(date '+%Y-%m-%dT%H:%M:%S%z'); elapsed=$$((end - start)); \
-	if [ $$status -eq 0 ]; then event=end; printf '[%s] eval end: %s (duration %ss)\n' "$(DISPLAY_MODEL)" "$$end_iso" "$$elapsed"; else event=failed; printf '[%s] eval failed: %s (duration %ss, status %s)\n' "$(DISPLAY_MODEL)" "$$end_iso" "$$elapsed" "$$status"; fi; \
+	if $(LM_EVAL) --include_path lm_eval_tasks --tasks "$(TASK)" --model "$(LM_EVAL_MODEL)" --model_args "$(MODEL_ARGS)" --apply_chat_template --log_samples --output_path "$(OUT_DIR)" $(if $(LIMIT),--limit "$(LIMIT)",) $(if $(GEN_KWARGS),--gen_kwargs '$(GEN_KWARGS)',); then status=0; event=end; else status=$$?; event=failed; fi; \
+	end_iso=$$(date '+%Y-%m-%dT%H:%M:%S%z'); \
+	elapsed=$$(($$(date +%s) - start)); \
+	printf '[%s] eval %s: %s (duration %ss)\n' "$(DISPLAY_MODEL)" "$$event" "$$end_iso" "$$elapsed"; \
 	printf '%s\t%s\t%s\t%s\t%s\n' "$(RUN_NAME)" "$(DISPLAY_MODEL)" "$$event" "$$end_iso" "$$elapsed" >> "$(EVAL_TIMELINE)"; \
 	exit $$status
 
 eval-local-openai: $(EVAL_EXPORT_PREREQ)
-	@test -n "$(DISPLAY_MODEL)" || (echo "Set DISPLAY_MODEL, for example: make eval-local-openai DISPLAY_MODEL=Qwen3-14B-Q4_K_M" && exit 2)
-	OPENAI_API_KEY=local $(MAKE) eval-one LM_EVAL_MODEL=local-chat-completions MODEL_ARGS="model=$(LOCAL_MODEL_ID),base_url=$(LOCAL_OPENAI_BASE_URL),tokenized_requests=False,num_concurrent=$(LOCAL_NUM_CONCURRENT)" DISPLAY_MODEL="$(DISPLAY_MODEL)" RUN_NAME="$(DISPLAY_MODEL)" GEN_KWARGS='$(GEN_KWARGS)'
+	@test -n "$(DISPLAY_MODEL)" || (echo "Set DISPLAY_MODEL, for example: make eval-local-openai DISPLAY_MODEL=gemma-4-12b-it-Q4_K_M" && exit 2)
+	OPENAI_API_KEY=local $(MAKE) eval-one LM_EVAL_MODEL=local-chat-completions MODEL_ARGS="model=$(DISPLAY_MODEL),base_url=$(LOCAL_OPENAI_BASE_URL),tokenized_requests=False,num_concurrent=$(LOCAL_NUM_CONCURRENT)" DISPLAY_MODEL="$(DISPLAY_MODEL)" RUN_NAME="$(DISPLAY_MODEL)" GEN_KWARGS='$(GEN_KWARGS)'
 
 eval-gpt56: $(EVAL_EXPORT_PREREQ)
-	$(MAKE) eval-one LM_EVAL_MODEL=openai-chat-completions MODEL_ARGS="model=gpt-5.6,num_concurrent=4" DISPLAY_MODEL=gpt-5.6 RUN_NAME=gpt-5.6 GEN_KWARGS='$(NO_REASONING_GEN_KWARGS)'
+	$(MAKE) eval-one LM_EVAL_MODEL=openai-chat-completions MODEL_ARGS="model=gpt-5.6,num_concurrent=4" DISPLAY_MODEL=gpt-5.6 RUN_NAME=gpt-5.6 GEN_KWARGS='$(GPT_GEN_KWARGS)'
 
-eval-gemini-flash-36: $(EVAL_EXPORT_PREREQ)
-	$(MAKE) eval-one LM_EVAL_MODEL=litellm MODEL_ARGS="model=gemini/gemini-3.6-flash,num_concurrent=4" DISPLAY_MODEL=gemini-3.6-flash RUN_NAME=gemini-3.6-flash GEN_KWARGS='$(NO_REASONING_GEN_KWARGS)'
-
-eval-qwen3-14b:
-	$(MAKE) eval-local-openai DISPLAY_MODEL=Qwen3-14B-Q4_K_M GEN_KWARGS='$(QWEN_NO_THINKING_GEN_KWARGS)'
+eval-gemini-flash-37: $(EVAL_EXPORT_PREREQ)
+	$(MAKE) eval-one LM_EVAL_MODEL=litellm MODEL_ARGS="model=gemini/gemini-3.7-flash,num_concurrent=1" DISPLAY_MODEL=gemini-3.7-flash RUN_NAME=gemini-3.7-flash GEN_KWARGS='$(GEMINI_GEN_KWARGS)'
 
 eval-gemma4-12b:
 	$(MAKE) eval-local-openai DISPLAY_MODEL=gemma-4-12b-it-Q4_K_M GEN_KWARGS='$(GEMMA_NO_THINKING_GEN_KWARGS)'
+
+eval-salamandra7b:
+	$(MAKE) eval-local-openai DISPLAY_MODEL=salamandra-7b-instruct-2606.Q4_K_M
