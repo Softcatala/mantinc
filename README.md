@@ -188,11 +188,12 @@ full repository license split.
 
 Results on the 300-item Catalan Drift dataset:
 
-| Model | Overall | Monolingual | Crosslingual basic | Multi-turn | Crosslingual advanced | RAG context |
-|---|---:|---:|---:|---:|---:|---:|
-| Gemini 3.6 Flash | **99.3%** | 100.0% | 100.0% | 98.3% | 98.3% | 100.0% |
-| Gemma 3 12B Q8 | 97.0% | 100.0% | 96.7% | 95.0% | 93.3% | 100.0% |
-| GPT-5.6 | 95.7% | 100.0% | 100.0% | 96.7% | 81.7% | 100.0% |
+| Model | Overall | Catalan token ratio | Inference seconds | Monolingual | Crosslingual basic | Multi-turn | Crosslingual advanced | RAG context |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Gemma 4 12B Q4 | **99.7%** | 99.5% | 5133.1 | 100.0% | 100.0% | 100.0% | 98.3% | 100.0% |
+| Qwen3 14B Q4 | 99.3% | 99.1% | 7379.8 | 100.0% | 100.0% | 100.0% | 98.3% | 98.3% |
+| Gemini 3.7 Flash | 98.0% | 99.3% | 2205.0 | 95.0% | 96.7% | 98.3% | 100.0% | 100.0% |
+| GPT-5.6 | 96.0% | 95.9% | 623.0 | 100.0% | 100.0% | 96.7% | 83.3% | 100.0% |
 
 At 95% confidence, the maximum margin of error is ±5.7 percentage points
 for overall scores (n=300) and ±12.7 percentage points for category scores
