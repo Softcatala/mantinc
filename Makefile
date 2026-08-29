@@ -9,9 +9,9 @@ OUT_DIR ?= $(MODEL_OUT_DIR)/lm_eval
 EVAL_TIMELINE ?= outputs/eval_timeline.tsv
 PROMPTS ?= data/prompts_monolingual.yaml data/prompts_crosslingual_basic.yaml data/prompts_multi_turn.yaml data/prompts_crosslingual_advanced.yaml data/prompts_rag_context.yaml
 EXPORT ?= data/lm_eval/catalan_drift.jsonl
-EVAL_RUNS ?= gpt-5.6 gemini-3.7-flash gemma-4-12b-it-Q4_K_M salamandra-7b-instruct-2606.Q4_K_M Qwen_Qwen3-14B-Q4_K_M
+EVAL_RUNS ?= gpt-5.6 gemini-3.7-flash gemma-4-12b-it-Q4_K_M Ministral-3-8B-Instruct-2512-Q4_K_M Qwen_Qwen3-14B-Q4_K_M
 CLOUD_EVAL_TARGETS ?= eval-gpt56 eval-gemini-flash-37
-LOCAL_EVAL_TARGETS ?= eval-gemma4-12b eval-salamandra7b eval-qwen3-14b
+LOCAL_EVAL_TARGETS ?= eval-gemma4-12b eval-ministral3-8b eval-qwen3-14b
 LOCAL_OPENAI_BASE_URL ?= http://localhost:9090/v1/chat/completions
 LOCAL_NUM_CONCURRENT ?= 4
 GPT_GEN_KWARGS ?= {"temperature":0,"reasoning_effort":"none"}
@@ -103,8 +103,8 @@ eval-gemini-flash-37: $(EVAL_EXPORT_PREREQ)
 eval-gemma4-12b:
 	$(MAKE) eval-local-openai DISPLAY_MODEL=gemma-4-12b-it-Q4_K_M LOCAL_NUM_CONCURRENT=2 GEN_KWARGS='$(GEMMA_NO_THINKING_GEN_KWARGS)'
 
-eval-salamandra7b:
-	$(MAKE) eval-local-openai DISPLAY_MODEL=salamandra-7b-instruct-2606.Q4_K_M
+eval-ministral3-8b:
+	$(MAKE) eval-local-openai DISPLAY_MODEL=Ministral-3-8B-Instruct-2512-Q4_K_M LOCAL_NUM_CONCURRENT=2
 
 eval-qwen3-14b:
 	$(MAKE) eval-local-openai DISPLAY_MODEL=Qwen_Qwen3-14B-Q4_K_M LOCAL_NUM_CONCURRENT=2
