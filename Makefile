@@ -83,7 +83,7 @@ eval-one:
 	start_iso=$$(date '+%Y-%m-%dT%H:%M:%S%z'); \
 	printf '[%s] eval start: %s\n' "$(DISPLAY_MODEL)" "$$start_iso"; \
 	printf '%s\t%s\t%s\t%s\t%s\n' "$(RUN_NAME)" "$(DISPLAY_MODEL)" start "$$start_iso" "" >> "$(EVAL_TIMELINE)"; \
-	if $(LM_EVAL) --include_path lm_eval_tasks --tasks "$(TASK)" --model "$(LM_EVAL_MODEL)" --model_args "$(MODEL_ARGS)" --apply_chat_template --log_samples --output_path "$(OUT_DIR)" $(if $(LIMIT),--limit "$(LIMIT)",) $(if $(GEN_KWARGS),--gen_kwargs '$(GEN_KWARGS)',); then status=0; event=end; else status=$$?; event=failed; fi; \
+	if $(LM_EVAL) --include_path lm_eval_tasks --tasks "$(TASK)" --model "$(LM_EVAL_MODEL)" --model_args "$(MODEL_ARGS)" --apply_chat_template --log_samples --output_path "$(OUT_DIR)" $(if $(LIMIT),--limit "$(LIMIT)",) $(if $(GEN_KWARGS),--gen_kwargs '$(GEN_KWARGS)',) && samples=$$(find "$(OUT_DIR)" -name 'samples_$(TASK)*.jsonl' | sort | tail -n 1) && $(PYTHON) scripts/catalan_drift_eval.py score-lm-eval --samples "$$samples" --model "$(DISPLAY_MODEL)" --provider "$(LM_EVAL_MODEL)" --responses-output "$(MODEL_OUT_DIR)/responses.jsonl" --report "$(MODEL_OUT_DIR)/report.json" --failures-file "$(MODEL_OUT_DIR)/failures.txt" --passes-file "$(MODEL_OUT_DIR)/passes.txt"; then status=0; event=end; else status=$$?; event=failed; fi; \
 	end_iso=$$(date '+%Y-%m-%dT%H:%M:%S%z'); \
 	elapsed=$$(($$(date +%s) - start)); \
 	printf '[%s] eval %s: %s (duration %ss)\n' "$(DISPLAY_MODEL)" "$$event" "$$end_iso" "$$elapsed"; \

@@ -1,9 +1,9 @@
 {
-  "catalan_token_ratio": 0.9431,
+  "catalan_token_ratio": 0.9589,
   "categories": {
     "crosslingual_advanced": {
-      "pass": 48,
-      "pass_rate": 0.8,
+      "pass": 50,
+      "pass_rate": 0.8333,
       "total": 60
     },
     "crosslingual_basic": {
@@ -27,15 +27,15 @@
       "total": 60
     }
   },
-  "created_at": "2026-08-29T05:52:11+02:00",
-  "inference_seconds": 575.2658441459989,
+  "created_at": "2026-08-29T08:54:37+02:00",
+  "inference_seconds": 623.0234726060007,
   "model": "gpt-5.6",
   "n": 300,
   "n_api_or_empty_failures": 0,
-  "n_catalan_tokens": 44943,
-  "n_detected_language_tokens": 47657,
-  "n_failures": 14,
-  "n_language_failures": 14,
-  "n_passes": 286,
-  "pass_rate": 0.9533
+  "n_catalan_tokens": 55602,
+  "n_detected_language_tokens": 57988,
+  "n_failures": 12,
+  "n_language_failures": 12,
+  "n_passes": 288,
+  "pass_rate": 0.96
 }
