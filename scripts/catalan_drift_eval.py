@@ -17,7 +17,9 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from lm_eval_tasks.catalan_drift.utils import (
+    catalan_token_ratio,
     first_text,
+    process_results,
 )
 
 
@@ -44,12 +46,15 @@ def _rows_from_paths(paths: list[str]) -> list[dict[str, Any]]:
     return [row for path in paths for row in _rows(Path(path))]
 
 
+def _model_slug(model: str) -> str:
+    return model.lower()
+
+
 def _rows_with_dataset(paths: list[str]) -> list[dict[str, Any]]:
     rows = []
     for path in paths:
         for source_row in _rows(Path(path)):
             row = dict(source_row)
-            row.pop("forbidden_terms", None)
             row["dataset_yaml"] = path
             rows.append(row)
     return rows
@@ -176,20 +181,29 @@ def score_lm_eval(args: argparse.Namespace) -> None:
     responses = []
     failures = []
     passes = []
+    token_ratios = []
+    categories: dict[str, dict[str, int]] = {}
 
     for sample in samples:
         doc = sample.get("doc", {})
         response = first_text(sample.get("filtered_resps") or sample.get("resps"))
+        sample = {**sample, **process_results(doc, [response])}
+        category = str(doc.get("category") or "unknown")
+        passed = float(sample.get("drift_pass", 0)) == 1.0
+        categories.setdefault(category, {"pass": 0, "total": 0})
+        categories[category]["pass"] += int(passed)
+        categories[category]["total"] += 1
+        token_ratios.append(sample["catalan_token_ratio"])
         response_row = {
             "id": doc.get("id", sample.get("doc_id")),
-            "category": doc.get("category"),
+            "category": category,
             "model": args.model,
             "provider": args.provider,
             "prompt": doc.get("prompt", ""),
             "response": response,
         }
         responses.append(response_row)
-        if float(sample.get("drift_pass", 0)) == 0.0:
+        if not passed:
             failures.append((sample, response_row))
         else:
             passes.append((sample, response_row))
@@ -253,6 +267,40 @@ def score_lm_eval(args: argparse.Namespace) -> None:
         ),
         encoding="utf-8",
     )
+    eval_path = Path("evals") / f"{_model_slug(args.model)}.json"
+    eval_path.parent.mkdir(parents=True, exist_ok=True)
+    n_catalan_tokens = sum(item[0] for item in token_ratios)
+    n_detected_language_tokens = sum(item[1] for item in token_ratios)
+    eval_path.write_text(
+        json.dumps(
+            {
+                "model": args.model,
+                "created_at": datetime.now().astimezone().isoformat(timespec="seconds"),
+                "n": len(samples),
+                "n_passes": len(passes),
+                "n_failures": len(failures),
+                "n_api_or_empty_failures": len(api_or_empty_failures),
+                "n_language_failures": sum(1 for sample, _ in failures if float(sample.get("language_fail", 0))),
+                "n_catalan_tokens": n_catalan_tokens,
+                "n_detected_language_tokens": n_detected_language_tokens,
+                "pass_rate": report["pass_rate"],
+                "catalan_token_ratio": round(catalan_token_ratio(token_ratios), 4),
+                "categories": {
+                    category: {
+                        "pass_rate": round(counts["pass"] / counts["total"], 4),
+                        **counts,
+                    }
+                    for category, counts in sorted(categories.items())
+                },
+                "inference_seconds": _inference_seconds(Path(args.samples[-1]), "catalan_drift"),
+            },
+            ensure_ascii=False,
+            indent=2,
+            sort_keys=True,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
 
 
 def _duration(seconds: float | None, missing: str = "-") -> str:
@@ -307,7 +355,7 @@ def summary_lm_eval(args: argparse.Namespace) -> None:
             ])
 
     for run in args.runs:
-        paths = sorted((Path(args.outputs_dir) / run).glob(f"**/samples_{args.task}*.jsonl"))
+        paths = sorted((Path(args.outputs_dir) / _model_slug(run) / "lm_eval").glob(f"**/samples_{args.task}*.jsonl"))
         if not paths:
             raise FileNotFoundError(f"No samples found for {run}")
         samples_path = paths[-1]
@@ -362,7 +410,7 @@ def main() -> None:
 
     summary_parser = subparsers.add_parser("summary-lm-eval")
     summary_parser.add_argument("--task", default="catalan_drift")
-    summary_parser.add_argument("--outputs-dir", default="outputs/lm_eval")
+    summary_parser.add_argument("--outputs-dir", default="outputs")
     summary_parser.add_argument("--timeline", default="outputs/eval_timeline.tsv")
     summary_parser.add_argument("--runs", nargs="+", required=True)
     summary_parser.set_defaults(func=summary_lm_eval)

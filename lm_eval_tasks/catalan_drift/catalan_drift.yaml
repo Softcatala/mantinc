@@ -17,7 +17,7 @@ generation_kwargs:
   until: []
   do_sample: false
   temperature: 0.0
-  max_gen_toks: 512
+  max_gen_toks: 8192
 process_results: !function utils.process_results
 metric_list:
   - metric: drift_pass
@@ -29,6 +29,9 @@ metric_list:
   - metric: api_or_empty_fail
     aggregation: mean
     higher_is_better: false
+  - metric: catalan_token_ratio
+    aggregation: !function utils.catalan_token_ratio
+    higher_is_better: true
   - metric: monolingual_pass
     aggregation: mean
     higher_is_better: true

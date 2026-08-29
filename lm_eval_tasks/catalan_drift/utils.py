@@ -204,9 +204,9 @@ def lcb_line_language_result(doc, response: str) -> dict[str, object]:
     }
 
 
-def _language_errors(doc, response):
+def _language_token_counts(doc, response):
     if doc.get("target_lang") != "ca" or not response.strip():
-        return []
+        return 0, 0, []
 
     total_tokens = 0
     non_catalan_tokens = 0
@@ -217,26 +217,46 @@ def _language_errors(doc, response):
             if confidence >= LANGUAGE_MIN_CONFIDENCE and lang != "ca":
                 non_catalan_tokens += tokens
     except Exception as exc:
-        return [f"detector: {exc}"]
+        return total_tokens, non_catalan_tokens, [f"detector: {exc}"]
 
     if total_tokens == 0:
-        return ["detector: no detectable language tokens"]
+        return total_tokens, non_catalan_tokens, ["detector: no detectable language tokens"]
 
+    return total_tokens, non_catalan_tokens, []
+
+
+def _language_errors_from_counts(total_tokens, non_catalan_tokens):
+    if total_tokens == 0:
+        return []
     ratio = non_catalan_tokens / total_tokens
     if ratio >= LANGUAGE_FAIL_NON_CA_RATIO:
         return [f"non_catalan_token_ratio={ratio:.3f}"]
     return []
 
 
+def _language_errors(doc, response):
+    total_tokens, non_catalan_tokens, errors = _language_token_counts(doc, response)
+    return errors or _language_errors_from_counts(total_tokens, non_catalan_tokens)
+
+
+def catalan_token_ratio(items):
+    catalan_tokens = sum(item[0] for item in items)
+    total_tokens = sum(item[1] for item in items)
+    return catalan_tokens / total_tokens if total_tokens else 0.0
+
+
 def process_results(doc, results):
     response = first_text(results).strip()
-    language_errors = _language_errors(doc, response)
+    total_tokens, non_catalan_tokens, detector_errors = _language_token_counts(doc, response)
+    language_errors = detector_errors or _language_errors_from_counts(total_tokens, non_catalan_tokens)
     api_or_empty_fail = not response
     passed = not (api_or_empty_fail or language_errors)
     category = str(doc.get("category", "unknown"))
+    catalan_tokens = total_tokens - non_catalan_tokens
     return {
         "drift_pass": float(passed),
         "language_fail": float(bool(language_errors)),
         "api_or_empty_fail": float(api_or_empty_fail),
+        "catalan_token_ratio": (catalan_tokens, total_tokens),
         f"{category}_pass": float(passed),
     }

@@ -9,7 +9,11 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from lm_eval_tasks.catalan_drift.utils import lcb_line_language_result, process_results
+from lm_eval_tasks.catalan_drift.utils import (
+    catalan_token_ratio,
+    lcb_line_language_result,
+    process_results,
+)
 
 
 def fake_fasttext(text: str) -> tuple[str, float]:
@@ -32,23 +36,6 @@ def one_bullet_false_positive(text: str) -> tuple[str, float]:
 
 
 class CatalanDriftChecksTest(unittest.TestCase):
-    def test_legacy_forbidden_terms_are_ignored(self) -> None:
-        with mock.patch(
-            "lm_eval_tasks.catalan_drift.utils._predict_fasttext",
-            return_value=("ca", 0.99),
-        ):
-            result = process_results(
-                {
-                    "target_lang": "ca",
-                    "category": "test",
-                    "forbidden_terms": ["support macro"],
-                },
-                ["Cal revisar el support macro i explicar-ho en català."],
-            )
-
-        self.assertNotIn("forbidden_fail", result)
-        self.assertEqual(result["drift_pass"], 1.0)
-
     def test_segment_language_ratio_can_fail_response(self) -> None:
         response = (
             "Aquest text català manté una resposta completa amb informació clara "
@@ -64,6 +51,8 @@ class CatalanDriftChecksTest(unittest.TestCase):
 
         self.assertEqual(result["language_fail"], 1.0)
         self.assertEqual(result["drift_pass"], 0.0)
+        self.assertEqual(result["catalan_token_ratio"], (15, 22))
+        self.assertAlmostEqual(catalan_token_ratio([result["catalan_token_ratio"]]), 15 / 22)
 
     def test_medium_confidence_romance_confusion_does_not_fail(self) -> None:
         response = (
