@@ -5,7 +5,9 @@ MODEL_ARGS ?=
 GEN_KWARGS ?= {"temperature":0}
 DISPLAY_MODEL ?= $(MODEL_ARGS)
 LOCAL_MODEL_ID ?= $(DISPLAY_MODEL)
-OUT_DIR ?= outputs/lm_eval/$(RUN_NAME)
+MODEL_SLUG ?= $(shell printf '%s' '$(RUN_NAME)' | tr '[:upper:]' '[:lower:]')
+MODEL_OUT_DIR ?= outputs/$(MODEL_SLUG)
+OUT_DIR ?= $(MODEL_OUT_DIR)/lm_eval
 EVAL_TIMELINE ?= outputs/eval_timeline.tsv
 PROMPTS ?= data/prompts_monolingual.yaml data/prompts_crosslingual_basic.yaml data/prompts_multi_turn.yaml data/prompts_crosslingual_advanced.yaml data/prompts_rag_context.yaml
 EXPORT ?= data/lm_eval/catalan_drift.jsonl
@@ -94,7 +96,7 @@ eval-one:
 	printf '%s\t%s\t%s\t%s\t%s\n' "$(RUN_NAME)" "$(DISPLAY_MODEL)" start "$$start_iso" "" >> "$(EVAL_TIMELINE)"; \
 	$(LM_EVAL) --include_path lm_eval_tasks --tasks "$(TASK)" --model "$(LM_EVAL_MODEL)" --model_args "$(MODEL_ARGS)" --apply_chat_template --log_samples --output_path "$(OUT_DIR)" $(if $(LIMIT),--limit "$(LIMIT)",) $(if $(GEN_KWARGS),--gen_kwargs '$(GEN_KWARGS)',); status=$$?; \
 	if [ $$status -eq 0 ]; then \
-		$(PYTHON) scripts/catalan_drift_eval.py score-lm-eval --samples "$$(find "$(OUT_DIR)" -name "samples_$(TASK)*.jsonl" | sort | tail -n 1)" --model "$(DISPLAY_MODEL)" --responses-output "outputs/$(RUN_NAME).$(TASK).responses.jsonl" --report "outputs/$(RUN_NAME).$(TASK).custom_report.json" --failures-file "outputs/failures_$(RUN_NAME).txt" --passes-file "outputs/pass_$(RUN_NAME).txt"; status=$$?; \
+		$(PYTHON) scripts/catalan_drift_eval.py score-lm-eval --samples "$$(find "$(OUT_DIR)" -name "samples_$(TASK)*.jsonl" | sort | tail -n 1)" --model "$(DISPLAY_MODEL)" --responses-output "$(MODEL_OUT_DIR)/responses.jsonl" --report "$(MODEL_OUT_DIR)/custom_report.json" --failures-file "$(MODEL_OUT_DIR)/failures.txt" --passes-file "$(MODEL_OUT_DIR)/pass.txt"; status=$$?; \
 	fi; \
 	end=$$(date +%s); end_iso=$$(date '+%Y-%m-%dT%H:%M:%S%z'); elapsed=$$((end - start)); \
 	if [ $$status -eq 0 ]; then event=end; printf '[%s] eval end: %s (duration %ss)\n' "$(DISPLAY_MODEL)" "$$end_iso" "$$elapsed"; else event=failed; printf '[%s] eval failed: %s (duration %ss, status %s)\n' "$(DISPLAY_MODEL)" "$$end_iso" "$$elapsed" "$$status"; fi; \

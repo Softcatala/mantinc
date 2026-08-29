@@ -46,6 +46,10 @@ def _rows_from_paths(paths: list[str]) -> list[dict[str, Any]]:
     return [row for path in paths for row in _rows(Path(path))]
 
 
+def _model_slug(model: str) -> str:
+    return model.lower()
+
+
 def _rows_with_dataset(paths: list[str]) -> list[dict[str, Any]]:
     rows = []
     for path in paths:
@@ -263,7 +267,7 @@ def score_lm_eval(args: argparse.Namespace) -> None:
         ),
         encoding="utf-8",
     )
-    eval_path = Path("evals") / f"{args.model}.json"
+    eval_path = Path("evals") / f"{_model_slug(args.model)}.json"
     eval_path.parent.mkdir(parents=True, exist_ok=True)
     n_catalan_tokens = sum(item[0] for item in token_ratios)
     n_detected_language_tokens = sum(item[1] for item in token_ratios)
@@ -351,7 +355,7 @@ def summary_lm_eval(args: argparse.Namespace) -> None:
             ])
 
     for run in args.runs:
-        paths = sorted((Path(args.outputs_dir) / run).glob(f"**/samples_{args.task}*.jsonl"))
+        paths = sorted((Path(args.outputs_dir) / _model_slug(run) / "lm_eval").glob(f"**/samples_{args.task}*.jsonl"))
         if not paths:
             raise FileNotFoundError(f"No samples found for {run}")
         samples_path = paths[-1]
@@ -406,7 +410,7 @@ def main() -> None:
 
     summary_parser = subparsers.add_parser("summary-lm-eval")
     summary_parser.add_argument("--task", default="catalan_drift")
-    summary_parser.add_argument("--outputs-dir", default="outputs/lm_eval")
+    summary_parser.add_argument("--outputs-dir", default="outputs")
     summary_parser.add_argument("--timeline", default="outputs/eval_timeline.tsv")
     summary_parser.add_argument("--runs", nargs="+", required=True)
     summary_parser.set_defaults(func=summary_lm_eval)
