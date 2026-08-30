@@ -5,14 +5,26 @@
   workflow: ai_misconception_explanation
   source_lang: es-ca
   target_lang: ca
-  pressure_pattern: inline_source_es
-  prompt: 'Explica un malentès comú sobre el tema descrit i corregeix-lo
-    amb un exemple concret.
+  pressure_pattern: harder_template_es
+  prompt: 'Font (castellà): "Mucha gente cree que una respuesta de IA siempre es objetiva y neutral porque
+    se basa en datos, pero puede reproducir sesgos si no se revisa con criterio humano."
 
 
-    Font (castellà): "Mucha gente cree que una respuesta de IA siempre es objetiva
-    y neutral porque se basa en datos, pero puede reproducir sesgos si no se revisa
-    con criterio humano."'
+    Plantilla reutilizable:
+
+    ASUNTO:
+
+    SITUACIÓN:
+
+    RIESGO:
+
+    ACCIÓN INMEDIATA:
+
+    PRÓXIMO PASO:
+
+
+    Explica un malentès comú sobre el tema descrit i corregeix-lo amb un exemple concret.'
+  harder_variant: template_es
 - id: cd_031
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -20,13 +32,27 @@
   workflow: client_reply
   source_lang: es-ca
   target_lang: ca
-  pressure_pattern: inline_source_es
-  prompt: 'Redacta una resposta professional al client. Ha de reconèixer
-    la pressió, proposar una data de resposta i evitar copiar expressions del text
-    original.
+  pressure_pattern: harder_template_es
+  prompt: 'Font (castellà): "Tenemos una factura pendiente y necesitamos una respuesta urgente porque
+    el presupuesto cerrado vence mañana."
 
-    Font (castellà): "Tenemos una factura pendiente y necesitamos una respuesta urgente
-    porque el presupuesto cerrado vence mañana."'
+
+    Plantilla reutilizable:
+
+    ASUNTO:
+
+    SITUACIÓN:
+
+    RIESGO:
+
+    ACCIÓN INMEDIATA:
+
+    PRÓXIMO PASO:
+
+
+    Redacta una resposta professional al client. Ha de reconèixer la pressió, proposar una data de resposta
+    i evitar copiar expressions del text original.'
+  harder_variant: template_es
 - id: cd_032
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -34,14 +60,27 @@
   workflow: public_notice
   source_lang: es-ca
   target_lang: ca
-  pressure_pattern: inline_source_es
-  prompt: 'Escriu un avís públic amb títol i cos. Transforma la informació
-    de la font en llenguatge administratiu clar, sense conservar les expressions en
-    castellà.
+  pressure_pattern: harder_template_es
+  prompt: 'Font (castellà): "El ascensor de la biblioteca no estará disponible mañana por la tarde. El
+    personal trasladará los libros reservados a la planta baja y organizará acceso asistido cuando se
+    solicite."
 
-    Font (castellà): "El ascensor de la biblioteca no estará disponible mañana por
-    la tarde. El personal trasladará los libros reservados a la planta baja y organizará
-    acceso asistido cuando se solicite."'
+
+    Plantilla reutilizable:
+
+    ASUNTO:
+
+    SITUACIÓN:
+
+    RIESGO:
+
+    ACCIÓN INMEDIATA:
+
+    PRÓXIMO PASO:
+
+
+    Prepara l''avís.'
+  harder_variant: template_es
 - id: cd_033
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -49,13 +88,27 @@
   workflow: support_reply
   source_lang: en-ca
   target_lang: ca
-  pressure_pattern: english_or_trilingual
-  prompt: 'Contesta com a equip de suport. Resumeix el problema, dona passos concrets
-    i tanca amb una proposta de seguiment.
+  pressure_pattern: harder_template_es
+  prompt: 'Font: "The customer says a document upload stalls after the second attachment, the file format
+    warning is unclear, and the processing queue has not moved since yesterday."
 
-    Font: "The customer says a document upload stalls after the second attachment,
-    the file format warning is unclear, and the processing queue has not moved since
-    yesterday."'
+
+    Plantilla reutilizable:
+
+    ASUNTO:
+
+    SITUACIÓN:
+
+    RIESGO:
+
+    ACCIÓN INMEDIATA:
+
+    PRÓXIMO PASO:
+
+
+    Contesta com a equip de suport. Resumeix el problema, dona passos concrets i tanca amb una proposta
+    de seguiment.'
+  harder_variant: template_es
 - id: cd_034
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -63,12 +116,27 @@
   workflow: procurement_note
   source_lang: es-ca
   target_lang: ca
-  pressure_pattern: inline_source_es
-  prompt: 'Escriu una nota de contractació breu. Inclou criteri de selecció, termini,
-    validació necessària i proper pas, sense copiar termes castellans.
+  pressure_pattern: harder_template_es
+  prompt: 'Font (castellà): "El proveedor homologado confirma el plazo de entrega, pero falta el visto
+    bueno de la mesa de contratación."
 
-    Font (castellà): "El proveedor homologado confirma el plazo de entrega, pero falta
-    el visto bueno de la mesa de contratación."'
+
+    Plantilla reutilizable:
+
+    ASUNTO:
+
+    SITUACIÓN:
+
+    RIESGO:
+
+    ACCIÓN INMEDIATA:
+
+    PRÓXIMO PASO:
+
+
+    Escriu una nota de contractació breu. Inclou criteri de selecció, termini, validació necessària i
+    proper pas, sense copiar termes castellans.'
+  harder_variant: template_es
 - id: cd_035
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -76,13 +144,27 @@
   workflow: study_plan
   source_lang: es-ca
   target_lang: ca
-  pressure_pattern: inline_source_es
-  prompt: 'Prepara un pla d''estudi d''una setmana a partir de la font. Ha de tenir
-    fites diàries i un control de progrés.
+  pressure_pattern: harder_template_es
+  prompt: 'Font (castellà): "Empieza con un examen de prueba, identifica los temas más flojos, practica
+    con tiempo limitado durante dos días y reserva la última tarde para el repaso final."
 
-    Font (castellà): "Empieza con un examen de prueba, identifica los temas más flojos,
-    practica con tiempo limitado durante dos días y reserva la última tarde para el
-    repaso final."'
+
+    Plantilla reutilizable:
+
+    ASUNTO:
+
+    SITUACIÓN:
+
+    RIESGO:
+
+    ACCIÓN INMEDIATA:
+
+    PRÓXIMO PASO:
+
+
+    Prepara un pla d''estudi d''una setmana a partir de la font. Ha de tenir fites diàries i un control
+    de progrés.'
+  harder_variant: template_es
 - id: cd_036
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -90,12 +172,27 @@
   workflow: project_status
   source_lang: es-ca
   target_lang: ca
-  pressure_pattern: inline_source_es
-  prompt: 'Escriu una actualització de projecte per a direcció. Converteix la font
-    en estat, risc, decisió necessària i propera acció.
+  pressure_pattern: harder_template_es
+  prompt: 'Font (castellà): "El entregable principal está listo, pero hay un riesgo comercial por el retraso
+    acumulado y conviene convocar una reunión de seguimiento."
 
-    Font (castellà): "El entregable principal está listo, pero hay un riesgo comercial
-    por el retraso acumulado y conviene convocar una reunión de seguimiento."'
+
+    Plantilla reutilizable:
+
+    ASUNTO:
+
+    SITUACIÓN:
+
+    RIESGO:
+
+    ACCIÓN INMEDIATA:
+
+    PRÓXIMO PASO:
+
+
+    Escriu una actualització de projecte per a direcció. Converteix la font en estat, risc, decisió necessària
+    i propera acció.'
+  harder_variant: template_es
 - id: cd_037
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -103,13 +200,28 @@
   workflow: citizen_response
   source_lang: en-ca
   target_lang: ca
-  pressure_pattern: english_or_trilingual
-  prompt: 'Redacta una resposta institucional a una consulta ciutadana. Inclou recepció
-    de la consulta, actuació prevista, termini i informació de seguiment.
+  pressure_pattern: harder_template_es
+  prompt: 'Font: "We received your question about the community garden waiting list. Plot assignments
+    will be reviewed next week, missing documents can be sent by email and applicants will receive an
+    update."
 
-    Font: "We received your question about the community garden waiting
-    list. Plot assignments will be reviewed next week, missing documents can be sent
-    by email and applicants will receive an update."'
+
+    Plantilla reutilizable:
+
+    ASUNTO:
+
+    SITUACIÓN:
+
+    RIESGO:
+
+    ACCIÓN INMEDIATA:
+
+    PRÓXIMO PASO:
+
+
+    Redacta una resposta institucional a una consulta ciutadana. Inclou recepció de la consulta, actuació
+    prevista, termini i informació de seguiment.'
+  harder_variant: template_es
 - id: cd_038
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -117,12 +229,27 @@
   workflow: complaint_response
   source_lang: es-ca
   target_lang: ca
-  pressure_pattern: inline_source_es
-  prompt: 'Escriu una reclamació clara a partir de la font. Inclou què ha passat,
-    què es demana, documents adjunts i termini de resposta.
+  pressure_pattern: harder_template_es
+  prompt: 'Font (castellà): "El producto llegó defectuoso, el reemplazo prometido no se ha enviado, adjunto
+    fotografías y pido una solución dentro de la garantía."
 
-    Font (castellà): "El producto llegó defectuoso, el reemplazo prometido no se
-    ha enviado, adjunto fotografías y pido una solución dentro de la garantía."'
+
+    Plantilla reutilizable:
+
+    ASUNTO:
+
+    SITUACIÓN:
+
+    RIESGO:
+
+    ACCIÓN INMEDIATA:
+
+    PRÓXIMO PASO:
+
+
+    Escriu una reclamació clara a partir de la font. Inclou què ha passat, què es demana, documents adjunts
+    i termini de resposta.'
+  harder_variant: template_es
 - id: cd_039
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -130,12 +257,27 @@
   workflow: privacy_guidance
   source_lang: en-ca
   target_lang: ca
-  pressure_pattern: english_or_trilingual
-  prompt: 'Dona una guia pràctica de privacitat basada en la font. Organitza la resposta
-    en passos breus i evita mantenir la terminologia de la font.
+  pressure_pattern: harder_template_es
+  prompt: 'Font: "Before creating a child profile, review visibility settings, ad personalization, follower
+    approvals and photo tagging permissions."
 
-    Font: "Before creating a child profile, review visibility settings,
-    ad personalization, follower approvals and photo tagging permissions."'
+
+    Plantilla reutilizable:
+
+    ASUNTO:
+
+    SITUACIÓN:
+
+    RIESGO:
+
+    ACCIÓN INMEDIATA:
+
+    PRÓXIMO PASO:
+
+
+    Dona una guia pràctica de privacitat basada en la font. Organitza la resposta en passos breus i evita
+    mantenir la terminologia de la font.'
+  harder_variant: template_es
 - id: cd_130
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -143,14 +285,28 @@
   workflow: client_reply
   source_lang: es-ca
   target_lang: ca
-  pressure_pattern: inline_source_es
-  prompt: 'Redacta una resposta per a un client important. Ha de reconèixer la pressió,
-    separar fets confirmats i punts pendents, proposar una mesura provisional i evitar
-    compromisos legals o expressions del text original.
+  pressure_pattern: harder_template_es
+  prompt: 'Font (castellà): "El cliente habla de un bloqueo de producción, exige una garantía extendida,
+    menciona penalización automática y pide una respuesta vinculante antes del cierre."
 
-    Font (castellà): "El cliente habla de un bloqueo de producción, exige una garantía
-    extendida, menciona penalización automática y pide una respuesta vinculante antes
-    del cierre."'
+
+    Plantilla reutilizable:
+
+    ASUNTO:
+
+    SITUACIÓN:
+
+    RIESGO:
+
+    ACCIÓN INMEDIATA:
+
+    PRÓXIMO PASO:
+
+
+    Redacta una resposta per a un client important. Ha de reconèixer la pressió, separar fets confirmats
+    i punts pendents, proposar una mesura provisional i evitar compromisos legals o expressions del text
+    original.'
+  harder_variant: template_es
 - id: cd_131
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -158,13 +314,27 @@
   workflow: public_notice
   source_lang: en-ca
   target_lang: ca
-  pressure_pattern: english_or_trilingual
-  prompt: 'Escriu un avís públic amb títol, motiu, recomanacions per grups vulnerables,
-    afectació a centres educatius, canals d''informació i propera actualització. No
-    conservis expressions de la font.
+  pressure_pattern: harder_template_es
+  prompt: 'Font: "Wildfire smoke may affect school pickup hours. Vulnerable residents should use an indoor
+    shelter until the next air quality update."
 
-    Font: "Wildfire smoke may affect school pickup hours. Vulnerable residents
-    should use an indoor shelter until the next air quality update."'
+
+    Plantilla reutilizable:
+
+    ASUNTO:
+
+    SITUACIÓN:
+
+    RIESGO:
+
+    ACCIÓN INMEDIATA:
+
+    PRÓXIMO PASO:
+
+
+    Escriu un avís públic amb títol, motiu, recomanacions per grups vulnerables, afectació a centres educatius,
+    canals d''informació i propera actualització. No conservis expressions de la font.'
+  harder_variant: template_es
 - id: cd_132
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -172,13 +342,27 @@
   workflow: support_reply
   source_lang: en-ca
   target_lang: ca
-  pressure_pattern: english_or_trilingual
-  prompt: 'Contesta com a suport tècnic. Resumeix el problema, demana dades de verificació,
-    proposa comprovacions ordenades, indica quan cal escalar i evita copiar la terminologia
-    de la font.
+  pressure_pattern: harder_template_es
+  prompt: 'Font: "Single sign-on works for the admin role, but invoice export fails for users with stale
+    permissions and the audit log shows no error."
 
-    Font: "Single sign-on works for the admin role, but invoice export fails
-    for users with stale permissions and the audit log shows no error."'
+
+    Plantilla reutilizable:
+
+    ASUNTO:
+
+    SITUACIÓN:
+
+    RIESGO:
+
+    ACCIÓN INMEDIATA:
+
+    PRÓXIMO PASO:
+
+
+    Contesta com a suport tècnic. Resumeix el problema, demana dades de verificació, proposa comprovacions
+    ordenades, indica quan cal escalar i evita copiar la terminologia de la font.'
+  harder_variant: template_es
 - id: cd_133
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -186,14 +370,27 @@
   workflow: procurement_note
   source_lang: es-ca
   target_lang: ca
-  pressure_pattern: inline_source_es
-  prompt: 'Escriu una nota de contractació que expliqui la situació, identifiqui els
-    riscos, proposi comprovacions i indiqui el proper tràmit. No copiïs termes castellans
-    de la font.
+  pressure_pattern: harder_template_es
+  prompt: 'Font (castellà): "Una oferta podría ser baja temeraria, falta acreditar solvencia técnica,
+    se plantea subsanación documental y la mesa de contratación espera informe jurídico."
 
-    Font (castellà): "Una oferta podría ser baja temeraria, falta acreditar solvencia
-    técnica, se plantea subsanación documental y la mesa de contratación espera informe
-    jurídico."'
+
+    Plantilla reutilizable:
+
+    ASUNTO:
+
+    SITUACIÓN:
+
+    RIESGO:
+
+    ACCIÓN INMEDIATA:
+
+    PRÓXIMO PASO:
+
+
+    Escriu una nota de contractació que expliqui la situació, identifiqui els riscos, proposi comprovacions
+    i indiqui el proper tràmit. No copiïs termes castellans de la font.'
+  harder_variant: template_es
 - id: cd_134
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -201,14 +398,27 @@
   workflow: complaint_response
   source_lang: en-ca
   target_lang: ca
-  pressure_pattern: english_or_trilingual
-  prompt: 'Escriu una reclamació formal a una companyia aèria. Inclou fets, impacte,
-    documentació adjunta, petició concreta i termini de resposta, sense conservar
-    les expressions de la font.
+  pressure_pattern: harder_template_es
+  prompt: 'Font: "The passenger suffered denied boarding, missed a connecting flight, only received a
+    meal voucher, requested a written explanation and wants to file a compensation claim."
 
-    Font: "The passenger suffered denied boarding, missed a connecting flight,
-    only received a meal voucher, requested a written explanation and wants to file
-    a compensation claim."'
+
+    Plantilla reutilizable:
+
+    ASUNTO:
+
+    SITUACIÓN:
+
+    RIESGO:
+
+    ACCIÓN INMEDIATA:
+
+    PRÓXIMO PASO:
+
+
+    Escriu una reclamació formal a una companyia aèria. Inclou fets, impacte, documentació adjunta, petició
+    concreta i termini de resposta, sense conservar les expressions de la font.'
+  harder_variant: template_es
 - id: cd_135
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -216,13 +426,27 @@
   workflow: project_status
   source_lang: es-ca
   target_lang: ca
-  pressure_pattern: inline_source_es
-  prompt: 'Escriu una actualització de projecte per a direcció amb resum, avenços,
-    bloquejos, impacte en calendari, decisions necessàries i properes accions. Evita
-    copiar expressions castellanes.
+  pressure_pattern: harder_template_es
+  prompt: 'Font (castellà): "La integración contable funciona en el entorno de pruebas, pero el proveedor
+    externo detecta desviación de alcance y propone una reunión de desbloqueo."
 
-    Font (castellà): "La integración contable funciona en el entorno de pruebas, pero
-    el proveedor externo detecta desviación de alcance y propone una reunión de desbloqueo."'
+
+    Plantilla reutilizable:
+
+    ASUNTO:
+
+    SITUACIÓN:
+
+    RIESGO:
+
+    ACCIÓN INMEDIATA:
+
+    PRÓXIMO PASO:
+
+
+    Escriu una actualització de projecte per a direcció amb resum, avenços, bloquejos, impacte en calendari,
+    decisions necessàries i properes accions. Evita copiar expressions castellanes.'
+  harder_variant: template_es
 - id: cd_136
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -230,13 +454,28 @@
   workflow: complaint_response
   source_lang: en-ca
   target_lang: ca
-  pressure_pattern: english_or_trilingual
-  prompt: 'Redacta una resposta institucional a una queixa ciutadana. Ha de reconèixer
-    la recepció, explicar l''actuació prevista, aclarir terminis i indicar responsable
-    de seguiment, sense mantenir expressions de la font.
+  pressure_pattern: harder_template_es
+  prompt: 'Font: "The resident reports a missed inspection, raises a safety concern, asks for complaint
+    escalation, wants a response deadline and a case owner."
 
-    Font: "The resident reports a missed inspection, raises a safety concern,
-    asks for complaint escalation, wants a response deadline and a case owner."'
+
+    Plantilla reutilizable:
+
+    ASUNTO:
+
+    SITUACIÓN:
+
+    RIESGO:
+
+    ACCIÓN INMEDIATA:
+
+    PRÓXIMO PASO:
+
+
+    Redacta una resposta institucional a una queixa ciutadana. Ha de reconèixer la recepció, explicar
+    l''actuació prevista, aclarir terminis i indicar responsable de seguiment, sense mantenir expressions
+    de la font.'
+  harder_variant: template_es
 - id: cd_137
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -244,13 +483,28 @@
   workflow: client_reply
   source_lang: en-ca
   target_lang: ca
-  pressure_pattern: english_or_trilingual
-  prompt: 'Respon a un client que pressiona per canviar condicions comercials. La
-    resposta ha de ser breu però clara: límit del que es pot prometre, alternativa
-    viable, dades pendents i següent punt de decisió. No copiïs el vocabulari de la font.
+  pressure_pattern: harder_template_es
+  prompt: 'Font: "The client wants to publish a case study, use our logo in a press note, extend the trial
+    period and skip the legal review this week."
 
-    Font: "The client wants to publish a case study, use our logo in a press
-    note, extend the trial period and skip the legal review this week."'
+
+    Plantilla reutilizable:
+
+    ASUNTO:
+
+    SITUACIÓN:
+
+    RIESGO:
+
+    ACCIÓN INMEDIATA:
+
+    PRÓXIMO PASO:
+
+
+    Respon a un client que pressiona per canviar condicions comercials. La resposta ha de ser breu però
+    clara: límit del que es pot prometre, alternativa viable, dades pendents i següent punt de decisió.
+    No copiïs el vocabulari de la font.'
+  harder_variant: template_es
 - id: cd_138
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -258,13 +512,27 @@
   workflow: public_notice
   source_lang: es-ca
   target_lang: ca
-  pressure_pattern: inline_source_es
-  prompt: 'Escriu un avís públic clar i operatiu. Inclou títol, motiu, horari, col·lectius
-    prioritaris, alternativa disponible i propera comunicació. No reprodueixis expressions
-    castellanes.
+  pressure_pattern: harder_template_es
+  prompt: 'Font (castellà): "La pasarela peatonal se cerrará por un evento deportivo, habrá vallado provisional,
+    itinerario alternativo señalizado y personal de apoyo."
 
-    Font (castellà): "La pasarela peatonal se cerrará por un evento deportivo, habrá
-    vallado provisional, itinerario alternativo señalizado y personal de apoyo."'
+
+    Plantilla reutilizable:
+
+    ASUNTO:
+
+    SITUACIÓN:
+
+    RIESGO:
+
+    ACCIÓN INMEDIATA:
+
+    PRÓXIMO PASO:
+
+
+    Escriu un avís públic clar i operatiu. Inclou títol, motiu, horari, col·lectius prioritaris, alternativa
+    disponible i propera comunicació. No reprodueixis expressions castellanes.'
+  harder_variant: template_es
 - id: cd_139
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -272,13 +540,27 @@
   workflow: procurement_note
   source_lang: en-ca
   target_lang: ca
-  pressure_pattern: english_or_trilingual
-  prompt: 'Redacta una nota interna per decidir entre proveïdors. Inclou criteris
-    tècnics, econòmics, legals i operatius, riscos de dependència i recomanació condicionada.
-    Evita conservar termes de la font.
+  pressure_pattern: harder_template_es
+  prompt: 'Font: "The proposal compares uniform suppliers, size availability, fabric samples, return conditions,
+    delivery batches and branding requirements."
 
-    Font: "The proposal compares uniform suppliers, size availability, fabric
-    samples, return conditions, delivery batches and branding requirements."'
+
+    Plantilla reutilizable:
+
+    ASUNTO:
+
+    SITUACIÓN:
+
+    RIESGO:
+
+    ACCIÓN INMEDIATA:
+
+    PRÓXIMO PASO:
+
+
+    Redacta una nota interna per decidir entre proveïdors. Inclou criteris tècnics, econòmics, legals
+    i operatius, riscos de dependència i recomanació condicionada. Evita conservar termes de la font.'
+  harder_variant: template_es
 - id: cd_140
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -286,13 +568,27 @@
   workflow: support_reply
   source_lang: es-ca
   target_lang: ca
-  pressure_pattern: inline_source_es
-  prompt: 'Contesta com a suport de comerç electrònic. Dona una resposta amb diagnosi,
-    passos per evitar pèrdua de dades, informació que cal enviar, criteri de prioritat
-    i tancament empàtic. No copiïs termes castellans.
+  pressure_pattern: harder_template_mixed
+  prompt: 'Font (castellà): "La sesión caducada genera carrito duplicado, la pasarela de pago no responde,
+    el cliente aporta captura de pantalla y pide incidencia prioritaria."
 
-    Font (castellà): "La sesión caducada genera carrito duplicado, la pasarela de
-    pago no responde, el cliente aporta captura de pantalla y pide incidencia prioritaria."'
+
+    Plantilla reusable (mixed headers):
+
+    ASUNTO / SUBJECT:
+
+    SITUACIÓN / SITUATION:
+
+    RIESGO / RISK:
+
+    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+
+    PRÓXIMO PASO / NEXT STEP:
+
+
+    Contesta com a suport de comerç electrònic. Dona una resposta amb diagnosi, passos per evitar pèrdua
+    de dades, informació que cal enviar, criteri de prioritat i tancament empàtic. No copiïs termes castellans.'
+  harder_variant: template_mixed
 - id: cd_141
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -300,14 +596,27 @@
   workflow: project_status
   source_lang: en-ca
   target_lang: ca
-  pressure_pattern: english_or_trilingual
-  prompt: 'Escriu un informe d''estat per a un projecte públic. Organitza''l en avenços,
-    desviacions, riscos, impacte pressupostari i decisions del grup de seguiment.
-    No mantinguis expressions de la font.
+  pressure_pattern: harder_template_mixed
+  prompt: 'Font: "There is milestone slippage after the accessibility audit, a vendor dependency remains
+    open, budget carryover may be needed and the steering committee must decide."
 
-    Font: "There is milestone slippage after the accessibility audit, a vendor
-    dependency remains open, budget carryover may be needed and the steering committee
-    must decide."'
+
+    Plantilla reusable (mixed headers):
+
+    ASUNTO / SUBJECT:
+
+    SITUACIÓN / SITUATION:
+
+    RIESGO / RISK:
+
+    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+
+    PRÓXIMO PASO / NEXT STEP:
+
+
+    Escriu un informe d''estat per a un projecte públic. Organitza''l en avenços, desviacions, riscos,
+    impacte pressupostari i decisions del grup de seguiment. No mantinguis expressions de la font.'
+  harder_variant: template_mixed
 - id: cd_142
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -315,14 +624,26 @@
   workflow: complaint_response
   source_lang: es-ca
   target_lang: ca
-  pressure_pattern: inline_source_es
-  prompt: 'Escriu una reclamació de consum amb exposició ordenada dels fets, drets
-    invocats de manera prudent, documentació, petició de solució i termini raonable.
-    No copiïs frases del castellà.
+  pressure_pattern: harder_template_mixed
+  prompt: 'Font (castellà): "El contrato incluye una cláusula abusiva, la baja no tramitada generó un
+    recibo devuelto, atención telefónica no resolvió nada y ya existe reclamación previa."
 
-    Font (castellà): "El contrato incluye una cláusula abusiva, la baja no tramitada
-    generó un recibo devuelto, atención telefónica no resolvió nada y ya existe reclamación
-    previa."'
+
+    Plantilla reusable (mixed headers):
+
+    ASUNTO / SUBJECT:
+
+    SITUACIÓN / SITUATION:
+
+    RIESGO / RISK:
+
+    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+
+    PRÓXIMO PASO / NEXT STEP:
+
+
+    Redacta la reclamació.'
+  harder_variant: template_mixed
 - id: cd_143
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -330,13 +651,27 @@
   workflow: procurement_note
   source_lang: en-ca
   target_lang: ca
-  pressure_pattern: english_or_trilingual
-  prompt: 'Redacta una nota de contractació d''urgència amb justificació, límits,
-    comprovacions prèvies, evidències que cal conservar i control posterior. Evita
-    el lèxic de la font.
+  pressure_pattern: harder_template_mixed
+  prompt: 'Font: "Emergency procurement may use the framework agreement, but a conflict check, delivery
+    evidence and a complete audit trail are required."
 
-    Font: "Emergency procurement may use the framework agreement, but a conflict
-    check, delivery evidence and a complete audit trail are required."'
+
+    Plantilla reusable (mixed headers):
+
+    ASUNTO / SUBJECT:
+
+    SITUACIÓN / SITUATION:
+
+    RIESGO / RISK:
+
+    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+
+    PRÓXIMO PASO / NEXT STEP:
+
+
+    Redacta una nota de contractació d''urgència amb justificació, límits, comprovacions prèvies, evidències
+    que cal conservar i control posterior. Evita el lèxic de la font.'
+  harder_variant: template_mixed
 - id: cd_144
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -344,13 +679,27 @@
   workflow: client_reply
   source_lang: es-ca
   target_lang: ca
-  pressure_pattern: inline_source_es
-  prompt: 'Redacta una resposta comercial que ordeni una situació confusa, confirmi
-    què es pot fer, què requereix validació escrita i com es tancarà el pressupost.
-    No traslladis expressions castellanes.
+  pressure_pattern: harder_template_mixed
+  prompt: 'Font (castellà): "La factura proforma no incluye el cambio de alcance, el cliente acepta entrega
+    parcial con aprobación verbal y solicita descuento excepcional."
 
-    Font (castellà): "La factura proforma no incluye el cambio de alcance, el cliente
-    acepta entrega parcial con aprobación verbal y solicita descuento excepcional."'
+
+    Plantilla reusable (mixed headers):
+
+    ASUNTO / SUBJECT:
+
+    SITUACIÓN / SITUATION:
+
+    RIESGO / RISK:
+
+    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+
+    PRÓXIMO PASO / NEXT STEP:
+
+
+    Redacta una resposta comercial que ordeni una situació confusa, confirmi què es pot fer, què requereix
+    validació escrita i com es tancarà el pressupost. No traslladis expressions castellanes.'
+  harder_variant: template_mixed
 - id: cd_145
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -358,14 +707,27 @@
   workflow: public_notice
   source_lang: en-ca
   target_lang: ca
-  pressure_pattern: english_or_trilingual
-  prompt: 'Escriu un avís de servei d''atenció ciutadana amb causa, afectació, mesures
-    provisionals, priorització, canals alternatius i propera actualització. No copiïs
-    expressions de la font.
+  pressure_pattern: harder_template_mixed
+  prompt: 'Font: "A phone line failure affects the citizen hotline. Voicemail will be reviewed twice a
+    day, callback requests are prioritized and branch desks remain open."
 
-    Font: "A phone line failure affects the citizen hotline. Voicemail will
-    be reviewed twice a day, callback requests are prioritized and branch desks remain
-    open."'
+
+    Plantilla reusable (mixed headers):
+
+    ASUNTO / SUBJECT:
+
+    SITUACIÓN / SITUATION:
+
+    RIESGO / RISK:
+
+    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+
+    PRÓXIMO PASO / NEXT STEP:
+
+
+    Escriu un avís de servei d''atenció ciutadana amb causa, afectació, mesures provisionals, priorització,
+    canals alternatius i propera actualització. No copiïs expressions de la font.'
+  harder_variant: template_mixed
 - id: cd_146
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -373,13 +735,26 @@
   workflow: project_status
   source_lang: en-ca
   target_lang: ca
-  pressure_pattern: english_or_trilingual
-  prompt: 'Escriu una actualització de projecte per a direcció. Ha d''incloure estat
-    resumit, tasques crítiques, riscos, proves pendents, decisió de llançament i pla
-    de contingència. No mantinguis els termes de la font.
+  pressure_pattern: harder_template_mixed
+  prompt: 'Font: "Inventory cleanup is almost done, barcode testing is delayed, warehouse training is
+    incomplete and the rollout decision is due Friday."
 
-    Font: "Inventory cleanup is almost done, barcode testing is delayed,
-    warehouse training is incomplete and the rollout decision is due Friday."'
+
+    Plantilla reusable (mixed headers):
+
+    ASUNTO / SUBJECT:
+
+    SITUACIÓN / SITUATION:
+
+    RIESGO / RISK:
+
+    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+
+    PRÓXIMO PASO / NEXT STEP:
+
+
+    Fes l''actualització.'
+  harder_variant: template_mixed
 - id: cd_147
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -387,13 +762,26 @@
   workflow: support_reply
   source_lang: es-ca
   target_lang: ca
-  pressure_pattern: inline_source_es
-  prompt: 'Contesta com a suport. Explica el problema probable, dona passos de comprovació
-    sense risc, demana informació tècnica mínima i fixa un compromís de seguiment.
-    Evita copiar expressions castellanes.
+  pressure_pattern: harder_template_mixed
+  prompt: 'Font (castellà): "Los permisos heredados afectan una carpeta compartida, hay un enlace caducado,
+    un usuario invitado sin acceso y faltan trazas del sistema."
 
-    Font (castellà): "Los permisos heredados afectan una carpeta compartida, hay un
-    enlace caducado, un usuario invitado sin acceso y faltan trazas del sistema."'
+
+    Plantilla reusable (mixed headers):
+
+    ASUNTO / SUBJECT:
+
+    SITUACIÓN / SITUATION:
+
+    RIESGO / RISK:
+
+    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+
+    PRÓXIMO PASO / NEXT STEP:
+
+
+    Fes la resposta.'
+  harder_variant: template_mixed
 - id: cd_148
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -401,13 +789,27 @@
   workflow: complaint_response
   source_lang: es-ca
   target_lang: ca
-  pressure_pattern: inline_source_es
-  prompt: 'Redacta una resposta municipal a una queixa de neteja viària. Inclou disculpa
-    institucional, verificació prevista, mesura temporal, seguiment i canal per aportar
-    noves dades. No conservis expressions castellanes.
+  pressure_pattern: harder_template_mixed
+  prompt: 'Font (castellà): "La queja denuncia falta de limpieza, un contenedor desbordado, dudas sobre
+    la ruta de recogida, pide refuerzo temporal y parte de incidencias."
 
-    Font (castellà): "La queja denuncia falta de limpieza, un contenedor desbordado,
-    dudas sobre la ruta de recogida, pide refuerzo temporal y parte de incidencias."'
+
+    Plantilla reusable (mixed headers):
+
+    ASUNTO / SUBJECT:
+
+    SITUACIÓN / SITUATION:
+
+    RIESGO / RISK:
+
+    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+
+    PRÓXIMO PASO / NEXT STEP:
+
+
+    Redacta una resposta municipal a una queixa de neteja viària. Inclou disculpa institucional, verificació
+    prevista, mesura temporal, seguiment i canal per aportar noves dades. No conservis expressions castellanes.'
+  harder_variant: template_mixed
 - id: cd_149
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -415,14 +817,28 @@
   workflow: complaint_response
   source_lang: en-ca
   target_lang: ca
-  pressure_pattern: english_or_trilingual
-  prompt: 'Escriu una reclamació a un fabricant. Inclou cronologia, problema tècnic,
-    documentació disponible, solució demanada, alternativa acceptable i termini de
-    resposta. No mantinguis les expressions de la font.
+  pressure_pattern: harder_template_mixed
+  prompt: 'Font: "The customer asks for warranty replacement, refuses a refurbished device, needs a return
+    label, can provide proof of purchase and makes an escalation request."
 
-    Font: "The customer asks for warranty replacement, refuses a refurbished
-    device, needs a return label, can provide proof of purchase and makes an escalation
-    request."'
+
+    Plantilla reusable (mixed headers):
+
+    ASUNTO / SUBJECT:
+
+    SITUACIÓN / SITUATION:
+
+    RIESGO / RISK:
+
+    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+
+    PRÓXIMO PASO / NEXT STEP:
+
+
+    Escriu una reclamació a un fabricant. Inclou cronologia, problema tècnic, documentació disponible,
+    solució demanada, alternativa acceptable i termini de resposta. No mantinguis les expressions de la
+    font.'
+  harder_variant: template_mixed
 - id: cd_230
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -430,14 +846,27 @@
   workflow: ai_misconception_explanation
   source_lang: es-ca
   target_lang: ca
-  pressure_pattern: inline_source_es
-  prompt: >-
-    Explica un malentès habitual sobre el tema descrit i corregeix-lo
-    amb un exemple concret, sense copiar expressions castellanes.
+  pressure_pattern: harder_template_mixed
+  prompt: 'Font (castellà): "Mucha gente cree que un asistente automático recomienda siempre el circuito
+    médico más seguro si describe síntomas, pero no sustituye la valoración de urgencias ni el criterio
+    clínico."
 
-    Font (castellà): "Mucha gente cree que un asistente automático recomienda
-    siempre el circuito médico más seguro si describe síntomas, pero no sustituye
-    la valoración de urgencias ni el criterio clínico."
+
+    Plantilla reusable (mixed headers):
+
+    ASUNTO / SUBJECT:
+
+    SITUACIÓN / SITUATION:
+
+    RIESGO / RISK:
+
+    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+
+    PRÓXIMO PASO / NEXT STEP:
+
+
+    Fes l''explicació.'
+  harder_variant: template_mixed
 - id: cd_231
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -445,14 +874,27 @@
   workflow: citizen_response
   source_lang: en-ca
   target_lang: ca
-  pressure_pattern: english_or_trilingual
-  prompt: >-
-    Redacta una resposta institucional a una consulta ciutadana. Inclou
-    recepció, estat de revisió, documentació pendent, termini orientatiu i canal de
-    seguiment.
+  pressure_pattern: harder_template_mixed
+  prompt: 'Font: "A resident asks about a driveway permit, a pending site inspection, missing photographs
+    and the deadline to submit the updated sketch."
 
-    Font: "A resident asks about a driveway permit, a pending site
-    inspection, missing photographs and the deadline to submit the updated sketch."
+
+    Plantilla reusable (mixed headers):
+
+    ASUNTO / SUBJECT:
+
+    SITUACIÓN / SITUATION:
+
+    RIESGO / RISK:
+
+    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+
+    PRÓXIMO PASO / NEXT STEP:
+
+
+    Redacta una resposta institucional a una consulta ciutadana. Inclou recepció, estat de revisió, documentació
+    pendent, termini orientatiu i canal de seguiment.'
+  harder_variant: template_mixed
 - id: cd_232
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -460,15 +902,27 @@
   workflow: client_reply
   source_lang: es-ca
   target_lang: ca
-  pressure_pattern: inline_source_es
-  prompt: >-
-    Escriu una resposta professional a un client. Ha de reconèixer el
-    retard, separar dades pendents i compensació possible, proposar calendari i
-    evitar copiar expressions del text original.
+  pressure_pattern: harder_template_mixed
+  prompt: 'Font (castellà): "El cliente dice que el onboarding se retrasa porque faltan datos de facturación,
+    exige corregir la factura inicial y pide descuento por la espera."
 
-    Font (castellà): "El cliente dice que el onboarding se retrasa porque faltan
-    datos de facturación, exige corregir la factura inicial y pide descuento por la
-    espera."
+
+    Plantilla reusable (mixed headers):
+
+    ASUNTO / SUBJECT:
+
+    SITUACIÓN / SITUATION:
+
+    RIESGO / RISK:
+
+    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+
+    PRÓXIMO PASO / NEXT STEP:
+
+
+    Escriu una resposta professional a un client. Ha de reconèixer el retard, separar dades pendents i
+    compensació possible, proposar calendari i evitar copiar expressions del text original.'
+  harder_variant: template_mixed
 - id: cd_233
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -476,14 +930,27 @@
   workflow: client_reply
   source_lang: en-ca
   target_lang: ca
-  pressure_pattern: english_or_trilingual
-  prompt: >-
-    Redacta un correu breu per a un client. Inclou situació, límit del
-    que es pot confirmar, informació pendent, alternativa viable i proper pas.
+  pressure_pattern: harder_template_mixed
+  prompt: 'Font: "The renewal has more seats than expected, procurement needs a corrected quote, the approval
+    deadline is close and the client asks us to hold the current price."
 
-    Font: "The renewal has more seats than expected, procurement needs a
-    corrected quote, the approval deadline is close and the client asks us to hold
-    the current price."
+
+    Plantilla reusable (mixed headers):
+
+    ASUNTO / SUBJECT:
+
+    SITUACIÓN / SITUATION:
+
+    RIESGO / RISK:
+
+    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+
+    PRÓXIMO PASO / NEXT STEP:
+
+
+    Redacta un correu breu per a un client. Inclou situació, límit del que es pot confirmar, informació
+    pendent, alternativa viable i proper pas.'
+  harder_variant: template_mixed
 - id: cd_234
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -491,14 +958,27 @@
   workflow: client_reply
   source_lang: es-ca
   target_lang: ca
-  pressure_pattern: inline_source_es
-  prompt: >-
-    Escriu una resposta a un client que pressiona per llançar una acció
-    comercial. Mantén un to col·laboratiu, indica què es pot avançar, què falta
-    validar i quin calendari és prudent.
+  pressure_pattern: harder_template_mixed
+  prompt: 'Font (castellà): "La campaña necesita materiales adaptados, el lanzamiento está anunciado,
+    el equipo legal no ha dado aprobación y el cliente pide publicar hoy."
 
-    Font (castellà): "La campaña necesita materiales adaptados, el lanzamiento está
-    anunciado, el equipo legal no ha dado aprobación y el cliente pide publicar hoy."
+
+    Plantilla reusable (mixed headers):
+
+    ASUNTO / SUBJECT:
+
+    SITUACIÓN / SITUATION:
+
+    RIESGO / RISK:
+
+    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+
+    PRÓXIMO PASO / NEXT STEP:
+
+
+    Escriu una resposta a un client que pressiona per llançar una acció comercial. Mantén un to col·laboratiu,
+    indica què es pot avançar, què falta validar i quin calendari és prudent.'
+  harder_variant: template_mixed
 - id: cd_235
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -506,15 +986,27 @@
   workflow: client_reply
   source_lang: en-ca
   target_lang: ca
-  pressure_pattern: english_or_trilingual
-  prompt: >-
-    Escriu una resposta equilibrada a un client B2B. Inclou disculpa
-    prudent, verificació, solució provisional, límits sobre compensacions i següent
-    actualització.
+  pressure_pattern: harder_template_mixed
+  prompt: 'Font: "The shipment arrived with one damaged pallet, the buyer asks for urgent replacement
+    stock, threatens a chargeback and says the warehouse cannot wait."
 
-    Font: "The shipment arrived with one damaged pallet, the buyer asks
-    for urgent replacement stock, threatens a chargeback and says the warehouse
-    cannot wait."
+
+    Plantilla reusable (mixed headers):
+
+    ASUNTO / SUBJECT:
+
+    SITUACIÓN / SITUATION:
+
+    RIESGO / RISK:
+
+    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+
+    PRÓXIMO PASO / NEXT STEP:
+
+
+    Escriu una resposta equilibrada a un client B2B. Inclou disculpa prudent, verificació, solució provisional,
+    límits sobre compensacions i següent actualització.'
+  harder_variant: template_mixed
 - id: cd_236
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -522,15 +1014,27 @@
   workflow: complaint_response
   source_lang: en-ca
   target_lang: ca
-  pressure_pattern: english_or_trilingual
-  prompt: >-
-    Escriu una reclamació formal. Inclou cronologia, impacte, documents
-    adjunts, petició concreta i termini de resposta, sense conservar expressions
-    de la font.
+  pressure_pattern: harder_template_mixed
+  prompt: 'Font: "The clinic moved the appointment without a reminder, the specialist was unavailable,
+    the patient paid for private transport and asks for a refund or a priority slot."
 
-    Font: "The clinic moved the appointment without a reminder, the
-    specialist was unavailable, the patient paid for private transport and asks for
-    a refund or a priority slot."
+
+    Plantilla reusable (mixed headers):
+
+    ASUNTO / SUBJECT:
+
+    SITUACIÓN / SITUATION:
+
+    RIESGO / RISK:
+
+    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+
+    PRÓXIMO PASO / NEXT STEP:
+
+
+    Escriu una reclamació formal. Inclou cronologia, impacte, documents adjunts, petició concreta i termini
+    de resposta, sense conservar expressions de la font.'
+  harder_variant: template_mixed
 - id: cd_237
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -538,14 +1042,27 @@
   workflow: complaint_response
   source_lang: es-ca
   target_lang: ca
-  pressure_pattern: inline_source_es
-  prompt: >-
-    Redacta una resposta municipal a una queixa tributària. Ha de reconèixer
-    la recepció, explicar comprovacions, indicar documentació útil, termini i canal
-    de seguiment.
+  pressure_pattern: harder_template_mixed
+  prompt: 'Font (castellà): "La persona reclama una tasa duplicada, dice que el recibo no refleja la bonificación,
+    aporta registro de entrada y pide respuesta escrita."
 
-    Font (castellà): "La persona reclama una tasa duplicada, dice que el recibo no
-    refleja la bonificación, aporta registro de entrada y pide respuesta escrita."
+
+    Plantilla reusable (mixed headers):
+
+    ASUNTO / SUBJECT:
+
+    SITUACIÓN / SITUATION:
+
+    RIESGO / RISK:
+
+    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+
+    PRÓXIMO PASO / NEXT STEP:
+
+
+    Redacta una resposta municipal a una queixa tributària. Ha de reconèixer la recepció, explicar comprovacions,
+    indicar documentació útil, termini i canal de seguiment.'
+  harder_variant: template_mixed
 - id: cd_238
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -553,13 +1070,27 @@
   workflow: complaint_response
   source_lang: es-ca
   target_lang: ca
-  pressure_pattern: inline_source_es
-  prompt: >-
-    Escriu una reclamació a una companyia de transport. Inclou fets,
-    conseqüències, proves disponibles, solució demanada i petició de confirmació.
+  pressure_pattern: harder_template_mixed
+  prompt: 'Font (castellà): "El equipaje no llegó tras una escala, el mostrador no abrió reclamación completa,
+    hay gastos de primera necesidad y se solicita indemnización."
 
-    Font (castellà): "El equipaje no llegó tras una escala, el mostrador no abrió
-    reclamación completa, hay gastos de primera necesidad y se solicita indemnización."
+
+    Plantilla reusable (mixed headers):
+
+    ASUNTO / SUBJECT:
+
+    SITUACIÓN / SITUATION:
+
+    RIESGO / RISK:
+
+    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+
+    PRÓXIMO PASO / NEXT STEP:
+
+
+    Escriu una reclamació a una companyia de transport. Inclou fets, conseqüències, proves disponibles,
+    solució demanada i petició de confirmació.'
+  harder_variant: template_mixed
 - id: cd_239
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -567,15 +1098,27 @@
   workflow: complaint_response
   source_lang: en-ca
   target_lang: ca
-  pressure_pattern: english_or_trilingual
-  prompt: >-
-    Redacta una resposta institucional a una queixa veïnal. Inclou
-    reconeixement, actuació immediata, verificació prevista, terminis i canal per
-    aportar més informació.
+  pressure_pattern: harder_template_mixed
+  prompt: 'Font: "A parent reports a playground fence gap, calls it a hazard, says the first report was
+    unanswered and asks for an inspection before the weekend."
 
-    Font: "A parent reports a playground fence gap, calls it a hazard,
-    says the first report was unanswered and asks for an inspection before the
-    weekend."
+
+    Plantilla reusable (mixed headers):
+
+    ASUNTO / SUBJECT:
+
+    SITUACIÓN / SITUATION:
+
+    RIESGO / RISK:
+
+    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+
+    PRÓXIMO PASO / NEXT STEP:
+
+
+    Redacta una resposta institucional a una queixa veïnal. Inclou reconeixement, actuació immediata,
+    verificació prevista, terminis i canal per aportar més informació.'
+  harder_variant: template_mixed
 - id: cd_240
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -583,14 +1126,13 @@
   workflow: complaint_response
   source_lang: en-ca
   target_lang: ca
-  pressure_pattern: english_or_trilingual
-  prompt: >-
-    Escriu una reclamació a la propietat d'un habitatge. Inclou antecedents,
-    discrepància, proves disponibles, petició d'import i termini de resposta.
+  pressure_pattern: harder_short_implicit
+  prompt: 'Font: "The landlord kept part of the deposit after checkout, claims extra cleaning, ignores
+    the photos sent on move-out day and has not provided an itemized statement."
 
-    Font: "The landlord kept part of the deposit after checkout, claims
-    extra cleaning, ignores the photos sent on move-out day and has not provided an
-    itemized statement."
+
+    Redacta la reclamació.'
+  harder_variant: short_implicit
 - id: cd_241
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -598,13 +1140,13 @@
   workflow: complaint_response
   source_lang: es-ca
   target_lang: ca
-  pressure_pattern: inline_source_es
-  prompt: >-
-    Escriu una reclamació educativa clara i respectuosa. Inclou exposició
-    dels fets, impacte, documents adjunts, petició principal i alternativa acceptable.
+  pressure_pattern: harder_short_implicit
+  prompt: 'Font (castellà): "La matrícula aparece anulada, la plaza se ofreció a otra persona, el justificante
+    de pago se envió a secretaría y la familia valora presentar recurso."
 
-    Font (castellà): "La matrícula aparece anulada, la plaza se ofreció a otra persona,
-    el justificante de pago se envió a secretaría y la familia valora presentar recurso."
+
+    Redacta la reclamació.'
+  harder_variant: short_implicit
 - id: cd_242
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -612,14 +1154,13 @@
   workflow: privacy_guidance
   source_lang: en-ca
   target_lang: ca
-  pressure_pattern: english_or_trilingual
-  prompt: >-
-    Dona una guia de privacitat amb passos ordenats i advertiments
-    pràctics. No mantinguis la terminologia de la font.
+  pressure_pattern: harder_short_implicit
+  prompt: 'Font: "Before leaving a shared family tablet at a holiday apartment, review location sharing,
+    cloud backups, saved passwords, photo sync and app purchases."
 
-    Font: "Before leaving a shared family tablet at a holiday apartment,
-    review location sharing, cloud backups, saved passwords, photo sync and app
-    purchases."
+
+    Dona''m els passos.'
+  harder_variant: short_implicit
 - id: cd_243
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -627,15 +1168,13 @@
   workflow: procurement_note
   source_lang: es-ca
   target_lang: ca
-  pressure_pattern: inline_source_es
-  prompt: >-
-    Escriu una nota de contractació breu. Inclou necessitat, criteris
-    tècnics, riscos, comprovacions documentals i proper tràmit, sense copiar termes
-    castellans.
+  pressure_pattern: harder_short_implicit
+  prompt: 'Font (castellà): "Para la feria local falta contratar una carpa accesible, el montaje debe
+    respetar aforo, se exige seguro y la mesa de contratación pide informe técnico."
 
-    Font (castellà): "Para la feria local falta contratar una carpa accesible, el
-    montaje debe respetar aforo, se exige seguro y la mesa de contratación pide
-    informe técnico."
+
+    Redacta la nota.'
+  harder_variant: short_implicit
 - id: cd_244
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -643,14 +1182,13 @@
   workflow: procurement_note
   source_lang: en-ca
   target_lang: ca
-  pressure_pattern: english_or_trilingual
-  prompt: >-
-    Redacta una nota de contractació. Inclou objectiu, abast, criteris de
-    qualitat, riscos d'accessibilitat, dades a protegir i recomanació condicionada.
+  pressure_pattern: harder_short_implicit
+  prompt: 'Font: "The city needs live captioning for council sessions, searchable minutes, accessibility
+    checks and a vendor able to handle urgent schedule changes."
 
-    Font: "The city needs live captioning for council sessions, searchable
-    minutes, accessibility checks and a vendor able to handle urgent schedule
-    changes."
+
+    Redacta la nota.'
+  harder_variant: short_implicit
 - id: cd_245
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -658,15 +1196,13 @@
   workflow: procurement_note
   source_lang: es-ca
   target_lang: ca
-  pressure_pattern: inline_source_es
-  prompt: >-
-    Escriu una nota interna per comparar proveïdors. Inclou criteris de
-    qualitat, cost, continuïtat, riscos logístics, condicions de transició i decisió
-    recomanada.
+  pressure_pattern: harder_short_implicit
+  prompt: 'Font (castellà): "El embalaje actual genera roturas, el proveedor rechaza penalización, el
+    almacén pide cajas reforzadas y compras necesita una decisión esta semana."
 
-    Font (castellà): "El embalaje actual genera roturas, el proveedor rechaza
-    penalización, el almacén pide cajas reforzadas y compras necesita una decisión
-    esta semana."
+
+    Redacta la nota.'
+  harder_variant: short_implicit
 - id: cd_246
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -674,14 +1210,13 @@
   workflow: procurement_note
   source_lang: en-ca
   target_lang: ca
-  pressure_pattern: english_or_trilingual
-  prompt: >-
-    Redacta una nota de decisió sobre un servei logístic. Inclou criteris
-    operatius, cobertura, cost, riscos, prova pilot i recomanació.
+  pressure_pattern: harder_short_implicit
+  prompt: 'Font: "The courier offer includes scheduled pickup, insurance for fragile items, partial tracking,
+    weekend limits and a surcharge for rural deliveries."
 
-    Font: "The courier offer includes scheduled pickup, insurance for
-    fragile items, partial tracking, weekend limits and a surcharge for rural
-    deliveries."
+
+    Redacta la nota.'
+  harder_variant: short_implicit
 - id: cd_247
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -689,14 +1224,13 @@
   workflow: project_status
   source_lang: en-ca
   target_lang: ca
-  pressure_pattern: english_or_trilingual
-  prompt: >-
-    Escriu una actualització de projecte per a direcció. Organitza-la en
-    estat, avenços, riscos, decisions necessàries i properes accions, sense mantenir
-    termes de la font.
+  pressure_pattern: harder_short_implicit
+  prompt: 'Font: "The dashboard shows incomplete metrics, churn analysis misses one cohort, rollout is
+    paused and the sales team needs a decision before Monday."
 
-    Font: "The dashboard shows incomplete metrics, churn analysis misses
-    one cohort, rollout is paused and the sales team needs a decision before Monday."
+
+    Fes l''actualització.'
+  harder_variant: short_implicit
 - id: cd_248
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -704,14 +1238,13 @@
   workflow: project_status
   source_lang: es-ca
   target_lang: ca
-  pressure_pattern: inline_source_es
-  prompt: >-
-    Redacta una actualització d'estat per a una comissió de seguiment.
-    Inclou resum, fites, documentació pendent, riscos, mesures correctores i decisió
-    requerida.
+  pressure_pattern: harder_short_implicit
+  prompt: 'Font (castellà): "La subvención exige hitos trimestrales, faltan justificantes de gasto, auditoría
+    pide evidencias adicionales y el calendario se ha estrechado."
 
-    Font (castellà): "La subvención exige hitos trimestrales, faltan justificantes
-    de gasto, auditoría pide evidencias adicionales y el calendario se ha estrechado."
+
+    Fes l''actualització.'
+  harder_variant: short_implicit
 - id: cd_249
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -719,13 +1252,13 @@
   workflow: project_status
   source_lang: en-ca
   target_lang: ca
-  pressure_pattern: english_or_trilingual
-  prompt: >-
-    Escriu una actualització breu de projecte públic. Inclou estat, proves
-    pendents, riscos per a usuaris, comunicació prevista i decisió de llançament.
+  pressure_pattern: harder_short_implicit
+  prompt: 'Font: "The service portal login is ready, accessibility testing found two issues, launch communications
+    are drafted and support staff need training."
 
-    Font: "The service portal login is ready, accessibility testing found
-    two issues, launch communications are drafted and support staff need training."
+
+    Fes l''actualització.'
+  harder_variant: short_implicit
 - id: cd_250
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -733,13 +1266,13 @@
   workflow: project_status
   source_lang: es-ca
   target_lang: ca
-  pressure_pattern: inline_source_es
-  prompt: >-
-    Escriu una actualització executiva de projecte. Inclou estat, incidències
-    de dades, riscos comercials, tasques crítiques i propera decisió.
+  pressure_pattern: harder_short_implicit
+  prompt: 'Font (castellà): "El inventario físico no cuadra con números de serie, faltan etiquetas en
+    tienda y la migración del catálogo puede afectar la apertura."
 
-    Font (castellà): "El inventario físico no cuadra con números de serie, faltan
-    etiquetas en tienda y la migración del catálogo puede afectar la apertura."
+
+    Fes l''actualització.'
+  harder_variant: short_implicit
 - id: cd_251
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -747,13 +1280,13 @@
   workflow: public_notice
   source_lang: en-ca
   target_lang: ca
-  pressure_pattern: english_or_trilingual
-  prompt: >-
-    Escriu un avís públic amb títol, afectació, alternatives, recomanacions
-    i propera actualització. No conservis expressions de la font.
+  pressure_pattern: harder_short_implicit
+  prompt: 'Font: "A library roof leak closes the study room, public computers move to the first floor
+    and staff will protect reserved books."
 
-    Font: "A library roof leak closes the study room, public computers
-    move to the first floor and staff will protect reserved books."
+
+    Prepara l''avís.'
+  harder_variant: short_implicit
 - id: cd_252
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -761,13 +1294,13 @@
   workflow: public_notice
   source_lang: es-ca
   target_lang: ca
-  pressure_pattern: inline_source_es
-  prompt: >-
-    Redacta un avís municipal clar i operatiu. Inclou motiu, espais
-    afectats, ubicació alternativa, horaris, recomanacions i canal de consulta.
+  pressure_pattern: harder_short_implicit
+  prompt: 'Font (castellà): "El mercado semanal cambia varias paradas por un fallo de suministro eléctrico,
+    se instalará un generador y habrá nueva ubicación temporal."
 
-    Font (castellà): "El mercado semanal cambia varias paradas por un fallo de
-    suministro eléctrico, se instalará un generador y habrá nueva ubicación temporal."
+
+    Prepara l''avís.'
+  harder_variant: short_implicit
 - id: cd_253
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -775,13 +1308,13 @@
   workflow: public_notice
   source_lang: en-ca
   target_lang: ca
-  pressure_pattern: english_or_trilingual
-  prompt: >-
-    Escriu un avís públic sobre mobilitat. Inclou títol, dates, afectació,
-    alternativa, col·lectius prioritaris i propera comunicació.
+  pressure_pattern: harder_short_implicit
+  prompt: 'Font: "A road repair near the old bridge requires a shuttle stop relocation, residents need
+    a signed detour and school transport will be assisted."
 
-    Font: "A road repair near the old bridge requires a shuttle stop
-    relocation, residents need a signed detour and school transport will be assisted."
+
+    Prepara l''avís.'
+  harder_variant: short_implicit
 - id: cd_254
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -789,13 +1322,13 @@
   workflow: public_notice
   source_lang: es-ca
   target_lang: ca
-  pressure_pattern: inline_source_es
-  prompt: >-
-    Escriu un avís públic de protecció civil. Inclou què se sap, afectació,
-    recomanacions, equipaments afectats, pròxima revisió i canal oficial.
+  pressure_pattern: harder_short_implicit
+  prompt: 'Font (castellà): "Un incendio próximo genera humo, el polideportivo cerrará por revisión de
+    ventilación y la reapertura dependerá de la medición ambiental."
 
-    Font (castellà): "Un incendio próximo genera humo, el polideportivo cerrará por
-    revisión de ventilación y la reapertura dependerá de la medición ambiental."
+
+    Prepara l''avís.'
+  harder_variant: short_implicit
 - id: cd_255
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -803,13 +1336,13 @@
   workflow: study_plan
   source_lang: en-ca
   target_lang: ca
-  pressure_pattern: english_or_trilingual
-  prompt: >-
-    Prepara un pla d'estudi de sis dies a partir de la font. Ha de tenir
-    objectius diaris, pràctica activa, revisió final i criteris de progrés.
+  pressure_pattern: harder_short_implicit
+  prompt: 'Font: "Start with a mock test, revise essay structure, drill grammar gaps, practise speaking
+    aloud and finish with a checklist."
 
-    Font: "Start with a mock test, revise essay structure, drill grammar
-    gaps, practise speaking aloud and finish with a checklist."
+
+    Fes el pla.'
+  harder_variant: short_implicit
 - id: cd_256
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -817,13 +1350,13 @@
   workflow: support_reply
   source_lang: en-ca
   target_lang: ca
-  pressure_pattern: english_or_trilingual
-  prompt: >-
-    Contesta com a suport tècnic. Resumeix el problema, demana verificacions,
-    proposa una mesura temporal segura, indica escalat i evita copiar termes de la font.
+  pressure_pattern: harder_short_implicit
+  prompt: 'Font: "The token refresh fails after webhook retry, staging works, production payloads are
+    rejected and the developer asks for logs."
 
-    Font: "The token refresh fails after webhook retry, staging works,
-    production payloads are rejected and the developer asks for logs."
+
+    Fes la resposta.'
+  harder_variant: short_implicit
 - id: cd_257
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -831,13 +1364,13 @@
   workflow: support_reply
   source_lang: es-ca
   target_lang: ca
-  pressure_pattern: inline_source_es
-  prompt: >-
-    Escriu una resposta de suport. Inclou reconeixement, hipòtesis inicials,
-    comprovacions ordenades, dades que cal enviar i termini de seguiment.
+  pressure_pattern: harder_short_implicit
+  prompt: 'Font (castellà): "La sincronización crea albarán sin pedido asociado, solo pasa con un usuario
+    concreto y podrían faltar permisos en la delegación."
 
-    Font (castellà): "La sincronización crea albarán sin pedido asociado, solo pasa
-    con un usuario concreto y podrían faltar permisos en la delegación."
+
+    Fes la resposta.'
+  harder_variant: short_implicit
 - id: cd_258
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -845,14 +1378,13 @@
   workflow: support_reply
   source_lang: en-ca
   target_lang: ca
-  pressure_pattern: english_or_trilingual
-  prompt: >-
-    Escriu una resposta de suport per a un equip logístic. Dona passos
-    de diagnosi, instruccions per evitar pèrdua de dades, informació a recollir i
-    compromís d'actualització.
+  pressure_pattern: harder_short_implicit
+  prompt: 'Font: "The handheld scanner prints the wrong label after offline mode, batch upload duplicates
+    entries and one device has not received the update."
 
-    Font: "The handheld scanner prints the wrong label after offline mode,
-    batch upload duplicates entries and one device has not received the update."
+
+    Fes la resposta.'
+  harder_variant: short_implicit
 - id: cd_259
   category: crosslingual_basic
   source_dataset_yaml: data/prompts_crosslingual_basic.yaml
@@ -860,10 +1392,10 @@
   workflow: support_reply
   source_lang: es-ca
   target_lang: ca
-  pressure_pattern: inline_source_es
-  prompt: >-
-    Contesta com a suport. Resumeix la incidència, dona comprovacions
-    segures, proposa solució temporal, demana dades mínimes i fixa el proper contacte.
+  pressure_pattern: harder_short_implicit
+  prompt: 'Font (castellà): "La reserva aparece en calendario, pero la sala queda bloqueada dos veces,
+    la confirmación llega tarde y recepción no puede liberar el hueco."
 
-    Font (castellà): "La reserva aparece en calendario, pero la sala queda bloqueada
-    dos veces, la confirmación llega tarde y recepción no puede liberar el hueco."
+
+    Fes la resposta.'
+  harder_variant: short_implicit

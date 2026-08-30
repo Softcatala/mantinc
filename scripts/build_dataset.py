@@ -24,7 +24,6 @@ SOURCES = {
     "multi_turn": ROOT / "data/prompts_multi_turn.yaml",
     "crosslingual_advanced": ROOT / "data/prompts_crosslingual_advanced.yaml",
     "rag_context": ROOT / "data/prompts_rag_context.yaml",
-    "harder": ROOT / "data/prompts_harder.yaml",
 }
 EXPECTED_CATEGORY_COUNTS = {
     "monolingual": 60,
@@ -32,7 +31,6 @@ EXPECTED_CATEGORY_COUNTS = {
     "multi_turn": 60,
     "crosslingual_advanced": 60,
     "rag_context": 60,
-    "harder": 60,
 }
 
 
@@ -93,6 +91,15 @@ def validate_rows(rows: list[dict[str, Any]]) -> None:
             raise ValueError(f"{row.get('id')} is missing fields: {sorted(missing)}")
         if row["target_lang"] != "ca":
             raise ValueError(f"{row['id']} must target Catalan")
+        if row.get("harder_variant") not in {
+            None,
+            "template_es",
+            "template_mixed",
+            "short_implicit",
+        }:
+            raise ValueError(f"{row['id']} has an invalid harder_variant")
+        if row["category"] == "monolingual" and row.get("harder_variant"):
+            raise ValueError(f"{row['id']} cannot harden the monolingual control")
         if row["pressure_pattern"] != classify(row):
             raise ValueError(f"{row['id']} has an invalid pressure_pattern")
         if "labels" in row or "version" in row or "forbidden_terms" in row:

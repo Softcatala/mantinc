@@ -29,7 +29,6 @@ DEFAULT_PROMPTS = [
     "data/prompts_multi_turn.yaml",
     "data/prompts_crosslingual_advanced.yaml",
     "data/prompts_rag_context.yaml",
-    "data/prompts_harder.yaml",
 ]
 
 

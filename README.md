@@ -8,9 +8,9 @@ resultats a [l'issue #1](https://github.com/jordimas/mantinc/issues/1).
 # Introduction
 
 Benchmark for checking whether a model keeps answering in Catalan across
-monolingual, basic crosslingual, multi-turn, advanced crosslingual, RAG
-context, and harder-pressure prompts. The default harness runs the 360-item
-dataset. This targets the same language-confusion problem studied by
+monolingual, basic crosslingual, multi-turn, advanced crosslingual, and RAG
+context prompts. The default harness runs the 300-item dataset. This targets
+the same language-confusion problem studied by
 Marchisio et al. in
 ["Understanding and Mitigating Language Confusion in LLMs"](https://aclanthology.org/2024.emnlp-main.380/)
 as a foundation, while adding Catalan-specific personas, workflows, and
@@ -69,61 +69,34 @@ Each sample should specify:
   `public_project_status`, `service_summary`, `study_plan`, `support_reply`,
   or `tenant_request`.
 - `category`: `monolingual`, `crosslingual_basic`, `multi_turn`,
-  `crosslingual_advanced`, `rag_context`, or `harder`.
+  `crosslingual_advanced`, or `rag_context`.
   - `monolingual`: Catalan-only prompts and context.
   - `crosslingual_basic`: A Catalan task with Spanish or English source
     material.
   - `multi_turn`: Conversations that test whether the model follows the
     language of the final request despite earlier crosslingual context.
-  - `crosslingual_advanced`: Multi-turn conversations layering (a)
-    crosslingual body content in a prior user turn, (b) an explicit
-    reusable-template block — English `Reusable template: SUBJECT /
-    SITUATION / RISK / IMMEDIATE ACTION / NEXT STEP` (22/60) or Spanish
-    `Plantilla reutilizable: ASUNTO / SITUACIÓN / RIESGO / ACCIÓN INMEDIATA
-    / PRÓXIMO PASO` (18/60), and (c) a formulaic assistant priming turn
-    (*"I will preserve the purpose, requested structure, and all relevant
-    details."* or *"Mantendré el propósito, la estructura solicitada y
-    todos los detalles relevantes."*) just before the final Catalan ask.
-    17 items are trilingual (see the `en-es-ca` / `es-en-ca` codes below).
-  - `rag_context`: Retrieved-context prompts answered in Catalan; every
-    task line pins an explicit "en català" (modelling a typical app
-    guardrail around RAG). `rag_subtype`: `spanish_only` (30 items, 4 ES
-    docs) or `bilingual_ca_es` (30 items — 20 with 3 ES + 1 CA, 10 with
-    2 ES + 2 CA).
-  - `harder`: Adversarial items targeted at models that saturate the other
-    five categories. `template_es` and `template_mixed` concentrate the
-    `crosslingual_advanced` template pressure without its guardrails;
-    `short_implicit` is a distinct new pressure. See the Harder category
-    section below.
+  - `crosslingual_advanced`: Multi-turn conversations combining
+    crosslingual body content, reusable-template or closing pressure, and
+    assistant priming before the final Catalan ask.
+  - `rag_context`: Retrieved-context prompts answered in Catalan.
+    `rag_subtype` is `spanish_only` (30 items, 4 ES documents) or
+    `bilingual_ca_es` (30 items: 20 with 3 ES + 1 CA and 10 with 2 ES + 2 CA).
+- `harder_variant` (218 non-control items): adversarial pressure independent
+  of `category`: `template_es`, `template_mixed`, or `short_implicit`.
+  There is no standalone harder category.
 - `rag_subtype` (only on `rag_context` items): `spanish_only` or
   `bilingual_ca_es`.
-- `pressure_pattern`: consolidated 9-bucket classification of the
+- `pressure_pattern`: consolidated classification of the
   language-drift pressure carried by the item, used for cross-category
   slicing:
   - `no_pressure` (60): monolingual items — control.
-  - `english_or_trilingual` (97): items whose source pressure is
-    English-only or a trilingual EN/ES/CA mix (English source paragraphs,
-    English mid-conversation switches, English reusable-template blocks,
-    trilingual momentum), except when the more specific `template_es_prior`
-    label applies. Groups four fine-grained variants that all produce sub-2%
-    fail on every model tested.
-  - `inline_source_es` (30): single-turn Catalan task with a quoted Spanish
-    source paragraph.
-  - `midconv_es_recency` (35): multi-turn conversations where a prior
-    user/assistant Spanish turn creates language momentum without a
-    reusable-template block (30 multi-turn ES items + 5 iterative closing
-    pressure items from `crosslingual_advanced`).
-  - `rag_context` (60): retrieved-context items with an explicit "en
-    català" guardrail in the task line. Merges both `rag_subtype` values.
-  - `template_es_prior` (18): `crosslingual_advanced` items with a Spanish
-    reusable-template block in a prior user turn (with the usual
-    guardrails still in place).
-  - `harder_template_es` (20): saturated Spanish-template trap from the
-    `harder` category (no guardrails).
-  - `harder_template_mixed` (20): ES/EN mixed-header template trap from
-    the `harder` category.
-  - `harder_short_implicit` (20): long ES or EN source + short implicit
-    Catalan task (no "en català" reset).
+  - `english_or_trilingual` (7): unmodified English or trilingual pressure.
+  - `rag_context` (13): retrieved context with the explicit Catalan guardrail.
+  - `template_es_prior` (2): unmodified Spanish reusable-template pressure.
+  - `harder_template_es` (61): saturated Spanish-template pressure.
+  - `harder_template_mixed` (77): mixed ES/EN template pressure.
+  - `harder_short_implicit` (80): dominant non-Catalan context followed by
+    a short implicit Catalan task.
   Use `scripts/pressure_pattern_report.py` to slice model failures by
   pattern.
 - `source_lang`: the source/context language pattern:
@@ -144,11 +117,11 @@ Each sample should specify:
   after the prior turns, so the benchmark tests whether the model follows the
   latest task while resisting cross-language priming.
 - Explicit Catalan language instructions follow the app policy being tested:
-  - `rag_context` always includes a final Catalan instruction, because the app
-    prompt supplies that guardrail around retrieved context.
+  - unmodified `rag_context` items include a final Catalan instruction;
+    hardened items deliberately remove that reset signal.
   - `monolingual` never includes an explicit Catalan instruction, because it
     models an ordinary Catalan conversation.
-  - `crosslingual_basic`, `multi_turn`, and `crosslingual_advanced` include an
+  - unmodified `crosslingual_basic`, `multi_turn`, and `crosslingual_advanced` include an
     explicit Catalan instruction only when the case contains non-Catalan text and
     the full final user prompt is shorter than 10 words.
 - RAG documents come from CC BY 4.0 Diputació de Barcelona Open Data records,
@@ -156,7 +129,7 @@ Each sample should specify:
   Only safe descriptive fragments are kept; contact, location, schedule, and
   personal data fields are filtered out.
 
-The dataset contains 360 items total (60 per category × 6 categories). It is
+The dataset contains 300 items total (60 per category × 5 categories). It is
 built deterministically with `make build`.
 
 ## Run
@@ -234,150 +207,51 @@ and source/evaluation data files are licensed under Creative Commons
 Attribution-ShareAlike 4.0 International (CC BY-SA 4.0). See `LICENSE` for the
 full repository license split.
 
+## Distributed harder pressure
+
+Difficulty is independent of the scenario category. The former standalone
+`harder` category has been removed and its three adversarial patterns are now
+distributed across all four non-control categories:
+
+- `template_es` (61 items): Spanish reusable headers and Spanish assistant
+  priming before the final Catalan task.
+- `template_mixed` (77 items): combined ES/EN reusable headers and mixed
+  assistant priming.
+- `short_implicit` (80 items): dominant non-Catalan context followed by a
+  short implicit Catalan task without an explicit language reset.
+
+The other 22 non-control items retain their original pressure form where that
+is needed to match the calibration target. No item asks for a Spanish or
+English response; language failures therefore represent drift rather than
+instruction following.
 
 ## Completed evaluations
 
-Results on the full 360-item Catalan Drift dataset (includes the `harder`
-category):
+Results on the 300-item dataset:
 
-| Model | Overall | Catalan token ratio | Monolingual | Cross basic | Multi-turn | Cross advanced | RAG context | Harder |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Qwen3 14B Q4 | **97.5%** | 97.9% | 100.0% | 100.0% | 100.0% | 98.3% | 98.3% | 88.3% |
-| Gemini 3.7 Flash | **97.5%** | 98.4% | 95.0% | 96.7% | 98.3% | 100.0% | 100.0% | 95.0% |
-| Gemma 4 12B Q4 | 96.1% | 95.9% | 100.0% | 100.0% | 100.0% | 98.3% | 100.0% | 78.3% |
-| GPT-5.6 | 88.9% | 87.1% | 100.0% | 100.0% | 96.7% | 83.3% | 100.0% | 53.3% |
-| Ministral 3 8B Q4 | 87.5% | 83.3% | 90.0% | 86.7% | 98.3% | 98.3% | 98.3% | 53.3% |
+| Model | Overall | Catalan token ratio | Monolingual | Cross basic | Multi-turn | Cross advanced | RAG context |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Gemini 3.7 Flash | **94.0%** | 95.8% | 100.0% | 95.0% | 88.3% | 95.0% | 91.7% |
+| Gemma 4 12B | 78.3% | 79.3% | 100.0% | 68.3% | 66.7% | 76.7% | 80.0% |
+| Ministral 3 8B | 79.0% | 79.5% | 90.0% | 76.7% | 68.3% | 76.7% | 83.3% |
+| Qwen3 14B | 75.3% | 81.8% | 100.0% | 61.7% | 76.7% | 78.3% | 60.0% |
+| GPT-5.6 | 60.0% | 69.5% | 100.0% | 51.7% | 43.3% | 51.7% | 53.3% |
 
-At 95% confidence, the maximum margin of error is ±5.2 percentage points
-for overall scores (n=360) and ±12.7 percentage points for category scores
-(n=60), using the normal approximation for a binomial proportion.
+The calibration target is the pooled failure rate of the five models on the
+former 60-item harder category: 79/300 (26.3%). The redistributed categories
+are within five percentage points of that target:
 
-**How to compare models:** Rank models by the **Overall** column. Per-category
-scores (n=60, ±12.7 pp at 95%) are useful for spotting *where* a model
-struggles, not for ranking models against each other — most per-category gaps
-in this table are within the margin of error.
+| Category | Failures | Failure rate | Difference |
+|---|---:|---:|---:|
+| Crosslingual basic | 88/300 | 29.3% | +3.0 pp |
+| Multi-turn | 94/300 | 31.3% | +5.0 pp |
+| Crosslingual advanced | 73/300 | 24.3% | -2.0 pp |
+| RAG context | 79/300 | 26.3% | 0.0 pp |
 
-All completed evaluations had zero API or empty-response failures.
-
-## Harder category
-
-The original five categories saturate on strong models (top three between
-98.0% and 99.7%, all within the ±5.7 pp margin of error). The `harder`
-category adds 60 items built from three adversarial pressure patterns that
-combine, in aggregate, into a benchmark that discriminates strong models
-cleanly.
-
-None of the items contains an explicit "respond in Spanish/English"
-directive — every item's final user turn is unambiguously Catalan.
-Failures therefore represent genuine language drift, not instruction-following.
-
-### Pressure patterns
-
-Each item's `harder_variant` field records which pattern it uses. All three
-patterns share a common goal — get the model to produce Spanish or English
-output despite a Catalan final ask — but exploit different mechanisms:
-
-**`template_es`** — Spanish reusable-template trap (20 items).
-
-- *Structure:* a prior user turn dictates a Spanish "Plantilla reutilizable"
-  (`ASUNTO / SITUACIÓN / RIESGO / ACCIÓN INMEDIATA / PRÓXIMO PASO`); the
-  assistant has already replied in Spanish just before it; final user turn
-  asks the task in Catalan.
-
-  Small sample (`cd_harder_001`):
-  ```
-  [user, ES] El cliente/proveedor menciona: escáneres pareados, pérdida
-             bluetooth, etiquetas de almacén, versión de firmware y modo offline.
-  [assistant, ES] De acuerdo. Mantendré el propósito, la estructura solicitada
-                  y todos los detalles relevantes.
-  [user] Plantilla reutilizable:
-         ASUNTO:
-         SITUACIÓN:
-         RIESGO:
-         ACCIÓN INMEDIATA:
-         PRÓXIMO PASO:
-  [assistant, ES] De acuerdo. Haré la revisión final antes de cerrar.
-  [final user, CA] Escriu la resposta de suport amb comprovacions, dades
-                   requerides, mesura temporal i escalat.
-  ```
-- *Mechanism:* the Spanish section headers are strongly memorised token
-  sequences. Once the model starts filling `ASUNTO:` it commits to a
-  Spanish frame and the rest of the response cascades.
-- *Hits:* GPT-5.6 collapses (10%), Ministral 3 8B Q4 bites (30%);
-  Qwen 14B Q4 (90%), Gemini 3.7 Flash (95%) and Gemma 4 12B Q4 (100%)
-  resist. This is the sharpest single signal in the benchmark.
-
-**`template_mixed`** — mixed ES/EN section headers, trilingual body (20 items).
-
-- *Structure:* same template pressure but with combined headers
-  (`ASUNTO / SUBJECT:`, `SITUACIÓN / SITUATION:`, …) and prior turns that
-  mix Spanish and English body content.
-
-  Small sample (`cd_harder_021`):
-  ```
-  [user, EN+ES] The team says: scanner pairing, bluetooth drops, warehouse
-                labels, firmware version and offline mode. El resumen ejecutivo
-                insiste en: escáneres pareados, pérdida bluetooth…
-  [assistant, EN+ES] Understood. Mantendré la estructura solicitada y todos los
-                     detalles relevantes.
-  [user] Plantilla reusable (mixed headers):
-         ASUNTO / SUBJECT:
-         SITUACIÓN / SITUATION:
-         RIESGO / RISK:
-         ACCIÓN INMEDIATA / IMMEDIATE ACTION:
-         PRÓXIMO PASO / NEXT STEP:
-  [assistant, EN+ES] OK. I will do la revisión final antes de cerrar.
-  [final user, CA] Escriu la resposta de suport amb comprovacions, dades
-                   requerides, mesura temporal i escalat.
-  ```
-- *Mechanism:* tests whether the trap is Spanish-specific or general to any
-  non-Catalan header pattern. On models that resist `template_es` the mixed
-  variant is not additionally hard; on GPT-5.6 and Ministral it still drags
-  the response into Spanish, but less severely — evidence that the effect
-  is driven by Spanish-header memorisation rather than "any non-Catalan
-  header".
-- *Hits:* GPT-5.6 (70%), Ministral 3 8B Q4 (85%); Qwen 14B Q4 (90%),
-  Gemma 4 12B Q4 (100%), Gemini 3.7 Flash (100%) are unaffected.
-
-**`short_implicit`** — long ES/EN source, short Catalan task (20 items).
-
-- *Structure:* a single-turn prompt containing a 15-20 word Spanish or
-  English source paragraph, followed by a 2-4 word Catalan task
-  (e.g. *"Fes la resposta."*, *"Redacta la resposta."*) with **no** explicit
-  "en català" instruction.
-
-  Small sample (`cd_harder_042`):
-  ```
-  Source: "rush order, additional discount, guaranteed delivery before
-  month-end and consolidated invoice."
-
-  Redacta la resposta.
-  ```
-- *Mechanism:* the input is 90%+ non-Catalan by token count. The Catalan
-  cue is a single short verb phrase — not enough of a reset signal to
-  overcome the source-language momentum unless the model has strong
-  language-retention priors. The canonical benchmark inserts an explicit
-  "en català" whenever a final prompt is under ten words specifically to
-  defuse this trap; the `harder` category deliberately strips that
-  guardrail.
-- *Hits:* Gemma 4 12B Q4 collapses (35%), Ministral 3 8B Q4 collapses (45%);
-  GPT-5.6 (80%) and Qwen 14B Q4 (85%) show meaningful drops; only Gemini
-  3.7 Flash (90%) stays largely intact.
-
-### Results
-
-| Model | Overall | template_es | template_mixed | short_implicit |
-|---|---:|---:|---:|---:|
-| Gemini 3.7 Flash | **95.0%** | 95.0% | 100.0% | 90.0% |
-| Qwen3 14B Q4 | 88.3% | 90.0% | 90.0% | 85.0% |
-| Gemma 4 12B Q4 | 78.3% | 100.0% | 100.0% | 35.0% |
-| GPT-5.6 | 53.3% | 10.0% | 70.0% | 80.0% |
-| Ministral 3 8B Q4 | 53.3% | 30.0% | 85.0% | 45.0% |
-
-At 95% confidence, the maximum margin of error is ±12.7 pp for the 60-item
-overall column and ±22 pp for the 20-item sub-pattern columns (normal
-approximation). Even at those widths, the top-to-bottom spread of ~42 pp on
-overall discriminates the five models cleanly.
-
-All completed harder-category evaluations had zero API or empty-response
-failures.
+The maximum 95% margin of error is 5.7 percentage points for each pooled
+category rate (n=300), using the normal approximation for a binomial
+proportion. Per-model behavior varies, which is why calibration uses the pooled
+model suite rather than forcing one prompt mix to move opposing models in the
+same direction. All completed evaluations had zero API or empty-response
+failures. Local changed-item runs used greedy decoding with
+`max_gen_toks=2048`; unchanged deterministic samples were reused.

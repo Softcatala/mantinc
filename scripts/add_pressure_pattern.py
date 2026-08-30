@@ -5,7 +5,7 @@ Uses text-level insertion (a new line after each item's `target_lang: ca`)
 so existing YAML formatting is preserved. Idempotent: skips items that
 already carry the field.
 
-Nine consolidated patterns (see README for definitions):
+Supported consolidated patterns (see README for definitions):
 - no_pressure
 - english_or_trilingual
 - inline_source_es
@@ -33,7 +33,6 @@ YAMLS = [
     "data/prompts_multi_turn.yaml",
     "data/prompts_crosslingual_advanced.yaml",
     "data/prompts_rag_context.yaml",
-    "data/prompts_harder.yaml",
 ]
 
 
@@ -42,14 +41,14 @@ def classify(r):
     sl = r.get("source_lang", "")
     if cat == "monolingual":
         return "no_pressure"
+    if r.get("harder_variant"):
+        return f"harder_{r['harder_variant']}"
     if cat == "crosslingual_basic":
         return "inline_source_es" if sl == "es-ca" else "english_or_trilingual"
     if cat == "multi_turn":
         return "midconv_es_recency" if sl == "es-ca" else "english_or_trilingual"
     if cat == "rag_context":
         return "rag_context"
-    if cat == "harder":
-        return f"harder_{r.get('harder_variant', 'unknown')}"
     if cat == "crosslingual_advanced":
         prior = " ".join(t.get("content", "") for t in r.get("conversation", []) if t.get("role") == "user")
         if "Plantilla reutilizable" in prior:
