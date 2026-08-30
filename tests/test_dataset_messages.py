@@ -20,7 +20,7 @@ class ConversationDatasetTest(unittest.TestCase):
         cls.conversation_rows = [row for row in cls.rows if row.get("conversation")]
 
     def test_conversations_end_with_assistant_and_roles_alternate(self) -> None:
-        self.assertEqual(len(self.conversation_rows), 120)
+        self.assertEqual(len(self.conversation_rows), 160)
         for row in self.conversation_rows:
             with self.subTest(row=row["id"]):
                 roles = [turn["role"] for turn in row["conversation"]]

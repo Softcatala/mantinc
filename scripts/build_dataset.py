@@ -19,6 +19,7 @@ SOURCES = {
     "multi_turn": ROOT / "data/prompts_multi_turn.yaml",
     "crosslingual_advanced": ROOT / "data/prompts_crosslingual_advanced.yaml",
     "rag_context": ROOT / "data/prompts_rag_context.yaml",
+    "harder": ROOT / "data/prompts_harder.yaml",
 }
 EXPECTED_CATEGORY_COUNTS = {
     "monolingual": 60,
@@ -26,6 +27,7 @@ EXPECTED_CATEGORY_COUNTS = {
     "multi_turn": 60,
     "crosslingual_advanced": 60,
     "rag_context": 60,
+    "harder": 60,
 }
 
 

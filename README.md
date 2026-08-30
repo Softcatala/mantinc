@@ -8,9 +8,10 @@ resultats a [l'issue #1](https://github.com/jordimas/mantinc/issues/1).
 # Introduction
 
 Benchmark for checking whether a model keeps answering in Catalan across
-monolingual, basic crosslingual, multi-turn, advanced crosslingual, and RAG
-context prompts. The default harness runs the 300-item dataset. This targets the same
-language-confusion problem studied by Marchisio et al. in
+monolingual, basic crosslingual, multi-turn, advanced crosslingual, RAG
+context, and harder-pressure prompts. The default harness runs the 360-item
+dataset. This targets the same language-confusion problem studied by
+Marchisio et al. in
 ["Understanding and Mitigating Language Confusion in LLMs"](https://aclanthology.org/2024.emnlp-main.380/)
 as a foundation, while adding Catalan-specific personas, workflows, and
 multi-turn pressure cases.
@@ -68,7 +69,7 @@ Each sample should specify:
   `public_project_status`, `service_summary`, `study_plan`, `support_reply`,
   or `tenant_request`.
 - `category`: `monolingual`, `crosslingual_basic`, `multi_turn`,
-  `crosslingual_advanced`, or `rag_context`.
+  `crosslingual_advanced`, `rag_context`, or `harder`.
   - `monolingual`: Catalan-only prompts and context.
   - `crosslingual_basic`: A Catalan task with Spanish or English source
     material.
@@ -78,6 +79,9 @@ Each sample should specify:
     priming, and recency priming pressure cases.
   - `rag_context`: Retrieved-context prompts with Catalan and/or Spanish source
     snippets that must be answered in Catalan.
+  - `harder`: Adversarial pressure patterns targeted at cracking language
+    retention on models that saturate the other five categories. See the
+    Harder category section below.
 - `source_lang`: the source/context language pattern:
   - `ca`: Catalan-only prompt and context.
   - `es`: Spanish retrieved context answered in Catalan.
@@ -105,8 +109,8 @@ Each sample should specify:
   Only safe descriptive fragments are kept; contact, location, schedule, and
   personal data fields are filtered out.
 
-The dataset contains 300 items total. It is built deterministically with
-`make build`.
+The dataset contains 360 items total (60 per category × 6 categories). It is
+built deterministically with `make build`.
 
 ## Run
 
@@ -186,7 +190,8 @@ full repository license split.
 
 ## Completed evaluations
 
-Results on the 300-item Catalan Drift dataset:
+Results on the original 300-item Catalan Drift dataset (before the `harder`
+category was added):
 
 | Model | Overall | Catalan token ratio | Monolingual | Crosslingual basic | Multi-turn | Crosslingual advanced | RAG context |
 |---|---:|---:|---:|---:|---:|---:|---:|
@@ -206,3 +211,54 @@ struggles, not for ranking models against each other — most per-category gaps
 in this table are within the margin of error.
 
 All completed evaluations had zero API or empty-response failures.
+
+## Harder category
+
+The original five categories saturate on strong models (top three between
+98.0% and 99.7%, all within the ±5.7 pp margin of error). The `harder`
+category adds 60 items built from three adversarial pressure patterns that
+combine, in aggregate, into a benchmark that discriminates strong models
+cleanly. Each item's `harder_variant` field identifies which pattern it uses:
+
+- **`template_es`** (20 items): a Spanish reusable-template header block
+  (`ASUNTO / SITUACIÓN / RIESGO / ACCIÓN INMEDIATA / PRÓXIMO PASO`) in a
+  prior user turn, with a prior assistant already replying in Spanish. The
+  final user turn asks the task in Catalan.
+- **`template_mixed`** (20 items): the same template shape, but with mixed
+  ES/EN section headers over trilingual body content in the prior turns.
+- **`short_implicit`** (20 items): a long ES or EN source paragraph followed
+  by a short (under ten words) Catalan task, with no explicit "en català"
+  instruction.
+
+None of these items contains an explicit "respond in Spanish/English"
+directive — every item's final user turn is unambiguously Catalan. Failures
+therefore represent genuine language drift, not instruction-following.
+
+Results on the 60-item `harder` category:
+
+| Model | Overall | template_es | template_mixed | short_implicit |
+|---|---:|---:|---:|---:|
+| Gemini 3.7 Flash | **95.0%** | 95.0% | 100.0% | 90.0% |
+| Qwen3 14B Q4 | 88.3% | 90.0% | 90.0% | 85.0% |
+| Gemma 4 12B Q4 | 78.3% | 100.0% | 100.0% | 35.0% |
+| GPT-5.6 | 53.3% | 10.0% | 70.0% | 80.0% |
+| Ministral 3 8B Q4 | 53.3% | 30.0% | 85.0% | 45.0% |
+
+At 95% confidence, the maximum margin of error is ±12.7 pp for the 60-item
+overall column and ±22 pp for the 20-item sub-pattern columns (normal
+approximation). Even at those widths, the top-to-bottom spread of ~42 pp on
+overall discriminates the five models cleanly.
+
+Notable per-pattern findings:
+
+- `template_es` cracks GPT-5.6 (10%) but the two open-weights 14B/12B models
+  resist it (90%/100%). The Spanish-template trap is a GPT-5.6-specific
+  weakness rather than a general language-confusion signal.
+- `short_implicit` is where Gemma 4 12B collapses (35%), matching Ministral's
+  weakness (45%) — long ES/EN source paragraphs with an implicit Catalan
+  task line dominate its otherwise strong retention on the other categories.
+- `template_mixed` is only really hard for GPT-5.6 (70%) and Ministral (85%);
+  the other three models breeze through it.
+
+All completed harder-category evaluations had zero API or empty-response
+failures.
