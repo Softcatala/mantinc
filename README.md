@@ -75,19 +75,37 @@ Each sample should specify:
     material.
   - `multi_turn`: Conversations that test whether the model follows the
     language of the final request despite earlier crosslingual context.
-  - `crosslingual_advanced`: Combined assistant priming/copying, momentum
-    priming, and recency priming pressure cases.
-  - `rag_context`: Retrieved-context prompts with Catalan and/or Spanish source
-    snippets that must be answered in Catalan.
-  - `harder`: Adversarial pressure patterns targeted at cracking language
-    retention on models that saturate the other five categories. See the
-    Harder category section below.
+  - `crosslingual_advanced`: Multi-turn conversations layering (a)
+    crosslingual body content in a prior user turn, (b) an explicit
+    reusable-template block — English `Reusable template: SUBJECT /
+    SITUATION / RISK / IMMEDIATE ACTION / NEXT STEP` (22/60) or Spanish
+    `Plantilla reutilizable: ASUNTO / SITUACIÓN / RIESGO / ACCIÓN INMEDIATA
+    / PRÓXIMO PASO` (18/60), and (c) a formulaic assistant priming turn
+    (*"I will preserve the purpose, requested structure, and all relevant
+    details."* or *"Mantendré el propósito, la estructura solicitada y
+    todos los detalles relevantes."*) just before the final Catalan ask.
+    17 items are trilingual (see the `en-es-ca` / `es-en-ca` codes below).
+  - `rag_context`: Retrieved-context prompts answered in Catalan; every
+    task line pins an explicit "en català" (modelling a typical app
+    guardrail around RAG). `rag_subtype`: `spanish_only` (30 items, 4 ES
+    docs) or `bilingual_ca_es` (30 items — 20 with 3 ES + 1 CA, 10 with
+    2 ES + 2 CA).
+  - `harder`: Adversarial items targeted at models that saturate the other
+    five categories. `template_es` and `template_mixed` concentrate the
+    `crosslingual_advanced` template pressure without its guardrails;
+    `short_implicit` is a distinct new pressure. See the Harder category
+    section below.
+- `rag_subtype` (only on `rag_context` items): `spanish_only` or
+  `bilingual_ca_es`.
 - `source_lang`: the source/context language pattern:
   - `ca`: Catalan-only prompt and context.
   - `es`: Spanish retrieved context answered in Catalan.
   - `ca-es`: mixed Catalan and Spanish retrieved context answered in Catalan.
   - `es-ca`: Spanish source material or prior-turn context answered in Catalan.
   - `en-ca`: English source material or prior-turn context answered in Catalan.
+  - `en-es-ca` / `es-en-ca`: trilingual `crosslingual_advanced` items
+    combining English and Spanish across prior turns (order marks the first
+    crosslingual turn) answered in Catalan.
 
 ## Benchmark Design
 
@@ -218,23 +236,106 @@ The original five categories saturate on strong models (top three between
 98.0% and 99.7%, all within the ±5.7 pp margin of error). The `harder`
 category adds 60 items built from three adversarial pressure patterns that
 combine, in aggregate, into a benchmark that discriminates strong models
-cleanly. Each item's `harder_variant` field identifies which pattern it uses:
+cleanly.
 
-- **`template_es`** (20 items): a Spanish reusable-template header block
-  (`ASUNTO / SITUACIÓN / RIESGO / ACCIÓN INMEDIATA / PRÓXIMO PASO`) in a
-  prior user turn, with a prior assistant already replying in Spanish. The
-  final user turn asks the task in Catalan.
-- **`template_mixed`** (20 items): the same template shape, but with mixed
-  ES/EN section headers over trilingual body content in the prior turns.
-- **`short_implicit`** (20 items): a long ES or EN source paragraph followed
-  by a short (under ten words) Catalan task, with no explicit "en català"
-  instruction.
+None of the items contains an explicit "respond in Spanish/English"
+directive — every item's final user turn is unambiguously Catalan.
+Failures therefore represent genuine language drift, not instruction-following.
 
-None of these items contains an explicit "respond in Spanish/English"
-directive — every item's final user turn is unambiguously Catalan. Failures
-therefore represent genuine language drift, not instruction-following.
+### Pressure patterns
 
-Results on the 60-item `harder` category:
+Each item's `harder_variant` field records which pattern it uses. All three
+patterns share a common goal — get the model to produce Spanish or English
+output despite a Catalan final ask — but exploit different mechanisms:
+
+**`template_es`** — Spanish reusable-template trap (20 items).
+
+- *Structure:* a prior user turn dictates a Spanish "Plantilla reutilizable"
+  (`ASUNTO / SITUACIÓN / RIESGO / ACCIÓN INMEDIATA / PRÓXIMO PASO`); the
+  assistant has already replied in Spanish just before it; final user turn
+  asks the task in Catalan.
+
+  Small sample (`cd_harder_001`):
+  ```
+  [user, ES] El cliente/proveedor menciona: escáneres pareados, pérdida
+             bluetooth, etiquetas de almacén, versión de firmware y modo offline.
+  [assistant, ES] De acuerdo. Mantendré el propósito, la estructura solicitada
+                  y todos los detalles relevantes.
+  [user] Plantilla reutilizable:
+         ASUNTO:
+         SITUACIÓN:
+         RIESGO:
+         ACCIÓN INMEDIATA:
+         PRÓXIMO PASO:
+  [assistant, ES] De acuerdo. Haré la revisión final antes de cerrar.
+  [final user, CA] Escriu la resposta de suport amb comprovacions, dades
+                   requerides, mesura temporal i escalat.
+  ```
+- *Mechanism:* the Spanish section headers are strongly memorised token
+  sequences. Once the model starts filling `ASUNTO:` it commits to a
+  Spanish frame and the rest of the response cascades.
+- *Hits:* GPT-5.6 collapses (10%), Ministral 3 8B Q4 bites (30%);
+  Qwen 14B Q4 (90%), Gemini 3.7 Flash (95%) and Gemma 4 12B Q4 (100%)
+  resist. This is the sharpest single signal in the benchmark.
+
+**`template_mixed`** — mixed ES/EN section headers, trilingual body (20 items).
+
+- *Structure:* same template pressure but with combined headers
+  (`ASUNTO / SUBJECT:`, `SITUACIÓN / SITUATION:`, …) and prior turns that
+  mix Spanish and English body content.
+
+  Small sample (`cd_harder_021`):
+  ```
+  [user, EN+ES] The team says: scanner pairing, bluetooth drops, warehouse
+                labels, firmware version and offline mode. El resumen ejecutivo
+                insiste en: escáneres pareados, pérdida bluetooth…
+  [assistant, EN+ES] Understood. Mantendré la estructura solicitada y todos los
+                     detalles relevantes.
+  [user] Plantilla reusable (mixed headers):
+         ASUNTO / SUBJECT:
+         SITUACIÓN / SITUATION:
+         RIESGO / RISK:
+         ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+         PRÓXIMO PASO / NEXT STEP:
+  [assistant, EN+ES] OK. I will do la revisión final antes de cerrar.
+  [final user, CA] Escriu la resposta de suport amb comprovacions, dades
+                   requerides, mesura temporal i escalat.
+  ```
+- *Mechanism:* tests whether the trap is Spanish-specific or general to any
+  non-Catalan header pattern. On models that resist `template_es` the mixed
+  variant is not additionally hard; on GPT-5.6 and Ministral it still drags
+  the response into Spanish, but less severely — evidence that the effect
+  is driven by Spanish-header memorisation rather than "any non-Catalan
+  header".
+- *Hits:* GPT-5.6 (70%), Ministral 3 8B Q4 (85%); Qwen 14B Q4 (90%),
+  Gemma 4 12B Q4 (100%), Gemini 3.7 Flash (100%) are unaffected.
+
+**`short_implicit`** — long ES/EN source, short Catalan task (20 items).
+
+- *Structure:* a single-turn prompt containing a 15-20 word Spanish or
+  English source paragraph, followed by a 2-4 word Catalan task
+  (e.g. *"Fes la resposta."*, *"Redacta la resposta."*) with **no** explicit
+  "en català" instruction.
+
+  Small sample (`cd_harder_042`):
+  ```
+  Source: "rush order, additional discount, guaranteed delivery before
+  month-end and consolidated invoice."
+
+  Redacta la resposta.
+  ```
+- *Mechanism:* the input is 90%+ non-Catalan by token count. The Catalan
+  cue is a single short verb phrase — not enough of a reset signal to
+  overcome the source-language momentum unless the model has strong
+  language-retention priors. The canonical benchmark inserts an explicit
+  "en català" whenever a final prompt is under ten words specifically to
+  defuse this trap; the `harder` category deliberately strips that
+  guardrail.
+- *Hits:* Gemma 4 12B Q4 collapses (35%), Ministral 3 8B Q4 collapses (45%);
+  GPT-5.6 (80%) and Qwen 14B Q4 (85%) show meaningful drops; only Gemini
+  3.7 Flash (90%) stays largely intact.
+
+### Results
 
 | Model | Overall | template_es | template_mixed | short_implicit |
 |---|---:|---:|---:|---:|
@@ -248,17 +349,6 @@ At 95% confidence, the maximum margin of error is ±12.7 pp for the 60-item
 overall column and ±22 pp for the 20-item sub-pattern columns (normal
 approximation). Even at those widths, the top-to-bottom spread of ~42 pp on
 overall discriminates the five models cleanly.
-
-Notable per-pattern findings:
-
-- `template_es` cracks GPT-5.6 (10%) but the two open-weights 14B/12B models
-  resist it (90%/100%). The Spanish-template trap is a GPT-5.6-specific
-  weakness rather than a general language-confusion signal.
-- `short_implicit` is where Gemma 4 12B collapses (35%), matching Ministral's
-  weakness (45%) — long ES/EN source paragraphs with an implicit Catalan
-  task line dominate its otherwise strong retention on the other categories.
-- `template_mixed` is only really hard for GPT-5.6 (70%) and Ministral (85%);
-  the other three models breeze through it.
 
 All completed harder-category evaluations had zero API or empty-response
 failures.
