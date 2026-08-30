@@ -11,6 +11,11 @@ from typing import Any
 
 import yaml
 
+if __package__:
+    from .add_pressure_pattern import classify
+else:
+    from add_pressure_pattern import classify
+
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCES = {
@@ -88,6 +93,8 @@ def validate_rows(rows: list[dict[str, Any]]) -> None:
             raise ValueError(f"{row.get('id')} is missing fields: {sorted(missing)}")
         if row["target_lang"] != "ca":
             raise ValueError(f"{row['id']} must target Catalan")
+        if row["pressure_pattern"] != classify(row):
+            raise ValueError(f"{row['id']} has an invalid pressure_pattern")
         if "labels" in row or "version" in row or "forbidden_terms" in row:
             raise ValueError(f"{row['id']} contains unsupported metadata fields")
         conversation = row.get("conversation") or []

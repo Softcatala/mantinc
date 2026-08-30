@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from scripts.build_dataset import EXPECTED_CATEGORY_COUNTS, build_rows
+from scripts.build_dataset import EXPECTED_CATEGORY_COUNTS, build_rows, classify
 
 
 CATALAN_INSTRUCTION_RE = re.compile(r"\b(?:català|catalana|catalans|catalanes)\b", re.I)
@@ -38,6 +38,10 @@ class DatasetTest(unittest.TestCase):
             Counter(row["category"] for row in self.rows),
             Counter(EXPECTED_CATEGORY_COUNTS),
         )
+
+    def test_pressure_pattern_labels(self) -> None:
+        for row in self.rows:
+            self.assertEqual(row["pressure_pattern"], classify(row), row["id"])
 
     def test_rows_do_not_contain_labels(self) -> None:
         self.assertTrue(all("labels" not in row for row in self.rows))

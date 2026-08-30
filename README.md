@@ -101,11 +101,12 @@ Each sample should specify:
   language-drift pressure carried by the item, used for cross-category
   slicing:
   - `no_pressure` (60): monolingual items — control.
-  - `english_or_trilingual` (97): every item whose source pressure is
+  - `english_or_trilingual` (97): items whose source pressure is
     English-only or a trilingual EN/ES/CA mix (English source paragraphs,
     English mid-conversation switches, English reusable-template blocks,
-    trilingual momentum). Groups four fine-grained variants that all
-    produce sub-2% fail on every model tested.
+    trilingual momentum), except when the more specific `template_es_prior`
+    label applies. Groups four fine-grained variants that all produce sub-2%
+    fail on every model tested.
   - `inline_source_es` (30): single-turn Catalan task with a quoted Spanish
     source paragraph.
   - `midconv_es_recency` (35): multi-turn conversations where a prior
