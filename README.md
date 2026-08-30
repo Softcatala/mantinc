@@ -97,6 +97,34 @@ Each sample should specify:
     section below.
 - `rag_subtype` (only on `rag_context` items): `spanish_only` or
   `bilingual_ca_es`.
+- `pressure_pattern`: consolidated 9-bucket classification of the
+  language-drift pressure carried by the item, used for cross-category
+  slicing:
+  - `no_pressure` (60): monolingual items — control.
+  - `english_or_trilingual` (97): every item whose source pressure is
+    English-only or a trilingual EN/ES/CA mix (English source paragraphs,
+    English mid-conversation switches, English reusable-template blocks,
+    trilingual momentum). Groups four fine-grained variants that all
+    produce sub-2% fail on every model tested.
+  - `inline_source_es` (30): single-turn Catalan task with a quoted Spanish
+    source paragraph.
+  - `midconv_es_recency` (35): multi-turn conversations where a prior
+    user/assistant Spanish turn creates language momentum without a
+    reusable-template block (30 multi-turn ES items + 5 iterative closing
+    pressure items from `crosslingual_advanced`).
+  - `rag_context` (60): retrieved-context items with an explicit "en
+    català" guardrail in the task line. Merges both `rag_subtype` values.
+  - `template_es_prior` (18): `crosslingual_advanced` items with a Spanish
+    reusable-template block in a prior user turn (with the usual
+    guardrails still in place).
+  - `harder_template_es` (20): saturated Spanish-template trap from the
+    `harder` category (no guardrails).
+  - `harder_template_mixed` (20): ES/EN mixed-header template trap from
+    the `harder` category.
+  - `harder_short_implicit` (20): long ES or EN source + short implicit
+    Catalan task (no "en català" reset).
+  Use `scripts/pressure_pattern_report.py` to slice model failures by
+  pattern.
 - `source_lang`: the source/context language pattern:
   - `ca`: Catalan-only prompt and context.
   - `es`: Spanish retrieved context answered in Catalan.
@@ -208,19 +236,19 @@ full repository license split.
 
 ## Completed evaluations
 
-Results on the original 300-item Catalan Drift dataset (before the `harder`
-category was added):
+Results on the full 360-item Catalan Drift dataset (includes the `harder`
+category):
 
-| Model | Overall | Catalan token ratio | Monolingual | Crosslingual basic | Multi-turn | Crosslingual advanced | RAG context |
-|---|---:|---:|---:|---:|---:|---:|---:|
-| Gemma 4 12B Q4 | **99.7%** | 99.5% | 100.0% | 100.0% | 100.0% | 98.3% | 100.0% |
-| Qwen3 14B Q4 | 99.3% | 99.1% | 100.0% | 100.0% | 100.0% | 98.3% | 98.3% |
-| Gemini 3.7 Flash | 98.0% | 99.3% | 95.0% | 96.7% | 98.3% | 100.0% | 100.0% |
-| GPT-5.6 | 96.0% | 95.9% | 100.0% | 100.0% | 96.7% | 83.3% | 100.0% |
-| Ministral 3 8B Q4 | 94.3% | 91.8% | 90.0% | 86.7% | 98.3% | 98.3% | 98.3% |
+| Model | Overall | Catalan token ratio | Monolingual | Cross basic | Multi-turn | Cross advanced | RAG context | Harder |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Qwen3 14B Q4 | **97.5%** | 97.9% | 100.0% | 100.0% | 100.0% | 98.3% | 98.3% | 88.3% |
+| Gemini 3.7 Flash | **97.5%** | 98.4% | 95.0% | 96.7% | 98.3% | 100.0% | 100.0% | 95.0% |
+| Gemma 4 12B Q4 | 96.1% | 95.9% | 100.0% | 100.0% | 100.0% | 98.3% | 100.0% | 78.3% |
+| GPT-5.6 | 88.9% | 87.1% | 100.0% | 100.0% | 96.7% | 83.3% | 100.0% | 53.3% |
+| Ministral 3 8B Q4 | 87.5% | 83.3% | 90.0% | 86.7% | 98.3% | 98.3% | 98.3% | 53.3% |
 
-At 95% confidence, the maximum margin of error is ±5.7 percentage points
-for overall scores (n=300) and ±12.7 percentage points for category scores
+At 95% confidence, the maximum margin of error is ±5.2 percentage points
+for overall scores (n=360) and ±12.7 percentage points for category scores
 (n=60), using the normal approximation for a binomial proportion.
 
 **How to compare models:** Rank models by the **Overall** column. Per-category

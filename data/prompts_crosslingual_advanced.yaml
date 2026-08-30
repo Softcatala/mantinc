@@ -5,6 +5,7 @@
   workflow: support_reply
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   conversation:
   - role: user
     content: Tenim un usuari que no rep bé les notificacions de calendari compartit.
@@ -39,6 +40,7 @@
   workflow: procurement_note
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: template_es_prior
   conversation:
   - role: user
     content: Hem de preparar una nota interna sobre la renovació d'una eina de gestió documental.
@@ -73,6 +75,7 @@
   workflow: study_plan
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   conversation:
   - role: user
     content: Necessito organitzar-me per preparar una audició de música.
@@ -116,6 +119,7 @@
   workflow: privacy_guidance
   source_lang: en-es-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   conversation:
   - role: user
     content: Vull revisar la privacitat abans d'instal·lar un altaveu intel·ligent a casa.
@@ -158,6 +162,7 @@
   workflow: client_reply
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: template_es_prior
   conversation:
   - role: user
     content: Som una empresa petita i hem de respondre una baixa parcial d'un servei B2B.
@@ -203,6 +208,7 @@
   workflow: complaint_response
   source_lang: es-en-ca
   target_lang: ca
+  pressure_pattern: template_es_prior
   conversation:
   - role: user
     content: L'oficina municipal ha de contestar una persona que no entén l'estat d'una beca
@@ -247,6 +253,7 @@
   workflow: client_reply
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   conversation:
   - role: user
     content: Hem de respondre una proposta comercial que barreja visibilitat pública, pagament
@@ -283,6 +290,7 @@
   workflow: public_notice
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   conversation:
   - role: user
     content: El poliesportiu municipal ha de tancar parcialment una zona avui.
@@ -317,6 +325,7 @@
   workflow: project_status
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: template_es_prior
   conversation:
   - role: user
     content: Necessito un estat de projecte sobre una campanya de fidelització que s'ha d'ajornar.
@@ -362,6 +371,7 @@
   workflow: complaint_response
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   conversation:
   - role: user
     content: Hem de contestar una queixa sobre manca d'enllumenat en un parc municipal.
@@ -396,6 +406,7 @@
   workflow: public_project_status
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: midconv_es_recency
   conversation:
   - role: user
     content: Treballo en una administració local i hem d'actualitzar l'estat d'un procés participatiu
@@ -428,6 +439,7 @@
   workflow: public_notice
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: midconv_es_recency
   conversation:
   - role: user
     content: Hem d'avisar el veïnat d'una actuació de poda en un carrer estret.
@@ -459,6 +471,7 @@
   workflow: tenant_request
   source_lang: en-es-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   conversation:
   - role: user
     content: Vull escriure al propietari perquè no m'ha retornat tota la fiança.
@@ -490,6 +503,7 @@
   workflow: client_reply
   source_lang: es-en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   conversation:
   - role: user
     content: Som una consultoria petita i hem de respondre a un distribuïdor que vol congelar
@@ -538,6 +552,7 @@
   workflow: support_reply
   source_lang: en-es-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   conversation:
   - role: user
     content: 'Hem rebut un cas de suport delicat: un client no rep notificacions importants
@@ -570,6 +585,7 @@
   workflow: procurement_note
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: midconv_es_recency
   conversation:
   - role: user
     content: Hem de justificar una contractació puntual per a un taller ciutadà amb servei
@@ -602,6 +618,7 @@
   workflow: procurement_note
   source_lang: en-es-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   conversation:
   - role: user
     content: Estem triant mobiliari nou per a una oficina oberta al públic i necessito una
@@ -634,6 +651,7 @@
   workflow: support_reply
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: midconv_es_recency
   conversation:
   - role: user
     content: Tenim un client amb una incidència tècnica després d'importar un catàleg nou.
@@ -665,6 +683,7 @@
   workflow: complaint_response
   source_lang: es-en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   conversation:
   - role: user
     content: Necessito reclamar a una agència de viatges per uns canvis que no vaig acceptar.
@@ -696,6 +715,7 @@
   workflow: procurement_note
   source_lang: en-es-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   conversation:
   - role: user
     content: Hem de preparar una nota per contractar subministrament preventiu de sal viària.
@@ -727,6 +747,7 @@
   workflow: client_delay_update
   source_lang: es-en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   conversation:
   - role: user
     content: Som una PIME i hem d'explicar que cal reprogramar una sessió de formació.
@@ -769,6 +790,7 @@
   workflow: complaint_response
   source_lang: es-en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   conversation:
   - role: user
     content: Treballo a l'ajuntament i hem de contestar una queixa sobre mobilitat al mercat
@@ -800,6 +822,7 @@
   workflow: public_notice
   source_lang: en-es-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   conversation:
   - role: user
     content: L'ajuntament ha de publicar un avís sobre el trasllat temporal de la biblioteca.
@@ -827,6 +850,7 @@
   workflow: complaint_response
   source_lang: es-en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   conversation:
   - role: user
     content: Vull reclamar a una plataforma de formació perquè no em deixa completar la certificació.
@@ -858,6 +882,7 @@
   workflow: project_status
   source_lang: en-es-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   conversation:
   - role: user
     content: Necessito actualitzar direcció sobre una certificació ambiental que entra en
@@ -886,6 +911,7 @@
   workflow: public_notice
   source_lang: es-en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   conversation:
   - role: user
     content: Cal publicar un avís sobre el trasllat temporal d'un punt de vacunació.
@@ -913,6 +939,7 @@
   workflow: project_status
   source_lang: en-es-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   conversation:
   - role: user
     content: Cal preparar un resum per a la taula tècnica sobre un projecte d'estalvi energètic
@@ -945,6 +972,7 @@
   workflow: client_reply
   source_lang: es-en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   conversation:
   - role: user
     content: Hem de contestar un client que vol canviar les condicions de pagament després
@@ -976,6 +1004,7 @@
   workflow: support_reply
   source_lang: en-es-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   conversation:
   - role: user
     content: Hem d'ajudar un client que té problemes amb escàners de magatzem.
@@ -1003,6 +1032,7 @@
   workflow: complaint_response
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: midconv_es_recency
   conversation:
   - role: user
     content: Vull reclamar a una empresa de mudances perquè alguns objectes han arribat malmesos.
@@ -1033,6 +1063,7 @@
   workflow: client_delay_update
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: template_es_prior
   conversation:
   - role: user
     content: Som una PIME i hem d'explicar un retard en una instal·lació per a una botiga.
@@ -1066,6 +1097,7 @@
   workflow: client_reply
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   conversation:
   - role: user
     content: Hem de respondre a un client que demana allargar una prova tècnica.
@@ -1100,6 +1132,7 @@
   workflow: client_reply
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: template_es_prior
   conversation:
   - role: user
     content: Un client demana resposta per una activitat comercial que s'ha hagut de canviar.
@@ -1133,6 +1166,7 @@
   workflow: client_reply
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   conversation:
   - role: user
     content: Hem de respondre una proposta que barreja prova pilot i canvi de plataforma.
@@ -1166,6 +1200,7 @@
   workflow: client_reply
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: template_es_prior
   conversation:
   - role: user
     content: Un client reclama per indicadors de servei que interpreta com un incompliment.
@@ -1199,6 +1234,7 @@
   workflow: complaint_response
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   conversation:
   - role: user
     content: L'ajuntament ha de contestar una queixa sobre accessibilitat en un jardí públic.
@@ -1233,6 +1269,7 @@
   workflow: complaint_response
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: template_es_prior
   conversation:
   - role: user
     content: Vull reclamar a un gimnàs perquè no han aplicat correctament la baixa.
@@ -1266,6 +1303,7 @@
   workflow: complaint_response
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   conversation:
   - role: user
     content: L'oficina municipal ha de respondre una queixa per molèsties d'una obra privada.
@@ -1299,6 +1337,7 @@
   workflow: complaint_response
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: template_es_prior
   conversation:
   - role: user
     content: Necessito reclamar la revisió d'una qualificació d'un procés formatiu.
@@ -1332,6 +1371,7 @@
   workflow: complaint_response
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   conversation:
   - role: user
     content: El servei municipal ha de contestar una queixa sobre manteniment d'un cementiri.
@@ -1365,6 +1405,7 @@
   workflow: complaint_response
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: template_es_prior
   conversation:
   - role: user
     content: Vull reclamar a un servei de lloguer perquè m'han retingut diners sense explicar-ho.
@@ -1398,6 +1439,7 @@
   workflow: privacy_guidance
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   conversation:
   - role: user
     content: Vull revisar la privacitat d'un cotxe compartit abans de tornar-lo.
@@ -1431,6 +1473,7 @@
   workflow: procurement_note
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: template_es_prior
   conversation:
   - role: user
     content: Hem de justificar la contractació d'un servei d'accessibilitat per a un acte
@@ -1465,6 +1508,7 @@
   workflow: procurement_note
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   conversation:
   - role: user
     content: L'ajuntament valora comprar un sistema d'ajuda auditiva per a la sala de plens.
@@ -1498,6 +1542,7 @@
   workflow: procurement_note
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: template_es_prior
   conversation:
   - role: user
     content: Cal preparar una nota per instal·lar elements temporals de protecció solar a
@@ -1532,6 +1577,7 @@
   workflow: procurement_note
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   conversation:
   - role: user
     content: Hem de comparar proveïdors per gestionar nòmines i absències.
@@ -1565,6 +1611,7 @@
   workflow: project_status
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   conversation:
   - role: user
     content: Necessito actualitzar direcció sobre una formació nova per a clients.
@@ -1598,6 +1645,7 @@
   workflow: project_status
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: template_es_prior
   conversation:
   - role: user
     content: Hem d'explicar l'estat d'un canvi de sistema de cobrament a les botigues.
@@ -1631,6 +1679,7 @@
   workflow: project_status
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   conversation:
   - role: user
     content: L'administració local ha d'actualitzar un projecte digital vinculat a menjadors
@@ -1665,6 +1714,7 @@
   workflow: public_notice
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: template_es_prior
   conversation:
   - role: user
     content: Cal publicar un avís perquè una oficina municipal canvia l'atenció presencial.
@@ -1698,6 +1748,7 @@
   workflow: public_notice
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   conversation:
   - role: user
     content: Un centre cultural municipal ha de tancar temporalment alguns espais.
@@ -1731,6 +1782,7 @@
   workflow: public_notice
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: template_es_prior
   conversation:
   - role: user
     content: S'ha de publicar un avís sobre canvis d'accés a un equipament sensible.
@@ -1764,6 +1816,7 @@
   workflow: public_notice
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   conversation:
   - role: user
     content: El municipi ha d'informar d'una restricció temporal d'aigua en espais públics.
@@ -1797,6 +1850,7 @@
   workflow: public_project_status
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: template_es_prior
   conversation:
   - role: user
     content: L'ajuntament ha d'actualitzar l'estat d'un projecte de mobilitat.
@@ -1830,6 +1884,7 @@
   workflow: study_plan
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   conversation:
   - role: user
     content: Necessito organitzar-me per preparar un examen pràctic de conducció.
@@ -1863,6 +1918,7 @@
   workflow: support_reply
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   conversation:
   - role: user
     content: Un client empresarial té una incidència delicada amb dades de nòmina.
@@ -1896,6 +1952,7 @@
   workflow: support_reply
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: template_es_prior
   conversation:
   - role: user
     content: El servei de suport d'un client està rebent casos repetits després d'un canvi
@@ -1930,6 +1987,7 @@
   workflow: support_reply
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   conversation:
   - role: user
     content: Un comerç no pot quadrar cobraments de final de dia.
@@ -1963,6 +2021,7 @@
   workflow: support_reply
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: template_es_prior
   conversation:
   - role: user
     content: Una empresa no pot signar documents després d'una actualització del portal.
@@ -1996,6 +2055,7 @@
   workflow: tenant_request
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   conversation:
   - role: user
     content: Vull escriure a la propietat perquè hi ha desacord sobre despeses compartides.

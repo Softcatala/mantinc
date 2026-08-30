@@ -6,6 +6,7 @@
   workflow: support_reply
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_es
   conversation:
   - role: user
     content: Hem de respondre un client que té problemes amb escàners de magatzem.
@@ -39,6 +40,7 @@
   workflow: client_reply
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_es
   conversation:
   - role: user
     content: Un client demana condicions especials per una comanda urgent.
@@ -72,6 +74,7 @@
   workflow: client_delay_update
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_es
   conversation:
   - role: user
     content: Hem d'informar un client d'un retard en la instal·lació d'un rètol.
@@ -105,6 +108,7 @@
   workflow: support_reply
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_es
   conversation:
   - role: user
     content: Un client ha importat un catàleg nou i ha detectat problemes.
@@ -139,6 +143,7 @@
   workflow: project_status
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_es
   conversation:
   - role: user
     content: Hem d'actualitzar direcció sobre l'estat d'una integració comptable.
@@ -172,6 +177,7 @@
   workflow: complaint_response
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_es
   conversation:
   - role: user
     content: Un client ens demana ajuda amb una reclamació a una asseguradora.
@@ -205,6 +211,7 @@
   workflow: support_reply
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_es
   conversation:
   - role: user
     content: Un comerç no pot quadrar cobraments de final de dia.
@@ -238,6 +245,7 @@
   workflow: procurement_note
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_es
   conversation:
   - role: user
     content: Hem de decidir sobre la renovació d'un servei de correu corporatiu.
@@ -271,6 +279,7 @@
   workflow: study_plan
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_es
   conversation:
   - role: user
     content: Volem preparar un pla de formació breu per a l'equip d'atenció al client.
@@ -304,6 +313,7 @@
   workflow: service_summary
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_es
   conversation:
   - role: user
     content: Volem preparar una proposta breu de servei gestionat per a un client nou.
@@ -337,6 +347,7 @@
   workflow: citizen_response
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_es
   conversation:
   - role: user
     content: L'ajuntament ha de contestar una reclamació sobre una taxa duplicada.
@@ -371,6 +382,7 @@
   workflow: public_notice
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_es
   conversation:
   - role: user
     content: Hem d'avisar el veïnat d'un tall temporal per una obra a la calçada.
@@ -404,6 +416,7 @@
   workflow: public_project_status
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_es
   conversation:
   - role: user
     content: Hem d'actualitzar l'estat de les obres d'una piscina municipal.
@@ -437,6 +450,7 @@
   workflow: procurement_note
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_es
   conversation:
   - role: user
     content: Cal justificar una contractació urgent d'interpretació de llengua de signes.
@@ -470,6 +484,7 @@
   workflow: community_health_bulletin
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_es
   conversation:
   - role: user
     content: Hem de preparar un butlletí per un episodi de calor extrema.
@@ -503,6 +518,7 @@
   workflow: privacy_guidance
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_es
   conversation:
   - role: user
     content: Hem d'orientar una petició ciutadana d'accés a expedients.
@@ -536,6 +552,7 @@
   workflow: complaint_response
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_es
   conversation:
   - role: user
     content: Hem de respondre una família preocupada per una beca de menjador.
@@ -569,6 +586,7 @@
   workflow: complaint_response
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_es
   conversation:
   - role: user
     content: Vull reclamar a una agència de viatges perquè ha canviat l'hotel reservat.
@@ -602,6 +620,7 @@
   workflow: complaint_response
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_es
   conversation:
   - role: user
     content: Vull reclamar al gimnàs perquè no han aplicat correctament la baixa.
@@ -635,6 +654,7 @@
   workflow: privacy_guidance
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_es
   conversation:
   - role: user
     content: Vull vendre un televisor connectat i vull esborrar-ne les dades personals.
@@ -668,6 +688,7 @@
   workflow: support_reply
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_mixed
   conversation:
   - role: user
     content: Hem de respondre un client que té problemes amb escàners de magatzem.
@@ -702,6 +723,7 @@
   workflow: client_reply
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_mixed
   conversation:
   - role: user
     content: Un client demana condicions especials per una comanda urgent.
@@ -736,6 +758,7 @@
   workflow: client_delay_update
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_mixed
   conversation:
   - role: user
     content: Hem d'informar un client d'un retard en la instal·lació d'un rètol.
@@ -770,6 +793,7 @@
   workflow: support_reply
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_mixed
   conversation:
   - role: user
     content: Un client ha importat un catàleg nou i ha detectat problemes.
@@ -805,6 +829,7 @@
   workflow: project_status
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_mixed
   conversation:
   - role: user
     content: Hem d'actualitzar direcció sobre l'estat d'una integració comptable.
@@ -840,6 +865,7 @@
   workflow: complaint_response
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_mixed
   conversation:
   - role: user
     content: Un client ens demana ajuda amb una reclamació a una asseguradora.
@@ -874,6 +900,7 @@
   workflow: support_reply
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_mixed
   conversation:
   - role: user
     content: Un comerç no pot quadrar cobraments de final de dia.
@@ -908,6 +935,7 @@
   workflow: procurement_note
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_mixed
   conversation:
   - role: user
     content: Hem de decidir sobre la renovació d'un servei de correu corporatiu.
@@ -942,6 +970,7 @@
   workflow: study_plan
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_mixed
   conversation:
   - role: user
     content: Volem preparar un pla de formació breu per a l'equip d'atenció al client.
@@ -976,6 +1005,7 @@
   workflow: service_summary
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_mixed
   conversation:
   - role: user
     content: Volem preparar una proposta breu de servei gestionat per a un client nou.
@@ -1010,6 +1040,7 @@
   workflow: citizen_response
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_mixed
   conversation:
   - role: user
     content: L'ajuntament ha de contestar una reclamació sobre una taxa duplicada.
@@ -1045,6 +1076,7 @@
   workflow: public_notice
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_mixed
   conversation:
   - role: user
     content: Hem d'avisar el veïnat d'un tall temporal per una obra a la calçada.
@@ -1079,6 +1111,7 @@
   workflow: public_project_status
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_mixed
   conversation:
   - role: user
     content: Hem d'actualitzar l'estat de les obres d'una piscina municipal.
@@ -1113,6 +1146,7 @@
   workflow: procurement_note
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_mixed
   conversation:
   - role: user
     content: Cal justificar una contractació urgent d'interpretació de llengua de signes.
@@ -1147,6 +1181,7 @@
   workflow: community_health_bulletin
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_mixed
   conversation:
   - role: user
     content: Hem de preparar un butlletí per un episodi de calor extrema.
@@ -1181,6 +1216,7 @@
   workflow: privacy_guidance
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_mixed
   conversation:
   - role: user
     content: Hem d'orientar una petició ciutadana d'accés a expedients.
@@ -1215,6 +1251,7 @@
   workflow: complaint_response
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_mixed
   conversation:
   - role: user
     content: Hem de respondre una família preocupada per una beca de menjador.
@@ -1249,6 +1286,7 @@
   workflow: complaint_response
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_mixed
   conversation:
   - role: user
     content: Vull reclamar a una agència de viatges perquè ha canviat l'hotel reservat.
@@ -1283,6 +1321,7 @@
   workflow: complaint_response
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_mixed
   conversation:
   - role: user
     content: Vull reclamar al gimnàs perquè no han aplicat correctament la baixa.
@@ -1317,6 +1356,7 @@
   workflow: privacy_guidance
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_mixed
   conversation:
   - role: user
     content: Vull vendre un televisor connectat i vull esborrar-ne les dades personals.
@@ -1351,6 +1391,7 @@
   workflow: support_reply
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   prompt: 'Font (castellà): "escáneres pareados, pérdida bluetooth, etiquetas de almacén, versión de firmware
     y modo offline."
 
@@ -1364,6 +1405,7 @@
   workflow: client_reply
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   prompt: 'Source: "rush order, additional discount, guaranteed delivery before month-end and consolidated
     invoice."
 
@@ -1377,6 +1419,7 @@
   workflow: client_delay_update
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   prompt: 'Font (castellà): "rótulo personalizado, instalación aplazada, penalización contractual, factura
     retenida y apertura comercial."
 
@@ -1390,6 +1433,7 @@
   workflow: support_reply
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   prompt: 'Source: "incomplete catalog, swapped images, outdated stock, empty categories and modified
     template."
 
@@ -1403,6 +1447,7 @@
   workflow: project_status
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   prompt: 'Font (castellà): "integración contable en pruebas, desviación de alcance, reunión de desbloqueo,
     impacto en calendario y decisión sobre coste adicional."
 
@@ -1416,6 +1461,7 @@
   workflow: complaint_response
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   prompt: 'Source: "claim denied, pending expert report, allegation period, premium up to date and contractual
     coverage."
 
@@ -1429,6 +1475,7 @@
   workflow: support_reply
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   prompt: 'Font (castellà): "cierre del datáfono, comprobante ausente, lote offline, autorización duplicada
     y conciliación bancaria."
 
@@ -1442,6 +1489,7 @@
   workflow: procurement_note
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   prompt: 'Source: "license renewal, price increase, mailbox migration, domain onboarding and access audit."
 
 
@@ -1454,6 +1502,7 @@
   workflow: study_plan
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   prompt: 'Font (castellà): "formación práctica, gestión de escalados, protocolo de tono, guías de producto
     y simulacros grabados."
 
@@ -1467,6 +1516,7 @@
   workflow: service_summary
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   prompt: 'Source: "managed service, functional scope, service level indicators, maintenance window and
     response commitment."
 
@@ -1480,6 +1530,7 @@
   workflow: citizen_response
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   prompt: 'Font (castellà): "tasa duplicada, bonificación no aplicada, registro de entrada, respuesta
     escrita y plazo administrativo."
 
@@ -1493,6 +1544,7 @@
   workflow: public_notice
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   prompt: 'Source: "traffic closure, pedestrian detour, temporary signage, controlled noise and temporary
     container removal."
 
@@ -1506,6 +1558,7 @@
   workflow: public_project_status
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   prompt: 'Font (castellà): "obras de rehabilitación, retraso de suministros, junta técnica, plazo revisado
     y comunicación a familias."
 
@@ -1519,6 +1572,7 @@
   workflow: procurement_note
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   prompt: 'Source: "sign language interpreter, unforeseen urgency, open event, limited budget and confirmed
     vendor."
 
@@ -1532,6 +1586,7 @@
   workflow: community_health_bulletin
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   prompt: 'Font (castellà): "ola de calor, población vulnerable, puntos frescos, hidratación reforzada
     y alerta hospitalaria."
 
@@ -1545,6 +1600,7 @@
   workflow: privacy_guidance
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   prompt: 'Source: "access request, third-party personal data, prior anonymisation, resolution deadline
     and interest justification."
 
@@ -1558,6 +1614,7 @@
   workflow: complaint_response
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   prompt: 'Font (castellà): "expediente incompleto, cita anulada, documentación ya entregada, dificultad
     para subsanar y preocupación por el inicio del curso."
 
@@ -1571,6 +1628,7 @@
   workflow: complaint_response
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   prompt: 'Source: "hotel change, lower category, attached documents, requested solution and response
     deadline."
 
@@ -1584,6 +1642,7 @@
   workflow: complaint_response
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   prompt: 'Font (castellà): "gimnasio, baja tramitada, cuota cobrada, permanencia discutida y acceso ya
     bloqueado."
 
@@ -1597,6 +1656,7 @@
   workflow: privacy_guidance
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   prompt: 'Source: "installed apps, active microphone, viewing history, linked accounts and factory reset."
 
 

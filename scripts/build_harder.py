@@ -229,6 +229,7 @@ def _base_row(pattern: str, index: int, scenario: dict[str, Any], source_lang: s
         "category": "harder",
         "source_dataset_yaml": SOURCE_YAML,
         "harder_variant": pattern,
+        "pressure_pattern": f"harder_{pattern}",
         "persona": scenario["persona"],
         "workflow": scenario["workflow"],
         "source_lang": source_lang,

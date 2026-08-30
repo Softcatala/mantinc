@@ -80,6 +80,7 @@ def validate_rows(rows: list[dict[str, Any]]) -> None:
         "target_lang",
         "prompt",
         "source_dataset_yaml",
+        "pressure_pattern",
     }
     for row in rows:
         missing = required - row.keys()

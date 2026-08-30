@@ -5,6 +5,7 @@
   workflow: ai_misconception_explanation
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: inline_source_es
   prompt: 'Explica un malentès comú sobre el tema descrit i corregeix-lo
     amb un exemple concret.
 
@@ -19,6 +20,7 @@
   workflow: client_reply
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: inline_source_es
   prompt: 'Redacta una resposta professional al client. Ha de reconèixer
     la pressió, proposar una data de resposta i evitar copiar expressions del text
     original.
@@ -32,6 +34,7 @@
   workflow: public_notice
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: inline_source_es
   prompt: 'Escriu un avís públic amb títol i cos. Transforma la informació
     de la font en llenguatge administratiu clar, sense conservar les expressions en
     castellà.
@@ -46,6 +49,7 @@
   workflow: support_reply
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   prompt: 'Contesta com a equip de suport. Resumeix el problema, dona passos concrets
     i tanca amb una proposta de seguiment.
 
@@ -59,6 +63,7 @@
   workflow: procurement_note
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: inline_source_es
   prompt: 'Escriu una nota de contractació breu. Inclou criteri de selecció, termini,
     validació necessària i proper pas, sense copiar termes castellans.
 
@@ -71,6 +76,7 @@
   workflow: study_plan
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: inline_source_es
   prompt: 'Prepara un pla d''estudi d''una setmana a partir de la font. Ha de tenir
     fites diàries i un control de progrés.
 
@@ -84,6 +90,7 @@
   workflow: project_status
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: inline_source_es
   prompt: 'Escriu una actualització de projecte per a direcció. Converteix la font
     en estat, risc, decisió necessària i propera acció.
 
@@ -96,6 +103,7 @@
   workflow: citizen_response
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   prompt: 'Redacta una resposta institucional a una consulta ciutadana. Inclou recepció
     de la consulta, actuació prevista, termini i informació de seguiment.
 
@@ -109,6 +117,7 @@
   workflow: complaint_response
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: inline_source_es
   prompt: 'Escriu una reclamació clara a partir de la font. Inclou què ha passat,
     què es demana, documents adjunts i termini de resposta.
 
@@ -121,6 +130,7 @@
   workflow: privacy_guidance
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   prompt: 'Dona una guia pràctica de privacitat basada en la font. Organitza la resposta
     en passos breus i evita mantenir la terminologia de la font.
 
@@ -133,6 +143,7 @@
   workflow: client_reply
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: inline_source_es
   prompt: 'Redacta una resposta per a un client important. Ha de reconèixer la pressió,
     separar fets confirmats i punts pendents, proposar una mesura provisional i evitar
     compromisos legals o expressions del text original.
@@ -147,6 +158,7 @@
   workflow: public_notice
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   prompt: 'Escriu un avís públic amb títol, motiu, recomanacions per grups vulnerables,
     afectació a centres educatius, canals d''informació i propera actualització. No
     conservis expressions de la font.
@@ -160,6 +172,7 @@
   workflow: support_reply
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   prompt: 'Contesta com a suport tècnic. Resumeix el problema, demana dades de verificació,
     proposa comprovacions ordenades, indica quan cal escalar i evita copiar la terminologia
     de la font.
@@ -173,6 +186,7 @@
   workflow: procurement_note
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: inline_source_es
   prompt: 'Escriu una nota de contractació que expliqui la situació, identifiqui els
     riscos, proposi comprovacions i indiqui el proper tràmit. No copiïs termes castellans
     de la font.
@@ -187,6 +201,7 @@
   workflow: complaint_response
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   prompt: 'Escriu una reclamació formal a una companyia aèria. Inclou fets, impacte,
     documentació adjunta, petició concreta i termini de resposta, sense conservar
     les expressions de la font.
@@ -201,6 +216,7 @@
   workflow: project_status
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: inline_source_es
   prompt: 'Escriu una actualització de projecte per a direcció amb resum, avenços,
     bloquejos, impacte en calendari, decisions necessàries i properes accions. Evita
     copiar expressions castellanes.
@@ -214,6 +230,7 @@
   workflow: complaint_response
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   prompt: 'Redacta una resposta institucional a una queixa ciutadana. Ha de reconèixer
     la recepció, explicar l''actuació prevista, aclarir terminis i indicar responsable
     de seguiment, sense mantenir expressions de la font.
@@ -227,6 +244,7 @@
   workflow: client_reply
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   prompt: 'Respon a un client que pressiona per canviar condicions comercials. La
     resposta ha de ser breu però clara: límit del que es pot prometre, alternativa
     viable, dades pendents i següent punt de decisió. No copiïs el vocabulari de la font.
@@ -240,6 +258,7 @@
   workflow: public_notice
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: inline_source_es
   prompt: 'Escriu un avís públic clar i operatiu. Inclou títol, motiu, horari, col·lectius
     prioritaris, alternativa disponible i propera comunicació. No reprodueixis expressions
     castellanes.
@@ -253,6 +272,7 @@
   workflow: procurement_note
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   prompt: 'Redacta una nota interna per decidir entre proveïdors. Inclou criteris
     tècnics, econòmics, legals i operatius, riscos de dependència i recomanació condicionada.
     Evita conservar termes de la font.
@@ -266,6 +286,7 @@
   workflow: support_reply
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: inline_source_es
   prompt: 'Contesta com a suport de comerç electrònic. Dona una resposta amb diagnosi,
     passos per evitar pèrdua de dades, informació que cal enviar, criteri de prioritat
     i tancament empàtic. No copiïs termes castellans.
@@ -279,6 +300,7 @@
   workflow: project_status
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   prompt: 'Escriu un informe d''estat per a un projecte públic. Organitza''l en avenços,
     desviacions, riscos, impacte pressupostari i decisions del grup de seguiment.
     No mantinguis expressions de la font.
@@ -293,6 +315,7 @@
   workflow: complaint_response
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: inline_source_es
   prompt: 'Escriu una reclamació de consum amb exposició ordenada dels fets, drets
     invocats de manera prudent, documentació, petició de solució i termini raonable.
     No copiïs frases del castellà.
@@ -307,6 +330,7 @@
   workflow: procurement_note
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   prompt: 'Redacta una nota de contractació d''urgència amb justificació, límits,
     comprovacions prèvies, evidències que cal conservar i control posterior. Evita
     el lèxic de la font.
@@ -320,6 +344,7 @@
   workflow: client_reply
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: inline_source_es
   prompt: 'Redacta una resposta comercial que ordeni una situació confusa, confirmi
     què es pot fer, què requereix validació escrita i com es tancarà el pressupost.
     No traslladis expressions castellanes.
@@ -333,6 +358,7 @@
   workflow: public_notice
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   prompt: 'Escriu un avís de servei d''atenció ciutadana amb causa, afectació, mesures
     provisionals, priorització, canals alternatius i propera actualització. No copiïs
     expressions de la font.
@@ -347,6 +373,7 @@
   workflow: project_status
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   prompt: 'Escriu una actualització de projecte per a direcció. Ha d''incloure estat
     resumit, tasques crítiques, riscos, proves pendents, decisió de llançament i pla
     de contingència. No mantinguis els termes de la font.
@@ -360,6 +387,7 @@
   workflow: support_reply
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: inline_source_es
   prompt: 'Contesta com a suport. Explica el problema probable, dona passos de comprovació
     sense risc, demana informació tècnica mínima i fixa un compromís de seguiment.
     Evita copiar expressions castellanes.
@@ -373,6 +401,7 @@
   workflow: complaint_response
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: inline_source_es
   prompt: 'Redacta una resposta municipal a una queixa de neteja viària. Inclou disculpa
     institucional, verificació prevista, mesura temporal, seguiment i canal per aportar
     noves dades. No conservis expressions castellanes.
@@ -386,6 +415,7 @@
   workflow: complaint_response
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   prompt: 'Escriu una reclamació a un fabricant. Inclou cronologia, problema tècnic,
     documentació disponible, solució demanada, alternativa acceptable i termini de
     resposta. No mantinguis les expressions de la font.
@@ -400,6 +430,7 @@
   workflow: ai_misconception_explanation
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: inline_source_es
   prompt: >-
     Explica un malentès habitual sobre el tema descrit i corregeix-lo
     amb un exemple concret, sense copiar expressions castellanes.
@@ -414,6 +445,7 @@
   workflow: citizen_response
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   prompt: >-
     Redacta una resposta institucional a una consulta ciutadana. Inclou
     recepció, estat de revisió, documentació pendent, termini orientatiu i canal de
@@ -428,6 +460,7 @@
   workflow: client_reply
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: inline_source_es
   prompt: >-
     Escriu una resposta professional a un client. Ha de reconèixer el
     retard, separar dades pendents i compensació possible, proposar calendari i
@@ -443,6 +476,7 @@
   workflow: client_reply
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   prompt: >-
     Redacta un correu breu per a un client. Inclou situació, límit del
     que es pot confirmar, informació pendent, alternativa viable i proper pas.
@@ -457,6 +491,7 @@
   workflow: client_reply
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: inline_source_es
   prompt: >-
     Escriu una resposta a un client que pressiona per llançar una acció
     comercial. Mantén un to col·laboratiu, indica què es pot avançar, què falta
@@ -471,6 +506,7 @@
   workflow: client_reply
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   prompt: >-
     Escriu una resposta equilibrada a un client B2B. Inclou disculpa
     prudent, verificació, solució provisional, límits sobre compensacions i següent
@@ -486,6 +522,7 @@
   workflow: complaint_response
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   prompt: >-
     Escriu una reclamació formal. Inclou cronologia, impacte, documents
     adjunts, petició concreta i termini de resposta, sense conservar expressions
@@ -501,6 +538,7 @@
   workflow: complaint_response
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: inline_source_es
   prompt: >-
     Redacta una resposta municipal a una queixa tributària. Ha de reconèixer
     la recepció, explicar comprovacions, indicar documentació útil, termini i canal
@@ -515,6 +553,7 @@
   workflow: complaint_response
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: inline_source_es
   prompt: >-
     Escriu una reclamació a una companyia de transport. Inclou fets,
     conseqüències, proves disponibles, solució demanada i petició de confirmació.
@@ -528,6 +567,7 @@
   workflow: complaint_response
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   prompt: >-
     Redacta una resposta institucional a una queixa veïnal. Inclou
     reconeixement, actuació immediata, verificació prevista, terminis i canal per
@@ -543,6 +583,7 @@
   workflow: complaint_response
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   prompt: >-
     Escriu una reclamació a la propietat d'un habitatge. Inclou antecedents,
     discrepància, proves disponibles, petició d'import i termini de resposta.
@@ -557,6 +598,7 @@
   workflow: complaint_response
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: inline_source_es
   prompt: >-
     Escriu una reclamació educativa clara i respectuosa. Inclou exposició
     dels fets, impacte, documents adjunts, petició principal i alternativa acceptable.
@@ -570,6 +612,7 @@
   workflow: privacy_guidance
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   prompt: >-
     Dona una guia de privacitat amb passos ordenats i advertiments
     pràctics. No mantinguis la terminologia de la font.
@@ -584,6 +627,7 @@
   workflow: procurement_note
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: inline_source_es
   prompt: >-
     Escriu una nota de contractació breu. Inclou necessitat, criteris
     tècnics, riscos, comprovacions documentals i proper tràmit, sense copiar termes
@@ -599,6 +643,7 @@
   workflow: procurement_note
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   prompt: >-
     Redacta una nota de contractació. Inclou objectiu, abast, criteris de
     qualitat, riscos d'accessibilitat, dades a protegir i recomanació condicionada.
@@ -613,6 +658,7 @@
   workflow: procurement_note
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: inline_source_es
   prompt: >-
     Escriu una nota interna per comparar proveïdors. Inclou criteris de
     qualitat, cost, continuïtat, riscos logístics, condicions de transició i decisió
@@ -628,6 +674,7 @@
   workflow: procurement_note
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   prompt: >-
     Redacta una nota de decisió sobre un servei logístic. Inclou criteris
     operatius, cobertura, cost, riscos, prova pilot i recomanació.
@@ -642,6 +689,7 @@
   workflow: project_status
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   prompt: >-
     Escriu una actualització de projecte per a direcció. Organitza-la en
     estat, avenços, riscos, decisions necessàries i properes accions, sense mantenir
@@ -656,6 +704,7 @@
   workflow: project_status
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: inline_source_es
   prompt: >-
     Redacta una actualització d'estat per a una comissió de seguiment.
     Inclou resum, fites, documentació pendent, riscos, mesures correctores i decisió
@@ -670,6 +719,7 @@
   workflow: project_status
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   prompt: >-
     Escriu una actualització breu de projecte públic. Inclou estat, proves
     pendents, riscos per a usuaris, comunicació prevista i decisió de llançament.
@@ -683,6 +733,7 @@
   workflow: project_status
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: inline_source_es
   prompt: >-
     Escriu una actualització executiva de projecte. Inclou estat, incidències
     de dades, riscos comercials, tasques crítiques i propera decisió.
@@ -696,6 +747,7 @@
   workflow: public_notice
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   prompt: >-
     Escriu un avís públic amb títol, afectació, alternatives, recomanacions
     i propera actualització. No conservis expressions de la font.
@@ -709,6 +761,7 @@
   workflow: public_notice
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: inline_source_es
   prompt: >-
     Redacta un avís municipal clar i operatiu. Inclou motiu, espais
     afectats, ubicació alternativa, horaris, recomanacions i canal de consulta.
@@ -722,6 +775,7 @@
   workflow: public_notice
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   prompt: >-
     Escriu un avís públic sobre mobilitat. Inclou títol, dates, afectació,
     alternativa, col·lectius prioritaris i propera comunicació.
@@ -735,6 +789,7 @@
   workflow: public_notice
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: inline_source_es
   prompt: >-
     Escriu un avís públic de protecció civil. Inclou què se sap, afectació,
     recomanacions, equipaments afectats, pròxima revisió i canal oficial.
@@ -748,6 +803,7 @@
   workflow: study_plan
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   prompt: >-
     Prepara un pla d'estudi de sis dies a partir de la font. Ha de tenir
     objectius diaris, pràctica activa, revisió final i criteris de progrés.
@@ -761,6 +817,7 @@
   workflow: support_reply
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   prompt: >-
     Contesta com a suport tècnic. Resumeix el problema, demana verificacions,
     proposa una mesura temporal segura, indica escalat i evita copiar termes de la font.
@@ -774,6 +831,7 @@
   workflow: support_reply
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: inline_source_es
   prompt: >-
     Escriu una resposta de suport. Inclou reconeixement, hipòtesis inicials,
     comprovacions ordenades, dades que cal enviar i termini de seguiment.
@@ -787,6 +845,7 @@
   workflow: support_reply
   source_lang: en-ca
   target_lang: ca
+  pressure_pattern: english_or_trilingual
   prompt: >-
     Escriu una resposta de suport per a un equip logístic. Dona passos
     de diagnosi, instruccions per evitar pèrdua de dades, informació a recollir i
@@ -801,6 +860,7 @@
   workflow: support_reply
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: inline_source_es
   prompt: >-
     Contesta com a suport. Resumeix la incidència, dona comprovacions
     segures, proposa solució temporal, demana dades mínimes i fixa el proper contacte.
