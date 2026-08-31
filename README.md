@@ -121,6 +121,7 @@ Results on the 300-item dataset:
 | Salamandra 7B | 73.0% | 79.3% | 100.0% | 43.3% | 81.7% | 70.0% | 70.0% |
 | Gemma 3 4B | 70.0% | 76.3% | 100.0% | 48.3% | 50.0% | 55.0% | 96.7% |
 | GPT-5.6 | 68.0% | 72.6% | 100.0% | 66.7% | 50.0% | 61.7% | 61.7% |
+| EuroLLM 9B | 61.0% | 69.7% | 100.0% | 61.7% | 28.3% | 43.3% | 71.7% |
 | Aya Expanse 8B | 50.0% | 57.4% | 95.0% | 25.0% | 40.0% | 58.3% | 31.7% |
 
 The pooled calibration target across the five models is 79/300 failures
