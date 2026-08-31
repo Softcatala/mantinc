@@ -1,14 +1,14 @@
 {
-  "catalan_token_ratio": 0.8104,
+  "catalan_token_ratio": 0.807,
   "categories": {
     "crosslingual_advanced": {
-      "pass": 48,
-      "pass_rate": 0.8,
+      "pass": 43,
+      "pass_rate": 0.7167,
       "total": 60
     },
     "crosslingual_basic": {
-      "pass": 28,
-      "pass_rate": 0.4667,
+      "pass": 32,
+      "pass_rate": 0.5333,
       "total": 60
     },
     "monolingual": {
@@ -17,25 +17,25 @@
       "total": 60
     },
     "multi_turn": {
-      "pass": 43,
-      "pass_rate": 0.7167,
+      "pass": 41,
+      "pass_rate": 0.6833,
       "total": 60
     },
     "rag_context": {
-      "pass": 43,
-      "pass_rate": 0.7167,
+      "pass": 42,
+      "pass_rate": 0.7,
       "total": 60
     }
   },
-  "created_at": "2026-08-31T10:16:46+02:00",
-  "inference_seconds": 4169.880761466979,
+  "created_at": "2026-08-31T21:30:42+02:00",
+  "inference_seconds": 3900.733955481992,
   "model": "google_gemma-4-E4B-it-Q4_K_M",
   "n": 300,
   "n_api_or_empty_failures": 0,
-  "n_catalan_tokens": 83418,
-  "n_detected_language_tokens": 102934,
-  "n_failures": 79,
-  "n_language_failures": 79,
-  "n_passes": 221,
-  "pass_rate": 0.7367
+  "n_catalan_tokens": 82547,
+  "n_detected_language_tokens": 102292,
+  "n_failures": 83,
+  "n_language_failures": 83,
+  "n_passes": 217,
+  "pass_rate": 0.7233
 }
