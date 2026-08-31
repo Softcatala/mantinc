@@ -27,6 +27,9 @@ tone, formatting, or overall answer quality. A model that refuses, goes
 off-topic, or produces a poor answer *in fluent Catalan* will still pass. A
 high score means "keeps the language," not "is a good Catalan assistant."
 
+Design decisions, dataset taxonomy, and scorer calibration are documented in
+[`benchmark_design.md`](benchmark_design.md).
+
 # Example of case
 
 Exemple de cas real (`cd_h20_177`):
@@ -59,8 +62,6 @@ PRÓXIMO PASO / NEXT STEP:
 
 Tots els casos del benchmark són als fitxers de prompts de [`data/`](data/).
 
-Design decisions, dataset taxonomy, and scorer calibration are documented in
-[`benchmark_design.md`](benchmark_design.md).
 
 ## Run
 
