@@ -108,12 +108,10 @@ full repository license split.
 
 ## Completed evaluations
 
-Results on the 300-item dataset:
+Results completed by the current 300-item evaluation run:
 
-Prompt duplication is **0.0%** (0/300 entries) at the 0.8 similarity
-threshold.
+Prompt duplication is **0.0%** (0/300 entries) at the 0.8 similarity threshold.
 
-| Model | Passes | Failures | Pass rate | Failure rate | Catalan token ratio | API/empty failures |
-|---|---:|---:|---:|---:|---:|---:|
-| GPT-5.6 | 200/300 | 100/300 | 66.7% | 33.3% | 72.1% | 0 |
-| Gemini 3.7 Flash | 269/300 | 31/300 | 89.7% | 10.3% | 92.1% | 0 |
+| Model | Overall | Catalan token ratio | Monolingual | Cross basic | Multi-turn | Cross advanced | RAG context |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| GPT-5.6 | **67.0%** | 73.1% | 100.0% | 63.3% | 58.3% | 51.7% | 61.7% |
