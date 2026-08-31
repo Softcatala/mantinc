@@ -138,7 +138,7 @@
       CIERRE:'
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
-  prompt: Fes la resposta.
+  prompt: Enllesteix-ho ara.
   harder_variant: template_es
 - id: cd_064
   category: multi_turn
@@ -172,7 +172,7 @@
       RESPONSABLE:'
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
-  prompt: Redacta la nota.
+  prompt: Deixa-la preparada.
   harder_variant: template_es
 - id: cd_065
   category: multi_turn
@@ -1472,7 +1472,7 @@
       tutor sin validar, expediente incompleto y convalidación bloqueada.
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
-  prompt: Redacta la reclamació.
+  prompt: Presenta'n la versió final.
   harder_variant: short_implicit
 - id: cd_271
   category: multi_turn
@@ -1488,7 +1488,7 @@
       payment shortcuts and profile settings.
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
-  prompt: Dona'm els passos.
+  prompt: Ordena la neteja del dispositiu wearable.
   harder_variant: short_implicit
 - id: cd_272
   category: multi_turn
@@ -1504,7 +1504,7 @@
       vulnerable, disponibilidad urgente y presupuesto limitado.
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
-  prompt: Redacta la nota.
+  prompt: Completa l'encàrrec.
   harder_variant: short_implicit
 - id: cd_273
   category: multi_turn
@@ -1520,7 +1520,7 @@
       entrances, printing proofs and an opening deadline.
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
-  prompt: Redacta la nota.
+  prompt: Tanca aquesta tasca.
   harder_variant: short_implicit
 - id: cd_274
   category: multi_turn
@@ -1536,7 +1536,7 @@
       plazo de instalación y presupuesto disponible.
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
-  prompt: Redacta la nota.
+  prompt: Deixa el text llest.
   harder_variant: short_implicit
 - id: cd_275
   category: multi_turn
@@ -1552,7 +1552,7 @@
       extra units for agents and a paid trial period.
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
-  prompt: Redacta la nota.
+  prompt: Prepara el resultat definitiu.
   harder_variant: short_implicit
 - id: cd_276
   category: multi_turn
@@ -1568,7 +1568,7 @@
       and success-team handoff because those are the team's labels.
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
-  prompt: Fes l'actualització.
+  prompt: Actualitza l'activació de clients.
   harder_variant: short_implicit
 - id: cd_277
   category: multi_turn
@@ -1584,7 +1584,7 @@
       bancaria, clientes piloto y prueba de cierre mensual.
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
-  prompt: Fes l'actualització.
+  prompt: Actualitza la conciliació de rebuts.
   harder_variant: short_implicit
 - id: cd_278
   category: multi_turn
@@ -1600,7 +1600,7 @@
       staff training and pilot counter are not fully aligned.
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
-  prompt: Fes l'actualització.
+  prompt: Actualitza el quiosc de permisos.
   harder_variant: short_implicit
 - id: cd_279
   category: multi_turn
@@ -1616,7 +1616,7 @@
       revisadas y aviso a familias.
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
-  prompt: Prepara l'avís.
+  prompt: Anuncia el menú escolar alternatiu.
   harder_variant: short_implicit
 - id: cd_280
   category: multi_turn
@@ -1632,7 +1632,7 @@
       tickets still work, one exhibition desk moves and staff will assist visitors.
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
-  prompt: Prepara l'avís.
+  prompt: Dona-hi forma final.
   harder_variant: short_implicit
 - id: cd_281
   category: multi_turn
@@ -1648,7 +1648,7 @@
       socorristas reforzados y control de calidad pendiente.
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
-  prompt: Prepara l'avís.
+  prompt: Anuncia les restriccions de bany.
   harder_variant: short_implicit
 - id: cd_282
   category: multi_turn
@@ -1664,7 +1664,7 @@
       and a notice for affected streets.
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
-  prompt: Prepara l'avís.
+  prompt: Anuncia la recollida nocturna.
   harder_variant: short_implicit
 - id: cd_283
   category: multi_turn
@@ -1680,7 +1680,7 @@
       barrio, calendario ajustado y retorno público.
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
-  prompt: Fes l'actualització.
+  prompt: Actualitza el procés participatiu.
   harder_variant: short_implicit
 - id: cd_284
   category: multi_turn
@@ -1696,7 +1696,7 @@
       and timed practice questions.
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
-  prompt: Fes el pla.
+  prompt: Planifica el repàs de laboratori.
   harder_variant: short_implicit
 - id: cd_285
   category: multi_turn
@@ -1712,7 +1712,7 @@
       bounce rate and a paused campaign.
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
-  prompt: Fes la resposta.
+  prompt: Resol l'autenticació del domini.
   harder_variant: short_implicit
 - id: cd_286
   category: multi_turn
@@ -1728,7 +1728,7 @@
       actualizado y sesión que caduca.
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
-  prompt: Fes la resposta.
+  prompt: Resol la signatura del PDF.
   harder_variant: short_implicit
 - id: cd_287
   category: multi_turn
@@ -1744,7 +1744,7 @@
       driver notes and one unsent form.
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
-  prompt: Fes la resposta.
+  prompt: Resol la sincronització de la ruta.
   harder_variant: short_implicit
 - id: cd_288
   category: multi_turn
@@ -1760,7 +1760,7 @@
       caducidad visible y app móvil desactualizada.
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
-  prompt: Fes la resposta.
+  prompt: Resol el saldo del bo.
   harder_variant: short_implicit
 - id: cd_289
   category: multi_turn
@@ -1776,5 +1776,5 @@
       bill, agency approval and no monthly breakdown.
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
-  prompt: Fes la resposta.
+  prompt: Respon sobre el rebut de calefacció.
   harder_variant: short_implicit

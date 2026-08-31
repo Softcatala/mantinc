@@ -110,35 +110,10 @@ full repository license split.
 
 Results on the 300-item dataset:
 
-| Model | Overall | Catalan token ratio | Monolingual | Cross basic | Multi-turn | Cross advanced | RAG context |
-|---|---:|---:|---:|---:|---:|---:|---:|
-| Gemini 3.7 Flash | **88.7%** | 91.8% | 100.0% | 86.7% | 90.0% | 86.7% | 80.0% |
-| Ministral 3 8B | 79.0% | 79.5% | 90.0% | 76.7% | 68.3% | 76.7% | 83.3% |
-| Gemma 4 12B | 78.3% | 79.3% | 100.0% | 68.3% | 66.7% | 76.7% | 80.0% |
-| Qwen3 14B | 75.3% | 81.8% | 100.0% | 61.7% | 76.7% | 78.3% | 60.0% |
-| Llama 3.1 8B | 74.7% | 78.9% | 100.0% | 55.0% | 68.3% | 81.7% | 68.3% |
-| Gemma 4 E4B | 73.7% | 81.0% | 98.3% | 46.7% | 71.7% | 80.0% | 71.7% |
-| Salamandra 7B | 73.0% | 79.3% | 100.0% | 43.3% | 81.7% | 70.0% | 70.0% |
-| Gemma 3 4B | 70.0% | 76.3% | 100.0% | 48.3% | 50.0% | 55.0% | 96.7% |
-| GPT-5.6 | 68.0% | 72.6% | 100.0% | 66.7% | 50.0% | 61.7% | 61.7% |
-| EuroLLM 9B | 61.0% | 69.7% | 100.0% | 61.7% | 28.3% | 43.3% | 71.7% |
-| Aya Expanse 8B | 50.0% | 57.4% | 95.0% | 25.0% | 40.0% | 58.3% | 31.7% |
+Prompt duplication is **0.0%** (0/300 entries) at the 0.8 similarity
+threshold.
 
-The pooled calibration target across the five models is 79/300 failures
-(26.3%). The redistributed categories are within five percentage points of
-that target:
-
-| Category | Failures | Failure rate | Difference |
-|---|---:|---:|---:|
-| Crosslingual basic | 88/300 | 29.3% | +3.0 pp |
-| Multi-turn | 94/300 | 31.3% | +5.0 pp |
-| Crosslingual advanced | 73/300 | 24.3% | -2.0 pp |
-| RAG context | 79/300 | 26.3% | 0.0 pp |
-
-The maximum 95% margin of error is 5.7 percentage points for each pooled
-category rate (n=300), using the normal approximation for a binomial
-proportion. Per-model behavior varies, which is why calibration uses the pooled
-model suite rather than forcing one prompt mix to move opposing models in the
-same direction. All completed evaluations had zero API or empty-response
-failures. Local changed-item runs used greedy decoding with
-`max_gen_toks=2048`; unchanged deterministic samples were reused.
+| Model | Passes | Failures | Pass rate | Failure rate | Catalan token ratio | API/empty failures |
+|---|---:|---:|---:|---:|---:|---:|
+| GPT-5.6 | 200/300 | 100/300 | 66.7% | 33.3% | 72.1% | 0 |
+| Gemini 3.7 Flash | 269/300 | 31/300 | 89.7% | 10.3% | 92.1% | 0 |

@@ -1488,7 +1488,7 @@
     RESPONSABLE / OWNER:
 
 
-    Fes la resposta.'
+    Sintetitza la Farga del Roquer.'
   harder_variant: template_mixed
 - id: cd_rag_030
   category: rag_context
@@ -1603,7 +1603,7 @@
     PLAZO / DEADLINE:
 
 
-    Fes la resposta.'
+    Contesta la consulta.'
   harder_variant: template_mixed
 - id: cd_rag_032
   category: rag_context
@@ -1778,7 +1778,7 @@
     PLAZO / DEADLINE:
 
 
-    Fes la resposta.'
+    Informa sobre el mural del bosc.'
   harder_variant: template_mixed
 - id: cd_rag_035
   category: rag_context
@@ -1961,7 +1961,7 @@
     VALIDACIÓN / VALIDATION:
 
 
-    Fes el resum.'
+    Sintetitza la informació.'
   harder_variant: template_mixed
 - id: cd_rag_038
   category: rag_context
@@ -2171,7 +2171,7 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Actividades de fin de semana para las AMPA. Taller de cocina solar y excursiones
-  prompt: Fes la resposta.
+  prompt: Respon sobre l'escola de natura.
   harder_variant: short_implicit
 - id: cd_rag_042
   category: rag_context
@@ -2217,7 +2217,7 @@
     text: 'Nombre del equipamiento: Centro de Información de Sant Cebrià de Vallalta. Categorías documentales:
       montnegrecorredor, desfibrilador, Montnegre-Corredor, Desfibrilador, Elemento de patrimonio histórico-cultural,
       Elemento de patrimonio natural.'
-  prompt: Fes el resum.
+  prompt: Resumeix el servei informatiu itinerant.
   harder_variant: short_implicit
 - id: cd_rag_043
   category: rag_context
@@ -2260,7 +2260,7 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: El Museo también acoje el Centro de Documentación del Parque Natural del Montnegre i el Corredor.
       Mataró
-  prompt: Fes el resum.
+  prompt: Resumeix el Museu de Mataró.
   harder_variant: short_implicit
 - id: cd_rag_044
   category: rag_context
@@ -2305,7 +2305,7 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: 'Para más información se puede consultar: Observatorio Astronómico de Tiana'
-  prompt: Fes la resposta.
+  prompt: Informa sobre l'audiovisual de la Serralada.
   harder_variant: short_implicit
 - id: cd_rag_045
   category: rag_context
@@ -2350,7 +2350,7 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Su base de datos bibliográficos se puede consultar por Internet [catàleg col·lectiu]
-  prompt: Prepara l'avís.
+  prompt: Anuncia el centre documental del Garraf.
   harder_variant: short_implicit
 - id: cd_rag_046
   category: rag_context
@@ -2398,7 +2398,7 @@
     text: 'Nombre del equipamiento: Espai museístic del jaciment arqueològic del poblat ibèric de les
       Maleses. Categorías documentales: marina, museos_y_equipamientos_culturales, Marina, Museos y equipamientos
       culturales.'
-  prompt: Fes la resposta.
+  prompt: Respon sobre el museu de les Maleses.
   harder_variant: short_implicit
 - id: cd_rag_047
   category: rag_context
@@ -2440,7 +2440,7 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: GR 2 La Joquera-Aiguafreda. De Sant Julià de Vilatorta al santuari de Puig l’Agulla.
-  prompt: Fes el resum.
+  prompt: Resumeix els itineraris de les Set Fonts.
   harder_variant: short_implicit
 - id: cd_rag_048
   category: rag_context
@@ -2484,7 +2484,7 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: GR-2 La Jonquera – Aiguafreda. Tram de Vilanova de Sau a Sant Llorenç del Munt.
-  prompt: Fes el resum.
+  prompt: Resumeix el punt de Vilanova de Sau.
   harder_variant: short_implicit
 - id: cd_rag_049
   category: rag_context
@@ -2531,7 +2531,7 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: 'Nombre del equipamiento: Astrosabadell. Categorías documentales: certificacio_cets, museos_y_equipamientos_culturales,
       certificació CETS, Museos y equipamientos culturales.'
-  prompt: Fes la resposta.
+  prompt: Informa sobre l'associació astronòmica.
   harder_variant: short_implicit
 - id: cd_rag_050
   category: rag_context
@@ -2574,7 +2574,7 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: La gestión de este equipamiento es posible gracias al convenio de colaboración entre la Diputación
       de Barcelona y el Ayuntamiento de Sant Vicenç de Castellet.
-  prompt: Prepara l'avís.
+  prompt: Anuncia el punt occidental del parc.
   harder_variant: short_implicit
 - id: cd_rag_051
   category: rag_context
@@ -2618,7 +2618,7 @@
     text: 'Nombre del equipamiento: Museo de Fogars de la Selva (equipamiento municipal). Categorías documentales:
       montnegrecorredor, equipamientos_de_educacion_ambiental_e_investigacion, Montnegre-Corredor, Equipamientos
       de educación ambiental e investigación, Museos y equipamientos culturales, Museos.'
-  prompt: Fes la resposta.
+  prompt: Respon sobre la visita autoguiada.
   harder_variant: short_implicit
 - id: cd_rag_052
   category: rag_context
@@ -2664,7 +2664,7 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: También hay barro proveniente del castillo de Rocafort. La mayor parte de piezas han sido donadas
       desinteresadamente por los propios vecinos del pueblo.
-  prompt: Fes el resum.
+  prompt: Resumeix la col·lecció de vida pagesa.
   harder_variant: short_implicit
 - id: cd_rag_053
   category: rag_context
@@ -2714,7 +2714,7 @@
     text: 'Nombre del equipamiento: Punto de información en el Centro de Visitantes de la Garriga. Categorías
       documentales: montseny, venta_de_publicaciones, Montseny, Venta de publicaciones, Exposición permanente,
       Información personalizada.'
-  prompt: Fes el resum.
+  prompt: Resumeix el punt de la Garriga.
   harder_variant: short_implicit
 - id: cd_rag_054
   category: rag_context
@@ -2756,7 +2756,7 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: 'Nombre del equipamiento: Centro de Información el Brull. Categorías documentales: montseny,
       Montseny.'
-  prompt: Fes la resposta.
+  prompt: Informa sobre la fortificació del Montgròs.
   harder_variant: short_implicit
 - id: cd_rag_055
   category: rag_context
@@ -2806,7 +2806,7 @@
     text: 'Nombre del equipamiento: Centro de Documentación del Parque Natural de El Montseny. Sección
       Ciencias Naturales. Categorías documentales: montseny, centro_de_documentacion, Montseny, Centro
       de documentación, Información personalizada, Centros de documentación.'
-  prompt: Prepara l'avís.
+  prompt: Anuncia el centre documental del Montseny.
   harder_variant: short_implicit
 - id: cd_rag_056
   category: rag_context
@@ -2850,7 +2850,7 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: 'Nombre del equipamiento: Audiovisual: Les quatre estacions al Montseny (Las cuatro estaciones
       en el Montseny). Categorías documentales: montseny, audiovisuales, Montseny, Audiovisuales.'
-  prompt: Fes la resposta.
+  prompt: Respon sobre l'audiovisual de les estacions.
   harder_variant: short_implicit
 - id: cd_rag_057
   category: rag_context
@@ -2896,7 +2896,7 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: La colección del museo se reparte en dos plantas que dan valor al mundo del bosque, la naturaleza
       y la agricultura.
-  prompt: Fes el resum.
+  prompt: Resumeix el museu de memòria rural.
   harder_variant: short_implicit
 - id: cd_rag_058
   category: rag_context
@@ -2941,7 +2941,7 @@
     text: 'Nombre del equipamiento: Punto de Información de Aiguafreda. Categorías documentales: montseny,
       venta_de_publicaciones, Montseny, Venta de publicaciones, Información personalizada, Itinerario
       autoguiado.'
-  prompt: Fes el resum.
+  prompt: Resumeix el punt d'Aiguafreda.
   harder_variant: short_implicit
 - id: cd_rag_059
   category: rag_context
@@ -2985,7 +2985,7 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: 'Nombre del equipamiento: Llegendes del Montseny (Leyendas del Montseny). Categorías documentales:
       montseny, audiovisuales, Montseny, Audiovisuales.'
-  prompt: Fes la resposta.
+  prompt: Informa sobre les llegendes del Montseny.
   harder_variant: short_implicit
 - id: cd_rag_060
   category: rag_context
@@ -3028,5 +3028,5 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: El Montgròs, el Brull. Una fortificación ibérica en el Montseny. Guía del conjunto arqueológico
       [PDF, texto en catalán]
-  prompt: Prepara l'avís.
+  prompt: Anuncia la visita guiada al Montgròs.
   harder_variant: short_implicit

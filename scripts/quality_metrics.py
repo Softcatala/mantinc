@@ -39,6 +39,20 @@ def jaccard(left: set[str], right: set[str]) -> float:
     return len(left & right) / len(union) if union else 1.0
 
 
+def evaluated_input(row: dict) -> str:
+    """Return the full model-visible input for callers that need it."""
+    parts = [
+        str(turn.get("content") or "")
+        for turn in row.get("conversation") or []
+    ]
+    parts.extend(
+        str(chunk.get("text") or "")
+        for chunk in row.get("retrieved_context") or []
+    )
+    parts.append(str(row.get("prompt") or ""))
+    return "\n".join(parts)
+
+
 def render_html(rows_by_id, neighbors_by_id, top, min_score) -> str:
     cases_with_duplicates = {
         row_id: neighbors for row_id, neighbors in neighbors_by_id.items() if neighbors
