@@ -41,20 +41,46 @@ labels, firmware version and offline mode.
 
 **Assistent:** Tradueixo el fons tècnic a instruccions clares.
 
-**Usuari:** Antes de terminar, incorpora los hechos, riesgos y próximos pasos
-del contexto.
+**Usuari:** Plantilla reusable (mixed headers):
 
-**Assistent:** D'acord. He revisat el context i en conservaré els elements clau.
+ASUNTO / SUBJECT:
 
-**Usuari:** Haz una última revisión en español y deja lista la respuesta final.
+SITUACIÓN / SITUATION:
 
-**Assistent:** He revisado todo y tengo preparada una versión fiel, concreta y
-completa.
+RIESGO / RISK:
 
-**Prompt final:** Escriu la resposta de suport, amb comprovacions, dades
-requerides, mesura temporal i escalat.
+ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+
+PRÓXIMO PASO / NEXT STEP:
+
+**Assistent:** OK. I will do la revisión final antes de cerrar.
+
+**Prompt final:** Fes la resposta.
 
 Tots els casos del benchmark són als fitxers de prompts de [`data/`](data/).
+
+## Benchmark Design
+
+- The dataset is category-balanced: each category contains 60 items, so category
+  scores remain directly comparable.
+- Conversation cases do not use system prompts. The final user prompt is appended
+  after the prior turns, so the benchmark tests whether the model follows the
+  latest task while resisting cross-language priming.
+- Explicit Catalan language instructions follow the app policy being tested:
+  - unmodified `rag_context` items include a final Catalan instruction;
+    hardened items deliberately remove that reset signal.
+  - `monolingual` never includes an explicit Catalan instruction, because it
+    models an ordinary Catalan conversation.
+  - unmodified `crosslingual_basic`, `multi_turn`, and `crosslingual_advanced` include an
+    explicit Catalan instruction only when the case contains non-Catalan text and
+    the full final user prompt is shorter than 10 words.
+- RAG documents come from CC BY 4.0 Diputació de Barcelona Open Data records,
+  currently the paired `parcsequipaments_ca` and `parcsequipaments_es` datasets.
+  Only safe descriptive fragments are kept; contact, location, schedule, and
+  personal data fields are filtered out.
+
+The dataset contains 300 items total (60 per category × 5 categories). It is
+built deterministically with `make build`.
 
 ## Taxonomy
 
@@ -83,7 +109,6 @@ Each sample should specify:
     `bilingual_ca_es` (30 items: 20 with 3 ES + 1 CA and 10 with 2 ES + 2 CA).
 - `harder_variant` (218 non-control items): adversarial pressure independent
   of `category`: `template_es`, `template_mixed`, or `short_implicit`.
-  There is no standalone harder category.
 - `rag_subtype` (only on `rag_context` items): `spanish_only` or
   `bilingual_ca_es`.
 - `pressure_pattern`: consolidated classification of the
@@ -108,29 +133,6 @@ Each sample should specify:
   - `en-es-ca` / `es-en-ca`: trilingual `crosslingual_advanced` items
     combining English and Spanish across prior turns (order marks the first
     crosslingual turn) answered in Catalan.
-
-## Benchmark Design
-
-- The dataset is category-balanced: each category contains 60 items, so category
-  scores remain directly comparable.
-- Conversation cases do not use system prompts. The final user prompt is appended
-  after the prior turns, so the benchmark tests whether the model follows the
-  latest task while resisting cross-language priming.
-- Explicit Catalan language instructions follow the app policy being tested:
-  - unmodified `rag_context` items include a final Catalan instruction;
-    hardened items deliberately remove that reset signal.
-  - `monolingual` never includes an explicit Catalan instruction, because it
-    models an ordinary Catalan conversation.
-  - unmodified `crosslingual_basic`, `multi_turn`, and `crosslingual_advanced` include an
-    explicit Catalan instruction only when the case contains non-Catalan text and
-    the full final user prompt is shorter than 10 words.
-- RAG documents come from CC BY 4.0 Diputació de Barcelona Open Data records,
-  currently the paired `parcsequipaments_ca` and `parcsequipaments_es` datasets.
-  Only safe descriptive fragments are kept; contact, location, schedule, and
-  personal data fields are filtered out.
-
-The dataset contains 300 items total (60 per category × 5 categories). It is
-built deterministically with `make build`.
 
 ## Run
 
@@ -207,11 +209,10 @@ and source/evaluation data files are licensed under Creative Commons
 Attribution-ShareAlike 4.0 International (CC BY-SA 4.0). See `LICENSE` for the
 full repository license split.
 
-## Distributed harder pressure
+## Distributed adversarial pressure
 
-Difficulty is independent of the scenario category. The former standalone
-`harder` category has been removed and its three adversarial patterns are now
-distributed across all four non-control categories:
+Difficulty is independent of the scenario category. Three adversarial patterns
+are distributed across all four non-control categories:
 
 - `template_es` (61 items): Spanish reusable headers and Spanish assistant
   priming before the final Catalan task.
@@ -234,12 +235,13 @@ Results on the 300-item dataset:
 | Gemini 3.7 Flash | **94.0%** | 95.8% | 100.0% | 95.0% | 88.3% | 95.0% | 91.7% |
 | Gemma 4 12B | 78.3% | 79.3% | 100.0% | 68.3% | 66.7% | 76.7% | 80.0% |
 | Ministral 3 8B | 79.0% | 79.5% | 90.0% | 76.7% | 68.3% | 76.7% | 83.3% |
+| Salamandra 7B Q4_K_M | 73.0% | 79.3% | 100.0% | 43.3% | 81.7% | 70.0% | 70.0% |
 | Qwen3 14B | 75.3% | 81.8% | 100.0% | 61.7% | 76.7% | 78.3% | 60.0% |
 | GPT-5.6 | 60.0% | 69.5% | 100.0% | 51.7% | 43.3% | 51.7% | 53.3% |
 
-The calibration target is the pooled failure rate of the five models on the
-former 60-item harder category: 79/300 (26.3%). The redistributed categories
-are within five percentage points of that target:
+The pooled calibration target across the five models is 79/300 failures
+(26.3%). The redistributed categories are within five percentage points of
+that target:
 
 | Category | Failures | Failure rate | Difference |
 |---|---:|---:|---:|

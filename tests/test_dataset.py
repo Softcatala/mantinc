@@ -74,9 +74,8 @@ class DatasetTest(unittest.TestCase):
                     expected = row["source_lang"] != "ca" and final_prompt_word_count(row) < 10
                     self.assertEqual(has_instruction, expected)
 
-    def test_harder_pressure_is_distributed_across_task_categories(self) -> None:
+    def test_adversarial_pressure_is_distributed_across_task_categories(self) -> None:
         categories = {row["category"] for row in self.rows}
-        self.assertNotIn("harder", categories)
         for category in categories - {"monolingual"}:
             rows = [row for row in self.rows if row["category"] == category]
             self.assertTrue(any(row.get("harder_variant") for row in rows), category)

@@ -11,12 +11,6 @@ from typing import Any
 
 import yaml
 
-if __package__:
-    from .add_pressure_pattern import classify
-else:
-    from add_pressure_pattern import classify
-
-
 ROOT = Path(__file__).resolve().parents[1]
 SOURCES = {
     "monolingual": ROOT / "data/prompts_monolingual.yaml",
@@ -32,6 +26,33 @@ EXPECTED_CATEGORY_COUNTS = {
     "crosslingual_advanced": 60,
     "rag_context": 60,
 }
+
+
+def classify(row: dict[str, Any]) -> str:
+    category = row.get("category", "")
+    source_lang = row.get("source_lang", "")
+    if category == "monolingual":
+        return "no_pressure"
+    if row.get("harder_variant"):
+        return f"harder_{row['harder_variant']}"
+    if category == "crosslingual_basic":
+        return "inline_source_es" if source_lang == "es-ca" else "english_or_trilingual"
+    if category == "multi_turn":
+        return "midconv_es_recency" if source_lang == "es-ca" else "english_or_trilingual"
+    if category == "rag_context":
+        return "rag_context"
+    if category == "crosslingual_advanced":
+        prior = " ".join(
+            turn.get("content", "")
+            for turn in row.get("conversation", [])
+            if turn.get("role") == "user"
+        )
+        if "Plantilla reutilizable" in prior:
+            return "template_es_prior"
+        if "Reusable template" in prior or source_lang in {"en-es-ca", "es-en-ca"}:
+            return "english_or_trilingual"
+        return "midconv_es_recency"
+    return "unknown"
 
 
 def load_rows(path: Path) -> list[dict[str, Any]]:
