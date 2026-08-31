@@ -112,7 +112,7 @@ Results on the 300-item dataset:
 
 | Model | Overall | Catalan token ratio | Monolingual | Cross basic | Multi-turn | Cross advanced | RAG context |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Gemini 3.7 Flash | **94.0%** | 95.8% | 100.0% | 95.0% | 88.3% | 95.0% | 91.7% |
+| Gemini 3.7 Flash | **88.7%** | 91.8% | 100.0% | 86.7% | 90.0% | 86.7% | 80.0% |
 | Ministral 3 8B | 79.0% | 79.5% | 90.0% | 76.7% | 68.3% | 76.7% | 83.3% |
 | Gemma 4 12B | 78.3% | 79.3% | 100.0% | 68.3% | 66.7% | 76.7% | 80.0% |
 | Qwen3 14B | 75.3% | 81.8% | 100.0% | 61.7% | 76.7% | 78.3% | 60.0% |
