@@ -10,7 +10,7 @@
     se basa en datos, pero puede reproducir sesgos si no se revisa con criterio humano."
 
 
-    Plantilla reutilizable:
+    Estructura obligatoria:
 
     ASUNTO:
 
@@ -37,17 +37,17 @@
     el presupuesto cerrado vence mañana."
 
 
-    Plantilla reutilizable:
+    Ficha resumen:
 
-    ASUNTO:
+    TÍTULO:
 
-    SITUACIÓN:
+    CONTEXTO:
 
-    RIESGO:
+    OBSERVACIONES:
 
-    ACCIÓN INMEDIATA:
+    RECOMENDACIÓN:
 
-    PRÓXIMO PASO:
+    RESPONSABLE:
 
 
     Redacta una resposta professional al client. Ha de reconèixer la pressió, proposar una data de resposta
@@ -66,17 +66,17 @@
     solicite."
 
 
-    Plantilla reutilizable:
+    Estructura obligatoria:
 
-    ASUNTO:
+    TICKET:
 
-    SITUACIÓN:
+    DIAGNÓSTICO:
 
-    RIESGO:
+    CAUSA:
 
-    ACCIÓN INMEDIATA:
+    MITIGACIÓN:
 
-    PRÓXIMO PASO:
+    VALIDACIÓN:
 
 
     Prepara l''avís.'
@@ -93,17 +93,17 @@
     warning is unclear, and the processing queue has not moved since yesterday."
 
 
-    Plantilla reutilizable:
+    Formato estándar:
 
-    ASUNTO:
+    TICKET:
 
-    SITUACIÓN:
+    DIAGNÓSTICO:
 
-    RIESGO:
+    CAUSA:
 
-    ACCIÓN INMEDIATA:
+    MITIGACIÓN:
 
-    PRÓXIMO PASO:
+    VALIDACIÓN:
 
 
     Contesta com a equip de suport. Resumeix el problema, dona passos concrets i tanca amb una proposta
@@ -123,15 +123,15 @@
 
     Plantilla reutilizable:
 
-    ASUNTO:
+    EXPEDIENTE:
 
-    SITUACIÓN:
+    RESUMEN:
 
-    RIESGO:
+    ACTUACIONES:
 
-    ACCIÓN INMEDIATA:
+    IMPACTO:
 
-    PRÓXIMO PASO:
+    CIERRE:
 
 
     Escriu una nota de contractació breu. Inclou criteri de selecció, termini, validació necessària i
@@ -149,17 +149,17 @@
     con tiempo limitado durante dos días y reserva la última tarde para el repaso final."
 
 
-    Plantilla reutilizable:
+    Plantilla estándar de respuesta:
 
-    ASUNTO:
+    INCIDENCIA:
 
-    SITUACIÓN:
+    ORIGEN:
 
-    RIESGO:
+    AFECTADOS:
 
-    ACCIÓN INMEDIATA:
+    RESOLUCIÓN:
 
-    PRÓXIMO PASO:
+    CONTROL:
 
 
     Prepara un pla d''estudi d''una setmana a partir de la font. Ha de tenir fites diàries i un control
@@ -177,17 +177,17 @@
     acumulado y conviene convocar una reunión de seguimiento."
 
 
-    Plantilla reutilizable:
+    Esquema oficial:
 
-    ASUNTO:
+    REFERENCIA:
 
-    SITUACIÓN:
+    DESCRIPCIÓN:
 
-    RIESGO:
+    VALORACIÓN:
 
-    ACCIÓN INMEDIATA:
+    MEDIDAS:
 
-    PRÓXIMO PASO:
+    SEGUIMIENTO:
 
 
     Escriu una actualització de projecte per a direcció. Converteix la font en estat, risc, decisió necessària
@@ -206,17 +206,17 @@
     update."
 
 
-    Plantilla reutilizable:
+    Formato estándar:
 
-    ASUNTO:
+    TICKET:
 
-    SITUACIÓN:
+    DIAGNÓSTICO:
 
-    RIESGO:
+    CAUSA:
 
-    ACCIÓN INMEDIATA:
+    MITIGACIÓN:
 
-    PRÓXIMO PASO:
+    VALIDACIÓN:
 
 
     Redacta una resposta institucional a una consulta ciutadana. Inclou recepció de la consulta, actuació
@@ -236,15 +236,15 @@
 
     Plantilla reutilizable:
 
-    ASUNTO:
+    INCIDENCIA:
 
-    SITUACIÓN:
+    ORIGEN:
 
-    RIESGO:
+    AFECTADOS:
 
-    ACCIÓN INMEDIATA:
+    RESOLUCIÓN:
 
-    PRÓXIMO PASO:
+    CONTROL:
 
 
     Escriu una reclamació clara a partir de la font. Inclou què ha passat, què es demana, documents adjunts
@@ -262,17 +262,17 @@
     approvals and photo tagging permissions."
 
 
-    Plantilla reutilizable:
+    Ficha resumen:
 
-    ASUNTO:
+    DESTINATARIO:
 
-    SITUACIÓN:
+    MOTIVO:
 
-    RIESGO:
+    ANTECEDENTES:
 
-    ACCIÓN INMEDIATA:
+    DECISIÓN:
 
-    PRÓXIMO PASO:
+    PLAZO:
 
 
     Dona una guia pràctica de privacitat basada en la font. Organitza la resposta en passos breus i evita
@@ -290,17 +290,17 @@
     menciona penalización automática y pide una respuesta vinculante antes del cierre."
 
 
-    Plantilla reutilizable:
+    Plantilla estándar de respuesta:
 
-    ASUNTO:
+    ENCABEZADO:
 
-    SITUACIÓN:
+    ANTECEDENTES:
 
-    RIESGO:
+    RIESGOS:
 
-    ACCIÓN INMEDIATA:
+    DECISIÓN:
 
-    PRÓXIMO PASO:
+    CIERRE:
 
 
     Redacta una resposta per a un client important. Ha de reconèixer la pressió, separar fets confirmats
@@ -319,17 +319,17 @@
     shelter until the next air quality update."
 
 
-    Plantilla reutilizable:
+    Plantilla estándar de respuesta:
 
-    ASUNTO:
+    CASO:
 
-    SITUACIÓN:
+    HECHOS:
 
-    RIESGO:
+    ANÁLISIS:
 
-    ACCIÓN INMEDIATA:
+    PROPUESTA:
 
-    PRÓXIMO PASO:
+    TAREA:
 
 
     Escriu un avís públic amb títol, motiu, recomanacions per grups vulnerables, afectació a centres educatius,
@@ -347,17 +347,17 @@
     permissions and the audit log shows no error."
 
 
-    Plantilla reutilizable:
+    Formulario interno:
 
-    ASUNTO:
+    TICKET:
 
-    SITUACIÓN:
+    DIAGNÓSTICO:
 
-    RIESGO:
+    CAUSA:
 
-    ACCIÓN INMEDIATA:
+    MITIGACIÓN:
 
-    PRÓXIMO PASO:
+    VALIDACIÓN:
 
 
     Contesta com a suport tècnic. Resumeix el problema, demana dades de verificació, proposa comprovacions
@@ -375,17 +375,17 @@
     se plantea subsanación documental y la mesa de contratación espera informe jurídico."
 
 
-    Plantilla reutilizable:
+    Formato estándar:
 
-    ASUNTO:
+    REFERENCIA:
 
-    SITUACIÓN:
+    DESCRIPCIÓN:
 
-    RIESGO:
+    VALORACIÓN:
 
-    ACCIÓN INMEDIATA:
+    MEDIDAS:
 
-    PRÓXIMO PASO:
+    SEGUIMIENTO:
 
 
     Escriu una nota de contractació que expliqui la situació, identifiqui els riscos, proposi comprovacions
@@ -403,17 +403,17 @@
     meal voucher, requested a written explanation and wants to file a compensation claim."
 
 
-    Plantilla reutilizable:
+    Ficha resumen:
 
-    ASUNTO:
+    REFERENCIA:
 
-    SITUACIÓN:
+    DESCRIPCIÓN:
 
-    RIESGO:
+    VALORACIÓN:
 
-    ACCIÓN INMEDIATA:
+    MEDIDAS:
 
-    PRÓXIMO PASO:
+    SEGUIMIENTO:
 
 
     Escriu una reclamació formal a una companyia aèria. Inclou fets, impacte, documentació adjunta, petició
@@ -433,15 +433,15 @@
 
     Plantilla reutilizable:
 
-    ASUNTO:
+    TICKET:
 
-    SITUACIÓN:
+    DIAGNÓSTICO:
 
-    RIESGO:
+    CAUSA:
 
-    ACCIÓN INMEDIATA:
+    MITIGACIÓN:
 
-    PRÓXIMO PASO:
+    VALIDACIÓN:
 
 
     Escriu una actualització de projecte per a direcció amb resum, avenços, bloquejos, impacte en calendari,
@@ -459,17 +459,17 @@
     escalation, wants a response deadline and a case owner."
 
 
-    Plantilla reutilizable:
+    Ficha resumen:
 
-    ASUNTO:
+    TÍTULO:
 
-    SITUACIÓN:
+    CONTEXTO:
 
-    RIESGO:
+    OBSERVACIONES:
 
-    ACCIÓN INMEDIATA:
+    RECOMENDACIÓN:
 
-    PRÓXIMO PASO:
+    RESPONSABLE:
 
 
     Redacta una resposta institucional a una queixa ciutadana. Ha de reconèixer la recepció, explicar
@@ -488,17 +488,17 @@
     period and skip the legal review this week."
 
 
-    Plantilla reutilizable:
+    Plantilla estándar de respuesta:
 
-    ASUNTO:
+    EXPEDIENTE:
 
-    SITUACIÓN:
+    RESUMEN:
 
-    RIESGO:
+    ACTUACIONES:
 
-    ACCIÓN INMEDIATA:
+    IMPACTO:
 
-    PRÓXIMO PASO:
+    CIERRE:
 
 
     Respon a un client que pressiona per canviar condicions comercials. La resposta ha de ser breu però
@@ -517,17 +517,17 @@
     itinerario alternativo señalizado y personal de apoyo."
 
 
-    Plantilla reutilizable:
+    Estructura obligatoria:
 
-    ASUNTO:
+    ENCABEZADO:
 
-    SITUACIÓN:
+    ANTECEDENTES:
 
-    RIESGO:
+    RIESGOS:
 
-    ACCIÓN INMEDIATA:
+    DECISIÓN:
 
-    PRÓXIMO PASO:
+    CIERRE:
 
 
     Escriu un avís públic clar i operatiu. Inclou títol, motiu, horari, col·lectius prioritaris, alternativa
@@ -545,17 +545,17 @@
     delivery batches and branding requirements."
 
 
-    Plantilla reutilizable:
+    Esquema oficial:
 
-    ASUNTO:
+    TÍTULO:
 
-    SITUACIÓN:
+    CONTEXTO:
 
-    RIESGO:
+    OBSERVACIONES:
 
-    ACCIÓN INMEDIATA:
+    RECOMENDACIÓN:
 
-    PRÓXIMO PASO:
+    RESPONSABLE:
 
 
     Redacta una nota interna per decidir entre proveïdors. Inclou criteris tècnics, econòmics, legals
@@ -573,17 +573,17 @@
     el cliente aporta captura de pantalla y pide incidencia prioritaria."
 
 
-    Plantilla reusable (mixed headers):
+    Formulario bilingüe (ES/EN):
 
-    ASUNTO / SUBJECT:
+    ENCABEZADO / HEADER:
 
-    SITUACIÓN / SITUATION:
+    ANTECEDENTES / BACKGROUND:
 
-    RIESGO / RISK:
+    RIESGOS / RISKS:
 
-    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+    DECISIÓN / DECISION:
 
-    PRÓXIMO PASO / NEXT STEP:
+    CIERRE / CLOSING:
 
 
     Contesta com a suport de comerç electrònic. Dona una resposta amb diagnosi, passos per evitar pèrdua
@@ -601,17 +601,17 @@
     open, budget carryover may be needed and the steering committee must decide."
 
 
-    Plantilla reusable (mixed headers):
+    Formulario bilingüe (ES/EN):
 
-    ASUNTO / SUBJECT:
+    EXPEDIENTE / FILE:
 
-    SITUACIÓN / SITUATION:
+    RESUMEN / SUMMARY:
 
-    RIESGO / RISK:
+    IMPACTO / IMPACT:
 
-    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+    DECISIÓN / DECISION:
 
-    PRÓXIMO PASO / NEXT STEP:
+    CIERRE / CLOSING:
 
 
     Escriu un informe d''estat per a un projecte públic. Organitza''l en avenços, desviacions, riscos,
@@ -629,17 +629,17 @@
     recibo devuelto, atención telefónica no resolvió nada y ya existe reclamación previa."
 
 
-    Plantilla reusable (mixed headers):
+    Plantilla estándar (headers ES/EN):
 
-    ASUNTO / SUBJECT:
+    INCIDENCIA / INCIDENT:
 
-    SITUACIÓN / SITUATION:
+    ORIGEN / SOURCE:
 
-    RIESGO / RISK:
+    AFECTADOS / AFFECTED:
 
-    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+    RESOLUCIÓN / RESOLUTION:
 
-    PRÓXIMO PASO / NEXT STEP:
+    CONTROL / CONTROL:
 
 
     Redacta la reclamació.'
@@ -656,17 +656,17 @@
     evidence and a complete audit trail are required."
 
 
-    Plantilla reusable (mixed headers):
+    Formulario bilingüe (ES/EN):
 
-    ASUNTO / SUBJECT:
+    EXPEDIENTE / FILE:
 
-    SITUACIÓN / SITUATION:
+    RESUMEN / SUMMARY:
 
-    RIESGO / RISK:
+    IMPACTO / IMPACT:
 
-    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+    DECISIÓN / DECISION:
 
-    PRÓXIMO PASO / NEXT STEP:
+    CIERRE / CLOSING:
 
 
     Redacta una nota de contractació d''urgència amb justificació, límits, comprovacions prèvies, evidències
@@ -686,15 +686,15 @@
 
     Plantilla reusable (mixed headers):
 
-    ASUNTO / SUBJECT:
+    ENCABEZADO / HEADER:
 
-    SITUACIÓN / SITUATION:
+    ANTECEDENTES / BACKGROUND:
 
-    RIESGO / RISK:
+    RIESGOS / RISKS:
 
-    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+    DECISIÓN / DECISION:
 
-    PRÓXIMO PASO / NEXT STEP:
+    CIERRE / CLOSING:
 
 
     Redacta una resposta comercial que ordeni una situació confusa, confirmi què es pot fer, què requereix
@@ -712,17 +712,17 @@
     day, callback requests are prioritized and branch desks remain open."
 
 
-    Plantilla reusable (mixed headers):
+    Structured template ES/EN:
 
-    ASUNTO / SUBJECT:
+    EXPEDIENTE / FILE:
 
-    SITUACIÓN / SITUATION:
+    RESUMEN / SUMMARY:
 
-    RIESGO / RISK:
+    IMPACTO / IMPACT:
 
-    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+    DECISIÓN / DECISION:
 
-    PRÓXIMO PASO / NEXT STEP:
+    CIERRE / CLOSING:
 
 
     Escriu un avís de servei d''atenció ciutadana amb causa, afectació, mesures provisionals, priorització,
@@ -740,7 +740,7 @@
     incomplete and the rollout decision is due Friday."
 
 
-    Plantilla reusable (mixed headers):
+    Standard template (ES/EN):
 
     ASUNTO / SUBJECT:
 
@@ -767,17 +767,17 @@
     un usuario invitado sin acceso y faltan trazas del sistema."
 
 
-    Plantilla reusable (mixed headers):
+    Reusable form (bilingual headers):
 
-    ASUNTO / SUBJECT:
+    CASO / CASE:
 
-    SITUACIÓN / SITUATION:
+    HECHOS / FACTS:
 
-    RIESGO / RISK:
+    ANÁLISIS / ANALYSIS:
 
-    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+    PROPUESTA / PROPOSAL:
 
-    PRÓXIMO PASO / NEXT STEP:
+    TAREA / TASK:
 
 
     Fes la resposta.'
@@ -794,17 +794,17 @@
     la ruta de recogida, pide refuerzo temporal y parte de incidencias."
 
 
-    Plantilla reusable (mixed headers):
+    Standard template (ES/EN):
 
-    ASUNTO / SUBJECT:
+    TÍTULO / TITLE:
 
-    SITUACIÓN / SITUATION:
+    CONTEXTO / BACKGROUND:
 
-    RIESGO / RISK:
+    OBSERVACIÓN / OBSERVATION:
 
-    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+    RECOMENDACIÓN / RECOMMENDATION:
 
-    PRÓXIMO PASO / NEXT STEP:
+    RESPONSABLE / OWNER:
 
 
     Redacta una resposta municipal a una queixa de neteja viària. Inclou disculpa institucional, verificació
@@ -822,17 +822,17 @@
     label, can provide proof of purchase and makes an escalation request."
 
 
-    Plantilla reusable (mixed headers):
+    Plantilla estándar (headers ES/EN):
 
-    ASUNTO / SUBJECT:
+    INCIDENCIA / INCIDENT:
 
-    SITUACIÓN / SITUATION:
+    ORIGEN / SOURCE:
 
-    RIESGO / RISK:
+    AFECTADOS / AFFECTED:
 
-    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+    RESOLUCIÓN / RESOLUTION:
 
-    PRÓXIMO PASO / NEXT STEP:
+    CONTROL / CONTROL:
 
 
     Escriu una reclamació a un fabricant. Inclou cronologia, problema tècnic, documentació disponible,
@@ -852,17 +852,17 @@
     clínico."
 
 
-    Plantilla reusable (mixed headers):
+    Structured template ES/EN:
 
-    ASUNTO / SUBJECT:
+    INCIDENCIA / INCIDENT:
 
-    SITUACIÓN / SITUATION:
+    ORIGEN / SOURCE:
 
-    RIESGO / RISK:
+    AFECTADOS / AFFECTED:
 
-    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+    RESOLUCIÓN / RESOLUTION:
 
-    PRÓXIMO PASO / NEXT STEP:
+    CONTROL / CONTROL:
 
 
     Fes l''explicació.'
@@ -879,17 +879,17 @@
     and the deadline to submit the updated sketch."
 
 
-    Plantilla reusable (mixed headers):
+    Plantilla estándar (headers ES/EN):
 
-    ASUNTO / SUBJECT:
+    CASO / CASE:
 
-    SITUACIÓN / SITUATION:
+    HECHOS / FACTS:
 
-    RIESGO / RISK:
+    ANÁLISIS / ANALYSIS:
 
-    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+    PROPUESTA / PROPOSAL:
 
-    PRÓXIMO PASO / NEXT STEP:
+    TAREA / TASK:
 
 
     Redacta una resposta institucional a una consulta ciutadana. Inclou recepció, estat de revisió, documentació
@@ -907,17 +907,17 @@
     exige corregir la factura inicial y pide descuento por la espera."
 
 
-    Plantilla reusable (mixed headers):
+    Structured template ES/EN:
 
-    ASUNTO / SUBJECT:
+    CASO / CASE:
 
-    SITUACIÓN / SITUATION:
+    HECHOS / FACTS:
 
-    RIESGO / RISK:
+    ANÁLISIS / ANALYSIS:
 
-    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+    PROPUESTA / PROPOSAL:
 
-    PRÓXIMO PASO / NEXT STEP:
+    TAREA / TASK:
 
 
     Escriu una resposta professional a un client. Ha de reconèixer el retard, separar dades pendents i
@@ -935,17 +935,17 @@
     deadline is close and the client asks us to hold the current price."
 
 
-    Plantilla reusable (mixed headers):
+    Reusable form (bilingual headers):
 
-    ASUNTO / SUBJECT:
+    CASO / CASE:
 
-    SITUACIÓN / SITUATION:
+    HECHOS / FACTS:
 
-    RIESGO / RISK:
+    ANÁLISIS / ANALYSIS:
 
-    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+    PROPUESTA / PROPOSAL:
 
-    PRÓXIMO PASO / NEXT STEP:
+    TAREA / TASK:
 
 
     Redacta un correu breu per a un client. Inclou situació, límit del que es pot confirmar, informació
@@ -963,17 +963,17 @@
     el equipo legal no ha dado aprobación y el cliente pide publicar hoy."
 
 
-    Plantilla reusable (mixed headers):
+    Standard template (ES/EN):
 
-    ASUNTO / SUBJECT:
+    ENCABEZADO / HEADER:
 
-    SITUACIÓN / SITUATION:
+    ANTECEDENTES / BACKGROUND:
 
-    RIESGO / RISK:
+    RIESGOS / RISKS:
 
-    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+    DECISIÓN / DECISION:
 
-    PRÓXIMO PASO / NEXT STEP:
+    CIERRE / CLOSING:
 
 
     Escriu una resposta a un client que pressiona per llançar una acció comercial. Mantén un to col·laboratiu,
@@ -991,17 +991,17 @@
     stock, threatens a chargeback and says the warehouse cannot wait."
 
 
-    Plantilla reusable (mixed headers):
+    Bilingual form (ES/EN headers):
 
-    ASUNTO / SUBJECT:
+    REFERENCIA / REFERENCE:
 
-    SITUACIÓN / SITUATION:
+    DESCRIPCIÓN / DESCRIPTION:
 
-    RIESGO / RISK:
+    VALORACIÓN / ASSESSMENT:
 
-    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+    MEDIDAS / MEASURES:
 
-    PRÓXIMO PASO / NEXT STEP:
+    SEGUIMIENTO / FOLLOW-UP:
 
 
     Escriu una resposta equilibrada a un client B2B. Inclou disculpa prudent, verificació, solució provisional,
@@ -1019,17 +1019,17 @@
     the patient paid for private transport and asks for a refund or a priority slot."
 
 
-    Plantilla reusable (mixed headers):
+    Reusable form (bilingual headers):
 
-    ASUNTO / SUBJECT:
+    TÍTULO / TITLE:
 
-    SITUACIÓN / SITUATION:
+    CONTEXTO / BACKGROUND:
 
-    RIESGO / RISK:
+    OBSERVACIÓN / OBSERVATION:
 
-    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+    RECOMENDACIÓN / RECOMMENDATION:
 
-    PRÓXIMO PASO / NEXT STEP:
+    RESPONSABLE / OWNER:
 
 
     Escriu una reclamació formal. Inclou cronologia, impacte, documents adjunts, petició concreta i termini
@@ -1047,17 +1047,17 @@
     aporta registro de entrada y pide respuesta escrita."
 
 
-    Plantilla reusable (mixed headers):
+    Plantilla estándar (headers ES/EN):
 
-    ASUNTO / SUBJECT:
+    CASO / CASE:
 
-    SITUACIÓN / SITUATION:
+    HECHOS / FACTS:
 
-    RIESGO / RISK:
+    ANÁLISIS / ANALYSIS:
 
-    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+    PROPUESTA / PROPOSAL:
 
-    PRÓXIMO PASO / NEXT STEP:
+    TAREA / TASK:
 
 
     Redacta una resposta municipal a una queixa tributària. Ha de reconèixer la recepció, explicar comprovacions,
@@ -1075,17 +1075,17 @@
     hay gastos de primera necesidad y se solicita indemnización."
 
 
-    Plantilla reusable (mixed headers):
+    Plantilla estándar (headers ES/EN):
 
-    ASUNTO / SUBJECT:
+    INCIDENCIA / INCIDENT:
 
-    SITUACIÓN / SITUATION:
+    ORIGEN / SOURCE:
 
-    RIESGO / RISK:
+    AFECTADOS / AFFECTED:
 
-    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+    RESOLUCIÓN / RESOLUTION:
 
-    PRÓXIMO PASO / NEXT STEP:
+    CONTROL / CONTROL:
 
 
     Escriu una reclamació a una companyia de transport. Inclou fets, conseqüències, proves disponibles,
@@ -1103,17 +1103,17 @@
     unanswered and asks for an inspection before the weekend."
 
 
-    Plantilla reusable (mixed headers):
+    Standard template (ES/EN):
 
-    ASUNTO / SUBJECT:
+    REFERENCIA / REFERENCE:
 
-    SITUACIÓN / SITUATION:
+    DESCRIPCIÓN / DESCRIPTION:
 
-    RIESGO / RISK:
+    VALORACIÓN / ASSESSMENT:
 
-    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+    MEDIDAS / MEASURES:
 
-    PRÓXIMO PASO / NEXT STEP:
+    SEGUIMIENTO / FOLLOW-UP:
 
 
     Redacta una resposta institucional a una queixa veïnal. Inclou reconeixement, actuació immediata,

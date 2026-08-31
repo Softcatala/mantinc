@@ -44,17 +44,17 @@ labels, firmware version and offline mode.
 
 **Assistent:** Tradueixo el fons tècnic a instruccions clares.
 
-**Usuari:** Plantilla reusable (mixed headers):
+**Usuari:** Standard template (ES/EN):
 
-ASUNTO / SUBJECT:
+DESTINATARIO / RECIPIENT:
 
-SITUACIÓN / SITUATION:
+MOTIVO / REASON:
 
-RIESGO / RISK:
+ANTECEDENTES / BACKGROUND:
 
-ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+DECISIÓN / DECISION:
 
-PRÓXIMO PASO / NEXT STEP:
+PLAZO / DEADLINE:
 
 **Assistent:** OK. I will do la revisión final antes de cerrar.
 

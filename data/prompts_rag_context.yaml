@@ -86,17 +86,17 @@
     text: 'La Castañeda, el Juego tradicional, oficios tradicionales, el Pomar, la Riera y el Bosque de
       Ribera y el Castell de Montsoriu: la vida en una castell gòtic. Dispone de un recortable para montar
       una reproducción del Castillo de Montsoriu. Le animamos a descargarlo.'
-  prompt: 'Plantilla reutilizable:
+  prompt: 'Plantilla estándar de respuesta:
 
-    ASUNTO:
+    INCIDENCIA:
 
-    SITUACIÓN:
+    ORIGEN:
 
-    RIESGO:
+    AFECTADOS:
 
-    ACCIÓN INMEDIATA:
+    RESOLUCIÓN:
 
-    PRÓXIMO PASO:
+    CONTROL:
 
 
     Fes el resum.'
@@ -142,17 +142,17 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Rutas guiadas para el público en general ('La ruta dels bandolers', Itinerari per la serra de
       l'Obac')
-  prompt: 'Plantilla reutilizable:
+  prompt: 'Formulario interno:
 
-    ASUNTO:
+    REFERENCIA:
 
-    SITUACIÓN:
+    DESCRIPCIÓN:
 
-    RIESGO:
+    VALORACIÓN:
 
-    ACCIÓN INMEDIATA:
+    MEDIDAS:
 
-    PRÓXIMO PASO:
+    SEGUIMIENTO:
 
 
     Fes el resum.'
@@ -201,17 +201,17 @@
     text: 'Nombre del equipamiento: Monasterio de Sant Llorenç del Munt. Categorías documentales: sant_llorencobac,
       elemento_de_patrimonio_historicocultural, Sant Llorenç-Obac, Elemento de patrimonio histórico-cultural,
       Información personalizada, Museos y equipamientos culturales.'
-  prompt: 'Plantilla reutilizable:
+  prompt: 'Formulario interno:
 
-    ASUNTO:
+    INCIDENCIA:
 
-    SITUACIÓN:
+    ORIGEN:
 
-    RIESGO:
+    AFECTADOS:
 
-    ACCIÓN INMEDIATA:
+    RESOLUCIÓN:
 
-    PRÓXIMO PASO:
+    CONTROL:
 
 
     Fes la resposta.'
@@ -346,17 +346,17 @@
       montseny, montseny__museo_etnologico_del_montseny_la_gabella__recepcion, Montseny, Montseny - Museo
       Etnológico del Montseny. La Gabella - Recepción, Montseny - Museo Etnológico del Montseny. La Gabella
       - Sala act. forestales, Montseny - Museo Etnológico del Montseny. La Gabella - Sala tornería.'
-  prompt: 'Plantilla reutilizable:
+  prompt: 'Plantilla estándar de respuesta:
 
-    ASUNTO:
+    ENCABEZADO:
 
-    SITUACIÓN:
+    ANTECEDENTES:
 
-    RIESGO:
+    RIESGOS:
 
-    ACCIÓN INMEDIATA:
+    DECISIÓN:
 
-    PRÓXIMO PASO:
+    CIERRE:
 
 
     Fes el resum.'
@@ -488,17 +488,17 @@
       Categorías documentales: montnegrecorredor, equipamientos_de_educacion_ambiental_e_investigacion,
       Montnegre-Corredor, Equipamientos de educación ambiental e investigación, Museos y equipamientos
       culturales, Museos.'
-  prompt: 'Plantilla reutilizable:
+  prompt: 'Esquema oficial:
 
-    ASUNTO:
+    DESTINATARIO:
 
-    SITUACIÓN:
+    MOTIVO:
 
-    RIESGO:
+    ANTECEDENTES:
 
-    ACCIÓN INMEDIATA:
+    DECISIÓN:
 
-    PRÓXIMO PASO:
+    PLAZO:
 
 
     Prepara l''avís.'
@@ -676,17 +676,17 @@
     text: El museo pone énfasis en la memoria colectiva del municipio, mostrando su pasado rural a partir
       de las herramientas utilizadas en los trabajos a bosque y en el campo y el testimonio de los mismos
       protagonistas a través de fotos y audiovisuales.
-  prompt: 'Plantilla reutilizable:
+  prompt: 'Formato estándar:
 
-    ASUNTO:
+    DESTINATARIO:
 
-    SITUACIÓN:
+    MOTIVO:
 
-    RIESGO:
+    ANTECEDENTES:
 
-    ACCIÓN INMEDIATA:
+    DECISIÓN:
 
-    PRÓXIMO PASO:
+    PLAZO:
 
 
     Fes la resposta.'
@@ -736,17 +736,17 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: La Farga del Roquer - Centro de interpretación de la riera de Arbúcies y audiovisual 'La memoria
       del agua'
-  prompt: 'Plantilla reutilizable:
+  prompt: 'Estructura obligatoria:
 
-    ASUNTO:
+    EXPEDIENTE:
 
-    SITUACIÓN:
+    RESUMEN:
 
-    RIESGO:
+    ACTUACIONES:
 
-    ACCIÓN INMEDIATA:
+    IMPACTO:
 
-    PRÓXIMO PASO:
+    CIERRE:
 
 
     Prepara l''avís.'
@@ -834,17 +834,17 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Actividades y talleres relacionados con el medio ambiente y las energías renovables
-  prompt: 'Plantilla reutilizable:
+  prompt: 'Formulario interno:
 
-    ASUNTO:
+    TÍTULO:
 
-    SITUACIÓN:
+    CONTEXTO:
 
-    RIESGO:
+    OBSERVACIONES:
 
-    ACCIÓN INMEDIATA:
+    RECOMENDACIÓN:
 
-    PRÓXIMO PASO:
+    RESPONSABLE:
 
 
     Fes el resum.'
@@ -895,17 +895,17 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: La colección del museo se reparte en dos plantas que dan valor al mundo del bosque, la naturaleza
       y la agricultura.
-  prompt: 'Plantilla reutilizable:
+  prompt: 'Ficha resumen:
 
-    ASUNTO:
+    EXPEDIENTE:
 
-    SITUACIÓN:
+    RESUMEN:
 
-    RIESGO:
+    ACTUACIONES:
 
-    ACCIÓN INMEDIATA:
+    IMPACTO:
 
-    PRÓXIMO PASO:
+    CIERRE:
 
 
     Fes el resum.'
@@ -953,17 +953,17 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Centre de Documentació del Parc Natural del Montseny, secció Humanitats
-  prompt: 'Plantilla reutilizable:
+  prompt: 'Formato estándar:
 
-    ASUNTO:
+    TÍTULO:
 
-    SITUACIÓN:
+    CONTEXTO:
 
-    RIESGO:
+    OBSERVACIONES:
 
-    ACCIÓN INMEDIATA:
+    RECOMENDACIÓN:
 
-    PRÓXIMO PASO:
+    RESPONSABLE:
 
 
     Fes la resposta.'
@@ -1098,17 +1098,17 @@
     text: 'La planta baja está dedicada a la agricultura: vida y los valores en el campo, las herramientas
       utilizadas y los avances técnicos, los cereales y la vid. El patio exterior del museo se especializa
       en los animales de tiro: usos, materiales y partes del carro.'
-  prompt: 'Plantilla reusable (mixed headers):
+  prompt: 'Structured template ES/EN:
 
-    ASUNTO / SUBJECT:
+    TÍTULO / TITLE:
 
-    SITUACIÓN / SITUATION:
+    CONTEXTO / BACKGROUND:
 
-    RIESGO / RISK:
+    OBSERVACIÓN / OBSERVATION:
 
-    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+    RECOMENDACIÓN / RECOMMENDATION:
 
-    PRÓXIMO PASO / NEXT STEP:
+    RESPONSABLE / OWNER:
 
 
     Fes el resum.'
@@ -1244,17 +1244,17 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Rutas guiadas para el público en general ('La ruta dels bandolers', Itinerari per la serra de
       l'Obac')
-  prompt: 'Plantilla reusable (mixed headers):
+  prompt: 'Reusable form (bilingual headers):
 
-    ASUNTO / SUBJECT:
+    ENCABEZADO / HEADER:
 
-    SITUACIÓN / SITUATION:
+    ANTECEDENTES / BACKGROUND:
 
-    RIESGO / RISK:
+    RIESGOS / RISKS:
 
-    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+    DECISIÓN / DECISION:
 
-    PRÓXIMO PASO / NEXT STEP:
+    CIERRE / CLOSING:
 
 
     Prepara l''avís.'
@@ -1303,17 +1303,17 @@
     text: 'Nombre del equipamiento: Monasterio de Sant Llorenç del Munt. Categorías documentales: sant_llorencobac,
       elemento_de_patrimonio_historicocultural, Sant Llorenç-Obac, Elemento de patrimonio histórico-cultural,
       Información personalizada, Museos y equipamientos culturales.'
-  prompt: 'Plantilla reusable (mixed headers):
+  prompt: 'Structured template ES/EN:
 
-    ASUNTO / SUBJECT:
+    ENCABEZADO / HEADER:
 
-    SITUACIÓN / SITUATION:
+    ANTECEDENTES / BACKGROUND:
 
-    RIESGO / RISK:
+    RIESGOS / RISKS:
 
-    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+    DECISIÓN / DECISION:
 
-    PRÓXIMO PASO / NEXT STEP:
+    CIERRE / CLOSING:
 
 
     Fes la resposta.'
@@ -1357,17 +1357,17 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Exposición fotográfica sobre la floración del Parque Natural de Sant Llorenç del Munt y l'Obac
-  prompt: 'Plantilla reusable (mixed headers):
+  prompt: 'Structured template ES/EN:
 
-    ASUNTO / SUBJECT:
+    DESTINATARIO / RECIPIENT:
 
-    SITUACIÓN / SITUATION:
+    MOTIVO / REASON:
 
-    RIESGO / RISK:
+    ANTECEDENTES / BACKGROUND:
 
-    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+    DECISIÓN / DECISION:
 
-    PRÓXIMO PASO / NEXT STEP:
+    PLAZO / DEADLINE:
 
 
     Fes el resum.'
@@ -1416,17 +1416,17 @@
     text: El Museu del Bosc i la Pagesia de Vallgorguinapone en valor el mundo del bosque, la naturaleza
       y la agricultura. La voluntad es conservar y mostrar el rico patrimonio de la forma de vida de los
       antepasados ​​de Vallgorguina, el corazón del Parque de El Montnegre i el Corredor.
-  prompt: 'Plantilla reusable (mixed headers):
+  prompt: 'Plantilla estándar (headers ES/EN):
 
-    ASUNTO / SUBJECT:
+    INCIDENCIA / INCIDENT:
 
-    SITUACIÓN / SITUATION:
+    ORIGEN / SOURCE:
 
-    RIESGO / RISK:
+    AFECTADOS / AFFECTED:
 
-    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+    RESOLUCIÓN / RESOLUTION:
 
-    PRÓXIMO PASO / NEXT STEP:
+    CONTROL / CONTROL:
 
 
     Fes el resum.'
@@ -1475,17 +1475,17 @@
       montseny, montseny__museo_etnologico_del_montseny_la_gabella__recepcion, Montseny, Montseny - Museo
       Etnológico del Montseny. La Gabella - Recepción, Montseny - Museo Etnológico del Montseny. La Gabella
       - Sala act. forestales, Montseny - Museo Etnológico del Montseny. La Gabella - Sala tornería.'
-  prompt: 'Plantilla reusable (mixed headers):
+  prompt: 'Plantilla estándar (headers ES/EN):
 
-    ASUNTO / SUBJECT:
+    TÍTULO / TITLE:
 
-    SITUACIÓN / SITUATION:
+    CONTEXTO / BACKGROUND:
 
-    RIESGO / RISK:
+    OBSERVACIÓN / OBSERVATION:
 
-    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+    RECOMENDACIÓN / RECOMMENDATION:
 
-    PRÓXIMO PASO / NEXT STEP:
+    RESPONSABLE / OWNER:
 
 
     Fes la resposta.'
@@ -1531,17 +1531,17 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Ruta teatralizada inclusiva 'Emboscada, un viatge pels cinc sentits', pensada exclusivamente
       para personas con discapacidades
-  prompt: 'Plantilla reusable (mixed headers):
+  prompt: 'Reusable form (bilingual headers):
 
-    ASUNTO / SUBJECT:
+    EXPEDIENTE / FILE:
 
-    SITUACIÓN / SITUATION:
+    RESUMEN / SUMMARY:
 
-    RIESGO / RISK:
+    IMPACTO / IMPACT:
 
-    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+    DECISIÓN / DECISION:
 
-    PRÓXIMO PASO / NEXT STEP:
+    CIERRE / CLOSING:
 
 
     Prepara l''avís.'
@@ -1590,17 +1590,17 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: 'Nombre del equipamiento: Museo de Rocafort. Categorías documentales: sant_llorencobac, museos_y_equipamientos_culturales,
       Sant Llorenç-Obac, Museos y equipamientos culturales.'
-  prompt: 'Plantilla reusable (mixed headers):
+  prompt: 'Reusable form (bilingual headers):
 
-    ASUNTO / SUBJECT:
+    DESTINATARIO / RECIPIENT:
 
-    SITUACIÓN / SITUATION:
+    MOTIVO / REASON:
 
-    RIESGO / RISK:
+    ANTECEDENTES / BACKGROUND:
 
-    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+    DECISIÓN / DECISION:
 
-    PRÓXIMO PASO / NEXT STEP:
+    PLAZO / DEADLINE:
 
 
     Fes la resposta.'
@@ -1650,17 +1650,17 @@
     text: 'La planta baja está dedicada a la agricultura: vida y los valores en el campo, las herramientas
       utilizadas y los avances técnicos, los cereales y la vid. El patio exterior del museo se especializa
       en los animales de tiro: usos, materiales y partes del carro.'
-  prompt: 'Plantilla reusable (mixed headers):
+  prompt: 'Plantilla estándar (headers ES/EN):
 
-    ASUNTO / SUBJECT:
+    TÍTULO / TITLE:
 
-    SITUACIÓN / SITUATION:
+    CONTEXTO / BACKGROUND:
 
-    RIESGO / RISK:
+    OBSERVACIÓN / OBSERVATION:
 
-    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+    RECOMENDACIÓN / RECOMMENDATION:
 
-    PRÓXIMO PASO / NEXT STEP:
+    RESPONSABLE / OWNER:
 
 
     Fes el resum.'
@@ -1711,15 +1711,15 @@
       - Pie ruina, Museo / Interpretación del patrimonio.'
   prompt: 'Plantilla reusable (mixed headers):
 
-    ASUNTO / SUBJECT:
+    CASO / CASE:
 
-    SITUACIÓN / SITUATION:
+    HECHOS / FACTS:
 
-    RIESGO / RISK:
+    ANÁLISIS / ANALYSIS:
 
-    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+    PROPUESTA / PROPOSAL:
 
-    PRÓXIMO PASO / NEXT STEP:
+    TAREA / TASK:
 
 
     Fes el resum.'
@@ -1765,17 +1765,17 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Centre de Documentació del Parc Natural del Montseny, secció Humanitats
-  prompt: 'Plantilla reusable (mixed headers):
+  prompt: 'Plantilla estándar (headers ES/EN):
 
-    ASUNTO / SUBJECT:
+    DESTINATARIO / RECIPIENT:
 
-    SITUACIÓN / SITUATION:
+    MOTIVO / REASON:
 
-    RIESGO / RISK:
+    ANTECEDENTES / BACKGROUND:
 
-    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+    DECISIÓN / DECISION:
 
-    PRÓXIMO PASO / NEXT STEP:
+    PLAZO / DEADLINE:
 
 
     Fes la resposta.'
@@ -1886,17 +1886,17 @@
       montesquiu, montesquiu__centre_recursos__interior_del_castillo, Montesquiu, Montesquiu - Centre
       Recursos - Interior del castillo, Montesquiu - Centro Recursos - Salas nobles del castillo, Montesquiu
       - Centro Recursos - Sala de actos.'
-  prompt: 'Plantilla reusable (mixed headers):
+  prompt: 'Bilingual form (ES/EN headers):
 
-    ASUNTO / SUBJECT:
+    DESTINATARIO / RECIPIENT:
 
-    SITUACIÓN / SITUATION:
+    MOTIVO / REASON:
 
-    RIESGO / RISK:
+    ANTECEDENTES / BACKGROUND:
 
-    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+    DECISIÓN / DECISION:
 
-    PRÓXIMO PASO / NEXT STEP:
+    PLAZO / DEADLINE:
 
 
     Fes la resposta.'
@@ -1948,17 +1948,17 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Anna Dot y Blai Marginedas, con la complicidad del Consorcio del Valle del Ges, Orís y Bisaura
       y del Parque del Castillo de Montesquiu, son los encargados de desarrollar este programa curatorial.
-  prompt: 'Plantilla reusable (mixed headers):
+  prompt: 'Reusable form (bilingual headers):
 
-    ASUNTO / SUBJECT:
+    TICKET / TICKET:
 
-    SITUACIÓN / SITUATION:
+    DIAGNÓSTICO / DIAGNOSIS:
 
-    RIESGO / RISK:
+    CAUSA / ROOT CAUSE:
 
-    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+    MITIGACIÓN / MITIGATION:
 
-    PRÓXIMO PASO / NEXT STEP:
+    VALIDACIÓN / VALIDATION:
 
 
     Fes el resum.'
@@ -2002,17 +2002,17 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Para atención entre semana se puede dirigir al Ayuntamiento del mismo municipio.
-  prompt: 'Plantilla reusable (mixed headers):
+  prompt: 'Reusable form (bilingual headers):
 
-    ASUNTO / SUBJECT:
+    TICKET / TICKET:
 
-    SITUACIÓN / SITUATION:
+    DIAGNÓSTICO / DIAGNOSIS:
 
-    RIESGO / RISK:
+    CAUSA / ROOT CAUSE:
 
-    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+    MITIGACIÓN / MITIGATION:
 
-    PRÓXIMO PASO / NEXT STEP:
+    VALIDACIÓN / VALIDATION:
 
 
     Fes el resum.'
@@ -2058,17 +2058,17 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Actividades de refuerzo para créditos comunes, variables y de síntesis
-  prompt: 'Plantilla reusable (mixed headers):
+  prompt: 'Plantilla estándar (headers ES/EN):
 
-    ASUNTO / SUBJECT:
+    DESTINATARIO / RECIPIENT:
 
-    SITUACIÓN / SITUATION:
+    MOTIVO / REASON:
 
-    RIESGO / RISK:
+    ANTECEDENTES / BACKGROUND:
 
-    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+    DECISIÓN / DECISION:
 
-    PRÓXIMO PASO / NEXT STEP:
+    PLAZO / DEADLINE:
 
 
     Fes la resposta.'
@@ -2116,17 +2116,17 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Sant Llorenç del Munt, declarado BCIN, ha sido objeto de diferentes campañas de excavaciones
       arqueológicas y consolidaciones.
-  prompt: 'Plantilla reusable (mixed headers):
+  prompt: 'Bilingual form (ES/EN headers):
 
-    ASUNTO / SUBJECT:
+    INCIDENCIA / INCIDENT:
 
-    SITUACIÓN / SITUATION:
+    ORIGEN / SOURCE:
 
-    RIESGO / RISK:
+    AFECTADOS / AFFECTED:
 
-    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+    RESOLUCIÓN / RESOLUTION:
 
-    PRÓXIMO PASO / NEXT STEP:
+    CONTROL / CONTROL:
 
 
     Prepara l''avís.'
