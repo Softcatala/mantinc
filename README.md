@@ -113,11 +113,11 @@ Results on the 300-item dataset:
 | Model | Overall | Catalan token ratio | Monolingual | Cross basic | Multi-turn | Cross advanced | RAG context |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Gemini 3.7 Flash | **94.0%** | 95.8% | 100.0% | 95.0% | 88.3% | 95.0% | 91.7% |
-| Gemma 4 12B | 78.3% | 79.3% | 100.0% | 68.3% | 66.7% | 76.7% | 80.0% |
 | Ministral 3 8B | 79.0% | 79.5% | 90.0% | 76.7% | 68.3% | 76.7% | 83.3% |
-| Salamandra 7B Q4_K_M | 73.0% | 79.3% | 100.0% | 43.3% | 81.7% | 70.0% | 70.0% |
+| Gemma 4 12B | 78.3% | 79.3% | 100.0% | 68.3% | 66.7% | 76.7% | 80.0% |
 | Qwen3 14B | 75.3% | 81.8% | 100.0% | 61.7% | 76.7% | 78.3% | 60.0% |
-| GPT-5.6 | 60.0% | 69.5% | 100.0% | 51.7% | 43.3% | 51.7% | 53.3% |
+| Salamandra 7B | 73.0% | 79.3% | 100.0% | 43.3% | 81.7% | 70.0% | 70.0% |
+| GPT-5.6 | 68.0% | 72.6% | 100.0% | 66.7% | 50.0% | 61.7% | 61.7% |
 
 The pooled calibration target across the five models is 79/300 failures
 (26.3%). The redistributed categories are within five percentage points of
