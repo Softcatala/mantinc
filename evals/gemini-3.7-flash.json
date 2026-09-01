@@ -1,9 +1,9 @@
 {
-  "catalan_token_ratio": 0.9548,
+  "catalan_token_ratio": 0.966,
   "categories": {
     "crosslingual_advanced": {
-      "pass": 59,
-      "pass_rate": 0.9833,
+      "pass": 60,
+      "pass_rate": 1.0,
       "total": 60
     },
     "crosslingual_basic": {
@@ -17,25 +17,29 @@
       "total": 60
     },
     "multi_turn": {
-      "pass": 55,
-      "pass_rate": 0.9167,
+      "pass": 58,
+      "pass_rate": 0.9667,
       "total": 60
     },
     "rag_context": {
-      "pass": 47,
-      "pass_rate": 0.7833,
+      "pass": 48,
+      "pass_rate": 0.8,
       "total": 60
     }
   },
-  "created_at": "2026-09-01T09:17:42+02:00",
-  "inference_seconds": 3010.3748525310075,
+  "created_at": "2026-09-01T22:30:30+02:00",
+  "git_branch": "harder",
+  "git_commit": "fe2e8f09ac0943aa7798f926117223312f0b30fd",
+  "git_dirty": "true",
+  "git_status_sha256": "6cc03ee020edc91f1b24808145ae098d8dc35c7d1f60265437e861d138366af3",
+  "inference_seconds": 2338.308236228011,
   "model": "gemini-3.7-flash",
   "n": 300,
   "n_api_or_empty_failures": 0,
-  "n_catalan_tokens": 71637,
-  "n_detected_language_tokens": 75026,
-  "n_failures": 22,
-  "n_language_failures": 22,
-  "n_passes": 278,
-  "pass_rate": 0.9267
+  "n_catalan_tokens": 71545,
+  "n_detected_language_tokens": 74062,
+  "n_failures": 17,
+  "n_language_failures": 17,
+  "n_passes": 283,
+  "pass_rate": 0.9433
 }
