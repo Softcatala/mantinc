@@ -17,7 +17,7 @@ mkdir -p "$ROOT/outputs"
 log() { echo "[$(date -Iseconds)] $*" | tee -a "$LOG"; }
 
 log "=== eval driver started (PID $$) ==="
-RUN_STARTED_AT="$(date -Iseconds)"
+RUN_STARTED_AT="${RUN_STARTED_AT_OVERRIDE:-$(date -Iseconds)}"
 
 # Cache the export once up front. Every eval-target below is invoked with
 # SKIP_EXPORT=1 so we don't re-export the JSONL 20 times.
@@ -154,22 +154,34 @@ PY
   log "pushed $slug"
 }
 
-for entry in "${CLOUD[@]}"; do
-  read -r target label <<<"$entry"
-  log "--- starting cloud target=$target label=$label ---"
-  echo "$label" > "$STATE"
-  if uv run make "$target" SKIP_EXPORT=1 >>"$LOG" 2>&1; then
-    log "cloud target=$target finished ok"
-    post_eval "$label" "$label" || true
-  else
-    log "!!! cloud target=$target failed"
-  fi
-done
+if [[ "${SKIP_CLOUD:-0}" != 1 ]]; then
+  for entry in "${CLOUD[@]}"; do
+    read -r target label <<<"$entry"
+    log "--- starting cloud target=$target label=$label ---"
+    echo "$label" > "$STATE"
+    if uv run make "$target" SKIP_EXPORT=1 >>"$LOG" 2>&1; then
+      log "cloud target=$target finished ok"
+      post_eval "$label" "$label" || true
+    else
+      log "!!! cloud target=$target failed"
+    fi
+  done
+fi
 
+resume_ready=1
+[[ -n "${RESUME_FROM:-}" ]] && resume_ready=0
 for model in "${LOCAL_MODELS[@]}"; do
+  if (( ! resume_ready )); then
+    if [[ "$model" == "$RESUME_FROM" ]]; then
+      resume_ready=1
+    else
+      log "skipping completed local model=$model"
+      continue
+    fi
+  fi
   log "--- starting local model=$model ---"
   echo "$model" > "$STATE"
-  if uv run make eval-local-openai SKIP_EXPORT=1 DISPLAY_MODEL="$model" LOCAL_NUM_CONCURRENT=2 >>"$LOG" 2>&1; then
+  if uv run make eval-local-openai SKIP_EXPORT=1 DISPLAY_MODEL="$model" LOCAL_NUM_CONCURRENT=2 GEN_KWARGS='{"temperature":0,"max_gen_toks":2048}' >>"$LOG" 2>&1; then
     log "local $model finished ok"
     post_eval "$model" "$model" || true
   else
