@@ -36,6 +36,7 @@ LOCAL_NUM_CONCURRENT ?= 4
 GPT_GEN_KWARGS ?= {"temperature":0,"reasoning_effort":"none"}
 GEMINI_GEN_KWARGS ?= {"temperature":1,"reasoning_effort":"low"}
 GEMMA_NO_THINKING_GEN_KWARGS ?= {"temperature":0,"reasoning_effort":"none","chat_template_kwargs":{"enable_thinking":false}}
+LOCAL_GEN_KWARGS ?= {"temperature":0,"max_gen_toks":2048,"reasoning_effort":"none","chat_template_kwargs":{"enable_thinking":false}}
 UV_CACHE_DIR ?= .uv-cache
 UV_PYTHON_INSTALL_DIR ?= .uv-python
 UV_RUN ?= UV_CACHE_DIR=$(UV_CACHE_DIR) UV_PYTHON_INSTALL_DIR=$(UV_PYTHON_INSTALL_DIR) uv run
@@ -86,7 +87,7 @@ clean-outputs:
 export-lm-eval: build
 	$(PYTHON) scripts/catalan_drift_eval.py export-lm-eval --prompts $(PROMPTS) --output "$(EXPORT)"
 
-eval: clean-outputs export-lm-eval
+eval: clean-outputs language-id-model export-lm-eval
 	$(MAKE) -j2 SKIP_EXPORT=1 $(CLOUD_EVAL_TARGETS) & \
 	$(MAKE) SKIP_EXPORT=1 $(LOCAL_EVAL_TARGETS) & \
 	wait
@@ -100,9 +101,13 @@ eval-one:
 	@mkdir -p "$$(dirname "$(EVAL_TIMELINE)")"
 	@start=$$(date +%s); \
 	start_iso=$$(date '+%Y-%m-%dT%H:%M:%S%z'); \
+	git_commit=$$(git rev-parse HEAD); \
+	git_branch=$$(git branch --show-current); \
+	git_status_sha256=$$(git status --porcelain | sha256sum | awk '{print $$1}'); \
+	git_dirty=$$(if test -n "$$(git status --porcelain)"; then echo true; else echo false; fi); \
 	printf '[%s] eval start: %s\n' "$(DISPLAY_MODEL)" "$$start_iso"; \
 	printf '%s\t%s\t%s\t%s\t%s\n' "$(RUN_NAME)" "$(DISPLAY_MODEL)" start "$$start_iso" "" >> "$(EVAL_TIMELINE)"; \
-	if $(LM_EVAL) --include_path lm_eval_tasks --tasks "$(TASK)" --model "$(LM_EVAL_MODEL)" --model_args "$(MODEL_ARGS)" --apply_chat_template --log_samples --output_path "$(OUT_DIR)" $(if $(LIMIT),--limit "$(LIMIT)",) $(if $(GEN_KWARGS),--gen_kwargs '$(GEN_KWARGS)',) && samples=$$(find "$(OUT_DIR)" -name 'samples_$(TASK)*.jsonl' | sort | tail -n 1) && $(PYTHON) scripts/catalan_drift_eval.py score-lm-eval --samples "$$samples" --model "$(DISPLAY_MODEL)" --provider "$(LM_EVAL_MODEL)" --responses-output "$(MODEL_OUT_DIR)/responses.jsonl" --report "$(MODEL_OUT_DIR)/report.json" --failures-file "$(MODEL_OUT_DIR)/failures.txt" --passes-file "$(MODEL_OUT_DIR)/passes.txt"; then status=0; event=end; else status=$$?; event=failed; fi; \
+	if $(LM_EVAL) --include_path lm_eval_tasks --tasks "$(TASK)" --model "$(LM_EVAL_MODEL)" --model_args "$(MODEL_ARGS)" --apply_chat_template --log_samples --output_path "$(OUT_DIR)" $(if $(LIMIT),--limit "$(LIMIT)",) $(if $(GEN_KWARGS),--gen_kwargs '$(GEN_KWARGS)',) && samples=$$(find "$(OUT_DIR)" -name 'samples_$(TASK)*.jsonl' | sort | tail -n 1) && $(PYTHON) scripts/catalan_drift_eval.py score-lm-eval --samples "$$samples" --model "$(DISPLAY_MODEL)" --provider "$(LM_EVAL_MODEL)" --responses-output "$(MODEL_OUT_DIR)/responses.jsonl" --report "$(MODEL_OUT_DIR)/report.json" --failures-file "$(MODEL_OUT_DIR)/failures.txt" --passes-file "$(MODEL_OUT_DIR)/passes.txt" --git-commit "$$git_commit" --git-branch "$$git_branch" --git-status-sha256 "$$git_status_sha256" --git-dirty "$$git_dirty"; then status=0; event=end; else status=$$?; event=failed; fi; \
 	end_iso=$$(date '+%Y-%m-%dT%H:%M:%S%z'); \
 	elapsed=$$(($$(date +%s) - start)); \
 	printf '[%s] eval %s: %s (duration %ss)\n' "$(DISPLAY_MODEL)" "$$event" "$$end_iso" "$$elapsed"; \
@@ -126,10 +131,10 @@ eval-gemini-flash-37: $(EVAL_EXPORT_PREREQ)
 	$(MAKE) eval-one LM_EVAL_MODEL=litellm MODEL_ARGS="model=gemini/gemini-3.7-flash,num_concurrent=1" DISPLAY_MODEL=gemini-3.7-flash RUN_NAME=gemini-3.7-flash GEN_KWARGS='$(GEMINI_GEN_KWARGS)'
 
 eval-gemma4-12b:
-	$(MAKE) eval-local-openai DISPLAY_MODEL=gemma-4-12b-it-Q4_K_M LOCAL_NUM_CONCURRENT=2 GEN_KWARGS='$(GEMMA_NO_THINKING_GEN_KWARGS)'
+	$(MAKE) eval-local-openai DISPLAY_MODEL=gemma-4-12b-it-Q4_K_M LOCAL_NUM_CONCURRENT=2 GEN_KWARGS='$(LOCAL_GEN_KWARGS)'
 
 eval-ministral3-8b:
-	$(MAKE) eval-local-openai DISPLAY_MODEL=Ministral-3-8B-Instruct-2512-Q4_K_M LOCAL_NUM_CONCURRENT=2
+	$(MAKE) eval-local-openai DISPLAY_MODEL=Ministral-3-8B-Instruct-2512-Q4_K_M LOCAL_NUM_CONCURRENT=2 GEN_KWARGS='$(LOCAL_GEN_KWARGS)'
 
 eval-qwen3-14b:
-	$(MAKE) eval-local-openai DISPLAY_MODEL=Qwen_Qwen3-14B-Q4_K_M LOCAL_NUM_CONCURRENT=2
+	$(MAKE) eval-local-openai DISPLAY_MODEL=Qwen_Qwen3-14B-Q4_K_M LOCAL_NUM_CONCURRENT=2 GEN_KWARGS='$(LOCAL_GEN_KWARGS)'
