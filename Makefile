@@ -2,7 +2,7 @@ TASK ?= catalan_drift
 RUN_NAME ?= lm-eval
 LM_EVAL_MODEL ?= hf
 MODEL_ARGS ?=
-GEN_KWARGS ?= {"temperature":0}
+GEN_KWARGS ?= {"temperature":0,"reasoning_effort":"none","chat_template_kwargs":{"enable_thinking":false}}
 DISPLAY_MODEL ?= $(MODEL_ARGS)
 MODEL_OUT_DIR ?= outputs/$(shell printf '%s' '$(RUN_NAME)' | tr '[:upper:]' '[:lower:]')
 OUT_DIR ?= $(MODEL_OUT_DIR)/lm_eval
@@ -35,7 +35,7 @@ LOCAL_OPENAI_BASE_URL ?= http://localhost:9090/v1/chat/completions
 LOCAL_NUM_CONCURRENT ?= 4
 GPT_GEN_KWARGS ?= {"temperature":0,"reasoning_effort":"none"}
 GEMINI_GEN_KWARGS ?= {"temperature":1,"reasoning_effort":"low"}
-GEMMA_NO_THINKING_GEN_KWARGS ?= {"temperature":0,"chat_template_kwargs":{"enable_thinking":false}}
+GEMMA_NO_THINKING_GEN_KWARGS ?= {"temperature":0,"reasoning_effort":"none","chat_template_kwargs":{"enable_thinking":false}}
 UV_CACHE_DIR ?= .uv-cache
 UV_PYTHON_INSTALL_DIR ?= .uv-python
 UV_RUN ?= UV_CACHE_DIR=$(UV_CACHE_DIR) UV_PYTHON_INSTALL_DIR=$(UV_PYTHON_INSTALL_DIR) uv run

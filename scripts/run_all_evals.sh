@@ -181,7 +181,7 @@ for model in "${LOCAL_MODELS[@]}"; do
   fi
   log "--- starting local model=$model ---"
   echo "$model" > "$STATE"
-  if uv run make eval-local-openai SKIP_EXPORT=1 DISPLAY_MODEL="$model" LOCAL_NUM_CONCURRENT=2 GEN_KWARGS='{"temperature":0,"max_gen_toks":2048}' >>"$LOG" 2>&1; then
+  if uv run make eval-local-openai SKIP_EXPORT=1 DISPLAY_MODEL="$model" LOCAL_NUM_CONCURRENT=2 GEN_KWARGS='{"temperature":0,"max_gen_toks":2048,"reasoning_effort":"none","chat_template_kwargs":{"enable_thinking":false}}' >>"$LOG" 2>&1; then
     log "local $model finished ok"
     post_eval "$model" "$model" || true
   else
