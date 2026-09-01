@@ -108,68 +108,10 @@ full repository license split.
 
 ## Completed evaluations
 
-Results from the current 300-item evaluation run.
+Results completed by the current 300-item evaluation run:
 
-Input duplication is **0.0%** (0/300 entries) at Jaccard ≥ 0.8 — and also 0/300 at
-Jaccard ≥ 0.6 — measured over the full model-visible input (conversation +
-retrieved context + prompt), not the final prompt alone.
+Prompt duplication is **0.0%** (0/300 entries) at the 0.8 similarity threshold.
 
 | Model | Overall | Catalan token ratio | Monolingual | Cross basic | Multi-turn | Cross advanced | RAG context |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Gemini 3.7 Flash | **92.7%** | 95.5% | 100.0% | 95.0% | 91.7% | 98.3% | 78.3% |
-| Ministral 3 8B | 80.0% | 80.5% | 91.7% | 80.0% | 61.7% | 75.0% | 91.7% |
-| Gemma 3 4B | 75.7% | 80.8% | 100.0% | 50.0% | 66.7% | 61.7% | 100.0% |
-| Llama 3.1 8B | 74.0% | 79.5% | 100.0% | 58.3% | 66.7% | 83.3% | 61.7% |
-| Gemma 4 E4B | 73.0% | 82.4% | 98.3% | 53.3% | 68.3% | 76.7% | 68.3% |
-| GPT-5.6 | 71.7% | 76.2% | 100.0% | 83.3% | 55.0% | 60.0% | 60.0% |
-| EuroLLM 9B | 64.7% | 77.2% | 100.0% | 65.0% | 30.0% | 53.3% | 75.0% |
-| Aya Expanse 8B | 48.3% | 56.1% | 95.0% | 31.7% | 40.0% | 43.3% | 31.7% |
-| Qwen3.5 9B | 16.3% | 97.3% | 56.7% | 25.0% | 0.0% | 0.0% | 0.0% |
-
-### Run configurations
-
-Numbers above are conditioned on the decoding config each row was evaluated
-under. They are not directly comparable across rows unless the configs match.
-
-| Model | Provider | Precision | Temperature | Reasoning effort |
-|---|---|---|---:|---|
-| Gemini 3.7 Flash | LiteLLM (Google) | fp16 | 1.0 | low |
-| GPT-5.6 | OpenAI Chat Completions | fp16 | 0 | none |
-| Gemma 3 4B | local OpenAI-compatible | Q4_K_M | 0 | none (thinking disabled) |
-| Gemma 4 E4B | local OpenAI-compatible | Q4_K_M | 0 | none (thinking disabled) |
-| Llama 3.1 8B | local OpenAI-compatible | Q4_K_M | 0 | none |
-| Ministral 3 8B | local OpenAI-compatible | Q4_K_M | 0 | none |
-| EuroLLM 9B | local OpenAI-compatible | Q4_K_M | 0 | none |
-| Aya Expanse 8B | local OpenAI-compatible | Q4_K_M | 0 | none |
-| Qwen3.5 9B | local OpenAI-compatible | Q4_K_M | 0 | none |
-
-### How to read this table
-
-- **Not a capability ranking.** These numbers report drift performance under
-  the specific decoding configs above, not raw model quality. A gap between
-  two rows may reflect the config or the quantization, not the underlying
-  model — Gemini samples at `temperature=1` with `reasoning_effort=low`,
-  GPT-5.6 runs deterministically at `temperature=0` with reasoning off, and
-  every local row uses Q4_K_M weights against a local OpenAI-compatible
-  server.
-- **Sampling noise band.** Five identical-config reruns of GPT-5.6 at
-  `temperature=0` spread across 65–71% overall pass rate — a ~6pp band with
-  nothing changed. Treat rank differences smaller than ~6pp as noise.
-  Reported ranks are point estimates; no paired confidence intervals are
-  computed yet.
-- **Quantized decode collapse.** Local rows use Q4_K_M weights. Qwen3.5 9B
-  shows why this matters: 97.3% of its emitted tokens are Catalan, yet its
-  pass rate is 16.3% because the model produces truncated subword salad
-  (e.g. `**Actualitzatedact`, `Benving arres`). The scorer counts those as
-  `language_fail` correctly — they aren't Catalan — but the failure mode is
-  decoding collapse under quantization, not language drift. Don't read this
-  row as a comment on Qwen3.5's Catalan capability at full precision.
-- **Scorer scope.** `language_fail` bundles genuine drift and any non-Catalan
-  output the fastText `lid.176` detector recognizes, including garbled
-  generation. The scorer does not currently distinguish drift from decode
-  collapse; see the Qwen3.5 case above.
-- **What "Overall" measures.** Segment-level Catalan pass rate: each response
-  is split into segments, each segment is classified by fastText, and the
-  item passes iff the non-Catalan token ratio stays under 15%. Thresholds
-  are calibrated against a FLORES-200 slice — see
-  [`benchmark_design.md`](benchmark_design.md).
+| GPT-5.6 | **71.3%** | 76.8% | 100.0% | 85.0% | 51.7% | 60.0% | 60.0% |
