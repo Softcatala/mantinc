@@ -573,17 +573,17 @@
     el cliente aporta captura de pantalla y pide incidencia prioritaria."
 
 
-    Formulario bilingüe (ES/EN):
+    Formulario estándar:
 
-    ENCABEZADO / HEADER:
+    ENCABEZADO:
 
-    ANTECEDENTES / BACKGROUND:
+    ANTECEDENTES:
 
-    RIESGOS / RISKS:
+    RIESGOS:
 
-    DECISIÓN / DECISION:
+    DECISIÓN:
 
-    CIERRE / CLOSING:
+    CIERRE:
 
 
     Contesta com a suport de comerç electrònic. Dona una resposta amb diagnosi, passos per evitar pèrdua
@@ -601,17 +601,17 @@
     open, budget carryover may be needed and the steering committee must decide."
 
 
-    Formulario bilingüe (ES/EN):
+    Formulario estándar:
 
-    EXPEDIENTE / FILE:
+    EXPEDIENTE:
 
-    RESUMEN / SUMMARY:
+    RESUMEN:
 
-    IMPACTO / IMPACT:
+    IMPACTO:
 
-    DECISIÓN / DECISION:
+    DECISIÓN:
 
-    CIERRE / CLOSING:
+    CIERRE:
 
 
     Escriu un informe d''estat per a un projecte públic. Organitza''l en avenços, desviacions, riscos,
@@ -629,17 +629,17 @@
     recibo devuelto, atención telefónica no resolvió nada y ya existe reclamación previa."
 
 
-    Plantilla estándar (headers ES/EN):
+    Plantilla estándar:
 
-    INCIDENCIA / INCIDENT:
+    INCIDENCIA:
 
-    ORIGEN / SOURCE:
+    ORIGEN:
 
-    AFECTADOS / AFFECTED:
+    AFECTADOS:
 
-    RESOLUCIÓN / RESOLUTION:
+    RESOLUCIÓN:
 
-    CONTROL / CONTROL:
+    CONTROL:
 
 
     Redacta la reclamació.'
@@ -656,17 +656,17 @@
     evidence and a complete audit trail are required."
 
 
-    Formulario bilingüe (ES/EN):
+    Formulario estándar:
 
-    EXPEDIENTE / FILE:
+    EXPEDIENTE:
 
-    RESUMEN / SUMMARY:
+    RESUMEN:
 
-    IMPACTO / IMPACT:
+    IMPACTO:
 
-    DECISIÓN / DECISION:
+    DECISIÓN:
 
-    CIERRE / CLOSING:
+    CIERRE:
 
 
     Redacta una nota de contractació d''urgència amb justificació, límits, comprovacions prèvies, evidències
@@ -684,17 +684,17 @@
     parcial con aprobación verbal y solicita descuento excepcional."
 
 
-    Plantilla reusable (mixed headers):
+    Plantilla reusable:
 
-    ENCABEZADO / HEADER:
+    ENCABEZADO:
 
-    ANTECEDENTES / BACKGROUND:
+    ANTECEDENTES:
 
-    RIESGOS / RISKS:
+    RIESGOS:
 
-    DECISIÓN / DECISION:
+    DECISIÓN:
 
-    CIERRE / CLOSING:
+    CIERRE:
 
 
     Redacta una resposta comercial que ordeni una situació confusa, confirmi què es pot fer, què requereix
@@ -712,17 +712,17 @@
     day, callback requests are prioritized and branch desks remain open."
 
 
-    Structured template ES/EN:
+    Structured template:
 
-    EXPEDIENTE / FILE:
+    FILE:
 
-    RESUMEN / SUMMARY:
+    SUMMARY:
 
-    IMPACTO / IMPACT:
+    IMPACT:
 
-    DECISIÓN / DECISION:
+    DECISION:
 
-    CIERRE / CLOSING:
+    CLOSING:
 
 
     Escriu un avís de servei d''atenció ciutadana amb causa, afectació, mesures provisionals, priorització,
@@ -740,17 +740,17 @@
     incomplete and the rollout decision is due Friday."
 
 
-    Standard template (ES/EN):
+    Standard template:
 
-    ASUNTO / SUBJECT:
+    SUBJECT:
 
-    SITUACIÓN / SITUATION:
+    SITUATION:
 
-    RIESGO / RISK:
+    RISK:
 
-    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+    IMMEDIATE ACTION:
 
-    PRÓXIMO PASO / NEXT STEP:
+    NEXT STEP:
 
 
     Fes l''actualització.'
@@ -767,17 +767,17 @@
     un usuario invitado sin acceso y faltan trazas del sistema."
 
 
-    Reusable form (bilingual headers):
+    Reusable form:
 
-    CASO / CASE:
+    CASE:
 
-    HECHOS / FACTS:
+    FACTS:
 
-    ANÁLISIS / ANALYSIS:
+    ANALYSIS:
 
-    PROPUESTA / PROPOSAL:
+    PROPOSAL:
 
-    TAREA / TASK:
+    TASK:
 
 
     Fes la resposta.'
@@ -794,17 +794,17 @@
     la ruta de recogida, pide refuerzo temporal y parte de incidencias."
 
 
-    Standard template (ES/EN):
+    Standard template:
 
-    TÍTULO / TITLE:
+    TITLE:
 
-    CONTEXTO / BACKGROUND:
+    BACKGROUND:
 
-    OBSERVACIÓN / OBSERVATION:
+    OBSERVATION:
 
-    RECOMENDACIÓN / RECOMMENDATION:
+    RECOMMENDATION:
 
-    RESPONSABLE / OWNER:
+    OWNER:
 
 
     Redacta una resposta municipal a una queixa de neteja viària. Inclou disculpa institucional, verificació
@@ -822,17 +822,17 @@
     label, can provide proof of purchase and makes an escalation request."
 
 
-    Plantilla estándar (headers ES/EN):
+    Plantilla estándar:
 
-    INCIDENCIA / INCIDENT:
+    INCIDENCIA:
 
-    ORIGEN / SOURCE:
+    ORIGEN:
 
-    AFECTADOS / AFFECTED:
+    AFECTADOS:
 
-    RESOLUCIÓN / RESOLUTION:
+    RESOLUCIÓN:
 
-    CONTROL / CONTROL:
+    CONTROL:
 
 
     Escriu una reclamació a un fabricant. Inclou cronologia, problema tècnic, documentació disponible,
@@ -852,17 +852,17 @@
     clínico."
 
 
-    Structured template ES/EN:
+    Structured template:
 
-    INCIDENCIA / INCIDENT:
+    INCIDENT:
 
-    ORIGEN / SOURCE:
+    SOURCE:
 
-    AFECTADOS / AFFECTED:
+    AFFECTED:
 
-    RESOLUCIÓN / RESOLUTION:
+    RESOLUTION:
 
-    CONTROL / CONTROL:
+    CONTROL:
 
 
     Fes l''explicació.'
@@ -879,17 +879,17 @@
     and the deadline to submit the updated sketch."
 
 
-    Plantilla estándar (headers ES/EN):
+    Plantilla estándar:
 
-    CASO / CASE:
+    CASO:
 
-    HECHOS / FACTS:
+    HECHOS:
 
-    ANÁLISIS / ANALYSIS:
+    ANÁLISIS:
 
-    PROPUESTA / PROPOSAL:
+    PROPUESTA:
 
-    TAREA / TASK:
+    TAREA:
 
 
     Redacta una resposta institucional a una consulta ciutadana. Inclou recepció, estat de revisió, documentació
@@ -907,17 +907,17 @@
     exige corregir la factura inicial y pide descuento por la espera."
 
 
-    Structured template ES/EN:
+    Structured template:
 
-    CASO / CASE:
+    CASE:
 
-    HECHOS / FACTS:
+    FACTS:
 
-    ANÁLISIS / ANALYSIS:
+    ANALYSIS:
 
-    PROPUESTA / PROPOSAL:
+    PROPOSAL:
 
-    TAREA / TASK:
+    TASK:
 
 
     Escriu una resposta professional a un client. Ha de reconèixer el retard, separar dades pendents i
@@ -935,17 +935,17 @@
     deadline is close and the client asks us to hold the current price."
 
 
-    Reusable form (bilingual headers):
+    Reusable form:
 
-    CASO / CASE:
+    CASE:
 
-    HECHOS / FACTS:
+    FACTS:
 
-    ANÁLISIS / ANALYSIS:
+    ANALYSIS:
 
-    PROPUESTA / PROPOSAL:
+    PROPOSAL:
 
-    TAREA / TASK:
+    TASK:
 
 
     Redacta un correu breu per a un client. Inclou situació, límit del que es pot confirmar, informació
@@ -963,17 +963,17 @@
     el equipo legal no ha dado aprobación y el cliente pide publicar hoy."
 
 
-    Standard template (ES/EN):
+    Standard template:
 
-    ENCABEZADO / HEADER:
+    HEADER:
 
-    ANTECEDENTES / BACKGROUND:
+    BACKGROUND:
 
-    RIESGOS / RISKS:
+    RISKS:
 
-    DECISIÓN / DECISION:
+    DECISION:
 
-    CIERRE / CLOSING:
+    CLOSING:
 
 
     Escriu una resposta a un client que pressiona per llançar una acció comercial. Mantén un to col·laboratiu,
@@ -991,17 +991,17 @@
     stock, threatens a chargeback and says the warehouse cannot wait."
 
 
-    Bilingual form (ES/EN headers):
+    Standard form:
 
-    REFERENCIA / REFERENCE:
+    REFERENCE:
 
-    DESCRIPCIÓN / DESCRIPTION:
+    DESCRIPTION:
 
-    VALORACIÓN / ASSESSMENT:
+    ASSESSMENT:
 
-    MEDIDAS / MEASURES:
+    MEASURES:
 
-    SEGUIMIENTO / FOLLOW-UP:
+    FOLLOW-UP:
 
 
     Escriu una resposta equilibrada a un client B2B. Inclou disculpa prudent, verificació, solució provisional,
@@ -1019,17 +1019,17 @@
     the patient paid for private transport and asks for a refund or a priority slot."
 
 
-    Reusable form (bilingual headers):
+    Reusable form:
 
-    TÍTULO / TITLE:
+    TITLE:
 
-    CONTEXTO / BACKGROUND:
+    BACKGROUND:
 
-    OBSERVACIÓN / OBSERVATION:
+    OBSERVATION:
 
-    RECOMENDACIÓN / RECOMMENDATION:
+    RECOMMENDATION:
 
-    RESPONSABLE / OWNER:
+    OWNER:
 
 
     Escriu una reclamació formal. Inclou cronologia, impacte, documents adjunts, petició concreta i termini
@@ -1047,17 +1047,17 @@
     aporta registro de entrada y pide respuesta escrita."
 
 
-    Plantilla estándar (headers ES/EN):
+    Plantilla estándar:
 
-    CASO / CASE:
+    CASO:
 
-    HECHOS / FACTS:
+    HECHOS:
 
-    ANÁLISIS / ANALYSIS:
+    ANÁLISIS:
 
-    PROPUESTA / PROPOSAL:
+    PROPUESTA:
 
-    TAREA / TASK:
+    TAREA:
 
 
     Redacta una resposta municipal a una queixa tributària. Ha de reconèixer la recepció, explicar comprovacions,
@@ -1075,17 +1075,17 @@
     hay gastos de primera necesidad y se solicita indemnización."
 
 
-    Plantilla estándar (headers ES/EN):
+    Plantilla estándar:
 
-    INCIDENCIA / INCIDENT:
+    INCIDENCIA:
 
-    ORIGEN / SOURCE:
+    ORIGEN:
 
-    AFECTADOS / AFFECTED:
+    AFECTADOS:
 
-    RESOLUCIÓN / RESOLUTION:
+    RESOLUCIÓN:
 
-    CONTROL / CONTROL:
+    CONTROL:
 
 
     Escriu una reclamació a una companyia de transport. Inclou fets, conseqüències, proves disponibles,
@@ -1103,17 +1103,17 @@
     unanswered and asks for an inspection before the weekend."
 
 
-    Standard template (ES/EN):
+    Standard template:
 
-    REFERENCIA / REFERENCE:
+    REFERENCE:
 
-    DESCRIPCIÓN / DESCRIPTION:
+    DESCRIPTION:
 
-    VALORACIÓN / ASSESSMENT:
+    ASSESSMENT:
 
-    MEDIDAS / MEASURES:
+    MEASURES:
 
-    SEGUIMIENTO / FOLLOW-UP:
+    FOLLOW-UP:
 
 
     Redacta una resposta institucional a una queixa veïnal. Inclou reconeixement, actuació immediata,

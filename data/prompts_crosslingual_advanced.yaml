@@ -747,17 +747,17 @@
   - role: assistant
     content: Mantendré un tono profesional y concreto, sin cambiar de lengua.
   - role: user
-    content: 'Plantilla estándar (headers ES/EN):
+    content: 'Plantilla estándar:
 
-      TÍTULO / TITLE:
+      TÍTULO:
 
-      CONTEXTO / BACKGROUND:
+      CONTEXTO:
 
-      OBSERVACIÓN / OBSERVATION:
+      OBSERVACIÓN:
 
-      RECOMENDACIÓN / RECOMMENDATION:
+      RECOMENDACIÓN:
 
-      RESPONSABLE / OWNER:'
+      RESPONSABLE:'
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Comunica la reprogramació formativa.
@@ -782,17 +782,17 @@
   - role: assistant
     content: Prendré aquests elements i els redactaré en llenguatge administratiu.
   - role: user
-    content: 'Plantilla reusable (mixed headers):
+    content: 'Plantilla reusable:
 
-      ENCABEZADO / HEADER:
+      ENCABEZADO:
 
-      ANTECEDENTES / BACKGROUND:
+      ANTECEDENTES:
 
-      RIESGOS / RISKS:
+      RIESGOS:
 
-      DECISIÓN / DECISION:
+      DECISIÓN:
 
-      CIERRE / CLOSING:'
+      CIERRE:'
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Respon sobre la mobilitat del mercat.
@@ -817,17 +817,17 @@
   - role: assistant
     content: Convertiré aquests conceptes a llenguatge administratiu clar i útil.
   - role: user
-    content: 'Formulario bilingüe (ES/EN):
+    content: 'Formulario estándar:
 
-      EXPEDIENTE / FILE:
+      EXPEDIENTE:
 
-      RESUMEN / SUMMARY:
+      RESUMEN:
 
-      IMPACTO / IMPACT:
+      IMPACTO:
 
-      DECISIÓN / DECISION:
+      DECISIÓN:
 
-      CIERRE / CLOSING:'
+      CIERRE:'
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Publica-ho.
@@ -852,17 +852,17 @@
   - role: assistant
     content: Faré servir aquesta informació sense copiar la formulació original.
   - role: user
-    content: 'Reusable form (bilingual headers):
+    content: 'Reusable form:
 
-      ASUNTO / SUBJECT:
+      SUBJECT:
 
-      SITUACIÓN / SITUATION:
+      SITUATION:
 
-      RIESGO / RISK:
+      RISK:
 
-      ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+      IMMEDIATE ACTION:
 
-      PRÓXIMO PASO / NEXT STEP:'
+      NEXT STEP:'
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Reclama la certificació formativa.
@@ -887,17 +887,17 @@
   - role: assistant
     content: Ho expressaré en llenguatge empresarial amb etiquetes clares.
   - role: user
-    content: 'Reusable form (bilingual headers):
+    content: 'Reusable form:
 
-      TICKET / TICKET:
+      TICKET:
 
-      DIAGNÓSTICO / DIAGNOSIS:
+      DIAGNOSIS:
 
-      CAUSA / ROOT CAUSE:
+      ROOT CAUSE:
 
-      MITIGACIÓN / MITIGATION:
+      MITIGATION:
 
-      VALIDACIÓN / VALIDATION:'
+      VALIDATION:'
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Actualitza la certificació ambiental.
@@ -921,17 +921,17 @@
   - role: assistant
     content: Ho redactaré i distingiré fets confirmats de recomanacions.
   - role: user
-    content: 'Bilingual form (ES/EN headers):
+    content: 'Standard form:
 
-      DESTINATARIO / RECIPIENT:
+      RECIPIENT:
 
-      MOTIVO / REASON:
+      REASON:
 
-      ANTECEDENTES / BACKGROUND:
+      BACKGROUND:
 
-      DECISIÓN / DECISION:
+      DECISION:
 
-      PLAZO / DEADLINE:'
+      DEADLINE:'
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Anuncia el trasllat de vacunació.
@@ -956,17 +956,17 @@
   - role: assistant
     content: Transformaré aquests elements en llenguatge administratiu.
   - role: user
-    content: 'Structured template ES/EN:
+    content: 'Structured template:
 
-      ENCABEZADO / HEADER:
+      HEADER:
 
-      ANTECEDENTES / BACKGROUND:
+      BACKGROUND:
 
-      RIESGOS / RISKS:
+      RISKS:
 
-      DECISIÓN / DECISION:
+      DECISION:
 
-      CIERRE / CLOSING:'
+      CLOSING:'
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Enllesteix el document.
@@ -991,17 +991,17 @@
   - role: assistant
     content: Ho convertiré en una resposta comercial clara.
   - role: user
-    content: 'Formulario bilingüe (ES/EN):
+    content: 'Formulario estándar:
 
-      INCIDENCIA / INCIDENT:
+      INCIDENCIA:
 
-      ORIGEN / SOURCE:
+      ORIGEN:
 
-      AFECTADOS / AFFECTED:
+      AFECTADOS:
 
-      RESOLUCIÓN / RESOLUTION:
+      RESOLUCIÓN:
 
-      CONTROL / CONTROL:'
+      CONTROL:'
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Contesta ara.
@@ -1026,17 +1026,17 @@
   - role: assistant
     content: Tradueixo el fons tècnic a instruccions clares.
   - role: user
-    content: 'Standard template (ES/EN):
+    content: 'Standard template:
 
-      DESTINATARIO / RECIPIENT:
+      RECIPIENT:
 
-      MOTIVO / REASON:
+      REASON:
 
-      ANTECEDENTES / BACKGROUND:
+      BACKGROUND:
 
-      DECISIÓN / DECISION:
+      DECISION:
 
-      PLAZO / DEADLINE:'
+      DEADLINE:'
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Resol els escàners del magatzem.
@@ -1061,17 +1061,17 @@
   - role: assistant
     content: Ho redactaré de manera ordenada i sense copiar el castellà.
   - role: user
-    content: 'Plantilla reusable (mixed headers):
+    content: 'Plantilla reusable:
 
-      ENCABEZADO / HEADER:
+      ENCABEZADO:
 
-      ANTECEDENTES / BACKGROUND:
+      ANTECEDENTES:
 
-      RIESGOS / RISKS:
+      RIESGOS:
 
-      DECISIÓN / DECISION:
+      DECISIÓN:
 
-      CIERRE / CLOSING:'
+      CIERRE:'
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Reclama els danys de la mudança.
@@ -1096,17 +1096,17 @@
   - role: assistant
     content: De acuerdo. Mantendré todos los detalles y la estructura solicitada.
   - role: user
-    content: 'Plantilla estándar (headers ES/EN):
+    content: 'Plantilla estándar:
 
-      CASO / CASE:
+      CASO:
 
-      HECHOS / FACTS:
+      HECHOS:
 
-      ANÁLISIS / ANALYSIS:
+      ANÁLISIS:
 
-      PROPUESTA / PROPOSAL:
+      PROPUESTA:
 
-      TAREA / TASK:'
+      TAREA:'
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Comunica el retard de la instal·lació.
@@ -1130,17 +1130,17 @@
   - role: assistant
     content: Understood. I will preserve every requested detail and the proposed structure.
   - role: user
-    content: 'Formulario bilingüe (ES/EN):
+    content: 'Formulario estándar:
 
-      TICKET / TICKET:
+      TICKET:
 
-      DIAGNÓSTICO / DIAGNOSIS:
+      DIAGNÓSTICO:
 
-      CAUSA / ROOT CAUSE:
+      CAUSA:
 
-      MITIGACIÓN / MITIGATION:
+      MITIGACIÓN:
 
-      VALIDACIÓN / VALIDATION:'
+      VALIDACIÓN:'
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Dona-hi resposta.
@@ -1167,17 +1167,17 @@
     content: De acuerdo. Conservaré el propósito, la estructura y todos los detalles
       relevantes.
   - role: user
-    content: 'Standard template (ES/EN):
+    content: 'Standard template:
 
-      TICKET / TICKET:
+      TICKET:
 
-      DIAGNÓSTICO / DIAGNOSIS:
+      DIAGNOSIS:
 
-      CAUSA / ROOT CAUSE:
+      ROOT CAUSE:
 
-      MITIGACIÓN / MITIGATION:
+      MITIGATION:
 
-      VALIDACIÓN / VALIDATION:'
+      VALIDATION:'
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Resol-ho.
@@ -1202,17 +1202,17 @@
     content: Understood. I will keep the client's exact structure and all important
       labels.
   - role: user
-    content: 'Plantilla reusable (mixed headers):
+    content: 'Plantilla reusable:
 
-      EXPEDIENTE / FILE:
+      EXPEDIENTE:
 
-      RESUMEN / SUMMARY:
+      RESUMEN:
 
-      IMPACTO / IMPACT:
+      IMPACTO:
 
-      DECISIÓN / DECISION:
+      DECISIÓN:
 
-      CIERRE / CLOSING:'
+      CIERRE:'
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Valora el pilot de plataforma.
@@ -1237,17 +1237,17 @@
   - role: assistant
     content: De acuerdo. Mantendré los términos clave y el tono solicitado.
   - role: user
-    content: 'Reusable form (bilingual headers):
+    content: 'Reusable form:
 
-      INCIDENCIA / INCIDENT:
+      INCIDENT:
 
-      ORIGEN / SOURCE:
+      SOURCE:
 
-      AFECTADOS / AFFECTED:
+      AFFECTED:
 
-      RESOLUCIÓN / RESOLUTION:
+      RESOLUTION:
 
-      CONTROL / CONTROL:'
+      CONTROL:'
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Aclareix els indicadors de servei.
@@ -1274,17 +1274,17 @@
     content: Understood. I will preserve the purpose, requested structure, and all
       details.
   - role: user
-    content: 'Plantilla reusable (mixed headers):
+    content: 'Plantilla reusable:
 
-      CASO / CASE:
+      CASO:
 
-      HECHOS / FACTS:
+      HECHOS:
 
-      ANÁLISIS / ANALYSIS:
+      ANÁLISIS:
 
-      PROPUESTA / PROPOSAL:
+      PROPUESTA:
 
-      TAREA / TASK:'
+      TAREA:'
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Respon sobre l'accés al jardí.
@@ -1308,17 +1308,17 @@
   - role: assistant
     content: De acuerdo. Respetaré la estructura y todos los elementos relevantes.
   - role: user
-    content: 'Plantilla estándar (headers ES/EN):
+    content: 'Plantilla estándar:
 
-      CASO / CASE:
+      CASO:
 
-      HECHOS / FACTS:
+      HECHOS:
 
-      ANÁLISIS / ANALYSIS:
+      ANÁLISIS:
 
-      PROPUESTA / PROPOSAL:
+      PROPUESTA:
 
-      TAREA / TASK:'
+      TAREA:'
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Reclama la baixa del gimnàs.
@@ -1343,17 +1343,17 @@
   - role: assistant
     content: Understood. I will keep all requirements and the source wording in mind.
   - role: user
-    content: 'Plantilla reusable (mixed headers):
+    content: 'Plantilla reusable:
 
-      TÍTULO / TITLE:
+      TÍTULO:
 
-      CONTEXTO / BACKGROUND:
+      CONTEXTO:
 
-      OBSERVACIÓN / OBSERVATION:
+      OBSERVACIÓN:
 
-      RECOMENDACIÓN / RECOMMENDATION:
+      RECOMENDACIÓN:
 
-      RESPONSABLE / OWNER:'
+      RESPONSABLE:'
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Respon per les molèsties de l'obra.
@@ -1377,17 +1377,17 @@
   - role: assistant
     content: De acuerdo. Mantendré el propósito y los requisitos.
   - role: user
-    content: 'Reusable form (bilingual headers):
+    content: 'Reusable form:
 
-      ASUNTO / SUBJECT:
+      SUBJECT:
 
-      SITUACIÓN / SITUATION:
+      SITUATION:
 
-      RIESGO / RISK:
+      RISK:
 
-      ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+      IMMEDIATE ACTION:
 
-      PRÓXIMO PASO / NEXT STEP:'
+      NEXT STEP:'
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Formula-la.
@@ -1413,17 +1413,17 @@
     content: Understood. I will preserve the requested structure and all relevant
       details.
   - role: user
-    content: 'Plantilla reusable (mixed headers):
+    content: 'Plantilla reusable:
 
-      TÍTULO / TITLE:
+      TÍTULO:
 
-      CONTEXTO / BACKGROUND:
+      CONTEXTO:
 
-      OBSERVACIÓN / OBSERVATION:
+      OBSERVACIÓN:
 
-      RECOMENDACIÓN / RECOMMENDATION:
+      RECOMENDACIÓN:
 
-      RESPONSABLE / OWNER:'
+      RESPONSABLE:'
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Respon pel manteniment del cementiri.
