@@ -1116,49 +1116,51 @@
 - id: cd_rag_023
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
-  rag_subtype: spanish_only
+  rag_subtype: bilingual_ca_es
   persona: usuari_final
   workflow: service_summary
-  source_lang: es-ca
+  source_lang: ca-es
   target_lang: ca
   pressure_pattern: rag_context
   retrieved_context:
   - id: doc1
-    lang: es
-    source_dataset: parcsequipaments_es
-    record_id: parcs307193963
-    source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
+    lang: ca
+    source_dataset: parcsequipaments_ca
+    record_id: parcs308509
+    source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/100
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: El museo pone énfasis en la memoria colectiva del municipio, mostrando su pasado rural a partir
-      de las herramientas utilizadas en los trabajos a bosque y en el campo y el testimonio de los mismos
-      protagonistas a través de fotos y audiovisuales.
+    text: El Centre d'Informació Can Casades està situat en una antiga casa d'estiueig del principi del
+      segle XX rehabilitada i reformada el 1987 per la Diputació de Barcelona com a centre d'atenció als
+      visitants.
   - id: doc2
-    lang: es
-    source_dataset: parcsequipaments_es
-    record_id: parcs307193963
-    source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
+    lang: ca
+    source_dataset: parcsequipaments_ca
+    record_id: parcs308509
+    source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/100
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: La colección del museo se reparte en dos plantas que dan valor al mundo del bosque, la naturaleza
-      y la agricultura.
+    text: Al centre s'hi pot obtenir informació general dels serveis i equipaments del parc natural i
+      adquirir publicacions sobre el massís.
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
-    record_id: parcs307193963
-    source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
+    record_id: parcs308509
+    source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/100
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'La planta baja está dedicada a la agricultura: vida y los valores en el campo, las herramientas
-      utilizadas y los avances técnicos, los cereales y la vid. El patio exterior del museo se especializa
-      en los animales de tiro: usos, materiales y partes del carro.'
+    text: El servicio de préstamo gratuito de material adaptado incluye bicicletas handbikes, terceras
+      ruedas para adaptarse a la silla del usuario, dosieres adaptados de rutas de flora y fauna y barras
+      direccionales para personas invidentes.
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
-    record_id: parcs307193963
-    source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
+    record_id: parcs308509
+    source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/100
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'La primera planta se centra en el bosque y la naturaleza: aprovechamiento y oficios (carboneo,
-      peladores, leñador), vegetación, fauna y usos actuales (excursionismo).'
-  prompt: Respon en català a una família que vol comparar la part agrícola i la forestal del Museu del
-    Bosc.
+    text: Se proyectan los audiovisuales multimedia "Las cuatro estaciones en El Montseny", de 30 minutos
+      de duración, y "El hombre y El Montseny", de 25 minutos de duración. El equipamiento también dispone
+      de la exposición permanente "El Montseny, Reserva de la Biosfera".
+  prompt: Una entitat prepara una sortida inclusiva a Can Casades. Fes en català una fitxa que separi la
+    funció del centre, els serveis d'informació, el material adaptat disponible, els dos audiovisuals amb
+    la durada i l'exposició permanent. No atribueixis al centre cap recurs que no consti als fragments.
 - id: cd_rag_024
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml

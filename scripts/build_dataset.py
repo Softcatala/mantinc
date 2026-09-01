@@ -47,8 +47,6 @@ def classify(row: dict[str, Any]) -> str:
             for turn in row.get("conversation", [])
             if turn.get("role") == "user"
         )
-        if "Plantilla reutilizable" in prior:
-            return "template_es_prior"
         if "Reusable template" in prior or source_lang in {"en-es-ca", "es-en-ca"}:
             return "english_or_trilingual"
         return "midconv_es_recency"

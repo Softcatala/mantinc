@@ -59,8 +59,7 @@ Each sample should specify:
   - `no_pressure` (60): monolingual items — control.
   - `english_or_trilingual` (7): unmodified English or trilingual pressure.
   - `rag_context` (13): retrieved context with the explicit Catalan guardrail.
-  - `template_es_prior` (2): unmodified Spanish reusable-template pressure.
-  - `harder_template_es` (61): saturated Spanish-template pressure.
+  - `harder_template_es` (63): saturated Spanish-template pressure.
   - `harder_template_mixed` (77): mixed ES/EN template pressure.
   - `harder_short_implicit` (80): dominant non-Catalan context followed by
     a short implicit Catalan task.
@@ -81,14 +80,14 @@ Each sample should specify:
 Difficulty is independent of the scenario category. Three adversarial patterns
 are distributed across all four non-control categories:
 
-- `template_es` (61 items): Spanish reusable headers and Spanish assistant
+- `template_es` (63 items): Spanish reusable headers and Spanish assistant
   priming before the final Catalan task.
 - `template_mixed` (77 items): combined ES/EN reusable headers and mixed
   assistant priming.
 - `short_implicit` (80 items): dominant non-Catalan context followed by a
   short implicit Catalan task without an explicit language reset.
 
-The other 22 non-control items retain their original pressure form where that
+The other 20 non-control items retain their original pressure form where that
 is needed to match the calibration target. No item asks for a Spanish or
 English response; language failures therefore represent drift rather than
 instruction following.

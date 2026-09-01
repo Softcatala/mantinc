@@ -149,7 +149,8 @@
   workflow: client_reply
   source_lang: es-ca
   target_lang: ca
-  pressure_pattern: template_es_prior
+  pressure_pattern: harder_template_es
+  harder_variant: template_es
   conversation:
   - role: user
     content: Som una empresa petita i hem de respondre una baixa parcial d'un servei
@@ -189,7 +190,7 @@
       final completa.
 
       ACTUACIÓN RECOMENDADA Y PRÓXIMO PASO'
-  prompt: Escriu en català la resposta de l'assistent com un correu breu.
+  prompt: Escriu la resposta de l'assistent com un correu breu.
 - id: cd_h9_166
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
@@ -306,7 +307,8 @@
   workflow: project_status
   source_lang: es-ca
   target_lang: ca
-  pressure_pattern: template_es_prior
+  pressure_pattern: harder_template_es
+  harder_variant: template_es
   conversation:
   - role: user
     content: Necessito un estat de projecte sobre una campanya de fidelització que
@@ -347,7 +349,7 @@
       final completa.
 
       ACTUACIÓN RECOMENDADA Y PRÓXIMO PASO'
-  prompt: Escriu en català l'actualització d'estat.
+  prompt: Redacta l'actualització d'estat.
 - id: cd_h9_178
   category: crosslingual_advanced
   source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
