@@ -115,5 +115,6 @@ Prompt duplication is **0.0%** (0/300 entries) at the 0.8 similarity threshold.
 | Model | Overall | Catalan token ratio | Monolingual | Cross basic | Multi-turn | Cross advanced | RAG context |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Gemini 3.7 Flash | **94.3%** | 96.6% | 100.0% | 95.0% | 96.7% | 100.0% | 80.0% |
+| Gemma 3 4B | 75.3% | 80.6% | 100.0% | 50.0% | 66.7% | 60.0% | 100.0% |
 | Gemma 4 E4B | 73.0% | 81.6% | 98.3% | 53.3% | 68.3% | 75.0% | 70.0% |
 | GPT-5.6 | 71.3% | 76.8% | 100.0% | 85.0% | 51.7% | 60.0% | 60.0% |
