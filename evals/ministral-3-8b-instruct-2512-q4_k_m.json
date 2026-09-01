@@ -1,41 +1,41 @@
 {
-  "catalan_token_ratio": 0.7948,
+  "catalan_token_ratio": 0.8055,
   "categories": {
     "crosslingual_advanced": {
-      "pass": 46,
-      "pass_rate": 0.7667,
+      "pass": 45,
+      "pass_rate": 0.75,
       "total": 60
     },
     "crosslingual_basic": {
-      "pass": 46,
-      "pass_rate": 0.7667,
+      "pass": 48,
+      "pass_rate": 0.8,
       "total": 60
     },
     "monolingual": {
-      "pass": 54,
-      "pass_rate": 0.9,
+      "pass": 55,
+      "pass_rate": 0.9167,
       "total": 60
     },
     "multi_turn": {
-      "pass": 41,
-      "pass_rate": 0.6833,
+      "pass": 37,
+      "pass_rate": 0.6167,
       "total": 60
     },
     "rag_context": {
-      "pass": 50,
-      "pass_rate": 0.8333,
+      "pass": 55,
+      "pass_rate": 0.9167,
       "total": 60
     }
   },
-  "created_at": "2026-08-30T19:36:18+02:00",
-  "inference_seconds": null,
+  "created_at": "2026-09-01T17:54:50+02:00",
+  "inference_seconds": 4284.619130961015,
   "model": "Ministral-3-8B-Instruct-2512-Q4_K_M",
   "n": 300,
   "n_api_or_empty_failures": 0,
-  "n_catalan_tokens": 66266,
-  "n_detected_language_tokens": 83373,
-  "n_failures": 63,
-  "n_language_failures": 63,
-  "n_passes": 237,
-  "pass_rate": 0.79
+  "n_catalan_tokens": 60381,
+  "n_detected_language_tokens": 74960,
+  "n_failures": 60,
+  "n_language_failures": 60,
+  "n_passes": 240,
+  "pass_rate": 0.8
 }
