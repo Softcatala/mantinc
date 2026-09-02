@@ -138,7 +138,8 @@ the final prompt alone.
 
 | Model | Overall | Catalan token ratio |
 |---|---:|---:|
-| GPT-5.6 | **71.3% ±5.1** | 76.2% |
+| Gemini 3.7 Flash | **94.3% ±2.7** | 96.9% |
+| GPT-5.6 | 71.3% ±5.1 | 76.2% |
 | Qwen3.8 27B | 10.7% ±3.5 | 99.7% |
 
 `± N` is the Wilson 95% half-width at n=300. Rank differences smaller than
@@ -152,6 +153,7 @@ under. They are not directly comparable across rows unless the configs match.
 
 | Model | Provider | Precision | Temperature | Reasoning effort |
 |---|---|---|---:|---|
+| Gemini 3.7 Flash | LiteLLM (Google) | fp16 | 1.0 | low |
 | GPT-5.6 | OpenAI Chat Completions | fp16 | 0 | none |
 | Qwen3.8 27B | local OpenAI-compatible | Q4_K_M | 0 | none (thinking disabled) |
 
@@ -181,6 +183,7 @@ signal to read.
 
 | Model | Monolingual | Cross basic | Multi-turn | Cross advanced | RAG context |
 |---|---:|---:|---:|---:|---:|
+| Gemini 3.7 Flash | 100.0% ±3.0 | 98.3% ±4.3 | 90.0% ±7.7 | 98.3% ±4.3 | 85.0% ±9.0 |
 | GPT-5.6 | 100.0% ±3.0 | 78.3% ±10.2 | 60.0% ±12.0 | 60.0% ±12.0 | 58.3% ±12.1 |
 | Qwen3.8 27B | 6.7% ±6.7 | 3.3% ±5.2 | 18.3% ±9.7 | 13.3% ±8.6 | 11.7% ±8.2 |
 
