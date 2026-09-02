@@ -36,7 +36,7 @@ LOCAL_NUM_CONCURRENT ?= 4
 GPT_GEN_KWARGS ?= {"temperature":0,"reasoning_effort":"none"}
 GEMINI_GEN_KWARGS ?= {"temperature":1,"reasoning_effort":"low"}
 GEMMA_NO_THINKING_GEN_KWARGS ?= {"temperature":0,"reasoning_effort":"none","chat_template_kwargs":{"enable_thinking":false}}
-LOCAL_GEN_KWARGS ?= {"temperature":0,"max_gen_toks":2048,"reasoning_effort":"none","chat_template_kwargs":{"enable_thinking":false}}
+LOCAL_GEN_KWARGS ?= {"temperature":0,"reasoning_effort":"none","chat_template_kwargs":{"enable_thinking":false}}
 UV_CACHE_DIR ?= .uv-cache
 UV_PYTHON_INSTALL_DIR ?= .uv-python
 UV_RUN ?= UV_CACHE_DIR=$(UV_CACHE_DIR) UV_PYTHON_INSTALL_DIR=$(UV_PYTHON_INSTALL_DIR) uv run
