@@ -39,7 +39,9 @@ GEMMA_NO_THINKING_GEN_KWARGS ?= {"temperature":0,"reasoning_effort":"none","chat
 LOCAL_GEN_KWARGS ?= {"temperature":0,"reasoning_effort":"none","chat_template_kwargs":{"enable_thinking":false}}
 UV_CACHE_DIR ?= .uv-cache
 UV_PYTHON_INSTALL_DIR ?= .uv-python
-UV_RUN ?= UV_CACHE_DIR=$(UV_CACHE_DIR) UV_PYTHON_INSTALL_DIR=$(UV_PYTHON_INSTALL_DIR) uv run
+UV_EXTRAS ?= api
+UV_EXTRA_FLAGS := $(foreach extra,$(UV_EXTRAS),--extra $(extra))
+UV_RUN ?= UV_CACHE_DIR=$(UV_CACHE_DIR) UV_PYTHON_INSTALL_DIR=$(UV_PYTHON_INSTALL_DIR) uv run $(UV_EXTRA_FLAGS)
 PYTHON ?= $(UV_RUN) python
 LM_EVAL ?= $(UV_RUN) lm_eval
 LANGUAGE_ID_MODEL ?= models/lid.176.ftz

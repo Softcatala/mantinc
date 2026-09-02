@@ -70,6 +70,28 @@ in `lm_eval_tasks/catalan_drift/`, and the exported prompt set is read from
 `data/lm_eval/catalan_drift.jsonl`. Run `make export-lm-eval` before the command
 below to build and export the dataset from a clean checkout.
 
+Install the dependencies for the model backend you intend to use:
+
+```bash
+# OpenAI-compatible APIs and LiteLLM providers
+uv sync --extra api
+
+# Local Hugging Face models
+uv sync --extra local
+```
+
+The default installation contains only the common `lm-eval` dependency. The
+`api` and `local` extras keep provider-specific dependencies optional. The
+`dev` dependency group contains the test tooling and is installed by
+`uv sync` by default; use `--no-dev` for a runtime-only environment.
+
+Make targets select the `api` extra by default. Override `UV_EXTRAS` when
+running another backend, for example:
+
+```bash
+make eval-one UV_EXTRAS=local LM_EVAL_MODEL=hf MODEL_ARGS='pretrained=your/model'
+```
+
 Language scoring uses the fastText command-line tool with the `lid.176` model.
 This is intentionally not declared as a Python dependency: the available Python
 packages are bindings, while this task shells out to the `fasttext` executable
@@ -88,7 +110,7 @@ Set `LANGUAGE_ID_MODEL` to use another model path.
 Simple example:
 
 ```bash
-uv run lm_eval \
+uv run --extra api lm_eval \
   --include_path lm_eval_tasks \
   --tasks catalan_drift \
   --model openai-chat-completions \
