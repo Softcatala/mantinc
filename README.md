@@ -108,9 +108,11 @@ full repository license split.
 
 ## Completed evaluations
 
-Results completed by the current 300-item evaluation run:
+Results from the current 300-item evaluation run.
 
-Prompt duplication is **0.0%** (0/300 entries) at the 0.8 similarity threshold.
+Input duplication is **0.0%** (0/300 entries) at Jaccard ≥ 0.8 — and also 0/300 at
+Jaccard ≥ 0.6 — measured over the full model-visible input (conversation +
+retrieved context + prompt), not the final prompt alone.
 
 | Model | Overall | Catalan token ratio | Monolingual | Cross basic | Multi-turn | Cross advanced | RAG context |
 |---|---:|---:|---:|---:|---:|---:|---:|
@@ -121,3 +123,38 @@ Prompt duplication is **0.0%** (0/300 entries) at the 0.8 similarity threshold.
 | GPT-5.6 | 71.3% | 76.8% | 100.0% | 85.0% | 51.7% | 60.0% | 60.0% |
 | EuroLLM 9B | 65.0% | 73.6% | 100.0% | 65.0% | 33.3% | 51.7% | 75.0% |
 | Aya Expanse 8B | 50.0% | 58.0% | 96.7% | 30.0% | 40.0% | 50.0% | 33.3% |
+
+### Run configurations
+
+Numbers above are conditioned on the decoding config each row was evaluated
+under. They are not directly comparable across rows unless the configs match.
+
+| Model | Provider | Precision | Temperature | Reasoning effort |
+|---|---|---|---:|---|
+| Gemini 3.7 Flash | LiteLLM (Google) | fp16 | 1.0 | low |
+| GPT-5.6 | OpenAI Chat Completions | fp16 | 0 | none |
+| Gemma 3 4B | local OpenAI-compatible | Q4_K_M | 0 | none (thinking disabled) |
+| Gemma 4 E4B | local OpenAI-compatible | Q4_K_M | 0 | none (thinking disabled) |
+| Llama 3.1 8B | local OpenAI-compatible | Q4_K_M | 0 | none |
+| EuroLLM 9B | local OpenAI-compatible | Q4_K_M | 0 | none |
+| Aya Expanse 8B | local OpenAI-compatible | Q4_K_M | 0 | none |
+
+### How to read this table
+
+- **Not a capability ranking.** These numbers report drift performance under
+  the specific decoding configs above, not raw model quality. A gap between
+  two rows may reflect the config or the quantization, not the underlying
+  model — Gemini samples at `temperature=1` with `reasoning_effort=low`,
+  GPT-5.6 runs deterministically at `temperature=0` with reasoning off, and
+  every local row uses Q4_K_M weights against a local OpenAI-compatible
+  server.
+- **Sampling noise band.** Five identical-config reruns of GPT-5.6 at
+  `temperature=0` spread across 65–71% overall pass rate — a ~6pp band with
+  nothing changed. Treat rank differences smaller than ~6pp as noise.
+  Reported ranks are point estimates; no paired confidence intervals are
+  computed yet.
+- **What "Overall" measures.** Segment-level Catalan pass rate: each response
+  is split into segments, each segment is classified by fastText, and the
+  item passes iff the non-Catalan token ratio stays under 15%. Thresholds
+  are calibrated against a FLORES-200 slice — see
+  [`benchmark_design.md`](benchmark_design.md).
