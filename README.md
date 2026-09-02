@@ -114,15 +114,19 @@ Input duplication is **0.0%** (0/300 entries) at Jaccard ≥ 0.8 — and also 0/
 Jaccard ≥ 0.6 — measured over the full model-visible input (conversation +
 retrieved context + prompt), not the final prompt alone.
 
-| Model | Overall | Catalan token ratio | Monolingual | Cross basic | Multi-turn | Cross advanced | RAG context |
-|---|---:|---:|---:|---:|---:|---:|---:|
-| Gemini 3.7 Flash | **93.3%** | 96.0% | 100.0% | 95.0% | 91.7% | 98.3% | 81.7% |
-| Gemma 3 4B | 75.3% | 80.6% | 100.0% | 50.0% | 66.7% | 60.0% | 100.0% |
-| Llama 3.1 8B | 74.7% | 79.8% | 100.0% | 55.0% | 68.3% | 83.3% | 66.7% |
-| Gemma 4 E4B | 73.0% | 81.6% | 98.3% | 53.3% | 68.3% | 75.0% | 70.0% |
-| GPT-5.6 | 71.3% | 76.8% | 100.0% | 85.0% | 51.7% | 60.0% | 60.0% |
-| EuroLLM 9B | 65.0% | 73.6% | 100.0% | 65.0% | 33.3% | 51.7% | 75.0% |
-| Aya Expanse 8B | 50.0% | 58.0% | 96.7% | 30.0% | 40.0% | 50.0% | 33.3% |
+| Model | Overall | Catalan token ratio |
+|---|---:|---:|
+| Gemini 3.7 Flash | **93.3% ±2.9** | 96.0% |
+| Gemma 3 4B | 75.3% ±4.9 | 80.6% |
+| Llama 3.1 8B | 74.7% ±4.9 | 79.8% |
+| Gemma 4 E4B | 73.0% ±5.0 | 81.6% |
+| GPT-5.6 | 71.3% ±5.1 | 76.8% |
+| EuroLLM 9B | 65.0% ±5.4 | 73.6% |
+| Aya Expanse 8B | 50.0% ±5.6 | 58.0% |
+
+`± N` is the Wilson 95% half-width at n=300. Rank differences smaller than
+the two rows' combined half-widths are inside the CIs and should not be read
+as capability gaps.
 
 ### Run configurations
 
@@ -158,3 +162,26 @@ under. They are not directly comparable across rows unless the configs match.
   item passes iff the non-Catalan token ratio stays under 15%. Thresholds
   are calibrated against a FLORES-200 slice — see
   [`benchmark_design.md`](benchmark_design.md).
+
+### Per-category diagnostic (do not rank)
+
+These columns are meant to show *where* a model drifts, not to rank models
+against each other. Each cell is one category with n=60, so the Wilson 95%
+half-width sits in a ±3–12pp band depending on the pass rate. Treat any
+per-cell difference smaller than the two cells' combined half-widths as
+noise; the pattern within a row (which categories a model fails on) is the
+signal to read.
+
+| Model | Monolingual | Cross basic | Multi-turn | Cross advanced | RAG context |
+|---|---:|---:|---:|---:|---:|
+| Gemini 3.7 Flash | 100.0% ±3.0 | 95.0% ±6.0 | 91.7% ±7.2 | 98.3% ±4.3 | 81.7% ±9.7 |
+| Gemma 3 4B | 100.0% ±3.0 | 50.0% ±12.3 | 66.7% ±11.6 | 60.0% ±12.0 | 100.0% ±3.0 |
+| Llama 3.1 8B | 100.0% ±3.0 | 55.0% ±12.2 | 68.3% ±11.5 | 83.3% ±9.4 | 66.7% ±11.6 |
+| Gemma 4 E4B | 98.3% ±4.3 | 53.3% ±12.2 | 68.3% ±11.5 | 75.0% ±10.7 | 70.0% ±11.3 |
+| GPT-5.6 | 100.0% ±3.0 | 85.0% ±9.0 | 51.7% ±12.3 | 60.0% ±12.0 | 60.0% ±12.0 |
+| EuroLLM 9B | 100.0% ±3.0 | 65.0% ±11.7 | 33.3% ±11.6 | 51.7% ±12.3 | 75.0% ±10.7 |
+| Aya Expanse 8B | 96.7% ±5.2 | 30.0% ±11.3 | 40.0% ±12.0 | 50.0% ±12.3 | 33.3% ±11.6 |
+
+For a finer diagnostic that cuts across categories, run
+`python3 scripts/pressure_pattern_report.py` — it slices the same 300 items
+by adversarial pressure pattern instead of scenario category.
