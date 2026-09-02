@@ -110,9 +110,9 @@ full repository license split.
 
 Results from the current 300-item evaluation run.
 
-Input duplication is **0.0%** (0/300 entries) at Jaccard ≥ 0.8 — and also 0/300 at
-Jaccard ≥ 0.6 — measured over the full model-visible input (conversation +
-retrieved context + prompt), not the final prompt alone.
+Input duplication is **0.0%** (0/300 entries) at Jaccard ≥ 0.8, measured over
+the full model-visible input (conversation + retrieved context + prompt), not
+the final prompt alone.
 
 | Model | Overall | Catalan token ratio |
 |---|---:|---:|
@@ -123,6 +123,7 @@ retrieved context + prompt), not the final prompt alone.
 | GPT-5.6 | 71.3% ±5.1 | 76.8% |
 | EuroLLM 9B | 65.0% ±5.4 | 73.6% |
 | Aya Expanse 8B | 50.0% ±5.6 | 58.0% |
+| Qwen3.5 9B | 13.0% ±3.8 | 98.6% |
 
 `± N` is the Wilson 95% half-width at n=300. Rank differences smaller than
 the two rows' combined half-widths are inside the CIs and should not be read
@@ -142,6 +143,7 @@ under. They are not directly comparable across rows unless the configs match.
 | Llama 3.1 8B | local OpenAI-compatible | Q4_K_M | 0 | none |
 | EuroLLM 9B | local OpenAI-compatible | Q4_K_M | 0 | none |
 | Aya Expanse 8B | local OpenAI-compatible | Q4_K_M | 0 | none |
+| Qwen3.5 9B | local OpenAI-compatible | Q4_K_M | 0 | none (thinking disabled) |
 
 ### How to read this table
 
@@ -181,6 +183,7 @@ signal to read.
 | GPT-5.6 | 100.0% ±3.0 | 85.0% ±9.0 | 51.7% ±12.3 | 60.0% ±12.0 | 60.0% ±12.0 |
 | EuroLLM 9B | 100.0% ±3.0 | 65.0% ±11.7 | 33.3% ±11.6 | 51.7% ±12.3 | 75.0% ±10.7 |
 | Aya Expanse 8B | 96.7% ±5.2 | 30.0% ±11.3 | 40.0% ±12.0 | 50.0% ±12.3 | 33.3% ±11.6 |
+| Qwen3.5 9B | 53.3% ±12.2 | 11.7% ±8.2 | 0.0% ±3.0 | 0.0% ±3.0 | 0.0% ±3.0 |
 
 For a finer diagnostic that cuts across categories, run
 `python3 scripts/pressure_pattern_report.py` — it slices the same 300 items

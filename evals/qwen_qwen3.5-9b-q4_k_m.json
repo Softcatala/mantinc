@@ -1,5 +1,5 @@
 {
-  "catalan_token_ratio": 0.9732,
+  "catalan_token_ratio": 0.9863,
   "categories": {
     "crosslingual_advanced": {
       "pass": 0,
@@ -7,13 +7,13 @@
       "total": 60
     },
     "crosslingual_basic": {
-      "pass": 15,
-      "pass_rate": 0.25,
+      "pass": 7,
+      "pass_rate": 0.1167,
       "total": 60
     },
     "monolingual": {
-      "pass": 34,
-      "pass_rate": 0.5667,
+      "pass": 32,
+      "pass_rate": 0.5333,
       "total": 60
     },
     "multi_turn": {
@@ -27,15 +27,16 @@
       "total": 60
     }
   },
-  "created_at": "2026-09-01T16:42:21+02:00",
-  "inference_seconds": 9834.301460093993,
+  "created_at": "2026-09-02T08:04:17+02:00",
+  "git_commit": "6cc5b69",
+  "inference_seconds": 17608.470091564,
   "model": "Qwen_Qwen3.5-9B-Q4_K_M",
   "n": 300,
   "n_api_or_empty_failures": 0,
-  "n_catalan_tokens": 11155,
-  "n_detected_language_tokens": 11462,
-  "n_failures": 251,
-  "n_language_failures": 251,
-  "n_passes": 49,
-  "pass_rate": 0.1633
+  "n_catalan_tokens": 11335,
+  "n_detected_language_tokens": 11493,
+  "n_failures": 261,
+  "n_language_failures": 261,
+  "n_passes": 39,
+  "pass_rate": 0.13
 }
