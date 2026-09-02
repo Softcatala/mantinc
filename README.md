@@ -138,14 +138,7 @@ the final prompt alone.
 
 | Model | Overall | Catalan token ratio |
 |---|---:|---:|
-| Gemini 3.7 Flash | **93.3% ±2.9** | 96.0% |
-| Gemma 3 4B | 75.3% ±4.9 | 80.6% |
-| Llama 3.1 8B | 74.7% ±4.9 | 79.8% |
-| Gemma 4 E4B | 73.0% ±5.0 | 81.6% |
-| GPT-5.6 | 71.3% ±5.1 | 76.8% |
-| EuroLLM 9B | 65.0% ±5.4 | 73.6% |
-| Aya Expanse 8B | 50.0% ±5.6 | 58.0% |
-| Qwen3.5 9B | 13.0% ±3.8 | 98.6% |
+| GPT-5.6 | **71.3% ±5.1** | 76.2% |
 
 `± N` is the Wilson 95% half-width at n=300. Rank differences smaller than
 the two rows' combined half-widths are inside the CIs and should not be read
@@ -158,29 +151,17 @@ under. They are not directly comparable across rows unless the configs match.
 
 | Model | Provider | Precision | Temperature | Reasoning effort |
 |---|---|---|---:|---|
-| Gemini 3.7 Flash | LiteLLM (Google) | fp16 | 1.0 | low |
 | GPT-5.6 | OpenAI Chat Completions | fp16 | 0 | none |
-| Gemma 3 4B | local OpenAI-compatible | Q4_K_M | 0 | none (thinking disabled) |
-| Gemma 4 E4B | local OpenAI-compatible | Q4_K_M | 0 | none (thinking disabled) |
-| Llama 3.1 8B | local OpenAI-compatible | Q4_K_M | 0 | none |
-| EuroLLM 9B | local OpenAI-compatible | Q4_K_M | 0 | none |
-| Aya Expanse 8B | local OpenAI-compatible | Q4_K_M | 0 | none |
-| Qwen3.5 9B | local OpenAI-compatible | Q4_K_M | 0 | none (thinking disabled) |
 
 ### How to read this table
 
 - **Not a capability ranking.** These numbers report drift performance under
   the specific decoding configs above, not raw model quality. A gap between
-  two rows may reflect the config or the quantization, not the underlying
-  model — Gemini samples at `temperature=1` with `reasoning_effort=low`,
-  GPT-5.6 runs deterministically at `temperature=0` with reasoning off, and
-  every local row uses Q4_K_M weights against a local OpenAI-compatible
-  server.
-- **Sampling noise band.** Five identical-config reruns of GPT-5.6 at
-  `temperature=0` spread across 65–71% overall pass rate — a ~6pp band with
-  nothing changed. Treat rank differences smaller than ~6pp as noise.
-  Reported ranks are point estimates; no paired confidence intervals are
-  computed yet.
+  rows may reflect decoding configuration or quantization, not the underlying
+  model. Cloud and local rows may use different temperatures, reasoning settings,
+  providers, and precision.
+- **Sampling noise band.** Treat small rank differences as noise. Reported ranks
+  are point estimates; no paired confidence intervals are computed yet.
 - **What "Overall" measures.** Segment-level Catalan pass rate: each response
   is split into segments, each segment is classified by fastText, and the
   item passes iff the non-Catalan token ratio stays under 15%. Thresholds
@@ -198,14 +179,7 @@ signal to read.
 
 | Model | Monolingual | Cross basic | Multi-turn | Cross advanced | RAG context |
 |---|---:|---:|---:|---:|---:|
-| Gemini 3.7 Flash | 100.0% ±3.0 | 95.0% ±6.0 | 91.7% ±7.2 | 98.3% ±4.3 | 81.7% ±9.7 |
-| Gemma 3 4B | 100.0% ±3.0 | 50.0% ±12.3 | 66.7% ±11.6 | 60.0% ±12.0 | 100.0% ±3.0 |
-| Llama 3.1 8B | 100.0% ±3.0 | 55.0% ±12.2 | 68.3% ±11.5 | 83.3% ±9.4 | 66.7% ±11.6 |
-| Gemma 4 E4B | 98.3% ±4.3 | 53.3% ±12.2 | 68.3% ±11.5 | 75.0% ±10.7 | 70.0% ±11.3 |
-| GPT-5.6 | 100.0% ±3.0 | 85.0% ±9.0 | 51.7% ±12.3 | 60.0% ±12.0 | 60.0% ±12.0 |
-| EuroLLM 9B | 100.0% ±3.0 | 65.0% ±11.7 | 33.3% ±11.6 | 51.7% ±12.3 | 75.0% ±10.7 |
-| Aya Expanse 8B | 96.7% ±5.2 | 30.0% ±11.3 | 40.0% ±12.0 | 50.0% ±12.3 | 33.3% ±11.6 |
-| Qwen3.5 9B | 53.3% ±12.2 | 11.7% ±8.2 | 0.0% ±3.0 | 0.0% ±3.0 | 0.0% ±3.0 |
+| GPT-5.6 | 100.0% ±3.0 | 78.3% ±10.2 | 60.0% ±12.0 | 60.0% ±12.0 | 58.3% ±12.1 |
 
 For a finer diagnostic that cuts across categories, run
 `python3 scripts/pressure_pattern_report.py` — it slices the same 300 items
