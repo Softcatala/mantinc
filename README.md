@@ -132,11 +132,16 @@ full repository license split.
 
 Results from the current 300-item evaluation run.
 
+Input duplication is **0.0%** (0/300 entries) at Jaccard ≥ 0.8, measured over
+the full model-visible input (conversation + retrieved context + prompt), not
+the final prompt alone.
+
 | Model | Overall | Catalan token ratio |
 |---|---:|---:|
 | Gemini 3.7 Flash | **94.3% ±2.7** | 96.9% |
 | Qwen3 14B | 86.7% ±3.9 | 90.7% |
 | Gemma 4 26B A4B | 82.7% ±4.3 | 84.9% |
+| ALIA 7B | 81.3% ±4.4 | 71.8% |
 | Gemma 3 12B | 75.0% ±4.9 | 79.0% |
 | GPT-5.6 | 71.3% ±5.1 | 76.2% |
 
@@ -154,6 +159,7 @@ under. They are not directly comparable across rows unless the configs match.
 | Gemini 3.7 Flash | LiteLLM (Google) | fp16 | 1.0 | low |
 | Qwen3 14B | local OpenAI-compatible | Q4_K_M | 0 | none (thinking disabled) |
 | Gemma 4 26B A4B | local OpenAI-compatible | Q4_K_M | 0 | none (thinking disabled) |
+| ALIA 7B | local OpenAI-compatible | Q4_0 | 0 | none (thinking disabled) |
 | Gemma 3 12B | local OpenAI-compatible | Q4_K_M | 0 | none (thinking disabled) |
 | GPT-5.6 | OpenAI Chat Completions | fp16 | 0 | none |
 
@@ -186,6 +192,7 @@ signal to read.
 | Gemini 3.7 Flash | 100.0% ±3.0 | 98.3% ±4.3 | 90.0% ±7.7 | 98.3% ±4.3 | 85.0% ±9.0 |
 | Qwen3 14B | 100.0% ±3.0 | 78.3% ±10.2 | 86.7% ±8.6 | 93.3% ±6.7 | 75.0% ±10.7 |
 | Gemma 4 26B A4B | 100.0% ±3.0 | 86.7% ±8.6 | 58.3% ±12.1 | 80.0% ±10.0 | 88.3% ±8.2 |
+| ALIA 7B | 100.0% ±3.0 | 68.3% ±11.5 | 76.7% ±10.5 | 76.7% ±10.5 | 85.0% ±9.0 |
 | Gemma 3 12B | 98.3% ±4.3 | 76.7% ±10.5 | 61.7% ±11.9 | 70.0% ±11.3 | 68.3% ±11.5 |
 | GPT-5.6 | 100.0% ±3.0 | 78.3% ±10.2 | 60.0% ±12.0 | 60.0% ±12.0 | 58.3% ±12.1 |
 
