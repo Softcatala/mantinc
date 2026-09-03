@@ -50,8 +50,20 @@ FLORES_LANGS ?= cat_Latn spa_Latn eng_Latn
 SKIP_EXPORT ?=
 LIMIT ?=
 EVAL_EXPORT_PREREQ := $(if $(SKIP_EXPORT),,export-lm-eval)
+HF_DATASET_REPO ?= softcatala/mantinc-catalan-drift
+HF_DATASET_FILES ?= data/lm_eval/catalan_drift.jsonl data/lm_eval/catalan_drift_harder.jsonl
+VERSION ?=
 
-.PHONY: build clean-outputs language-id-model flores-corpus export-lm-eval eval eval-one eval-local-openai eval-summary all_ai_local_models
+ifneq (,$(filter publish-dataset,$(MAKECMDGOALS)))
+ifeq (,$(VERSION))
+$(error Set VERSION=vX (e.g. VERSION=v1.1))
+endif
+ifeq (,$(shell printf '%s' '$(VERSION)' | grep -E '^v[0-9]+(\.[0-9]+)*$$'))
+$(error VERSION must match vX format (e.g. v1, v1.1); got: $(VERSION))
+endif
+endif
+
+.PHONY: build clean-outputs language-id-model flores-corpus export-lm-eval eval eval-one eval-local-openai eval-summary all_ai_local_models publish-dataset
 .PHONY: $(CLOUD_EVAL_TARGETS) $(LOCAL_EVAL_TARGETS)
 
 build:
@@ -131,3 +143,16 @@ eval-gemma4-12b:
 
 eval-ministral3-8b:
 	$(MAKE) eval-local-openai DISPLAY_MODEL=Ministral-3-8B-Instruct-2512-Q4_K_M LOCAL_NUM_CONCURRENT=2 GEN_KWARGS='$(LOCAL_GEN_KWARGS)'
+eval-qwen3-14b:
+	$(MAKE) eval-local-openai DISPLAY_MODEL=Qwen_Qwen3-14B-Q4_K_M LOCAL_NUM_CONCURRENT=2
+
+publish-dataset: export-lm-eval
+	@for f in $(HF_DATASET_FILES); do \
+		test -f "$$f" || { echo "Missing file: $$f"; exit 2; }; \
+	done
+	@for f in $(HF_DATASET_FILES); do \
+		echo "Uploading $$f to $(HF_DATASET_REPO)"; \
+		hf upload --repo-type dataset "$(HF_DATASET_REPO)" "$$f" "$$f" --commit-message "Release $(VERSION)" || exit $$?; \
+	done
+	@echo "Tagging $(HF_DATASET_REPO) as $(VERSION)"
+	$(PYTHON) -c "from huggingface_hub import HfApi; HfApi().create_tag('$(HF_DATASET_REPO)', tag='$(VERSION)', repo_type='dataset')"
