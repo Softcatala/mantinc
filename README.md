@@ -142,7 +142,6 @@ the final prompt alone.
 | Qwen3 14B | 86.7% ±3.9 | 90.7% |
 | Gemma 4 26B A4B | 82.7% ±4.3 | 84.9% |
 | GPT-5.6 | 71.3% ±5.1 | 76.2% |
-| Qwen3.8 27B | 10.7% ±3.5 | 99.7% |
 
 `± N` is the Wilson 95% half-width at n=300. Rank differences smaller than
 the two rows' combined half-widths are inside the CIs and should not be read
@@ -159,7 +158,6 @@ under. They are not directly comparable across rows unless the configs match.
 | Qwen3 14B | local OpenAI-compatible | Q4_K_M | 0 | none (thinking disabled) |
 | Gemma 4 26B A4B | local OpenAI-compatible | Q4_K_M | 0 | none (thinking disabled) |
 | GPT-5.6 | OpenAI Chat Completions | fp16 | 0 | none |
-| Qwen3.8 27B | local OpenAI-compatible | Q4_K_M | 0 | none (thinking disabled) |
 
 ### How to read this table
 
@@ -191,7 +189,6 @@ signal to read.
 | Qwen3 14B | 100.0% ±3.0 | 78.3% ±10.2 | 86.7% ±8.6 | 93.3% ±6.7 | 75.0% ±10.7 |
 | Gemma 4 26B A4B | 100.0% ±3.0 | 86.7% ±8.6 | 58.3% ±12.1 | 80.0% ±10.0 | 88.3% ±8.2 |
 | GPT-5.6 | 100.0% ±3.0 | 78.3% ±10.2 | 60.0% ±12.0 | 60.0% ±12.0 | 58.3% ±12.1 |
-| Qwen3.8 27B | 6.7% ±6.7 | 3.3% ±5.2 | 18.3% ±9.7 | 13.3% ±8.6 | 11.7% ±8.2 |
 
 For a finer diagnostic that cuts across categories, run
 `python3 scripts/pressure_pattern_report.py` — it slices the same 300 items
