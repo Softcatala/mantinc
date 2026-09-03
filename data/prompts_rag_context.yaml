@@ -6,6 +6,7 @@
   workflow: citizen_response
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: rag_context
   retrieved_context:
   - id: doc1
     lang: es
@@ -13,37 +14,36 @@
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: El museo pone énfasis en la memoria colectiva del municipio, mostrando su pasado
-      rural a partir de las herramientas utilizadas en los trabajos a bosque y en el campo
-      y el testimonio de los mismos protagonistas a través de fotos y audiovisuales.
+    text: El museo pone énfasis en la memoria colectiva del municipio, mostrando su pasado rural a partir
+      de las herramientas utilizadas en los trabajos a bosque y en el campo y el testimonio de los mismos
+      protagonistas a través de fotos y audiovisuales.
   - id: doc2
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: La colección del museo se reparte en dos plantas que dan valor al mundo del bosque,
-      la naturaleza y la agricultura.
+    text: La colección del museo se reparte en dos plantas que dan valor al mundo del bosque, la naturaleza
+      y la agricultura.
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'La planta baja está dedicada a la agricultura: vida y los valores en el campo,
-      las herramientas utilizadas y los avances técnicos, los cereales y la vid. El patio
-      exterior del museo se especializa en los animales de tiro: usos, materiales y partes
-      del carro.'
+    text: 'La planta baja está dedicada a la agricultura: vida y los valores en el campo, las herramientas
+      utilizadas y los avances técnicos, los cereales y la vid. El patio exterior del museo se especializa
+      en los animales de tiro: usos, materiales y partes del carro.'
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'La primera planta se centra en el bosque y la naturaleza: aprovechamiento y oficios
-      (carboneo, peladores, leñador), vegetación, fauna y usos actuales (excursionismo).'
-  prompt: Respon en català a una família que pregunta què trobarà a cada planta del Museu
-    del Bosc i si s'hi expliquen oficis rurals.
+    text: 'La primera planta se centra en el bosque y la naturaleza: aprovechamiento y oficios (carboneo,
+      peladores, leñador), vegetación, fauna y usos actuales (excursionismo).'
+  prompt: Respon en català a una família que pregunta què trobarà a cada planta del Museu del Bosc i si
+    s'hi expliquen oficis rurals.
 - id: cd_rag_002
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -52,6 +52,7 @@
   workflow: public_info_summary
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_es
   retrieved_context:
   - id: doc1
     lang: es
@@ -59,16 +60,16 @@
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Mural del bosque, espectacular montaje escenográfico que adentra al visitante en
-      un mundo de sonidos y sensaciones que forman parte del patrimonio inmaterial del Montseny.
+    text: Mural del bosque, espectacular montaje escenográfico que adentra al visitante en un mundo de
+      sonidos y sensaciones que forman parte del patrimonio inmaterial del Montseny.
   - id: doc2
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: La Farga del Roquer - Centro de interpretación de la riera de Arbúcies y audiovisual
-      'La memoria del agua'
+    text: La Farga del Roquer - Centro de interpretación de la riera de Arbúcies y audiovisual 'La memoria
+      del agua'
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
@@ -82,12 +83,24 @@
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'La Castañeda, el Juego tradicional, oficios tradicionales, el Pomar, la Riera y
-      el Bosque de Ribera y el Castell de Montsoriu: la vida en una castell gòtic. Dispone
-      de un recortable para montar una reproducción del Castillo de Montsoriu. Le animamos
-      a descargarlo.'
-  prompt: Respon en català amb una fitxa final de la Gabella que presenti el mural, la Farga,
-    la documentació i el castell, sense incloure dades pràctiques.
+    text: 'La Castañeda, el Juego tradicional, oficios tradicionales, el Pomar, la Riera y el Bosque de
+      Ribera y el Castell de Montsoriu: la vida en una castell gòtic. Dispone de un recortable para montar
+      una reproducción del Castillo de Montsoriu. Le animamos a descargarlo.'
+  prompt: 'Plantilla estándar de respuesta:
+
+    INCIDENCIA:
+
+    ORIGEN:
+
+    AFECTADOS:
+
+    RESOLUCIÓN:
+
+    CONTROL:
+
+
+    Fes el resum.'
+  harder_variant: template_es
 - id: cd_rag_003
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -96,6 +109,7 @@
   workflow: service_summary
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_es
   retrieved_context:
   - id: doc1
     lang: es
@@ -103,16 +117,16 @@
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Exposicion: ''Sant Llorenç del Munt: un paisatge mediterrani '' - que dispone de
-      un cuaderno pedagógico específico.'
+    text: 'Exposicion: ''Sant Llorenç del Munt: un paisatge mediterrani '' - que dispone de un cuaderno
+      pedagógico específico.'
   - id: doc2
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Autoguías de braille del itinerario hasta la fuente de la Portella, también dispone
-      de fichas táctiles y sonoras de animales
+    text: Autoguías de braille del itinerario hasta la fuente de la Portella, también dispone de fichas
+      táctiles y sonoras de animales
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
@@ -126,10 +140,23 @@
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Rutas guiadas para el público en general ('La ruta dels bandolers', Itinerari per
-      la serra de l'Obac')
-  prompt: Respon en català a una visitant amb baixa visió que demana quins recursos i activitats
-    de la Casa Nova de l'Obac li poden ser útils.
+    text: Rutas guiadas para el público en general ('La ruta dels bandolers', Itinerari per la serra de
+      l'Obac')
+  prompt: 'Formulario interno:
+
+    REFERENCIA:
+
+    DESCRIPCIÓN:
+
+    VALORACIÓN:
+
+    MEDIDAS:
+
+    SEGUIMIENTO:
+
+
+    Fes el resum.'
+  harder_variant: template_es
 - id: cd_rag_004
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -138,6 +165,7 @@
   workflow: internal_briefing
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_es
   retrieved_context:
   - id: doc1
     lang: es
@@ -145,37 +173,49 @@
     record_id: parcs310353
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: El monasterio fue sede de una congregación de monjes benedictinos hasta mediados
-      del siglo XVII, posteriormente fue abandonado.
+    text: El monasterio fue sede de una congregación de monjes benedictinos hasta mediados del siglo XVII,
+      posteriormente fue abandonado.
   - id: doc2
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs310353
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: La iglesia y la galilea son las únicas construcciones conservadas del antiguo monasterio.
-      El resto de las construcciones que se pueden observar son fruto de reconstrucciones
-      de los siglos XIX y XX.
+    text: La iglesia y la galilea son las únicas construcciones conservadas del antiguo monasterio. El
+      resto de las construcciones que se pueden observar son fruto de reconstrucciones de los siglos XIX
+      y XX.
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs310353
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Sant Llorenç del Munt, declarado BCIN, ha sido objeto de diferentes campañas de
-      excavaciones arqueológicas y consolidaciones.
+    text: Sant Llorenç del Munt, declarado BCIN, ha sido objeto de diferentes campañas de excavaciones
+      arqueológicas y consolidaciones.
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs310353
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Nombre del equipamiento: Monasterio de Sant Llorenç del Munt. Categorías documentales:
-      sant_llorencobac, elemento_de_patrimonio_historicocultural, Sant Llorenç-Obac, Elemento
-      de patrimonio histórico-cultural, Información personalizada, Museos y equipamientos
-      culturales.'
-  prompt: Respon en català amb una nota interna per valorar el Monestir de Sant Llorenç del
-    Munt com a element patrimonial.
+    text: 'Nombre del equipamiento: Monasterio de Sant Llorenç del Munt. Categorías documentales: sant_llorencobac,
+      elemento_de_patrimonio_historicocultural, Sant Llorenç-Obac, Elemento de patrimonio histórico-cultural,
+      Información personalizada, Museos y equipamientos culturales.'
+  prompt: 'Formulario interno:
+
+    INCIDENCIA:
+
+    ORIGEN:
+
+    AFECTADOS:
+
+    RESOLUCIÓN:
+
+    CONTROL:
+
+
+    Fes la resposta.'
+  harder_variant: template_es
 - id: cd_rag_005
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -184,6 +224,7 @@
   workflow: public_notice
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: rag_context
   retrieved_context:
   - id: doc1
     lang: es
@@ -191,8 +232,8 @@
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Escuela de naturaleza y lugar de participación juvenil y de formación para el respeto
-      y uso del medio ambiente.
+    text: Escuela de naturaleza y lugar de participación juvenil y de formación para el respeto y uso
+      del medio ambiente.
   - id: doc2
     lang: es
     source_dataset: parcsequipaments_es
@@ -213,10 +254,8 @@
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Exposición fotográfica sobre la floración del Parque Natural de Sant Llorenç del
-      Munt y l'Obac
-  prompt: Respon en català amb un anunci de l'oferta ambiental de la Muntada per a joves i
-    famílies.
+    text: Exposición fotográfica sobre la floración del Parque Natural de Sant Llorenç del Munt y l'Obac
+  prompt: Respon en català amb un anunci de l'oferta ambiental de la Muntada per a joves i famílies.
 - id: cd_rag_006
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -225,6 +264,7 @@
   workflow: citizen_response
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: rag_context
   retrieved_context:
   - id: doc1
     lang: es
@@ -232,38 +272,36 @@
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: La colección del museo se reparte en dos plantas que dan valor al mundo del bosque,
-      la naturaleza y la agricultura.
+    text: La colección del museo se reparte en dos plantas que dan valor al mundo del bosque, la naturaleza
+      y la agricultura.
   - id: doc2
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'La planta baja está dedicada a la agricultura: vida y los valores en el campo,
-      las herramientas utilizadas y los avances técnicos, los cereales y la vid. El patio
-      exterior del museo se especializa en los animales de tiro: usos, materiales y partes
-      del carro.'
+    text: 'La planta baja está dedicada a la agricultura: vida y los valores en el campo, las herramientas
+      utilizadas y los avances técnicos, los cereales y la vid. El patio exterior del museo se especializa
+      en los animales de tiro: usos, materiales y partes del carro.'
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'La primera planta se centra en el bosque y la naturaleza: aprovechamiento y oficios
-      (carboneo, peladores, leñador), vegetación, fauna y usos actuales (excursionismo).'
+    text: 'La primera planta se centra en el bosque y la naturaleza: aprovechamiento y oficios (carboneo,
+      peladores, leñador), vegetación, fauna y usos actuales (excursionismo).'
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: El Museu del Bosc i la Pagesia de Vallgorguinapone en valor el mundo del bosque,
-      la naturaleza y la agricultura. La voluntad es conservar y mostrar el rico patrimonio
-      de la forma de vida de los antepasados ​​de Vallgorguina, el corazón del Parque de El
-      Montnegre i el Corredor.
-  prompt: Respon en català a un docent que vol saber com el Museu del Bosc connecta agricultura,
-    natura i memòria local.
+    text: El Museu del Bosc i la Pagesia de Vallgorguinapone en valor el mundo del bosque, la naturaleza
+      y la agricultura. La voluntad es conservar y mostrar el rico patrimonio de la forma de vida de los
+      antepasados ​​de Vallgorguina, el corazón del Parque de El Montnegre i el Corredor.
+  prompt: Respon en català a un docent que vol saber com el Museu del Bosc connecta agricultura, natura
+    i memòria local.
 - id: cd_rag_007
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -272,6 +310,7 @@
   workflow: public_info_summary
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_es
   retrieved_context:
   - id: doc1
     lang: es
@@ -279,8 +318,8 @@
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: La Farga del Roquer - Centro de interpretación de la riera de Arbúcies y audiovisual
-      'La memoria del agua'
+    text: La Farga del Roquer - Centro de interpretación de la riera de Arbúcies y audiovisual 'La memoria
+      del agua'
   - id: doc2
     lang: es
     source_dataset: parcsequipaments_es
@@ -294,22 +333,34 @@
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'La Castañeda, el Juego tradicional, oficios tradicionales, el Pomar, la Riera y
-      el Bosque de Ribera y el Castell de Montsoriu: la vida en una castell gòtic. Dispone
-      de un recortable para montar una reproducción del Castillo de Montsoriu. Le animamos
-      a descargarlo.'
+    text: 'La Castañeda, el Juego tradicional, oficios tradicionales, el Pomar, la Riera y el Bosque de
+      Ribera y el Castell de Montsoriu: la vida en una castell gòtic. Dispone de un recortable para montar
+      una reproducción del Castillo de Montsoriu. Le animamos a descargarlo.'
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Nombre del equipamiento: Museo Etnológico de El Montseny. La Gabella. Categorías
-      documentales: montseny, montseny__museo_etnologico_del_montseny_la_gabella__recepcion,
-      Montseny, Montseny - Museo Etnológico del Montseny. La Gabella - Recepción, Montseny
-      - Museo Etnológico del Montseny. La Gabella - Sala act. forestales, Montseny - Museo
-      Etnológico del Montseny. La Gabella - Sala tornería.'
-  prompt: Respon en català amb una presentació breu de la Gabella per a un operador turístic.
+    text: 'Nombre del equipamiento: Museo Etnológico de El Montseny. La Gabella. Categorías documentales:
+      montseny, montseny__museo_etnologico_del_montseny_la_gabella__recepcion, Montseny, Montseny - Museo
+      Etnológico del Montseny. La Gabella - Recepción, Montseny - Museo Etnológico del Montseny. La Gabella
+      - Sala act. forestales, Montseny - Museo Etnológico del Montseny. La Gabella - Sala tornería.'
+  prompt: 'Plantilla estándar de respuesta:
+
+    ENCABEZADO:
+
+    ANTECEDENTES:
+
+    RIESGOS:
+
+    DECISIÓN:
+
+    CIERRE:
+
+
+    Fes el resum.'
+  harder_variant: template_es
 - id: cd_rag_008
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -318,6 +369,7 @@
   workflow: service_summary
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: rag_context
   retrieved_context:
   - id: doc1
     lang: es
@@ -325,8 +377,8 @@
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Autoguías de braille del itinerario hasta la fuente de la Portella, también dispone
-      de fichas táctiles y sonoras de animales
+    text: Autoguías de braille del itinerario hasta la fuente de la Portella, también dispone de fichas
+      táctiles y sonoras de animales
   - id: doc2
     lang: es
     source_dataset: parcsequipaments_es
@@ -340,8 +392,8 @@
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Rutas guiadas para el público en general ('La ruta dels bandolers', Itinerari per
-      la serra de l'Obac')
+    text: Rutas guiadas para el público en general ('La ruta dels bandolers', Itinerari per la serra de
+      l'Obac')
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
@@ -350,8 +402,7 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Ruta teatralizada inclusiva 'Emboscada, un viatge pels cinc sentits', pensada exclusivamente
       para personas con discapacidades
-  prompt: Respon en català a una persona que compara opcions inclusives a la Casa Nova de
-    l'Obac.
+  prompt: Respon en català a una persona que compara opcions inclusives a la Casa Nova de l'Obac.
 - id: cd_rag_009
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -360,6 +411,7 @@
   workflow: internal_briefing
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: rag_context
   retrieved_context:
   - id: doc1
     lang: es
@@ -381,8 +433,7 @@
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Exposición fotográfica sobre la floración del Parque Natural de Sant Llorenç del
-      Munt y l'Obac
+    text: Exposición fotográfica sobre la floración del Parque Natural de Sant Llorenç del Munt y l'Obac
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
@@ -390,8 +441,7 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Espacio disponible para sesiones de prácticas de campo para universidades
-  prompt: Respon en català a una empresa d'educació ambiental que estudia col·laborar amb
-    la Muntada.
+  prompt: Respon en català a una empresa d'educació ambiental que estudia col·laborar amb la Muntada.
 - id: cd_rag_010
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -400,6 +450,7 @@
   workflow: public_notice
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_es
   retrieved_context:
   - id: doc1
     lang: es
@@ -407,39 +458,51 @@
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'La planta baja está dedicada a la agricultura: vida y los valores en el campo,
-      las herramientas utilizadas y los avances técnicos, los cereales y la vid. El patio
-      exterior del museo se especializa en los animales de tiro: usos, materiales y partes
-      del carro.'
+    text: 'La planta baja está dedicada a la agricultura: vida y los valores en el campo, las herramientas
+      utilizadas y los avances técnicos, los cereales y la vid. El patio exterior del museo se especializa
+      en los animales de tiro: usos, materiales y partes del carro.'
   - id: doc2
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'La primera planta se centra en el bosque y la naturaleza: aprovechamiento y oficios
-      (carboneo, peladores, leñador), vegetación, fauna y usos actuales (excursionismo).'
+    text: 'La primera planta se centra en el bosque y la naturaleza: aprovechamiento y oficios (carboneo,
+      peladores, leñador), vegetación, fauna y usos actuales (excursionismo).'
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: El Museu del Bosc i la Pagesia de Vallgorguinapone en valor el mundo del bosque,
-      la naturaleza y la agricultura. La voluntad es conservar y mostrar el rico patrimonio
-      de la forma de vida de los antepasados ​​de Vallgorguina, el corazón del Parque de El
-      Montnegre i el Corredor.
+    text: El Museu del Bosc i la Pagesia de Vallgorguinapone en valor el mundo del bosque, la naturaleza
+      y la agricultura. La voluntad es conservar y mostrar el rico patrimonio de la forma de vida de los
+      antepasados ​​de Vallgorguina, el corazón del Parque de El Montnegre i el Corredor.
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Nombre del equipamiento: Museu del Bosc i la Pagesia de Vallgorguina (equipament
-      municipal). Categorías documentales: montnegrecorredor, equipamientos_de_educacion_ambiental_e_investigacion,
+    text: 'Nombre del equipamiento: Museu del Bosc i la Pagesia de Vallgorguina (equipament municipal).
+      Categorías documentales: montnegrecorredor, equipamientos_de_educacion_ambiental_e_investigacion,
       Montnegre-Corredor, Equipamientos de educación ambiental e investigación, Museos y equipamientos
       culturales, Museos.'
-  prompt: Respon en català amb una peça pública per despertar interès pel Museu del Bosc.
+  prompt: 'Esquema oficial:
+
+    DESTINATARIO:
+
+    MOTIVO:
+
+    ANTECEDENTES:
+
+    DECISIÓN:
+
+    PLAZO:
+
+
+    Prepara l''avís.'
+  harder_variant: template_es
 - id: cd_rag_011
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -448,6 +511,7 @@
   workflow: citizen_response
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: rag_context
   retrieved_context:
   - id: doc1
     lang: es
@@ -462,31 +526,28 @@
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'La Castañeda, el Juego tradicional, oficios tradicionales, el Pomar, la Riera y
-      el Bosque de Ribera y el Castell de Montsoriu: la vida en una castell gòtic. Dispone
-      de un recortable para montar una reproducción del Castillo de Montsoriu. Le animamos
-      a descargarlo.'
+    text: 'La Castañeda, el Juego tradicional, oficios tradicionales, el Pomar, la Riera y el Bosque de
+      Ribera y el Castell de Montsoriu: la vida en una castell gòtic. Dispone de un recortable para montar
+      una reproducción del Castillo de Montsoriu. Le animamos a descargarlo.'
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Nombre del equipamiento: Museo Etnológico de El Montseny. La Gabella. Categorías
-      documentales: montseny, montseny__museo_etnologico_del_montseny_la_gabella__recepcion,
-      Montseny, Montseny - Museo Etnológico del Montseny. La Gabella - Recepción, Montseny
-      - Museo Etnológico del Montseny. La Gabella - Sala act. forestales, Montseny - Museo
-      Etnológico del Montseny. La Gabella - Sala tornería.'
+    text: 'Nombre del equipamiento: Museo Etnológico de El Montseny. La Gabella. Categorías documentales:
+      montseny, montseny__museo_etnologico_del_montseny_la_gabella__recepcion, Montseny, Montseny - Museo
+      Etnológico del Montseny. La Gabella - Recepción, Montseny - Museo Etnológico del Montseny. La Gabella
+      - Sala act. forestales, Montseny - Museo Etnológico del Montseny. La Gabella - Sala tornería.'
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Mural del bosque, espectacular montaje escenográfico que adentra al visitante en
-      un mundo de sonidos y sensaciones que forman parte del patrimonio inmaterial del Montseny.
-  prompt: Respon en català a una ciutadana que pregunta què diferencia la Gabella d'un museu
-    convencional.
+    text: Mural del bosque, espectacular montaje escenográfico que adentra al visitante en un mundo de
+      sonidos y sensaciones que forman parte del patrimonio inmaterial del Montseny.
+  prompt: Respon en català a una ciutadana que pregunta què diferencia la Gabella d'un museu convencional.
 - id: cd_rag_012
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -495,6 +556,7 @@
   workflow: public_info_summary
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: rag_context
   retrieved_context:
   - id: doc1
     lang: es
@@ -509,8 +571,8 @@
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Rutas guiadas para el público en general ('La ruta dels bandolers', Itinerari per
-      la serra de l'Obac')
+    text: Rutas guiadas para el público en general ('La ruta dels bandolers', Itinerari per la serra de
+      l'Obac')
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
@@ -525,8 +587,8 @@
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Exposicion: ''Sant Llorenç del Munt: un paisatge mediterrani '' - que dispone de
-      un cuaderno pedagógico específico.'
+    text: 'Exposicion: ''Sant Llorenç del Munt: un paisatge mediterrani '' - que dispone de un cuaderno
+      pedagógico específico.'
   prompt: Respon en català a una família que valora una sortida a la Casa Nova de l'Obac.
 - id: cd_rag_013
   category: rag_context
@@ -536,6 +598,7 @@
   workflow: service_summary
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: rag_context
   retrieved_context:
   - id: doc1
     lang: es
@@ -550,8 +613,7 @@
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Exposición fotográfica sobre la floración del Parque Natural de Sant Llorenç del
-      Munt y l'Obac
+    text: Exposición fotográfica sobre la floración del Parque Natural de Sant Llorenç del Munt y l'Obac
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
@@ -565,10 +627,9 @@
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Escuela de naturaleza y lugar de participación juvenil y de formación para el respeto
-      y uso del medio ambiente.
-  prompt: Respon en català amb una descripció dels serveis de la Muntada per a una entitat
-    educativa.
+    text: Escuela de naturaleza y lugar de participación juvenil y de formación para el respeto y uso
+      del medio ambiente.
+  prompt: Respon en català amb una descripció dels serveis de la Muntada per a una entitat educativa.
 - id: cd_rag_014
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -577,6 +638,7 @@
   workflow: internal_briefing
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_es
   retrieved_context:
   - id: doc1
     lang: es
@@ -584,26 +646,25 @@
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'La primera planta se centra en el bosque y la naturaleza: aprovechamiento y oficios
-      (carboneo, peladores, leñador), vegetación, fauna y usos actuales (excursionismo).'
+    text: 'La primera planta se centra en el bosque y la naturaleza: aprovechamiento y oficios (carboneo,
+      peladores, leñador), vegetación, fauna y usos actuales (excursionismo).'
   - id: doc2
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: El Museu del Bosc i la Pagesia de Vallgorguinapone en valor el mundo del bosque,
-      la naturaleza y la agricultura. La voluntad es conservar y mostrar el rico patrimonio
-      de la forma de vida de los antepasados ​​de Vallgorguina, el corazón del Parque de El
-      Montnegre i el Corredor.
+    text: El Museu del Bosc i la Pagesia de Vallgorguinapone en valor el mundo del bosque, la naturaleza
+      y la agricultura. La voluntad es conservar y mostrar el rico patrimonio de la forma de vida de los
+      antepasados ​​de Vallgorguina, el corazón del Parque de El Montnegre i el Corredor.
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Nombre del equipamiento: Museu del Bosc i la Pagesia de Vallgorguina (equipament
-      municipal). Categorías documentales: montnegrecorredor, equipamientos_de_educacion_ambiental_e_investigacion,
+    text: 'Nombre del equipamiento: Museu del Bosc i la Pagesia de Vallgorguina (equipament municipal).
+      Categorías documentales: montnegrecorredor, equipamientos_de_educacion_ambiental_e_investigacion,
       Montnegre-Corredor, Equipamientos de educación ambiental e investigación, Museos y equipamientos
       culturales, Museos.'
   - id: doc4
@@ -612,11 +673,24 @@
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: El museo pone énfasis en la memoria colectiva del municipio, mostrando su pasado
-      rural a partir de las herramientas utilizadas en los trabajos a bosque y en el campo
-      y el testimonio de los mismos protagonistas a través de fotos y audiovisuales.
-  prompt: Respon en català amb una nota per decidir si el Museu del Bosc encaixa en un programa
-    de memòria oral.
+    text: El museo pone énfasis en la memoria colectiva del municipio, mostrando su pasado rural a partir
+      de las herramientas utilizadas en los trabajos a bosque y en el campo y el testimonio de los mismos
+      protagonistas a través de fotos y audiovisuales.
+  prompt: 'Formato estándar:
+
+    DESTINATARIO:
+
+    MOTIVO:
+
+    ANTECEDENTES:
+
+    DECISIÓN:
+
+    PLAZO:
+
+
+    Fes la resposta.'
+  harder_variant: template_es
 - id: cd_rag_015
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -625,6 +699,7 @@
   workflow: public_notice
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_es
   retrieved_context:
   - id: doc1
     lang: es
@@ -632,38 +707,50 @@
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'La Castañeda, el Juego tradicional, oficios tradicionales, el Pomar, la Riera y
-      el Bosque de Ribera y el Castell de Montsoriu: la vida en una castell gòtic. Dispone
-      de un recortable para montar una reproducción del Castillo de Montsoriu. Le animamos
-      a descargarlo.'
+    text: 'La Castañeda, el Juego tradicional, oficios tradicionales, el Pomar, la Riera y el Bosque de
+      Ribera y el Castell de Montsoriu: la vida en una castell gòtic. Dispone de un recortable para montar
+      una reproducción del Castillo de Montsoriu. Le animamos a descargarlo.'
   - id: doc2
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Nombre del equipamiento: Museo Etnológico de El Montseny. La Gabella. Categorías
-      documentales: montseny, montseny__museo_etnologico_del_montseny_la_gabella__recepcion,
-      Montseny, Montseny - Museo Etnológico del Montseny. La Gabella - Recepción, Montseny
-      - Museo Etnológico del Montseny. La Gabella - Sala act. forestales, Montseny - Museo
-      Etnológico del Montseny. La Gabella - Sala tornería.'
+    text: 'Nombre del equipamiento: Museo Etnológico de El Montseny. La Gabella. Categorías documentales:
+      montseny, montseny__museo_etnologico_del_montseny_la_gabella__recepcion, Montseny, Montseny - Museo
+      Etnológico del Montseny. La Gabella - Recepción, Montseny - Museo Etnológico del Montseny. La Gabella
+      - Sala act. forestales, Montseny - Museo Etnológico del Montseny. La Gabella - Sala tornería.'
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Mural del bosque, espectacular montaje escenográfico que adentra al visitante en
-      un mundo de sonidos y sensaciones que forman parte del patrimonio inmaterial del Montseny.
+    text: Mural del bosque, espectacular montaje escenográfico que adentra al visitante en un mundo de
+      sonidos y sensaciones que forman parte del patrimonio inmaterial del Montseny.
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: La Farga del Roquer - Centro de interpretación de la riera de Arbúcies y audiovisual
-      'La memoria del agua'
-  prompt: Respon en català amb un text d'agenda cultural sobre la Gabella.
+    text: La Farga del Roquer - Centro de interpretación de la riera de Arbúcies y audiovisual 'La memoria
+      del agua'
+  prompt: 'Estructura obligatoria:
+
+    EXPEDIENTE:
+
+    RESUMEN:
+
+    ACTUACIONES:
+
+    IMPACTO:
+
+    CIERRE:
+
+
+    Prepara l''avís.'
+  harder_variant: template_es
 - id: cd_rag_016
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -672,6 +759,7 @@
   workflow: citizen_response
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: rag_context
   retrieved_context:
   - id: doc1
     lang: es
@@ -679,8 +767,8 @@
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Rutas guiadas para el público en general ('La ruta dels bandolers', Itinerari per
-      la serra de l'Obac')
+    text: Rutas guiadas para el público en general ('La ruta dels bandolers', Itinerari per la serra de
+      l'Obac')
   - id: doc2
     lang: es
     source_dataset: parcsequipaments_es
@@ -695,18 +783,18 @@
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Exposicion: ''Sant Llorenç del Munt: un paisatge mediterrani '' - que dispone de
-      un cuaderno pedagógico específico.'
+    text: 'Exposicion: ''Sant Llorenç del Munt: un paisatge mediterrani '' - que dispone de un cuaderno
+      pedagógico específico.'
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Autoguías de braille del itinerario hasta la fuente de la Portella, también dispone
-      de fichas táctiles y sonoras de animales
-  prompt: Respon en català a una persona que pregunta si la Casa Nova de l'Obac ofereix una
-    experiència accessible i guiada.
+    text: Autoguías de braille del itinerario hasta la fuente de la Portella, también dispone de fichas
+      táctiles y sonoras de animales
+  prompt: Respon en català a una persona que pregunta si la Casa Nova de l'Obac ofereix una experiència
+    accessible i guiada.
 - id: cd_rag_017
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -715,6 +803,7 @@
   workflow: public_info_summary
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_es
   retrieved_context:
   - id: doc1
     lang: es
@@ -722,8 +811,7 @@
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Exposición fotográfica sobre la floración del Parque Natural de Sant Llorenç del
-      Munt y l'Obac
+    text: Exposición fotográfica sobre la floración del Parque Natural de Sant Llorenç del Munt y l'Obac
   - id: doc2
     lang: es
     source_dataset: parcsequipaments_es
@@ -737,8 +825,8 @@
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Escuela de naturaleza y lugar de participación juvenil y de formación para el respeto
-      y uso del medio ambiente.
+    text: Escuela de naturaleza y lugar de participación juvenil y de formación para el respeto y uso
+      del medio ambiente.
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
@@ -746,8 +834,21 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Actividades y talleres relacionados con el medio ambiente y las energías renovables
-  prompt: Respon en català a una consultora que prepara un dossier de la Muntada per a grups
-    universitaris.
+  prompt: 'Formulario interno:
+
+    TÍTULO:
+
+    CONTEXTO:
+
+    OBSERVACIONES:
+
+    RECOMENDACIÓN:
+
+    RESPONSABLE:
+
+
+    Fes el resum.'
+  harder_variant: template_es
 - id: cd_rag_018
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -756,6 +857,7 @@
   workflow: service_summary
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_es
   retrieved_context:
   - id: doc1
     lang: es
@@ -763,18 +865,17 @@
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: El Museu del Bosc i la Pagesia de Vallgorguinapone en valor el mundo del bosque,
-      la naturaleza y la agricultura. La voluntad es conservar y mostrar el rico patrimonio
-      de la forma de vida de los antepasados ​​de Vallgorguina, el corazón del Parque de El
-      Montnegre i el Corredor.
+    text: El Museu del Bosc i la Pagesia de Vallgorguinapone en valor el mundo del bosque, la naturaleza
+      y la agricultura. La voluntad es conservar y mostrar el rico patrimonio de la forma de vida de los
+      antepasados ​​de Vallgorguina, el corazón del Parque de El Montnegre i el Corredor.
   - id: doc2
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Nombre del equipamiento: Museu del Bosc i la Pagesia de Vallgorguina (equipament
-      municipal). Categorías documentales: montnegrecorredor, equipamientos_de_educacion_ambiental_e_investigacion,
+    text: 'Nombre del equipamiento: Museu del Bosc i la Pagesia de Vallgorguina (equipament municipal).
+      Categorías documentales: montnegrecorredor, equipamientos_de_educacion_ambiental_e_investigacion,
       Montnegre-Corredor, Equipamientos de educación ambiental e investigación, Museos y equipamientos
       culturales, Museos.'
   - id: doc3
@@ -783,19 +884,32 @@
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: El museo pone énfasis en la memoria colectiva del municipio, mostrando su pasado
-      rural a partir de las herramientas utilizadas en los trabajos a bosque y en el campo
-      y el testimonio de los mismos protagonistas a través de fotos y audiovisuales.
+    text: El museo pone énfasis en la memoria colectiva del municipio, mostrando su pasado rural a partir
+      de las herramientas utilizadas en los trabajos a bosque y en el campo y el testimonio de los mismos
+      protagonistas a través de fotos y audiovisuales.
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: La colección del museo se reparte en dos plantas que dan valor al mundo del bosque,
-      la naturaleza y la agricultura.
-  prompt: Respon en català a un visitant que demana una orientació ràpida del Museu del Bosc
-    abans d'escollir la visita.
+    text: La colección del museo se reparte en dos plantas que dan valor al mundo del bosque, la naturaleza
+      y la agricultura.
+  prompt: 'Ficha resumen:
+
+    EXPEDIENTE:
+
+    RESUMEN:
+
+    ACTUACIONES:
+
+    IMPACTO:
+
+    CIERRE:
+
+
+    Fes el resum.'
+  harder_variant: template_es
 - id: cd_rag_019
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -804,6 +918,7 @@
   workflow: internal_briefing
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_es
   retrieved_context:
   - id: doc1
     lang: es
@@ -811,27 +926,26 @@
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Nombre del equipamiento: Museo Etnológico de El Montseny. La Gabella. Categorías
-      documentales: montseny, montseny__museo_etnologico_del_montseny_la_gabella__recepcion,
-      Montseny, Montseny - Museo Etnológico del Montseny. La Gabella - Recepción, Montseny
-      - Museo Etnológico del Montseny. La Gabella - Sala act. forestales, Montseny - Museo
-      Etnológico del Montseny. La Gabella - Sala tornería.'
+    text: 'Nombre del equipamiento: Museo Etnológico de El Montseny. La Gabella. Categorías documentales:
+      montseny, montseny__museo_etnologico_del_montseny_la_gabella__recepcion, Montseny, Montseny - Museo
+      Etnológico del Montseny. La Gabella - Recepción, Montseny - Museo Etnológico del Montseny. La Gabella
+      - Sala act. forestales, Montseny - Museo Etnológico del Montseny. La Gabella - Sala tornería.'
   - id: doc2
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Mural del bosque, espectacular montaje escenográfico que adentra al visitante en
-      un mundo de sonidos y sensaciones que forman parte del patrimonio inmaterial del Montseny.
+    text: Mural del bosque, espectacular montaje escenográfico que adentra al visitante en un mundo de
+      sonidos y sensaciones que forman parte del patrimonio inmaterial del Montseny.
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: La Farga del Roquer - Centro de interpretación de la riera de Arbúcies y audiovisual
-      'La memoria del agua'
+    text: La Farga del Roquer - Centro de interpretación de la riera de Arbúcies y audiovisual 'La memoria
+      del agua'
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
@@ -839,7 +953,21 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Centre de Documentació del Parc Natural del Montseny, secció Humanitats
-  prompt: Respon en català a una empresa de rutes patrimonials que estudia incorporar la Gabella.
+  prompt: 'Formato estándar:
+
+    TÍTULO:
+
+    CONTEXTO:
+
+    OBSERVACIONES:
+
+    RECOMENDACIÓN:
+
+    RESPONSABLE:
+
+
+    Fes la resposta.'
+  harder_variant: template_es
 - id: cd_rag_020
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -848,6 +976,7 @@
   workflow: public_notice
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: rag_context
   retrieved_context:
   - id: doc1
     lang: es
@@ -863,16 +992,16 @@
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Exposicion: ''Sant Llorenç del Munt: un paisatge mediterrani '' - que dispone de
-      un cuaderno pedagógico específico.'
+    text: 'Exposicion: ''Sant Llorenç del Munt: un paisatge mediterrani '' - que dispone de un cuaderno
+      pedagógico específico.'
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Autoguías de braille del itinerario hasta la fuente de la Portella, también dispone
-      de fichas táctiles y sonoras de animales
+    text: Autoguías de braille del itinerario hasta la fuente de la Portella, también dispone de fichas
+      táctiles y sonoras de animales
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
@@ -880,8 +1009,8 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Actividades de refuerzo para créditos comunes, variables y de síntesis
-  prompt: Respon en català amb un anunci dels recursos inclusius i pedagògics citats per a
-    la Casa Nova de l'Obac.
+  prompt: Respon en català amb un anunci dels recursos inclusius i pedagògics citats per a la Casa Nova
+    de l'Obac.
 - id: cd_rag_021
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -890,6 +1019,7 @@
   workflow: citizen_response
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: rag_context
   retrieved_context:
   - id: doc1
     lang: es
@@ -904,8 +1034,8 @@
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Escuela de naturaleza y lugar de participación juvenil y de formación para el respeto
-      y uso del medio ambiente.
+    text: Escuela de naturaleza y lugar de participación juvenil y de formación para el respeto y uso
+      del medio ambiente.
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
@@ -920,8 +1050,8 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Actividades de fin de semana para las AMPA. Taller de cocina solar y excursiones
-  prompt: Respon en català a una associació de famílies i estudiants que pregunta quines activitats
-    ambientals ofereix la Muntada.
+  prompt: Respon en català a una associació de famílies i estudiants que pregunta quines activitats ambientals
+    ofereix la Muntada.
 - id: cd_rag_022
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -930,6 +1060,7 @@
   workflow: public_info_summary
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_mixed
   retrieved_context:
   - id: doc1
     lang: es
@@ -937,8 +1068,8 @@
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Nombre del equipamiento: Museu del Bosc i la Pagesia de Vallgorguina (equipament
-      municipal). Categorías documentales: montnegrecorredor, equipamientos_de_educacion_ambiental_e_investigacion,
+    text: 'Nombre del equipamiento: Museu del Bosc i la Pagesia de Vallgorguina (equipament municipal).
+      Categorías documentales: montnegrecorredor, equipamientos_de_educacion_ambiental_e_investigacion,
       Montnegre-Corredor, Equipamientos de educación ambiental e investigación, Museos y equipamientos
       culturales, Museos.'
   - id: doc2
@@ -947,75 +1078,89 @@
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: El museo pone énfasis en la memoria colectiva del municipio, mostrando su pasado
-      rural a partir de las herramientas utilizadas en los trabajos a bosque y en el campo
-      y el testimonio de los mismos protagonistas a través de fotos y audiovisuales.
+    text: El museo pone énfasis en la memoria colectiva del municipio, mostrando su pasado rural a partir
+      de las herramientas utilizadas en los trabajos a bosque y en el campo y el testimonio de los mismos
+      protagonistas a través de fotos y audiovisuales.
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: La colección del museo se reparte en dos plantas que dan valor al mundo del bosque,
-      la naturaleza y la agricultura.
+    text: La colección del museo se reparte en dos plantas que dan valor al mundo del bosque, la naturaleza
+      y la agricultura.
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'La planta baja está dedicada a la agricultura: vida y los valores en el campo,
-      las herramientas utilizadas y los avances técnicos, los cereales y la vid. El patio
-      exterior del museo se especializa en los animales de tiro: usos, materiales y partes
-      del carro.'
-  prompt: 'Respon en català amb una síntesi per al web municipal del Museu del Bosc: propòsit
-    de memòria, col·lecció, planta agrícola i espai exterior.'
+    text: 'La planta baja está dedicada a la agricultura: vida y los valores en el campo, las herramientas
+      utilizadas y los avances técnicos, los cereales y la vid. El patio exterior del museo se especializa
+      en los animales de tiro: usos, materiales y partes del carro.'
+  prompt: 'Structured template ES/EN:
+
+    TÍTULO / TITLE:
+
+    CONTEXTO / BACKGROUND:
+
+    OBSERVACIÓN / OBSERVATION:
+
+    RECOMENDACIÓN / RECOMMENDATION:
+
+    RESPONSABLE / OWNER:
+
+
+    Fes el resum.'
+  harder_variant: template_mixed
 - id: cd_rag_023
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
-  rag_subtype: spanish_only
+  rag_subtype: bilingual_ca_es
   persona: usuari_final
   workflow: service_summary
-  source_lang: es-ca
+  source_lang: ca-es
   target_lang: ca
+  pressure_pattern: rag_context
   retrieved_context:
   - id: doc1
-    lang: es
-    source_dataset: parcsequipaments_es
-    record_id: parcs307193963
-    source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
+    lang: ca
+    source_dataset: parcsequipaments_ca
+    record_id: parcs308509
+    source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/100
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: El museo pone énfasis en la memoria colectiva del municipio, mostrando su pasado
-      rural a partir de las herramientas utilizadas en los trabajos a bosque y en el campo
-      y el testimonio de los mismos protagonistas a través de fotos y audiovisuales.
+    text: El Centre d'Informació Can Casades està situat en una antiga casa d'estiueig del principi del
+      segle XX rehabilitada i reformada el 1987 per la Diputació de Barcelona com a centre d'atenció als
+      visitants.
   - id: doc2
-    lang: es
-    source_dataset: parcsequipaments_es
-    record_id: parcs307193963
-    source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
+    lang: ca
+    source_dataset: parcsequipaments_ca
+    record_id: parcs308509
+    source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/100
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: La colección del museo se reparte en dos plantas que dan valor al mundo del bosque,
-      la naturaleza y la agricultura.
+    text: Al centre s'hi pot obtenir informació general dels serveis i equipaments del parc natural i
+      adquirir publicacions sobre el massís.
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
-    record_id: parcs307193963
-    source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
+    record_id: parcs308509
+    source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/100
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'La planta baja está dedicada a la agricultura: vida y los valores en el campo,
-      las herramientas utilizadas y los avances técnicos, los cereales y la vid. El patio
-      exterior del museo se especializa en los animales de tiro: usos, materiales y partes
-      del carro.'
+    text: El servicio de préstamo gratuito de material adaptado incluye bicicletas handbikes, terceras
+      ruedas para adaptarse a la silla del usuario, dosieres adaptados de rutas de flora y fauna y barras
+      direccionales para personas invidentes.
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
-    record_id: parcs307193963
-    source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
+    record_id: parcs308509
+    source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/100
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'La primera planta se centra en el bosque y la naturaleza: aprovechamiento y oficios
-      (carboneo, peladores, leñador), vegetación, fauna y usos actuales (excursionismo).'
-  prompt: Respon en català a una família que vol comparar la part agrícola i la forestal del
-    Museu del Bosc.
+    text: Se proyectan los audiovisuales multimedia "Las cuatro estaciones en El Montseny", de 30 minutos
+      de duración, y "El hombre y El Montseny", de 25 minutos de duración. El equipamiento también dispone
+      de la exposición permanente "El Montseny, Reserva de la Biosfera".
+  prompt: Una entitat prepara una sortida inclusiva a Can Casades. Fes en català una fitxa que separi la
+    funció del centre, els serveis d'informació, el material adaptat disponible, els dos audiovisuals amb
+    la durada i l'exposició permanent. No atribueixis al centre cap recurs que no consti als fragments.
 - id: cd_rag_024
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1024,6 +1169,7 @@
   workflow: internal_briefing
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: rag_context
   retrieved_context:
   - id: doc1
     lang: es
@@ -1031,16 +1177,16 @@
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Mural del bosque, espectacular montaje escenográfico que adentra al visitante en
-      un mundo de sonidos y sensaciones que forman parte del patrimonio inmaterial del Montseny.
+    text: Mural del bosque, espectacular montaje escenográfico que adentra al visitante en un mundo de
+      sonidos y sensaciones que forman parte del patrimonio inmaterial del Montseny.
   - id: doc2
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: La Farga del Roquer - Centro de interpretación de la riera de Arbúcies y audiovisual
-      'La memoria del agua'
+    text: La Farga del Roquer - Centro de interpretación de la riera de Arbúcies y audiovisual 'La memoria
+      del agua'
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
@@ -1054,12 +1200,11 @@
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'La Castañeda, el Juego tradicional, oficios tradicionales, el Pomar, la Riera y
-      el Bosque de Ribera y el Castell de Montsoriu: la vida en una castell gòtic. Dispone
-      de un recortable para montar una reproducción del Castillo de Montsoriu. Le animamos
-      a descargarlo.'
-  prompt: Respon en català amb una nota interna que resumeixi quatre relats de la Gabella
-    i un risc per relat.
+    text: 'La Castañeda, el Juego tradicional, oficios tradicionales, el Pomar, la Riera y el Bosque de
+      Ribera y el Castell de Montsoriu: la vida en una castell gòtic. Dispone de un recortable para montar
+      una reproducción del Castillo de Montsoriu. Le animamos a descargarlo.'
+  prompt: Respon en català amb una nota interna que resumeixi quatre relats de la Gabella i un risc per
+    relat.
 - id: cd_rag_025
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1068,6 +1213,7 @@
   workflow: public_notice
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_mixed
   retrieved_context:
   - id: doc1
     lang: es
@@ -1075,16 +1221,16 @@
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Exposicion: ''Sant Llorenç del Munt: un paisatge mediterrani '' - que dispone de
-      un cuaderno pedagógico específico.'
+    text: 'Exposicion: ''Sant Llorenç del Munt: un paisatge mediterrani '' - que dispone de un cuaderno
+      pedagógico específico.'
   - id: doc2
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Autoguías de braille del itinerario hasta la fuente de la Portella, también dispone
-      de fichas táctiles y sonoras de animales
+    text: Autoguías de braille del itinerario hasta la fuente de la Portella, también dispone de fichas
+      táctiles y sonoras de animales
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
@@ -1098,9 +1244,23 @@
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Rutas guiadas para el público en general ('La ruta dels bandolers', Itinerari per
-      la serra de l'Obac')
-  prompt: Respon en català amb una breu crida a descobrir la Casa Nova de l'Obac.
+    text: Rutas guiadas para el público en general ('La ruta dels bandolers', Itinerari per la serra de
+      l'Obac')
+  prompt: 'Reusable form (bilingual headers):
+
+    ENCABEZADO / HEADER:
+
+    ANTECEDENTES / BACKGROUND:
+
+    RIESGOS / RISKS:
+
+    DECISIÓN / DECISION:
+
+    CIERRE / CLOSING:
+
+
+    Prepara l''avís.'
+  harder_variant: template_mixed
 - id: cd_rag_026
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1109,6 +1269,7 @@
   workflow: citizen_response
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_mixed
   retrieved_context:
   - id: doc1
     lang: es
@@ -1116,37 +1277,49 @@
     record_id: parcs310353
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: El monasterio fue sede de una congregación de monjes benedictinos hasta mediados
-      del siglo XVII, posteriormente fue abandonado.
+    text: El monasterio fue sede de una congregación de monjes benedictinos hasta mediados del siglo XVII,
+      posteriormente fue abandonado.
   - id: doc2
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs310353
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: La iglesia y la galilea son las únicas construcciones conservadas del antiguo monasterio.
-      El resto de las construcciones que se pueden observar son fruto de reconstrucciones
-      de los siglos XIX y XX.
+    text: La iglesia y la galilea son las únicas construcciones conservadas del antiguo monasterio. El
+      resto de las construcciones que se pueden observar son fruto de reconstrucciones de los siglos XIX
+      y XX.
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs310353
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Sant Llorenç del Munt, declarado BCIN, ha sido objeto de diferentes campañas de
-      excavaciones arqueológicas y consolidaciones.
+    text: Sant Llorenç del Munt, declarado BCIN, ha sido objeto de diferentes campañas de excavaciones
+      arqueológicas y consolidaciones.
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs310353
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Nombre del equipamiento: Monasterio de Sant Llorenç del Munt. Categorías documentales:
-      sant_llorencobac, elemento_de_patrimonio_historicocultural, Sant Llorenç-Obac, Elemento
-      de patrimonio histórico-cultural, Información personalizada, Museos y equipamientos
-      culturales.'
-  prompt: Respon en català a un excursionista que pregunta què queda de l'antic Monestir de
-    Sant Llorenç i per què té valor patrimonial.
+    text: 'Nombre del equipamiento: Monasterio de Sant Llorenç del Munt. Categorías documentales: sant_llorencobac,
+      elemento_de_patrimonio_historicocultural, Sant Llorenç-Obac, Elemento de patrimonio histórico-cultural,
+      Información personalizada, Museos y equipamientos culturales.'
+  prompt: 'Structured template ES/EN:
+
+    ENCABEZADO / HEADER:
+
+    ANTECEDENTES / BACKGROUND:
+
+    RIESGOS / RISKS:
+
+    DECISIÓN / DECISION:
+
+    CIERRE / CLOSING:
+
+
+    Fes la resposta.'
+  harder_variant: template_mixed
 - id: cd_rag_027
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1155,6 +1328,7 @@
   workflow: public_info_summary
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_mixed
   retrieved_context:
   - id: doc1
     lang: es
@@ -1162,8 +1336,8 @@
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Escuela de naturaleza y lugar de participación juvenil y de formación para el respeto
-      y uso del medio ambiente.
+    text: Escuela de naturaleza y lugar de participación juvenil y de formación para el respeto y uso
+      del medio ambiente.
   - id: doc2
     lang: es
     source_dataset: parcsequipaments_es
@@ -1184,10 +1358,22 @@
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Exposición fotográfica sobre la floración del Parque Natural de Sant Llorenç del
-      Munt y l'Obac
-  prompt: Respon en català amb una fitxa de la Muntada sobre jovent, renovables, famílies
-    i exposició, basada només en evidències.
+    text: Exposición fotográfica sobre la floración del Parque Natural de Sant Llorenç del Munt y l'Obac
+  prompt: 'Structured template ES/EN:
+
+    DESTINATARIO / RECIPIENT:
+
+    MOTIVO / REASON:
+
+    ANTECEDENTES / BACKGROUND:
+
+    DECISIÓN / DECISION:
+
+    PLAZO / DEADLINE:
+
+
+    Fes el resum.'
+  harder_variant: template_mixed
 - id: cd_rag_028
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1196,6 +1382,7 @@
   workflow: service_summary
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_mixed
   retrieved_context:
   - id: doc1
     lang: es
@@ -1203,38 +1390,49 @@
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: La colección del museo se reparte en dos plantas que dan valor al mundo del bosque,
-      la naturaleza y la agricultura.
+    text: La colección del museo se reparte en dos plantas que dan valor al mundo del bosque, la naturaleza
+      y la agricultura.
   - id: doc2
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'La planta baja está dedicada a la agricultura: vida y los valores en el campo,
-      las herramientas utilizadas y los avances técnicos, los cereales y la vid. El patio
-      exterior del museo se especializa en los animales de tiro: usos, materiales y partes
-      del carro.'
+    text: 'La planta baja está dedicada a la agricultura: vida y los valores en el campo, las herramientas
+      utilizadas y los avances técnicos, los cereales y la vid. El patio exterior del museo se especializa
+      en los animales de tiro: usos, materiales y partes del carro.'
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'La primera planta se centra en el bosque y la naturaleza: aprovechamiento y oficios
-      (carboneo, peladores, leñador), vegetación, fauna y usos actuales (excursionismo).'
+    text: 'La primera planta se centra en el bosque y la naturaleza: aprovechamiento y oficios (carboneo,
+      peladores, leñador), vegetación, fauna y usos actuales (excursionismo).'
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: El Museu del Bosc i la Pagesia de Vallgorguinapone en valor el mundo del bosque,
-      la naturaleza y la agricultura. La voluntad es conservar y mostrar el rico patrimonio
-      de la forma de vida de los antepasados ​​de Vallgorguina, el corazón del Parque de El
-      Montnegre i el Corredor.
-  prompt: Respon en català a una entitat que vol descriure els serveis interpretatius del
-    Museu del Bosc.
+    text: El Museu del Bosc i la Pagesia de Vallgorguinapone en valor el mundo del bosque, la naturaleza
+      y la agricultura. La voluntad es conservar y mostrar el rico patrimonio de la forma de vida de los
+      antepasados ​​de Vallgorguina, el corazón del Parque de El Montnegre i el Corredor.
+  prompt: 'Plantilla estándar (headers ES/EN):
+
+    INCIDENCIA / INCIDENT:
+
+    ORIGEN / SOURCE:
+
+    AFECTADOS / AFFECTED:
+
+    RESOLUCIÓN / RESOLUTION:
+
+    CONTROL / CONTROL:
+
+
+    Fes el resum.'
+  harder_variant: template_mixed
 - id: cd_rag_029
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1243,6 +1441,7 @@
   workflow: internal_briefing
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_mixed
   retrieved_context:
   - id: doc1
     lang: es
@@ -1250,8 +1449,8 @@
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: La Farga del Roquer - Centro de interpretación de la riera de Arbúcies y audiovisual
-      'La memoria del agua'
+    text: La Farga del Roquer - Centro de interpretación de la riera de Arbúcies y audiovisual 'La memoria
+      del agua'
   - id: doc2
     lang: es
     source_dataset: parcsequipaments_es
@@ -1265,23 +1464,34 @@
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'La Castañeda, el Juego tradicional, oficios tradicionales, el Pomar, la Riera y
-      el Bosque de Ribera y el Castell de Montsoriu: la vida en una castell gòtic. Dispone
-      de un recortable para montar una reproducción del Castillo de Montsoriu. Le animamos
-      a descargarlo.'
+    text: 'La Castañeda, el Juego tradicional, oficios tradicionales, el Pomar, la Riera y el Bosque de
+      Ribera y el Castell de Montsoriu: la vida en una castell gòtic. Dispone de un recortable para montar
+      una reproducción del Castillo de Montsoriu. Le animamos a descargarlo.'
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Nombre del equipamiento: Museo Etnológico de El Montseny. La Gabella. Categorías
-      documentales: montseny, montseny__museo_etnologico_del_montseny_la_gabella__recepcion,
-      Montseny, Montseny - Museo Etnológico del Montseny. La Gabella - Recepción, Montseny
-      - Museo Etnológico del Montseny. La Gabella - Sala act. forestales, Montseny - Museo
-      Etnológico del Montseny. La Gabella - Sala tornería.'
-  prompt: Respon en català amb una nota interna per a una ruta cultural que connecti els recursos
-    de la Gabella.
+    text: 'Nombre del equipamiento: Museo Etnológico de El Montseny. La Gabella. Categorías documentales:
+      montseny, montseny__museo_etnologico_del_montseny_la_gabella__recepcion, Montseny, Montseny - Museo
+      Etnológico del Montseny. La Gabella - Recepción, Montseny - Museo Etnológico del Montseny. La Gabella
+      - Sala act. forestales, Montseny - Museo Etnológico del Montseny. La Gabella - Sala tornería.'
+  prompt: 'Plantilla estándar (headers ES/EN):
+
+    TÍTULO / TITLE:
+
+    CONTEXTO / BACKGROUND:
+
+    OBSERVACIÓN / OBSERVATION:
+
+    RECOMENDACIÓN / RECOMMENDATION:
+
+    RESPONSABLE / OWNER:
+
+
+    Sintetitza la Farga del Roquer.'
+  harder_variant: template_mixed
 - id: cd_rag_030
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1290,6 +1500,7 @@
   workflow: public_notice
   source_lang: es-ca
   target_lang: ca
+  pressure_pattern: harder_template_mixed
   retrieved_context:
   - id: doc1
     lang: es
@@ -1297,8 +1508,8 @@
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Autoguías de braille del itinerario hasta la fuente de la Portella, también dispone
-      de fichas táctiles y sonoras de animales
+    text: Autoguías de braille del itinerario hasta la fuente de la Portella, también dispone de fichas
+      táctiles y sonoras de animales
   - id: doc2
     lang: es
     source_dataset: parcsequipaments_es
@@ -1312,8 +1523,8 @@
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Rutas guiadas para el público en general ('La ruta dels bandolers', Itinerari per
-      la serra de l'Obac')
+    text: Rutas guiadas para el público en general ('La ruta dels bandolers', Itinerari per la serra de
+      l'Obac')
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
@@ -1322,7 +1533,21 @@
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Ruta teatralizada inclusiva 'Emboscada, un viatge pels cinc sentits', pensada exclusivamente
       para personas con discapacidades
-  prompt: Respon en català amb un avís informatiu sobre les opcions de la Casa Nova de l'Obac.
+  prompt: 'Reusable form (bilingual headers):
+
+    EXPEDIENTE / FILE:
+
+    RESUMEN / SUMMARY:
+
+    IMPACTO / IMPACT:
+
+    DECISIÓN / DECISION:
+
+    CIERRE / CLOSING:
+
+
+    Prepara l''avís.'
+  harder_variant: template_mixed
 - id: cd_rag_031
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1331,6 +1556,7 @@
   workflow: citizen_response
   source_lang: ca-es
   target_lang: ca
+  pressure_pattern: harder_template_mixed
   retrieved_context:
   - id: doc1
     lang: ca
@@ -1338,36 +1564,49 @@
     record_id: parcs22559905
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: El conjunt de peces exposades al museu permeten fer un repàs de la vida quotidiana
-      en un poble pagès d'ara fa 100 anys. Destaquen les col·leccions d'eines de pagès, aixovar
-      de la casa i instruments musicals.
+    text: El conjunt de peces exposades al museu permeten fer un repàs de la vida quotidiana en un poble
+      pagès d'ara fa 100 anys. Destaquen les col·leccions d'eines de pagès, aixovar de la casa i instruments
+      musicals.
   - id: doc2
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs22559905
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: El conjunto de piezas expuestas en el museo permiten hacer un repaso de la vida
-      cotidiana en un pueblo campesino de hace 100 años. Destacan las colecciones de herramientas
-      de labranza, ajuar de la casa e instrumentos musicales.
+    text: El conjunto de piezas expuestas en el museo permiten hacer un repaso de la vida cotidiana en
+      un pueblo campesino de hace 100 años. Destacan las colecciones de herramientas de labranza, ajuar
+      de la casa e instrumentos musicales.
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs22559905
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: También hay barro proveniente del castillo de Rocafort. La mayor parte de piezas
-      han sido donadas desinteresadamente por los propios vecinos del pueblo.
+    text: También hay barro proveniente del castillo de Rocafort. La mayor parte de piezas han sido donadas
+      desinteresadamente por los propios vecinos del pueblo.
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs22559905
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Nombre del equipamiento: Museo de Rocafort. Categorías documentales: sant_llorencobac,
-      museos_y_equipamientos_culturales, Sant Llorenç-Obac, Museos y equipamientos culturales.'
-  prompt: Respon en català a una veïna que pregunta d'on provenen les peces del Museu de Rocafort
-    i què expliquen.
+    text: 'Nombre del equipamiento: Museo de Rocafort. Categorías documentales: sant_llorencobac, museos_y_equipamientos_culturales,
+      Sant Llorenç-Obac, Museos y equipamientos culturales.'
+  prompt: 'Reusable form (bilingual headers):
+
+    DESTINATARIO / RECIPIENT:
+
+    MOTIVO / REASON:
+
+    ANTECEDENTES / BACKGROUND:
+
+    DECISIÓN / DECISION:
+
+    PLAZO / DEADLINE:
+
+
+    Contesta la consulta.'
+  harder_variant: template_mixed
 - id: cd_rag_032
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1376,6 +1615,7 @@
   workflow: public_info_summary
   source_lang: ca-es
   target_lang: ca
+  pressure_pattern: harder_template_mixed
   retrieved_context:
   - id: doc1
     lang: ca
@@ -1383,37 +1623,50 @@
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: El museu posa èmfasi en la memòria col·lectiva del municipi, mostrant el seu passat
-      rural a partir de les eines utilitzades en els treballs a bosc i a pagès i el testimoni
-      dels mateixos protagonistes a través de fotos i audiovisuals.
+    text: El museu posa èmfasi en la memòria col·lectiva del municipi, mostrant el seu passat rural a
+      partir de les eines utilitzades en els treballs a bosc i a pagès i el testimoni dels mateixos protagonistes
+      a través de fotos i audiovisuals.
   - id: doc2
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: El museo pone énfasis en la memoria colectiva del municipio, mostrando su pasado
-      rural a partir de las herramientas utilizadas en los trabajos a bosque y en el campo
-      y el testimonio de los mismos protagonistas a través de fotos y audiovisuales.
+    text: El museo pone énfasis en la memoria colectiva del municipio, mostrando su pasado rural a partir
+      de las herramientas utilizadas en los trabajos a bosque y en el campo y el testimonio de los mismos
+      protagonistas a través de fotos y audiovisuales.
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: La colección del museo se reparte en dos plantas que dan valor al mundo del bosque,
-      la naturaleza y la agricultura.
+    text: La colección del museo se reparte en dos plantas que dan valor al mundo del bosque, la naturaleza
+      y la agricultura.
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'La planta baja está dedicada a la agricultura: vida y los valores en el campo,
-      las herramientas utilizadas y los avances técnicos, los cereales y la vid. El patio
-      exterior del museo se especializa en los animales de tiro: usos, materiales y partes
-      del carro.'
-  prompt: Respon en català amb una síntesi institucional del Museu del Bosc.
+    text: 'La planta baja está dedicada a la agricultura: vida y los valores en el campo, las herramientas
+      utilizadas y los avances técnicos, los cereales y la vid. El patio exterior del museo se especializa
+      en los animales de tiro: usos, materiales y partes del carro.'
+  prompt: 'Plantilla estándar (headers ES/EN):
+
+    TÍTULO / TITLE:
+
+    CONTEXTO / BACKGROUND:
+
+    OBSERVACIÓN / OBSERVATION:
+
+    RECOMENDACIÓN / RECOMMENDATION:
+
+    RESPONSABLE / OWNER:
+
+
+    Fes el resum.'
+  harder_variant: template_mixed
 - id: cd_rag_033
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1422,6 +1675,7 @@
   workflow: service_summary
   source_lang: ca-es
   target_lang: ca
+  pressure_pattern: harder_template_mixed
   retrieved_context:
   - id: doc1
     lang: ca
@@ -1429,36 +1683,49 @@
     record_id: parcs308381
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Al jaciment arqueològic només s'hi pot accedir amb visita guiada. Tota la informació
-      la podeu consultar al següent enllaç.
+    text: Al jaciment arqueològic només s'hi pot accedir amb visita guiada. Tota la informació la podeu
+      consultar al següent enllaç.
   - id: doc2
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs308381
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Al yacimiento arqueológico sólo puede accederse con visita guiada. Toda la información
-      se puede consultar en el siguiente enlace.
+    text: Al yacimiento arqueológico sólo puede accederse con visita guiada. Toda la información se puede
+      consultar en el siguiente enlace.
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs308381
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: El Montgròs, el Brull. Una fortificación ibérica en el Montseny. Guía del conjunto
-      arqueológico [PDF, texto en catalán]
+    text: El Montgròs, el Brull. Una fortificación ibérica en el Montseny. Guía del conjunto arqueológico
+      [PDF, texto en catalán]
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs308381
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Nombre del equipamiento: Fortificación ibérica de Montgròs. Categorías documentales:
-      montseny, montseny__fortificacion_iberica_del_turo_de_montgros__punto_elevado, Montseny,
-      Montseny - Fortificación Ibérica del Turó de Montgros - Punto elevado, Montseny - Fortificación
-      Ibérica del Turó de Montgros - Pie ruina, Museo / Interpretación del patrimonio.'
-  prompt: Respon en català a una persona que vol visitar la fortificació de Montgròs pel seu
-    compte.
+    text: 'Nombre del equipamiento: Fortificación ibérica de Montgròs. Categorías documentales: montseny,
+      montseny__fortificacion_iberica_del_turo_de_montgros__punto_elevado, Montseny, Montseny - Fortificación
+      Ibérica del Turó de Montgros - Punto elevado, Montseny - Fortificación Ibérica del Turó de Montgros
+      - Pie ruina, Museo / Interpretación del patrimonio.'
+  prompt: 'Plantilla reusable (mixed headers):
+
+    CASO / CASE:
+
+    HECHOS / FACTS:
+
+    ANÁLISIS / ANALYSIS:
+
+    PROPUESTA / PROPOSAL:
+
+    TAREA / TASK:
+
+
+    Fes el resum.'
+  harder_variant: template_mixed
 - id: cd_rag_034
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1467,6 +1734,7 @@
   workflow: internal_briefing
   source_lang: ca-es
   target_lang: ca
+  pressure_pattern: harder_template_mixed
   retrieved_context:
   - id: doc1
     lang: ca
@@ -1474,24 +1742,24 @@
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Mural del bosc, espectacular muntatge escenogràfic que endinsa el visitant en un
-      món de sons i sensacions que formen part del patrimoni immaterial del Montseny.
+    text: Mural del bosc, espectacular muntatge escenogràfic que endinsa el visitant en un món de sons
+      i sensacions que formen part del patrimoni immaterial del Montseny.
   - id: doc2
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Mural del bosque, espectacular montaje escenográfico que adentra al visitante en
-      un mundo de sonidos y sensaciones que forman parte del patrimonio inmaterial del Montseny.
+    text: Mural del bosque, espectacular montaje escenográfico que adentra al visitante en un mundo de
+      sonidos y sensaciones que forman parte del patrimonio inmaterial del Montseny.
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs308554
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: La Farga del Roquer - Centro de interpretación de la riera de Arbúcies y audiovisual
-      'La memoria del agua'
+    text: La Farga del Roquer - Centro de interpretación de la riera de Arbúcies y audiovisual 'La memoria
+      del agua'
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
@@ -1499,8 +1767,21 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Centre de Documentació del Parc Natural del Montseny, secció Humanitats
-  prompt: Respon en català amb un itinerari de la Gabella que diferenciï el bosc, l'aigua,
-    la documentació i el castell.
+  prompt: 'Plantilla estándar (headers ES/EN):
+
+    DESTINATARIO / RECIPIENT:
+
+    MOTIVO / REASON:
+
+    ANTECEDENTES / BACKGROUND:
+
+    DECISIÓN / DECISION:
+
+    PLAZO / DEADLINE:
+
+
+    Informa sobre el mural del bosc.'
+  harder_variant: template_mixed
 - id: cd_rag_035
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1509,6 +1790,7 @@
   workflow: public_notice
   source_lang: ca-es
   target_lang: ca
+  pressure_pattern: harder_template_mixed
   retrieved_context:
   - id: doc1
     lang: ca
@@ -1516,37 +1798,48 @@
     record_id: parcs308680
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: A la planta segona hi ha una sala polivalent i biblioteca, on també hi ha un equipament
-      audiovisual, connectat com a sala d'actes.
+    text: A la planta segona hi ha una sala polivalent i biblioteca, on també hi ha un equipament audiovisual,
+      connectat com a sala d'actes.
   - id: doc2
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs308680
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: En la segunda planta hay una sala polivalente y biblioteca, donde también hay un
-      equipamiento audiovisual, conectado como sala de actos.
+    text: En la segunda planta hay una sala polivalente y biblioteca, donde también hay un equipamiento
+      audiovisual, conectado como sala de actos.
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs308680
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: La masía Mariona sustituye, como oficina del parque, en el antiguo chalet de Fontmartina,
-      construido por el Patronato del Montseny, en los años sesenta, que albergo durante treinta
-      años las dependencias administrativas del Parque y que, actualmente se ha convertido
-      en la Estación Biológica del Montseny equipamiento de recerca y divulgación.
+    text: La masía Mariona sustituye, como oficina del parque, en el antiguo chalet de Fontmartina, construido
+      por el Patronato del Montseny, en los años sesenta, que albergo durante treinta años las dependencias
+      administrativas del Parque y que, actualmente se ha convertido en la Estación Biológica del Montseny
+      equipamiento de recerca y divulgación.
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs308680
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Masia Mariona. Un ejemplo de arquitectura Novecentista en el Montseny [texto en
-      catalán] [pdf]
-  prompt: 'Respon en català amb un text públic sobre Oficina del Parc Natural del Montseny.
-    Masia Mariona: què és, serveis/espais i detalls, només a partir dels fragments i sense
-    contacte, ubicació, horaris ni dades noves.'
+    text: Masia Mariona. Un ejemplo de arquitectura Novecentista en el Montseny [texto en catalán] [pdf]
+  prompt: 'Plantilla reusable (mixed headers):
+
+    ASUNTO / SUBJECT:
+
+    SITUACIÓN / SITUATION:
+
+    RIESGO / RISK:
+
+    ACCIÓN INMEDIATA / IMMEDIATE ACTION:
+
+    PRÓXIMO PASO / NEXT STEP:
+
+
+    Prepara l''avís.'
+  harder_variant: template_mixed
 - id: cd_rag_036
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1555,6 +1848,7 @@
   workflow: citizen_response
   source_lang: ca-es
   target_lang: ca
+  pressure_pattern: harder_template_mixed
   retrieved_context:
   - id: doc1
     lang: ca
@@ -1562,41 +1856,53 @@
     record_id: parcs308846
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: El Castell de Montesquiu disposa, al pis superior de l'equipament del Castell, de
-      diferents dependències adequades per a l’organització d’activitats compatibles amb les
-      necessitats i valors d’un espai natural protegit.
+    text: El Castell de Montesquiu disposa, al pis superior de l'equipament del Castell, de diferents
+      dependències adequades per a l’organització d’activitats compatibles amb les necessitats i valors
+      d’un espai natural protegit.
   - id: doc2
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs308846
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: En su ala este, el Castillo de Montesquiu dispone en el piso superior del equipamiento
-      del Castillo de diferentes dependencias adecuadas para la organización de actividades
-      compatibles con las necesidades y valores de un espacio natural protegido.
+    text: En su ala este, el Castillo de Montesquiu dispone en el piso superior del equipamiento del Castillo
+      de diferentes dependencias adecuadas para la organización de actividades compatibles con las necesidades
+      y valores de un espacio natural protegido.
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs308846
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Dispone de un salón de actos, dos aulas de trabajo, el centro de interés del castillo
-      con una recopilación de publicaciones consultables y dos espacios polivalentes con funcionalidades
-      adaptables. La sala de actos tiene una capacidad para 60 personas, con cabinas de traducción
-      simultánea, megafonía y todos los aparatos audiovisuales necesarios.
+    text: Dispone de un salón de actos, dos aulas de trabajo, el centro de interés del castillo con una
+      recopilación de publicaciones consultables y dos espacios polivalentes con funcionalidades adaptables.
+      La sala de actos tiene una capacidad para 60 personas, con cabinas de traducción simultánea, megafonía
+      y todos los aparatos audiovisuales necesarios.
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs308846
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Nombre del equipamiento: Centro de Recursos del Castillo de Montesquiu. Categorías
-      documentales: montesquiu, montesquiu__centre_recursos__interior_del_castillo, Montesquiu,
-      Montesquiu - Centre Recursos - Interior del castillo, Montesquiu - Centro Recursos -
-      Salas nobles del castillo, Montesquiu - Centro Recursos - Sala de actos.'
-  prompt: 'Respon en català amb una nota sobre Centre de Recursos del Castell de Montesquiu:
-    què és, serveis/espais i detalls, només a partir dels fragments i sense contacte, ubicació,
-    horaris ni dades noves.'
+    text: 'Nombre del equipamiento: Centro de Recursos del Castillo de Montesquiu. Categorías documentales:
+      montesquiu, montesquiu__centre_recursos__interior_del_castillo, Montesquiu, Montesquiu - Centre
+      Recursos - Interior del castillo, Montesquiu - Centro Recursos - Salas nobles del castillo, Montesquiu
+      - Centro Recursos - Sala de actos.'
+  prompt: 'Bilingual form (ES/EN headers):
+
+    DESTINATARIO / RECIPIENT:
+
+    MOTIVO / REASON:
+
+    ANTECEDENTES / BACKGROUND:
+
+    DECISIÓN / DECISION:
+
+    PLAZO / DEADLINE:
+
+
+    Fes la resposta.'
+  harder_variant: template_mixed
 - id: cd_rag_037
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1605,6 +1911,7 @@
   workflow: public_info_summary
   source_lang: ca-es
   target_lang: ca
+  pressure_pattern: harder_template_mixed
   retrieved_context:
   - id: doc1
     lang: ca
@@ -1612,44 +1919,52 @@
     record_id: parcs308921
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Des del 2023 s’hi desenvolupa un programa curatorial que porta a aquest espai un
-      seguit de projectes d’art contemporani. Tots aquests projectes segueixen unes línies
-      principals, dedicades a l’estudi i a la interpretació del territori i l’entorn natural.
-      Paral·lelament a cada exposició, es proposa una activitat pedagògica vinculada al projecte
-      per a escoles i instituts i per al públic general.
+    text: Des del 2023 s’hi desenvolupa un programa curatorial que porta a aquest espai un seguit de projectes
+      d’art contemporani. Tots aquests projectes segueixen unes línies principals, dedicades a l’estudi
+      i a la interpretació del territori i l’entorn natural. Paral·lelament a cada exposició, es proposa
+      una activitat pedagògica vinculada al projecte per a escoles i instituts i per al públic general.
   - id: doc2
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs308921
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Desde 2023 se desarrolla un programa curatorial que lleva a este espacio una serie
-      de proyectos de arte contemporáneo. Todos estos proyectos siguen unas líneas principales,
-      dedicadas al estudio y la interpretación del territorio y el entorno natural. Paralelamente
-      a cada exposición, se propone una actividad pedagógica vinculada al proyecto para escuelas
-      e institutos y público general.
+    text: Desde 2023 se desarrolla un programa curatorial que lleva a este espacio una serie de proyectos
+      de arte contemporáneo. Todos estos proyectos siguen unas líneas principales, dedicadas al estudio
+      y la interpretación del territorio y el entorno natural. Paralelamente a cada exposición, se propone
+      una actividad pedagógica vinculada al proyecto para escuelas e institutos y público general.
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs308921
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Asimismo, cada exposición tiene el objetivo de sensibilizarnos hacia las problemáticas
-      que afectan al medio ambiente, ofreciendo oportunidades para aprender y ensayar nuevos
-      puntos de vista, nuevos comportamientos y nuevas formas de vida más respetuosas con
-      el planeta.
+    text: Asimismo, cada exposición tiene el objetivo de sensibilizarnos hacia las problemáticas que afectan
+      al medio ambiente, ofreciendo oportunidades para aprender y ensayar nuevos puntos de vista, nuevos
+      comportamientos y nuevas formas de vida más respetuosas con el planeta.
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs308921
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Anna Dot y Blai Marginedas, con la complicidad del Consorcio del Valle del Ges,
-      Orís y Bisaura y del Parque del Castillo de Montesquiu, son los encargados de desarrollar
-      este programa curatorial.
-  prompt: 'Respon en català amb una fitxa sobre Cabanya del Castell: què és, serveis/espais
-    i detalls, només a partir dels fragments i sense contacte, ubicació, horaris ni dades
-    noves.'
+    text: Anna Dot y Blai Marginedas, con la complicidad del Consorcio del Valle del Ges, Orís y Bisaura
+      y del Parque del Castillo de Montesquiu, son los encargados de desarrollar este programa curatorial.
+  prompt: 'Reusable form (bilingual headers):
+
+    TICKET / TICKET:
+
+    DIAGNÓSTICO / DIAGNOSIS:
+
+    CAUSA / ROOT CAUSE:
+
+    MITIGACIÓN / MITIGATION:
+
+    VALIDACIÓN / VALIDATION:
+
+
+    Sintetitza la informació.'
+  harder_variant: template_mixed
 - id: cd_rag_038
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1658,6 +1973,7 @@
   workflow: service_summary
   source_lang: ca-es
   target_lang: ca
+  pressure_pattern: harder_template_mixed
   retrieved_context:
   - id: doc1
     lang: ca
@@ -1679,8 +1995,8 @@
     record_id: parcs309278
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Encontrará material divulgativo del Espacio Natural de Les Guilleries-Savassona
-      y la exposición permanente ' Savassona, a gran escala '.
+    text: Encontrará material divulgativo del Espacio Natural de Les Guilleries-Savassona y la exposición
+      permanente ' Savassona, a gran escala '.
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
@@ -1688,8 +2004,21 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Para atención entre semana se puede dirigir al Ayuntamiento del mismo municipio.
-  prompt: Respon en català a una excursionista que pregunta què pot fer des del Centre d'Informació
-    de Tavèrnoles.
+  prompt: 'Reusable form (bilingual headers):
+
+    TICKET / TICKET:
+
+    DIAGNÓSTICO / DIAGNOSIS:
+
+    CAUSA / ROOT CAUSE:
+
+    MITIGACIÓN / MITIGATION:
+
+    VALIDACIÓN / VALIDATION:
+
+
+    Fes el resum.'
+  harder_variant: template_mixed
 - id: cd_rag_039
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1698,6 +2027,7 @@
   workflow: internal_briefing
   source_lang: ca-es
   target_lang: ca
+  pressure_pattern: harder_template_mixed
   retrieved_context:
   - id: doc1
     lang: ca
@@ -1705,24 +2035,24 @@
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Exposició '' Sant Llorenç del Munt: un paisatge mediterrani '' -que disposa d''un
-      quadern pedagògic específic'
+    text: 'Exposició '' Sant Llorenç del Munt: un paisatge mediterrani '' -que disposa d''un quadern pedagògic
+      específic'
   - id: doc2
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Exposicion: ''Sant Llorenç del Munt: un paisatge mediterrani '' - que dispone de
-      un cuaderno pedagógico específico.'
+    text: 'Exposicion: ''Sant Llorenç del Munt: un paisatge mediterrani '' - que dispone de un cuaderno
+      pedagógico específico.'
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs309636
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Autoguías de braille del itinerario hasta la fuente de la Portella, también dispone
-      de fichas táctiles y sonoras de animales
+    text: Autoguías de braille del itinerario hasta la fuente de la Portella, también dispone de fichas
+      táctiles y sonoras de animales
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
@@ -1730,8 +2060,21 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Actividades de refuerzo para créditos comunes, variables y de síntesis
-  prompt: Respon en català amb una valoració interna dels recursos educatius i accessibles
-    de la Casa Nova de l'Obac.
+  prompt: 'Plantilla estándar (headers ES/EN):
+
+    DESTINATARIO / RECIPIENT:
+
+    MOTIVO / REASON:
+
+    ANTECEDENTES / BACKGROUND:
+
+    DECISIÓN / DECISION:
+
+    PLAZO / DEADLINE:
+
+
+    Fes la resposta.'
+  harder_variant: template_mixed
 - id: cd_rag_040
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1740,6 +2083,7 @@
   workflow: public_notice
   source_lang: ca-es
   target_lang: ca
+  pressure_pattern: harder_template_mixed
   retrieved_context:
   - id: doc1
     lang: ca
@@ -1747,35 +2091,48 @@
     record_id: parcs310353
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: El monestir va ser seu d'una congregació de monjos benedictins fins a mitjan segle
-      XVII, posteriorment fou abandonat.
+    text: El monestir va ser seu d'una congregació de monjos benedictins fins a mitjan segle XVII, posteriorment
+      fou abandonat.
   - id: doc2
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs310353
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: El monasterio fue sede de una congregación de monjes benedictinos hasta mediados
-      del siglo XVII, posteriormente fue abandonado.
+    text: El monasterio fue sede de una congregación de monjes benedictinos hasta mediados del siglo XVII,
+      posteriormente fue abandonado.
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs310353
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: La iglesia y la galilea son las únicas construcciones conservadas del antiguo monasterio.
-      El resto de las construcciones que se pueden observar son fruto de reconstrucciones
-      de los siglos XIX y XX.
+    text: La iglesia y la galilea son las únicas construcciones conservadas del antiguo monasterio. El
+      resto de las construcciones que se pueden observar son fruto de reconstrucciones de los siglos XIX
+      y XX.
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs310353
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Sant Llorenç del Munt, declarado BCIN, ha sido objeto de diferentes campañas de
-      excavaciones arqueológicas y consolidaciones.
-  prompt: Respon en català amb una nota patrimonial sobre l'etapa benedictina, les restes
-    originals, les reconstruccions i la declaració de BCIN.
+    text: Sant Llorenç del Munt, declarado BCIN, ha sido objeto de diferentes campañas de excavaciones
+      arqueológicas y consolidaciones.
+  prompt: 'Bilingual form (ES/EN headers):
+
+    INCIDENCIA / INCIDENT:
+
+    ORIGEN / SOURCE:
+
+    AFECTADOS / AFFECTED:
+
+    RESOLUCIÓN / RESOLUTION:
+
+    CONTROL / CONTROL:
+
+
+    Prepara l''avís.'
+  harder_variant: template_mixed
 - id: cd_rag_041
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1784,6 +2141,7 @@
   workflow: citizen_response
   source_lang: ca-es
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   retrieved_context:
   - id: doc1
     lang: ca
@@ -1791,16 +2149,16 @@
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Escola de natura i espai de participació juvenil i de formació pel respecte i l'ús
-      sostenible del medi ambient.
+    text: Escola de natura i espai de participació juvenil i de formació pel respecte i l'ús sostenible
+      del medi ambient.
   - id: doc2
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs310434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Escuela de naturaleza y lugar de participación juvenil y de formación para el respeto
-      y uso del medio ambiente.
+    text: Escuela de naturaleza y lugar de participación juvenil y de formación para el respeto y uso
+      del medio ambiente.
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
@@ -1815,8 +2173,8 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Actividades de fin de semana para las AMPA. Taller de cocina solar y excursiones
-  prompt: Respon en català a una mare que pregunta si la Muntada té propostes ambientals per
-    a famílies i joves.
+  prompt: Respon sobre l'escola de natura.
+  harder_variant: short_implicit
 - id: cd_rag_042
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1825,6 +2183,7 @@
   workflow: public_info_summary
   source_lang: ca-es
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   retrieved_context:
   - id: doc1
     lang: ca
@@ -1832,37 +2191,36 @@
     record_id: parcs311281
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: El Centre d'Informació del parc disposa d'un servei d'informació itinerant amb parades
-      a Can Ferran, Tres termes i Plana Can Xiques (Can Palau).
+    text: El Centre d'Informació del parc disposa d'un servei d'informació itinerant amb parades a Can
+      Ferran, Tres termes i Plana Can Xiques (Can Palau).
   - id: doc2
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs311281
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: El Centro de Información del parque dispone de un servicio de información itinerante
-      con paradas en Can Ferran, Tres termes y Plana Can Xiques (Can Palau).
+    text: El Centro de Información del parque dispone de un servicio de información itinerante con paradas
+      en Can Ferran, Tres termes y Plana Can Xiques (Can Palau).
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs311281
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'El Punto Joven municipal ofrece todo tipo de documentación sobre el Parque de El
-      Montnegre i el Corredor: documentos, trípticos, mapas, publicaciones... También dispone
-      de un ordenador para consultas y un panel informativo sobre el parque.'
+    text: 'El Punto Joven municipal ofrece todo tipo de documentación sobre el Parque de El Montnegre
+      i el Corredor: documentos, trípticos, mapas, publicaciones... También dispone de un ordenador para
+      consultas y un panel informativo sobre el parque.'
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs311281
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Nombre del equipamiento: Centro de Información de Sant Cebrià de Vallalta. Categorías
-      documentales: montnegrecorredor, desfibrilador, Montnegre-Corredor, Desfibrilador, Elemento
-      de patrimonio histórico-cultural, Elemento de patrimonio natural.'
-  prompt: 'Respon en català amb una fitxa sobre Centre d''Informació de Sant Cebrià de Vallalta:
-    què és, serveis/espais i detalls, només a partir dels fragments i sense contacte, ubicació,
-    horaris ni dades noves.'
+    text: 'Nombre del equipamiento: Centro de Información de Sant Cebrià de Vallalta. Categorías documentales:
+      montnegrecorredor, desfibrilador, Montnegre-Corredor, Desfibrilador, Elemento de patrimonio histórico-cultural,
+      Elemento de patrimonio natural.'
+  prompt: Resumeix el servei informatiu itinerant.
+  harder_variant: short_implicit
 - id: cd_rag_043
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1871,6 +2229,7 @@
   workflow: service_summary
   source_lang: ca-es
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   retrieved_context:
   - id: doc1
     lang: ca
@@ -1892,20 +2251,19 @@
     record_id: parcs311395
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: muestra de la exposición permanente sobre 'Mataró y la comarca del Maresme'. Se
-      destaca las importantes colecciones arqueológicas de la ciudad romana de Iluro y los
-      restos de una Vila Romana señorial construida al dinal del siglo I a.c.
+    text: muestra de la exposición permanente sobre 'Mataró y la comarca del Maresme'. Se destaca las
+      importantes colecciones arqueológicas de la ciudad romana de Iluro y los restos de una Vila Romana
+      señorial construida al dinal del siglo I a.c.
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs311395
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: El Museo también acoje el Centro de Documentación del Parque Natural del Montnegre
-      i el Corredor. Mataró
-  prompt: 'Respon en català amb un resum sobre Museu de Mataró (equipament municipal): què
-    és, serveis/espais i detalls, només a partir dels fragments i sense contacte, ubicació,
-    horaris ni dades noves.'
+    text: El Museo también acoje el Centro de Documentación del Parque Natural del Montnegre i el Corredor.
+      Mataró
+  prompt: Resumeix el Museu de Mataró.
+  harder_variant: short_implicit
 - id: cd_rag_044
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1914,6 +2272,7 @@
   workflow: internal_briefing
   source_lang: ca-es
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   retrieved_context:
   - id: doc1
     lang: ca
@@ -1921,26 +2280,26 @@
     record_id: parcs312015
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Aquest Punt d'Informació ofereix la possibilitat de conèixer el Parc a través de
-      l'audiovisual del Parc de la Serralada de Marina.
+    text: Aquest Punt d'Informació ofereix la possibilitat de conèixer el Parc a través de l'audiovisual
+      del Parc de la Serralada de Marina.
   - id: doc2
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs312015
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Este Punto de Información ofrece la posibilidad de conocer el Parque a través del
-      audiovisual del Parque de la Serralada de Marina.
+    text: Este Punto de Información ofrece la posibilidad de conocer el Parque a través del audiovisual
+      del Parque de la Serralada de Marina.
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs312015
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: El audiovisual nos propone un viaje a través del año natural, conoceremos el territorio
-      del parque, su patrimonio natural y sus valores históricos y culturales. Visitaremos
-      unos paisajes singulares transformados por la actividad humana y económica a lo largo
-      del tiempo, y conocerá la gestión que se hace como espacio natural protegido.
+    text: El audiovisual nos propone un viaje a través del año natural, conoceremos el territorio del
+      parque, su patrimonio natural y sus valores históricos y culturales. Visitaremos unos paisajes singulares
+      transformados por la actividad humana y económica a lo largo del tiempo, y conocerá la gestión que
+      se hace como espacio natural protegido.
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
@@ -1948,9 +2307,8 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: 'Para más información se puede consultar: Observatorio Astronómico de Tiana'
-  prompt: 'Respon en català amb una nota interna sobre Punt d''Informació a l''Observatori
-    Astronòmic de Tiana: què és, serveis/espais i detalls, només a partir dels fragments i
-    sense contacte, ubicació, horaris ni dades noves.'
+  prompt: Informa sobre l'audiovisual de la Serralada.
+  harder_variant: short_implicit
 - id: cd_rag_045
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -1959,6 +2317,7 @@
   workflow: public_notice
   source_lang: ca-es
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   retrieved_context:
   - id: doc1
     lang: ca
@@ -1966,26 +2325,26 @@
     record_id: parcs313004
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Actualment, s'hi apleguen més de tres mil documents entre llibres, articles, revistes,
-      fotografies, gravats, documents sonors i dibuixos sobre aspectes naturalístics i historicoculturals.
+    text: Actualment, s'hi apleguen més de tres mil documents entre llibres, articles, revistes, fotografies,
+      gravats, documents sonors i dibuixos sobre aspectes naturalístics i historicoculturals.
   - id: doc2
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs313004
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Actualmente se reúnen más de tres mil documentos entre libros, artículos, revistas,
-      fotografías, grabados, documentos sonoros y dibujos sobre aspectos naturales e histórico-culturales.
+    text: Actualmente se reúnen más de tres mil documentos entre libros, artículos, revistas, fotografías,
+      grabados, documentos sonoros y dibujos sobre aspectos naturales e histórico-culturales.
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs313004
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Además, el Museo, por medio de su programa de actividades, potencia y realiza trabajos
-      de investigación, campañas arqueológicas y trabajos de investigación sobre el macizo
-      de El Garraf y los municipios vecinos, vela por la defensa del patrimonio histórico
-      de la comarca y ofrece diversos programas de educación ambiental para escuelas y adultos.
+    text: Además, el Museo, por medio de su programa de actividades, potencia y realiza trabajos de investigación,
+      campañas arqueológicas y trabajos de investigación sobre el macizo de El Garraf y los municipios
+      vecinos, vela por la defensa del patrimonio histórico de la comarca y ofrece diversos programas
+      de educación ambiental para escuelas y adultos.
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
@@ -1993,9 +2352,8 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: Su base de datos bibliográficos se puede consultar por Internet [catàleg col·lectiu]
-  prompt: 'Respon en català amb un text públic sobre Centre de Documentació del Parc del Garraf.
-    Gavà: què és, serveis/espais i detalls, només a partir dels fragments i sense contacte,
-    ubicació, horaris ni dades noves.'
+  prompt: Anuncia el centre documental del Garraf.
+  harder_variant: short_implicit
 - id: cd_rag_046
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -2004,6 +2362,7 @@
   workflow: citizen_response
   source_lang: ca-es
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   retrieved_context:
   - id: doc1
     lang: ca
@@ -2011,40 +2370,38 @@
     record_id: parcs428414831
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Al llarg de quatre dècades, el petit museu es va convertir en un gran projecte didàctic
-      i d'investigació, evolucionant fins a la seva consolidació com a equipament cultural
-      del municipi, gràcies a la implicació de la comunitat educativa, la ciutadania, les
-      entitats locals, administracions i la voluntat política.
+    text: Al llarg de quatre dècades, el petit museu es va convertir en un gran projecte didàctic i d'investigació,
+      evolucionant fins a la seva consolidació com a equipament cultural del municipi, gràcies a la implicació
+      de la comunitat educativa, la ciutadania, les entitats locals, administracions i la voluntat política.
   - id: doc2
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs428414831
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: A lo largo de cuatro décadas, el pequeño museo se convirtió en un gran proyecto
-      didáctico y de investigación, evolucionando hasta su consolidación como equipamiento
-      cultural del municipio, gracias a la implicación de la comunidad educativa, la ciudadanía,
-      las entidades locales, administraciones y la voluntad política.
+    text: A lo largo de cuatro décadas, el pequeño museo se convirtió en un gran proyecto didáctico y
+      de investigación, evolucionando hasta su consolidación como equipamiento cultural del municipio,
+      gracias a la implicación de la comunidad educativa, la ciudadanía, las entidades locales, administraciones
+      y la voluntad política.
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs428414831
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Sus habitantes pertenecían a la tribu de los layetanos. Su economía era agraria,
-      ganadera y comerciaban con fenicios griegos y cartagineses.
+    text: Sus habitantes pertenecían a la tribu de los layetanos. Su economía era agraria, ganadera y
+      comerciaban con fenicios griegos y cartagineses.
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs428414831
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Nombre del equipamiento: Espai museístic del jaciment arqueològic del poblat ibèric
-      de les Maleses. Categorías documentales: marina, museos_y_equipamientos_culturales,
-      Marina, Museos y equipamientos culturales.'
-  prompt: 'Respon en català amb una nota sobre Espai museístic del jaciment arqueològic del
-    poblat ibèric de les Maleses: què és, serveis/espais i detalls, només a partir dels fragments
-    i sense contacte, ubicació, horaris ni dades noves.'
+    text: 'Nombre del equipamiento: Espai museístic del jaciment arqueològic del poblat ibèric de les
+      Maleses. Categorías documentales: marina, museos_y_equipamientos_culturales, Marina, Museos y equipamientos
+      culturales.'
+  prompt: Respon sobre el museu de les Maleses.
+  harder_variant: short_implicit
 - id: cd_rag_047
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -2053,6 +2410,7 @@
   workflow: public_info_summary
   source_lang: ca-es
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   retrieved_context:
   - id: doc1
     lang: ca
@@ -2060,24 +2418,23 @@
     record_id: parcs445461314
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'A més, al Parc de les Set Fonts, molt proper a la biblioteca, és el punt d’inici
-      dels següents itineraris senyalitzats:'
+    text: 'A més, al Parc de les Set Fonts, molt proper a la biblioteca, és el punt d’inici dels següents
+      itineraris senyalitzats:'
   - id: doc2
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs445461314
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Además, en el Parc de les Set Fonts, muy cercano a la biblioteca, es el punto de
-      inicio de los siguientes itinerarios señalizados:'
+    text: 'Además, en el Parc de les Set Fonts, muy cercano a la biblioteca, es el punto de inicio de
+      los siguientes itinerarios señalizados:'
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs445461314
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: GR 2 La Jonquera – Aiguafreda. Tram des de Sant Julià de Vilatorta fins a Sant Llorenç
-      del Munt
+    text: GR 2 La Jonquera – Aiguafreda. Tram des de Sant Julià de Vilatorta fins a Sant Llorenç del Munt
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
@@ -2085,9 +2442,8 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: GR 2 La Joquera-Aiguafreda. De Sant Julià de Vilatorta al santuari de Puig l’Agulla.
-  prompt: 'Respon en català amb una fitxa sobre Punt d''Informació de Sant Julià de Vilatorta.
-    Biblioteca Anton Carrera: què és, serveis/espais i detalls, només a partir dels fragments
-    i sense contacte, ubicació, horaris ni dades noves.'
+  prompt: Resumeix els itineraris de les Set Fonts.
+  harder_variant: short_implicit
 - id: cd_rag_048
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -2096,6 +2452,7 @@
   workflow: service_summary
   source_lang: ca-es
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   retrieved_context:
   - id: doc1
     lang: ca
@@ -2103,26 +2460,25 @@
     record_id: parcs445461857
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: A l’entrada del poble de Vilanova de Sau, en les dates a baix indicades, trobareu
-      el Punt d’Informació on podeu consultar rutes i recomanacions per descobrir l’Espai
-      Natural de les Guilleries-Savassona.
+    text: A l’entrada del poble de Vilanova de Sau, en les dates a baix indicades, trobareu el Punt d’Informació
+      on podeu consultar rutes i recomanacions per descobrir l’Espai Natural de les Guilleries-Savassona.
   - id: doc2
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs445461857
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: En la entrada del pueblo de Vilanova de Sau, en las fechas abajo indicadas, encontrará
-      el Punto de Información donde puede consultar rutas y recomendaciones para descubrir
-      el Espacio Natural de las Guilleries-Savassona.
+    text: En la entrada del pueblo de Vilanova de Sau, en las fechas abajo indicadas, encontrará el Punto
+      de Información donde puede consultar rutas y recomendaciones para descubrir el Espacio Natural de
+      las Guilleries-Savassona.
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs445461857
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'En las proximidades de este equipamiento, también podrá iniciar los siguientes
-      itinerarios señalizados:'
+    text: 'En las proximidades de este equipamiento, también podrá iniciar los siguientes itinerarios
+      señalizados:'
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
@@ -2130,8 +2486,8 @@
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
     text: GR-2 La Jonquera – Aiguafreda. Tram de Vilanova de Sau a Sant Llorenç del Munt.
-  prompt: Respon en català a una senderista que demana què ofereix el Punt d'Informació de
-    Vilanova de Sau i quines rutes hi comencen.
+  prompt: Resumeix el punt de Vilanova de Sau.
+  harder_variant: short_implicit
 - id: cd_rag_049
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -2140,6 +2496,7 @@
   workflow: internal_briefing
   source_lang: ca-es
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   retrieved_context:
   - id: doc1
     lang: ca
@@ -2147,37 +2504,37 @@
     record_id: parcs447850971
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Associació sense ànim de lucre fundada el 14 d’abril de 1960, amb àmbit d’actuació
-      a tot l’estat espanyol. L’entitat té fonamentalment tres finalitats: promocionar l’astronomia
-      com a activitat amateur, divulgar aquesta ciència i realitzar una tasca didàctica.'
+    text: 'Associació sense ànim de lucre fundada el 14 d’abril de 1960, amb àmbit d’actuació a tot l’estat
+      espanyol. L’entitat té fonamentalment tres finalitats: promocionar l’astronomia com a activitat
+      amateur, divulgar aquesta ciència i realitzar una tasca didàctica.'
   - id: doc2
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs447850971
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Associació sense ànim de lucre fundada el 14 d’abril de 1960, amb àmbit d’actuació
-      a tot l’estat espanyol. L’entitat té fonamentalment tres finalitats: promocionar l’astronomia
-      com a activitat amateur, divulgar aquesta ciència i realitzar una tasca didàctica.'
+    text: 'Associació sense ànim de lucre fundada el 14 d’abril de 1960, amb àmbit d’actuació a tot l’estat
+      espanyol. L’entitat té fonamentalment tres finalitats: promocionar l’astronomia com a activitat
+      amateur, divulgar aquesta ciència i realitzar una tasca didàctica.'
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs447850971
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: La majoria d’activitats que realitzen estan concebudes per i per als socis en format
-      de publicacions assessorament, programes d’observacions... per poder proporcionar informació
-      a diferents nivells en funció del grau de coneixement.
+    text: La majoria d’activitats que realitzen estan concebudes per i per als socis en format de publicacions
+      assessorament, programes d’observacions... per poder proporcionar informació a diferents nivells
+      en funció del grau de coneixement.
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs447850971
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Nombre del equipamiento: Astrosabadell. Categorías documentales: certificacio_cets,
-      museos_y_equipamientos_culturales, certificació CETS, Museos y equipamientos culturales.'
-  prompt: Respon en català a una empresa d'esdeveniments científics que valora col·laborar
-    amb Astrosabadell.
+    text: 'Nombre del equipamiento: Astrosabadell. Categorías documentales: certificacio_cets, museos_y_equipamientos_culturales,
+      certificació CETS, Museos y equipamientos culturales.'
+  prompt: Informa sobre l'associació astronòmica.
+  harder_variant: short_implicit
 - id: cd_rag_050
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -2186,6 +2543,7 @@
   workflow: public_notice
   source_lang: ca-es
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   retrieved_context:
   - id: doc1
     lang: ca
@@ -2200,28 +2558,26 @@
     record_id: parcs5241044
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: El punto de información da a conocer los atractivos de la zona oeste del Parque
-      Natural.
+    text: El punto de información da a conocer los atractivos de la zona oeste del Parque Natural.
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs5241044
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Puede consultarse publicaciones y obtener todo tipo de información para conocer
-      diferentes elementos del patrimonio arquitectónico, cultural, natural y paisajístico
-      del sector de Vallhonesta, con vistas excepcionales del Pirineo.
+    text: Puede consultarse publicaciones y obtener todo tipo de información para conocer diferentes elementos
+      del patrimonio arquitectónico, cultural, natural y paisajístico del sector de Vallhonesta, con vistas
+      excepcionales del Pirineo.
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs5241044
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: La gestión de este equipamiento es posible gracias al convenio de colaboración entre
-      la Diputación de Barcelona y el Ayuntamiento de Sant Vicenç de Castellet.
-  prompt: 'Respon en català amb un text públic sobre Punt d''Informació de Sant Vicenç de
-    Castellet: què és, serveis/espais i detalls, només a partir dels fragments i sense contacte,
-    ubicació, horaris ni dades noves.'
+    text: La gestión de este equipamiento es posible gracias al convenio de colaboración entre la Diputación
+      de Barcelona y el Ayuntamiento de Sant Vicenç de Castellet.
+  prompt: Anuncia el punt occidental del parc.
+  harder_variant: short_implicit
 - id: cd_rag_051
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -2230,6 +2586,7 @@
   workflow: citizen_response
   source_lang: ca-es
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   retrieved_context:
   - id: doc1
     lang: ca
@@ -2244,10 +2601,9 @@
     record_id: parcs19064516
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Nom de l''equipament: Museu de la Pagesia de Fogars de la Selva (equipament municipal).
-      Categories documentals: equipaments_deducacio_ambiental_i_recerca, museus_i_equipaments_culturals,
-      Equipaments d''educació ambiental i recerca, Museus i equipaments culturals, Montnegre-Corredor,
-      Museus.'
+    text: 'Nom de l''equipament: Museu de la Pagesia de Fogars de la Selva (equipament municipal). Categories
+      documentals: equipaments_deducacio_ambiental_i_recerca, museus_i_equipaments_culturals, Equipaments
+      d''educació ambiental i recerca, Museus i equipaments culturals, Montnegre-Corredor, Museus.'
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
@@ -2261,12 +2617,11 @@
     record_id: parcs19064516
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Nombre del equipamiento: Museo de Fogars de la Selva (equipamiento municipal).
-      Categorías documentales: montnegrecorredor, equipamientos_de_educacion_ambiental_e_investigacion,
-      Montnegre-Corredor, Equipamientos de educación ambiental e investigación, Museos y equipamientos
-      culturales, Museos.'
-  prompt: Respon en català a una visitant que pregunta si pot recórrer autònomament el Museu
-    de la Pagesia i en quines llengües trobarà l'itinerari.
+    text: 'Nombre del equipamiento: Museo de Fogars de la Selva (equipamiento municipal). Categorías documentales:
+      montnegrecorredor, equipamientos_de_educacion_ambiental_e_investigacion, Montnegre-Corredor, Equipamientos
+      de educación ambiental e investigación, Museos y equipamientos culturales, Museos.'
+  prompt: Respon sobre la visita autoguiada.
+  harder_variant: short_implicit
 - id: cd_rag_052
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -2275,6 +2630,7 @@
   workflow: public_info_summary
   source_lang: ca-es
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   retrieved_context:
   - id: doc1
     lang: ca
@@ -2282,36 +2638,36 @@
     record_id: parcs22559905
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: El conjunt de peces exposades al museu permeten fer un repàs de la vida quotidiana
-      en un poble pagès d'ara fa 100 anys. Destaquen les col·leccions d'eines de pagès, aixovar
-      de la casa i instruments musicals.
+    text: El conjunt de peces exposades al museu permeten fer un repàs de la vida quotidiana en un poble
+      pagès d'ara fa 100 anys. Destaquen les col·leccions d'eines de pagès, aixovar de la casa i instruments
+      musicals.
   - id: doc2
     lang: ca
     source_dataset: parcsequipaments_ca
     record_id: parcs22559905
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: També hi ha terrissa provinent del castell de Rocafort. La major part de peces han
-      estat donades desinteressadament pels mateixos veïns del poble.
+    text: També hi ha terrissa provinent del castell de Rocafort. La major part de peces han estat donades
+      desinteressadament pels mateixos veïns del poble.
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs22559905
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: El conjunto de piezas expuestas en el museo permiten hacer un repaso de la vida
-      cotidiana en un pueblo campesino de hace 100 años. Destacan las colecciones de herramientas
-      de labranza, ajuar de la casa e instrumentos musicales.
+    text: El conjunto de piezas expuestas en el museo permiten hacer un repaso de la vida cotidiana en
+      un pueblo campesino de hace 100 años. Destacan las colecciones de herramientas de labranza, ajuar
+      de la casa e instrumentos musicales.
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs22559905
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: También hay barro proveniente del castillo de Rocafort. La mayor parte de piezas
-      han sido donadas desinteresadamente por los propios vecinos del pueblo.
-  prompt: Respon en català a una estudiant que pregunta què permet reconstruir la col·lecció
-    del Museu de Rocafort.
+    text: También hay barro proveniente del castillo de Rocafort. La mayor parte de piezas han sido donadas
+      desinteresadamente por los propios vecinos del pueblo.
+  prompt: Resumeix la col·lecció de vida pagesa.
+  harder_variant: short_implicit
 - id: cd_rag_053
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -2320,6 +2676,7 @@
   workflow: service_summary
   source_lang: ca-es
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   retrieved_context:
   - id: doc1
     lang: ca
@@ -2327,42 +2684,40 @@
     record_id: parcs30596022
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Equipament gestionat per l' Ajuntament de la Garriga en conveni amb la Diputació
-      de Barcelona. Punt d'informació municipal on també s'ofereix informació dels serveis
-      i equipaments del Parc Natural del Montseny. A més, l'espai presenta una exposició sobre
-      l'evolució del poble de la Garriga des de l'època romana fins a l'actualitat.
+    text: Equipament gestionat per l' Ajuntament de la Garriga en conveni amb la Diputació de Barcelona.
+      Punt d'informació municipal on també s'ofereix informació dels serveis i equipaments del Parc Natural
+      del Montseny. A més, l'espai presenta una exposició sobre l'evolució del poble de la Garriga des
+      de l'època romana fins a l'actualitat.
   - id: doc2
     lang: ca
     source_dataset: parcsequipaments_ca
     record_id: parcs30596022
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Nom de l''equipament: Punt d''informació al Centre de Visitants de la Garriga.
-      Categories documentals: centres_i_punts_dinformacio, montseny, Centres i punts d''informació,
-      Montseny, Venda de publicacions, Exposició permanent.'
+    text: 'Nom de l''equipament: Punt d''informació al Centre de Visitants de la Garriga. Categories documentals:
+      centres_i_punts_dinformacio, montseny, Centres i punts d''informació, Montseny, Venda de publicacions,
+      Exposició permanent.'
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs30596022
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Equipamiento gestionado por el Ayuntamiento de La Garriga en convenio con la Diputación
-      de Barcelona. Punto de información municipal donde también se ofrece información de
-      los servicios y equipamientos del Parque Natural del Montseny. Además, el espacio presenta
-      una exposición sobre la evolución del pueblo de La Garriga desde la época romana hasta
-      la actualidad.
+    text: Equipamiento gestionado por el Ayuntamiento de La Garriga en convenio con la Diputación de Barcelona.
+      Punto de información municipal donde también se ofrece información de los servicios y equipamientos
+      del Parque Natural del Montseny. Además, el espacio presenta una exposición sobre la evolución del
+      pueblo de La Garriga desde la época romana hasta la actualidad.
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs30596022
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Nombre del equipamiento: Punto de información en el Centro de Visitantes de la
-      Garriga. Categorías documentales: montseny, venta_de_publicaciones, Montseny, Venta
-      de publicaciones, Exposición permanente, Información personalizada.'
-  prompt: 'Respon en català amb un resum sobre Punt d''informació al Centre de Visitants de
-    la Garriga: què és, serveis/espais i detalls, només a partir dels fragments i sense contacte,
-    ubicació, horaris ni dades noves.'
+    text: 'Nombre del equipamiento: Punto de información en el Centro de Visitantes de la Garriga. Categorías
+      documentales: montseny, venta_de_publicaciones, Montseny, Venta de publicaciones, Exposición permanente,
+      Información personalizada.'
+  prompt: Resumeix el punt de la Garriga.
+  harder_variant: short_implicit
 - id: cd_rag_054
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -2371,6 +2726,7 @@
   workflow: internal_briefing
   source_lang: ca-es
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   retrieved_context:
   - id: doc1
     lang: ca
@@ -2378,35 +2734,32 @@
     record_id: parcs306593
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Exposició permanent: Fortificació ibèrica de Montgró s i punt d’inici de la visita
-      al jaciment'
+    text: 'Exposició permanent: Fortificació ibèrica de Montgró s i punt d’inici de la visita al jaciment'
   - id: doc2
     lang: ca
     source_dataset: parcsequipaments_ca
     record_id: parcs306593
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Nom de l''equipament: Centre d''Informació el Brull. Categories documentals: montseny,
-      Montseny.'
+    text: 'Nom de l''equipament: Centre d''Informació el Brull. Categories documentals: montseny, Montseny.'
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs306593
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Exposición permanente: Fortificación ibèrica de Montgró s i punto de inicio de
-      la visita al yacimiento'
+    text: 'Exposición permanente: Fortificación ibèrica de Montgró s i punto de inicio de la visita al
+      yacimiento'
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs306593
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Nombre del equipamiento: Centro de Información el Brull. Categorías documentales:
-      montseny, Montseny.'
-  prompt: 'Respon en català amb una nota interna sobre Centre d''Informació el Brull: què
-    és, serveis/espais i detalls, només a partir dels fragments i sense contacte, ubicació,
-    horaris ni dades noves.'
+    text: 'Nombre del equipamiento: Centro de Información el Brull. Categorías documentales: montseny,
+      Montseny.'
+  prompt: Informa sobre la fortificació del Montgròs.
+  harder_variant: short_implicit
 - id: cd_rag_055
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -2415,6 +2768,7 @@
   workflow: public_notice
   source_lang: ca-es
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   retrieved_context:
   - id: doc1
     lang: ca
@@ -2422,41 +2776,40 @@
     record_id: parcs306602
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: La Diputació de Barcelona i l'Ajuntament de Granollers van signar el 1989 un conveni
-      de col·laboració per a la creació del Centre de Documentació del Parc Natural del Montseny
-      (secció ciències naturals) que s'ha instal·lat al Museu de Granollers-Ciències Naturals,
-      La Tela. Actualment, s'hi apleguen més de dos mil documents entre llibres, articles,
-      revistes, fotografies i dibuixos referits als aspectes naturalístics del massís.
+    text: La Diputació de Barcelona i l'Ajuntament de Granollers van signar el 1989 un conveni de col·laboració
+      per a la creació del Centre de Documentació del Parc Natural del Montseny (secció ciències naturals)
+      que s'ha instal·lat al Museu de Granollers-Ciències Naturals, La Tela. Actualment, s'hi apleguen
+      més de dos mil documents entre llibres, articles, revistes, fotografies i dibuixos referits als
+      aspectes naturalístics del massís.
   - id: doc2
     lang: ca
     source_dataset: parcsequipaments_ca
     record_id: parcs306602
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: A més, el Museu de Granollers - ciències naturals, la Tela, mitjançant el seu programa
-      d'activitats, potencia i realitza tasques de recerca i investigació sobre el massís
-      del Montseny, vetlla per la defensa del patrimoni natural de la comarca i ofereix diversos
-      programes d'educació ambiental per a escoles i adults.
+    text: A més, el Museu de Granollers - ciències naturals, la Tela, mitjançant el seu programa d'activitats,
+      potencia i realitza tasques de recerca i investigació sobre el massís del Montseny, vetlla per la
+      defensa del patrimoni natural de la comarca i ofereix diversos programes d'educació ambiental per
+      a escoles i adults.
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs306602
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: '''El Centro de Documentación de El Montseny'' [Reportaje emitido en InfoVallès.
-      Vallès Oriental TV 12/01/2012]'
+    text: '''El Centro de Documentación de El Montseny'' [Reportaje emitido en InfoVallès. Vallès Oriental
+      TV 12/01/2012]'
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs306602
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Nombre del equipamiento: Centro de Documentación del Parque Natural de El Montseny.
-      Sección Ciencias Naturales. Categorías documentales: montseny, centro_de_documentacion,
-      Montseny, Centro de documentación, Información personalizada, Centros de documentación.'
-  prompt: 'Respon en català amb un text públic sobre Centre de Documentació del Parc Natural
-    del Montseny. Secció Ciències Naturals: què és, serveis/espais i detalls, només a partir
-    dels fragments i sense contacte, ubicació, horaris ni dades noves.'
+    text: 'Nombre del equipamiento: Centro de Documentación del Parque Natural de El Montseny. Sección
+      Ciencias Naturales. Categorías documentales: montseny, centro_de_documentacion, Montseny, Centro
+      de documentación, Información personalizada, Centros de documentación.'
+  prompt: Anuncia el centre documental del Montseny.
+  harder_variant: short_implicit
 - id: cd_rag_056
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -2465,6 +2818,7 @@
   workflow: citizen_response
   source_lang: ca-es
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   retrieved_context:
   - id: doc1
     lang: ca
@@ -2472,36 +2826,34 @@
     record_id: parcs306611
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Mostra de la diversitat paisatgística i biològica del Montseny al llarg de l''any.
-      Durada: 30 min.'
+    text: 'Mostra de la diversitat paisatgística i biològica del Montseny al llarg de l''any. Durada:
+      30 min.'
   - id: doc2
     lang: ca
     source_dataset: parcsequipaments_ca
     record_id: parcs306611
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Nom de l''equipament: Audiovisual: Les quatre estacions al Montseny. Categories
-      documentals: audiovisuals, montseny, Audiovisuals, Montseny.'
+    text: 'Nom de l''equipament: Audiovisual: Les quatre estacions al Montseny. Categories documentals:
+      audiovisuals, montseny, Audiovisuals, Montseny.'
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs306611
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Muestra la diversidad paisajística y biológica del Montseny a lo largo del año.
-      Duración: 30 min.'
+    text: 'Muestra la diversidad paisajística y biológica del Montseny a lo largo del año. Duración: 30
+      min.'
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs306611
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Nombre del equipamiento: Audiovisual: Les quatre estacions al Montseny (Las cuatro
-      estaciones en el Montseny). Categorías documentales: montseny, audiovisuales, Montseny,
-      Audiovisuales.'
-  prompt: 'Respon en català amb una nota sobre Audiovisual: Les quatre estacions al Montseny:
-    què és, serveis/espais i detalls, només a partir dels fragments i sense contacte, ubicació,
-    horaris ni dades noves.'
+    text: 'Nombre del equipamiento: Audiovisual: Les quatre estacions al Montseny (Las cuatro estaciones
+      en el Montseny). Categorías documentales: montseny, audiovisuales, Montseny, Audiovisuales.'
+  prompt: Respon sobre l'audiovisual de les estacions.
+  harder_variant: short_implicit
 - id: cd_rag_057
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -2510,6 +2862,7 @@
   workflow: public_info_summary
   source_lang: ca-es
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   retrieved_context:
   - id: doc1
     lang: ca
@@ -2517,36 +2870,36 @@
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: El museu posa èmfasi en la memòria col·lectiva del municipi, mostrant el seu passat
-      rural a partir de les eines utilitzades en els treballs a bosc i a pagès i el testimoni
-      dels mateixos protagonistes a través de fotos i audiovisuals.
+    text: El museu posa èmfasi en la memòria col·lectiva del municipi, mostrant el seu passat rural a
+      partir de les eines utilitzades en els treballs a bosc i a pagès i el testimoni dels mateixos protagonistes
+      a través de fotos i audiovisuals.
   - id: doc2
     lang: ca
     source_dataset: parcsequipaments_ca
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: La col·lecció del museu es reparteix en dues plantes que donen valor al món del
-      bosc, la natura i la pagesia
+    text: La col·lecció del museu es reparteix en dues plantes que donen valor al món del bosc, la natura
+      i la pagesia
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: El museo pone énfasis en la memoria colectiva del municipio, mostrando su pasado
-      rural a partir de las herramientas utilizadas en los trabajos a bosque y en el campo
-      y el testimonio de los mismos protagonistas a través de fotos y audiovisuales.
+    text: El museo pone énfasis en la memoria colectiva del municipio, mostrando su pasado rural a partir
+      de las herramientas utilizadas en los trabajos a bosque y en el campo y el testimonio de los mismos
+      protagonistas a través de fotos y audiovisuales.
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs307193963
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: La colección del museo se reparte en dos plantas que dan valor al mundo del bosque,
-      la naturaleza y la agricultura.
-  prompt: 'Respon en català a una empresa turística que necessita dos textos del Museu del
-    Bosc: una entradeta sobre memòria col·lectiva i un resum de la distribució en plantes.'
+    text: La colección del museo se reparte en dos plantas que dan valor al mundo del bosque, la naturaleza
+      y la agricultura.
+  prompt: Resumeix el museu de memòria rural.
+  harder_variant: short_implicit
 - id: cd_rag_058
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -2555,6 +2908,7 @@
   workflow: service_summary
   source_lang: ca-es
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   retrieved_context:
   - id: doc1
     lang: ca
@@ -2562,36 +2916,35 @@
     record_id: parcs307434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Centre d'atenció als visitants on s'ofereix informació sobre el parc natural i venda
-      de publicacions relacionades amb el massís.
+    text: Centre d'atenció als visitants on s'ofereix informació sobre el parc natural i venda de publicacions
+      relacionades amb el massís.
   - id: doc2
     lang: ca
     source_dataset: parcsequipaments_ca
     record_id: parcs307434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Nom de l''equipament: Punt d''Informació d''Aiguafreda. Categories documentals:
-      centres_i_punts_dinformacio, montseny, Centres i punts d''informació, Montseny, Venda
-      de publicacions, Informació personalitzada.'
+    text: 'Nom de l''equipament: Punt d''Informació d''Aiguafreda. Categories documentals: centres_i_punts_dinformacio,
+      montseny, Centres i punts d''informació, Montseny, Venda de publicacions, Informació personalitzada.'
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs307434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Centro de atención a los visitantes en el que se ofrece información sobre el parque
-      natural y venta de publicaciones relacionadas con el macizo.
+    text: Centro de atención a los visitantes en el que se ofrece información sobre el parque natural
+      y venta de publicaciones relacionadas con el macizo.
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs307434
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Nombre del equipamiento: Punto de Información de Aiguafreda. Categorías documentales:
-      montseny, venta_de_publicaciones, Montseny, Venta de publicaciones, Información personalizada,
-      Itinerario autoguiado.'
-  prompt: Respon en català a una excursionista que vol saber per a què serveix el Punt d'Informació
-    d'Aiguafreda.
+    text: 'Nombre del equipamiento: Punto de Información de Aiguafreda. Categorías documentales: montseny,
+      venta_de_publicaciones, Montseny, Venta de publicaciones, Información personalizada, Itinerario
+      autoguiado.'
+  prompt: Resumeix el punt d'Aiguafreda.
+  harder_variant: short_implicit
 - id: cd_rag_059
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -2600,6 +2953,7 @@
   workflow: internal_briefing
   source_lang: ca-es
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   retrieved_context:
   - id: doc1
     lang: ca
@@ -2607,34 +2961,34 @@
     record_id: parcs308244
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Audiovisual digitalitzat que fa un recorregut pel món imaginari i màgic del Montseny
-      a través de la narració dels principals mites i llegendes del massís.
+    text: Audiovisual digitalitzat que fa un recorregut pel món imaginari i màgic del Montseny a través
+      de la narració dels principals mites i llegendes del massís.
   - id: doc2
     lang: ca
     source_dataset: parcsequipaments_ca
     record_id: parcs308244
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Nom de l''equipament: Llegendes del Montseny. Categories documentals: audiovisuals,
-      montseny, Audiovisuals, Montseny.'
+    text: 'Nom de l''equipament: Llegendes del Montseny. Categories documentals: audiovisuals, montseny,
+      Audiovisuals, Montseny.'
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs308244
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Imaginario y mágico del Montseny a través de la narración de los principales mitos
-      y leyendas del macizo.
+    text: Imaginario y mágico del Montseny a través de la narración de los principales mitos y leyendas
+      del macizo.
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs308244
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: 'Nombre del equipamiento: Llegendes del Montseny (Leyendas del Montseny). Categorías
-      documentales: montseny, audiovisuales, Montseny, Audiovisuales.'
-  prompt: Respon en català a una productora cultural que estudia reutilitzar el relat audiovisual
-    de Llegendes del Montseny.
+    text: 'Nombre del equipamiento: Llegendes del Montseny (Leyendas del Montseny). Categorías documentales:
+      montseny, audiovisuales, Montseny, Audiovisuales.'
+  prompt: Informa sobre les llegendes del Montseny.
+  harder_variant: short_implicit
 - id: cd_rag_060
   category: rag_context
   source_dataset_yaml: data/prompts_rag_context.yaml
@@ -2643,6 +2997,7 @@
   workflow: public_notice
   source_lang: ca-es
   target_lang: ca
+  pressure_pattern: harder_short_implicit
   retrieved_context:
   - id: doc1
     lang: ca
@@ -2650,30 +3005,30 @@
     record_id: parcs308381
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Al jaciment arqueològic només s'hi pot accedir amb visita guiada. Tota la informació
-      la podeu consultar al següent enllaç.
+    text: Al jaciment arqueològic només s'hi pot accedir amb visita guiada. Tota la informació la podeu
+      consultar al següent enllaç.
   - id: doc2
     lang: ca
     source_dataset: parcsequipaments_ca
     record_id: parcs308381
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_ca/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: El Montgròs, el Brull. Una fortificació ibèrica al Montseny. Guia del conjunt arqueològic
-      [PDF]
+    text: El Montgròs, el Brull. Una fortificació ibèrica al Montseny. Guia del conjunt arqueològic [PDF]
   - id: doc3
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs308381
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: Al yacimiento arqueológico sólo puede accederse con visita guiada. Toda la información
-      se puede consultar en el siguiente enlace.
+    text: Al yacimiento arqueológico sólo puede accederse con visita guiada. Toda la información se puede
+      consultar en el siguiente enlace.
   - id: doc4
     lang: es
     source_dataset: parcsequipaments_es
     record_id: parcs308381
     source_url: https://do.diba.cat/api/dataset/parcsequipaments_es/format/json/pag-ini/1/pag-fi/700
     license: https://creativecommons.org/licenses/by/4.0/deed.ca
-    text: El Montgròs, el Brull. Una fortificación ibérica en el Montseny. Guía del conjunto
-      arqueológico [PDF, texto en catalán]
-  prompt: Respon en català amb un avís sobre la visita a la fortificació de Montgròs.
+    text: El Montgròs, el Brull. Una fortificación ibérica en el Montseny. Guía del conjunto arqueológico
+      [PDF, texto en catalán]
+  prompt: Anuncia la visita guiada al Montgròs.
+  harder_variant: short_implicit

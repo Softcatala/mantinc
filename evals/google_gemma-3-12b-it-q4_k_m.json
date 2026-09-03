@@ -1,0 +1,42 @@
+{
+  "catalan_token_ratio": 0.7905,
+  "categories": {
+    "crosslingual_advanced": {
+      "pass": 42,
+      "pass_rate": 0.7,
+      "total": 60
+    },
+    "crosslingual_basic": {
+      "pass": 46,
+      "pass_rate": 0.7667,
+      "total": 60
+    },
+    "monolingual": {
+      "pass": 59,
+      "pass_rate": 0.9833,
+      "total": 60
+    },
+    "multi_turn": {
+      "pass": 37,
+      "pass_rate": 0.6167,
+      "total": 60
+    },
+    "rag_context": {
+      "pass": 41,
+      "pass_rate": 0.6833,
+      "total": 60
+    }
+  },
+  "created_at": "2026-09-03T15:06:48+02:00",
+  "git_commit": "674b8ef351901dff08b6ff6fcaaed3ba8ec191a6",
+  "inference_seconds": 12966.019384515996,
+  "model": "google_gemma-3-12b-it-Q4_K_M",
+  "n": 300,
+  "n_api_or_empty_failures": 0,
+  "n_catalan_tokens": 87716,
+  "n_detected_language_tokens": 110963,
+  "n_failures": 75,
+  "n_language_failures": 75,
+  "n_passes": 225,
+  "pass_rate": 0.75
+}

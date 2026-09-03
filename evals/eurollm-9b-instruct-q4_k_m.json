@@ -1,0 +1,42 @@
+{
+  "catalan_token_ratio": 0.7364,
+  "categories": {
+    "crosslingual_advanced": {
+      "pass": 31,
+      "pass_rate": 0.5167,
+      "total": 60
+    },
+    "crosslingual_basic": {
+      "pass": 39,
+      "pass_rate": 0.65,
+      "total": 60
+    },
+    "monolingual": {
+      "pass": 60,
+      "pass_rate": 1.0,
+      "total": 60
+    },
+    "multi_turn": {
+      "pass": 20,
+      "pass_rate": 0.3333,
+      "total": 60
+    },
+    "rag_context": {
+      "pass": 45,
+      "pass_rate": 0.75,
+      "total": 60
+    }
+  },
+  "created_at": "2026-09-02T03:06:56+02:00",
+  "git_commit": "c619fddd51d6a8d35d54e6945b7b1681c5f1899e",
+  "inference_seconds": 2618.7564450280042,
+  "model": "EuroLLM-9B-Instruct-Q4_K_M",
+  "n": 300,
+  "n_api_or_empty_failures": 0,
+  "n_catalan_tokens": 33403,
+  "n_detected_language_tokens": 45358,
+  "n_failures": 105,
+  "n_language_failures": 105,
+  "n_passes": 195,
+  "pass_rate": 0.65
+}

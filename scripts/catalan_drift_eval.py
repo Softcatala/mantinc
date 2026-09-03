@@ -276,6 +276,7 @@ def score_lm_eval(args: argparse.Namespace) -> None:
             {
                 "model": args.model,
                 "created_at": datetime.now().astimezone().isoformat(timespec="seconds"),
+                "git_commit": args.git_commit,
                 "n": len(samples),
                 "n_passes": len(passes),
                 "n_failures": len(failures),
@@ -406,6 +407,7 @@ def main() -> None:
     score_parser.add_argument("--report", default="outputs/lm-eval.report.json")
     score_parser.add_argument("--failures-file", default="outputs/failures_lm-eval.txt")
     score_parser.add_argument("--passes-file", default="outputs/pass_lm-eval.txt")
+    score_parser.add_argument("--git-commit", default=None)
     score_parser.set_defaults(func=score_lm_eval)
 
     summary_parser = subparsers.add_parser("summary-lm-eval")

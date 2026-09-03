@@ -1,0 +1,42 @@
+{
+  "catalan_token_ratio": 0.7983,
+  "categories": {
+    "crosslingual_advanced": {
+      "pass": 50,
+      "pass_rate": 0.8333,
+      "total": 60
+    },
+    "crosslingual_basic": {
+      "pass": 33,
+      "pass_rate": 0.55,
+      "total": 60
+    },
+    "monolingual": {
+      "pass": 60,
+      "pass_rate": 1.0,
+      "total": 60
+    },
+    "multi_turn": {
+      "pass": 41,
+      "pass_rate": 0.6833,
+      "total": 60
+    },
+    "rag_context": {
+      "pass": 40,
+      "pass_rate": 0.6667,
+      "total": 60
+    }
+  },
+  "created_at": "2026-09-02T02:22:36+02:00",
+  "git_commit": "88ea5568ffb1d17924c16bf71d38ea4562e64d4a",
+  "inference_seconds": 3091.982135244005,
+  "model": "Meta-Llama-3.1-8B-Instruct-Q4_K_M",
+  "n": 300,
+  "n_api_or_empty_failures": 0,
+  "n_catalan_tokens": 49880,
+  "n_detected_language_tokens": 62484,
+  "n_failures": 76,
+  "n_language_failures": 76,
+  "n_passes": 224,
+  "pass_rate": 0.7467
+}

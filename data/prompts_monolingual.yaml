@@ -5,6 +5,7 @@
   workflow: ai_misconception_explanation
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: 'Tema: ús de la intel·ligència artificial per ampliar
     les capacitats humanes. Explica un malentès habitual sobre aquest tema i corregeix-lo
     amb un exemple concret.'
@@ -15,6 +16,7 @@
   workflow: client_reply
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: Escriu una resposta breu per a un client que reclama
     que una comanda ha arribat dos dies tard. Inclou disculpa, explicació, solució
     proposada i to professional.
@@ -25,6 +27,7 @@
   workflow: public_notice
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: Escriu un avís municipal sobre el tancament temporal
     d'un parc per tasques de manteniment. Ha de tenir títol, data, motiu, afectació
     i canal per fer arribar les consultes.
@@ -35,6 +38,7 @@
   workflow: procurement_note
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: Redacta una nota interna per justificar la compra de material informàtic
     per a una oficina municipal, amb necessitat, criteris de selecció, calendari i
     risc si s'ajorna.
@@ -45,6 +49,7 @@
   workflow: support_reply
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: Prepara una resposta de suport tècnic per a una persona que no pot accedir
     al seu compte. Dona tres passos de comprovació i una frase final de seguiment.
 - id: cd_006
@@ -54,6 +59,7 @@
   workflow: complaint_response
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: Escriu una reclamació educada a una companyia de serveis perquè una factura
     inclou un càrrec duplicat. Inclou dades que cal aportar, petició concreta i termini
     raonable de resposta.
@@ -64,6 +70,7 @@
   workflow: project_status
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: Escriu una actualització setmanal d'un projecte de renovació del web d'una
     petita empresa. Organitza-la en estat, avenços, riscos, decisions pendents i properes
     accions.
@@ -74,6 +81,7 @@
   workflow: community_health_bulletin
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: Redacta un butlletí breu de salut comunitària sobre prevenció de cops de
     calor per a gent gran, amb quatre recomanacions pràctiques i un recordatori final.
 - id: cd_009
@@ -83,6 +91,7 @@
   workflow: study_plan
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: Respon. Prepara un pla d'estudi de set dies per repassar una prova de matemàtiques,
     amb objectius diaris i criteris per saber si s'han assolit.
 - id: cd_010
@@ -92,6 +101,7 @@
   workflow: privacy_guidance
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: Dona una guia pràctica per revisar la privacitat d'un telèfon abans de cedir-lo
     a una altra persona. Inclou còpia de seguretat, tancament de sessions, esborrat
     i comprovació final.
@@ -102,6 +112,7 @@
   workflow: client_reply
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: Redacta un correu per a un client estratègic que ha rebut un informe mensual
     incomplet, dades pendents de validar i pressió interna per presentar conclusions
     a direcció. Inclou assumpte, reconeixement dels fets, què encara s'està verificant,
@@ -114,6 +125,7 @@
   workflow: public_notice
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: Escriu un avís públic sobre obres simultànies davant d'una escola, canvis
     de sentit en dos carrers i una franja d'accés reservada per a persones amb mobilitat
     reduïda. Ha d'incloure títol, dates, afectació, excepcions, recomanacions de mobilitat
@@ -125,6 +137,7 @@
   workflow: project_status
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: Escriu una actualització d'estat per a la direcció d'una PIME que està migrant
     la botiga en línia a un sistema de gestió nou. Organitza-la en resum executiu,
     avenços verificats, dependències externes, riscos comercials, decisions necessàries
@@ -136,6 +149,7 @@
   workflow: procurement_note
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: Redacta una nota de contractació per adquirir un servei de còpies de seguretat
     al núvol per a arxius municipals. Inclou necessitat pública, dades que cal protegir,
     criteris de solvència, criteris d'adjudicació, riscos si no es contracta, controls
@@ -147,6 +161,7 @@
   workflow: support_reply
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: Contesta com a equip de suport. Un client informa que l'etiqueta de retorn
     no es genera, l'adreça de recollida apareix incompleta i no pot descarregar les
     instruccions d'enviament. Dona una resposta amb diagnosi inicial, dades que cal
@@ -159,6 +174,7 @@
   workflow: complaint_response
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: Escriu una reclamació formal a una asseguradora perquè ha denegat una reparació
     per humitats tot i tenir informes tècnics i fotografies. Inclou antecedents, discrepància
     amb la decisió, documentació adjunta, petició concreta, termini de resposta i
@@ -170,6 +186,7 @@
   workflow: complaint_response
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: Respon a una queixa veïnal sobre soroll nocturn, manca d'informació prèvia
     i dubtes sobre l'accessibilitat durant unes obres. La resposta ha de reconèixer
     les molèsties, explicar límits competencials, concretar actuacions, indicar terminis
@@ -181,6 +198,7 @@
   workflow: client_reply
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: Escriu una resposta a un client que demana ampliar l'abast d'un projecte
     sense canviar pressupost ni calendari. Mantén un to ferm i col·laboratiu, separa
     què es pot assumir ara, què requereix pressupost addicional, quins riscos hi ha
@@ -192,6 +210,7 @@
   workflow: project_status
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: Redacta una actualització d'estat d'un projecte subvencionat per digitalitzar
     expedients històrics. Inclou percentatge del progrés, incidències de qualitat, dependència
     amb l'arxiu extern, risc de justificació econòmica, mesures correctores i decisions
@@ -203,6 +222,7 @@
   workflow: procurement_note
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: Prepara una nota interna per comparar tres proveïdors d'un servei de manteniment
     informàtic. Inclou criteris de preu, temps de resposta, cobertura fora d'horari,
     protecció de dades, risc de dependència i recomanació raonada amb condicions de
@@ -214,6 +234,7 @@
   workflow: public_notice
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: Escriu un avís municipal per vent fort. Inclou recomanacions per a vianants,
     activitats esportives, terrasses, elements de façana i desplaçaments no essencials.
 - id: cd_111
@@ -223,6 +244,7 @@
   workflow: project_status
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: 'Escriu una actualització per al comitè de direcció sobre la recuperació
     després d''una incidència de seguretat: serveis restablerts, dades encara en revisió,
     mesures provisionals, impacte en clients, risc reputacional, dependències tècniques
@@ -234,6 +256,7 @@
   workflow: procurement_note
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: Redacta una nota de valoració per al lloguer de vehicles de baixes emissions
     per a serveis municipals. Inclou necessitat operativa, criteris ambientals, cost
     total previst, requisits de manteniment, riscos de disponibilitat, justificació
@@ -245,6 +268,7 @@
   workflow: support_reply
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: Escriu una resposta de suport tècnic per a una empresa que ha importat un fitxer
     de clients i ara veu registres duplicats, camps desplaçats i errors de validació.
     La resposta ha d'evitar culpabilitzar l'usuari i incloure comprovacions, còpia
@@ -256,6 +280,7 @@
   workflow: complaint_response
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: Escriu una reclamació a una universitat perquè una matrícula s'ha cobrat
     fora de termini, el rebut mostra un recàrrec i el portal d'atenció no conserva
     les consultes anteriors. Inclou exposició dels fets, impacte, documents adjunts,
@@ -267,6 +292,7 @@
   workflow: public_notice
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: Redacta un avís sobre una incidència temporal en la qualitat de l'aigua
     que no implica tall del subministrament però exigeix precaucions per a usos sensibles.
     Inclou què se sap, què s'està analitzant, recomanacions, col·lectius especialment
@@ -278,6 +304,7 @@
   workflow: client_reply
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: Escriu un correu a un client que demana una devolució completa, eliminació
     de dades personals i mantenir accés temporal a l'historial de comandes. Dona una
     resposta equilibrada amb passos separats per devolució, privacitat, accés temporal,
@@ -289,6 +316,7 @@
   workflow: project_status
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: Prepara un informe d'estat per a la migració d'un portal ciutadà amb tràmits,
     pagaments i notificacions. Inclou resum, fites completades, proves pendents, riscos
     d'accessibilitat, coordinació amb proveïdors, comunicació a la ciutadania i decisió
@@ -300,6 +328,7 @@
   workflow: procurement_note
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: Redacta una nota interna per seleccionar un proveïdor d'auditoria d'accessibilitat
     per al web corporatiu. Inclou objectiu, abast, criteris tècnics, criteris econòmics,
     calendari, risc de no actuar, responsabilitats internes i proposta de decisió.
@@ -310,6 +339,7 @@
   workflow: support_reply
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: Respon com a suport tècnic a un client empresarial que diu que la integració
     envia dades duplicades, bloqueja comandes grans i no mostra errors clars. Inclou
     reconeixement, hipòtesis inicials, proves demanades, solució temporal segura,
@@ -321,6 +351,7 @@
   workflow: ai_misconception_explanation
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: >-
     Explica un malentès habitual sobre l'ús de sistemes
     automàtics per assignar cites mèdiques i corregeix-lo amb un exemple concret
@@ -332,6 +363,7 @@
   workflow: client_reply
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: >-
     Escriu un correu a un client que ha rebut una sessió de formació amb menys
     places disponibles de les contractades. Inclou reconeixement de la incidència,
@@ -343,6 +375,7 @@
   workflow: public_notice
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: >-
     Redacta un avís municipal sobre canvis temporals en l'atenció de serveis
     socials per una reorganització d'agendes. Inclou títol, dates, persones
@@ -354,6 +387,7 @@
   workflow: procurement_note
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: >-
     Redacta una nota de contractació per adquirir sensors acústics per controlar
     nivells de soroll en equipaments municipals. Inclou necessitat, abast de les
@@ -366,6 +400,7 @@
   workflow: support_reply
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: >-
     Contesta com a suport tècnic a una empresa que veu imports incorrectes al portal
     de subscripcions després de canviar la regió fiscal. Inclou reconeixement,
@@ -377,6 +412,7 @@
   workflow: complaint_response
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: >-
     Escriu una reclamació a un centre mèdic perquè una visita programada s'ha
     reassignat dues vegades sense confirmar la nova hora. Inclou cronologia,
@@ -388,6 +424,7 @@
   workflow: project_status
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: >-
     Escriu una actualització d'estat per a la direcció d'una PIME que està
     substituint el sistema de facturació recurrent. Organitza-la en resum, avenços,
@@ -399,6 +436,7 @@
   workflow: community_health_bulletin
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: >-
     Redacta un butlletí breu de salut comunitària sobre prevenció de caigudes a la
     llar per a persones grans. Inclou quatre recomanacions pràctiques, un consell
@@ -410,6 +448,7 @@
   workflow: study_plan
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: >-
     Prepara un pla d'estudi de deu dies per revisar una prova d'accés amb lectura,
     expressió escrita i càlcul bàsic. Inclou objectius diaris, una revisió intermèdia
@@ -421,6 +460,7 @@
   workflow: privacy_guidance
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: >-
     Dona una guia pràctica per revisar la privacitat d'una tauleta familiar abans
     de prestar-la durant unes vacances. Inclou comptes, permisos, historial, còpies
@@ -432,6 +472,7 @@
   workflow: client_reply
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: >-
     Redacta una resposta per a un client que vol activar una promoció abans de tenir
     validats els preus i les condicions legals. Mantén un to col·laboratiu, separa
@@ -443,6 +484,7 @@
   workflow: client_reply
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: >-
     Escriu un correu a un client que demana mantenir un servei antic mentre s'activa
     el nou contracte. Inclou estat, condicions transitòries, riscos operatius,
@@ -454,6 +496,7 @@
   workflow: client_reply
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: >-
     Escriu una resposta a un client que reclama perquè una sessió demostrativa no
     incloïa totes les funcionalitats promeses. Inclou disculpa prudent, aclariment,
@@ -465,6 +508,7 @@
   workflow: public_notice
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: >-
     Escriu un avís públic sobre el tancament parcial d'una piscina municipal per
     substituir rajoles malmeses. Inclou dates, espais afectats, alternatives per a
@@ -476,6 +520,7 @@
   workflow: public_notice
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: >-
     Redacta un avís municipal sobre una incidència al sistema de venda d'entrades
     d'un teatre públic. Inclou què passa, com es conservaran les reserves, alternativa
@@ -487,6 +532,7 @@
   workflow: public_notice
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: >-
     Escriu un avís sobre canvis provisionals en una ruta de transport escolar per
     obres en un pont. Inclou parades afectades, horaris, punt alternatiu, recomanacions
@@ -498,6 +544,7 @@
   workflow: procurement_note
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: >-
     Prepara una nota interna per contractar la digitalització d'actes històriques
     d'un arxiu local. Inclou objectiu, criteris de qualitat, tractament de documents
@@ -509,6 +556,7 @@
   workflow: procurement_note
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: >-
     Redacta una nota de valoració per contractar subtitulació i transcripció dels
     plens municipals. Inclou necessitat d'accessibilitat, abast, criteris de servei,
@@ -520,6 +568,7 @@
   workflow: procurement_note
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: >-
     Redacta una nota interna per triar un proveïdor de formació per a l'equip
     comercial. Inclou objectius, criteris de contingut, disponibilitat, cost,
@@ -531,6 +580,7 @@
   workflow: procurement_note
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: >-
     Prepara una nota per decidir si es canvia el proveïdor d'embalatges després de
     diverses incidències de qualitat. Inclou criteris de comparació, impacte en
@@ -542,6 +592,7 @@
   workflow: support_reply
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: >-
     Escriu una resposta de suport per a una empresa que ha importat contactes al
     CRM i detecta camps obligatoris buits, etiquetes duplicades i consentiments
@@ -553,6 +604,7 @@
   workflow: support_reply
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: >-
     Respon com a suport tècnic a un equip de camp que no pot desar signatures quan
     treballa sense connexió. Dona passos de diagnosi, instruccions per no perdre
@@ -564,6 +616,7 @@
   workflow: support_reply
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: >-
     Escriu una resposta de suport per a un client que veu reserves duplicades després
     de sincronitzar dos calendaris corporatius. Inclou reconeixement, comprovacions
@@ -575,6 +628,7 @@
   workflow: complaint_response
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: >-
     Redacta una resposta municipal a una queixa per cues llargues a l'oficina de
     tributs durant el període de pagament voluntari. Inclou reconeixement, mesures
@@ -586,6 +640,7 @@
   workflow: complaint_response
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: >-
     Escriu una reclamació a una agència de viatges perquè ha canviat l'hotel reservat
     sense acceptació prèvia. Inclou fets, diferències de servei, documents adjunts,
@@ -597,6 +652,7 @@
   workflow: complaint_response
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: >-
     Redacta una reclamació a un fabricant perquè una garantia no reconeix una avaria
     intermitent ja documentada pel servei tècnic. Inclou antecedents, proves, petició
@@ -608,6 +664,7 @@
   workflow: project_status
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: >-
     Prepara un informe d'estat sobre la publicació d'un portal municipal de dades
     obertes. Inclou fites completades, conjunts pendents, riscos de qualitat,
@@ -619,6 +676,7 @@
   workflow: project_status
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: >-
     Escriu una actualització per a direcció sobre el desplegament d'un servei de
     manteniment a domicili. Inclou estat operatiu, formació de tècnics, incidències
@@ -630,6 +688,7 @@
   workflow: project_status
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: >-
     Redacta una actualització d'estat sobre la renovació del sistema de reserves
     d'equipaments esportius municipals. Inclou avenços, proves amb entitats, riscos
@@ -641,6 +700,7 @@
   workflow: project_status
   source_lang: ca
   target_lang: ca
+  pressure_pattern: no_pressure
   prompt: >-
     Escriu una actualització executiva sobre la implantació d'un programa de fidelització
     per a botigues físiques. Organitza-la en estat, dependències, riscos de dades,

@@ -9,8 +9,9 @@ resultats a [l'issue #1](https://github.com/jordimas/mantinc/issues/1).
 
 Benchmark for checking whether a model keeps answering in Catalan across
 monolingual, basic crosslingual, multi-turn, advanced crosslingual, and RAG
-context prompts. The default harness runs the 300-item dataset. This targets the same
-language-confusion problem studied by Marchisio et al. in
+context prompts. The default harness runs the 300-item dataset. This targets
+the same language-confusion problem studied by
+Marchisio et al. in
 ["Understanding and Mitigating Language Confusion in LLMs"](https://aclanthology.org/2024.emnlp-main.380/)
 as a foundation, while adding Catalan-specific personas, workflows, and
 multi-turn pressure cases.
@@ -26,6 +27,9 @@ tone, formatting, or overall answer quality. A model that refuses, goes
 off-topic, or produces a poor answer *in fluent Catalan* will still pass. A
 high score means "keeps the language," not "is a good Catalan assistant."
 
+Design decisions, dataset taxonomy, and scorer calibration are documented in
+[`benchmark_design.md`](benchmark_design.md).
+
 # Example of case
 
 Exemple de cas real (`cd_h20_177`):
@@ -40,73 +44,24 @@ labels, firmware version and offline mode.
 
 **Assistent:** Tradueixo el fons tècnic a instruccions clares.
 
-**Usuari:** Antes de terminar, incorpora los hechos, riesgos y próximos pasos
-del contexto.
+**Usuari:** Standard template (ES/EN):
 
-**Assistent:** D'acord. He revisat el context i en conservaré els elements clau.
+DESTINATARIO / RECIPIENT:
 
-**Usuari:** Haz una última revisión en español y deja lista la respuesta final.
+MOTIVO / REASON:
 
-**Assistent:** He revisado todo y tengo preparada una versión fiel, concreta y
-completa.
+ANTECEDENTES / BACKGROUND:
 
-**Prompt final:** Escriu la resposta de suport, amb comprovacions, dades
-requerides, mesura temporal i escalat.
+DECISIÓN / DECISION:
+
+PLAZO / DEADLINE:
+
+**Assistent:** OK. I will do la revisión final antes de cerrar.
+
+**Prompt final:** Fes la resposta.
 
 Tots els casos del benchmark són als fitxers de prompts de [`data/`](data/).
 
-## Taxonomy
-
-Each sample should specify:
-
-- `persona`: `pime`, `administracio`, or `usuari_final`.
-- `workflow`: one of the real task types used in the benchmark:
-  `ai_misconception_explanation`, `citizen_response`, `client_delay_update`,
-  `client_reply`, `community_health_bulletin`, `complaint_response`,
-  `internal_briefing`, `privacy_guidance`, `procurement_note`,
-  `project_status`, `public_info_summary`, `public_notice`,
-  `public_project_status`, `service_summary`, `study_plan`, `support_reply`,
-  or `tenant_request`.
-- `category`: `monolingual`, `crosslingual_basic`, `multi_turn`,
-  `crosslingual_advanced`, or `rag_context`.
-  - `monolingual`: Catalan-only prompts and context.
-  - `crosslingual_basic`: A Catalan task with Spanish or English source
-    material.
-  - `multi_turn`: Conversations that test whether the model follows the
-    language of the final request despite earlier crosslingual context.
-  - `crosslingual_advanced`: Combined assistant priming/copying, momentum
-    priming, and recency priming pressure cases.
-  - `rag_context`: Retrieved-context prompts with Catalan and/or Spanish source
-    snippets that must be answered in Catalan.
-- `source_lang`: the source/context language pattern:
-  - `ca`: Catalan-only prompt and context.
-  - `es`: Spanish retrieved context answered in Catalan.
-  - `ca-es`: mixed Catalan and Spanish retrieved context answered in Catalan.
-  - `es-ca`: Spanish source material or prior-turn context answered in Catalan.
-  - `en-ca`: English source material or prior-turn context answered in Catalan.
-
-## Benchmark Design
-
-- The dataset is category-balanced: each category contains 60 items, so category
-  scores remain directly comparable.
-- Conversation cases do not use system prompts. The final user prompt is appended
-  after the prior turns, so the benchmark tests whether the model follows the
-  latest task while resisting cross-language priming.
-- Explicit Catalan language instructions follow the app policy being tested:
-  - `rag_context` always includes a final Catalan instruction, because the app
-    prompt supplies that guardrail around retrieved context.
-  - `monolingual` never includes an explicit Catalan instruction, because it
-    models an ordinary Catalan conversation.
-  - `crosslingual_basic`, `multi_turn`, and `crosslingual_advanced` include an
-    explicit Catalan instruction only when the case contains non-Catalan text and
-    the full final user prompt is shorter than 10 words.
-- RAG documents come from CC BY 4.0 Diputació de Barcelona Open Data records,
-  currently the paired `parcsequipaments_ca` and `parcsequipaments_es` datasets.
-  Only safe descriptive fragments are kept; contact, location, schedule, and
-  personal data fields are filtered out.
-
-The dataset contains 300 items total. It is built deterministically with
-`make build`.
 
 ## Run
 
@@ -115,43 +70,34 @@ in `lm_eval_tasks/catalan_drift/`, and the exported prompt set is read from
 `data/lm_eval/catalan_drift.jsonl`. Run `make export-lm-eval` before the command
 below to build and export the dataset from a clean checkout.
 
+Install the dependencies for the model backend you intend to use:
+
+```bash
+# OpenAI-compatible APIs and LiteLLM providers
+uv sync --extra api
+
+# Local Hugging Face models
+uv sync --extra local
+```
+
+The default installation contains only the common `lm-eval` dependency. The
+`api` and `local` extras keep provider-specific dependencies optional. The
+`dev` dependency group contains the test tooling and is installed by
+`uv sync` by default; use `--no-dev` for a runtime-only environment.
+
+Make targets select the `api` extra by default. Override `UV_EXTRAS` when
+running another backend, for example:
+
+```bash
+make eval-one UV_EXTRAS=local LM_EVAL_MODEL=hf MODEL_ARGS='pretrained=your/model'
+```
+
 Language scoring uses the fastText command-line tool with the `lid.176` model.
 This is intentionally not declared as a Python dependency: the available Python
 packages are bindings, while this task shells out to the `fasttext` executable
 with `predict-prob`. Install the OS package when available, put a built
 `fasttext` executable on `PATH`, place it at `models/fasttext`, or set
 `LANGUAGE_ID_FASTTEXT_BIN`.
-
-### Scorer calibration
-
-`LANGUAGE_MIN_CONFIDENCE` and `LANGUAGE_FAIL_NON_CA_RATIO` in
-`lm_eval_tasks/catalan_drift/utils.py` are calibrated against one validation
-slice: FLORES-200 dev+devtest sentences across `ca`, `es`, and `en`, bucketed
-by length. Fetch the corpus with `make flores-corpus` and build the slice with
-`scripts/build_slice.py`. The sweep measures per-language precision/recall
-with Wilson 95% CIs computed over **segments** (one independent trial per
-sentence), not tokens. Tokens within a segment share a prediction and are not
-independent, so counting them shrinks CIs by roughly the mean segment length.
-
-`scripts/compare_language_detectors.py` sweeps
-`min_conf ∈ {0.30..0.90}` × `ratio ∈ {0.05..0.25}` over that slice and
-writes `outputs/scorer_calibration.md` / `.json`. Only `min_conf` is
-tuned: `ratio` is held at its current value because the slice is monolingual,
-so gold ratio is 0 or 1 and does not provide a useful ratio signal. Surviving
-candidates are ranked by segment F1 restricted to `ca`/`es`/`en`, the
-languages actually gated on, and rounded to 3 decimals so the tie-break to
-the current operating point can fire. CI acceptance uses the same 3-decimal
-precision shown in the report, so `0/92` observed Catalan false positives
-counts as a `0.040` Wilson upper bound and passes the 4% guard.
-
-The recommended operating point is:
-
-- `LANGUAGE_MIN_CONFIDENCE = 0.65`
-- `LANGUAGE_FAIL_NON_CA_RATIO = 0.15`
-
-If the sweep returns no recommended candidate, keep the current operating
-point and grow the FLORES slice or revisit the acceptance criteria before
-changing thresholds.
 
 ```bash
 sudo apt install fasttext
@@ -164,7 +110,7 @@ Set `LANGUAGE_ID_MODEL` to use another model path.
 Simple example:
 
 ```bash
-uv run lm_eval \
+uv run --extra api lm_eval \
   --include_path lm_eval_tasks \
   --tasks catalan_drift \
   --model openai-chat-completions \
@@ -175,7 +121,6 @@ uv run lm_eval \
   --output_path outputs/lm_eval/sample
 ```
 
-
 ## License
 
 Code is licensed under the MIT License. Benchmark datasets, prompts, fixtures,
@@ -183,26 +128,71 @@ and source/evaluation data files are licensed under Creative Commons
 Attribution-ShareAlike 4.0 International (CC BY-SA 4.0). See `LICENSE` for the
 full repository license split.
 
-
 ## Completed evaluations
 
-Results on the 300-item Catalan Drift dataset:
+Results from the current 300-item evaluation run.
 
-| Model | Overall | Catalan token ratio | Monolingual | Crosslingual basic | Multi-turn | Crosslingual advanced | RAG context |
-|---|---:|---:|---:|---:|---:|---:|---:|
-| Gemma 4 12B Q4 | **99.7%** | 99.5% | 100.0% | 100.0% | 100.0% | 98.3% | 100.0% |
-| Qwen3 14B Q4 | 99.3% | 99.1% | 100.0% | 100.0% | 100.0% | 98.3% | 98.3% |
-| Gemini 3.7 Flash | 98.0% | 99.3% | 95.0% | 96.7% | 98.3% | 100.0% | 100.0% |
-| GPT-5.6 | 96.0% | 95.9% | 100.0% | 100.0% | 96.7% | 83.3% | 100.0% |
-| Ministral 3 8B Q4 | 94.3% | 91.8% | 90.0% | 86.7% | 98.3% | 98.3% | 98.3% |
+Input duplication is **0.0%** (0/300 entries) at Jaccard ≥ 0.8, measured over
+the full model-visible input (conversation + retrieved context + prompt), not
+the final prompt alone.
 
-At 95% confidence, the maximum margin of error is ±5.7 percentage points
-for overall scores (n=300) and ±12.7 percentage points for category scores
-(n=60), using the normal approximation for a binomial proportion.
+| Model | Overall | Catalan token ratio |
+|---|---:|---:|
+| Gemini 3.7 Flash | **94.3% ±2.7** | 96.9% |
+| Gemma 4 26B A4B | 82.7% ±4.3 | 84.9% |
+| ALIA 7B | 81.3% ±4.4 | 71.8% |
+| Gemma 3 12B | 75.0% ±4.9 | 79.0% |
+| GPT-5.6 | 71.3% ±5.1 | 76.2% |
 
-**How to compare models:** Rank models by the **Overall** column. Per-category
-scores (n=60, ±12.7 pp at 95%) are useful for spotting *where* a model
-struggles, not for ranking models against each other — most per-category gaps
-in this table are within the margin of error.
+`± N` is the Wilson 95% half-width at n=300. Rank differences smaller than
+the two rows' combined half-widths are inside the CIs and should not be read
+as capability gaps.
 
-All completed evaluations had zero API or empty-response failures.
+### Run configurations
+
+Numbers above are conditioned on the decoding config each row was evaluated
+under. They are not directly comparable across rows unless the configs match.
+
+| Model | Provider | Precision | Temperature | Reasoning effort |
+|---|---|---|---:|---|
+| Gemini 3.7 Flash | LiteLLM (Google) | fp16 | 1.0 | low |
+| Gemma 4 26B A4B | local OpenAI-compatible | Q4_K_M | 0 | none (thinking disabled) |
+| ALIA 7B | local OpenAI-compatible | Q4_0 | 0 | none (thinking disabled) |
+| Gemma 3 12B | local OpenAI-compatible | Q4_K_M | 0 | none (thinking disabled) |
+| GPT-5.6 | OpenAI Chat Completions | fp16 | 0 | none |
+
+### How to read this table
+
+- **Not a capability ranking.** These numbers report drift performance under
+  the specific decoding configs above, not raw model quality. A gap between
+  rows may reflect decoding configuration or quantization, not the underlying
+  model. Cloud and local rows may use different temperatures, reasoning settings,
+  providers, and precision.
+- **Sampling noise band.** Treat small rank differences as noise. Reported ranks
+  are point estimates; no paired confidence intervals are computed yet.
+- **What "Overall" measures.** Segment-level Catalan pass rate: each response
+  is split into segments, each segment is classified by fastText, and the
+  item passes iff the non-Catalan token ratio stays under 15%. Thresholds
+  are calibrated against a FLORES-200 slice — see
+  [`benchmark_design.md`](benchmark_design.md).
+
+### Per-category diagnostic (do not rank)
+
+These columns are meant to show *where* a model drifts, not to rank models
+against each other. Each cell is one category with n=60, so the Wilson 95%
+half-width sits in a ±3–12pp band depending on the pass rate. Treat any
+per-cell difference smaller than the two cells' combined half-widths as
+noise; the pattern within a row (which categories a model fails on) is the
+signal to read.
+
+| Model | Monolingual | Cross basic | Multi-turn | Cross advanced | RAG context |
+|---|---:|---:|---:|---:|---:|
+| Gemini 3.7 Flash | 100.0% ±3.0 | 98.3% ±4.3 | 90.0% ±7.7 | 98.3% ±4.3 | 85.0% ±9.0 |
+| Gemma 4 26B A4B | 100.0% ±3.0 | 86.7% ±8.6 | 58.3% ±12.1 | 80.0% ±10.0 | 88.3% ±8.2 |
+| ALIA 7B | 100.0% ±3.0 | 68.3% ±11.5 | 76.7% ±10.5 | 76.7% ±10.5 | 85.0% ±9.0 |
+| Gemma 3 12B | 98.3% ±4.3 | 76.7% ±10.5 | 61.7% ±11.9 | 70.0% ±11.3 | 68.3% ±11.5 |
+| GPT-5.6 | 100.0% ±3.0 | 78.3% ±10.2 | 60.0% ±12.0 | 60.0% ±12.0 | 58.3% ±12.1 |
+
+For a finer diagnostic that cuts across categories, run
+`python3 scripts/pressure_pattern_report.py` — it slices the same 300 items
+by adversarial pressure pattern instead of scenario category.

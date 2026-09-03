@@ -39,6 +39,20 @@ def jaccard(left: set[str], right: set[str]) -> float:
     return len(left & right) / len(union) if union else 1.0
 
 
+def evaluated_input(row: dict) -> str:
+    """Return the full model-visible input for callers that need it."""
+    parts = [
+        str(turn.get("content") or "")
+        for turn in row.get("conversation") or []
+    ]
+    parts.extend(
+        str(chunk.get("text") or "")
+        for chunk in row.get("retrieved_context") or []
+    )
+    parts.append(str(row.get("prompt") or ""))
+    return "\n".join(parts)
+
+
 def render_html(rows_by_id, neighbors_by_id, top, min_score) -> str:
     cases_with_duplicates = {
         row_id: neighbors for row_id, neighbors in neighbors_by_id.items() if neighbors
@@ -64,7 +78,7 @@ def render_html(rows_by_id, neighbors_by_id, top, min_score) -> str:
         ".neighbor .snippet{white-space:pre-wrap;}",
         "</style></head><body>",
         "<header>",
-        f"<h1>Duplicate cases &mdash; top {top} neighbors (Jaccard &ge; {min_score:.2f} on normalized prompt tokens)</h1>",
+        f"<h1>Duplicate cases &mdash; top {top} neighbors (Jaccard &ge; {min_score:.2f} on normalized input tokens)</h1>",
         f"<div class=\"meta\">"
         f"{len(cases_with_duplicates)} of {len(rows_by_id)} cases have at least one duplicate above threshold"
         "</div>",
@@ -76,7 +90,7 @@ def render_html(rows_by_id, neighbors_by_id, top, min_score) -> str:
 
     for row_id, neighbors in cases_with_duplicates.items():
         row = rows_by_id[row_id]
-        prompt = str(row.get("prompt") or "")
+        prompt = evaluated_input(row)
         parts.append("<section class=\"case\">")
         parts.append(f"<h2>{html.escape(row_id)}</h2>")
         parts.append(
@@ -92,7 +106,7 @@ def render_html(rows_by_id, neighbors_by_id, top, min_score) -> str:
         parts.append("<div class=\"neighbors\">")
         for score, other_id in neighbors:
             other = rows_by_id[other_id]
-            snippet = str(other.get("prompt") or "")
+            snippet = evaluated_input(other)
             parts.append(
                 "<div class=\"neighbor\">"
                 f"<span class=\"id\">{html.escape(other_id)}</span>"
@@ -120,7 +134,7 @@ def main() -> None:
 
     rows = build_rows()
     ids = [str(row["id"]) for row in rows]
-    tokens = [token_set(str(row.get("prompt") or "")) for row in rows]
+    tokens = [token_set(evaluated_input(row)) for row in rows]
     rows_by_id = dict(zip(ids, rows, strict=True))
 
     n = len(rows)

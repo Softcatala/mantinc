@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from scripts.build_dataset import EXPECTED_CATEGORY_COUNTS, build_rows
+from scripts.build_dataset import EXPECTED_CATEGORY_COUNTS, build_rows, classify
 
 
 CATALAN_INSTRUCTION_RE = re.compile(r"\b(?:català|catalana|catalans|catalanes)\b", re.I)
@@ -39,6 +39,10 @@ class DatasetTest(unittest.TestCase):
             Counter(EXPECTED_CATEGORY_COUNTS),
         )
 
+    def test_pressure_pattern_labels(self) -> None:
+        for row in self.rows:
+            self.assertEqual(row["pressure_pattern"], classify(row), row["id"])
+
     def test_rows_do_not_contain_labels(self) -> None:
         self.assertTrue(all("labels" not in row for row in self.rows))
 
@@ -60,13 +64,34 @@ class DatasetTest(unittest.TestCase):
             with self.subTest(row=row["id"]):
                 category = row["category"]
                 has_instruction = mentions_catalan_instruction(row)
-                if category == "rag_context":
+                if row.get("harder_variant"):
+                    self.assertFalse(has_instruction)
+                elif category == "rag_context":
                     self.assertTrue(has_instruction)
                 elif category == "monolingual":
                     self.assertFalse(has_instruction)
                 else:
                     expected = row["source_lang"] != "ca" and final_prompt_word_count(row) < 10
                     self.assertEqual(has_instruction, expected)
+
+    def test_adversarial_pressure_is_distributed_across_task_categories(self) -> None:
+        categories = {row["category"] for row in self.rows}
+        for category in categories - {"monolingual"}:
+            rows = [row for row in self.rows if row["category"] == category]
+            self.assertTrue(any(row.get("harder_variant") for row in rows), category)
+
+    def test_category_matches_item_structure(self) -> None:
+        for row in self.rows:
+            with self.subTest(row=row["id"]):
+                self.assertEqual(
+                    bool(row.get("conversation")),
+                    row["category"] in {"multi_turn", "crosslingual_advanced"},
+                )
+                self.assertEqual(
+                    bool(row.get("retrieved_context")),
+                    row["category"] == "rag_context",
+                )
+                self.assertEqual(row["source_lang"] == "ca", row["category"] == "monolingual")
 
     def test_advanced_distribution_preserves_coverage(self) -> None:
         advanced = [row for row in self.rows if row["category"] == "crosslingual_advanced"]
