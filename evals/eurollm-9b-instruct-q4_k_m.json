@@ -28,10 +28,7 @@
     }
   },
   "created_at": "2026-09-02T03:06:56+02:00",
-  "git_branch": "harder",
   "git_commit": "c619fddd51d6a8d35d54e6945b7b1681c5f1899e",
-  "git_dirty": "true",
-  "git_status_sha256": "6cc03ee020edc91f1b24808145ae098d8dc35c7d1f60265437e861d138366af3",
   "inference_seconds": 2618.7564450280042,
   "model": "EuroLLM-9B-Instruct-Q4_K_M",
   "n": 300,

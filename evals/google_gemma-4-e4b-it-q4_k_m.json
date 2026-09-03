@@ -28,10 +28,7 @@
     }
   },
   "created_at": "2026-09-01T23:37:23+02:00",
-  "git_branch": "harder",
   "git_commit": "9741b37f6a5bd2aca76bea76c05076f9ca98ec52",
-  "git_dirty": "true",
-  "git_status_sha256": "6cc03ee020edc91f1b24808145ae098d8dc35c7d1f60265437e861d138366af3",
   "inference_seconds": 3932.2378365829936,
   "model": "google_gemma-4-E4B-it-Q4_K_M",
   "n": 300,

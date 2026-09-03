@@ -32,7 +32,7 @@ AI_LOCAL_MODELS ?= \
 	Ministral-3-8B-Instruct-2512-Q4_K_M \
 	salamandra-7b-instruct-2606.Q4_K_M
 LOCAL_OPENAI_BASE_URL ?= http://localhost:9090/v1/chat/completions
-LOCAL_NUM_CONCURRENT ?= 4
+LOCAL_NUM_CONCURRENT ?= 1
 GPT_GEN_KWARGS ?= {"temperature":0,"reasoning_effort":"none"}
 GEMINI_GEN_KWARGS ?= {"temperature":1,"reasoning_effort":"low"}
 GEMMA_NO_THINKING_GEN_KWARGS ?= {"temperature":0,"reasoning_effort":"none","chat_template_kwargs":{"enable_thinking":false}}
@@ -104,12 +104,9 @@ eval-one:
 	@start=$$(date +%s); \
 	start_iso=$$(date '+%Y-%m-%dT%H:%M:%S%z'); \
 	git_commit=$$(git rev-parse HEAD); \
-	git_branch=$$(git branch --show-current); \
-	git_status_sha256=$$(git status --porcelain | sha256sum | awk '{print $$1}'); \
-	git_dirty=$$(if test -n "$$(git status --porcelain)"; then echo true; else echo false; fi); \
 	printf '[%s] eval start: %s\n' "$(DISPLAY_MODEL)" "$$start_iso"; \
 	printf '%s\t%s\t%s\t%s\t%s\n' "$(RUN_NAME)" "$(DISPLAY_MODEL)" start "$$start_iso" "" >> "$(EVAL_TIMELINE)"; \
-	if $(LM_EVAL) --include_path lm_eval_tasks --tasks "$(TASK)" --model "$(LM_EVAL_MODEL)" --model_args "$(MODEL_ARGS)" --apply_chat_template --log_samples --output_path "$(OUT_DIR)" $(if $(LIMIT),--limit "$(LIMIT)",) $(if $(GEN_KWARGS),--gen_kwargs '$(GEN_KWARGS)',) && samples=$$(find "$(OUT_DIR)" -name 'samples_$(TASK)*.jsonl' | sort | tail -n 1) && $(PYTHON) scripts/catalan_drift_eval.py score-lm-eval --samples "$$samples" --model "$(DISPLAY_MODEL)" --provider "$(LM_EVAL_MODEL)" --responses-output "$(MODEL_OUT_DIR)/responses.jsonl" --report "$(MODEL_OUT_DIR)/report.json" --failures-file "$(MODEL_OUT_DIR)/failures.txt" --passes-file "$(MODEL_OUT_DIR)/passes.txt" --git-commit "$$git_commit" --git-branch "$$git_branch" --git-status-sha256 "$$git_status_sha256" --git-dirty "$$git_dirty"; then status=0; event=end; else status=$$?; event=failed; fi; \
+	if $(LM_EVAL) --include_path lm_eval_tasks --tasks "$(TASK)" --model "$(LM_EVAL_MODEL)" --model_args "$(MODEL_ARGS)" --apply_chat_template --log_samples --output_path "$(OUT_DIR)" $(if $(LIMIT),--limit "$(LIMIT)",) $(if $(GEN_KWARGS),--gen_kwargs '$(GEN_KWARGS)',) && samples=$$(find "$(OUT_DIR)" -name 'samples_$(TASK)*.jsonl' | sort | tail -n 1) && $(PYTHON) scripts/catalan_drift_eval.py score-lm-eval --samples "$$samples" --model "$(DISPLAY_MODEL)" --provider "$(LM_EVAL_MODEL)" --responses-output "$(MODEL_OUT_DIR)/responses.jsonl" --report "$(MODEL_OUT_DIR)/report.json" --failures-file "$(MODEL_OUT_DIR)/failures.txt" --passes-file "$(MODEL_OUT_DIR)/passes.txt" --git-commit "$$git_commit"; then status=0; event=end; else status=$$?; event=failed; fi; \
 	end_iso=$$(date '+%Y-%m-%dT%H:%M:%S%z'); \
 	elapsed=$$(($$(date +%s) - start)); \
 	printf '[%s] eval %s: %s (duration %ss)\n' "$(DISPLAY_MODEL)" "$$event" "$$end_iso" "$$elapsed"; \
