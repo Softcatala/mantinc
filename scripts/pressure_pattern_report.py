@@ -62,7 +62,7 @@ for did, pat in items.items():
 def short(m):
     for suf in ("-q4_k_m", "-instruct-2512"):
         m = m.replace(suf, "")
-    return m.replace("qwen_qwen", "qwen").replace("gemma-4-", "gemma-").replace("gemini-3.7-", "gemini-")
+    return m.replace("gemma-4-", "gemma-").replace("gemini-3.7-", "gemini-")
 
 
 def fail_rate(pattern, model):
