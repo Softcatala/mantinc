@@ -132,10 +132,6 @@ full repository license split.
 
 Results from the current 300-item evaluation run.
 
-Input duplication is **0.0%** (0/300 entries) at Jaccard ≥ 0.8, measured over
-the full model-visible input (conversation + retrieved context + prompt), not
-the final prompt alone.
-
 | Model | Overall | Catalan token ratio |
 |---|---:|---:|
 | Gemini 3.7 Flash | **94.3% ±2.7** | 96.9% |

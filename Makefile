@@ -30,7 +30,7 @@ AI_LOCAL_MODELS ?= \
 	google_gemma-3-4b-it-Q4_K_M \
 	aya-expanse-8b-Q4_K_M \
 	Ministral-3-8B-Instruct-2512-Q4_K_M \
-	salamandra-7b-instruct-2606.Q4_K_M
+	ALIA-7b-fc-2607-Q4_0
 LOCAL_OPENAI_BASE_URL ?= http://localhost:9090/v1/chat/completions
 LOCAL_NUM_CONCURRENT ?= 1
 GPT_GEN_KWARGS ?= {"temperature":0,"reasoning_effort":"none"}
