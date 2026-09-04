@@ -51,7 +51,7 @@ SKIP_EXPORT ?=
 LIMIT ?=
 EVAL_EXPORT_PREREQ := $(if $(SKIP_EXPORT),,export-lm-eval)
 HF_DATASET_REPO ?= softcatala/mantinc-catalan-drift
-HF_DATASET_FILES ?= data/lm_eval/catalan_drift.jsonl data/lm_eval/catalan_drift_harder.jsonl
+HF_DATASET_FILES ?= data/lm_eval/catalan_drift.jsonl
 VERSION ?=
 
 ifneq (,$(filter publish-dataset,$(MAKECMDGOALS)))
