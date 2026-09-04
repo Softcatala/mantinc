@@ -50,16 +50,6 @@ def _model_slug(model: str) -> str:
     return model.lower()
 
 
-def _rows_with_dataset(paths: list[str]) -> list[dict[str, Any]]:
-    rows = []
-    for path in paths:
-        for source_row in _rows(Path(path)):
-            row = dict(source_row)
-            row["dataset_yaml"] = path
-            rows.append(row)
-    return rows
-
-
 def _messages(row: dict[str, Any]) -> list[dict[str, str]] | None:
     if not row.get("conversation"):
         return None
@@ -156,7 +146,7 @@ def _sample_report_text(
 
 
 def export_lm_eval(args: argparse.Namespace) -> None:
-    rows = _rows_with_dataset(args.prompts)
+    rows = _rows_from_paths(args.prompts)
     for row in rows:
         row.pop("pressure_pattern", None)
         rag_prompt = _rag_prompt(row)
@@ -339,7 +329,6 @@ def _wall_seconds(timeline_path: Path, runs: list[str]) -> float | None:
 
 def summary_lm_eval(args: argparse.Namespace) -> None:
     category_table = [["Task", "Model", "Pass", "Fail", "API empty", "Non-empty", "Pass rate", "Lang pass", "Fail rate", "Inference"]]
-    dataset_table = [["Dataset YAML", "Model", "Pass", "Fail", "API empty", "Non-empty", "Pass rate", "Lang pass", "Fail rate", "Inference"]]
 
     def add_group_rows(table: list[list[str]], grouped: dict[str, list[dict[str, Any]]], run: str, inference: str) -> None:
         for group, rows in grouped.items():
@@ -365,15 +354,11 @@ def summary_lm_eval(args: argparse.Namespace) -> None:
         samples = _rows(samples_path)
         inference = _duration(_inference_seconds(samples_path, args.task))
         grouped: dict[str, list[dict[str, Any]]] = {"all": samples}
-        by_dataset: dict[str, list[dict[str, Any]]] = {}
         for sample in samples:
             doc = sample.get("doc", {})
             category = str(doc.get("category") or "unknown")
             grouped.setdefault(category, []).append(sample)
-            dataset = str(doc.get("dataset_yaml") or "unknown")
-            by_dataset.setdefault(dataset, []).append(sample)
         add_group_rows(category_table, grouped, run, inference)
-        add_group_rows(dataset_table, by_dataset, run, inference)
 
     def print_table(title: str, table: list[list[str]]) -> None:
         table[1:] = sorted(table[1:])
@@ -388,7 +373,6 @@ def summary_lm_eval(args: argparse.Namespace) -> None:
                 print("  ".join("-" * width for width in widths))
 
     print_table(f"lm-eval summary: {args.task}", category_table)
-    print_table("lm-eval summary by dataset YAML", dataset_table)
     print(f"\ntotal wall time: {_duration(_wall_seconds(Path(args.timeline), args.runs), 'unavailable')}")
 
 

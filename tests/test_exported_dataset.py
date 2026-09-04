@@ -18,7 +18,7 @@ with tempfile.TemporaryDirectory() as directory:
         )
     )
     ROWS = [json.loads(line) for line in output.read_text().splitlines()]
-COMMON = {"category", "dataset_yaml", "id", "persona", "prompt", "source_lang", "target_lang", "workflow"}
+COMMON = {"category", "id", "persona", "prompt", "source_lang", "target_lang", "workflow"}
 EXTRA = {
     "monolingual": set(),
     "crosslingual_basic": set(),
