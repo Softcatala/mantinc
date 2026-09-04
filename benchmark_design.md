@@ -47,12 +47,8 @@ Each sample should specify:
     crosslingual body content, reusable-template or closing pressure, and
     assistant priming before the final Catalan ask.
   - `rag_context`: Retrieved-context prompts answered in Catalan.
-    `rag_subtype` is `spanish_only` (30 items, 4 ES documents) or
-    `bilingual_ca_es` (30 items: 20 with 3 ES + 1 CA and 10 with 2 ES + 2 CA).
-- `harder_variant` (218 non-control items): adversarial pressure independent
-  of `category`: `template_es`, `template_mixed`, or `short_implicit`.
-- `rag_subtype` (only on `rag_context` items): `spanish_only` or
-  `bilingual_ca_es`.
+    `source_lang` distinguishes Spanish-only context from mixed Catalan and
+    Spanish context.
 - `pressure_pattern`: consolidated classification of the
   language-drift pressure carried by the item, used for cross-category
   slicing:

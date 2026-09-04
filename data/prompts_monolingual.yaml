@@ -1,6 +1,5 @@
 - id: cd_001
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: usuari_final
   workflow: ai_misconception_explanation
   source_lang: ca
@@ -11,7 +10,6 @@
     amb un exemple concret.'
 - id: cd_002
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: pime
   workflow: client_reply
   source_lang: ca
@@ -22,7 +20,6 @@
     proposada i to professional.
 - id: cd_003
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: administracio
   workflow: public_notice
   source_lang: ca
@@ -33,7 +30,6 @@
     i canal per fer arribar les consultes.
 - id: cd_004
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: administracio
   workflow: procurement_note
   source_lang: ca
@@ -44,7 +40,6 @@
     risc si s'ajorna.
 - id: cd_005
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: pime
   workflow: support_reply
   source_lang: ca
@@ -54,7 +49,6 @@
     al seu compte. Dona tres passos de comprovació i una frase final de seguiment.
 - id: cd_006
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: usuari_final
   workflow: complaint_response
   source_lang: ca
@@ -65,7 +59,6 @@
     raonable de resposta.
 - id: cd_007
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: pime
   workflow: project_status
   source_lang: ca
@@ -76,7 +69,6 @@
     accions.
 - id: cd_008
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: administracio
   workflow: community_health_bulletin
   source_lang: ca
@@ -86,7 +78,6 @@
     calor per a gent gran, amb quatre recomanacions pràctiques i un recordatori final.
 - id: cd_009
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: usuari_final
   workflow: study_plan
   source_lang: ca
@@ -96,7 +87,6 @@
     amb objectius diaris i criteris per saber si s'han assolit.
 - id: cd_010
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: usuari_final
   workflow: privacy_guidance
   source_lang: ca
@@ -107,7 +97,6 @@
     i comprovació final.
 - id: cd_100
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: pime
   workflow: client_reply
   source_lang: ca
@@ -120,7 +109,6 @@
     legals.
 - id: cd_101
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: administracio
   workflow: public_notice
   source_lang: ca
@@ -132,7 +120,6 @@
     i canal per comunicar incidències.
 - id: cd_102
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: pime
   workflow: project_status
   source_lang: ca
@@ -144,7 +131,6 @@
     aquesta setmana i criteris per autoritzar el llançament.
 - id: cd_103
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: administracio
   workflow: procurement_note
   source_lang: ca
@@ -156,7 +142,6 @@
     de seguretat i proper tràmit.
 - id: cd_104
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: pime
   workflow: support_reply
   source_lang: ca
@@ -169,7 +154,6 @@
     tranquil·litzador.
 - id: cd_105
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: usuari_final
   workflow: complaint_response
   source_lang: ca
@@ -181,7 +165,6 @@
     reserva d'accions futures.
 - id: cd_106
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: administracio
   workflow: complaint_response
   source_lang: ca
@@ -193,7 +176,6 @@
     i oferir un canal de seguiment sense sonar defensiva.
 - id: cd_107
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: pime
   workflow: client_reply
   source_lang: ca
@@ -205,7 +187,6 @@
     i quina alternativa mínima es pot validar en la reunió vinent.
 - id: cd_108
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: administracio
   workflow: project_status
   source_lang: ca
@@ -217,7 +198,6 @@
     que ha de prendre la comissió de seguiment.
 - id: cd_109
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: pime
   workflow: procurement_note
   source_lang: ca
@@ -229,7 +209,6 @@
     revisió.
 - id: cd_110
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: administracio
   workflow: public_notice
   source_lang: ca
@@ -239,7 +218,6 @@
     activitats esportives, terrasses, elements de façana i desplaçaments no essencials.
 - id: cd_111
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: pime
   workflow: project_status
   source_lang: ca
@@ -251,7 +229,6 @@
     i pròximes fites abans de tancar l''incident.'
 - id: cd_112
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: administracio
   workflow: procurement_note
   source_lang: ca
@@ -263,7 +240,6 @@
     de la durada i recomanació de contractació.
 - id: cd_113
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: pime
   workflow: support_reply
   source_lang: ca
@@ -275,7 +251,6 @@
     de seguretat, proposta de neteja, dades que cal enviar i termini estimat.
 - id: cd_114
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: usuari_final
   workflow: complaint_response
   source_lang: ca
@@ -287,7 +262,6 @@
     sol·licitud de rectificació i petició de confirmació escrita.
 - id: cd_115
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: administracio
   workflow: public_notice
   source_lang: ca
@@ -299,7 +273,6 @@
     afectats, actualització prevista i canal oficial.
 - id: cd_116
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: pime
   workflow: client_reply
   source_lang: ca
@@ -311,7 +284,6 @@
     terminis i persona de contacte.
 - id: cd_117
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: administracio
   workflow: project_status
   source_lang: ca
@@ -323,7 +295,6 @@
     requerida.
 - id: cd_118
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: pime
   workflow: procurement_note
   source_lang: ca
@@ -334,7 +305,6 @@
     calendari, risc de no actuar, responsabilitats internes i proposta de decisió.
 - id: cd_119
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: pime
   workflow: support_reply
   source_lang: ca
@@ -346,7 +316,6 @@
     criteri d'escalat i actualització prevista.
 - id: cd_200
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: usuari_final
   workflow: ai_misconception_explanation
   source_lang: ca
@@ -358,7 +327,6 @@
     que mostri per què cal supervisió humana.
 - id: cd_201
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: pime
   workflow: client_reply
   source_lang: ca
@@ -370,7 +338,6 @@
     explicació breu, proposta de recuperació, límit de responsabilitat i proper pas.
 - id: cd_202
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: administracio
   workflow: public_notice
   source_lang: ca
@@ -382,7 +349,6 @@
     afectades, alternativa de contacte, casos urgents i propera actualització.
 - id: cd_203
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: administracio
   workflow: procurement_note
   source_lang: ca
@@ -395,7 +361,6 @@
     següent.
 - id: cd_204
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: pime
   workflow: support_reply
   source_lang: ca
@@ -407,7 +372,6 @@
     comprovacions, dades necessàries, mesura temporal i termini de seguiment.
 - id: cd_205
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: usuari_final
   workflow: complaint_response
   source_lang: ca
@@ -419,7 +383,6 @@
     impacte, documentació disponible, petició concreta i termini raonable.
 - id: cd_206
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: pime
   workflow: project_status
   source_lang: ca
@@ -431,7 +394,6 @@
     incidències de conciliació, riscos comercials, decisions pendents i properes fites.
 - id: cd_207
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: administracio
   workflow: community_health_bulletin
   source_lang: ca
@@ -443,7 +405,6 @@
     per a familiars i un recordatori final de prudència.
 - id: cd_208
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: usuari_final
   workflow: study_plan
   source_lang: ca
@@ -455,7 +416,6 @@
     i criteris per decidir què reforçar.
 - id: cd_209
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: usuari_final
   workflow: privacy_guidance
   source_lang: ca
@@ -467,7 +427,6 @@
     de seguretat i comprovació final.
 - id: cd_210
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: pime
   workflow: client_reply
   source_lang: ca
@@ -479,7 +438,6 @@
     què es pot avançar, què falta confirmar i quina alternativa segura es proposa.
 - id: cd_211
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: pime
   workflow: client_reply
   source_lang: ca
@@ -491,7 +449,6 @@
     termini de decisió i persona de contacte.
 - id: cd_212
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: pime
   workflow: client_reply
   source_lang: ca
@@ -503,7 +460,6 @@
     proposta de nova sessió, límits i tancament professional.
 - id: cd_213
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: administracio
   workflow: public_notice
   source_lang: ca
@@ -515,7 +471,6 @@
     cursets, criteris de prioritat i canal de consultes.
 - id: cd_214
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: administracio
   workflow: public_notice
   source_lang: ca
@@ -527,7 +482,6 @@
     temporal, terminis i propera comunicació.
 - id: cd_215
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: administracio
   workflow: public_notice
   source_lang: ca
@@ -539,7 +493,6 @@
     de seguretat i canal per comunicar incidències.
 - id: cd_216
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: administracio
   workflow: procurement_note
   source_lang: ca
@@ -551,7 +504,6 @@
     fràgils, calendari, riscos de conservació i validació necessària.
 - id: cd_217
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: administracio
   workflow: procurement_note
   source_lang: ca
@@ -563,7 +515,6 @@
     protecció de dades, cost estimat i recomanació condicionada.
 - id: cd_218
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: pime
   workflow: procurement_note
   source_lang: ca
@@ -575,7 +526,6 @@
     indicadors d'impacte, riscos i recomanació.
 - id: cd_219
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: pime
   workflow: procurement_note
   source_lang: ca
@@ -587,7 +537,6 @@
     clients, riscos logístics, condicions de transició i decisió recomanada.
 - id: cd_220
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: pime
   workflow: support_reply
   source_lang: ca
@@ -599,7 +548,6 @@
     pendents. Inclou comprovacions, còpia de seguretat, dades a enviar i termini.
 - id: cd_221
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: pime
   workflow: support_reply
   source_lang: ca
@@ -611,7 +559,6 @@
     dades, informació que cal recollir i criteri d'escalat.
 - id: cd_222
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: pime
   workflow: support_reply
   source_lang: ca
@@ -623,7 +570,6 @@
     segures, solució temporal, dades necessàries i propera actualització.
 - id: cd_223
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: administracio
   workflow: complaint_response
   source_lang: ca
@@ -635,7 +581,6 @@
     adoptades, alternatives, terminis i canal de seguiment.
 - id: cd_224
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: usuari_final
   workflow: complaint_response
   source_lang: ca
@@ -647,7 +592,6 @@
     solució demanada i termini de resposta.
 - id: cd_225
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: usuari_final
   workflow: complaint_response
   source_lang: ca
@@ -659,7 +603,6 @@
     principal, alternativa acceptable i reserva d'accions.
 - id: cd_226
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: administracio
   workflow: project_status
   source_lang: ca
@@ -671,7 +614,6 @@
     validacions jurídiques, comunicació pública i decisió requerida.
 - id: cd_227
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: pime
   workflow: project_status
   source_lang: ca
@@ -683,7 +625,6 @@
     de planificació, impacte en clients, riscos i properes accions.
 - id: cd_228
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: administracio
   workflow: project_status
   source_lang: ca
@@ -695,7 +636,6 @@
     d'accessibilitat, calendari, comunicació i decisió pendent.
 - id: cd_229
   category: monolingual
-  source_dataset_yaml: data/prompts_monolingual.yaml
   persona: pime
   workflow: project_status
   source_lang: ca

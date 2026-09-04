@@ -1,6 +1,5 @@
 - id: cd_030
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: usuari_final
   workflow: ai_misconception_explanation
   source_lang: es-ca
@@ -24,10 +23,8 @@
 
 
     Explica un malentès comú sobre el tema descrit i corregeix-lo amb un exemple concret.'
-  harder_variant: template_es
 - id: cd_031
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: pime
   workflow: client_reply
   source_lang: es-ca
@@ -52,10 +49,8 @@
 
     Redacta una resposta professional al client. Ha de reconèixer la pressió, proposar una data de resposta
     i evitar copiar expressions del text original.'
-  harder_variant: template_es
 - id: cd_032
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: administracio
   workflow: public_notice
   source_lang: es-ca
@@ -80,10 +75,8 @@
 
 
     Prepara l''avís.'
-  harder_variant: template_es
 - id: cd_033
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: pime
   workflow: support_reply
   source_lang: en-ca
@@ -108,10 +101,8 @@
 
     Contesta com a equip de suport. Resumeix el problema, dona passos concrets i tanca amb una proposta
     de seguiment.'
-  harder_variant: template_es
 - id: cd_034
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: administracio
   workflow: procurement_note
   source_lang: es-ca
@@ -136,10 +127,8 @@
 
     Escriu una nota de contractació breu. Inclou criteri de selecció, termini, validació necessària i
     proper pas, sense copiar termes castellans.'
-  harder_variant: template_es
 - id: cd_035
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: usuari_final
   workflow: study_plan
   source_lang: es-ca
@@ -164,10 +153,8 @@
 
     Prepara un pla d''estudi d''una setmana a partir de la font. Ha de tenir fites diàries i un control
     de progrés.'
-  harder_variant: template_es
 - id: cd_036
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: pime
   workflow: project_status
   source_lang: es-ca
@@ -192,10 +179,8 @@
 
     Escriu una actualització de projecte per a direcció. Converteix la font en estat, risc, decisió necessària
     i propera acció.'
-  harder_variant: template_es
 - id: cd_037
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: administracio
   workflow: citizen_response
   source_lang: en-ca
@@ -221,10 +206,8 @@
 
     Redacta una resposta institucional a una consulta ciutadana. Inclou recepció de la consulta, actuació
     prevista, termini i informació de seguiment.'
-  harder_variant: template_es
 - id: cd_038
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: usuari_final
   workflow: complaint_response
   source_lang: es-ca
@@ -249,10 +232,8 @@
 
     Escriu una reclamació clara a partir de la font. Inclou què ha passat, què es demana, documents adjunts
     i termini de resposta.'
-  harder_variant: template_es
 - id: cd_039
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: usuari_final
   workflow: privacy_guidance
   source_lang: en-ca
@@ -277,10 +258,8 @@
 
     Dona una guia pràctica de privacitat basada en la font. Organitza la resposta en passos breus i evita
     mantenir la terminologia de la font.'
-  harder_variant: template_es
 - id: cd_130
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: pime
   workflow: client_reply
   source_lang: es-ca
@@ -306,10 +285,8 @@
     Redacta una resposta per a un client important. Ha de reconèixer la pressió, separar fets confirmats
     i punts pendents, proposar una mesura provisional i evitar compromisos legals o expressions del text
     original.'
-  harder_variant: template_es
 - id: cd_131
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: administracio
   workflow: public_notice
   source_lang: en-ca
@@ -334,10 +311,8 @@
 
     Escriu un avís públic amb títol, motiu, recomanacions per grups vulnerables, afectació a centres educatius,
     canals d''informació i propera actualització. No conservis expressions de la font.'
-  harder_variant: template_es
 - id: cd_132
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: pime
   workflow: support_reply
   source_lang: en-ca
@@ -362,10 +337,8 @@
 
     Contesta com a suport tècnic. Resumeix el problema, demana dades de verificació, proposa comprovacions
     ordenades, indica quan cal escalar i evita copiar la terminologia de la font.'
-  harder_variant: template_es
 - id: cd_133
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: administracio
   workflow: procurement_note
   source_lang: es-ca
@@ -390,10 +363,8 @@
 
     Escriu una nota de contractació que expliqui la situació, identifiqui els riscos, proposi comprovacions
     i indiqui el proper tràmit. No copiïs termes castellans de la font.'
-  harder_variant: template_es
 - id: cd_134
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: usuari_final
   workflow: complaint_response
   source_lang: en-ca
@@ -418,10 +389,8 @@
 
     Escriu una reclamació formal a una companyia aèria. Inclou fets, impacte, documentació adjunta, petició
     concreta i termini de resposta, sense conservar les expressions de la font.'
-  harder_variant: template_es
 - id: cd_135
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: pime
   workflow: project_status
   source_lang: es-ca
@@ -446,10 +415,8 @@
 
     Escriu una actualització de projecte per a direcció amb resum, avenços, bloquejos, impacte en calendari,
     decisions necessàries i properes accions. Evita copiar expressions castellanes.'
-  harder_variant: template_es
 - id: cd_136
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: administracio
   workflow: complaint_response
   source_lang: en-ca
@@ -475,10 +442,8 @@
     Redacta una resposta institucional a una queixa ciutadana. Ha de reconèixer la recepció, explicar
     l''actuació prevista, aclarir terminis i indicar responsable de seguiment, sense mantenir expressions
     de la font.'
-  harder_variant: template_es
 - id: cd_137
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: pime
   workflow: client_reply
   source_lang: en-ca
@@ -504,10 +469,8 @@
     Respon a un client que pressiona per canviar condicions comercials. La resposta ha de ser breu però
     clara: límit del que es pot prometre, alternativa viable, dades pendents i següent punt de decisió.
     No copiïs el vocabulari de la font.'
-  harder_variant: template_es
 - id: cd_138
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: administracio
   workflow: public_notice
   source_lang: es-ca
@@ -532,10 +495,8 @@
 
     Escriu un avís públic clar i operatiu. Inclou títol, motiu, horari, col·lectius prioritaris, alternativa
     disponible i propera comunicació. No reprodueixis expressions castellanes.'
-  harder_variant: template_es
 - id: cd_139
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: pime
   workflow: procurement_note
   source_lang: en-ca
@@ -560,10 +521,8 @@
 
     Redacta una nota interna per decidir entre proveïdors. Inclou criteris tècnics, econòmics, legals
     i operatius, riscos de dependència i recomanació condicionada. Evita conservar termes de la font.'
-  harder_variant: template_es
 - id: cd_140
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: pime
   workflow: support_reply
   source_lang: es-ca
@@ -588,10 +547,8 @@
 
     Contesta com a suport de comerç electrònic. Dona una resposta amb diagnosi, passos per evitar pèrdua
     de dades, informació que cal enviar, criteri de prioritat i tancament empàtic. No copiïs termes castellans.'
-  harder_variant: template_mixed
 - id: cd_141
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: administracio
   workflow: project_status
   source_lang: en-ca
@@ -616,10 +573,8 @@
 
     Escriu un informe d''estat per a un projecte públic. Organitza''l en avenços, desviacions, riscos,
     impacte pressupostari i decisions del grup de seguiment. No mantinguis expressions de la font.'
-  harder_variant: template_mixed
 - id: cd_142
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: usuari_final
   workflow: complaint_response
   source_lang: es-ca
@@ -643,10 +598,8 @@
 
 
     Redacta la reclamació.'
-  harder_variant: template_mixed
 - id: cd_143
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: administracio
   workflow: procurement_note
   source_lang: en-ca
@@ -671,10 +624,8 @@
 
     Redacta una nota de contractació d''urgència amb justificació, límits, comprovacions prèvies, evidències
     que cal conservar i control posterior. Evita el lèxic de la font.'
-  harder_variant: template_mixed
 - id: cd_144
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: pime
   workflow: client_reply
   source_lang: es-ca
@@ -699,10 +650,8 @@
 
     Redacta una resposta comercial que ordeni una situació confusa, confirmi què es pot fer, què requereix
     validació escrita i com es tancarà el pressupost. No traslladis expressions castellanes.'
-  harder_variant: template_mixed
 - id: cd_145
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: administracio
   workflow: public_notice
   source_lang: en-ca
@@ -727,10 +676,8 @@
 
     Escriu un avís de servei d''atenció ciutadana amb causa, afectació, mesures provisionals, priorització,
     canals alternatius i propera actualització. No copiïs expressions de la font.'
-  harder_variant: template_mixed
 - id: cd_146
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: pime
   workflow: project_status
   source_lang: en-ca
@@ -754,10 +701,8 @@
 
 
     Fes l''actualització.'
-  harder_variant: template_mixed
 - id: cd_147
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: pime
   workflow: support_reply
   source_lang: es-ca
@@ -781,10 +726,8 @@
 
 
     Fes la resposta.'
-  harder_variant: template_mixed
 - id: cd_148
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: administracio
   workflow: complaint_response
   source_lang: es-ca
@@ -809,10 +752,8 @@
 
     Redacta una resposta municipal a una queixa de neteja viària. Inclou disculpa institucional, verificació
     prevista, mesura temporal, seguiment i canal per aportar noves dades. No conservis expressions castellanes.'
-  harder_variant: template_mixed
 - id: cd_149
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: usuari_final
   workflow: complaint_response
   source_lang: en-ca
@@ -838,10 +779,8 @@
     Escriu una reclamació a un fabricant. Inclou cronologia, problema tècnic, documentació disponible,
     solució demanada, alternativa acceptable i termini de resposta. No mantinguis les expressions de la
     font.'
-  harder_variant: template_mixed
 - id: cd_230
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: usuari_final
   workflow: ai_misconception_explanation
   source_lang: es-ca
@@ -866,10 +805,8 @@
 
 
     Fes l''explicació.'
-  harder_variant: template_mixed
 - id: cd_231
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: administracio
   workflow: citizen_response
   source_lang: en-ca
@@ -894,10 +831,8 @@
 
     Redacta una resposta institucional a una consulta ciutadana. Inclou recepció, estat de revisió, documentació
     pendent, termini orientatiu i canal de seguiment.'
-  harder_variant: template_mixed
 - id: cd_232
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: pime
   workflow: client_reply
   source_lang: es-ca
@@ -922,10 +857,8 @@
 
     Escriu una resposta professional a un client. Ha de reconèixer el retard, separar dades pendents i
     compensació possible, proposar calendari i evitar copiar expressions del text original.'
-  harder_variant: template_mixed
 - id: cd_233
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: pime
   workflow: client_reply
   source_lang: en-ca
@@ -950,10 +883,8 @@
 
     Redacta un correu breu per a un client. Inclou situació, límit del que es pot confirmar, informació
     pendent, alternativa viable i proper pas.'
-  harder_variant: template_mixed
 - id: cd_234
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: pime
   workflow: client_reply
   source_lang: es-ca
@@ -978,10 +909,8 @@
 
     Escriu una resposta a un client que pressiona per llançar una acció comercial. Mantén un to col·laboratiu,
     indica què es pot avançar, què falta validar i quin calendari és prudent.'
-  harder_variant: template_mixed
 - id: cd_235
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: pime
   workflow: client_reply
   source_lang: en-ca
@@ -1006,10 +935,8 @@
 
     Escriu una resposta equilibrada a un client B2B. Inclou disculpa prudent, verificació, solució provisional,
     límits sobre compensacions i següent actualització.'
-  harder_variant: template_mixed
 - id: cd_236
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: usuari_final
   workflow: complaint_response
   source_lang: en-ca
@@ -1034,10 +961,8 @@
 
     Escriu una reclamació formal. Inclou cronologia, impacte, documents adjunts, petició concreta i termini
     de resposta, sense conservar expressions de la font.'
-  harder_variant: template_mixed
 - id: cd_237
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: administracio
   workflow: complaint_response
   source_lang: es-ca
@@ -1062,10 +987,8 @@
 
     Redacta una resposta municipal a una queixa tributària. Ha de reconèixer la recepció, explicar comprovacions,
     indicar documentació útil, termini i canal de seguiment.'
-  harder_variant: template_mixed
 - id: cd_238
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: usuari_final
   workflow: complaint_response
   source_lang: es-ca
@@ -1090,10 +1013,8 @@
 
     Escriu una reclamació a una companyia de transport. Inclou fets, conseqüències, proves disponibles,
     solució demanada i petició de confirmació.'
-  harder_variant: template_mixed
 - id: cd_239
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: administracio
   workflow: complaint_response
   source_lang: en-ca
@@ -1118,10 +1039,8 @@
 
     Redacta una resposta institucional a una queixa veïnal. Inclou reconeixement, actuació immediata,
     verificació prevista, terminis i canal per aportar més informació.'
-  harder_variant: template_mixed
 - id: cd_240
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: usuari_final
   workflow: complaint_response
   source_lang: en-ca
@@ -1132,10 +1051,8 @@
 
 
     Redacta la reclamació.'
-  harder_variant: short_implicit
 - id: cd_241
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: usuari_final
   workflow: complaint_response
   source_lang: es-ca
@@ -1146,10 +1063,8 @@
 
 
     Redacta la reclamació.'
-  harder_variant: short_implicit
 - id: cd_242
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: usuari_final
   workflow: privacy_guidance
   source_lang: en-ca
@@ -1160,10 +1075,8 @@
 
 
     Dona''m els passos.'
-  harder_variant: short_implicit
 - id: cd_243
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: administracio
   workflow: procurement_note
   source_lang: es-ca
@@ -1174,10 +1087,8 @@
 
 
     Redacta la nota.'
-  harder_variant: short_implicit
 - id: cd_244
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: administracio
   workflow: procurement_note
   source_lang: en-ca
@@ -1188,10 +1099,8 @@
 
 
     Redacta la nota.'
-  harder_variant: short_implicit
 - id: cd_245
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: pime
   workflow: procurement_note
   source_lang: es-ca
@@ -1202,10 +1111,8 @@
 
 
     Redacta la nota.'
-  harder_variant: short_implicit
 - id: cd_246
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: pime
   workflow: procurement_note
   source_lang: en-ca
@@ -1216,10 +1123,8 @@
 
 
     Redacta la nota.'
-  harder_variant: short_implicit
 - id: cd_247
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: pime
   workflow: project_status
   source_lang: en-ca
@@ -1230,10 +1135,8 @@
 
 
     Fes l''actualització.'
-  harder_variant: short_implicit
 - id: cd_248
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: administracio
   workflow: project_status
   source_lang: es-ca
@@ -1244,10 +1147,8 @@
 
 
     Fes l''actualització.'
-  harder_variant: short_implicit
 - id: cd_249
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: administracio
   workflow: project_status
   source_lang: en-ca
@@ -1258,10 +1159,8 @@
 
 
     Fes l''actualització.'
-  harder_variant: short_implicit
 - id: cd_250
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: pime
   workflow: project_status
   source_lang: es-ca
@@ -1272,10 +1171,8 @@
 
 
     Fes l''actualització.'
-  harder_variant: short_implicit
 - id: cd_251
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: administracio
   workflow: public_notice
   source_lang: en-ca
@@ -1286,10 +1183,8 @@
 
 
     Prepara l''avís.'
-  harder_variant: short_implicit
 - id: cd_252
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: administracio
   workflow: public_notice
   source_lang: es-ca
@@ -1300,10 +1195,8 @@
 
 
     Prepara l''avís.'
-  harder_variant: short_implicit
 - id: cd_253
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: administracio
   workflow: public_notice
   source_lang: en-ca
@@ -1314,10 +1207,8 @@
 
 
     Prepara l''avís.'
-  harder_variant: short_implicit
 - id: cd_254
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: administracio
   workflow: public_notice
   source_lang: es-ca
@@ -1328,10 +1219,8 @@
 
 
     Prepara l''avís.'
-  harder_variant: short_implicit
 - id: cd_255
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: usuari_final
   workflow: study_plan
   source_lang: en-ca
@@ -1342,10 +1231,8 @@
 
 
     Fes el pla.'
-  harder_variant: short_implicit
 - id: cd_256
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: pime
   workflow: support_reply
   source_lang: en-ca
@@ -1356,10 +1243,8 @@
 
 
     Fes la resposta.'
-  harder_variant: short_implicit
 - id: cd_257
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: pime
   workflow: support_reply
   source_lang: es-ca
@@ -1370,10 +1255,8 @@
 
 
     Fes la resposta.'
-  harder_variant: short_implicit
 - id: cd_258
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: pime
   workflow: support_reply
   source_lang: en-ca
@@ -1384,10 +1267,8 @@
 
 
     Fes la resposta.'
-  harder_variant: short_implicit
 - id: cd_259
   category: crosslingual_basic
-  source_dataset_yaml: data/prompts_crosslingual_basic.yaml
   persona: pime
   workflow: support_reply
   source_lang: es-ca
@@ -1398,4 +1279,3 @@
 
 
     Fes la resposta.'
-  harder_variant: short_implicit

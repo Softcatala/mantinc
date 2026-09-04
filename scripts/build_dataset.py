@@ -26,31 +26,16 @@ EXPECTED_CATEGORY_COUNTS = {
     "crosslingual_advanced": 60,
     "rag_context": 60,
 }
-
-
-def classify(row: dict[str, Any]) -> str:
-    category = row.get("category", "")
-    source_lang = row.get("source_lang", "")
-    if category == "monolingual":
-        return "no_pressure"
-    if row.get("harder_variant"):
-        return f"harder_{row['harder_variant']}"
-    if category == "crosslingual_basic":
-        return "inline_source_es" if source_lang == "es-ca" else "english_or_trilingual"
-    if category == "multi_turn":
-        return "midconv_es_recency" if source_lang == "es-ca" else "english_or_trilingual"
-    if category == "rag_context":
-        return "rag_context"
-    if category == "crosslingual_advanced":
-        prior = " ".join(
-            turn.get("content", "")
-            for turn in row.get("conversation", [])
-            if turn.get("role") == "user"
-        )
-        if "Reusable template" in prior or source_lang in {"en-es-ca", "es-en-ca"}:
-            return "english_or_trilingual"
-        return "midconv_es_recency"
-    return "unknown"
+VALID_PRESSURE_PATTERNS = {
+    "no_pressure",
+    "english_or_trilingual",
+    "inline_source_es",
+    "midconv_es_recency",
+    "rag_context",
+    "harder_template_es",
+    "harder_template_mixed",
+    "harder_short_implicit",
+}
 
 
 def load_rows(path: Path) -> list[dict[str, Any]]:
@@ -61,7 +46,6 @@ def build_rows() -> list[dict[str, Any]]:
     rows: list[dict[str, Any]] = []
     for category, source in SOURCES.items():
         category_rows = load_rows(source)
-        expected_source = str(source.relative_to(ROOT))
         expected_count = EXPECTED_CATEGORY_COUNTS[category]
         if len(category_rows) != expected_count:
             raise ValueError(
@@ -71,10 +55,6 @@ def build_rows() -> list[dict[str, Any]]:
             if row.get("category") != category:
                 raise ValueError(
                     f"{row.get('id')} in {source} has category {row.get('category')!r}"
-                )
-            if row.get("source_dataset_yaml") != expected_source:
-                raise ValueError(
-                    f"{row.get('id')} must reference {expected_source}"
                 )
         rows.extend(category_rows)
 
@@ -101,7 +81,6 @@ def validate_rows(rows: list[dict[str, Any]]) -> None:
         "source_lang",
         "target_lang",
         "prompt",
-        "source_dataset_yaml",
         "pressure_pattern",
     }
     for row in rows:
@@ -110,18 +89,22 @@ def validate_rows(rows: list[dict[str, Any]]) -> None:
             raise ValueError(f"{row.get('id')} is missing fields: {sorted(missing)}")
         if row["target_lang"] != "ca":
             raise ValueError(f"{row['id']} must target Catalan")
-        if row.get("harder_variant") not in {
-            None,
-            "template_es",
-            "template_mixed",
-            "short_implicit",
-        }:
-            raise ValueError(f"{row['id']} has an invalid harder_variant")
-        if row["category"] == "monolingual" and row.get("harder_variant"):
-            raise ValueError(f"{row['id']} cannot harden the monolingual control")
-        if row["pressure_pattern"] != classify(row):
+        if row["pressure_pattern"] not in VALID_PRESSURE_PATTERNS:
             raise ValueError(f"{row['id']} has an invalid pressure_pattern")
-        if "labels" in row or "version" in row or "forbidden_terms" in row:
+        if (row["pressure_pattern"] == "no_pressure") != (
+            row["category"] == "monolingual"
+        ):
+            raise ValueError(f"{row['id']} has inconsistent pressure metadata")
+        if any(
+            field in row
+            for field in (
+                "labels",
+                "version",
+                "forbidden_terms",
+                "rag_subtype",
+                "harder_variant",
+            )
+        ):
             raise ValueError(f"{row['id']} contains unsupported metadata fields")
         conversation = row.get("conversation") or []
         if any(

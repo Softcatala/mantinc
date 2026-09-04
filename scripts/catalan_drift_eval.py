@@ -158,6 +158,7 @@ def _sample_report_text(
 def export_lm_eval(args: argparse.Namespace) -> None:
     rows = _rows_with_dataset(args.prompts)
     for row in rows:
+        row.pop("pressure_pattern", None)
         rag_prompt = _rag_prompt(row)
         if rag_prompt:
             row["user_prompt"] = row["prompt"]
@@ -165,6 +166,7 @@ def export_lm_eval(args: argparse.Namespace) -> None:
         messages = _messages(row)
         if messages:
             row["messages"] = messages
+            row.pop("conversation", None)
     output = Path(args.output)
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(

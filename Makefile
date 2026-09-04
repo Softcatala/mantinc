@@ -63,11 +63,14 @@ $(error VERSION must match vX format (e.g. v1, v1.1); got: $(VERSION))
 endif
 endif
 
-.PHONY: build clean-outputs language-id-model flores-corpus export-lm-eval eval eval-one eval-local-openai eval-summary all_ai_local_models publish-dataset
+.PHONY: build test clean-outputs language-id-model flores-corpus export-lm-eval eval eval-one eval-local-openai eval-summary all_ai_local_models publish-dataset
 .PHONY: $(CLOUD_EVAL_TARGETS) $(LOCAL_EVAL_TARGETS)
 
 build:
 	$(PYTHON) scripts/build_dataset.py
+
+test:
+	$(UV_RUN) pytest -q
 
 language-id-model: $(LANGUAGE_ID_MODEL)
 	@echo "Language ID model ready: $(LANGUAGE_ID_MODEL)"

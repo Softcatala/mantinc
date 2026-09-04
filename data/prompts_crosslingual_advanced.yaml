@@ -1,6 +1,5 @@
 - id: cd_h9_063
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: pime
   workflow: support_reply
   source_lang: en-ca
@@ -35,7 +34,6 @@
     de fus horari, la comprovació al mòbil i una via d'escalat clara.
 - id: cd_h9_064
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: administracio
   workflow: procurement_note
   source_lang: es-ca
@@ -68,10 +66,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Tanca la renovació documental.
-  harder_variant: template_es
 - id: cd_h9_065
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: usuari_final
   workflow: study_plan
   source_lang: en-ca
@@ -104,10 +100,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Planifica l'audició musical.
-  harder_variant: template_es
 - id: cd_h9_066
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: usuari_final
   workflow: privacy_guidance
   source_lang: en-es-ca
@@ -141,16 +135,13 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Ordena la privacitat de l'altaveu.
-  harder_variant: template_es
 - id: cd_h9_069
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: pime
   workflow: client_reply
   source_lang: es-ca
   target_lang: ca
   pressure_pattern: harder_template_es
-  harder_variant: template_es
   conversation:
   - role: user
     content: Som una empresa petita i hem de respondre una baixa parcial d'un servei
@@ -193,7 +184,6 @@
   prompt: Escriu la resposta de l'assistent com un correu breu.
 - id: cd_h9_166
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: administracio
   workflow: complaint_response
   source_lang: es-en-ca
@@ -227,10 +217,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Respon sobre la beca de menjador.
-  harder_variant: template_es
 - id: cd_h9_167
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: pime
   workflow: client_reply
   source_lang: en-ca
@@ -267,7 +255,6 @@
     la garantia de servei, la penalització i l'alternativa de factura consolidada.
 - id: cd_h9_175
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: administracio
   workflow: public_notice
   source_lang: en-ca
@@ -299,16 +286,13 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Anuncia el tancament del poliesportiu.
-  harder_variant: template_es
 - id: cd_h9_176
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: pime
   workflow: project_status
   source_lang: es-ca
   target_lang: ca
   pressure_pattern: harder_template_es
-  harder_variant: template_es
   conversation:
   - role: user
     content: Necessito un estat de projecte sobre una campanya de fidelització que
@@ -352,7 +336,6 @@
   prompt: Redacta l'actualització d'estat.
 - id: cd_h9_178
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: administracio
   workflow: complaint_response
   source_lang: en-ca
@@ -387,7 +370,6 @@
     la reparació prevista i el seguiment posterior.
 - id: cd_h19_061
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: administracio
   workflow: public_project_status
   source_lang: es-ca
@@ -421,10 +403,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Actualitza el procés del barri.
-  harder_variant: template_es
 - id: cd_h19_062
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: administracio
   workflow: public_notice
   source_lang: es-ca
@@ -456,10 +436,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Anuncia la poda del carrer.
-  harder_variant: template_es
 - id: cd_h19_068
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: usuari_final
   workflow: tenant_request
   source_lang: en-es-ca
@@ -490,10 +468,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Reclama el retorn de la fiança.
-  harder_variant: template_es
 - id: cd_h19_160
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: pime
   workflow: client_reply
   source_lang: es-en-ca
@@ -526,10 +502,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Respon sobre la implantació congelada.
-  harder_variant: template_es
 - id: cd_h19_162
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: pime
   workflow: support_reply
   source_lang: en-es-ca
@@ -563,7 +537,6 @@
     el correu brossa, l'informe necessari i el criteri d'escalat.
 - id: cd_h19_163
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: administracio
   workflow: procurement_note
   source_lang: es-ca
@@ -595,10 +568,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Justifica la interpretació del taller.
-  harder_variant: template_es
 - id: cd_h19_169
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: pime
   workflow: procurement_note
   source_lang: en-es-ca
@@ -631,7 +602,6 @@
     lliurament, el muntatge, la garantia i les verificacions necessàries.
 - id: cd_h19_170
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: pime
   workflow: support_reply
   source_lang: es-ca
@@ -663,10 +633,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Resol la importació del catàleg.
-  harder_variant: template_es
 - id: cd_h19_172
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: usuari_final
   workflow: complaint_response
   source_lang: es-en-ca
@@ -699,7 +667,6 @@
     suplement cobrat, els annexos aportats i la compensació demanada.
 - id: cd_h19_173
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: administracio
   workflow: procurement_note
   source_lang: en-es-ca
@@ -732,7 +699,6 @@
     la reserva de material, les rutes i el risc d'humitat.
 - id: cd_h20_060
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: pime
   workflow: client_delay_update
   source_lang: es-en-ca
@@ -763,10 +729,8 @@
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Comunica la reprogramació formativa.
-  harder_variant: template_mixed
 - id: cd_h20_067
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: administracio
   workflow: complaint_response
   source_lang: es-en-ca
@@ -798,10 +762,8 @@
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Respon sobre la mobilitat del mercat.
-  harder_variant: template_mixed
 - id: cd_h20_161
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: administracio
   workflow: public_notice
   source_lang: en-es-ca
@@ -833,10 +795,8 @@
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Publica-ho.
-  harder_variant: template_mixed
 - id: cd_h20_164
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: usuari_final
   workflow: complaint_response
   source_lang: es-en-ca
@@ -868,10 +828,8 @@
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Reclama la certificació formativa.
-  harder_variant: template_mixed
 - id: cd_h20_165
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: pime
   workflow: project_status
   source_lang: en-es-ca
@@ -903,10 +861,8 @@
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Actualitza la certificació ambiental.
-  harder_variant: template_mixed
 - id: cd_h20_168
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: administracio
   workflow: public_notice
   source_lang: es-en-ca
@@ -937,10 +893,8 @@
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Anuncia el trasllat de vacunació.
-  harder_variant: template_mixed
 - id: cd_h20_171
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: administracio
   workflow: project_status
   source_lang: en-es-ca
@@ -972,10 +926,8 @@
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Enllesteix el document.
-  harder_variant: template_mixed
 - id: cd_h20_174
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: pime
   workflow: client_reply
   source_lang: es-en-ca
@@ -1007,10 +959,8 @@
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Contesta ara.
-  harder_variant: template_mixed
 - id: cd_h20_177
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: pime
   workflow: support_reply
   source_lang: en-es-ca
@@ -1042,10 +992,8 @@
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Resol els escàners del magatzem.
-  harder_variant: template_mixed
 - id: cd_h20_179
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: usuari_final
   workflow: complaint_response
   source_lang: es-ca
@@ -1077,10 +1025,8 @@
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Reclama els danys de la mudança.
-  harder_variant: template_mixed
 - id: cd_h21_260
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: pime
   workflow: client_delay_update
   source_lang: es-ca
@@ -1112,10 +1058,8 @@
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Comunica el retard de la instal·lació.
-  harder_variant: template_mixed
 - id: cd_h21_261
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: pime
   workflow: client_reply
   source_lang: en-ca
@@ -1146,10 +1090,8 @@
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Dona-hi resposta.
-  harder_variant: template_mixed
 - id: cd_h21_262
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: pime
   workflow: client_reply
   source_lang: es-ca
@@ -1183,10 +1125,8 @@
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Resol-ho.
-  harder_variant: template_mixed
 - id: cd_h21_263
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: pime
   workflow: client_reply
   source_lang: en-ca
@@ -1218,10 +1158,8 @@
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Valora el pilot de plataforma.
-  harder_variant: template_mixed
 - id: cd_h21_264
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: pime
   workflow: client_reply
   source_lang: es-ca
@@ -1253,10 +1191,8 @@
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Aclareix els indicadors de servei.
-  harder_variant: template_mixed
 - id: cd_h21_265
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: administracio
   workflow: complaint_response
   source_lang: en-ca
@@ -1290,10 +1226,8 @@
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Respon sobre l'accés al jardí.
-  harder_variant: template_mixed
 - id: cd_h21_266
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: usuari_final
   workflow: complaint_response
   source_lang: es-ca
@@ -1324,10 +1258,8 @@
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Reclama la baixa del gimnàs.
-  harder_variant: template_mixed
 - id: cd_h21_267
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: administracio
   workflow: complaint_response
   source_lang: en-ca
@@ -1359,10 +1291,8 @@
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Respon per les molèsties de l'obra.
-  harder_variant: template_mixed
 - id: cd_h21_268
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: usuari_final
   workflow: complaint_response
   source_lang: es-ca
@@ -1393,10 +1323,8 @@
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Formula-la.
-  harder_variant: template_mixed
 - id: cd_h21_269
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: administracio
   workflow: complaint_response
   source_lang: en-ca
@@ -1429,10 +1357,8 @@
   - role: assistant
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Respon pel manteniment del cementiri.
-  harder_variant: template_mixed
 - id: cd_h21_270
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: usuari_final
   workflow: complaint_response
   source_lang: es-ca
@@ -1445,10 +1371,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Reclama la fiança de la bicicleta.
-  harder_variant: short_implicit
 - id: cd_h21_271
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: usuari_final
   workflow: privacy_guidance
   source_lang: en-ca
@@ -1483,10 +1407,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Ordena la privacitat del cotxe compartit.
-  harder_variant: short_implicit
 - id: cd_h21_272
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: administracio
   workflow: procurement_note
   source_lang: es-ca
@@ -1522,10 +1444,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Tanca la proposta.
-  harder_variant: short_implicit
 - id: cd_h21_273
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: administracio
   workflow: procurement_note
   source_lang: en-ca
@@ -1561,10 +1481,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Completa la fitxa.
-  harder_variant: short_implicit
 - id: cd_h21_274
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: administracio
   workflow: procurement_note
   source_lang: es-ca
@@ -1600,10 +1518,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Prepara el document.
-  harder_variant: short_implicit
 - id: cd_h21_275
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: pime
   workflow: procurement_note
   source_lang: en-ca
@@ -1638,10 +1554,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Presenta la comparativa.
-  harder_variant: short_implicit
 - id: cd_h21_276
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: pime
   workflow: project_status
   source_lang: en-ca
@@ -1676,10 +1590,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Actualitza la formació de clients.
-  harder_variant: short_implicit
 - id: cd_h21_277
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: pime
   workflow: project_status
   source_lang: es-ca
@@ -1692,10 +1604,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Actualitza la caixa i els terminals.
-  harder_variant: short_implicit
 - id: cd_h21_278
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: administracio
   workflow: project_status
   source_lang: en-ca
@@ -1731,10 +1641,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Actualitza el projecte de menjadors.
-  harder_variant: short_implicit
 - id: cd_h21_279
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: administracio
   workflow: public_notice
   source_lang: es-ca
@@ -1769,10 +1677,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Anuncia el canvi d'atenció presencial.
-  harder_variant: short_implicit
 - id: cd_h21_280
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: administracio
   workflow: public_notice
   source_lang: en-ca
@@ -1807,10 +1713,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Anuncia el tancament del centre cultural.
-  harder_variant: short_implicit
 - id: cd_h21_281
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: administracio
   workflow: public_notice
   source_lang: es-ca
@@ -1823,10 +1727,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Anuncia l'accés limitat al cementiri.
-  harder_variant: short_implicit
 - id: cd_h21_282
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: administracio
   workflow: public_notice
   source_lang: en-ca
@@ -1839,10 +1741,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Publica el comunicat.
-  harder_variant: short_implicit
 - id: cd_h21_283
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: administracio
   workflow: public_project_status
   source_lang: es-ca
@@ -1877,10 +1777,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Actualitza el projecte de mobilitat.
-  harder_variant: short_implicit
 - id: cd_h21_284
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: usuari_final
   workflow: study_plan
   source_lang: en-ca
@@ -1893,10 +1791,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Planifica la pràctica de conducció.
-  harder_variant: short_implicit
 - id: cd_h21_285
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: pime
   workflow: support_reply
   source_lang: en-ca
@@ -1909,10 +1805,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Resol l'exportació de nòmines.
-  harder_variant: short_implicit
 - id: cd_h21_286
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: pime
   workflow: support_reply
   source_lang: es-ca
@@ -1925,10 +1819,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Resol la cua de suport.
-  harder_variant: short_implicit
 - id: cd_h21_287
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: pime
   workflow: support_reply
   source_lang: en-ca
@@ -1941,10 +1833,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Resol la liquidació del terminal.
-  harder_variant: short_implicit
 - id: cd_h21_288
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: pime
   workflow: support_reply
   source_lang: es-ca
@@ -1957,10 +1847,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Respon-hi.
-  harder_variant: short_implicit
 - id: cd_h21_289
   category: crosslingual_advanced
-  source_dataset_yaml: data/prompts_crosslingual_advanced.yaml
   persona: usuari_final
   workflow: tenant_request
   source_lang: en-ca
@@ -1973,4 +1861,3 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Aclareix el rebut de calefacció.
-  harder_variant: short_implicit

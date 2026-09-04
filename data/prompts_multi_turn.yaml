@@ -1,6 +1,5 @@
 - id: cd_060
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: pime
   workflow: client_delay_update
   source_lang: es-ca
@@ -33,10 +32,8 @@
   prompt: 'Fes que soni urgent, però sense tocar el marge.
 
     Escriu una resposta de l''assistent com un correu breu amb assumpte i cos.'
-  harder_variant: template_es
 - id: cd_061
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: administracio
   workflow: public_project_status
   source_lang: es-ca
@@ -70,10 +67,8 @@
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Prepara una actualització del projecte digital per a les parts interessades,
     amb el bloqueig principal, la persona responsable, el termini i la revisió prevista.
-  harder_variant: template_es
 - id: cd_062
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: administracio
   workflow: public_notice
   source_lang: es-ca
@@ -105,10 +100,8 @@
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Redacta l'avís veïnal sobre el tall d'aigua, amb la franja horària, la zona
     afectada i el canal de consulta.
-  harder_variant: template_es
 - id: cd_063
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: pime
   workflow: support_reply
   source_lang: en-ca
@@ -139,10 +132,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Enllesteix-ho ara.
-  harder_variant: template_es
 - id: cd_064
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: administracio
   workflow: procurement_note
   source_lang: es-ca
@@ -173,10 +164,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Deixa-la preparada.
-  harder_variant: template_es
 - id: cd_065
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: usuari_final
   workflow: study_plan
   source_lang: en-ca
@@ -210,10 +199,8 @@
   prompt: 'Fes-me''l per a cinc dies i amb tasques concretes.
 
     Respon com a assistent amb un pla d''estudi estructurat.'
-  harder_variant: template_es
 - id: cd_066
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: usuari_final
   workflow: privacy_guidance
   source_lang: en-ca
@@ -245,10 +232,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Dona una guia breu amb passos ordenats i advertiments pràctics.
-  harder_variant: template_es
 - id: cd_067
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: administracio
   workflow: complaint_response
   source_lang: es-ca
@@ -282,10 +267,8 @@
   prompt: 'Fes-ho formal però proper, sense sonar defensiu.
 
     Escriu la propera resposta de l''assistent.'
-  harder_variant: template_es
 - id: cd_068
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: usuari_final
   workflow: tenant_request
   source_lang: es-ca
@@ -318,10 +301,8 @@
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Escriu un correu a la propietat sobre la gotera, la mesura provisional,
     la necessitat d'una visita tècnica i la disponibilitat per coordinar-la.
-  harder_variant: template_es
 - id: cd_069
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: pime
   workflow: client_reply
   source_lang: es-ca
@@ -355,10 +336,8 @@
   prompt: 'Redacta-ho amb fermesa i deixa oberta una alternativa.
 
     Escriu la resposta de l''assistent com un correu breu.'
-  harder_variant: template_es
 - id: cd_160
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: pime
   workflow: client_reply
   source_lang: es-ca
@@ -394,10 +373,8 @@
   prompt: 'Fes una resposta breu, ferma i amb una proposta de reunió avui mateix.
 
     Escriu la propera resposta de l''assistent com un correu amb assumpte i cos.'
-  harder_variant: template_es
 - id: cd_161
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: administracio
   workflow: public_notice
   source_lang: en-ca
@@ -431,10 +408,8 @@
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Redacta l'avís municipal sobre les obres, el tall progressiu, la recollida
     escolar i les alternatives de mobilitat.
-  harder_variant: template_es
 - id: cd_162
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: pime
   workflow: support_reply
   source_lang: en-ca
@@ -468,10 +443,8 @@
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Prepara una resposta de suport sobre l'exportació del tauler, amb còpia
     segura, evidències necessàries i hora límit per escalar el cas.
-  harder_variant: template_es
 - id: cd_163
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: administracio
   workflow: procurement_note
   source_lang: es-ca
@@ -505,10 +478,8 @@
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Escriu la justificació de contractació ràpida amb urgència sobrevinguda,
     límits de l'actuació, controls i traçabilitat de l'expedient.
-  harder_variant: template_es
 - id: cd_164
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: usuari_final
   workflow: complaint_response
   source_lang: en-ca
@@ -544,10 +515,8 @@
     respecten condicions equivalents.
 
     Escriu la propera resposta de l''assistent.'
-  harder_variant: template_es
 - id: cd_165
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: pime
   workflow: project_status
   source_lang: en-ca
@@ -581,10 +550,8 @@
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Prepara l'actualització per a direcció sobre els continguts, la revisió
     lingüística, la validació docent i dues decisions pendents.
-  harder_variant: template_es
 - id: cd_166
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: administracio
   workflow: complaint_response
   source_lang: es-ca
@@ -619,10 +586,8 @@
   prompt: 'Fes-ho proper, però sense prometre cap resultat abans de revisar l''expedient.
 
     Escriu la resposta municipal.'
-  harder_variant: template_es
 - id: cd_167
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: pime
   workflow: client_reply
   source_lang: en-ca
@@ -656,10 +621,8 @@
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Escriu el correu al client sobre la migració pilot, la mostra d'usuaris,
     la validació necessària i l'ordre de compra tardana.
-  harder_variant: template_es
 - id: cd_168
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: administracio
   workflow: public_notice
   source_lang: es-ca
@@ -693,10 +656,8 @@
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Redacta l'avís sobre la recollida de residus, amb els fets confirmats, els
     punts provisionals i la revisió prevista del servei.
-  harder_variant: template_es
 - id: cd_169
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: pime
   workflow: procurement_note
   source_lang: en-ca
@@ -730,10 +691,8 @@
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Redacta la nota de decisió sobre l'espai de la jornada, amb aforament, restauració,
     cancel·lació, accessibilitat i dues condicions recomanades.
-  harder_variant: template_es
 - id: cd_170
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: pime
   workflow: support_reply
   source_lang: es-ca
@@ -766,10 +725,8 @@
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Prepara una resposta de suport sobre la comanda bloquejada, amb una acció
     reversible, registre de la incidència i contacte de guàrdia.
-  harder_variant: template_mixed
 - id: cd_171
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: administracio
   workflow: project_status
   source_lang: en-ca
@@ -803,10 +760,8 @@
   prompt: 'Fes-ne una versió per a càrrecs electes, amb síntesi i decisions concretes.
 
     Escriu l''actualització d''estat.'
-  harder_variant: template_mixed
 - id: cd_172
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: usuari_final
   workflow: complaint_response
   source_lang: es-ca
@@ -839,10 +794,8 @@
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Escriu la reclamació sobre la baixa del servei, els cobraments, el justificant
     adjunt, la devolució demanada i el termini de resposta.
-  harder_variant: template_mixed
 - id: cd_173
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: administracio
   workflow: procurement_note
   source_lang: en-ca
@@ -875,10 +828,8 @@
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Redacta la nota de renovació del servei, amb continuïtat, restauració, compensacions,
     evidències i control de compliment.
-  harder_variant: template_mixed
 - id: cd_174
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: pime
   workflow: client_reply
   source_lang: es-ca
@@ -911,10 +862,8 @@
   prompt: 'Redacta-ho amb dues opcions i una recomanació final.
 
     Escriu el correu de resposta.'
-  harder_variant: template_mixed
 - id: cd_175
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: administracio
   workflow: public_notice
   source_lang: en-ca
@@ -946,10 +895,8 @@
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Redacta l'avís sobre la incidència de cita prèvia, amb prioritat al taulell,
     confirmació de les cites i previsió de restauració del servei.
-  harder_variant: template_mixed
 - id: cd_176
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: pime
   workflow: project_status
   source_lang: es-ca
@@ -983,10 +930,8 @@
   prompt: 'Dona''m una versió executiva amb tres riscos i una decisió recomanada.
 
     Escriu l''actualització d''estat.'
-  harder_variant: template_mixed
 - id: cd_177
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: pime
   workflow: support_reply
   source_lang: en-ca
@@ -1020,10 +965,8 @@
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Prepara una resposta de suport sobre la integració, demanant una mostra
     anonimitzada, diferenciant entorns, proposant contenció i indicant l'escalat.
-  harder_variant: template_mixed
 - id: cd_178
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: administracio
   workflow: complaint_response
   source_lang: en-ca
@@ -1055,10 +998,8 @@
     content: OK. I will do la revisión final antes de cerrar.
   prompt: Escriu la resposta municipal sobre la barrera d'accessibilitat, la rampa
     temporal, la inspecció, el contractista i el seguiment previst.
-  harder_variant: template_mixed
 - id: cd_179
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: usuari_final
   workflow: complaint_response
   source_lang: es-ca
@@ -1092,10 +1033,8 @@
   prompt: 'Fes-la contundent i demana una solució abans de cinc dies hàbils.
 
     Escriu la reclamació.'
-  harder_variant: template_mixed
 - id: cd_260
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: pime
   workflow: client_delay_update
   source_lang: es-ca
@@ -1128,10 +1067,8 @@
   prompt: 'Fes-ho ferm, amb calendari i sense acceptar compensacions automàtiques.
 
     Escriu un correu breu amb assumpte, situació, nova previsió i proper pas.'
-  harder_variant: template_mixed
 - id: cd_261
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: pime
   workflow: client_reply
   source_lang: en-ca
@@ -1165,10 +1102,8 @@
   prompt: 'Dona''m una resposta breu que no bloquegi la negociació.
 
     Escriu la resposta com un correu amb límits, alternativa i proper pas.'
-  harder_variant: template_mixed
 - id: cd_262
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: pime
   workflow: client_reply
   source_lang: es-ca
@@ -1202,10 +1137,8 @@
   prompt: 'Respon amb una alternativa segura per avui.
 
     Escriu un correu breu amb situació, condicions, alternativa i decisió pendent.'
-  harder_variant: template_mixed
 - id: cd_263
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: pime
   workflow: client_reply
   source_lang: en-ca
@@ -1240,10 +1173,8 @@
     revisar-ho.
 
     Escriu la resposta com un correu amb límits, alternativa i proper pas.'
-  harder_variant: template_mixed
 - id: cd_264
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: pime
   workflow: client_reply
   source_lang: es-ca
@@ -1276,10 +1207,8 @@
   prompt: 'Deixa oberta una sortida pactada.
 
     Escriu un correu breu amb estat, opcions, condicions i proper pas.'
-  harder_variant: template_mixed
 - id: cd_265
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: administracio
   workflow: complaint_response
   source_lang: en-ca
@@ -1312,10 +1241,8 @@
   prompt: 'Fes-ho proper, però sense prometre una reparació abans de verificar-ho.
 
     Escriu la resposta municipal amb recepció, actuacions, terminis i canal de seguiment.'
-  harder_variant: template_mixed
 - id: cd_266
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: usuari_final
   workflow: complaint_response
   source_lang: es-ca
@@ -1349,10 +1276,8 @@
   prompt: 'Demana una resposta escrita i conserva un to ferm.
 
     Escriu la reclamació amb fets, impacte, documents, petició i termini.'
-  harder_variant: template_mixed
 - id: cd_267
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: administracio
   workflow: complaint_response
   source_lang: en-ca
@@ -1385,10 +1310,8 @@
   prompt: 'No prometis el resultat abans de revisar l''expedient.
 
     Escriu la resposta municipal amb reconeixement, comprovacions, terminis i seguiment.'
-  harder_variant: template_mixed
 - id: cd_268
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: usuari_final
   workflow: complaint_response
   source_lang: es-ca
@@ -1421,10 +1344,8 @@
   prompt: 'Demana que no em cobrin una segona diagnosi.
 
     Escriu la reclamació amb cronologia, discrepància, proves, petició i termini.'
-  harder_variant: template_mixed
 - id: cd_269
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: administracio
   workflow: complaint_response
   source_lang: en-ca
@@ -1457,10 +1378,8 @@
   prompt: 'Inclou un canal per aportar més informació.
 
     Escriu la resposta municipal amb recepció, actuacions, límits i seguiment.'
-  harder_variant: template_mixed
 - id: cd_270
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: usuari_final
   workflow: complaint_response
   source_lang: es-ca
@@ -1473,10 +1392,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Presenta'n la versió final.
-  harder_variant: short_implicit
 - id: cd_271
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: usuari_final
   workflow: privacy_guidance
   source_lang: en-ca
@@ -1489,10 +1406,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Ordena la neteja del dispositiu wearable.
-  harder_variant: short_implicit
 - id: cd_272
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: administracio
   workflow: procurement_note
   source_lang: es-ca
@@ -1505,10 +1420,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Completa l'encàrrec.
-  harder_variant: short_implicit
 - id: cd_273
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: administracio
   workflow: procurement_note
   source_lang: en-ca
@@ -1521,10 +1434,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Tanca aquesta tasca.
-  harder_variant: short_implicit
 - id: cd_274
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: administracio
   workflow: procurement_note
   source_lang: es-ca
@@ -1537,10 +1448,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Deixa el text llest.
-  harder_variant: short_implicit
 - id: cd_275
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: pime
   workflow: procurement_note
   source_lang: en-ca
@@ -1553,10 +1462,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Prepara el resultat definitiu.
-  harder_variant: short_implicit
 - id: cd_276
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: pime
   workflow: project_status
   source_lang: en-ca
@@ -1569,10 +1476,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Actualitza l'activació de clients.
-  harder_variant: short_implicit
 - id: cd_277
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: pime
   workflow: project_status
   source_lang: es-ca
@@ -1585,10 +1490,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Actualitza la conciliació de rebuts.
-  harder_variant: short_implicit
 - id: cd_278
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: administracio
   workflow: project_status
   source_lang: en-ca
@@ -1601,10 +1504,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Actualitza el quiosc de permisos.
-  harder_variant: short_implicit
 - id: cd_279
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: administracio
   workflow: public_notice
   source_lang: es-ca
@@ -1617,10 +1518,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Anuncia el menú escolar alternatiu.
-  harder_variant: short_implicit
 - id: cd_280
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: administracio
   workflow: public_notice
   source_lang: en-ca
@@ -1633,10 +1532,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Dona-hi forma final.
-  harder_variant: short_implicit
 - id: cd_281
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: administracio
   workflow: public_notice
   source_lang: es-ca
@@ -1649,10 +1546,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Anuncia les restriccions de bany.
-  harder_variant: short_implicit
 - id: cd_282
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: administracio
   workflow: public_notice
   source_lang: en-ca
@@ -1665,10 +1560,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Anuncia la recollida nocturna.
-  harder_variant: short_implicit
 - id: cd_283
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: administracio
   workflow: public_project_status
   source_lang: es-ca
@@ -1681,10 +1574,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Actualitza el procés participatiu.
-  harder_variant: short_implicit
 - id: cd_284
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: usuari_final
   workflow: study_plan
   source_lang: en-ca
@@ -1697,10 +1588,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Planifica el repàs de laboratori.
-  harder_variant: short_implicit
 - id: cd_285
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: pime
   workflow: support_reply
   source_lang: en-ca
@@ -1713,10 +1602,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Resol l'autenticació del domini.
-  harder_variant: short_implicit
 - id: cd_286
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: pime
   workflow: support_reply
   source_lang: es-ca
@@ -1729,10 +1616,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Resol la signatura del PDF.
-  harder_variant: short_implicit
 - id: cd_287
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: pime
   workflow: support_reply
   source_lang: en-ca
@@ -1745,10 +1630,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Resol la sincronització de la ruta.
-  harder_variant: short_implicit
 - id: cd_288
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: pime
   workflow: support_reply
   source_lang: es-ca
@@ -1761,10 +1644,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Resol el saldo del bo.
-  harder_variant: short_implicit
 - id: cd_289
   category: multi_turn
-  source_dataset_yaml: data/prompts_multi_turn.yaml
   persona: usuari_final
   workflow: tenant_request
   source_lang: en-ca
@@ -1777,4 +1658,3 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Respon sobre el rebut de calefacció.
-  harder_variant: short_implicit
