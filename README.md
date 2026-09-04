@@ -132,16 +132,15 @@ full repository license split.
 
 Results from the current 300-item evaluation run.
 
-Input duplication is **0.0%** (0/300 entries) at Jaccard ≥ 0.8, measured over
-the full model-visible input (conversation + retrieved context + prompt), not
-the final prompt alone.
-
 | Model | Overall | Catalan token ratio |
 |---|---:|---:|
-| Gemini 3.7 Flash | **94.3% ±2.7** | 96.9% |
-| Gemma 4 26B A4B | 82.7% ±4.3 | 84.9% |
+| Gemma 4 26B A4B | **82.7% ±4.3** | 84.9% |
+| Ministral 3 8B | 82.3% ±4.3 | 72.0% |
 | ALIA 7B | 81.3% ±4.4 | 71.8% |
+| Gemma 4 12B | 79.3% ±4.6 | 81.0% |
+| Ministral 3 14B | 78.0% ±4.7 | 80.3% |
 | Gemma 3 12B | 75.0% ±4.9 | 79.0% |
+| Gemma 4 E4B | 73.3% ±5.0 | 82.0% |
 | GPT-5.6 | 71.3% ±5.1 | 76.2% |
 
 `± N` is the Wilson 95% half-width at n=300. Rank differences smaller than
@@ -153,21 +152,25 @@ as capability gaps.
 Numbers above are conditioned on the decoding config each row was evaluated
 under. They are not directly comparable across rows unless the configs match.
 
-| Model | Provider | Precision | Temperature | Reasoning effort |
-|---|---|---|---:|---|
-| Gemini 3.7 Flash | LiteLLM (Google) | fp16 | 1.0 | low |
-| Gemma 4 26B A4B | local OpenAI-compatible | Q4_K_M | 0 | none (thinking disabled) |
-| ALIA 7B | local OpenAI-compatible | Q4_0 | 0 | none (thinking disabled) |
-| Gemma 3 12B | local OpenAI-compatible | Q4_K_M | 0 | none (thinking disabled) |
-| GPT-5.6 | OpenAI Chat Completions | fp16 | 0 | none |
+| Model | Provider | Precision |
+|---|---|---|
+| Gemma 4 26B A4B | local OpenAI-compatible | Q4_K_M |
+| Ministral 3 8B | local OpenAI-compatible | Q4_K_M |
+| ALIA 7B | local OpenAI-compatible | Q4_0 |
+| Gemma 4 12B | local OpenAI-compatible | Q4_K_M |
+| Ministral 3 14B | local OpenAI-compatible | Q4_K_M |
+| Gemma 3 12B | local OpenAI-compatible | Q4_K_M |
+| Gemma 4 E4B | local OpenAI-compatible | Q4_K_M |
+| GPT-5.6 | OpenAI Chat Completions | fp16 |
+
+All evaluations use temperature 0 with thinking disabled.
 
 ### How to read this table
 
 - **Not a capability ranking.** These numbers report drift performance under
   the specific decoding configs above, not raw model quality. A gap between
   rows may reflect decoding configuration or quantization, not the underlying
-  model. Cloud and local rows may use different temperatures, reasoning settings,
-  providers, and precision.
+  model. Cloud and local rows use different providers and precision.
 - **Sampling noise band.** Treat small rank differences as noise. Reported ranks
   are point estimates; no paired confidence intervals are computed yet.
 - **What "Overall" measures.** Segment-level Catalan pass rate: each response
@@ -187,10 +190,13 @@ signal to read.
 
 | Model | Monolingual | Cross basic | Multi-turn | Cross advanced | RAG context |
 |---|---:|---:|---:|---:|---:|
-| Gemini 3.7 Flash | 100.0% ±3.0 | 98.3% ±4.3 | 90.0% ±7.7 | 98.3% ±4.3 | 85.0% ±9.0 |
 | Gemma 4 26B A4B | 100.0% ±3.0 | 86.7% ±8.6 | 58.3% ±12.1 | 80.0% ±10.0 | 88.3% ±8.2 |
+| Ministral 3 8B | 95.0% ±6.0 | 76.7% ±10.5 | 73.3% ±10.9 | 73.3% ±10.9 | 93.3% ±6.7 |
 | ALIA 7B | 100.0% ±3.0 | 68.3% ±11.5 | 76.7% ±10.5 | 76.7% ±10.5 | 85.0% ±9.0 |
+| Gemma 4 12B | 100.0% ±3.0 | 70.0% ±11.3 | 66.7% ±11.6 | 81.7% ±9.7 | 78.3% ±10.2 |
+| Ministral 3 14B | 91.7% ±7.2 | 71.7% ±11.1 | 63.3% ±11.8 | 70.0% ±11.3 | 93.3% ±6.7 |
 | Gemma 3 12B | 98.3% ±4.3 | 76.7% ±10.5 | 61.7% ±11.9 | 70.0% ±11.3 | 68.3% ±11.5 |
+| Gemma 4 E4B | 98.3% ±4.3 | 55.0% ±12.2 | 66.7% ±11.6 | 76.7% ±10.5 | 70.0% ±11.3 |
 | GPT-5.6 | 100.0% ±3.0 | 78.3% ±10.2 | 60.0% ±12.0 | 60.0% ±12.0 | 58.3% ±12.1 |
 
 For a finer diagnostic that cuts across categories, run

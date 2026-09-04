@@ -9,8 +9,8 @@ OUT_DIR ?= $(MODEL_OUT_DIR)/lm_eval
 EVAL_TIMELINE ?= outputs/eval_timeline.tsv
 PROMPTS ?= data/prompts_monolingual.yaml data/prompts_crosslingual_basic.yaml data/prompts_multi_turn.yaml data/prompts_crosslingual_advanced.yaml data/prompts_rag_context.yaml
 EXPORT ?= data/lm_eval/catalan_drift.jsonl
-EVAL_RUNS ?= gpt-5.6 gemini-3.7-flash gemma-4-12b-it-Q4_K_M Ministral-3-8B-Instruct-2512-Q4_K_M
-CLOUD_EVAL_TARGETS ?= eval-gpt56 eval-gemini-flash-37
+EVAL_RUNS ?= gpt-5.6 gemma-4-12b-it-Q4_K_M Ministral-3-8B-Instruct-2512-Q4_K_M
+CLOUD_EVAL_TARGETS ?= eval-gpt56
 LOCAL_EVAL_TARGETS ?= eval-gemma4-12b eval-ministral3-8b
 AI_LOCAL_MODELS ?= \
 	Muse-Glimmer-30B-UD-Q4_K_XL \
@@ -31,7 +31,6 @@ AI_LOCAL_MODELS ?= \
 LOCAL_OPENAI_BASE_URL ?= http://localhost:9090/v1/chat/completions
 LOCAL_NUM_CONCURRENT ?= 1
 GPT_GEN_KWARGS ?= {"temperature":0,"reasoning_effort":"none"}
-GEMINI_GEN_KWARGS ?= {"temperature":1,"reasoning_effort":"low"}
 GEMMA_NO_THINKING_GEN_KWARGS ?= {"temperature":0,"reasoning_effort":"none","chat_template_kwargs":{"enable_thinking":false}}
 LOCAL_GEN_KWARGS ?= {"temperature":0,"reasoning_effort":"none","chat_template_kwargs":{"enable_thinking":false}}
 UV_CACHE_DIR ?= .uv-cache
@@ -137,9 +136,6 @@ all_ai_local_models: $(EVAL_EXPORT_PREREQ)
 
 eval-gpt56: $(EVAL_EXPORT_PREREQ)
 	$(MAKE) eval-one LM_EVAL_MODEL=openai-chat-completions MODEL_ARGS="model=gpt-5.6,num_concurrent=4" DISPLAY_MODEL=gpt-5.6 RUN_NAME=gpt-5.6 GEN_KWARGS='$(GPT_GEN_KWARGS)'
-
-eval-gemini-flash-37: $(EVAL_EXPORT_PREREQ)
-	$(MAKE) eval-one LM_EVAL_MODEL=litellm MODEL_ARGS="model=gemini/gemini-3.7-flash,num_concurrent=1" DISPLAY_MODEL=gemini-3.7-flash RUN_NAME=gemini-3.7-flash GEN_KWARGS='$(GEMINI_GEN_KWARGS)'
 
 eval-gemma4-12b:
 	$(MAKE) eval-local-openai DISPLAY_MODEL=gemma-4-12b-it-Q4_K_M LOCAL_NUM_CONCURRENT=2 GEN_KWARGS='$(LOCAL_GEN_KWARGS)'

@@ -1,0 +1,23 @@
+models/
+dataset_quality_assessment.md
+data/flores200/
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+
+# Tool caches
+.hf-cache/
+.uv-cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local quality assessment
+assess_quality.md
+
+# Local generated artifacts
+data/prompts.distribution.json
+expand.md
+harder.html
+outputs/
