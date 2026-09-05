@@ -54,15 +54,6 @@ HF_DATASET_METADATA ?= $(basename $(EXPORT)).metadata.yaml
 HF_DATASET_FILES ?= $(EXPORT) $(HF_DATASET_METADATA)
 VERSION ?=
 
-ifneq (,$(filter publish-dataset,$(MAKECMDGOALS)))
-ifeq (,$(VERSION))
-$(error Set VERSION=vX (e.g. VERSION=v1.1))
-endif
-ifeq (,$(shell printf '%s' '$(VERSION)' | grep -E '^v[0-9]+(\.[0-9]+)*$$'))
-$(error VERSION must match vX format (e.g. v1, v1.1); got: $(VERSION))
-endif
-endif
-
 .PHONY: build test clean-outputs language-id-model flores-corpus export-lm-eval eval eval-one eval-local-openai eval-summary all_ai_local_models publish-dataset
 .PHONY: $(CLOUD_EVAL_TARGETS) $(LOCAL_EVAL_TARGETS)
 
