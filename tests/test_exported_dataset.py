@@ -14,7 +14,8 @@ with tempfile.TemporaryDirectory() as directory:
     output = Path(directory) / "catalan_drift.jsonl"
     export_lm_eval(
         argparse.Namespace(
-            prompts=[str(ROOT / prompt) for prompt in DEFAULT_PROMPTS], output=output
+            prompts=[str(ROOT / prompt) for prompt in DEFAULT_PROMPTS], output=output,
+            version="1.0.0",
         )
     )
     ROWS = [json.loads(line) for line in output.read_text().splitlines()]

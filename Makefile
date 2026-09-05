@@ -50,7 +50,8 @@ SKIP_EXPORT ?=
 LIMIT ?=
 EVAL_EXPORT_PREREQ := $(if $(SKIP_EXPORT),,export-lm-eval)
 HF_DATASET_REPO ?= softcatala/mantinc-catalan-drift
-HF_DATASET_FILES ?= data/lm_eval/catalan_drift.jsonl
+HF_DATASET_METADATA ?= $(basename $(EXPORT)).metadata.yaml
+HF_DATASET_FILES ?= $(EXPORT) $(HF_DATASET_METADATA)
 VERSION ?=
 
 ifneq (,$(filter publish-dataset,$(MAKECMDGOALS)))
@@ -98,7 +99,7 @@ clean-outputs:
 	@find outputs -mindepth 1 -maxdepth 1 -exec rm -rf {} +
 
 export-lm-eval: build
-	$(PYTHON) scripts/catalan_drift_eval.py export-lm-eval --prompts $(PROMPTS) --output "$(EXPORT)"
+	$(PYTHON) scripts/catalan_drift_eval.py export-lm-eval --prompts $(PROMPTS) --output "$(EXPORT)" $(if $(VERSION),--version "$(VERSION)",)
 
 eval: clean-outputs language-id-model export-lm-eval
 	$(MAKE) -j2 SKIP_EXPORT=1 $(CLOUD_EVAL_TARGETS) & \
@@ -149,9 +150,8 @@ publish-dataset: export-lm-eval
 	@for f in $(HF_DATASET_FILES); do \
 		test -f "$$f" || { echo "Missing file: $$f"; exit 2; }; \
 	done
+	@$(PYTHON) scripts/check_dataset_version.py --repo "$(HF_DATASET_REPO)" --metadata "$(HF_DATASET_METADATA)"
 	@for f in $(HF_DATASET_FILES); do \
 		echo "Uploading $$f to $(HF_DATASET_REPO)"; \
-		hf upload --repo-type dataset "$(HF_DATASET_REPO)" "$$f" "$$f" --commit-message "Release $(VERSION)" || exit $$?; \
+		hf upload --repo-type dataset "$(HF_DATASET_REPO)" "$$f" "$$f" --commit-message "Publish dataset" || exit $$?; \
 	done
-	@echo "Tagging $(HF_DATASET_REPO) as $(VERSION)"
-	$(PYTHON) -c "from huggingface_hub import HfApi; HfApi().create_tag('$(HF_DATASET_REPO)', tag='$(VERSION)', repo_type='dataset')"

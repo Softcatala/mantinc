@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import sys
 from datetime import datetime
@@ -161,6 +162,13 @@ def export_lm_eval(args: argparse.Namespace) -> None:
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(
         "".join(json.dumps(row, ensure_ascii=False, sort_keys=True) + "\n" for row in rows),
+        encoding="utf-8",
+    )
+    output.with_suffix(".metadata.yaml").write_text(
+        f'version: "{args.version.removeprefix("v")}"\n'
+        f"file: {output.name}\n"
+        f'checksum_sha256: "{hashlib.sha256(output.read_bytes()).hexdigest()}"\n'
+        f'created: "{datetime.now().astimezone().isoformat(timespec="seconds")}"\n',
         encoding="utf-8",
     )
     print(json.dumps({"prompts": args.prompts, "output": str(output), "n": len(rows)}))
@@ -383,6 +391,7 @@ def main() -> None:
     export_parser = subparsers.add_parser("export-lm-eval")
     export_parser.add_argument("--prompts", nargs="+", default=DEFAULT_PROMPTS)
     export_parser.add_argument("--output", default="data/lm_eval/catalan_drift.jsonl")
+    export_parser.add_argument("--version", default="1.0.0")
     export_parser.set_defaults(func=export_lm_eval)
 
     score_parser = subparsers.add_parser("score-lm-eval")
