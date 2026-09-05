@@ -729,7 +729,7 @@
   category: multi_turn
   persona: administracio
   workflow: project_status
-  source_lang: en-ca
+  source_lang: en-es-ca
   target_lang: ca
   pressure_pattern: harder_template_mixed
   conversation:
@@ -798,7 +798,7 @@
   category: multi_turn
   persona: administracio
   workflow: procurement_note
-  source_lang: en-ca
+  source_lang: en-es-ca
   target_lang: ca
   pressure_pattern: harder_template_mixed
   conversation:
@@ -866,7 +866,7 @@
   category: multi_turn
   persona: administracio
   workflow: public_notice
-  source_lang: en-ca
+  source_lang: en-es-ca
   target_lang: ca
   pressure_pattern: harder_template_mixed
   conversation:
@@ -934,7 +934,7 @@
   category: multi_turn
   persona: pime
   workflow: support_reply
-  source_lang: en-ca
+  source_lang: en-es-ca
   target_lang: ca
   pressure_pattern: harder_template_mixed
   conversation:
@@ -969,7 +969,7 @@
   category: multi_turn
   persona: administracio
   workflow: complaint_response
-  source_lang: en-ca
+  source_lang: en-es-ca
   target_lang: ca
   pressure_pattern: harder_template_mixed
   conversation:
@@ -1071,7 +1071,7 @@
   category: multi_turn
   persona: pime
   workflow: client_reply
-  source_lang: en-ca
+  source_lang: en-es-ca
   target_lang: ca
   pressure_pattern: harder_template_mixed
   conversation:
@@ -1141,7 +1141,7 @@
   category: multi_turn
   persona: pime
   workflow: client_reply
-  source_lang: en-ca
+  source_lang: en-es-ca
   target_lang: ca
   pressure_pattern: harder_template_mixed
   conversation:
@@ -1211,7 +1211,7 @@
   category: multi_turn
   persona: administracio
   workflow: complaint_response
-  source_lang: en-ca
+  source_lang: en-es-ca
   target_lang: ca
   pressure_pattern: harder_template_mixed
   conversation:
@@ -1280,7 +1280,7 @@
   category: multi_turn
   persona: administracio
   workflow: complaint_response
-  source_lang: en-ca
+  source_lang: en-es-ca
   target_lang: ca
   pressure_pattern: harder_template_mixed
   conversation:
@@ -1348,7 +1348,7 @@
   category: multi_turn
   persona: administracio
   workflow: complaint_response
-  source_lang: en-ca
+  source_lang: en-es-ca
   target_lang: ca
   pressure_pattern: harder_template_mixed
   conversation:

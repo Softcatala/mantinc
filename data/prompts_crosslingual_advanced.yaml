@@ -1062,7 +1062,7 @@
   category: crosslingual_advanced
   persona: pime
   workflow: client_reply
-  source_lang: en-ca
+  source_lang: en-es-ca
   target_lang: ca
   pressure_pattern: harder_template_mixed
   conversation:
@@ -1129,7 +1129,7 @@
   category: crosslingual_advanced
   persona: pime
   workflow: client_reply
-  source_lang: en-ca
+  source_lang: en-es-ca
   target_lang: ca
   pressure_pattern: harder_template_mixed
   conversation:
@@ -1195,7 +1195,7 @@
   category: crosslingual_advanced
   persona: administracio
   workflow: complaint_response
-  source_lang: en-ca
+  source_lang: en-es-ca
   target_lang: ca
   pressure_pattern: harder_template_mixed
   conversation:
@@ -1262,7 +1262,7 @@
   category: crosslingual_advanced
   persona: administracio
   workflow: complaint_response
-  source_lang: en-ca
+  source_lang: en-es-ca
   target_lang: ca
   pressure_pattern: harder_template_mixed
   conversation:
@@ -1327,7 +1327,7 @@
   category: crosslingual_advanced
   persona: administracio
   workflow: complaint_response
-  source_lang: en-ca
+  source_lang: en-es-ca
   target_lang: ca
   pressure_pattern: harder_template_mixed
   conversation:
