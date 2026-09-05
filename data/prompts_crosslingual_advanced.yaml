@@ -587,7 +587,7 @@
   - role: assistant
     content: Ho convertiré en una nota interna amb els riscos ben explicats.
   - role: user
-    content: Revisa stodos los requisitos antes de cerrar.
+    content: Revisa todos los requisitos antes de cerrar.
   - role: assistant
     content: D'acord. Conservaré tots els requisits.
   - role: user
