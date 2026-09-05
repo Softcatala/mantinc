@@ -56,7 +56,7 @@ DECISIÓN / DECISION:
 
 PLAZO / DEADLINE:
 
-**Assistent:** OK. I will do la revisión final antes de cerrar.
+**Assistent:** De acuerdo. Haré la revisión final antes de cerrar.
 
 **Prompt final:** Fes la resposta.
 

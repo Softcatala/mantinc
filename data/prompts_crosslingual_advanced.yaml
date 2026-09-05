@@ -727,7 +727,7 @@
 
       RESPONSABLE:'
   - role: assistant
-    content: OK. I will do la revisión final antes de cerrar.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Comunica la reprogramació formativa.
 - id: cd_h20_067
   category: crosslingual_advanced
@@ -760,7 +760,7 @@
 
       CIERRE:'
   - role: assistant
-    content: OK. I will do la revisión final antes de cerrar.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Respon sobre la mobilitat del mercat.
 - id: cd_h20_161
   category: crosslingual_advanced
@@ -793,7 +793,7 @@
 
       CIERRE:'
   - role: assistant
-    content: OK. I will do la revisión final antes de cerrar.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Publica-ho.
 - id: cd_h20_164
   category: crosslingual_advanced
@@ -826,7 +826,7 @@
 
       NEXT STEP:'
   - role: assistant
-    content: OK. I will do la revisión final antes de cerrar.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Reclama la certificació formativa.
 - id: cd_h20_165
   category: crosslingual_advanced
@@ -859,7 +859,7 @@
 
       VALIDATION:'
   - role: assistant
-    content: OK. I will do la revisión final antes de cerrar.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Actualitza la certificació ambiental.
 - id: cd_h20_168
   category: crosslingual_advanced
@@ -891,7 +891,7 @@
 
       DEADLINE:'
   - role: assistant
-    content: OK. I will do la revisión final antes de cerrar.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Anuncia el trasllat de vacunació.
 - id: cd_h20_171
   category: crosslingual_advanced
@@ -924,7 +924,7 @@
 
       CLOSING:'
   - role: assistant
-    content: OK. I will do la revisión final antes de cerrar.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Enllesteix el document.
 - id: cd_h20_174
   category: crosslingual_advanced
@@ -957,7 +957,7 @@
 
       CONTROL:'
   - role: assistant
-    content: OK. I will do la revisión final antes de cerrar.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Contesta ara.
 - id: cd_h20_177
   category: crosslingual_advanced
@@ -990,7 +990,7 @@
 
       DEADLINE:'
   - role: assistant
-    content: OK. I will do la revisión final antes de cerrar.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Resol els escàners del magatzem.
 - id: cd_h20_179
   category: crosslingual_advanced
@@ -1023,7 +1023,7 @@
 
       CIERRE:'
   - role: assistant
-    content: OK. I will do la revisión final antes de cerrar.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Reclama els danys de la mudança.
 - id: cd_h21_260
   category: crosslingual_advanced
@@ -1056,7 +1056,7 @@
 
       TAREA:'
   - role: assistant
-    content: OK. I will do la revisión final antes de cerrar.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Comunica el retard de la instal·lació.
 - id: cd_h21_261
   category: crosslingual_advanced
@@ -1088,7 +1088,7 @@
 
       VALIDACIÓN:'
   - role: assistant
-    content: OK. I will do la revisión final antes de cerrar.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Dona-hi resposta.
 - id: cd_h21_262
   category: crosslingual_advanced
@@ -1123,7 +1123,7 @@
 
       VALIDATION:'
   - role: assistant
-    content: OK. I will do la revisión final antes de cerrar.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Resol-ho.
 - id: cd_h21_263
   category: crosslingual_advanced
@@ -1156,7 +1156,7 @@
 
       CIERRE:'
   - role: assistant
-    content: OK. I will do la revisión final antes de cerrar.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Valora el pilot de plataforma.
 - id: cd_h21_264
   category: crosslingual_advanced
@@ -1189,7 +1189,7 @@
 
       CONTROL:'
   - role: assistant
-    content: OK. I will do la revisión final antes de cerrar.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Aclareix els indicadors de servei.
 - id: cd_h21_265
   category: crosslingual_advanced
@@ -1224,7 +1224,7 @@
 
       TAREA:'
   - role: assistant
-    content: OK. I will do la revisión final antes de cerrar.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Respon sobre l'accés al jardí.
 - id: cd_h21_266
   category: crosslingual_advanced
@@ -1256,7 +1256,7 @@
 
       TAREA:'
   - role: assistant
-    content: OK. I will do la revisión final antes de cerrar.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Reclama la baixa del gimnàs.
 - id: cd_h21_267
   category: crosslingual_advanced
@@ -1289,7 +1289,7 @@
 
       RESPONSABLE:'
   - role: assistant
-    content: OK. I will do la revisión final antes de cerrar.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Respon per les molèsties de l'obra.
 - id: cd_h21_268
   category: crosslingual_advanced
@@ -1321,7 +1321,7 @@
 
       NEXT STEP:'
   - role: assistant
-    content: OK. I will do la revisión final antes de cerrar.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Formula-la.
 - id: cd_h21_269
   category: crosslingual_advanced
@@ -1355,7 +1355,7 @@
 
       RESPONSABLE:'
   - role: assistant
-    content: OK. I will do la revisión final antes de cerrar.
+    content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Respon pel manteniment del cementiri.
 - id: cd_h21_270
   category: crosslingual_advanced
