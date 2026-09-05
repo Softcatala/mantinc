@@ -111,7 +111,7 @@
   - role: user
     content: Tenim un usuari que no aconsegueix acabar l'alta al servei.
   - role: assistant
-    content: Podem respondre amb passos concrets i una via d'escalat.
+    content: Podem respondre amb passos concrets i un procediment per derivar el cas.
   - role: user
     content: The onboarding flow fails after a payment retry, creating a risk of customer
       churn. Use the support macro if needed.
@@ -442,7 +442,7 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Prepara una resposta de suport sobre l'exportació del tauler, amb còpia
-    segura, evidències necessàries i hora límit per escalar el cas.
+    segura, evidències necessàries i hora límit per derivar el cas.
 - id: cd_163
   category: multi_turn
   persona: administracio
@@ -703,7 +703,7 @@
     content: Tenim un client amb una incidència tècnica urgent durant un període de
       moltes comandes.
   - role: assistant
-    content: Cal respondre amb passos segurs, recollida de dades i escalat si cal.
+    content: Cal respondre amb passos segurs, recollida de dades i derivació si cal.
   - role: user
     content: 'El cliente ha escrito: error intermitente, pedido bloqueado, reintento
       manual, registro duplicado y equipo de guardia.'
@@ -964,7 +964,8 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Prepara una resposta de suport sobre la integració, demanant una mostra
-    anonimitzada, diferenciant entorns, proposant contenció i indicant l'escalat.
+    anonimitzada, diferenciant entorns, proposant contenció i indicant quan i a qui
+    cal derivar el cas.
 - id: cd_178
   category: multi_turn
   persona: administracio

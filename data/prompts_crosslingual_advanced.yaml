@@ -9,7 +9,7 @@
   - role: user
     content: Tenim un usuari que no rep bé les notificacions de calendari compartit.
   - role: assistant
-    content: Podem respondre amb comprovacions concretes i una via d'escalat.
+    content: Podem respondre amb comprovacions concretes i un procediment per derivar el cas.
   - role: user
     content: The sync job skips calendar invites after a timezone change, and the
       mobile app shows the old reminder time. Use the support macro if needed.
@@ -31,7 +31,7 @@
   - role: assistant
     content: Understood. I will do the final review before closing.
   prompt: Prepara una resposta de suport per a l'usuari del calendari. Inclou el canvi
-    de fus horari, la comprovació al mòbil i una via d'escalat clara.
+    de fus horari, la comprovació al mòbil i un procediment clar per derivar el cas.
 - id: cd_h9_064
   category: crosslingual_advanced
   persona: administracio
@@ -534,7 +534,7 @@
   - role: assistant
     content: De acuerdo. Haré la revisión final antes de cerrar.
   prompt: Prepara una resposta de suport sobre el canvi de domini, els rebots de correu,
-    el correu brossa, l'informe necessari i el criteri d'escalat.
+    el correu brossa, l'informe necessari i el criteri de derivació.
 - id: cd_h19_163
   category: crosslingual_advanced
   persona: administracio
@@ -612,7 +612,7 @@
     content: Tenim un client amb una incidència tècnica després d'importar un catàleg
       nou.
   - role: assistant
-    content: Cal respondre amb passos segurs, recollida de dades i escalat si cal.
+    content: Cal respondre amb passos segurs, recollida de dades i derivació si cal.
   - role: user
     content: 'El cliente ha escrito: catálogo incompleto, imágenes cruzadas, stock
       desactualizado, categorías vacías y plantilla modificada.'
