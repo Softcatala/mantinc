@@ -68,6 +68,7 @@ endif
 
 build:
 	$(PYTHON) scripts/build_dataset.py
+	$(PYTHON) scripts/catalan_drift_eval.py export-lm-eval --prompts $(PROMPTS) --output "$(EXPORT)" $(if $(VERSION),--version "$(VERSION)",)
 
 test:
 	$(UV_RUN) pytest -q
@@ -99,7 +100,6 @@ clean-outputs:
 	@find outputs -mindepth 1 -maxdepth 1 -exec rm -rf {} +
 
 export-lm-eval: build
-	$(PYTHON) scripts/catalan_drift_eval.py export-lm-eval --prompts $(PROMPTS) --output "$(EXPORT)" $(if $(VERSION),--version "$(VERSION)",)
 
 eval: clean-outputs language-id-model export-lm-eval
 	$(MAKE) -j2 SKIP_EXPORT=1 $(CLOUD_EVAL_TARGETS) & \
