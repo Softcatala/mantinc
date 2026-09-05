@@ -134,7 +134,8 @@ Results from the current 300-item evaluation run.
 
 | Model | Overall | Catalan token ratio |
 |---|---:|---:|
-| GPT-5.6 | **72.0% ±5.1** | 77.6% |
+| Gemma 4 26B A4B | **81.0% ±4.4** | 84.2% |
+| GPT-5.6 | 72.0% ±5.1 | 77.6% |
 
 `± N` is the Wilson 95% half-width at n=300. Rank differences smaller than
 the two rows' combined half-widths are inside the CIs and should not be read
@@ -147,6 +148,7 @@ under. They are not directly comparable across rows unless the configs match.
 
 | Model | Provider | Precision |
 |---|---|---|
+| Gemma 4 26B A4B | local OpenAI-compatible | Q4_K_M |
 | GPT-5.6 | OpenAI Chat Completions | fp16 |
 
 All evaluations use temperature 0 with thinking disabled.
@@ -176,6 +178,7 @@ signal to read.
 
 | Model | Monolingual | Cross basic | Multi-turn | Cross advanced | RAG context |
 |---|---:|---:|---:|---:|---:|
+| Gemma 4 26B A4B | 100.0% ±3.0 | 83.3% ±9.4 | 55.0% ±12.2 | 81.7% ±9.7 | 85.0% ±9.0 |
 | GPT-5.6 | 100.0% ±3.0 | 83.3% ±9.4 | 53.3% ±12.2 | 63.3% ±11.8 | 60.0% ±12.0 |
 
 For a finer diagnostic that cuts across categories, run
